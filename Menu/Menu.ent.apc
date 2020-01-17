@@ -9,6 +9,7 @@ PROC GLOBAL
 	map HHmap;		//for showing the HHs on a map
 	
 	
+	
 
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
 	function string lstrip(string theString)
@@ -519,7 +520,13 @@ PROC GLOBAL
 			launchQuest(questDesc, questName); 
 		endif;
 	end;
-	
+
+
+
+	//Make sure that the pff file is not set to start at a HH when starting next time
+	function onstop()
+		writepff("Menu", "Menu", "", NOTAPPL);
+	end;	
 
 	
 
@@ -530,6 +537,7 @@ PROC MENU_QUEST_FORM
 preproc
 	//Defaulting the geography to be same as last time. Asking about it after listing questionnaire
 	//has been chosen..
+	string HHTmp;
 	if toNumber(sysparm("STATE")) <> DEFAULT and toNumber(sysparm("STATE")) <> NOTAPPL then
 		M_STATE_NUMBER = toNumber(sysparm("STATE"));
 		M_COUNTY_CODE = toNumber(sysparm("COUNTY"));
@@ -537,6 +545,13 @@ preproc
 		M_VILLAGE_CODE = toNumber(sysparm("VILLAGE"));
 		M_ENUMERATION_AREA = toNumber(sysparm("EA"));
 		M_URBAN_RURAL = toNumber(sysparm("URBANRURAL"));
+		HHTmp = sysparm("SERIAL");
+	endif;
+	
+	if HHTmp <> "NOT"  and HHTmp <> "" then
+		//coming "back" from interviewing a HH, hence assuming we want to go to the next HH
+		//M_HOUSEHOLD = toNumber(HHTmp);
+		skip to M_HOUSEHOLD;
 	endif;
 	
 	
@@ -552,7 +567,13 @@ postproc
 	//at M_ENUMERATION_AREA field..
 	
 	if $ = 1 then	//Listing form
-		newEA = prompt(maketext(tr(5)),numeric);
+		
+		if visualValue(M_STATE_NUMBER) = DEFAULT or visualValue(M_STATE_NUMBER) = NOTAPPL then
+			newEA = "1";
+		else
+			newEA = prompt(maketext(tr(5)),numeric);
+		endif;
+		
 		if newEA = "2" and (visualValue(M_STATE_NUMBER) <> DEFAULT and visualValue(M_STATE_NUMBER) <> NOTAPPL) then	//Not new EA
 			//Not a new EA 
 			skip to M_ENUMERATION_AREA;
@@ -598,6 +619,8 @@ postproc
 		reenter;
 }
 	else	//$ = 9. quit
+		//First need to reset pff file so that we don't start at M_HOUSEHOLD field when starting up again
+		writepff("Menu", "Menu", "", NOTAPPL);
 		stop(1);	
 	endif;
 		
