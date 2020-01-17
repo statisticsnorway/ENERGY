@@ -1,0 +1,73 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.3",
+  "name": "ENERGY",
+  "description": "",
+  "files": [
+    {
+      "path": ".\\Community\\community.ent"
+    },
+    {
+      "path": ".\\Community\\community.pff"
+    },
+    {
+      "path": ".\\HHQ\\HHQ.ent"
+    },
+    {
+      "path": ".\\HHQ\\HHQ.pff"
+    },
+    {
+      "path": ".\\Listing\\Listing.ent"
+    },
+    {
+      "path": ".\\Listing\\Listing.pff"
+    },
+    {
+      "path": ".\\Menu\\Menu.ent"
+    },
+    {
+      "path": ".\\Menu\\Menu.pff"
+    },
+    {
+      "path": ".\\LookupFiles\\Regions.csdb"
+    },
+    {
+      "path": ".\\LookupFiles\\users.csdb"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\Community\\community.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\HHQ\\HHQ.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Sampling\\sample.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Listing\\Listing.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Menu\\Menu.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Menu\\Regions.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Menu\\users.dcf",
+      "uploadForSync": true
+    }
+  ],
+  "deployment": {
+    "type": "Dropbox",
+    "cswebUrl": "http:\/\/",
+    "ftpUrl": "ftp:\/\/"
+  }
+}

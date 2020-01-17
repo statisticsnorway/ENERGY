@@ -1,0 +1,6 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Deploy
+
+[Files]
+Application=.\deploy_new.csds

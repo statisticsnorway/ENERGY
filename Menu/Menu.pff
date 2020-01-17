@@ -1,0 +1,33 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+Description=Menu
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=Yes
+AutoAdd=No
+
+[Files]
+Application=.\Menu.ent
+InputData=..\Data\Menu.csdb
+Paradata=..\Data\Menu_a0661000b083.cslog
+
+[ExternalFiles]
+COMMUNITY_DICT=..\Data\Community.csdb
+HHQ_DICT=..\Data\HHQ.csdb
+LISTING_DICT=..\Data\Listing.csdb
+REGIONS_DICT=..\LookupFiles\Regions.csdb
+SAMPLING_DICT=..\Data\sample.csdb
+USERS_DICT=..\LookupFiles\users.csdb
+
+[Parameters]
+Language=EN
+COUNTY=1
+DEVICE=a0661000b083
+EA=2
+SERIAL=NOT
+STATE=9
+SUBCOUNTY=1
+URBANRURAL=1
+VILLAGE=5

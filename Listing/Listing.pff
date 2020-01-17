@@ -1,0 +1,29 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+Description=Listing questionnaire
+
+[DataEntryInit]
+Interactive=Ask
+StartMode=Add
+AutoAdd=Yes
+FullScreen=Yes
+ShowInApplicationListing=Never
+
+[Files]
+Application=./Listing.ent
+InputData=../Data/Listing.csdb|CSPRODB
+Paradata=../Data/Listing_a0661000b083.cslog
+
+[Parameters]
+DEVICE=a0661000b083
+STATE=  9
+COUNTY=  1
+SUBCOUNTY=  2
+VILLAGE=  4
+EA=  2
+URBANRURAL=1
+SERIAL=NOT
+Language=EN
+OnExit=..\Menu\Menu.pff
+

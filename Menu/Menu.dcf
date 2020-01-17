@@ -1,0 +1,111 @@
+﻿[Dictionary]
+Version=CSPro 7.3
+Label=Menu
+Name=MENU_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Languages]
+EN=English
+PT=Portugues
+SW=Swahili
+
+[Level]
+Label=Menu questionnaire
+Name=MENU_QUEST
+
+[IdItems]
+
+[Item]
+Label=Menu identification
+Name=MENU_ID
+Start=2
+Len=1
+
+[Record]
+Label=Menu record
+Name=MENU_REC
+RecordTypeValue='1'
+RecordLen=23
+
+[Item]
+Label=State code|Province
+Name=M_STATE_NUMBER
+Start=3
+Len=3
+
+[Item]
+Label=County code
+Name=M_COUNTY_CODE
+Start=6
+Len=3
+
+[Item]
+Label=Sub county Code
+Name=M_SUB_COUNTY_CODE
+Start=9
+Len=3
+
+[Item]
+Label=Village Code
+Name=M_VILLAGE_CODE
+Start=12
+Len=3
+
+[Item]
+Label=Enumeration Area
+Name=M_ENUMERATION_AREA
+Start=15
+Len=3
+
+[Item]
+Label=Urban/rural
+Name=M_URBAN_RURAL
+Start=18
+Len=1
+
+[ValueSet]
+Label=Urban/rural
+Name=M_URBAN_RURAL_VS1
+Value=1;Urban
+Value=2;Rural
+
+[Item]
+Label=Menu
+Name=M_MENU
+Start=19
+Len=1
+
+[ValueSet]
+Label=Menu
+Name=M_MENU_INT
+Value=1;Listing form|Formulário de listagem
+Value=2;Household questionnaire|Questionário do Agregado Familiar
+Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central
+Value=5;Sync with SV: Recieve sample file
+Value=6;Log in as supervisor
+Value=9;Quit|Sair
+
+[Item]
+Label=Supervisor menu
+Name=M_SUPERMENU
+Start=20
+Len=1
+
+[ValueSet]
+Label=Supervisor menu
+Name=M_SUPERMENU_VS1
+Value=1;Start bluetooth server|Sincronizar com servidor central
+Value=2;Generate sample
+Value=3;Synchronise data with HQ
+Value=4;Community questionnaire|Questionário Comunitario
+Value=9;Quit
+
+[Item]
+Label=Select household
+Name=M_HOUSEHOLD
+Start=21
+Len=3

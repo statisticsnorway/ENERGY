@@ -1,0 +1,18 @@
+﻿[Run Information]
+Version=CSPro 7.2
+AppType=Export
+
+[Files]
+Application=.\hhq.exf
+ExportedData=..\Data\hhq.dat
+SASDescFile=.\hhq_import.sas
+Listing=.\hhq.exf.lst
+
+[ExternalFiles]
+HHQ_DICT=..\Data\hhq_dict.csdb|CSPRODB
+
+[Parameters]
+ViewListing=OnError
+ViewResults=Yes
+InputOrder=Sequential
+
