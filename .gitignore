@@ -1,4 +1,5 @@
 *.csdb
 *.cslog
 *.xlsx
+*.pff
 /Docs/*
