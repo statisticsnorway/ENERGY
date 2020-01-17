@@ -1,5 +1,6 @@
-*.csdb
+#*.csdb
 *.cslog
-*.xlsx
+#*.xlsx
 *.pff
 /Docs/*
+.bak
