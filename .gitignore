@@ -3,3 +3,4 @@
 *.xlsx
 *.pff
 /Docs/*
+.bak
