@@ -63,6 +63,32 @@ PROC GLOBAL
 
 
 
+	
+
+
+
+
+PROC I2B10
+//	skip to I2B12;
+
+
+
+PROC I2B15
+	if $ = 4 or $ = 5 then
+		skip to I2B18A;
+	endif;
+
+
+
+PROC I2B16
+	if $ = 2 then
+		skip to I2B18A;
+	endif;
+
+
+
+
+
 PROC HHQ_FF
 
 
@@ -561,16 +587,7 @@ PROC C2
 	if $ = 66 then	//No electicity
 		skip to C149;
 	endif;
-
-
-
-PROC C4
-preproc
-	if C2 <> 1 and C3A <> 1 then
-		skip to C41;
-	endif;
 	
-postproc
 	if $ = 4 then
 		skip to C6;
 	endif;
@@ -592,10 +609,6 @@ PROC C5
 	
 	
 	
-PROC C7
-	if $ = 66 or $ = 88 then
-		skip to C41;
-	endif;
 
 
 
@@ -676,115 +689,6 @@ PROC C39
 
 
 
-PROC C41
-preproc
-	if C2 <> 2 and C3A <> 2 then
-		skip to C79;
-	endif;
-	
-postproc
-	if $ = 2 then
-		skip to C79;
-	endif;
-
-
-
-
-
-PROC C50
-	if $= 7 then
-		skip to C63;
-	endif;
-
-
-
-PROC C51
-	if $ = 2 then
-		skip to C55;
-	endif;
-	
-	
-	
-PROC C53
-	if $ = 2 then
-		skip to C55;
-	endif;
-	
-	
-	
-PROC C56
-	if $ = 66 then
-		skip to C63;
-	endif;
-	
-	
-	
-PROC C57
-	if $ = 2 then
-		skip to C59;
-	endif;
-	
-	
-	
-
-PROC C59
-	if $ = 2 or $ = 3 then
-		skip to C63;
-	endif;
-
-
-
-PROC C65
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
-	endif;
-PROC C66
-	if $ > 4 and $ <> 88 then
-		errmsg(tr(111),4);
-		reenter;
-	endif;
-PROC C67
-	if $ > C65 and $ <> 88 then
-		errmsg(tr(111), C65);
-		reenter;
-	endif;
-
-
-
-PROC C68
-	if $ = 0 then
-		skip to C70;
-	endif;
-
-
-
-PROC C72
-	if $ = 2 then
-		skip to C73;
-	endif;
-
-
-
-PROC C74A
-	if  pos("66", $) > 0 then
-		skip to C75;
-	endif;
-
-
-
-PROC C74B
-	if $ = C74A then
-		errmsg(tr(151));
-		reenter;
-	endif;
-PROC C76
-	if $ = 2 then
-		skip to C82_FORM;
-	endif;
-
-
-
 PROC C79
 preproc
 	if C2 <> 3 and C3A <> 3 then
@@ -832,104 +736,9 @@ PROC C82R
 	
 	
 	
-PROC C83A
-	if $ = 2 then
-		skip to C84_FORM;
-	else
-		solarDeviceType = Maketext(tr(116));
-	endif;			
-			
-
-
-PROC C83L
-preproc
-// NB: Membervalueset with Added person
-	setValueset($, memberNumbers, memberNames);
-
-
-
-PROC C83M
-	if $ = 1 or $ = 2 then
-		skip to C83P;
-	elseif $ = 3 then
-		skip to C83Q;
-	endif;
-	
-	
-PROC C83N
-	skip to C83Q;
-	
-	
-	
-PROC C83O
-	skip to C83P;
-
-
-
-PROC C83R
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
-	endif;
-	
-	
-	
-	
-PROC C84A
-	if $ = 2 and ((C2 <> 3 and C3A <> 3) or c79 = 2) and c83a = 2 then
-		skip to C4_FORM;
-	endif;
-	if $ = 2 then
-		skip to C3_FORM;
-	endif;
-
-
-
-PROC C84L
-onfocus
-// NB: Member set with ekstra member
-	setValueset($, memberNumbers, memberNames);
-
-
-PROC C84M
-	if $ = 1 or $ = 2 then
-		skip to C84p;
-	elseif $ = 3 then
-		skip to C84q;
-	endif;
-	
-	
-PROC C84N
-skip to C84Q;
-	
-	
-	
-PROC C84R
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
-	endif;
-	
-	
-PROC C87A
-	if $ = 3 then
-		skip to C4_FORM;
-	else
-		solarDeviceType = getLabel(C87A, $);
-	endif;
-	
-	
 PROC C87
 	if $ = 1 then
 		skip to C91;
-	endif;
-
-
-
-PROC C93
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
 	endif;
 
 
@@ -942,89 +751,6 @@ PROC C94
 	
 
 
-PROC C95
-	if $ > C93 and $ <> 88 then
-		errmsg(tr(111),C93);
-		reenter;
-	endif;
-
-
-
-PROC C96
-	if $ = 2 then
-		skip to C98;
-	endif;
-	
-	
-	
-PROC C98
-	if pos("66", $) > 0 and length(strip($)) <> 2 then
-		errmsg(tr(153));
-		reenter;
-	endif;
-PROC C99
-	if $ in 2,88 then
-		skip to C101;
-	endif;
-
-
-
-PROC C100A
-	if pos("66", $) > 0 and length(strip($)) <> 2 then
-		errmsg(tr(153));
-		reenter;
-	endif;
-	if pos("55", $) = 0 then
-		skip to C101;
-	endif;
-
-
-
-PROC C102
-	if $ < 2000 or $ > sysdate("YYYY") then
-		errmsg(tr(144), sysdate("YYYY"));
-		reenter;
-	endif;
-
-
-PROC C103
-onfocus
-	years = 0;
-	if C82K > 0 then
-		years = C82K;
-	endif;
-	
-	if C83K > years then
-		years = C83K;
-	endif;
-	
-	if C84K > years then
-		years = C84K;
-	endif;
-	
-	if C102 < sysdate("YYYY")-years and C102 > 0 then
-		years = sysdate("YYYY")-C102;
-	endif;
-	
-postproc
-	if $ = 1 then
-		skip to C105;
-	endif;
-
-
-
-PROC C105
-	if $ = 3 then
-		skip to C107;
-	endif;
-
-
-
-PROC C106
-	if pos("06", $) > 0 and length(strip($)) <> 2 then
-		errmsg(tr(154));
-		reenter;
-	endif;
 PROC C107
 preproc
 	if C2 <> 4 and C3A <> 4 then
@@ -1183,25 +909,12 @@ PROC C143
 	
 
 
-PROC C146A
-	if $ = 66 then
-		skip to C147;
-	endif;
-	
-	
 	
 PROC C146B
 	if $ = C146A then
 		errmsg(tr(151));
 		reenter;
 	endif;
-PROC C147
-	if $ = 2 then
-		skip to C149;
-	endif;
-
-
-
 PROC C149
 	if $ = 0 then
 		skip to D_FORM;
@@ -1230,33 +943,6 @@ PROC C153
 	
 	
 	
-PROC D1
-preproc
-	//Removing the extra person from the family member set (Was added at the start of the C sections.)
-	numeric i = 0;
-	while i < 20 do
-		if memberNumbers(i) = NOTAPPL then
-			//Remove the one before this
-			memberNames(i-1) = "";
-			memberNumbers(i-1) = NOTAPPL;
-			break;
-		endif;
-		inc(i);
-	enddo;
-	
-	if C2 in 1,2 or C3A in 1,2 then
-		$= 1;
-		skip to E1;
-	endif;
-
-
-
-PROC D2
-	
-onfocus
-	setvalueset($, memberNumbers, memberNames);
-
-
 PROC D3
 	
 onfocus
@@ -1268,33 +954,20 @@ onfocus
 		
 postproc
 	if $ = 1 then
-		skip to D9;
+	//	skip to D9;
 	endif;	
 	
 PROC D6
 	if $ =  1 then
-		skip to D9;
+	//	skip to D9;
 	endif;
 
 
 
 PROC D7
 	if $ =  1 then
-		skip to D9;
+	//	skip to D9;
 	endif;
-
-
-
-PROC E1
-preproc
-	$ = C2;
-	noinput;
-	
-
-
-PROC E2
-onfocus
-	setValueset($, memberNumbers, memberNames);
 
 
 
@@ -1324,121 +997,6 @@ PROC E5
 
 
 
-PROC F1
-onfocus
-	setValueset($, memberNumbers, memberNames);
-
-
-PROC F2
-onfocus
-	//Loop through HH to find if there are children
-	numeric i = 1;
-	numeric kids = 0;
-	while AB5(i) <> NOTAPPL do
-		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
-			kids = 1;
-			break;
-		endif;
-		inc(i);
-	enddo;
-	
-	if kids = 0 then
-		skip to F3;
-	endif;
-
-PROC F3
-	//Check if "none" has been chosen together with other lamp types
-	if pos("05", $) > 0 and length(strip($)) <> 2 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-	
-	if pos("05", $) > 0 then
-		skip to G1;
-	endif;
-
-
-
-PROC F4A
-onfocus
-	string current = edit("99", curocc());
-	
-	//Need to deal with the "55 other" first
-	if curocc() = 6 and pos("55", F3) > 0 then
-		//Other is chosen
-		$ = 1;
-		lampType = getLabel(F3, "55");
-		skip to F4B;
-	else
-		if  pos(current, F3) > 0 then
-			$ = 1;
-			lampType = getLabel(F3, current);
-			skip to F4B;
-		else
-			$ = 2;
-			//Not chosen
-			skip to next;
-		endif;
-	endif;
-PROC F4E
-	if $ > 31 and $ <> 88 then
-		errmsg(tr(111),31);
-		reenter;
-	endif;
-PROC F4F
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
-	endif;
-PROC F4G
-	if $ = 66 then
-		skip to F4I
-	endif;
-
-
-
-PROC F4H
-	if $ = F4G then
-		errmsg(tr(151));
-		reenter;
-	endif;
-PROC F4I
-	if pos("0", $) > 0 and length(strip($)) > 1 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-PROC F5
-	if pos("7", $ ) > 0  and length(strip($)) > 1 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-	
-	if pos("7", $ ) > 0 then
-		skip to G1;
-	endif;
-
-
-
-PROC F5A
-onfocus
-	string current = edit("Z", curocc());
-	
-	//The skip for "7 none" has been done in F5
-	if  pos(current, F5) > 0 then
-		fuelType = getLabel(F5, current);
-	else
-		//Not chosen
-		skip to next;
-	endif;
-
-
-
-PROC G1
-onfocus
-	setvalueset($, membernumbers, memberNames);
-
-
-
 PROC G2
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
@@ -1447,7 +1005,7 @@ PROC G2
 	
 	if pos("66", $) > 0  then
 		//"none" is chosen
-		skip to H1;
+		//skip to H1;
 	endif;
 	
 
@@ -1482,59 +1040,50 @@ PROC GE
 		errmsg(tr(111),24);
 		reenter;
 	endif;
-PROC H1
+PROC F1
 onfocus
 	setValueset($, memberNumbers, memberNames);
 
 
-
-PROC H2
+PROC F2
 onfocus
-	fuelType = getLabel(H2, curocc());
-	//errmsg("Fuel: %s", fuelType);
-	$ = curocc();
-	skip to H2A;
+	//Loop through HH to find if there are children
+	numeric i = 1;
+	numeric kids = 0;
+	while AB5(i) <> NOTAPPL do
+		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
+			kids = 1;
+			break;
+		endif;
+		inc(i);
+	enddo;
 	
-
-
-
-
-PROC H2A
-onfocus
-	//For some reason it happens that this does not get set in the previous field
-	if fuelType = "" then
-		fuelType = getLabel(H2, curocc());
-	endif;
-	
-	
-postproc
-	if $ = 2 then
-		skip to next;
+	if kids = 0 then
+		skip to F3B;
 	endif;
 
-
-
-PROC H2G
-	if  length(strip($)) > 8 then
-		errmsg(tr(125));
+PROC F5
+	if pos("7", $ ) > 0  and length(strip($)) > 1 then
+		errmsg(tr(118));
 		reenter;
 	endif;
 	
-	if pos("77", $) > 0 and length(strip($)) > 2 then
-		errmsg(tr(142));
-		reenter;
-	endif;
-PROC H2H
-	if $ = 0 then
+
+
+
+PROC F5A
+onfocus
+	string current = edit("Z", curocc());
+	
+	//The skip for "7 none" has been done in F5
+	if  pos(current, F5) > 0 then
+		fuelType = getLabel(F5, current);
+	else
+		//Not chosen
 		skip to next;
 	endif;
 
 
-
-PROC H2J
-	if $ = 0 or $ = 88 then
-		skip to next;
-	endif;
 
 
 
@@ -1544,162 +1093,6 @@ onfocus
 
 
 
-PROC I2
-	if pos("09", $) > 0 and length(strip($)) > 2 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-	
-	if pos("09", $) > 0 then
-		//none
-		skip to I36;
-	endif;
-	
-PROC I2B3
-onfocus
-	//As the items chosen always are in increasing order, I can just pick the strings as they come
-	if curocc() = 1 then
-		$ = toNumber(I2[1:2]);
-		cookType = getlabel(I2, I2[1:2]);
-	elseif curocc() = 2 then
-		if length(strip(I2)) > 2 then
-			$ = toNumber(I2[3:2]);
-			cookType = getlabel(I2, I2[3:2]);
-		else
-			skip to I36;
-		endif;
-	elseif curocc() = 3 then
-		if length(strip(I2)) > 4 then
-			cookType = getlabel(I2, I2[5:2]);
-			$ = toNumber(I2[5:2]);
-		else
-			skip to I36;
-		endif
-	endif;
-	noinput;
-PROC I2B4
-
-postproc
-	if $ = 3 then
-		skip to I2B7;
-	elseif $ = 4 then
-		skip to I2B11;
-	endif;
-
-
-
-	
-		
-PROC I2B5
-onfocus
-	setValueset($, memberNumbers, memberNames);
-
-
-
-PROC I2B6
-	skip to I2B8;
-
-
-
-PROC I2B10
-//	skip to I2B12;
-
-
-
-PROC I2B15
-	if $ = 4 or $ = 5 then
-		skip to I2B18A;
-	endif;
-
-
-
-PROC I2B16
-	if $ = 2 then
-		skip to I2B18A;
-	endif;
-
-
-
-PROC I2B18B
-	if $ = I2B18A then
-		errmsg(tr(151));
-		reenter;
-	endif;
-PROC I2B19A
-onfocus
-	fuelType = getlabel(I2B18A, I2B18A(curocc()));
-
-
-PROC I2B19B
-preproc
-	if I2B18B = 66 then
-		//Seond fuel type was "Not applicable
-		$ = NOTAPPL;
-		skip to I2B20;
-	endif;
-onfocus	
-	fuelType = getlabel(I2B18B, I2B18B(curocc())); 
-
-
-
-PROC I2B27
-	if $ = 2 then
-		skip to I2B30;
-	endif;
-	
-	
-	
-PROC I2B29
-	if $ > 24 and $ <> 88 then
-		errmsg(tr(111),24);
-		reenter;
-	endif;
-PROC I2B30
-	if pos("9", $) > 0 and length(strip($)) > 1 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-
-	if pos("9",  $) > 0 then
-		skip to I2B32;
-	endif;
-
-
-PROC I2B32
-	if $ = 1 then
-		skip to I2B35;
-	endif;
-	
-
-
-
-PROC I2B34
-	if $ = I2B33 and $ <> "55  " then
-		errmsg(tr(151));
-		reenter;
-	endif;
-PROC I2B35
-preproc
-	//Don't want to ask this question if the respondent already said another one was the main
-	
-	if (curocc() = 2 and I2B35(1) = 1) or (curocc() = 3 and (I2B35(1) = 1 or I2B35(2)) = 1) then
-		skip to next;
-	endif;
-	
-
-PROC I36
-preproc
-	if H2A(7) = 1 or H2A(8) = 1 or H2A(9) = 1 or H2A(10) = 1
-		or H2A(11) = 1 or H2A(12) = 1 or H2A(13) = 1 or H2A(16) = 1 then
-			//contiune
-	else
-		skip to I43;
-	endif;
-	
-postproc
-	if $ = 88 or $ = 2 then
-		skip to J_FORM;
-	endif;
 PROC I37
 	if $ = 2 then
 		skip to I39;
@@ -1733,39 +1126,17 @@ PROC I43
 
 
 
-PROC J1
-    //skip to W_FORM;
-	if $ = 2 then
-		skip to J4;
-	endif;
-	
-	
-	
-PROC J1_1
+PROC O1_1
 onfocus
-	setValueset($, memberNumbers, memberNames);
+	errmsg(tr(146), strip(lstrip(currMember)));
+	$ = N1_1;
+	noinput;
 
 
-
-PROC J2
-	if $ <> 9 then
-		skip to J4;
-	endif;
-	
-PROC J4
-	if $ = 2 then
-		skip to K_FORM;
-	endif;
-
-
-
-PROC J5
-	if $ <> 6 then
-		skip to K_FORM;
-	endif;
-	
-	
-	
+PROC O2
+ if $ = 2 then
+ 	skip to Q_FORM;
+ endif;
 PROC K2
 onfocus
 	string woodOrCharcoal;
@@ -1804,6 +1175,34 @@ PROC K5
 	if $ = 1 then
 		skip to L_FORM;
 	endif;
+PROC J1
+    //skip to W_FORM;
+	if $ = 2 then
+		skip to J4;
+	endif;
+	
+	
+	
+
+PROC J2
+	if $ <> 9 then
+		skip to J4;
+	endif;
+	
+PROC J4
+	if $ = 2 then
+		skip to K_FORM;
+	endif;
+
+
+
+PROC J5
+	if $ <> 6 then
+		skip to K_FORM;
+	endif;
+	
+	
+	
 PROC L1_1
 onfocus
 	setValueset($, memberNumbers, memberNames);
@@ -1881,71 +1280,10 @@ PROC M2
 
 
 
-PROC N1_1
-onfocus
-	//First need to draw random group of family to ask question to.
-	//Looping until I find one..
-	numeric gr;
-	while 1 do
-		seed(systime());
-		gr = random(1,4);
-		if hhDemographics(gr) > 0 then	
-			break;
-		endif;
-	enddo;
-	
-	//And now I want a random person in that group
-	numeric personNo = random(1, hhDemographics(gr));
-	
-	//Getting the name of the person
-	numeric gender, minAge;
-	if gr = 1 then	//Woman
-		gender = 2;
-		minAge = 15;
-	elseif gr = 2 then	//girl
-		gender = 2;
-		minAge = 5;
-	elseif gr = 3 then	//man
-		gender = 1;
-		minAge = 15;
-	else	//boy
-		gender = 1;
-		minAge = 5;
-	endif;
-	
-	numeric i = 1, currPersonNo = 1;
-	while i <= 20 do //Max 20 persons in a household
-		if AB4(i) <> gender then
-			inc(i);
-			next;
-		else	//Right gender
-			if minAge = 5 and (AB5(i) >= 5 and AB5(i) < 15) then
-				if currPersonNo = personNo then
-					//Found the right person: The i-th family member
-					break;
-				else
-					inc(currPersonNo);
-				endif;
-			elseif minAge = 15 and AB5(i) >= 15 then
-				if currPersonNo = PersonNo then
-					//Again found the person
-					break
-				else
-					inc(currPersonNo);
-				endif;
-			endif;
-			inc(i);
-		endif;
-	enddo;
-	
-	currMember = AB1(i);
-	errmsg(tr(145), strip(lstrip(currMember)));
-	$ = i;
-	noinput;
 
 
-PROC N1000
-onfocus
+//PROC N1000
+//onfocus
 //	//First need to draw random group of family to ask question to.
 //	//Looping until I find one..
 //	numeric gr;
@@ -2003,181 +1341,8 @@ onfocus
 //
 //	currMember = AB1(i);
 //
-PROC N_NO
-onfocus
-    
-	$ = curocc();
-	N_TYPE = getLabel($, curocc());
-	hhChore = strip(N_TYPE);
-	skip to NA1;
-	
-	
-	
-PROC NA1
-onfocus
-	hhChoreGroup = getLabel($);
-	
-//	if hhDemographics(1) = 0 then 	//No women in the HH
-//		skip to NC1;
-//	endif;
-	
-postproc
-	if $ = 1 then
-		skip to NC1;
-	endif
-	
-	
 
 
-
-PROC NB1
-onfocus
-	hhChoreGroup = getLabel($);
-
-
-
-PROC NC1
-onfocus
-	hhChoreGroup = getLabel($);
-
-//	if hhDemographics(2) = 0 then 	//No girls in the HH
-//		skip to NE1;
-//	endif;
-	
-	
-
-
-PROC N16_1A
-preproc
-	if hhDemographics(1) = 0 then	//Only asking if there are women in the right age
-		skip to N16_1B;
-	endif;
-postproc
-    if $ > hhDemographics(1) then
-    	errmsg(tr(152),hhDemographics(1));
-		reenter;
-    endif
-     	
-	
-
-	
-	
-	
-PROC N16_2A
-preproc
-	if hhDemographics(1) = 0 then
-		skip to N16_1B;
-	endif;
-	if N16_1A = 0 then
-        skip to N16_1B;
-	endif;
-
-PROC N16_3A
-preproc
-	if N16_2A = 0 then
-        skip to N16_1B;
-	endif;
-
-
-
-
-PROC N16_1B
-preproc
-	if hhDemographics(2) = 0 then
-		skip to N16_1C;
-	endif;
-	if N16_1B = 0 then
-        skip to N16_1C;
-	endif;
-postproc
-    if $ > hhDemographics(2) then
-    	errmsg(tr(152),hhDemographics(2));
-		reenter;
-    endif
-
-
-
-PROC N16_2B
-preproc
-	if hhDemographics(2) = 0 then
-		skip to N16_1C;
-	endif;
-	if N16_1B = 0 then
-        skip to N16_1C;
-	endif;
-
-
-PROC N16_3B
-preproc
-	if N16_2B = 0 then
-        skip to N16_1C;
-	endif;
-
-
-PROC N16_1C
-preproc
-	if hhDemographics(3) = 0 then	
-		skip to N16_1D;
-	endif;
-postproc
-    if $ > hhDemographics(3) then
-    	errmsg(tr(152),hhDemographics(3));
-		reenter;
-    endif
-
-PROC N16_2C
-preproc
-	if hhDemographics(3) = 0 then	
-		skip to N16_1D;
-	endif;
-	if N16_1C = 0 then
-        skip to N16_1D;
-	endif;
-
-
-PROC N16_3C
-preproc
-	if N16_2C = 0 then
-        skip to N16_1D;
-	endif;
-
-
-PROC N16_1D
-preproc
-	if hhDemographics(4) = 0 then
-		skip to O_FORM;
-	endif;
-postproc
-    if $ > hhDemographics(4) then
-    	errmsg(tr(152),hhDemographics(4));
-		reenter;
-    endif
-
-PROC N16_2D
-preproc
-	if N16_1D = 0 then
-        skip to O_FORM;
-	endif;
-
-
-PROC N16_3D
-preproc
-	if N16_2D = 0 then
-        skip to O_FORM;
-	endif;
-
-
-PROC O1_1
-onfocus
-	errmsg(tr(146), strip(lstrip(currMember)));
-	$ = N1_1;
-	noinput;
-
-
-PROC O2
- if $ = 2 then
- 	skip to Q_FORM;
- endif;
 PROC Q1_1
 onfocus
 	setValueset($, membernumbers, memberNames);
@@ -2194,63 +1359,9 @@ onfocus
 
 
 
-PROC S1
-	
-preproc
-		if C2 = 1 or C2 = 2 then	//connected
-			$ = 1;
-		else
-			$ = 2;
-			skip to S5;
-		endif;
-		noinput;
-		
-		
-
-
-PROC S2
-	if pos("0", $) > 0 and length(strip(lstrip($))) > 1 then
-		errmsg(tr(118));	//Chose "none" in combo with other
-		reenter;
-	endif;
-	
-	if pos("0", $) > 0 then
-		skip to S4;
-	endif;
 PROC S4
 preproc
 	mainElSource = getlabel(C2, C2);
-PROC T1_1
-onfocus
-	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
-		skip to U_FORM;
-	else
-		array wCode(10); //Max 10 women in HH
-		array String wLabel(10);
-		
-		//Loop through household memebers to find women
-		numeric i = 1, j = 0;
-		while i <= 20 do
-			if AB1(i) = "" then
-				//finished.
-				break;
-			else
-				if  AB4(i) = 2 and AB5(i) > 14 then	//Found a woman
-					wcode(j) = i;
-					wLabel(j) = AB1(i);
-					inc(j);
-				endif;
-				inc(i);
-			endif;
-		enddo;
-		
-		wcode(j) = NOTAPPL;
-		
-		setValueset($, wcode, wLabel);
-	endif;
-
-
-
 PROC U1_1
 onfocus
 	setValueset($, memberNumbers, memberNames);
@@ -2317,6 +1428,37 @@ preproc
   if U13B = 2 then
    skip W_FORM;
   endif; 
+
+PROC T1_1
+onfocus
+	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
+		skip to U_FORM;
+	else
+		array wCode(10); //Max 10 women in HH
+		array String wLabel(10);
+		
+		//Loop through household memebers to find women
+		numeric i = 1, j = 0;
+		while i <= 20 do
+			if AB1(i) = "" then
+				//finished.
+				break;
+			else
+				if  AB4(i) = 2 and AB5(i) > 14 then	//Found a woman
+					wcode(j) = i;
+					wLabel(j) = AB1(i);
+					inc(j);
+				endif;
+				inc(i);
+			endif;
+		enddo;
+		
+		wcode(j) = NOTAPPL;
+		
+		setValueset($, wcode, wLabel);
+	endif;
+
+
 
 PROC W1_1
 onfocus

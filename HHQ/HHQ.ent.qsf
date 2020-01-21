@@ -5590,7 +5590,7 @@ SW=\pard\cf1\fs24 Je, ulikopa fedha kulipia \cf2\lang1044 %solarDeviceType%\cf1\
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.C92
+Field=HHQ_DICT.C92X
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -5607,7 +5607,7 @@ SW=\pard\cf1\fs24 Je, Kuna miezi/misimu fulani\b  kila mwaka \b0  ambayo huduma 
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.C93
+Field=HHQ_DICT.C93X
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
