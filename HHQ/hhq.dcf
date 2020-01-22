@@ -4629,11 +4629,23 @@ Name=O7
 Start=114
 Len=1
 
+[ValueSet]
+Label=Did [NAME] have persistent coughing or an illness with a cough at any time in the last 14 days?
+Name=O7_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
 [Item]
 Label=Did [NAME]  breath faster than usual with short, rapid breaths or had difficulty breathing?
 Name=O8
 Start=115
 Len=1
+
+[ValueSet]
+Label=Did [NAME]  breath faster than usual with short, rapid breaths or had difficulty breathing?
+Name=O8_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
 
 [Item]
 Label=Did [NAME] also experience a problem in the chest or a blocked or runny nose?
@@ -4641,17 +4653,35 @@ Name=O9
 Start=116
 Len=1
 
+[ValueSet]
+Label=Did [NAME] also experience a problem in the chest or a blocked or runny nose?
+Name=O9_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
 [Item]
 Label=Did [NAME] have an eye irritation or eye problems in the last 14 days?
 Name=O10
 Start=117
 Len=1
 
+[ValueSet]
+Label=Did [NAME] have an eye irritation or eye problems in the last 14 days?
+Name=O10_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
 [Item]
 Label=Did [NAME] go to see a doctor/clinic for the illness?
 Name=O11
 Start=118
 Len=1
+
+[ValueSet]
+Label=Did [NAME] go to see a doctor/clinic for the illness?
+Name=O11_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
 
 [Record]
 Label=Q1 Consumption/expenditure|Q1 Consumo / despesas
