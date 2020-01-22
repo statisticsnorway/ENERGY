@@ -4183,6 +4183,12 @@ Name=L26
 Start=2284
 Len=1
 
+[ValueSet]
+Label=Do you keep any domestic animals?
+Name=L26_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
 [Item]
 Label=Keep cattle, How many
 Name=L28
@@ -4268,9 +4274,10 @@ Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Record]
-Label=N Time use - day time and after work|N tempo de uso - tempo do dia e depois do trabalho
-Name=N_TIME_USE
+Label=N (old) Time use - day time and after work|N tempo de uso - tempo do dia e depois do trabalho
+Name=N_TIME_USE_OLD
 RecordTypeValue='H'
+Required=No
 RecordLen=2438
 
 [Item]
@@ -4544,6 +4551,99 @@ Label=How long time did it typicall take to gather, collect or purchase fuel per
 Name=N16_3M
 Start=2437
 Len=2
+
+[Record]
+Label=N Time use - day time and after work
+Name=N_TIME_USE
+RecordTypeValue='6'
+RecordLen=1925
+
+[Item]
+Label=Who use time
+Name=N0
+Start=105
+Len=1
+
+[ValueSet]
+Label=Who use time
+Name=N0_VS1
+Value=1;women 15 years and older
+Value=2;girls 5-14 years
+Value=3;men 15 years and older
+Value=4;boys 5-14 years
+
+[Item]
+Label=Time use
+Name=N_TIME
+Start=106
+Len=364
+DataType=Alpha
+Occurrences=5
+
+[Item]
+Label=Activity
+Name=N_ACTIVITY
+Start=106
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Activity
+Name=N_ACTIVITY_VS1
+Value=1;Collecting water
+Value=2;Collecting firewood
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale
+Value=4;Watching TV, listening to the radio or using smart phone
+Value=5;Spending time on entertainment and socializing outside the house
+
+[Item]
+Label=How many persons have been involved in (ACTIVITY)?
+Name=N_A
+Start=107
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=Did persons use any time on this activity 5 years ago?
+Name=N_B
+Start=109
+Len=1
+ItemType=SubItem
+
+[Item]
+Label=In a typical day during the last 7 days, how much time did the persons involved in the activity use on average? [ACTIVITY] (hours)
+Name=N_C_HH
+Start=110
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=In a typical day during the last 7 days, how much time did the persons involved in the activity use on average? [ACTIVITY] (minutes)
+Name=N_C_MM
+Start=112
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=How much of this time was spent after dark? (hours)
+Name=N_D_HH
+Start=114
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=How much of this time was spent after dark? (minutes)
+Name=N_D_MM
+Start=116
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=Do persons spend more or less time on this activity than 5 years ago? [ACTIVITY]
+Name=N_E
+Start=118
+Len=1
+ItemType=SubItem
 
 [Record]
 Label=O Health impacts|impactos O Saúde

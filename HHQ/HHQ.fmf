@@ -157,16 +157,6 @@ Item=C40
 [EndForm]
   
 [Form]
-Name=FORM007
-Label=C - Electricity from mini-grid
-QuestionTextHeight=79
-Level=1
-Size=233,1177
-  
-  
-[EndForm]
-  
-[Form]
 Name=FORM008
 Label=C - Solar based devices and solar home systems
 QuestionTextHeight=70
@@ -193,26 +183,6 @@ Item=C82Q
 Item=C82R
 Item=C82S
 Item=C82T
-  
-[EndForm]
-  
-[Form]
-Name=FORM009
-Label=C - Solar lightning product
-QuestionTextHeight=70
-Level=1
-Size=235,568
-  
-  
-[EndForm]
-  
-[Form]
-Name=FORM010
-Label=C - Solar lantern
-QuestionTextHeight=70
-Level=1
-Size=216,497
-  
   
 [EndForm]
   
@@ -460,6 +430,17 @@ Size=117,155
 Item=M2
 Item=M3
 Item=M4
+  
+[EndForm]
+  
+[Form]
+Name=FORM007
+Label=N - Time use
+Level=1
+Size=479,312
+  
+Item=N0
+Item=N_TIME000
   
 [EndForm]
   
@@ -2092,18 +2073,9 @@ Text=C40
   
 [Group]
 Required=Yes
-Name=C2_FORM
-Label=C - Electricity from mini-grid
-Form=5
-LogicControl=No
-Max=1
-[EndGroup]
-  
-[Group]
-Required=Yes
 Name=C82_FORM
 Label=C - Solar based devices and solar home systems
-Form=6
+Form=5
 LogicControl=No
 Max=1
   
@@ -2113,7 +2085,7 @@ Position=157,86,172,106
 Item=C79,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,89,124,105
@@ -2125,7 +2097,7 @@ Name=C80
 Position=157,116,186,136
 Item=C80,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,119,124,135
@@ -2138,7 +2110,7 @@ Position=157,146,407,166
 Item=C82C,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
-Form=6
+Form=5
   
 [Text]
 Position=101,149,133,165
@@ -2151,7 +2123,7 @@ Position=157,176,172,196
 Item=C82D,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,179,133,195
@@ -2164,7 +2136,7 @@ Position=157,206,172,226
 Item=C82E,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,209,132,225
@@ -2176,7 +2148,7 @@ Name=C82F
 Position=157,236,186,256
 Item=C82F,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,239,132,255
@@ -2188,7 +2160,7 @@ Name=C82G
 Position=157,266,200,286
 Item=C82G,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,269,134,285
@@ -2200,7 +2172,7 @@ Name=C82H
 Position=157,296,200,316
 Item=C82H,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,299,133,315
@@ -2213,7 +2185,7 @@ Position=157,326,172,346
 Item=C82I,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,329,128,345
@@ -2226,7 +2198,7 @@ Position=157,356,172,376
 Item=C82J,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,359,131,375
@@ -2238,7 +2210,7 @@ Name=C82K
 Position=157,386,186,406
 Item=C82K,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,389,133,405
@@ -2251,7 +2223,7 @@ Position=157,416,186,436
 Item=C82L,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,419,132,435
@@ -2264,7 +2236,7 @@ Position=157,446,186,466
 Item=C82M,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,449,135,465
@@ -2277,7 +2249,7 @@ Position=157,476,186,496
 Item=C82N,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,479,133,495
@@ -2289,7 +2261,7 @@ Name=C82O
 Position=157,506,284,526
 Item=C82O,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,509,134,525
@@ -2302,7 +2274,7 @@ Position=157,536,172,556
 Item=C82P,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,539,133,555
@@ -2315,7 +2287,7 @@ Position=157,566,172,586
 Item=C82Q,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,569,134,585
@@ -2327,7 +2299,7 @@ Name=C82R
 Position=157,596,186,616
 Item=C82R,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=6
+Form=5
   
 [Text]
 Position=101,599,133,615
@@ -2340,7 +2312,7 @@ Position=157,626,186,646
 Item=C82S,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,629,133,645
@@ -2353,7 +2325,7 @@ Position=157,656,172,676
 Item=C82T,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=6
+Form=5
   
 [Text]
 Position=101,659,132,675
@@ -2363,27 +2335,9 @@ Text=C82T
   
 [Group]
 Required=Yes
-Name=C83_FORM
-Label=C - Solar lightning product
-Form=7
-LogicControl=No
-Max=1
-[EndGroup]
-  
-[Group]
-Required=Yes
-Name=C84_FORM
-Label=C - Solar lantern
-Form=8
-LogicControl=No
-Max=1
-[EndGroup]
-  
-[Group]
-Required=Yes
 Name=C3_FORM
 Label=C - Main solar-based device
-Form=9
+Form=6
 LogicControl=No
 Max=1
   
@@ -2393,7 +2347,7 @@ Position=131,93,146,113
 Item=C87,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=9
+Form=6
   
 [Text]
 Position=70,96,93,112
@@ -2405,7 +2359,7 @@ Name=C88
 Position=131,123,146,143
 Item=C88,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=9
+Form=6
   
 [Text]
 Position=70,126,93,142
@@ -2418,7 +2372,7 @@ Position=131,153,146,173
 Item=C89,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=9
+Form=6
   
 [Text]
 Position=70,156,93,172
@@ -2430,7 +2384,7 @@ Name=C90
 Position=131,183,244,203
 Item=C90,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=9
+Form=6
   
 [Text]
 Position=70,186,93,202
@@ -2443,7 +2397,7 @@ Position=131,213,146,233
 Item=C91,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=9
+Form=6
   
 [Text]
 Position=70,216,93,232
@@ -2455,7 +2409,7 @@ Name=C94
 Position=131,303,146,323
 Item=C94,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=9
+Form=6
   
 [Text]
 Position=70,306,93,322
@@ -2467,7 +2421,7 @@ Text=C94
 Required=Yes
 Name=C4_FORM
 Label=C - Electric generator set
-Form=10
+Form=7
 LogicControl=No
 Max=1
   
@@ -2477,7 +2431,7 @@ Position=138,50,153,70
 Item=C107,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,53,74,69
@@ -2490,7 +2444,7 @@ Position=138,80,153,100
 Item=C108,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,83,74,99
@@ -2502,7 +2456,7 @@ Name=C109
 Position=138,110,167,130
 Item=C109,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,113,74,129
@@ -2514,7 +2468,7 @@ Name=C110
 Position=138,140,209,160
 Item=C110,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,143,74,159
@@ -2527,7 +2481,7 @@ Position=138,170,503,190
 Item=C111,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=10
+Form=7
   
 [Text]
 Position=44,173,74,189
@@ -2539,7 +2493,7 @@ Name=C112
 Position=138,200,167,220
 Item=C112,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,203,74,219
@@ -2552,7 +2506,7 @@ Position=138,230,251,250
 Item=C113A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=10
+Form=7
   
 [Text]
 Position=44,233,83,249
@@ -2565,7 +2519,7 @@ Position=138,260,388,280
 Item=C113B,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
-Form=10
+Form=7
   
 [Text]
 Position=44,263,83,279
@@ -2577,7 +2531,7 @@ Name=C114
 Position=138,290,167,310
 Item=C114,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,293,74,309
@@ -2590,7 +2544,7 @@ Position=138,320,153,340
 Item=C115,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,323,74,339
@@ -2602,7 +2556,7 @@ Name=C116
 Position=138,350,209,370
 Item=C116,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,353,74,369
@@ -2614,7 +2568,7 @@ Name=C117
 Position=138,380,209,400
 Item=C117,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,383,74,399
@@ -2627,7 +2581,7 @@ Position=138,410,167,430
 Item=C118,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,413,74,429
@@ -2639,7 +2593,7 @@ Name=C119
 Position=138,440,181,460
 Item=C119,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,443,74,459
@@ -2652,7 +2606,7 @@ Position=138,470,153,490
 Item=C120,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,473,74,489
@@ -2664,7 +2618,7 @@ Name=C121
 Position=138,500,209,520
 Item=C121,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,503,74,519
@@ -2677,7 +2631,7 @@ Position=138,530,153,550
 Item=C122,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,533,74,549
@@ -2689,7 +2643,7 @@ Name=C123
 Position=138,560,167,580
 Item=C123,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,563,74,579
@@ -2701,7 +2655,7 @@ Name=C124
 Position=138,590,167,610
 Item=C124,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,593,74,609
@@ -2713,7 +2667,7 @@ Name=C125
 Position=138,620,167,640
 Item=C125,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=7
   
 [Text]
 Position=44,623,74,639
@@ -2726,7 +2680,7 @@ Position=138,650,167,670
 Item=C126,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,653,74,669
@@ -2739,7 +2693,7 @@ Position=137,679,166,699
 Item=C127A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,683,83,699
@@ -2752,7 +2706,7 @@ Position=137,709,166,729
 Item=C127B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,713,83,729
@@ -2765,7 +2719,7 @@ Position=138,740,153,760
 Item=C128,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,743,74,759
@@ -2778,7 +2732,7 @@ Position=138,770,153,790
 Item=C129,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,773,74,789
@@ -2791,7 +2745,7 @@ Position=138,800,167,820
 Item=C130,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=7
   
 [Text]
 Position=44,803,74,819
@@ -2804,7 +2758,7 @@ Position=138,830,388,850
 Item=C130_SPEC,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
-Form=10
+Form=7
   
 [Text]
 Position=44,833,116,849
@@ -2816,7 +2770,7 @@ Text=C130_SPEC
 Required=Yes
 Name=C5_FORM
 Label=C - externally recharged battery
-Form=11
+Form=8
 LogicControl=No
 Max=1
   
@@ -2826,7 +2780,7 @@ Position=98,59,113,79
 Item=C131,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=11
+Form=8
   
 [Text]
 Position=37,62,67,78
@@ -2839,7 +2793,7 @@ Position=98,89,435,109
 Item=C132,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=11
+Form=8
   
 [Text]
 Position=37,92,67,108
@@ -2852,7 +2806,7 @@ Position=98,119,239,139
 Item=C133A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=11
+Form=8
   
 [Text]
 Position=37,122,76,138
@@ -2865,7 +2819,7 @@ Position=98,149,113,169
 Item=C134,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=11
+Form=8
   
 [Text]
 Position=37,152,67,168
@@ -2877,7 +2831,7 @@ Name=C135
 Position=98,179,155,199
 Item=C135,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,182,67,198
@@ -2889,7 +2843,7 @@ Name=C136
 Position=98,209,127,229
 Item=C136,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,212,67,228
@@ -2901,7 +2855,7 @@ Name=C137
 Position=98,239,211,259
 Item=C137,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,242,67,258
@@ -2913,7 +2867,7 @@ Name=C138
 Position=98,269,211,289
 Item=C138,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,272,67,288
@@ -2926,7 +2880,7 @@ Position=98,299,127,319
 Item=C139,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=11
+Form=8
   
 [Text]
 Position=37,302,67,318
@@ -2938,7 +2892,7 @@ Name=C140
 Position=98,329,127,349
 Item=C140,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,332,67,348
@@ -2950,7 +2904,7 @@ Name=C141
 Position=98,359,127,379
 Item=C141,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,362,67,378
@@ -2962,7 +2916,7 @@ Name=C142
 Position=98,389,127,409
 Item=C142,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,392,67,408
@@ -2974,7 +2928,7 @@ Name=C143
 Position=98,419,127,439
 Item=C143,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,422,67,438
@@ -2986,7 +2940,7 @@ Name=C144
 Position=98,449,211,469
 Item=C144,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,452,67,468
@@ -2998,7 +2952,7 @@ Name=C145
 Position=98,479,141,499
 Item=C145,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=11
+Form=8
   
 [Text]
 Position=37,482,67,498
@@ -3011,7 +2965,7 @@ Position=98,509,127,529
 Item=C146A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=11
+Form=8
   
 [Text]
 Position=37,512,76,528
@@ -3024,7 +2978,7 @@ Position=98,539,141,559
 Item=C146B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=11
+Form=8
   
 [Text]
 Position=37,542,76,558
@@ -3036,7 +2990,7 @@ Text=C146B
 Required=Yes
 Name=C6_FORM
 Label=C - Main source of electricity - charging mobile phone
-Form=12
+Form=9
 LogicControl=No
 Max=1
   
@@ -3045,7 +2999,7 @@ Name=C149
 Position=89,54,118,74
 Item=C149,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=12
+Form=9
   
 [Text]
 Position=37,57,67,73
@@ -3058,7 +3012,7 @@ Position=89,84,118,104
 Item=C150,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=12
+Form=9
   
 [Text]
 Position=37,87,67,103
@@ -3071,7 +3025,7 @@ Position=89,114,104,134
 Item=C151,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=12
+Form=9
   
 [Text]
 Position=37,117,67,133
@@ -3084,7 +3038,7 @@ Position=89,144,104,164
 Item=C152,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=12
+Form=9
   
 [Text]
 Position=37,147,67,163
@@ -3096,7 +3050,7 @@ Name=C153
 Position=89,174,118,194
 Item=C153,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=12
+Form=9
   
 [Text]
 Position=37,177,67,193
@@ -3108,7 +3062,7 @@ Name=C154
 Position=89,204,160,224
 Item=C154,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=12
+Form=9
   
 [Text]
 Position=37,207,67,223
@@ -3120,7 +3074,7 @@ Text=C154
 Required=Yes
 Name=D_FORM
 Label=D - willingness to pay for a grid connection
-Form=13
+Form=10
 LogicControl=No
 Max=1
   
@@ -3130,7 +3084,7 @@ Position=121,114,136,134
 Item=D3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=13
+Form=10
   
 [Text]
 Position=76,117,92,133
@@ -3143,7 +3097,7 @@ Position=121,144,150,164
 Item=D6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=13
+Form=10
   
 [Text]
 Position=76,147,92,163
@@ -3156,7 +3110,7 @@ Position=121,174,150,194
 Item=D7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=13
+Form=10
   
 [Text]
 Position=76,177,92,193
@@ -3169,7 +3123,7 @@ Position=121,204,150,224
 Item=D8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=13
+Form=10
   
 [Text]
 Position=76,207,92,223
@@ -3181,7 +3135,7 @@ Text=D8
 Required=Yes
 Name=E_FORM
 Label=E - Willingness to pay for solar device
-Form=14
+Form=11
 LogicControl=No
 Max=1
   
@@ -3191,7 +3145,7 @@ Position=79,111,94,131
 Item=E3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=14
+Form=11
   
 [Text]
 Position=42,114,57,130
@@ -3204,7 +3158,7 @@ Position=79,141,108,161
 Item=E5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=14
+Form=11
   
 [Text]
 Position=42,144,57,160
@@ -3217,7 +3171,7 @@ Position=79,171,108,191
 Item=E7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=14
+Form=11
   
 [Text]
 Position=42,174,57,190
@@ -3229,7 +3183,7 @@ Text=E7
 Required=Yes
 Name=G_FORM
 Label=G - Dry-cell batteries
-Form=15
+Form=12
 LogicControl=No
 Max=1
   
@@ -3239,7 +3193,7 @@ Position=85,86,198,106
 Item=G2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=15
+Form=12
   
 [Text]
 Position=46,89,63,105
@@ -3249,7 +3203,7 @@ Text=G2
 [Grid]
 Name=G_DRY_CELL000
 Label=G1 Dry-cell batteries
-Form=15
+Form=12
 Required=No
 Type=Record
 TypeName=G_DRY_CELL
@@ -3383,7 +3337,7 @@ Name=G7
 Position=85,400,114,420
 Item=G7,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=15
+Form=12
   
 [Text]
 Position=46,403,63,419
@@ -3395,7 +3349,7 @@ Name=G8
 Position=85,430,156,450
 Item=G8,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=15
+Form=12
   
 [Text]
 Position=46,433,63,449
@@ -3407,7 +3361,7 @@ Text=G8
 Required=Yes
 Name=F_FORM
 Label=F- Kerosene/fuel-based/candle lighting
-Form=16
+Form=13
 LogicControl=No
 Max=1
   
@@ -3417,7 +3371,7 @@ Position=85,42,114,62
 Item=F1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=16
+Form=13
   
 [Text]
 Position=48,45,63,61
@@ -3430,7 +3384,7 @@ Position=85,72,114,92
 Item=F2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=16
+Form=13
   
 [Text]
 Position=48,75,63,91
@@ -3442,7 +3396,7 @@ Name=F3B
 Position=224,113,253,133
 Item=F3B,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=16
+Form=13
   
 [Text]
 Position=50,116,74,132
@@ -3455,7 +3409,7 @@ Position=87,396,186,416
 Item=F5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
-Form=16
+Form=13
   
 [Text]
 Position=50,399,65,415
@@ -3465,7 +3419,7 @@ Text=F5
 [Grid]
 Name=F5_MAIN_SOURCE_FUEL000
 Label=F5 Main source of fuel
-Form=16
+Form=13
 Required=No
 Type=Record
 TypeName=F5_MAIN_SOURCE_FUEL
@@ -3591,7 +3545,7 @@ Text=F5D
 Required=Yes
 Name=I_FORM
 Label=I - Use of cooking solutions
-Form=17
+Form=14
 LogicControl=No
 Max=1
   
@@ -3601,7 +3555,7 @@ Position=114,46,143,66
 Item=I1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=17
+Form=14
   
 [Text]
 Position=74,49,85,65
@@ -3614,7 +3568,7 @@ Position=127,307,142,327
 Item=I37,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=17
+Form=14
   
 [Text]
 Position=87,310,105,326
@@ -3626,7 +3580,7 @@ Name=I38
 Position=127,337,156,357
 Item=I38,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,340,105,356
@@ -3638,7 +3592,7 @@ Name=I39
 Position=127,367,156,387
 Item=I39,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,370,105,386
@@ -3650,7 +3604,7 @@ Name=I40
 Position=127,397,156,417
 Item=I40,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,400,105,416
@@ -3662,7 +3616,7 @@ Name=I41
 Position=127,427,156,447
 Item=I41,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,430,105,446
@@ -3674,7 +3628,7 @@ Name=I42
 Position=127,457,156,477
 Item=I42,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,460,105,476
@@ -3687,7 +3641,7 @@ Position=127,487,142,507
 Item=I43,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=17
+Form=14
   
 [Text]
 Position=87,490,105,506
@@ -3700,7 +3654,7 @@ Position=127,517,142,537
 Item=I44,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=17
+Form=14
   
 [Text]
 Position=87,520,105,536
@@ -3712,7 +3666,7 @@ Name=I45
 Position=127,547,142,567
 Item=I45,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=17
+Form=14
   
 [Text]
 Position=87,550,105,566
@@ -3724,7 +3678,7 @@ Text=I45
 Required=Yes
 Name=O_FORM
 Label=O Health Impacts
-Form=18
+Form=15
 LogicControl=No
 Max=1
   
@@ -3734,7 +3688,7 @@ Position=110,47,139,67
 Item=O1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,50,88,66
@@ -3747,7 +3701,7 @@ Position=110,77,125,97
 Item=O2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,80,74,96
@@ -3760,7 +3714,7 @@ Position=110,107,125,127
 Item=O3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,110,74,126
@@ -3773,7 +3727,7 @@ Position=110,137,125,157
 Item=O4,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,140,74,156
@@ -3786,7 +3740,7 @@ Position=110,167,125,187
 Item=O5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,170,74,186
@@ -3799,7 +3753,7 @@ Position=110,197,125,217
 Item=O6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=18
+Form=15
   
 [Text]
 Position=57,200,74,216
@@ -3811,7 +3765,7 @@ Text=O6
 Required=Yes
 Name=K_FORM
 Label=K - Willingness to pay for improved cookstove
-Form=19
+Form=16
 LogicControl=No
 Max=1
   
@@ -3821,7 +3775,7 @@ Position=91,60,120,80
 Item=K2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=19
+Form=16
   
 [Text]
 Position=53,63,69,79
@@ -3834,7 +3788,7 @@ Position=91,90,106,110
 Item=K3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=19
+Form=16
   
 [Text]
 Position=53,93,69,109
@@ -3847,7 +3801,7 @@ Position=91,120,120,140
 Item=K5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=19
+Form=16
   
 [Text]
 Position=53,123,69,139
@@ -3860,7 +3814,7 @@ Position=91,150,120,170
 Item=K7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=19
+Form=16
   
 [Text]
 Position=53,153,69,169
@@ -3872,7 +3826,7 @@ Text=K7
 Required=Yes
 Name=J_FORM
 Label=J - Space and water heating
-Form=20
+Form=17
 LogicControl=No
 Max=1
   
@@ -3882,7 +3836,7 @@ Position=116,51,131,71
 Item=J1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=20
+Form=17
   
 [Text]
 Position=66,54,80,70
@@ -3895,7 +3849,7 @@ Position=116,111,131,131
 Item=J2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=20
+Form=17
   
 [Text]
 Position=66,114,80,130
@@ -3908,7 +3862,7 @@ Position=116,171,131,191
 Item=J4,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=20
+Form=17
   
 [Text]
 Position=66,174,80,190
@@ -3921,7 +3875,7 @@ Position=116,201,131,221
 Item=J5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=20
+Form=17
   
 [Text]
 Position=66,204,80,220
@@ -3934,7 +3888,7 @@ Position=116,231,145,251
 Item=J6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=20
+Form=17
   
 [Text]
 Position=66,234,80,250
@@ -3946,7 +3900,7 @@ Text=J6
 Required=Yes
 Name=L_FORM
 Label=L - Household assets
-Form=21
+Form=18
 LogicControl=No
 Max=1
   
@@ -3956,7 +3910,7 @@ Position=87,30,116,50
 Item=L1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,33,65,49
@@ -3966,7 +3920,7 @@ Text=L1_1
 [Grid]
 Name=HOUSEHOLD_ASSETS000
 Label=Household assets
-Form=21
+Form=18
 Required=Yes
 Type=Item
 TypeName=HOUSEHOLD_ASSETS
@@ -4211,7 +4165,7 @@ Position=87,424,102,444
 Item=L26,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,427,58,443
@@ -4224,7 +4178,7 @@ Position=87,454,102,474
 Item=L27,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,457,58,473
@@ -4237,7 +4191,7 @@ Position=87,484,102,504
 Item=L28,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,487,58,503
@@ -4250,7 +4204,7 @@ Position=87,514,102,534
 Item=L29,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,517,58,533
@@ -4263,7 +4217,7 @@ Position=87,544,102,564
 Item=L30,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=21
+Form=18
   
 [Text]
 Position=36,547,58,563
@@ -4275,7 +4229,7 @@ Text=L30
 Required=Yes
 Name=M_FORM
 Label=M - Street Lightning
-Form=22
+Form=19
 LogicControl=No
 Max=1
   
@@ -4285,7 +4239,7 @@ Position=77,50,92,70
 Item=M2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=22
+Form=19
   
 [Text]
 Position=37,53,55,69
@@ -4298,7 +4252,7 @@ Position=77,80,92,100
 Item=M3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=22
+Form=19
   
 [Text]
 Position=37,83,55,99
@@ -4311,7 +4265,7 @@ Position=77,110,92,130
 Item=M4,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=22
+Form=19
   
 [Text]
 Position=37,113,55,129
@@ -4321,9 +4275,221 @@ Text=M4
   
 [Group]
 Required=Yes
+Name=N_FORM
+Label=N - Time use
+Form=20
+LogicControl=No
+Max=1
+  
+[Field]
+Name=N0
+Position=74,66,89,86
+Item=N0,HHQ_DICT
+FieldLabelType=DictionaryName
+Form=20
+  
+[Text]
+Position=18,69,34,85
+Text=N0
+ 
+  
+[Grid]
+Name=N_TIME000
+Label=Time use
+Form=20
+Required=Yes
+Type=Item
+TypeName=N_TIME
+Max=5
+DisplaySize=14,123,454,287
+Orientation=Horizontal
+FieldRowHeight=0
+HeadingRowHeight=0
+FreeMovement=No
+ 
+[Text]
+Position=0,4,15,28
+Text=1
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=2
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=3
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=4
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=5
+ 
+  
+[Column]
+Width=10
+[EndColumn]
+  
+[Column]
+Width=83
+  
+[HeaderText]
+Position=0,0,83,24
+Text=N_ACTIVITY
+ 
+[Field]
+Name=N_ACTIVITY
+Position=60,0,75,20
+Item=N_ACTIVITY,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+  
+[Text]
+Text=N_ACTIVITY
+ 
+[EndColumn]
+  
+[Column]
+Width=37
+  
+[HeaderText]
+Position=4,0,37,24
+Text=N_A
+ 
+[Field]
+Name=N_A
+Position=0,0,29,20
+Item=N_A,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_A
+ 
+[EndColumn]
+  
+[Column]
+Width=33
+  
+[HeaderText]
+Position=0,0,33,24
+Text=N_B
+ 
+[Field]
+Name=N_B
+Position=10,0,25,20
+Item=N_B,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_B
+ 
+[EndColumn]
+  
+[Column]
+Width=58
+  
+[HeaderText]
+Position=0,0,58,24
+Text=N_C_HH
+ 
+[Field]
+Name=N_C_HH
+Position=21,0,50,20
+Item=N_C_HH,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_C_HH
+ 
+[EndColumn]
+  
+[Column]
+Width=62
+  
+[HeaderText]
+Position=0,0,62,24
+Text=N_C_MM
+ 
+[Field]
+Name=N_C_MM
+Position=25,0,54,20
+Item=N_C_MM,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_C_MM
+ 
+[EndColumn]
+  
+[Column]
+Width=58
+  
+[HeaderText]
+Position=0,0,58,24
+Text=N_D_HH
+ 
+[Field]
+Name=N_D_HH
+Position=21,0,50,20
+Item=N_D_HH,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_D_HH
+ 
+[EndColumn]
+  
+[Column]
+Width=62
+  
+[HeaderText]
+Position=0,0,62,24
+Text=N_D_MM
+ 
+[Field]
+Name=N_D_MM
+Position=25,0,54,20
+Item=N_D_MM,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_D_MM
+ 
+[EndColumn]
+  
+[Column]
+Width=32
+  
+[HeaderText]
+Position=0,0,32,24
+Text=N_E
+ 
+[Field]
+Name=N_E
+Position=9,0,24,20
+Item=N_E,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=N_E
+ 
+[EndColumn]
+  
+[EndGrid]
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
 Name=Q_FORM
 Label=Q - consumption/expendityre
-Form=23
+Form=21
 LogicControl=No
 Max=1
   
@@ -4333,7 +4499,7 @@ Position=160,37,189,57
 Item=Q1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=23
+Form=21
   
 [Text]
 Position=100,40,131,56
@@ -4346,7 +4512,7 @@ Position=160,67,175,87
 Item=Q1_2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=23
+Form=21
   
 [Text]
 Position=100,70,131,86
@@ -4358,7 +4524,7 @@ Name=Q1_3
 Position=160,97,231,117
 Item=Q1_3,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,100,131,116
@@ -4370,7 +4536,7 @@ Name=Q1_4
 Position=160,127,231,147
 Item=Q1_4,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,130,131,146
@@ -4382,7 +4548,7 @@ Name=Q1_5
 Position=160,157,231,177
 Item=Q1_5,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,160,131,176
@@ -4394,7 +4560,7 @@ Name=Q1_6
 Position=160,187,231,207
 Item=Q1_6,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,190,131,206
@@ -4406,7 +4572,7 @@ Name=Q1_7
 Position=160,217,245,237
 Item=Q1_7,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,220,131,236
@@ -4418,7 +4584,7 @@ Name=Q1_8
 Position=160,247,245,267
 Item=Q1_8,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,250,131,266
@@ -4430,7 +4596,7 @@ Name=Q1_9
 Position=160,277,245,297
 Item=Q1_9,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,280,131,296
@@ -4442,7 +4608,7 @@ Name=Q1_10
 Position=160,307,245,327
 Item=Q1_10,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=23
+Form=21
   
 [Text]
 Position=100,310,138,326
@@ -4454,7 +4620,7 @@ Text=Q1_10
 Required=Yes
 Name=S_FORM
 Label=S - attitudes
-Form=24
+Form=22
 LogicControl=No
 Max=1
   
@@ -4464,7 +4630,7 @@ Position=98,40,127,60
 Item=S1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,43,76,59
@@ -4477,7 +4643,7 @@ Position=98,160,113,180
 Item=S4,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,163,62,179
@@ -4490,7 +4656,7 @@ Position=98,190,113,210
 Item=S5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,193,62,209
@@ -4503,7 +4669,7 @@ Position=98,220,113,240
 Item=S6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,223,62,239
@@ -4516,7 +4682,7 @@ Position=98,250,113,270
 Item=S7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,253,62,269
@@ -4529,7 +4695,7 @@ Position=98,280,113,300
 Item=S8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,283,62,299
@@ -4542,7 +4708,7 @@ Position=98,310,113,330
 Item=S9,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=24
+Form=22
   
 [Text]
 Position=46,313,62,329
@@ -4554,7 +4720,7 @@ Text=S9
 Required=Yes
 Name=U_FORM
 Label=U - Livelihood means
-Form=25
+Form=23
 LogicControl=No
 Max=1
   
@@ -4564,7 +4730,7 @@ Position=103,36,132,56
 Item=U1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=49,39,79,55
@@ -4574,7 +4740,7 @@ Text=U1_1
 [Grid]
 Name=U_LIVELIHOOD_1_9000
 Label=U2 Livelihood means u1-u9
-Form=25
+Form=23
 Required=No
 Type=Record
 TypeName=U_LIVELIHOOD_1_9
@@ -4794,7 +4960,7 @@ Position=145,400,160,420
 Item=U10A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,403,123,419
@@ -4807,7 +4973,7 @@ Position=145,430,160,450
 Item=U10B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,433,123,449
@@ -4820,7 +4986,7 @@ Position=145,460,160,480
 Item=U11A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,463,123,479
@@ -4833,7 +4999,7 @@ Position=145,490,160,510
 Item=U11B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,493,123,509
@@ -4846,7 +5012,7 @@ Position=145,520,160,540
 Item=U12A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,523,123,539
@@ -4859,7 +5025,7 @@ Position=145,550,160,570
 Item=U12B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,553,123,569
@@ -4872,7 +5038,7 @@ Position=145,580,160,600
 Item=U13A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,583,123,599
@@ -4885,7 +5051,7 @@ Position=145,610,160,630
 Item=U13B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,613,123,629
@@ -4898,7 +5064,7 @@ Position=145,640,160,660
 Item=U14A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,643,123,659
@@ -4911,7 +5077,7 @@ Position=145,670,160,690
 Item=U14B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=25
+Form=23
   
 [Text]
 Position=91,673,123,689
@@ -4923,7 +5089,7 @@ Text=U14B
 Required=Yes
 Name=T_FORM
 Label=T - Women's empowerment
-Form=26
+Form=24
 LogicControl=No
 Max=1
   
@@ -4933,7 +5099,7 @@ Position=105,57,134,77
 Item=T1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=26
+Form=24
   
 [Text]
 Position=54,60,83,76
@@ -4946,7 +5112,7 @@ Position=105,87,120,107
 Item=T1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=26
+Form=24
   
 [Text]
 Position=54,90,69,106
@@ -4959,7 +5125,7 @@ Position=105,117,120,137
 Item=T2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=26
+Form=24
   
 [Text]
 Position=54,120,69,136
@@ -4972,7 +5138,7 @@ Position=105,147,120,167
 Item=T3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=26
+Form=24
   
 [Text]
 Position=54,150,69,166
@@ -4984,7 +5150,7 @@ Text=T3
 Required=Yes
 Name=W_FORM
 Label=W - Social Life and Security
-Form=27
+Form=25
 LogicControl=No
 Max=1
   
@@ -4994,7 +5160,7 @@ Position=92,44,121,64
 Item=W1_1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=27
+Form=25
   
 [Text]
 Position=36,47,70,63
@@ -5004,7 +5170,7 @@ Text=W1_1
 [Grid]
 Name=WA000
 Label=Social life and security
-Form=27
+Form=25
 Required=Yes
 Type=Item
 TypeName=WA
@@ -5148,7 +5314,7 @@ Text=WA2
 Required=Yes
 Name=AA_END_FORM
 Label=AA - Interview particulars. End of quest
-Form=28
+Form=26
 LogicControl=No
 Max=1
   
@@ -5157,7 +5323,7 @@ Name=AA20
 Position=105,24,526,44
 Item=AA20,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=28
+Form=26
   
 [Text]
 Position=51,27,83,43

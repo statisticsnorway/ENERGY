@@ -32,6 +32,9 @@ PROC GLOBAL
 	string healthQuestion;
 	string consumeItem;
 	numeric years;
+	string activity;
+    string time_use_person;
+
 	
 	//GPS stuff
 	numeric gpsN, gpsE;
@@ -518,12 +521,15 @@ postproc
 	if $ >= 15 then
 		skip to A8;
 	endif;
+PROC B_FORM
+
 PROC B2
  // should be the oldest person, not the first
 	if $ > AB5(1) then
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
+ skip to N_FORM;	
 PROC B3
 //	skip to W_FORM;
 
@@ -684,7 +690,7 @@ PROC C37B
 	endif;
 PROC C39
 	if $ = 2 then
-		skip to C2_FORM;
+	//	skip to C2_FORM;
 	endif;
 
 
@@ -692,13 +698,13 @@ PROC C39
 PROC C79
 preproc
 	if C2 <> 3 and C3A <> 3 then
-		skip to C83_FORM;
+	//	skip to C83_FORM;
 	endif;
 
 	
 postproc
 	if $ = 2 then
-		skip to C83_FORM;
+	//	skip to C83_FORM;
 	else 
 	solarDeviceType = maketext(tr(115));
 	endif;
@@ -1343,6 +1349,44 @@ PROC M2
 //
 
 
+PROC N0
+preproc;
+ numeric n0_1f ;
+ numeric n0_2f ;
+ numeric n0_3f ;
+ numeric n0_4f ;
+ if hhDemographics(1) > 0 and n0_1f <> 1 then
+  N0 = 1;
+  n0_1f = 1;
+  time_use_person = getLabel($, curocc());
+  errmsg ("%s N0 er %d, hhdem = %d",time_use_person,N0,hhDemographics(1));
+ endif;  
+ if hhDemographics(2) > 0 and n0_2f <> 1 then
+  N0 = 2;
+  n0_2f = 1;
+  time_use_person = getLabel($, curocc());
+  errmsg ("%s N0 er %d, hhdem = %d",time_use_person,N0,hhDemographics(2));
+ endif;  
+ if hhDemographics(3) > 0 and n0_3f <> 1 then
+  N0 = 3;
+  n0_3f = 1;
+  time_use_person = getLabel($, curocc());
+  errmsg ("%s N0 er %d, hhdem = %d",time_use_person,N0,hhDemographics(3));
+ endif;  
+ if hhDemographics(4) > 0 and n0_4f <> 1  then
+  N0 = 4;
+  n0_4f = 1;
+  time_use_person = getLabel($, curocc());
+  errmsg ("%s N0 er %d, hhdem = %d",time_use_person,N0,hhDemographics(4));
+ endif;  
+skip to N_ACTIVITY;
+  
+PROC N_ACTIVITY
+preproc
+//onfocus
+	$ = curocc();
+	activity = getLabel($, curocc());
+	skip to N_A;
 PROC Q1_1
 onfocus
 	setValueset($, membernumbers, memberNames);
