@@ -5590,7 +5590,7 @@ SW=\pard\cf1\fs24 Je, ulikopa fedha kulipia \cf2\lang1044 %solarDeviceType%\cf1\
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.C92
+Field=HHQ_DICT.C92X
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -5607,7 +5607,7 @@ SW=\pard\cf1\fs24 Je, Kuna miezi/misimu fulani\b  kila mwaka \b0  ambayo huduma 
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.C93
+Field=HHQ_DICT.C93X
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
@@ -6132,10 +6132,11 @@ PT=}
 
 [QUESTION]
 Field=HHQ_DICT.F2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record Respondent:MemberNo for this section\cf2\par
+EN=\pard\cf1\fs24 Now we would like to know some more about vaious types of light and lamps in this household.\par
+EN=\cf2\f1\fs30 First we would like to know what is the main source of lighting the children who are currently enrolled in school usually use for studying/doing homework?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -6154,11 +6155,10 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.F2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Now we would like to know some more about vaious types of light and lamps in this household.\par
-EN=\cf2\f1\fs30 First we would like to know what is the main source of lighting the children who are currently enrolled in school usually use for studying/doing homework?\par
+EN=\pard\cf1\fs24 Record Respondent:MemberNo for this section\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -8750,6 +8750,33 @@ SW=\pard\cf1\fs24\lang1044 Sasa ningependa kukuuliza kuhusu muda unaotumia  kwen
 SW=}
 
 [QUESTION]
+Field=HHQ_DICT.N_A
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How many %time_use_person% have been involved in %ACTIVITY%?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.N_AC
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did  %currMember% have persistent coughing or an illness with a cough at any time in the last 14 days?\cf2\par
+EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 %currMember%\cf2  teve tosse persistente ou uma doen\'e7a com tosse a qualquer momento nos \'faltimos 14 dias?\cf1\f1\fs24\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
+SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+SW=\pard\cf1\fs24 Je, \cf2\lang1044 %currMember%\cf1\lang2057  alikuwa na kikohozi cha muda mrefu au ugonjwa uliombatana na kikohozi katika siku 14 zilizopita??\par
+SW=}
+
+[QUESTION]
 Field=HHQ_DICT.N_NO
 Occurrences=1:10
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
@@ -9012,24 +9039,6 @@ PT={\colortbl ;\red0\green0\blue0;}
 PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\fs24 %healthQuestion% (Young children (Age 0-4 years)\par
 PT=}
-
-[QUESTION]
-Field=HHQ_DICT.O2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did  %currMember% have persistent coughing or an illness with a cough at any time in the last 14 days?\cf2\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 %currMember%\cf2  teve tosse persistente ou uma doen\'e7a com tosse a qualquer momento nos \'faltimos 14 dias?\cf1\f1\fs24\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, \cf2\lang1044 %currMember%\cf1\lang2057  alikuwa na kikohozi cha muda mrefu au ugonjwa uliombatana na kikohozi katika siku 14 zilizopita??\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.O3
