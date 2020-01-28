@@ -18,11 +18,11 @@ Paradata=../Data/Listing_a0661000b083.cslog
 [Parameters]
 DEVICE=a0661000b083
 STATE=  9
-COUNTY=  1
-SUBCOUNTY=  2
-VILLAGE=  4
-EA=  2
-URBANRURAL=1
+COUNTY= 12
+SUBCOUNTY=  1
+VILLAGE=  1
+EA= 52
+URBANRURAL=N
 SERIAL=NOT
 Language=EN
 OnExit=..\Menu\Menu.pff
