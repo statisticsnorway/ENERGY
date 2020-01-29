@@ -35,6 +35,7 @@
 	numeric rangeStart; // Start of a range, to be used in common error message for ranges
 	numeric rangeEnd; // End of a range, to be used in common error message for ranges
 	numeric rangeUnknown; // Unknown range, to be used in common error message for ranges
+	numeric personCooksMostOften = 0; // To be calculated in A8 and used in I section
 	
 	//GPS stuff
 	numeric gpsN, gpsE;
@@ -45,7 +46,6 @@
 
 	array hhDemographics(5) = 0,0,0,0,0;	//splitting household in age and gender groups. To facilitate skipping
 											//element 1 = #women, 2 = #girls, 3 = #men, 4 = #boys, 5 = #children under 5
-
 
 
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
@@ -63,32 +63,6 @@
 		savepartial();
 		stop(1);
 	end;
-
-
-
-PROC C128
-
-	
-
-PROC I2B10
-//	skip to I2B12;
-
-
-
-PROC I2B15
-	if $ = 4 or $ = 5 then
-		skip to I2B18A;
-	endif;
-
-
-
-PROC I2B16
-	if $ = 2 then
-		skip to I2B18A;
-	endif;
-
-
-
 
 
 
@@ -523,6 +497,26 @@ postproc
 	if $ >= 15 then
 		skip to A8;
 	endif;
+PROC A8
+postproc
+ // Find the person who cooks most often = the first of those with lowest values for A8;
+ if $ = 1 and personCooksMostOften = 0 then
+//  personCooksMostOften = AB1(curocc());
+  personCooksMostOften = curocc();
+ endif; 
+ if $ = 2 and personCooksMostOften = 0 then
+  personCooksMostOften = curocc();
+ endif; 
+ if $ = 3 and personCooksMostOften = 0 then
+  personCooksMostOften = curocc();
+ endif;
+ if $ = 4 and personCooksMostOften = 0 then
+  personCooksMostOften = curocc();
+ endif; 
+ if $ = 5 and personCooksMostOften = 0 then
+  personCooksMostOften = curocc();
+ endif;
+ //errmsg("Person,%d, value, %d, curocc, %d",personCooksMostOften,$,curocc())
 PROC B_FORM
 
 PROC B2
@@ -606,6 +600,9 @@ postproc
  if $ = 1 then
    c2yes = c2yes + 1;
  endif;  
+ if $ = 2 then
+  skip to c2c;
+ endif; 
 PROC C2C
 postproc
  if $ = 1 then
@@ -696,7 +693,18 @@ preproc
  rangeEnd = 150;
  rangeUnknown = 888;
 postproc 
- if ($ < rangeStart or $ > rangeEnd) or $ <> rangeUnknown then
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
+ 
+PROC C16B
+preproc
+ rangeStart = 1000;
+ rangeEnd = 99999;
+ rangeUnknown = 88;
+postproc 
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
   errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
   reenter;
  endif;  
@@ -762,6 +770,11 @@ PROC C39
 
 
 
+PROC C41
+preproc
+ if C2a1 <> 2 then
+  skip to C82_FORM;
+ endif; 
 PROC C80
 preproc
 if not(C2G  in 3,7,8) then 
@@ -779,7 +792,7 @@ preproc
  rangeEnd = 300;
  rangeUnknown = 888;
 postproc 
- if ($ < rangeStart or $ > rangeEnd) or $ <> rangeUnknown then
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
   errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
   reenter;
  endif;  
@@ -789,7 +802,27 @@ preproc
  rangeEnd = 500;
  rangeUnknown = 888;
 postproc
- if ($ < rangeStart or $ > rangeEnd) or $ <> rangeUnknown then
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
+PROC C82H1
+preproc
+ rangeStart = 6;
+ rangeEnd = 24;
+ rangeUnknown = 88;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
+PROC C82H2
+preproc
+ rangeStart = 200;
+ rangeEnd = 6000;
+ rangeUnknown = 88;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
   errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
   reenter;
  endif;  
@@ -798,6 +831,16 @@ postproc
  if $ = 2 then
   skip to C82k;
  endif; 
+PROC C82J
+preproc
+ rangeStart = 5;
+ rangeEnd = 1500;
+ rangeUnknown = 8888;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
 PROC C82L
 onfocus
 	//Value set with extra person.
@@ -957,6 +1000,16 @@ PROC C134
 
 
 
+PROC C135
+preproc
+ rangeStart = 5;
+ rangeEnd = 1500;
+ rangeUnknown = 8888;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
 PROC C140
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
@@ -973,6 +1026,36 @@ PROC C141
 
 
 
+PROC C144
+preproc
+ rangeStart = 20;
+ rangeEnd = 500;
+ rangeUnknown = 888;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
+PROC C145
+preproc
+ rangeStart = 6;
+ rangeEnd = 24;
+ rangeUnknown = 88;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
+PROC C145A
+preproc
+ rangeStart = 200;
+ rangeEnd = 600;
+ rangeUnknown = 88;
+postproc
+ if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+  reenter;
+ endif;  
 PROC C146B
 	if $ = C146A then
 		errmsg(tr(151));
@@ -1007,13 +1090,16 @@ PROC C153
 	
 	
 PROC D3
-	
+preproc
+ If (c2g = 1 or c2h = 1) then 
+  skip to E_FORM;
+ endif;
+ 
 onfocus
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
 	CF = round(thePercentages(random(1,2)) * gridPrice);
-		
 		
 postproc
 	if $ = 1 then
@@ -1022,18 +1108,30 @@ postproc
 	
 PROC D6
 	if $ =  1 then
-	//	skip to D9;
+		skip to  E_FORM;
 	endif;
 
 
 
 PROC D7
 	if $ =  1 then
-	//	skip to D9;
+		skip to E_FORM;
 	endif;
 
 
 
+PROC E_FORM
+ 
+preproc
+  if C2g = 3 or C2h = 3  then 
+   skip to G_FORM;
+  endif; 
+  If C2h = 1 or C2g = 1 then 
+   errmsg(168);
+   skip to E3;
+  endif; 
+  errmsg(169);
+  skip to E3;
 PROC E3
 		
 onfocus	
@@ -1045,7 +1143,7 @@ onfocus
 		
 postproc
 	if $ = 1 then
-		skip to F1;
+		skip to G_FORM;
 	endif;
 		
 	
@@ -1053,13 +1151,17 @@ postproc
 
 PROC E5
 	if $ = 1 then
-		skip to F1;
+		skip to G_FORM;
 	endif;
 
 
 
 
 
+PROC G_FORM
+ if C2g <> 9 then 
+  skip to F1;
+ endif; 
 PROC G2
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
@@ -1068,7 +1170,7 @@ PROC G2
 	
 	if pos("66", $) > 0  then
 		//"none" is chosen
-		//skip to H1;
+		skip to F_FORM;
 	endif;
 	
 
@@ -1110,7 +1212,7 @@ onfocus
 
 PROC F2
 onfocus
-	//Loop through HH to find if there are children
+	//Loop through HH to find if there are children attending school
 	numeric i = 1;
 	numeric kids = 0;
 	while AB5(i) <> NOTAPPL do
@@ -1125,11 +1227,43 @@ onfocus
 		skip to F3B;
 	endif;
 
+PROC F3B
+preproc
+ if C2g in 1,3,4 then
+  skip to I_FORM;
+ endif; 
+postproc
+ if $ = 1 then
+  skip to F4e;
+ endif; 
+ if $ in 5,6,7 then
+  skip to I_FORM;
+ endif; 
+  
+PROC F4G1
+postproc
+ if $ = 66 then 
+  skip to F5;
+ endif; 
+PROC F4G2
+postproc
+ if $ = 66 then 
+  skip to F5;
+ endif; 
 PROC F5
+preproc
+ if F3b = 1 then
+  skip to I_FORM;
+ endif; 
+postproc
 	if pos("7", $ ) > 0  and length(strip($)) > 1 then
 		errmsg(tr(118));
 		reenter;
 	endif;
+	if pos("7", $ ) > 0 then
+	 skip to I_FORM;
+	endif; 
+	
 	
 
 
@@ -1168,7 +1302,7 @@ PROC I37
 
 
 PROC I38
-	skip to I43;
+	//skip to I43;
 
 
 
@@ -1184,14 +1318,14 @@ PROC I41
 
 PROC I43
 	if $ = 4 then
-		skip to J_FORM;
+		skip to O_FORM;
 	endif;
 
 	
 PROC O1_1
 onfocus
 	errmsg(tr(146), strip(lstrip(currMember)));
-	$ = N1_1;
+	$ = I1;
 	noinput;
 
 

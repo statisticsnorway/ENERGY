@@ -990,7 +990,7 @@ Value='55                        ';Other|De outros|Nyingine
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
 RecordTypeValue='5'
-RecordLen=243
+RecordLen=245
 
 [Item]
 Label=Record HH or MN this section|Registro HH ou MN nesta secção(pessoa com maior conhecimento)
@@ -1050,6 +1050,12 @@ Label=Do you have any devices or power supply using solar power?
 Name=C2B
 Start=112
 Len=1
+
+[ValueSet]
+Label=Do you have any devices or power supply using solar power?
+Name=C2B_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
 
 [Item]
 Label=What kind of solar power supply do you have?
@@ -1376,48 +1382,48 @@ Value=3;Respondent does not have an energy bill|Reclamado não tem um contrato d
 Label=Amount last month electricity bill|Valor da conta de energia elétrica no mês passado
 Name=C23
 Start=177
-Len=5
+Len=8
 
 [Item]
 Label=Kilowatt hour last month|Quilowatt-hora no mês passado
 Name=C24
-Start=182
+Start=185
 Len=5
 
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C24A
-Start=187
+Start=190
 Len=6
 
 [Item]
 Label=How many weeks did the bill cover?
 Name=C24B
-Start=193
+Start=196
 Len=2
 
 [Item]
 Label=How much did you spend the last time you bought electricity?
 Name=C24C
-Start=195
+Start=198
 Len=8
 
 [Item]
 Label=How long does this amount last?
 Name=C24D
-Start=203
+Start=206
 Len=3
 
 [Item]
 Label=Amount typical month electricity|Equivaleria a eletricidade típico mês
 Name=C25
-Start=206
+Start=209
 Len=5
 
 [Item]
 Label=Quality electricity same all year|energia elétrica de qualidade mesmo durante todo o ano
 Name=C26
-Start=211
+Start=214
 Len=1
 
 [ValueSet]
@@ -1429,7 +1435,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information load shedding schedule|Receba informações da agenda derramamento de carga
 Name=C27
-Start=212
+Start=215
 Len=1
 
 [ValueSet]
@@ -1441,25 +1447,25 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Hours of electricity day and night typical month|Horas de dia eletricidade e noite mês típico
 Name=C28
-Start=213
+Start=216
 Len=2
 
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C29
-Start=215
+Start=218
 Len=2
 
 [Item]
 Label=Hours of use during day and night typical month|Horas de utilização durante o dia ea noite mês típico
 Name=C30
-Start=217
+Start=220
 Len=2
 
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
 Name=C31
-Start=219
+Start=222
 Len=2
 
 [ValueSet]
@@ -1474,13 +1480,13 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C32
-Start=221
-Len=1
+Start=224
+Len=2
 
 [Item]
 Label=Main back-up source lightning|Principal relâmpago fonte de back-up
 Name=C33
-Start=222
+Start=226
 Len=2
 
 [ValueSet]
@@ -1503,7 +1509,7 @@ Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 [Item]
 Label=Main back-up source appliances|Principais aparelhos fonte de back-up
 Name=C34
-Start=224
+Start=228
 Len=2
 
 [ValueSet]
@@ -1522,8 +1528,8 @@ Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 [Item]
 Label=Days to fix power failure|Dias para corrigir falha de energia
 Name=C35
-Start=226
-Len=3
+Start=230
+Len=1
 
 [ValueSet]
 Label=Days to fix power failure|Dias para corrigir falha de energia
@@ -1536,7 +1542,7 @@ Value=4;They nevner showed up
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
 Name=C36
-Start=229
+Start=231
 Len=2
 
 [ValueSet]
@@ -1549,7 +1555,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Problems with grid electricity 1|Problemas com eletricidade da rede 1
 Name=C37A
-Start=231
+Start=233
 Len=2
 
 [ValueSet]
@@ -1570,7 +1576,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Problems with grid electricity 2|Problemas com eletricidade da rede 2
 Name=C37B
-Start=233
+Start=235
 Len=2
 
 [ValueSet]
@@ -1591,7 +1597,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Wiring insulated or concealed|Fiação isolada ou ocultado
 Name=C38
-Start=235
+Start=237
 Len=1
 
 [ValueSet]
@@ -1603,7 +1609,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Any household members die or limb damage|Quaisquer membros do agregado familiar morrer ou danos limb
 Name=C39
-Start=236
+Start=238
 Len=1
 
 [ValueSet]
@@ -1615,7 +1621,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury|Motivo da lesão
 Name=C40
-Start=237
+Start=239
 Len=2
 
 [ValueSet]
@@ -1629,7 +1635,7 @@ Value=55;Other|De outros|Nyinginezo
 [Item]
 Label=Is there a limit for the load and/or appliances you are allowed to power from this local grid?
 Name=C41
-Start=239
+Start=241
 Len=2
 
 [ValueSet]
@@ -1642,7 +1648,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Were you involved in setting the tariff for the local grid?
 Name=C42
-Start=241
+Start=243
 Len=1
 
 [ValueSet]
@@ -1654,7 +1660,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How were you involved in the tariff setting?
 Name=C43
-Start=242
+Start=244
 Len=2
 
 [ValueSet]
@@ -2721,7 +2727,8 @@ Value=3;Battery-operated light source|Fonte de luz operada por batéria|Taa za b
 Value=4;Street lighting|iluminação pública|Taa za barabarani
 Value=5;Kerosene lamp|Lâmpada de querosene|Taa ya chemli/kibatari
 Value=6;Candles|velas|Mishumaa
-Value=7;Biogas lamps|lâmpadas de biogás|Taa za bayogesi
+Value=7;Open wick lamp|lâmpadas de biogás|Taa za bayogesi
+Value=8;Fireplace
 Value=55;Other|De outros|Nyingine, taja
 Value=66;Studying and homework only during daylight hours|Estudar e lição de casa apenas durante o dia|Wanafunzi wanasoma na kufanya kazi zao za shule wakati wa mchana tu
 
@@ -2790,17 +2797,49 @@ Name=F4G1
 Start=139
 Len=2
 
+[ValueSet]
+Label=What are the most important problem when using the [LAMP/ CANDLE]?
+Name=F4G1_VS1
+Value=1;Lantern too expensive to operate|Lanterna muito caro|Kandili ni ya ghali san
+Value=2;Fuel too expensive|Combustível também caro|Mafuta ni ghali sana
+Value=3;Fuel not available|Combustível não disponível|Mafuta hayapatikani
+Value=4;Accidents can happen|Acidentes podem acontecer|Ajali yaweza kutokea
+Value=5;Bad for health|Prejudicial a saúde a saúde|Mbaya kwa afya
+Value=6;Subsidies needed|Subsídios necessários|Ruzuku inahitajika
+Value=7;Time spent to collect fuel|Tempo gasto para recolher o combustível|Muda mwingi sana unatumika kupata mafuta
+Value=55;other|De outros|Nyingine
+Value=66;No problems|Sem problemas|Hakuna tatizo
+
 [Item]
 Label=What are the second most important problem when using the [LAMP/ CANDLE]?
 Name=F4G2
 Start=141
 Len=2
 
+[ValueSet]
+Label=What are the second most important problem when using the [LAMP/ CANDLE]?
+Name=F4G2_VS1
+Value=1;Lantern too expensive to operate|Lanterna muito caro|Kandili ni ya ghali san
+Value=2;Fuel too expensive|Combustível também caro|Mafuta ni ghali sana
+Value=3;Fuel not available|Combustível não disponível|Mafuta hayapatikani
+Value=4;Accidents can happen|Acidentes podem acontecer|Ajali yaweza kutokea
+Value=5;Bad for health|Prejudicial a saúde a saúde|Mbaya kwa afya
+Value=6;Subsidies needed|Subsídios necessários|Ruzuku inahitajika
+Value=7;Time spent to collect fuel|Tempo gasto para recolher o combustível|Muda mwingi sana unatumika kupata mafuta
+Value=55;other|De outros|Nyingine
+Value=66;No problems|Sem problemas|Hakuna tatizo
+
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
 Name=F4I
 Start=143
 Len=1
+
+[ValueSet]
+Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
+Name=F4I_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Nao|Hapana
 
 [Item]
 Label=Which fuel use|Qual usa como combustível?
@@ -2812,12 +2851,12 @@ DataType=Alpha
 [ValueSet]
 Label=Which fuel use|Qual usa como combustível?
 Name=F5_VS1
-Value='2      ';Kerosene|Querosene|Mafuta ya taa
+Value='2      ';Kerosene/Paraffin|Querosene|Mafuta ya taa
 Value='3      ';Diesel||Diseli
 Value='4      ';Gasoline|Gasolina|Petroli
 Value='5      ';Biogas|Biogás|Bayogesi
 Value='6      ';Paraffin|Parafina
-Value='7      ';none|Nenhum|Hakuna
+Value='7      ';None|Nenhum|Hakuna
 
 [Record]
 Label=F5 Main source of fuel|fonte F5 principal de combustível
@@ -2825,40 +2864,41 @@ Name=F5_MAIN_SOURCE_FUEL
 RecordTypeValue='Y'
 Required=No
 MaxRecords=6
-RecordLen=118
+RecordLen=120
 
 [Item]
 Label=Total quantity of purchase at a typical time?|quantidade total de compra em um momento típico?
 Name=F5A
 Start=105
-Len=3
+Len=4
+Decimal=1
 
 [Item]
 Label=How long does this quantity typically last?|Quanto tempo esta quantidade geralmente duram?
 Name=F5B
-Start=108
+Start=109
 Len=3
 
 [Item]
 Label=How much do you pay for the typical purchase?|Quanto você paga para a compra típico?
 Name=F5C
-Start=111
-Len=6
+Start=112
+Len=8
 
 [Item]
 Label=Percentage of fuel used for lightning|Percentagem de combustível utilizado para iluminação
 Name=F5D
-Start=117
-Len=2
+Start=120
+Len=1
 
 [ValueSet]
 Label=Percentage of fuel used for lightning|Percentagem de combustível utilizado para iluminação
 Name=F5D_VS1
-Value=1;Don't use it for lighting|Não usá-lo para a iluminação|Haitumiki kwa mwanga
-Value=2;25%
-Value=3;50%
-Value=4;75%
-Value=5;100%
+Value=0;Don't use it for lighting|Não usá-lo para a iluminação|Haitumiki kwa mwanga
+Value=1;All
+Value=2;More than half
+Value=3;Half
+Value=4;Less than half
 
 [Record]
 Label=G_HH
@@ -2879,8 +2919,8 @@ Name=G2_VS1
 Value='01      ';Lanterns|Lanternas|Kandili
 Value='02      ';Flashlights|Lanternas "flash"|Kurunzi
 Value='03      ';Task lights|Luzes de tarefa|Taa ya kuongeza mwanga
+Value='55      ';Other devices|De outros|Nyingine
 Value='66      ';None|Nenhum|Hakuna
-Value='55      ';Other|De outros|Nyingine
 
 [Item]
 Label=number of dry cell batteries purchased each month|número de pilhas secas comprados a cada mês
@@ -2977,12 +3017,28 @@ Name=I2A
 Start=113
 Len=1
 
+[ValueSet]
+Label=Have you used any stoves using firewood, dung, twigs and leaves during the last 12 months?
+Name=I2A_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
 [Item]
 Label=Which type of stove is this?
 Name=I2B
 Start=114
 Len=6
 DataType=Alpha
+
+[ValueSet]
+Label=Which type of stove is this?
+Name=I2B_VS1
+Value='1     ';A0 Three-stone stove
+Value='2     ';A0 Tripod, flat mud ring
+Value='3     ';A1 Conventional Improved Cooking Stove - ICS (closed oven with separate openings for firewood etc and pots)
+Value='4     ';A2 ICS with Chimney (as convential ICS plus chimney), rocket stove with conventional material for insulation
+Value='5     ';A3 Rocket stove with high insulation, rocket stove with chimney (not sealed)
+Value='6     ';A4 Rocket stove with sealed chimney, rocket stove gasifier, batch feed gasifier
 
 [Item]
 Label=Have you used any stoves using charcoal during the last 12 months?
@@ -2997,6 +3053,15 @@ Start=121
 Len=5
 DataType=Alpha
 
+[ValueSet]
+Label=Which type of stove is this?
+Name=I2C_VS1
+Value='1    ';B0 Traditional charcoal stove with no regulation of airflow
+Value='2    ';B1 ICS charcoal with regulation of airflow
+Value='3    ';B2 ICS with burning chamber
+Value='4    ';B3 ICS with insulated burning chamber
+Value='5    ';B4 Advanced ICS with controlled airflow
+
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
 Name=I2E
@@ -3009,6 +3074,12 @@ Name=I2F
 Start=127
 Len=2
 DataType=Alpha
+
+[ValueSet]
+Label=Which type of stove is this?
+Name=I2F_VS1
+Value='1 ';C3 Natural gasifier oven (only pellets and briquettes)
+Value='2 ';C4 Forced air oven
 
 [Item]
 Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
@@ -3023,6 +3094,14 @@ Start=130
 Len=4
 DataType=Alpha
 
+[ValueSet]
+Label=Which type of stove is this?
+Name=I2H_VS1
+Value='1   ';D5 LPG
+Value='2   ';D5 Biogas
+Value='3   ';D5 Electricity (grid or solar)
+Value='4   ';D5 Solar oven (non-electric)
+
 [Item]
 Label=Which one is your main stove?
 Name=I2I
@@ -3034,6 +3113,14 @@ Label=How did you obtain this [STOVE]?
 Name=I4
 Start=136
 Len=1
+
+[ValueSet]
+Label=How did you obtain this [STOVE]?
+Name=I4_VS1
+Value=1;Purchased, upfront|Adquirido, antecipadamente|Nilinunua kwa kulipiakwa mkupuo
+Value=2;Purchased, in installment|Comprado, em parcela|Nilinunua kwa kulipia kidogo kidogo
+Value=3;Recieve for free|Receber gratuitamente|Nilipata bure
+Value=4;Built ourselves||Nimetengeneza Mwenyewe
 
 [Item]
 Label=Who decided to purchase this [STOVE]?
@@ -3102,11 +3189,28 @@ Name=I15
 Start=195
 Len=2
 
+[ValueSet]
+Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
+Name=COOKPLACE
+Link=127061200
+Value=1;In dwelling, NOT in sleeping area
+Value=2;In dwelling, in a sleeping area
+Value=3;In a separate kitchen
+Value=4;In a veranda (roofed platform with at least two open sides)
+Value=5;In a separate open kitchenhouse
+Value=6;Open air
+Value=55;Other
+
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I15A
 Start=197
 Len=2
+
+[ValueSet]
+Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
+Name=I15A_VS1
+Link=127061200
 
 [Item]
 Label=Do you use a chimney, hood or other exhaust system while using this stove?
@@ -3221,6 +3325,31 @@ Label=Did you seek professinal medical assistance for this injury/ any of these 
 Name=I31
 Start=238
 Len=1
+
+[Item]
+Label=How many of times did the household gather, collect or purchase fuel  during the last seven days?
+Name=I32
+Start=2431
+Len=2
+
+[Item]
+Label=How many members of the household were involved each time?
+Name=I33
+Start=2433
+Len=2
+
+[Item]
+Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Hours)
+Name=I34_HH
+Start=2435
+Len=2
+
+[Item]
+Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Minutes)
+Name=I34_MM
+Start=2437
+Len=2
+
 
 [Item]
 Label=Shape of cooking space|Forma de espaço de cozinha
