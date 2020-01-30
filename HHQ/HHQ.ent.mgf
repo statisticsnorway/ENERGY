@@ -214,7 +214,7 @@ EN(154) You have chosen "No change" in combination with other value. Please reen
 PT(154) Você escolheu "Nenhuma mudança" em combinação com outro valor. Por favor reentrar
 SW(154) Umechagua "Hakuna badiliko" pamoja na thamani nyengine. Tafadhali jaza tena.
 
-EN(155) Grade last year can not be higher than grade this year (%d) 
+EN(155) Grade last year can not be higher than grade this year (%d)
 PT(155) O nível no ano passado não pode ser muito inferior ao nível do este ano (%d)
 SW(155) Daraja mwaka jana haliwezi kuwa juu kuliko daraja mwaka huu (%d)
 
@@ -228,3 +228,27 @@ SW(157) Siwezi kuishi kwa muda mrefu katika jamii kuliko umri wa mtu mzee katika
 
 EN(158) There must be at least one person in the household
 PT(158) Deve haver uma pessoa pelo menos na casa
+
+EN(159) Time used after dark (%d hours) cannot be more than time used in total (%d hours)
+
+EN(160) Time used after dark (%d hours, %d minutes) cannot be more than time used in total (%d hours, %d minutes)
+
+EN (161) %d is more than the maximum of 24 hours.
+SW (161) %d ni zaidi ya saa 24.
+
+EN (162) %d is more than the maximum of 15 hours of darkness.
+
+EN (163) %d.%d is more than the maximum of 24 hours a day.
+
+EN (164) %d.%d is more than the maximum of 15 hours of darkness.
+
+EN (165) %d is more than the maximum of 59 minutes.
+
+EN (166) %d is more than the number of persons in this group (%d)
+
+EN (167) Value must be between %d and %d (or unkwown: %d), entered value is %d
+
+EN (168) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. We know that you already have a grid connection, but as you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+
+EN (169) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+
