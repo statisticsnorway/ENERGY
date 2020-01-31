@@ -1970,3 +1970,8 @@ preproc
 // if WA_0 > 7 then
 //  errmsg("%s",WA_TYPE);
 // endif;
+PROC AA20
+	
+preproc
+		$ = DEVICE_ID;	//To be login later.. :)
+		noinput;

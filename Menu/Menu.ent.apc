@@ -558,9 +558,27 @@ preproc
 	
 PROC M_MENU
 preproc
-	$ = NOTAPPL;
 	//errmsg("%s", getDeviceId());
-
+	if visualValue($) = NOTAPPL then	//Idincates that App was just started up. Need to ask for pw
+		while 1 do
+			LOGIN = prompt(tr(9));
+			string pw = prompt(tr(10), password);
+			numeric load = loadcase(USERS_DICT, LOGIN);
+			//errmsg("load: %d, login: %s, pw: %s", load, login, pw);
+			if tStrip(pw) = tStrip(password) then
+				//ok. Right password
+				if  tolower(tstrip(ROLE)) = "supervisor" then 
+					skip to M_SUPERMENU;
+				else
+					break;
+				endif;
+			else 
+				errmsg(tr(17)); 
+			endif;
+		enddo;
+	endif;
+	$ = NOTAPPL;
+	
 	
 postproc
 	//NB: For all of the questionnaires, the actual start-up of the questionnaires happens
@@ -634,6 +652,7 @@ preproc
 			string pw = prompt(tr(10), password);
 	
 			numeric load = loadcase(USERS_DICT, LOGIN);
+			errmsg("load: %d, login: %s, pw: %s", load, login, pw);
 			if  tolower(tstrip(ROLE)) <> "supervisor" then 
 				errmsg(tr(15));
 				reenter M_MENU;
@@ -834,6 +853,7 @@ preproc
 			
 			numeric markerId = HHMap.addMarker(SA6, SA7);
 			HHMap.setMarkerDescription(markerId, strip(SA9) + "<br/>" + strip(SA5));
+			writePff("Menu", "Menu", "", SA8); //Need this to know where to start up again when returning from a HH questionnaire
 			HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA9) + ";  " + strip(SA5), SA8));
 			inc(i);
 		endif;
@@ -844,12 +864,11 @@ preproc
 		stop(1);
 	endif;
 	HHmap.show();
-	errmsg("Her. rett etter show");
 	vsetCodes(i) = NOTAPPL;
 	setValueset(M_HOUSEHOLD, vsetCodes, vsetLabels);
 
 	
-
+  //setMarkerImage
 postproc
 	//errmsg("%s", getLabel($, $));
 	if getOS() = 10 then

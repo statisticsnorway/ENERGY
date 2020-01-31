@@ -8,19 +8,10 @@
       "path": ".\\Community\\community.ent"
     },
     {
-      "path": ".\\Community\\community.pff"
-    },
-    {
       "path": ".\\HHQ\\HHQ.ent"
     },
     {
-      "path": ".\\HHQ\\HHQ.pff"
-    },
-    {
       "path": ".\\Listing\\Listing.ent"
-    },
-    {
-      "path": ".\\Listing\\Listing.pff"
     },
     {
       "path": ".\\Menu\\Menu.ent"
