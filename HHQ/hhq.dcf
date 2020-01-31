@@ -292,7 +292,8 @@ Len=1
 
 [ValueSet]
 Label=Was [NAME] the head of household 5 years ago?
-Name=AB3B_VS1
+Name=YESNO
+Link=133482376
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
@@ -2704,7 +2705,7 @@ Value=55;Other|De outro|Nyingine
 Label=F_HH Kerosene/Fuel-based/Candle Lightning|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
 RecordTypeValue='9'
-RecordLen=150
+RecordLen=151
 
 [Item]
 Label=Household member|membro do agregado familiar
@@ -2789,12 +2790,12 @@ Len=2
 Label=How many hours do you use [LAMP/ CANDLE] each day?
 Name=F4F
 Start=138
-Len=1
+Len=2
 
 [Item]
 Label=What are the most important problem when using the [LAMP/ CANDLE]?
 Name=F4G1
-Start=139
+Start=140
 Len=2
 
 [ValueSet]
@@ -2813,7 +2814,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=What are the second most important problem when using the [LAMP/ CANDLE]?
 Name=F4G2
-Start=141
+Start=142
 Len=2
 
 [ValueSet]
@@ -2832,7 +2833,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
 Name=F4I
-Start=143
+Start=144
 Len=1
 
 [ValueSet]
@@ -2844,7 +2845,7 @@ Value=2;No|Nao|Hapana
 [Item]
 Label=Which fuel use|Qual usa como combustível?
 Name=F5
-Start=144
+Start=145
 Len=7
 DataType=Alpha
 
@@ -2982,7 +2983,7 @@ Value=2;Backup source of lighting|Fonte de "backup" de iluminação|Chanzo mbada
 Label=I_HH Use of cooking sloutions|I_HH Uso de sloutions cozinha
 Name=I_COOKING_SOLUTIONS
 RecordTypeValue='C'
-RecordLen=253
+RecordLen=262
 
 [Item]
 Label=HH MN for Household Cooking solutions|HH MN para uso doméstico Cozinhar solutionâ
@@ -3020,8 +3021,7 @@ Len=1
 [ValueSet]
 Label=Have you used any stoves using firewood, dung, twigs and leaves during the last 12 months?
 Name=I2A_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
+Link=133482376
 
 [Item]
 Label=Which type of stove is this?
@@ -3046,6 +3046,11 @@ Name=I2C
 Start=120
 Len=1
 
+[ValueSet]
+Label=Have you used any stoves using charcoal during the last 12 months?
+Name=I2C_VS1
+Link=133482376
+
 [Item]
 Label=Which type of stove is this?
 Name=I2D
@@ -3055,7 +3060,7 @@ DataType=Alpha
 
 [ValueSet]
 Label=Which type of stove is this?
-Name=I2C_VS1
+Name=I2D_VS1
 Value='1    ';B0 Traditional charcoal stove with no regulation of airflow
 Value='2    ';B1 ICS charcoal with regulation of airflow
 Value='3    ';B2 ICS with burning chamber
@@ -3067,6 +3072,11 @@ Label=Have you used any stoves using rice husks, pellets or briquettes?
 Name=I2E
 Start=126
 Len=1
+
+[ValueSet]
+Label=Have you used any stoves using rice husks, pellets or briquettes?
+Name=I2E_VS1
+Link=133482376
 
 [Item]
 Label=Which type of stove is this?
@@ -3086,6 +3096,11 @@ Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), s
 Name=I2G
 Start=129
 Len=1
+
+[ValueSet]
+Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
+Name=I2G_VS1
+Link=133482376
 
 [Item]
 Label=Which type of stove is this?
@@ -3163,30 +3178,30 @@ Len=8
 Label=How long have you been using this [STOVE]?
 Name=I12
 Start=190
-Len=1
+Len=2
 
 [Item]
 Label=How many years do you expect to continue using this [STOVE]?
 Name=I12B
-Start=191
+Start=192
 Len=2
 
 [Item]
 Label=In the last 12 months, during which part of the year did you use this [STOVE]?
 Name=I13
-Start=193
+Start=194
 Len=1
 
 [Item]
 Label=Is the [STOVE] fixed in one place or moveable?
 Name=I14
-Start=194
+Start=195
 Len=1
 
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the dry season?
 Name=I15
-Start=195
+Start=196
 Len=2
 
 [ValueSet]
@@ -3204,7 +3219,7 @@ Value=55;Other
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I15A
-Start=197
+Start=198
 Len=2
 
 [ValueSet]
@@ -3215,146 +3230,145 @@ Link=127061200
 [Item]
 Label=Do you use a chimney, hood or other exhaust system while using this stove?
 Name=I16
-Start=199
+Start=200
 Len=1
 
 [Item]
 Label=In the last 12 months, what are the fuels you used the most on [STOVE]?
 Name=I18A
-Start=200
+Start=201
 Len=2
 
 [Item]
 Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
 Name=I18B
-Start=202
+Start=203
 Len=2
 
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19A
-Start=204
+Start=205
 Len=1
 
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19B
-Start=205
+Start=206
 Len=1
 
 [Item]
 Label=In the last 12 months, how many months did you use [FUEL]?
 Name=I19C
-Start=206
+Start=207
 Len=2
 
 [Item]
 Label=What kind of unit do you usually buy the [FUEL] in?
 Name=I19D
-Start=208
+Start=209
 Len=1
 
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
 Name=I19E
-Start=209
+Start=210
 Len=8
 
 [Item]
 Label=How long does a [UNIT] of [FUEL] typically last?
 Name=I19F
-Start=217
+Start=218
 Len=2
 
 [Item]
 Label=How much of the fuel you bought was  used for cooking?
 Name=I19G
-Start=219
+Start=220
 Len=1
 
 [Item]
 Label=How much time do household members spend preparing the [STOVE] and fuel for each meal on average?
 Name=I20
-Start=220
+Start=221
 Len=3
 
 [Item]
 Label=In the last 7 days, how many days did you use [STOVE]?
 Name=I21
-Start=223
+Start=224
 Len=1
 
 [Item]
 Label=In the last 7 days, on average, how many times did you light the [STOVE] per day?
 Name=I22
-Start=224
+Start=225
 Len=1
 
 [Item]
 Label=On average, how much time do you spend in the... morning?
 Name=I23
-Start=225
+Start=226
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... afternoon?
 Name=I24
-Start=228
+Start=229
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... evening?
 Name=I25
-Start=231
+Start=232
 Len=3
 
 [Item]
 Label=In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)?
 Name=I26
-Start=234
+Start=235
 Len=3
 
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?
 Name=I30
-Start=237
+Start=238
 Len=1
 
 [Item]
 Label=Did you seek professinal medical assistance for this injury/ any of these injuries?
 Name=I31
-Start=238
+Start=239
 Len=1
 
 [Item]
 Label=How many of times did the household gather, collect or purchase fuel  during the last seven days?
 Name=I32
-Start=2431
+Start=240
 Len=2
 
 [Item]
 Label=How many members of the household were involved each time?
 Name=I33
-Start=2433
+Start=242
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Hours)
 Name=I34_HH
-Start=2435
+Start=244
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Minutes)
 Name=I34_MM
-Start=2437
+Start=246
 Len=2
-
 
 [Item]
 Label=Shape of cooking space|Forma de espaço de cozinha
 Name=I37
-Start=239
+Start=248
 Len=1
 
 [ValueSet]
@@ -3368,37 +3382,37 @@ Value=4;Other|De outros|Nyingine
 [Item]
 Label=Dimension of cooking space (square)|Dimensão do espaço de cozinha (quadrado)
 Name=I38
-Start=240
+Start=249
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 1|Dimensão do lugar lado cozinhar rectagular 1
 Name=I39
-Start=242
+Start=251
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 2|Dimensão do lugar lado cozinhar rectagular 2
 Name=I40
-Start=244
+Start=253
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place circular|Dimensão de cozinhar rectagular lugar circular
 Name=I41
-Start=246
+Start=255
 Len=2
 
 [Item]
 Label=Size of rectagular cooking place|Tamanho do lugar cozinhar rectagular
 Name=I42
-Start=248
+Start=257
 Len=2
 
 [Item]
 Label=Type of roof covering cooking place|Tipo de telhado que cobre lugar de cozinha
 Name=I43
-Start=250
+Start=259
 Len=1
 
 [ValueSet]
@@ -3412,7 +3426,7 @@ Value=4;None of the above|Nenhuma das acima|Hakuna jibu kati ya 1,2 na 3
 [Item]
 Label=Height of highest point to ceiling|Altura do ponto mais alto ao teto
 Name=I44
-Start=251
+Start=260
 Len=1
 
 [ValueSet]
@@ -3427,13 +3441,13 @@ Value=5;More than 2 * my height|Mais de 2 * minha altura|Zaidi ya mara 2 ya uref
 [Item]
 Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
 Name=I45
-Start=252
+Start=261
 Len=1
 
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?
 Name=I46
-Start=253
+Start=262
 Len=1
 
 [Record]

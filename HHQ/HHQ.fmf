@@ -3366,6 +3366,7 @@ Name=C155
 Position=210,234,225,254
 Item=C155,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=8
   
 [Text]
@@ -3727,7 +3728,7 @@ Text=F4E
   
 [Field]
 Name=F4F
-Position=209,231,224,251
+Position=209,231,238,251
 Item=F4F,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=12
@@ -3991,6 +3992,7 @@ Name=I2E
 Position=211,170,226,190
 Item=I2E,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4016,6 +4018,7 @@ Name=I2G
 Position=205,238,220,258
 Item=I2G,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4066,6 +4069,7 @@ Name=I5
 Position=198,360,227,380
 Item=I5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4090,6 +4094,7 @@ Name=I7
 Position=208,411,237,431
 Item=I7,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4102,6 +4107,7 @@ Name=I8
 Position=206,440,221,460
 Item=I8,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4136,7 +4142,7 @@ Text=I10
   
 [Field]
 Name=I12
-Position=205,531,220,551
+Position=205,531,234,551
 Item=I12,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=13
@@ -4163,6 +4169,7 @@ Name=I13
 Position=198,582,213,602
 Item=I13,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4175,6 +4182,7 @@ Name=I14
 Position=200,608,215,628
 Item=I14,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4213,6 +4221,7 @@ Name=I16
 Position=602,79,617,99
 Item=I16,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4225,6 +4234,7 @@ Name=I18A
 Position=582,107,611,127
 Item=I18A,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4237,6 +4247,7 @@ Name=I18B
 Position=579,132,608,152
 Item=I18B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4249,6 +4260,7 @@ Name=I19A
 Position=597,157,612,177
 Item=I19A,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4261,6 +4273,7 @@ Name=I19B
 Position=606,180,621,200
 Item=I19B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4285,6 +4298,7 @@ Name=I19D
 Position=597,235,612,255
 Item=I19D,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4321,6 +4335,7 @@ Name=I19G
 Position=594,325,609,345
 Item=I19G,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4417,6 +4432,7 @@ Name=I30
 Position=571,553,586,573
 Item=I30,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4429,6 +4445,7 @@ Name=I31
 Position=572,581,587,601
 Item=I31,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]

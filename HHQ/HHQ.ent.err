@@ -1,0 +1,12 @@
+﻿Application     c:\Users\krl\source\ENERGY\HHQ\HHQ.ent.apc
+Type            ENTRY
+Date            Jan 31, 2020
+Time            09:31:47
+
+CSPRO Error Summary
+
+W   90004 Data type of '' argument #1 (numeric) does not match fill value (alpha).
+
+W   90004 Data type of '' argument #2 (alpha) does not match fill value (numeric).
+
+... ending at 09:31:47

@@ -123,6 +123,9 @@ preproc
 
 postproc
 	stop(1);
+PROC AA_FORM
+preproc 
+ errmsg("Device %s",getDeviceId());
 PROC AA1
 preproc
 	seed(systime());
@@ -516,7 +519,7 @@ postproc
  if $ = 5 and personCooksMostOften = 0 then
   personCooksMostOften = curocc();
  endif;
- //errmsg("Person,%d, value, %d, curocc, %d",personCooksMostOften,$,curocc())
+ errmsg("Person,%d, value, %d, curocc, %d",personCooksMostOften,$,curocc())
 PROC B_FORM
 
 PROC B2
@@ -1285,11 +1288,32 @@ onfocus
 
 
 PROC I1
+preproc
+ string namePersonCooksMostOften;
+ namePersonCooksMostOften = memberNames(personCooksMostOften);
+ $ = PersonCooksMostOften;
+ errmsg("Person, %d, %s",namePersonCooksMostOften,personCooksMostOften);
 onfocus
 	setValueset($, memberNumbers, memberNames);
 
 
 
+PROC I2A
+ if $ = 2 then
+  skip to i2c;
+ endif; 
+PROC I2C
+ if $ = 2 then
+  skip to i2e;
+ endif; 
+PROC I2E
+ if $ = 2 then
+  skip to i2g;
+ endif; 
+PROC I2G
+ if $ = 2 then
+  skip to i2i;
+ endif; 
 PROC I37
 	if $ = 2 then
 		skip to I39;

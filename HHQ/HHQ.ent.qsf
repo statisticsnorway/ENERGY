@@ -7204,7 +7204,7 @@ Field=HHQ_DICT.I1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Now we would like to talk to %personCooksMostOften% about cooking and fuels used for cooking.\par
+EN=\pard\cf1\fs24 Now we would like to talk to %namePersonCooksMostOften% about cooking and fuels used for cooking.\par
 EN=Please record respondent\par
 EN=\par
 EN=The respondent should be the household member who most frequently cooks food for the household,\par
@@ -7234,17 +7234,22 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I12
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 How long have you been using this [STOVE]?\par
+EN=\cf2 Number of years\par
+EN=If less than 1 year, record 0\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I12B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 How many years do you expect to continue using this [STOVE]?\par
+EN=\cf2 Number of years\par
+EN=If less than 1 year, record 0\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
@@ -7408,7 +7413,7 @@ Field=HHQ_DICT.I23
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... morning?\par
+EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... morning? (Minutes)\par
 EN=}
 
 [QUESTION]
@@ -7416,7 +7421,7 @@ Field=HHQ_DICT.I24
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... afternoon?\par
+EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... afternoon? (Minutes)\par
 EN=}
 
 [QUESTION]
@@ -7424,7 +7429,7 @@ Field=HHQ_DICT.I25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... evening?\par
+EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... evening? (Minutes)\par
 EN=}
 
 [QUESTION]
@@ -7432,7 +7437,7 @@ Field=HHQ_DICT.I26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)? \par
+EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)? (Minutes)\par
 EN=}
 
 [QUESTION]
