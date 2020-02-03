@@ -24,6 +24,15 @@
     },
     {
       "path": ".\\LookupFiles\\users.csdb"
+    },
+    {
+      "path": ".\\Images\\Location-green.png"
+    },
+    {
+      "path": ".\\Images\\Location-red.png"
+    },
+    {
+      "path": ".\\Images\\Location-yellow.png"
     }
   ],
   "dictionaries": [
