@@ -6661,18 +6661,19 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.F4I
 Occurrences=1:6
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}{\f2\fnil\fcharset0 Arial;}}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 In the last 12 months, did anybody in your household face any serious harm/injury from \cf2 %lampType%\cf1 ? \par
 EN=\f1\fs16\par
-EN=\cf2\f2\fs24 Multiple responses possible\cf1\f1\fs16\par
+EN=\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Nos \'faltimos 12 meses, que tipo de danos / les\'f5es os membros do agregado familiar sofreram de \cf2 %lampType%\cf1 ?\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Nos \'faltimos 12 meses, que tipo de danos / les\'f5es os membros do agregado familiar sofreram de \cf2 %lampType%\cf1 ?\par
 PT=\par
-PT=\cf2\f1\fs24 M\'faltiplas respostas poss\'edveis\cf1\par
+PT=\f1\fs24\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -7228,7 +7229,7 @@ Field=HHQ_DICT.I10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 If you want to sell the [STOVE] in your community today, how much would you receive?\par
+EN=\pard\cf1\f0\fs24 If you want to sell the %mostUsedStove% in your community today, how much would you receive?\par
 EN=}
 
 [QUESTION]
@@ -7236,7 +7237,7 @@ Field=HHQ_DICT.I12
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long have you been using this [STOVE]?\par
+EN=\pard\cf1\f0\fs24 How long have you been using this %mostUsedStove%?\par
 EN=\cf2 Number of years\par
 EN=If less than 1 year, record 0\par
 EN=}
@@ -7246,7 +7247,7 @@ Field=HHQ_DICT.I12B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many years do you expect to continue using this [STOVE]?\par
+EN=\pard\cf1\f0\fs24 How many years do you expect to continue using this %mostUsedStove%?\par
 EN=\cf2 Number of years\par
 EN=If less than 1 year, record 0\par
 EN=\cf1\par
@@ -7257,7 +7258,7 @@ Field=HHQ_DICT.I13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, during which part of the year did you use this [STOVE]?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, during which part of the year did you use this %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -7265,7 +7266,7 @@ Field=HHQ_DICT.I14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Is the [STOVE] fixed in one place or moveable?\par
+EN=\pard\cf1\f0\fs24 Is the %mostUsedStove% fixed in one place or moveable?\par
 EN=}
 
 [QUESTION]
@@ -7273,7 +7274,7 @@ Field=HHQ_DICT.I15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with [STOVE] in the dry season?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the dry season?\par
 EN=}
 
 [QUESTION]
@@ -7281,7 +7282,7 @@ Field=HHQ_DICT.I15A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with [STOVE] in the rainy season?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the rainy season?\par
 EN=}
 
 [QUESTION]
@@ -7297,7 +7298,7 @@ Field=HHQ_DICT.I18A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, what are the fuels you used the most on [STOVE]?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, what are the fuels you used the most on %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -7305,7 +7306,7 @@ Field=HHQ_DICT.I18B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, what are the second most used fuel you used on [STOVE]?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, what are the second most used fuel you used on %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -7313,7 +7314,7 @@ Field=HHQ_DICT.I19A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the [FUEL TYPE] available?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the %fueltype1% available?\par
 EN=}
 
 [QUESTION]
@@ -7321,7 +7322,7 @@ Field=HHQ_DICT.I19B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the [FUEL TYPE] available?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the %fueltype2% available?\par
 EN=}
 
 [QUESTION]
@@ -7329,7 +7330,7 @@ Field=HHQ_DICT.I19C
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, how many months did you use [FUEL]?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, how many months did you use %fueltype1%?\par
 EN=}
 
 [QUESTION]
@@ -7337,7 +7338,7 @@ Field=HHQ_DICT.I19D
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 What kind of unit do you usually buy the [FUEL] in?\par
+EN=\pard\cf1\f0\fs24 What kind of unit do you usually buy the %fueltype1% in?\par
 EN=}
 
 [QUESTION]
@@ -7345,7 +7346,7 @@ Field=HHQ_DICT.I19E
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much did you pay the last time you purchased one [UNIT] of [FUEL]?\par
+EN=\pard\cf1\f0\fs24 How much did you pay the last time you purchased one %UnitFuel% of %fueltype1%?\par
 EN=}
 
 [QUESTION]
@@ -7353,7 +7354,7 @@ Field=HHQ_DICT.I19F
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long does a [UNIT] of [FUEL] typically last? \par
+EN=\pard\cf1\f0\fs24 How long does a %UnitFuel% of %fueltype1% typically last? \par
 EN=\cf2 NUMBER OF DAYS\par
 EN=}
 
@@ -7389,7 +7390,7 @@ Field=HHQ_DICT.I20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much time do household members spend preparing the [STOVE] and fuel for each meal on average?\par
+EN=\pard\cf1\f0\fs24 How much time do household members spend preparing the %mostUsedStove% and fuel for each meal on average? (minutes)\par
 EN=}
 
 [QUESTION]
@@ -7397,7 +7398,7 @@ Field=HHQ_DICT.I21
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, how many days did you use [STOVE]?\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, how many days did you use %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -7405,7 +7406,7 @@ Field=HHQ_DICT.I22
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how many times did you light the [STOVE] per day?\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how many times did you light the %mostUsedStove% per day?\par
 EN=}
 
 [QUESTION]
@@ -7437,7 +7438,7 @@ Field=HHQ_DICT.I26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)? (Minutes)\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how much time did your household use %mostUsedStove% per day to boil water (for cooking, washing, and drinking)? (Minutes)\par
 EN=}
 
 [QUESTION]
@@ -8176,7 +8177,7 @@ Field=HHQ_DICT.I30
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, did anybody in your household face any serious harm/injury from %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8192,7 +8193,7 @@ Field=HHQ_DICT.I32
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many of times did the household gather, collect or purchase fuel  during the last seven days?\par
+EN=\pard\cf1\f0\fs24 How many times did the household gather, collect or purchase fuel  during the last seven days?\par
 EN=}
 
 [QUESTION]
@@ -8307,7 +8308,7 @@ Field=HHQ_DICT.I4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How did you obtain this [STOVE]?\par
+EN=\pard\cf1\f0\fs24 How did you obtain this %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8433,11 +8434,20 @@ SW=\pard\cf1\fs24\lang1044 Je, kuna milango na madirisha mangapi yanayofunguliwa
 SW=}
 
 [QUESTION]
+Field=HHQ_DICT.I46
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?\par
+EN=\cf2 May be recorded by observation\cf1\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.I5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Who decided to purchase this [STOVE]?\par
+EN=\pard\cf1\f0\fs24 Who decided to purchase this %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8445,7 +8455,7 @@ Field=HHQ_DICT.I6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much did you pay for the [STOVE]?\par
+EN=\pard\cf1\f0\fs24 How much did you pay for the %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8453,7 +8463,7 @@ Field=HHQ_DICT.I7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Who gave the [STOVE] to you?\par
+EN=\pard\cf1\f0\fs24 Who gave the %mostUsedStove% to you?\par
 EN=}
 
 [QUESTION]
@@ -8461,7 +8471,7 @@ Field=HHQ_DICT.I8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Did you receive training or information on the [STOVE]?\par
+EN=\pard\cf1\f0\fs24 Did you receive training or information on the %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8469,7 +8479,7 @@ Field=HHQ_DICT.I9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 What is the manufacturer and model of the [STOVE]?\par
+EN=\pard\cf1\f0\fs24 What is the manufacturer and model of the %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
@@ -8759,17 +8769,13 @@ Field=HHQ_DICT.L26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you cultivate some land or keep domestic animals?\par
+EN=\pard\cf1\fs24 Do you keep any domestic animals?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Voc\'ea cultiva alguma machamba ou mant\'e9m animais dom\'e9sticos?\f1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Voc\'ea mant\'e9m animais dom\'e9sticos?\f1\fs24\par
 PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1044 Je, kaya yako inalima shamba au kufuga mifugo?\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.L27
@@ -8790,56 +8796,46 @@ SW=\pard\cf1\fs24\lang1033 Je, kaya yako ina shamba kwa ajili ya kilimo? KAMA ND
 SW=}
 
 [QUESTION]
+Field=HHQ_DICT.L27A
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Did you cultivate any land 5 years ago? IF SO: How large was the area?\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.L28
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you keep any cattle? IF SO: How many?\par
+EN=\pard\cf1\fs24 How many cattle?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Voc\'ea cria gado? \cf2 SE SIM\cf1 : Quantos?\f1\fs24\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, kaya yako inafuga/kutunza ng'ombe? KAMA NDIVYO: Ni wangapi?\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.L29
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you keep any sheep, goats or pigs? IF SO: How many?\par
+EN=\pard\cf1\fs24 How many sheep, goats or pigs?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Voc\'ea cria ovelhas, cabras ou porcos? \cf2 SE SIM\cf1 : Quantos?\par
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantos ovelhas, cabras ou porcos?\par
 PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, kaya yako inafuga kondoo, mbuzi au Nguruwe? KAMA NDIVYO: Ni wangapi?\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.L30
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you keep any poultry (chicken, ducks, turkeys, geese? IF SO: How many?\par
+EN=\pard\cf1\fs24 How many chicken, ducks, turkeys, geese?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 Voc\'ea mant\'e9m alguma ave (frango, patos, perus, gansos? \cf2 SE SIM\cf1 : Quantos?\par
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantos frango, patos, perus, gansos?\par
 PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, kaya yako inafuga jamii yoyote ya ndege (kuku, bata, bata mzinga, bata bukini)? KAMA NDIVYO: Ni wangapi?\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.L_NO
@@ -10074,6 +10070,60 @@ SW=\pard\cf1\fs24 Je \cf2\lang1044 %currMember%\cf1\lang2057  alipata matatizo y
 SW=}
 
 [QUESTION]
+Field=HHQ_DICT.Q1
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Now we would like to ask you for some information on your consumption expenditures. First we would like to know how large part of the food consumption during the last 7 days did you purchase?\par
+EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Agora, gostar\'edamos de pedir algumas informa\'e7\'f5es sobre suas despesas de consumo. \par
+PT=\cf2\par
+PT=Primeiramente gostar\'edamos de saber como voc\'ea comprou grande parte do consumo de alimentos durante os \'faltimos 7 dias?\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+SW=\pard\cf1\fs24 Sasa tungependa kukuuliza kuhusu matumizi ya kaya yako. \par
+SW=Ningependa kujua, katika siku 7 zilizopita,  ni kiasi gani cha chakula mlichotumia mlinunua?\cf2\par
+SW=}
+
+[QUESTION]
+Field=HHQ_DICT.Q10
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend on clothes and shoes the last 30 days?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.Q11
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend on household items, such as soap, cleaning supplies, drugs, batteries etc during the last 30 days?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.Q12
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend on education related expenses (school fees, uniforms, supplies) during the last year?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.Q13
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend on other needs during the last year?\par
+EN=\cf2 e.g. furniture, health services, electronic equipment.\cf1\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.Q14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -10186,27 +10236,6 @@ SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fchars
 SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 SW=\pard\cf1\fs24 Je, mlitumia kiasi gani kwa ajili ya mahitaji mengine katika siku 30 zilizopita?\par
-SW=}
-
-[QUESTION]
-Field=HHQ_DICT.Q1_2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Now we would like to ask you for some information on your consumption expenditures. First we would like to know how large part of the food consumption during the last 7 days did you purchase?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 Agora, gostar\'edamos de pedir algumas informa\'e7\'f5es sobre suas despesas de consumo. \par
-PT=\cf2\par
-PT=Primeiramente gostar\'edamos de saber como voc\'ea comprou grande parte do consumo de alimentos durante os \'faltimos 7 dias?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Sasa tungependa kukuuliza kuhusu matumizi ya kaya yako. \par
-SW=Ningependa kujua, katika siku 7 zilizopita,  ni kiasi gani cha chakula mlichotumia mlinunua?\cf2\par
 SW=}
 
 [QUESTION]
@@ -10355,32 +10384,28 @@ PT=}
 Field=HHQ_DICT.Q1A
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much of\par
+EN=\pard\cf1\fs24 How much of \par
 EN=%consumeItem%\par
 EN=have you purchased last 7 days?\par
-EN=\par
+EN=\cf2 Amount in local currency\par
+EN=88=don't know\par
+EN=\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 How much of\par
-PT=%consumeItem%\par
-PT=have you purchased last 7 days?\par
-PT=\par
-PT=}
 
 [QUESTION]
 Field=HHQ_DICT.Q1B
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How much of\par
 EN=%consumeItem%\par
 EN=have you produced/aquired last 7 days?\par
-EN=\par
+EN=\cf2 Amount in local currency\par
+EN=88=don't know\par
+EN=\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -10395,12 +10420,14 @@ PT=}
 Field=HHQ_DICT.Q1C
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How much of\par
 EN=%consumeItem%\par
 EN=have you recieved as a gift/donation last 7 days?\par
-EN=\par
+EN=\cf2 Amount in local currency\par
+EN=88=don't know\par
+EN=\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -10626,6 +10653,22 @@ PT={\colortbl ;\red0\green0\blue0;}
 PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\fs24 Losses due to theft, robbery, accidents, natural disasters, etc.\par
 PT=}
+
+[QUESTION]
+Field=HHQ_DICT.Q8
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend buying firewood and charcoal and other fuel during the last 30 days?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.Q9
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did you spend on water, electricity, mobile phone top-ups, internet and other communication and transportation during the last 30 days?\par
+EN=}
 
 [QUESTION]
 Field=HHQ_DICT.R10
@@ -11098,58 +11141,45 @@ Field=HHQ_DICT.T1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Who usually makes decisions about health care for yourself? You, your husband/partner, you and your husband/partner or someone else?\par
+EN=\pard\cf1\fs24 Who usually makes decisions about health care for yourself?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\f0\fs30 Quem costuma tomar decis\'f5es sobre cuidados de sa\'fade por si? \par
-PT=Voc\'ea, seu marido / parceiro, voc\'ea e seu marido / parceiro ou outra pessoa?\lang1033\par
+PT=\lang1033\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1044 Nani kwa kawaida  hufanya maamuzi juu ya afya yako? Wewe mwenyewe, Mume/Mwenza, Wewe na Mume/Mwenza,  au mtu mwingine yeyoye?\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang1044 Nani kwa kawaida  hufanya maamuzi juu ya afya yako?\par
 SW=}
 
 [QUESTION]
 Field=HHQ_DICT.T1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 Now I would like to talk to a woman in the household. Please select respondent.\f1\fs30\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Now I will ask you some questions regarding decision making in your household. We would now like to talk to %femaleHeadName% %spouseName% or another adult female in the household.\f1\fs30\par
 EN=\cf2\f0\fs24\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 Agora gostaria de falar com uma mulher da casa. Por favor, selecione respondente.\cf2\f1\fs30\lang1033\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1044 Sasa nitakuuliza maswali yanayohusu kufanya maamuzi ndani ya kaya hii.\par
-SW=\cf2\par
-SW=Andika namba ya mhojiwa (Mwanamke) anayejibu sehemu hii\par
-SW=}
 
 [QUESTION]
 Field=HHQ_DICT.T2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Who usually makes decisions about major household purchases?  You, your husband/partner, you and your husband/partner or someone else?\par
+EN=\pard\cf1\fs24 Who usually makes decisions about major household purchases?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 Quem costuma tomar decis\'f5es sobre grandes compras dom\'e9sticas? \par
-PT=Voc\'ea, seu marido / parceiro, voc\'ea e seu marido / parceiro ou outra pessoa?\f1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quem costuma tomar decis\'f5es sobre grandes compras dom\'e9sticas?\f1\fs24\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1044 Kwa kawaida nani huwa anafanya maamuzi juu ya manunuzi makuu katika kaya hii? Wewe mwenyewe, Mume/Mwenza, Wewe na Mume/Mwenza,  au mtu mwingine yeyoye?\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang1044 Kwa kawaida nani huwa anafanya maamuzi juu ya manunuzi makuu katika kaya hii?\par
 SW=}
 
 [QUESTION]
@@ -11157,18 +11187,17 @@ Field=HHQ_DICT.T3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Who usually makes decisions about visits to your family or relatives?  You, your husband/partner, you and your husband/partner or someone else?\par
+EN=\pard\cf1\fs24 Who usually makes decisions about visits to your family or relatives?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 Quem geralmente toma decis\'f5es sobre visitas a sua fam\'edlia ou parentes? \par
-PT=Voc\'ea, seu marido / parceiro, voc\'ea e seu marido / parceiro ou outra pessoa?\f1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quem geralmente toma decis\'f5es sobre visitas a sua fam\'edlia ou parentes?\f1\fs24\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1044 Kwa kawaida nani hufanya maamuzi kuhusu kuwatembelea familia au ndugu zako? Wewe mwenyewe, Mume/Mwenza, Wewe na Mume/Mwenza,  au mtu mwingine yeyoye?\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang1044 Kwa kawaida nani hufanya maamuzi kuhusu kuwatembelea familia au ndugu zako?\tab\par
 SW=}
 
 [QUESTION]

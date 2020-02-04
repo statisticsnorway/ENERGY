@@ -827,13 +827,13 @@ Value=2;No|Não|Hapana
 Value=88;Don't know|Não sabe|Hajui
 
 [Item]
-Label=Main source energy lightning|Principal fonte de energia do seu AF para iluminação
+Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B14
 Start=130
 Len=1
 
 [ValueSet]
-Label=Main source energy lightning|Principal fonte de energia do seu AF para iluminação
+Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B14_VS1
 Value=1;Collected firewood|Lenha colectada|Kuni za kuokota
 Value=2;Purchased firewood|Lenha comprada|Kuni za kununua
@@ -1485,13 +1485,13 @@ Start=224
 Len=2
 
 [Item]
-Label=Main back-up source lightning|Principal relâmpago fonte de back-up
+Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C33
 Start=226
 Len=2
 
 [ValueSet]
-Label=Main back-up source lightning|Principal relâmpago fonte de back-up
+Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C33_VS1
 Value=1;Local mini grid connection|Ligação à rede de mini local|Gridi ndogo inayopatikana hapa
 Value=2;Electric generator|Gerador elétrico|Jenereta ya umeme
@@ -1501,7 +1501,7 @@ Value=5;Solar multi-light product|Produto multi-luz solar|Kifaa cha umeme jua ch
 Value=6;Solar home system|Sistema de painel solar Solar|Mfumo wa umeme jua wa nyumbani
 Value=7;Pico-hydro|Pico-hidro|Mtambo mdogo wa maji
 Value=8;Kerosene/paraffin lamp|Lâmpada de querosene|Taa ya Mafuta
-Value=9;Fuel-based lightning|Iluminação baseada em combustíveis|Kibatari
+Value=9;Fuel-based lighting|Iluminação baseada em combustíveis|Kibatari
 Value=10;Dry-cell (non-rchargeable) battery/ torch/ flashlight|Pilha seca (não-recarregaveis) bateria / tocha / lanterna|Tochi ya betri (isiyochajika)
 Value=11;Candle|Vela|Mshumaa
 Value=55;Other, specify|Outro especificar|Nyinginezo
@@ -2001,15 +2001,15 @@ Start=225
 Len=4
 
 [Item]
-Label=Use more or less solar lightning|Usa mais ou menos iluminação solar
+Label=Use more or less solar lighting|Usa mais ou menos iluminação solar
 Name=C105
 Start=229
 Len=2
 
 [ValueSet]
-Label=Use more or less solar lightning|Usa mais ou menos iluminação solar
+Label=Use more or less solar lighting|Usa mais ou menos iluminação solar
 Name=C105_VS1
-Value=1;Use more solar lightning|Usar mais raios solares|Unatumia zaidi mwangaza wa umeme jua
+Value=1;Use more solar lighting|Usar mais raios solares|Unatumia zaidi mwangaza wa umeme jua
 Value=2;Use about the same solar lighting|Usar sobre a mesma iluminação solar|Matumizi ya umeme jua hayajabadilika
 Value=3;Use less solar lighting|Usar menos iluminação solar|Matumizi ya mwangaza wa umeme jua yamepungua
 Value=88;Don't know|Não sei|Sijui
@@ -2702,7 +2702,7 @@ Value=4;Do not need a solar system|Não precise de um sistema solar|Sihitaji mfu
 Value=55;Other|De outro|Nyingine
 
 [Record]
-Label=F_HH Kerosene/Fuel-based/Candle Lightning|Querosene / combustível à base / Vela relâmpago
+Label=F_HH Kerosene/Fuel-based/Candle lighting|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
 RecordTypeValue='9'
 RecordLen=151
@@ -2714,13 +2714,13 @@ Start=105
 Len=2
 
 [Item]
-Label=Main source of lightning for children's homework|fonte F1 principal de iluminação para trabalhos de casa das crianças
+Label=Main source of lighting for children's homework|fonte F1 principal de iluminação para trabalhos de casa das crianças
 Name=F2
 Start=107
 Len=2
 
 [ValueSet]
-Label=Main source of lightning for children's homework|fonte F1 principal de iluminação para trabalhos de casa das crianças
+Label=Main source of lighting for children's homework|fonte F1 principal de iluminação para trabalhos de casa das crianças
 Name=F2_VS1
 Value=1;Electric lighting/lamp|Iluminação elétrica / lâmpada|Taa za umeme
 Value=2;Solar powered light source|Fonte de luz com energia solar|Taa za sola
@@ -2755,6 +2755,18 @@ Label=Which of these is the main source of lighting in the household?
 Name=F3B
 Start=121
 Len=2
+
+[ValueSet]
+Label=ValueSet
+Name=F3B_VS1
+Value=1;Candle
+Value=2;Open wick lamp
+Value=3;Wick lamp  with glass cover
+Value=4;Pressurized mantle lamp
+Value=5;Solar powered light source
+Value=6;Battery-operated light source
+Value=7;None
+Value=55;Other
 
 [Item]
 Label=How many of these lamps does your household have?
@@ -2887,13 +2899,13 @@ Start=112
 Len=8
 
 [Item]
-Label=Percentage of fuel used for lightning|Percentagem de combustível utilizado para iluminação
+Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
 Name=F5D
 Start=120
 Len=1
 
 [ValueSet]
-Label=Percentage of fuel used for lightning|Percentagem de combustível utilizado para iluminação
+Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
 Name=F5D_VS1
 Value=0;Don't use it for lighting|Não usá-lo para a iluminação|Haitumiki kwa mwanga
 Value=1;All
@@ -2968,13 +2980,13 @@ Start=113
 Len=2
 
 [Item]
-Label=dry cell as regular source of lightning|pilha seca como fonte regular de relâmpago
+Label=dry cell as regular source of lighting|pilha seca como fonte regular de relâmpago
 Name=GF
 Start=115
 Len=1
 
 [ValueSet]
-Label=dry cell as regular source of lightning|pilha seca como fonte regular de relâmpago
+Label=dry cell as regular source of lighting|pilha seca como fonte regular de relâmpago
 Name=GF_VS1
 Value=1;Regular source of lighting|Fonte regular de iluminação|Chanzo kikuu cha kuangazia
 Value=2;Backup source of lighting|Fonte de "backup" de iluminação|Chanzo mbadala cha kuangazia
@@ -2983,7 +2995,7 @@ Value=2;Backup source of lighting|Fonte de "backup" de iluminação|Chanzo mbada
 Label=I_HH Use of cooking sloutions|I_HH Uso de sloutions cozinha
 Name=I_COOKING_SOLUTIONS
 RecordTypeValue='C'
-RecordLen=262
+RecordLen=294
 
 [Item]
 Label=HH MN for Household Cooking solutions|HH MN para uso doméstico Cozinhar solutionâ
@@ -2992,30 +3004,9 @@ Start=105
 Len=2
 
 [Item]
-Label=Which cookstoves did your HH use for only preparing meals?|Qual fogões fez seu HH usar para preparar única refeições?
-Name=I2
-Start=107
-Len=6
-DataType=Alpha
-
-[ValueSet]
-Label=Which cookstoves did your HH use for only preparing meals?|Qual fogões fez seu HH usar para preparar única refeições?
-Name=I2_VS1
-Value='01    ';3-stone/open fire stove|3-pedra / fogão lareira|Jiko la kuni
-Value='02    ';Biomass self-built stove|Biomassa auto-construção fogão|Jiko linalotumia mabaki ya mimea  lililotengenezwa kienyeji
-Value='03    ';Manufactured stove|Fogão fabricado|Jiko lililotengenezwa kiwandani
-Value='04    ';LPG/Natural gas stove|LPG / fogão de gás natural|Jikola gesi
-Value='05    ';Kerosene stove|Fogão de querosene|Jiko la mafuta ya taa
-Value='06    ';Electric stove|Fogão elétrico|Jiko la umeme
-Value='07    ';Solar cooker|Fogão Solar|Jiko la umeme jua
-Value='08    ';Charcoal burner|Queimador de carvão|Jiko la mkaa
-Value='09    ';None|Nenhum|Hakuna
-Value='55    ';Other|De outros|Nyingine
-
-[Item]
 Label=Have you used any stoves using firewood, dung, twigs and leaves during the last 12 months?
 Name=I2A
-Start=113
+Start=107
 Len=1
 
 [ValueSet]
@@ -3026,24 +3017,24 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I2B
-Start=114
-Len=6
+Start=108
+Len=18
 DataType=Alpha
 
 [ValueSet]
 Label=Which type of stove is this?
 Name=I2B_VS1
-Value='1     ';A0 Three-stone stove
-Value='2     ';A0 Tripod, flat mud ring
-Value='3     ';A1 Conventional Improved Cooking Stove - ICS (closed oven with separate openings for firewood etc and pots)
-Value='4     ';A2 ICS with Chimney (as convential ICS plus chimney), rocket stove with conventional material for insulation
-Value='5     ';A3 Rocket stove with high insulation, rocket stove with chimney (not sealed)
-Value='6     ';A4 Rocket stove with sealed chimney, rocket stove gasifier, batch feed gasifier
+Value='101               ';Three-stone stove
+Value='102               ';Round mud stove
+Value='111               ';ICS w/ ceramic fire chamber
+Value='121               ';Rocket stove
+Value='131               ';Lorena 1 Rocket stove with high insulation
+Value='141               ';Lorena 2 Rocket stove with well- sealed chimney
 
 [Item]
 Label=Have you used any stoves using charcoal during the last 12 months?
 Name=I2C
-Start=120
+Start=126
 Len=1
 
 [ValueSet]
@@ -3054,23 +3045,24 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I2D
-Start=121
-Len=5
+Start=127
+Len=18
 DataType=Alpha
 
 [ValueSet]
 Label=Which type of stove is this?
 Name=I2D_VS1
-Value='1    ';B0 Traditional charcoal stove with no regulation of airflow
-Value='2    ';B1 ICS charcoal with regulation of airflow
-Value='3    ';B2 ICS with burning chamber
-Value='4    ';B3 ICS with insulated burning chamber
-Value='5    ';B4 Advanced ICS with controlled airflow
+Value='201               ';Traditional charcoal stove - Open access for air
+Value='211               ';Charcoal stove, Old ICS Opening for air may be closed
+Value='221               ';Ceramic lined charcoal ICS
+Value='231               ';Ceramic lined and insulated charcoal ICS
+Value='233               ';Kerosene cooking stove (Mchina)
+Value='241               ';Efficient charcoal stove with controlled airflow
 
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
 Name=I2E
-Start=126
+Start=145
 Len=1
 
 [ValueSet]
@@ -3081,20 +3073,20 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I2F
-Start=127
-Len=2
+Start=146
+Len=6
 DataType=Alpha
 
 [ValueSet]
 Label=Which type of stove is this?
 Name=I2F_VS1
-Value='1 ';C3 Natural gasifier oven (only pellets and briquettes)
-Value='2 ';C4 Forced air oven
+Value='331   ';Gasifier stove
+Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney
 
 [Item]
 Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
 Name=I2G
-Start=129
+Start=152
 Len=1
 
 [ValueSet]
@@ -3105,28 +3097,28 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I2H
-Start=130
-Len=4
+Start=153
+Len=12
 DataType=Alpha
 
 [ValueSet]
 Label=Which type of stove is this?
 Name=I2H_VS1
-Value='1   ';D5 LPG
-Value='2   ';D5 Biogas
-Value='3   ';D5 Electricity (grid or solar)
-Value='4   ';D5 Solar oven (non-electric)
+Value='451         ';Biogas stove
+Value='452         ';Multiple LPG stove
+Value='461         ';Electrical stove
+Value='471         ';Solar oven (Non-electric)
 
 [Item]
 Label=Which one is your main stove?
 Name=I2I
-Start=134
-Len=2
+Start=165
+Len=3
 
 [Item]
 Label=How did you obtain this [STOVE]?
 Name=I4
-Start=136
+Start=168
 Len=1
 
 [ValueSet]
@@ -3140,68 +3132,95 @@ Value=4;Built ourselves||Nimetengeneza Mwenyewe
 [Item]
 Label=Who decided to purchase this [STOVE]?
 Name=I5
-Start=137
+Start=169
 Len=2
 
 [Item]
 Label=How much did you pay for the [STOVE]?
 Name=I6
-Start=139
+Start=171
 Len=8
 
 [Item]
 Label=Who gave the [STOVE] to you?
 Name=I7
-Start=147
+Start=179
 Len=2
+
+[ValueSet]
+Label=ValueSet
+Name=I7_VS1
+Value=1;Local private organizations (NGO)
+Value=2;Chief of village
+Value=3;Local govt
+Value=4;Friend/ relative
+Value=55;Other
 
 [Item]
 Label=Did you receive training or information on the [STOVE]?
 Name=I8
-Start=149
+Start=181
 Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=I8_VS1
+Link=133482376
 
 [Item]
 Label=What is the manufacturer and model of the [STOVE]?
 Name=I9
-Start=150
+Start=182
 Len=32
 DataType=Alpha
 
 [Item]
 Label=If you want to sell the [STOVE] in your community today, how much would you receive?
 Name=I10
-Start=182
+Start=214
 Len=8
 
 [Item]
 Label=How long have you been using this [STOVE]?
 Name=I12
-Start=190
+Start=222
 Len=2
 
 [Item]
 Label=How many years do you expect to continue using this [STOVE]?
 Name=I12B
-Start=192
+Start=224
 Len=2
 
 [Item]
 Label=In the last 12 months, during which part of the year did you use this [STOVE]?
 Name=I13
-Start=194
+Start=226
 Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=I13_VS1
+Value=1;All year round
+Value=2;Mainly dry season
+Value=3;Mainly rain season
 
 [Item]
 Label=Is the [STOVE] fixed in one place or moveable?
 Name=I14
-Start=195
+Start=227
 Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=I14_VS1
+Value=1;Fixed
+Value=2;Moveable
 
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the dry season?
 Name=I15
-Start=196
+Start=228
 Len=2
 
 [ValueSet]
@@ -3219,7 +3238,7 @@ Value=55;Other
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I15A
-Start=198
+Start=230
 Len=2
 
 [ValueSet]
@@ -3230,145 +3249,222 @@ Link=127061200
 [Item]
 Label=Do you use a chimney, hood or other exhaust system while using this stove?
 Name=I16
-Start=200
+Start=232
 Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=I16_VS1
+Link=133482376
 
 [Item]
 Label=In the last 12 months, what are the fuels you used the most on [STOVE]?
 Name=I18A
-Start=201
+Start=233
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=I18A_VS1
+Link=138883072
+Value=1;LPG/cooking gas
+Value=2;Wood purchased
+Value=3;Wood collected
+Value=4;Charcoal
+Value=5;Kerosene/paraffin
+Value=6;Piped Natural Gas
+Value=7;Coal/lignite
+Value=8;Animal Waste/Dung
+Value=9;Crop Residue/Plant Biomass
+Value=10;Saw Dust
+Value=11;Coal Briquette
+Value=12;Biomass Briquette
+Value=13;Electric
+Value=14;Processed biomass (pellets)/ woodchips
+Value=15;Biogas
+Value=16;Ethanol
+Value=17;Garbage/plastic
+Value=18;Solar
+Value=66;Not applicable
+Value=55;Other
 
 [Item]
 Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
 Name=I18B
-Start=203
+Start=235
 Len=2
+
+[ValueSet]
+Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
+Name=I18B_VS1
+Link=138883072
 
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19A
-Start=205
+Start=237
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I19A_VS1
+Link=123456789
+Value=1;Always available
+Value=2;Available  10-11  months
+Value=3;Available 9 months or less
+Value=4;Rarely available
 
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19B
-Start=206
+Start=238
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I19B_VS1
+Link=123456789
 
 [Item]
 Label=In the last 12 months, how many months did you use [FUEL]?
 Name=I19C
-Start=207
+Start=239
 Len=2
 
 [Item]
 Label=What kind of unit do you usually buy the [FUEL] in?
 Name=I19D
-Start=209
+Start=241
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I19D_VS1
+Value=1;Kg
+Value=2;Liters
+Value=3;Bundle
+Value=4;Pieces
+Value=5;Boxes
+Value=6;Packets
 
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
 Name=I19E
-Start=210
+Start=242
 Len=8
 
 [Item]
 Label=How long does a [UNIT] of [FUEL] typically last?
 Name=I19F
-Start=218
+Start=250
 Len=2
 
 [Item]
 Label=How much of the fuel you bought was  used for cooking?
 Name=I19G
-Start=220
+Start=252
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I19G_VS1
+Value=1;All
+Value=2;More than half
+Value=3;Half
+Value=4;Less than half
 
 [Item]
 Label=How much time do household members spend preparing the [STOVE] and fuel for each meal on average?
 Name=I20
-Start=221
+Start=253
 Len=3
 
 [Item]
 Label=In the last 7 days, how many days did you use [STOVE]?
 Name=I21
-Start=224
+Start=256
 Len=1
 
 [Item]
 Label=In the last 7 days, on average, how many times did you light the [STOVE] per day?
 Name=I22
-Start=225
+Start=257
 Len=1
 
 [Item]
 Label=On average, how much time do you spend in the... morning?
 Name=I23
-Start=226
+Start=258
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... afternoon?
 Name=I24
-Start=229
+Start=261
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... evening?
 Name=I25
-Start=232
+Start=264
 Len=3
 
 [Item]
 Label=In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)?
 Name=I26
-Start=235
+Start=267
 Len=3
 
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?
 Name=I30
-Start=238
+Start=270
 Len=1
+
+[ValueSet]
+Label=In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?
+Name=I30_VS1
+Link=133482376
 
 [Item]
 Label=Did you seek professinal medical assistance for this injury/ any of these injuries?
 Name=I31
-Start=239
+Start=271
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I31_VS1
+Link=133482376
 
 [Item]
 Label=How many of times did the household gather, collect or purchase fuel  during the last seven days?
 Name=I32
-Start=240
+Start=272
 Len=2
 
 [Item]
 Label=How many members of the household were involved each time?
 Name=I33
-Start=242
+Start=274
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Hours)
 Name=I34_HH
-Start=244
+Start=276
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Minutes)
 Name=I34_MM
-Start=246
+Start=278
 Len=2
 
 [Item]
 Label=Shape of cooking space|Forma de espaço de cozinha
 Name=I37
-Start=248
+Start=280
 Len=1
 
 [ValueSet]
@@ -3382,37 +3478,37 @@ Value=4;Other|De outros|Nyingine
 [Item]
 Label=Dimension of cooking space (square)|Dimensão do espaço de cozinha (quadrado)
 Name=I38
-Start=249
+Start=281
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 1|Dimensão do lugar lado cozinhar rectagular 1
 Name=I39
-Start=251
+Start=283
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 2|Dimensão do lugar lado cozinhar rectagular 2
 Name=I40
-Start=253
+Start=285
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place circular|Dimensão de cozinhar rectagular lugar circular
 Name=I41
-Start=255
+Start=287
 Len=2
 
 [Item]
 Label=Size of rectagular cooking place|Tamanho do lugar cozinhar rectagular
 Name=I42
-Start=257
+Start=289
 Len=2
 
 [Item]
 Label=Type of roof covering cooking place|Tipo de telhado que cobre lugar de cozinha
 Name=I43
-Start=259
+Start=291
 Len=1
 
 [ValueSet]
@@ -3426,7 +3522,7 @@ Value=4;None of the above|Nenhuma das acima|Hakuna jibu kati ya 1,2 na 3
 [Item]
 Label=Height of highest point to ceiling|Altura do ponto mais alto ao teto
 Name=I44
-Start=260
+Start=292
 Len=1
 
 [ValueSet]
@@ -3441,14 +3537,23 @@ Value=5;More than 2 * my height|Mais de 2 * minha altura|Zaidi ya mara 2 ya uref
 [Item]
 Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
 Name=I45
-Start=261
+Start=293
 Len=1
 
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?
 Name=I46
-Start=262
+Start=294
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=F46_VS1
+Value=1;Yes, a chimney
+Value=2;Yes, a hood
+Value=3;Yes, a fan
+Value=4;Yes, two or three of these
+Value=5;No
 
 [Record]
 Label=I_1_Use of cooking solutions|I_1_Use de soluções de cozinha
@@ -4095,7 +4200,7 @@ Value=55;Other|De outros|Nyingine
 Label=L Household assets|ativos L domésticos
 Name=L_HOUSEHOLD_ASSETS
 RecordTypeValue='F'
-RecordLen=2287
+RecordLen=266
 
 [Item]
 Label=HH member no for section|membro do HH Não para seção
@@ -4107,9 +4212,9 @@ Len=2
 Label=Household assets
 Name=HOUSEHOLD_ASSETS
 Start=107
-Len=87
+Len=7
 DataType=Alpha
-Occurrences=25
+Occurrences=22
 
 [Item]
 Label=item number|número de item
@@ -4126,39 +4231,28 @@ Value=2;Table|Mesa|Meza
 Value=3;Bicycle|Bicicleta|Baiskeli
 Value=4;Motorcycle|Motocicleta|Pikipiki
 Value=5;Car|Veículo (carro, caminhão, etc)|Gari
-Value=6;electric traditional, energy saving or LED light bulbs or tubes|lâmpada incandescente, economizador de energia ou lâmpadas LED ou Incandescentes (lâmpada de tubos)?|Umeme wa jadi, kuokoa nishati au balbu za taa za LED au zilizopo
-Value=7;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Nuru za Mwanga
-Value=8;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongoza balbu za mwanga
-Value=9;light bulbs or tubes or other types|lâmpada ou fluorescente(Lâmpadas de tubo) ou outro tipo|balbu za mwanga au zilizopo au aina nyingine
-Value=10;Mobile phone charger|carregador regular telemóvel|Chaja ya Simu
-Value=11;any other electric device such as radio or fan|algum outro dispositivo elétrico, como um rádio ou um ventilador?|Je, una kifaa kingine cha umeme kama redio au feni?
-Value=12;Radio|Rádio|Redio
-Value=13;VCD/DVD|VCD/DVD|VCD/DVD
-Value=14;Fan|Ventilador|Feni
-Value=15;Refrigerator||Jokofu (Friji)
-Value=16;Microwave oven|Forno de micro-ondas|Mashine ya kupashia chakula
-Value=17;Hair dryer|Secador de cabelo|Draya ya Nywele
-Value=18;Freezer|Congelador|Friza
-Value=19;Washing machine|Máquina de lavar|Mashine ya kufulia
-Value=20;Electric sewingmachine|máquina de costura elétrica|Mashine ya kusaga
-Value=21;Air conditioner (AC)|Ar Condicionado (AC)|Kiyoyozi (AC)
-Value=22;Computer / Tablet|Computador / Tablet|Kinakilishi(Kompyuta)/ kibao mpakato (tablet)
-Value=23;Electric hot water pot/kettle|Panela de água quente elétrica / chaleira|Birika la umeme
-Value=24;Television|Televisor|Runinga (TV)
-Value=25;Electric water pump|Bomba de agua electrico|Pampu ya maji inayotumia umeme
-
-[Item]
-Label=Description of item|Descriçao do item
-Name=L_DESC
-Start=109
-Len=80
-ItemType=SubItem
-DataType=Alpha
+Value=6;Radio using batteries
+Value=7;Mobile phone charger|carregador regular telemóvel|Chaja ya Simu
+Value=8;Electric radio
+Value=9;Fan|Ventilador|Feni
+Value=10;Refrigerator||Jokofu (Friji)
+Value=11;Microwave oven|Forno de micro-ondas|Mashine ya kupashia chakula
+Value=12;Freezer|Congelador|Friza
+Value=13;Washing machine|Máquina de lavar|Mashine ya kufulia
+Value=14;Electric sewingmachine|máquina de costura elétrica|Mashine ya kusaga
+Value=15;Air conditioner (AC)|Ar Condicionado (AC)|Kiyoyozi (AC)
+Value=16;Computer / Tablet|Computador / Tablet|Kinakilishi(Kompyuta) / kibao mpakato (tablet)
+Value=17;Electric hot water pot/kettle|Panela de água quente elétrica / chaleira|Birika la umeme
+Value=18;Television|Televisor|Runinga (TV)
+Value=19;Electric water pump|Bomba de agua electrico|Pampu ya maji inayotumia umeme
+Value=20;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Nuru za Mwanga
+Value=21;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongoza balbu za mwanga
+Value=22;Light bulbs or tubes or other types|lâmpada ou fluorescente(Lâmpadas de tubo) ou outro tipo|balbu za mwanga au zilizopo au aina nyingine
 
 [Item]
 Label=Do you have/Number of items|Número de ítens
 Name=LA
-Start=189
+Start=109
 Len=2
 ItemType=SubItem
 
@@ -4181,14 +4275,14 @@ Value=5;5 or more|5 ou mais|5 au zaidi
 [Item]
 Label=Number of hours in use|Horas de uso
 Name=LB
-Start=191
+Start=111
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=5 years ago
 Name=LC
-Start=193
+Start=113
 Len=1
 ItemType=SubItem
 
@@ -4199,30 +4293,36 @@ Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Item]
-Label=Cultivate land, size of land
+Label=Do you cultivate any land? IF SO: How large is the area?
 Name=L27
-Start=2282
+Start=261
 Len=1
 
 [ValueSet]
-Label=Cultivate land, size of land
+Label=Do you cultivate any land? IF SO: How large is the area?
 Name=L27_VS1
+Link=345582371
 Value=0;No land|Sem terra|Hakuna shamba
-Value=1;< 0.5 Ha||Chini ya nusu hekta
-Value=2;0.5 - 1 Ha||Nusu hekta mpaka hekta 1
-Value=3;1 - 2 Ha||Hekta1 mpaka 2
+Value=1;< 0.5 Ha|< 0.5 Ha|Chini ya nusu hekta
+Value=2;0.5 - 1 Ha|0.5 - 1 Ha|Nusu hekta mpaka hekta 1
+Value=3;1 - 2 Ha|1 - 2 Ha|Hekta1 mpaka 2
 Value=4;More than 2 Ha|Mais do que 2 Ha|Zaidi ya hekta 2
 
 [Item]
-Label=Is this area larger or smaller than the land you cultivated 5 years ago?
+Label=Did you cultivate any land 5 years ago? IF SO: How large was the area?
 Name=L27A
-Start=2283
+Start=262
 Len=1
+
+[ValueSet]
+Label=Valueset
+Name=L27A_VS1
+Link=345582371
 
 [Item]
 Label=Do you keep any domestic animals?
 Name=L26
-Start=2284
+Start=263
 Len=1
 
 [ValueSet]
@@ -4232,13 +4332,13 @@ Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Item]
-Label=Keep cattle, How many
+Label=How many cattle?
 Name=L28
-Start=2285
+Start=264
 Len=1
 
 [ValueSet]
-Label=Keep cattle, How many
+Label=How many cattle?
 Name=L28_VS1
 Value=0;None|Nenhum|Hakuna
 Value=1;1-2||Ng'ombe 1-2
@@ -4246,13 +4346,13 @@ Value=2;3-5||Ng'ombe 3-5
 Value=3;6 or more|6 ou mais|Ng'ombe 6 au zaidi
 
 [Item]
-Label=Keep sheep, goats, pigs: How many
+Label=How many sheep, goat or pigs?
 Name=L29
-Start=2286
+Start=265
 Len=1
 
 [ValueSet]
-Label=Keep sheep, goats, pigs: How many
+Label=How many sheep, goat or pigs?
 Name=L29_VS1
 Value=0;None|Nenhum|Hakuna
 Value=1;1-5||Kondoo 1-5
@@ -4260,13 +4360,13 @@ Value=2;6-10||Kondoo 6-10
 Value=3;11 or more|11 ou mais|Kondoo 11 au zaidi
 
 [Item]
-Label=Keep poultry
+Label=How many chicken, ducks, turkeys, geese?
 Name=L30
-Start=2287
+Start=266
 Len=1
 
 [ValueSet]
-Label=Keep poultry
+Label=How many chicken, ducks, turkeys, geese?
 Name=L30_VS1
 Value=0;None|Nenhum|Hakuna
 Value=1;1-10
@@ -4274,31 +4374,31 @@ Value=2;11-20
 Value=3;21 or more|21 ou mais|21 au zaidi
 
 [Record]
-Label=M Street lightning|relâmpago M Street
+Label=M Street lighting|relâmpago M Street
 Name=M_STREET_LIGHTNING
 RecordTypeValue='G'
 RecordLen=107
 
 [Item]
-Label=Street lightning in neighbourhood|relâmpago rua no bairro
+Label=Street lighting in neighbourhood|relâmpago rua no bairro
 Name=M2
 Start=105
 Len=1
 
 [ValueSet]
-Label=Street lightning in neighbourhood|relâmpago rua no bairro
+Label=Street lighting in neighbourhood|relâmpago rua no bairro
 Name=M2_VS1
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Item]
-Label=Street lightning used at night?|Rua relâmpago usado à noite?
+Label=Street lighting used at night?|Rua relâmpago usado à noite?
 Name=M3
 Start=106
 Len=1
 
 [ValueSet]
-Label=Street lightning used at night?|Rua relâmpago usado à noite?
+Label=Street lighting used at night?|Rua relâmpago usado à noite?
 Name=M3_VS1
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
@@ -5046,7 +5146,7 @@ Value=2;No|Não|Hapana
 Label=Q1 Consumption/expenditure|Q1 Consumo / despesas
 Name=Q_CONSUMPTION_EXPENDITURE
 RecordTypeValue='K'
-RecordLen=151
+RecordLen=331
 
 [Item]
 Label=HH member number|número membro HH
@@ -5055,68 +5155,99 @@ Start=105
 Len=2
 
 [Item]
-Label=Share of food that is purchased
-Name=Q1_2
+Label=Consumption (include items purchased, produced/acquired and received as a gift/donation)
+Name=Q1
 Start=107
-Len=1
+Len=25
+DataType=Alpha
+Occurrences=7
 
 [ValueSet]
-Label=Share of food that is purchased
-Name=Q1_2_VS1
-Value=0;Nothing|nenhuma coisa|Hakuna
-Value=1;Just a little|só um pouco|Kiasi kidogo
-Value=2;Some|alguma|Kiasi
-Value=3;Half|metade|Nusu
-Value=4;Most|a maioria|Sehemu kubwa
-Value=5;All|tudo|Chote
+Label=Consumption (include items purchased, produced/acquired and received as a gift/donation)
+Name=Q1_VS1
+Value='1                        ';Cereal and cereal products (e.g. rice, maize, wheat, flor, millet) and starchy staples (e.g. cassava, plantain, yam, cocoyam)
+Value='2                        ';Pulses & nuts (e.g.: beans, groundnuts, palm nuts, soy beans)
+Value='3                        ';Milk & milk products (e.g.: powder, tinned, fresh)
+Value='4                        ';Edible oil (e.g.: palm oil, groundnut oil, coconut oil)
+Value='5                        ';Vegetables (e.g.: okra, tomato, onion, carrot, cabbage, garden egg) and Fruits (e.g.: bananas, coconut, pineapple, mango, orange, pawpaw)
+Value='6                        ';Meat, fish, poultry and egg
+Value='7                        ';Sugar and sweets
+Value='8                        ';Other food items (e,g, pepper, salt, spices, jam, bread, meals outside house, beverages etc.) Include all processed foods not prepared by household using raw ingredients
 
 [Item]
-Label=Spendings on food
-Name=Q1_3
+Label=Consumption number
+Name=Q1_NUM
+Start=107
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Consumption number
+Name=Q1_NUM_VS1
+Value=1;Cereal and cereal products (e.g. rice, maize, wheat, flor, millet) and starchy staples (e.g. cassava, plantain, yam, cocoyam)
+Value=2;Pulses & nuts (e.g.: beans, groundnuts, palm nuts, soy beans)
+Value=3;Milk & milk products (e.g.: powder, tinned, fresh)
+Value=4;Edible oil (e.g.: palm oil, groundnut oil, coconut oil)
+Value=5;Vegetables (e.g.: okra, tomato, onion, carrot, cabbage, garden egg) and Fruits (e.g.: bananas, coconut, pineapple, mango, orange, pawpaw)
+Value=6;Meat, fish, poultry and egg
+Value=7;Other food items (e,g, sugar and sweets, pepper, salt, spices, jam, bread, groundnut paste, meals outside house, beverages etc.) Include all processed foods not prepared by household.
+
+[Item]
+Label=A. Purchased
+Name=Q1A
 Start=108
-Len=5
+Len=8
+ItemType=SubItem
+
+[Item]
+Label=B. Produced/Acquired
+Name=Q1B
+Start=116
+Len=8
+ItemType=SubItem
+
+[Item]
+Label=C. Received as a gift/Donation
+Name=Q1C
+Start=124
+Len=8
+ItemType=SubItem
 
 [Item]
 Label=Spendings on firewood and charcoal
-Name=Q1_4
-Start=113
-Len=5
+Name=Q8
+Start=282
+Len=8
 
 [Item]
-Label=Spendings on water and electricty
-Name=Q1_5
-Start=118
-Len=5
+Label=How much did you spend on water, electricity, mobile phone top-ups, internet and other communication and transportation during the last 30 days?
+Name=Q9
+Start=290
+Len=8
 
 [Item]
-Label=Spendings on propane, kerosene, transport
-Name=Q1_6
-Start=123
-Len=5
+Label=How much did you spend on clothes and shoes the last 30 days?
+Name=Q10
+Start=298
+Len=8
 
 [Item]
-Label=Spendings on education related things
-Name=Q1_7
-Start=128
-Len=6
+Label=How much did you spend on household items, such as soap, cleaning supplies, drugs, batteries etc during the last 30 days?
+Name=Q11
+Start=306
+Len=8
 
 [Item]
-Label=Spendings on house repairs
-Name=Q1_8
-Start=134
-Len=6
+Label=How much did you spend on education related expenses (school fees, uniforms, supplies) during the last year?
+Name=Q12
+Start=314
+Len=8
 
 [Item]
-Label=Spendings on repaying loans
-Name=Q1_9
-Start=140
-Len=6
-
-[Item]
-Label=Spendings on other needs
-Name=Q1_10
-Start=146
-Len=6
+Label=How much did you spend on other needs during the last year?
+Name=Q13
+Start=322
+Len=10
 
 [Record]
 Label=S Attitudes|Atitudes S
@@ -5204,13 +5335,13 @@ Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
 Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Item]
-Label=The stove is needed for lightning up the house in the evening|O fogão é necessário para relâmpago a casa à noite
+Label=The stove is needed for lighting up the house in the evening|O fogão é necessário para relâmpago a casa à noite
 Name=S9
 Start=112
 Len=1
 
 [ValueSet]
-Label=The stove is needed for lightning up the house in the evening|A qualidade da minha casa é melhor do que há 5 anos
+Label=The stove is needed for lighting up the house in the evening|A qualidade da minha casa é melhor do que há 5 anos
 Name=S9_VS1
 Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
 Value=2;Agree|Concorda|Nakubaliana
@@ -5239,9 +5370,10 @@ Len=1
 [ValueSet]
 Label=decisions about healthcare|decisões sobre saúde
 Name=T1_VS1
-Value=1;Respondent|Respondente|Mhojiwa
-Value=2;Husband/partner|Marido / companheiro|Mume/mwenza
-Value=3;Respondent and husband/partner|Entrevistado e marido / companheiro|Mhojiwa na Mume/Mwenza
+Link=11223344
+Value=1;You
+Value=2;Your husband/partner
+Value=3;You and your husband/partner
 Value=4;Someone else|Alguém|Mtu mwingine
 
 [Item]
@@ -5253,10 +5385,7 @@ Len=1
 [ValueSet]
 Label=decisions about major hh purchases|decisões sobre saúde
 Name=T2_VS1
-Value=1;Respondent|Respondente|Mhojiwa
-Value=2;Husband/partner|Marido / companheiro|Mume/mwenza
-Value=3;Respondent and husband/partner|Entrevistado e marido / companheiro|Mhojiwa na Mume/Mwenza
-Value=4;Someone else|Alguém|Mtu mwingine
+Link=11223344
 
 [Item]
 Label=decisions on visiting family/relatives|decisões sobre visitas a familiares / parentes
@@ -5267,10 +5396,7 @@ Len=1
 [ValueSet]
 Label=decisions on visiting family/relatives|decisões sobre saúde
 Name=T3_VS1
-Value=1;Respondent|Respondente|Mhojiwa
-Value=2;Husband/partner|Marido / companheiro|Mume/mwenza
-Value=3;Respondent and husband/partner|Entrevistado e marido / companheiro|Mhojiwa na Mume/Mwenza
-Value=4;Someone else|Alguém|Mtu mwingine
+Link=11223344
 
 [Record]
 Label=U2 Livelihood means u1-u9|U2 Livelihood
@@ -5405,13 +5531,13 @@ Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 a
 Value=4;No|Não|Hapana
 
 [Item]
-Label=How many HH members did this during 12 months five years ago?|Quantas trabalho piecemal fazenda
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U10B
 Start=108
 Len=1
 
 [ValueSet]
-Label=How many HH members did this during 12 months five years ago?|Quantas trabalho piecemal fazenda
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U10B_VS1
 Value=1;No|Não|Hapana
 Value=2;Yes, but fewer than today|Sim, mas menos do que hoje|Ndiyo, ila wachache kuliko sasa
@@ -5419,13 +5545,13 @@ Value=3;Yes, around the same number as today|Sim, em torno do mesmo número como
 Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 
 [Item]
-Label=Response|trabalho piecemal para negócios
+Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U11A
 Start=109
 Len=1
 
 [ValueSet]
-Label=Response|trabalho agrícola piecemal|Response
+Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U11A_VS1
 Value=1;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
 Value=2;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
@@ -5433,13 +5559,13 @@ Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 a
 Value=4;No|Não|Hapana
 
 [Item]
-Label=How many HH members did this during 12 months five years ago?|Quantas trabalho piecemal para negócios
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U11B
 Start=110
 Len=1
 
 [ValueSet]
-Label=How many HH members did this during 12 months five years ago?|Quantas trabalho piecemal fazenda|How many HH members did this during 12 months five years ago?
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U11B_VS1
 Value=1;No|Não|Hapana
 Value=2;Yes, but fewer than today|Sim, mas menos do que hoje|Ndiyo, ila wachache kuliko sasa
@@ -5447,13 +5573,13 @@ Value=3;Yes, around the same number as today|Sim, em torno do mesmo número como
 Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 
 [Item]
-Label=Response|obra pública piecemal
+Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U12A
 Start=111
 Len=1
 
 [ValueSet]
-Label=Response|trabalho agrícola piecemal|Response
+Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U12A_VS1
 Value=1;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
 Value=2;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
@@ -5461,13 +5587,13 @@ Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 a
 Value=4;No|Não|Hapana
 
 [Item]
-Label=How many HH members did this during 12 months five years ago?|Quantas obra pública piecemal
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U12B
 Start=112
 Len=1
 
 [ValueSet]
-Label=How many HH members did this during 12 months five years ago?|Quantas trabalho piecemal fazenda|How many HH members did this during 12 months five years ago?
+Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U12B_VS1
 Value=1;No|Não|Hapana
 Value=2;Yes, but fewer than today|Sim, mas menos do que hoje|Ndiyo, ila wachache kuliko sasa

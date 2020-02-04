@@ -4,7 +4,7 @@ AppType=Entry
 
 [Files]
 Application=.\HHQ.ent
-InputData=..\Data\hhq.csdb
+InputData=..\Data\hhq2.csdb
 Paradata=.\HHQ.cslog
 
 [ExternalFiles]

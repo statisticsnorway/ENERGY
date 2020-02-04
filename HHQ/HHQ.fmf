@@ -338,7 +338,7 @@ Name=FORM006
 Label=F- Kerosene/fuel-based/candle lighting
 QuestionTextHeight=79
 Level=1
-Size=309,697
+Size=372,704
   
 Item=F1
 Item=F2
@@ -417,6 +417,7 @@ Item=I32
 Item=I33
 Item=I34_HH
 Item=I34_MM
+Item=I46
   
 [EndForm]
   
@@ -470,15 +471,16 @@ Name=FORM019
 Label=L - Household assets
 QuestionTextHeight=70
 Level=1
-Size=1022,589
+Size=234,589
   
 Item=L1_1
-Item=HOUSEHOLD_ASSETS000
 Item=L26
 Item=L27
 Item=L28
 Item=L29
 Item=L30
+Item=L27A
+Item=HOUSEHOLD_ASSETS000
   
 [EndForm]
   
@@ -513,18 +515,16 @@ Name=FORM024
 Label=Q - consumption/expendityre
 QuestionTextHeight=102
 Level=1
-Size=270,352
+Size=512,581
   
 Item=Q1_1
-Item=Q1_2
-Item=Q1_3
-Item=Q1_4
-Item=Q1_5
-Item=Q1_6
-Item=Q1_7
-Item=Q1_8
-Item=Q1_9
-Item=Q1_10
+Item=Q1000
+Item=Q8
+Item=Q9
+Item=Q10
+Item=Q11
+Item=Q12
+Item=Q13
   
 [EndForm]
   
@@ -3683,6 +3683,7 @@ Name=F3B
 Position=224,113,253,133
 Item=F3B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=12
   
 [Text]
@@ -3798,7 +3799,7 @@ Required=No
 Type=Record
 TypeName=F5_MAIN_SOURCE_FUEL
 Max=6
-DisplaySize=37,480,284,672
+DisplaySize=37,480,347,679
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -3951,7 +3952,7 @@ Text=I2A
   
 [Field]
 Name=I2B
-Position=167,74,252,94
+Position=167,74,420,94
 Item=I2B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -3967,6 +3968,7 @@ Name=I2C
 Position=217,109,232,129
 Item=I2C,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -3976,7 +3978,7 @@ Text=I2C
   
 [Field]
 Name=I2D
-Position=173,141,244,161
+Position=173,141,426,161
 Item=I2D,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -4002,7 +4004,7 @@ Text=I2E
   
 [Field]
 Name=I2F
-Position=202,199,231,219
+Position=202,199,287,219
 Item=I2F,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -4028,7 +4030,7 @@ Text=I2G
   
 [Field]
 Name=I2H
-Position=189,274,246,294
+Position=189,274,358,294
 Item=I2H,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -4041,9 +4043,10 @@ Text=I2H
   
 [Field]
 Name=I2I
-Position=194,303,223,323
+Position=194,303,237,323
 Item=I2I,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
@@ -4611,6 +4614,19 @@ Form=13
 Position=897,427,915,443
 Text=I45
  
+  
+[Field]
+Name=I46
+Position=940,462,955,482
+Item=I46,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=13
+  
+[Text]
+Position=895,464,913,480
+Text=I46
+ 
 [EndGroup]
   
 [Group]
@@ -4863,8 +4879,8 @@ Form=17
 Required=Yes
 Type=Item
 TypeName=HOUSEHOLD_ASSETS
-Max=25
-DisplaySize=36,63,997,367
+Max=22
+DisplaySize=29,64,209,368
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -4980,21 +4996,6 @@ Position=0,4,22,28
 Text=22
  
   
-[Text]
-Position=0,4,22,28
-Text=23
- 
-  
-[Text]
-Position=0,4,22,28
-Text=24
- 
-  
-[Text]
-Position=0,4,22,28
-Text=25
- 
-  
 [Column]
 Width=10
 [EndColumn]
@@ -5015,27 +5016,6 @@ DataCaptureType=RadioButton
   
 [Text]
 Text=L_NO
- 
-[EndColumn]
-  
-[Column]
-Width=777
-  
-[HeaderText]
-Position=719,0,777,24
-Text=L_DESC
- 
-[Field]
-Name=L_DESC
-Position=0,0,765,20
-Item=L_DESC,HHQ_DICT
-FieldLabelType=DictionaryName
-UseUnicodeTextBox=Yes
-AllowMultiLine=Yes
-  
-[Text]
-Position=0,0,53,16
-Text=L_DESC
  
 [EndColumn]
   
@@ -5099,29 +5079,42 @@ Text=LC
  
   
 [Field]
-Name=L26
-Position=87,424,102,444
-Item=L26,HHQ_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=17
-  
-[Text]
-Position=36,427,58,443
-Text=L26
- 
-  
-[Field]
 Name=L27
-Position=87,454,102,474
+Position=85,378,100,398
 Item=L27,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=17
   
 [Text]
-Position=36,457,58,473
+Position=34,381,56,397
 Text=L27
+ 
+  
+[Field]
+Name=L27A
+Position=86,413,101,433
+Item=L27A,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=17
+  
+[Text]
+Position=31,414,62,430
+Text=L27A
+ 
+  
+[Field]
+Name=L26
+Position=87,447,102,467
+Item=L26,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=17
+  
+[Text]
+Position=36,450,58,466
+Text=L26
  
   
 [Field]
@@ -6014,113 +6007,204 @@ Position=100,40,131,56
 Text=Q1_1
  
   
-[Field]
-Name=Q1_2
-Position=160,67,175,87
-Item=Q1_2,HHQ_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+[Grid]
+Name=Q1000
+Label=Consumption (include items purchased, produced/acquired and received as a gift/donation)
 Form=20
+Required=Yes
+Type=Item
+TypeName=Q1
+Max=7
+DisplaySize=48,104,487,352
+Orientation=Horizontal
+FieldRowHeight=0
+HeadingRowHeight=0
+FreeMovement=No
+ 
+[Text]
+Position=0,4,15,28
+Text=1
+ 
   
 [Text]
-Position=100,70,131,86
-Text=Q1_2
+Position=0,4,15,28
+Text=2
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=3
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=4
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=5
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=6
+ 
+  
+[Text]
+Position=0,4,15,28
+Text=7
+ 
+  
+[Column]
+Width=10
+[EndColumn]
+  
+[Column]
+Width=61
+  
+[HeaderText]
+Position=0,0,61,24
+Text=Q1_NUM
+ 
+[Field]
+Name=Q1_NUM
+Position=38,0,53,20
+Item=Q1_NUM,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=Q1_NUM
+ 
+[EndColumn]
+  
+[Column]
+Width=121
+  
+[HeaderText]
+Position=87,0,121,24
+Text=Q1A
+ 
+[Field]
+Name=Q1A
+Position=0,0,113,20
+Item=Q1A,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=Q1A
+ 
+[EndColumn]
+  
+[Column]
+Width=121
+  
+[HeaderText]
+Position=87,0,121,24
+Text=Q1B
+ 
+[Field]
+Name=Q1B
+Position=0,0,113,20
+Item=Q1B,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=Q1B
+ 
+[EndColumn]
+  
+[Column]
+Width=121
+  
+[HeaderText]
+Position=87,0,121,24
+Text=Q1C
+ 
+[Field]
+Name=Q1C
+Position=0,0,113,20
+Item=Q1C,HHQ_DICT
+FieldLabelType=DictionaryName
+  
+[Text]
+Text=Q1C
+ 
+[EndColumn]
+  
+[EndGrid]
  
   
 [Field]
-Name=Q1_3
-Position=160,97,231,117
-Item=Q1_3,HHQ_DICT
+Name=Q8
+Position=197,384,310,404
+Item=Q8,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,100,131,116
-Text=Q1_3
+Position=71,387,88,403
+Text=Q8
  
   
 [Field]
-Name=Q1_4
-Position=160,127,231,147
-Item=Q1_4,HHQ_DICT
+Name=Q9
+Position=195,415,308,435
+Item=Q9,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,130,131,146
-Text=Q1_4
+Position=69,418,86,434
+Text=Q9
  
   
 [Field]
-Name=Q1_5
-Position=160,157,231,177
-Item=Q1_5,HHQ_DICT
+Name=Q10
+Position=195,445,308,465
+Item=Q10,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,160,131,176
-Text=Q1_5
+Position=69,448,93,464
+Text=Q10
  
   
 [Field]
-Name=Q1_6
-Position=160,187,231,207
-Item=Q1_6,HHQ_DICT
+Name=Q11
+Position=192,478,305,498
+Item=Q11,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,190,131,206
-Text=Q1_6
+Position=66,481,90,497
+Text=Q11
  
   
 [Field]
-Name=Q1_7
-Position=160,217,245,237
-Item=Q1_7,HHQ_DICT
+Name=Q12
+Position=196,509,309,529
+Item=Q12,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,220,131,236
-Text=Q1_7
+Position=70,512,94,528
+Text=Q12
  
   
 [Field]
-Name=Q1_8
-Position=160,247,245,267
-Item=Q1_8,HHQ_DICT
+Name=Q13
+Position=196,536,337,556
+Item=Q13,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=20
   
 [Text]
-Position=100,250,131,266
-Text=Q1_8
- 
-  
-[Field]
-Name=Q1_9
-Position=160,277,245,297
-Item=Q1_9,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=20
-  
-[Text]
-Position=100,280,131,296
-Text=Q1_9
- 
-  
-[Field]
-Name=Q1_10
-Position=160,307,245,327
-Item=Q1_10,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=20
-  
-[Text]
-Position=100,310,138,326
-Text=Q1_10
+Position=70,539,94,555
+Text=Q13
  
 [EndGroup]
   
