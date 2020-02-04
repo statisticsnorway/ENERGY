@@ -2196,5 +2196,5 @@ preproc
 PROC AA20
 	
 preproc
-		$ = DEVICE_ID;	//To be login later.. :)
-		noinput;
+		//$ = DEVICE_ID;	//To be login later.. :)
+		//noinput;
