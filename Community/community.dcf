@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.2
+Version=CSPro 7.3
 Label=community
 Name=COMMUNITY_DICT
 RecordTypeStart=1
@@ -20,59 +20,65 @@ Name=COMMUNITY_QUEST
 [IdItems]
 
 [Item]
-Label=Device Id|ID de dispositivo|hila Id
-Name=C_DEVICE_ID
+Label=Login|ID de dispositivo|hila Id
+Name=C_LOGIN
 Start=2
 Len=25
 DataType=Alpha
 
 [Item]
-Label=state code|código do estado|hali code
+Label=Region|código do estado|hali code
 Name=C_A1
 Start=27
-Len=3
+Len=2
 
 [Item]
-Label=County code|código do município|Kata code
+Label=District|código do município|Kata code
 Name=C_A2
-Start=30
+Start=29
+Len=2
+
+[Item]
+Label=Subdistrict|código Subcounty|kanuni Subcounty
+Name=C_A3
+Start=31
 Len=3
 
 [Item]
-Label=Subcounty code|código Subcounty|kanuni Subcounty
-Name=C_A3
-Start=33
-Len=3
+Label=Locality
+Name=C_A4
+Start=34
+Len=2
 
 [Item]
 Label=Village Code
-Name=C_A3_1
+Name=C_A5
 Start=36
-Len=3
+Len=2
 
 [Item]
 Label=Enumeration area|área de enumeração|hesabu eneo
-Name=C_A4
-Start=39
+Name=C_A6
+Start=38
 Len=3
 
 [Record]
 Label=A Community identification|A identificação Comunidade|kitambulisho Community
 Name=COMMUNITY_REC
 RecordTypeValue='1'
-RecordLen=118
+RecordLen=117
 
 [Item]
 Label=Village/Town Name|Aldeia / Nome da Cidade|Kijiji / Jina Town
 Name=A5
-Start=42
+Start=41
 Len=50
 DataType=Alpha
 
 [Item]
 Label=Urban/Rural|Urbano Rural|Mjini / Vijijini
 Name=A6
-Start=92
+Start=91
 Len=1
 
 [ValueSet]
@@ -85,7 +91,7 @@ Value=3;Peri-Urban|Peri-urbana|Kandokando mwa miji
 [Item]
 Label=Interview language
 Name=A7
-Start=93
+Start=92
 Len=2
 DataType=Alpha
 
@@ -99,7 +105,7 @@ Value='SW';Swahili
 [Item]
 Label=Community ID
 Name=A8
-Start=95
+Start=94
 Len=3
 
 [ValueSet]
@@ -115,7 +121,7 @@ Value=6;NGOTO B, NGOTO B
 [Item]
 Label=Latitude
 Name=A9
-Start=98
+Start=97
 Len=10
 Decimal=6
 DecimalChar=Yes
@@ -123,7 +129,7 @@ DecimalChar=Yes
 [Item]
 Label=Longitude
 Name=A10
-Start=108
+Start=107
 Len=11
 Decimal=6
 DecimalChar=Yes
@@ -133,12 +139,12 @@ Label=B Community leaders|líderes comunitários B|Viongozi B Community
 Name=B_LEADERS
 RecordTypeValue='2'
 MaxRecords=7
-RecordLen=99
+RecordLen=98
 
 [Item]
 Label=ID code|Código de identificação
 Name=B_ID
-Start=42
+Start=41
 Len=1
 
 [ValueSet]
@@ -149,14 +155,14 @@ Value=1:9
 [Item]
 Label=Name|Nome|jina
 Name=B1_A
-Start=43
+Start=42
 Len=50
 DataType=Alpha
 
 [Item]
 Label=Sex|Sexo
 Name=B1_B
-Start=93
+Start=92
 Len=1
 
 [ValueSet]
@@ -168,7 +174,7 @@ Value=2;Female|Feminina|Mwanamke
 [Item]
 Label=Age|Era|Umri
 Name=B1_C
-Start=94
+Start=93
 Len=2
 
 [ValueSet]
@@ -179,7 +185,7 @@ Value=0:99
 [Item]
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
 Name=B1_D
-Start=96
+Start=95
 Len=2
 
 [ValueSet]
@@ -200,7 +206,7 @@ Value=66;None of these|Nenhum desses|Hakuna kati hizi
 [Item]
 Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
 Name=B1_E
-Start=98
+Start=97
 Len=2
 
 [ValueSet]
@@ -212,12 +218,12 @@ Value=0:99
 Label=C Background|Antecedentes C
 Name=C_BACKGROUND
 RecordTypeValue='3'
-RecordLen=63
+RecordLen=62
 
 [Item]
 Label=How many households?|Quantas famílias?|Kaya ngapi?
 Name=C2
-Start=42
+Start=41
 Len=5
 
 [ValueSet]
@@ -228,7 +234,7 @@ Value=1:99999
 [Item]
 Label=How many people?|Quantas pessoas?|Watu wangapi?
 Name=C1
-Start=47
+Start=46
 Len=5
 
 [ValueSet]
@@ -239,7 +245,7 @@ Value=1:99999
 [Item]
 Label=How many new households since 2016?|Quantas novas famílias desde 2016?|Wangapi kaya mpya tangu 2016?
 Name=C3
-Start=52
+Start=51
 Len=4
 
 [ValueSet]
@@ -250,7 +256,7 @@ Value=0:9999
 [Item]
 Label=How many household have moved since 2016?|Quantas das famílias se mudaram desde 2016?|Wangapi nyumbani umehama tangu 2016?
 Name=C4
-Start=56
+Start=55
 Len=4
 
 [ValueSet]
@@ -261,7 +267,7 @@ Value=0:9999
 [Item]
 Label=What are the two most widespread economic activities? First|Quais são as duas atividades econômicas mais amplas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
 Name=C5A
-Start=60
+Start=59
 Len=2
 
 [ValueSet]
@@ -282,7 +288,7 @@ Value=55;Other|De outros|Nyingine, Taja
 [Item]
 Label=What are the two most widespread economic activities? Second|Quais são as duas atividades econômicas mais amplas? Segundo|mbili za kuenea kiuchumi ni nini? Pili
 Name=C5B
-Start=62
+Start=61
 Len=2
 
 [ValueSet]
@@ -304,12 +310,12 @@ Value=55;Other|De outros|Nyingine, Taja
 Label=D Supply of electricity|D fornecimento de energia|D Ugavi wa umeme
 Name=D_SUPPLY_OF_ELECTRICITY
 RecordTypeValue='4'
-RecordLen=127
+RecordLen=126
 
 [Item]
 Label=What are all the different sources of electricity that are available in this community?|fontes elétricos disponíveis|Inapatikana vyanzo umeme
 Name=D1
-Start=42
+Start=41
 Len=7
 DataType=Alpha
 
@@ -327,7 +333,7 @@ Value='9      ';No electric power|Sem energia elétrica|Hakuna umeme
 [Item]
 Label=Is the community connected to the national grid or a local mini-grid?|Até que ponto é o Utilitário de Escritório Nacional elétrica mais próxima?|Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?
 Name=D2
-Start=49
+Start=48
 Len=1
 
 [ValueSet]
@@ -340,7 +346,7 @@ Value=3;No|Não|Hapana
 [Item]
 Label=What is the main reason why the community is not connected to the grid?|Comunidade conectado à rede nacional ou local?|Community kushikamana na gridi ya taifa au ya ndani?
 Name=D3
-Start=50
+Start=49
 Len=2
 
 [ValueSet]
@@ -357,7 +363,7 @@ Value=55;Other, specify|De outros|Nyingine, taja
 [Item]
 Label=Does the community expect to get grid connection in the next two years?|principal razão para não ligados|Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?
 Name=D4
-Start=52
+Start=51
 Len=1
 
 [ValueSet]
@@ -369,7 +375,7 @@ Value=2;No|As famílias não querem se conectar à rede|Hapana
 [Item]
 Label=Who is running the local mini-grid system in this community?|Esperar para se conectar à rede (nacional) dentro de 2 anos|Je, ni nani anasambaza umeme wa gridi ndogo katika jamii hii?
 Name=D5
-Start=53
+Start=52
 Len=2
 
 [ValueSet]
@@ -386,20 +392,20 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=What is the name of the local mini-grid company?|Nome da empresa a rede local?|Taja jina la kampuni inayosambaza umeme wa gridi ndogo
 Name=D6
-Start=55
+Start=54
 Len=50
 DataType=Alpha
 
 [Item]
 Label=How many years has the community had this grid connection?|Quantos anos com essa conexão?|Ni kwa miaka mingapi jamii hii imeunganishwa katika gridi ya Taifa?
 Name=D7
-Start=105
+Start=104
 Len=2
 
 [Item]
 Label=How much did the community pay to get the grid connection?|Quanto pagou comunidade para ligação à rede?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
 Name=D8
-Start=107
+Start=106
 Len=8
 
 [ValueSet]
@@ -410,7 +416,7 @@ Value=0:99999999
 [Item]
 Label=Did the community pay to get the grid connection to the community?|A comunidade de pagar para obter a ligação à rede para a comunidade?|Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?
 Name=D8_1
-Start=115
+Start=114
 Len=1
 
 [ValueSet]
@@ -422,7 +428,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Is grid service available to the whole community or only a part of the community?|Serviço de grade disponível para peças inteiras ou apenas de comunidade?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
 Name=D9
-Start=116
+Start=115
 Len=1
 
 [ValueSet]
@@ -436,7 +442,7 @@ Value=3;Small part of community|Pequena parte da comunidade|Sehemu ndogo ya jami
 [Item]
 Label=Grid service available for whole or only parts of community?|serviço de grade disponíveis para todo ou apenas partes da comunidade?|Je, ni kaya ngapi zimeunganishwa kwenye gridi?
 Name=D10
-Start=117
+Start=116
 Len=1
 
 [ValueSet]
@@ -450,7 +456,7 @@ Value=3;Small part of community|Pequena parte da comunidade|Sehemu ndogo ya jami
 [Item]
 Label=What is the main reason some households are not connected to the grid?|Qual é a principal razão que algumas famílias não estão conectados à rede?|Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?
 Name=D11
-Start=118
+Start=117
 Len=2
 
 [ValueSet]
@@ -470,7 +476,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
 Name=D12
-Start=120
+Start=119
 Len=1
 
 [ValueSet]
@@ -484,7 +490,7 @@ Value=4;Small part of the businesses|todas as empresas|Biashara chache
 [Item]
 Label=Are there certain months/seasons every year when the community experiences bad electricity service from the grid?|Há determinados meses / estações a cada ano quando a comunidade experimenta serviço de energia elétrica ruim da rede?|Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?
 Name=D13
-Start=121
+Start=120
 Len=1
 
 [ValueSet]
@@ -496,7 +502,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Worst month for service from the grid?|Pior mês para o serviço da rede?|Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?
 Name=D14
-Start=122
+Start=121
 Len=6
 DataType=Alpha
 
@@ -520,12 +526,12 @@ Value='12    ';December|dezembro|Desemba
 Label=D Supply 15 - 20|D Fornecimento 15-20|D Supply 15-20
 Name=D_15_20
 RecordTypeValue='C'
-RecordLen=61
+RecordLen=60
 
 [Item]
 Label=Does the community publish a "load-shedding" schedule (announces of hours of electricity available from the grid)? Worst month|A comunidade publicar uma agenda "de rejeição de cargas" (pior mês)|Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? (mbaya mwezi)
 Name=D15A
-Start=42
+Start=41
 Len=1
 
 [ValueSet]
@@ -537,7 +543,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Does the community publish a "load-shedding" schedule (announces of hours of electricity available from the grid)? typical month|A comunidade publicar uma agenda "de rejeição de cargas" (mês típico)|Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? (mwezi mfano)
 Name=D15B
-Start=43
+Start=42
 Len=1
 
 [ValueSet]
@@ -549,43 +555,43 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How many hours of electricity are available each day from the grid? (worst month)|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Pior mês)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mbaya mwezi)
 Name=D16A
-Start=44
+Start=43
 Len=2
 
 [Item]
 Label=How many hours of electricity are available each day from the grid? (typical month)|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Mês típico)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mfano mwezi)
 Name=D16B
-Start=46
+Start=45
 Len=2
 
 [Item]
 Label=How many hours of electricity are available each evening from 6:00 pm to 10:00? (worst month)|Quantas horas de eletricidade estão disponíveis todas as noites entre 18:00-22:00? (Pior mês)|Saa ngapi ya umeme zinapatikana kila jioni fomu 18:00-22:00? (Mbaya mwezi)
 Name=D17A
-Start=48
+Start=47
 Len=1
 
 [Item]
 Label=How many hours of electricity are available each evening from 6:00 pm to 10:00? (typical month)|Quantas horas de eletricidade estão disponíveis todas as noites entre 18:00-22:00? (Mês típico)|Saa ngapi ya umeme zinapatikana kila jioni fomu 18:00-22:00? (Mfano mwezi)
 Name=D17B
-Start=49
+Start=48
 Len=1
 
 [Item]
 Label=In a typical day, how many outages/blackouts of the grid happen? (worst month)|Em um dia típico, quantas interrupções / desmaios da grade acontecer? (Pior mês)|Katika siku ya kawaida, ni wangapi outages / giza kwa ya gridi kutokea? (Mbaya mwezi)
 Name=D18A
-Start=50
+Start=49
 Len=2
 
 [Item]
 Label=In a typical day, how many outages/blackouts of the grid happen? (typical month)|Em um dia típico, quantas interrupções / desmaios da grade acontecer? (Mês típico)|Katika siku ya kawaida, ni wangapi outages / giza kwa ya gridi kutokea? (Mfano mwezi)
 Name=D18B
-Start=52
+Start=51
 Len=2
 
 [Item]
 Label=In a typical day, what is the total duration of outages/blackouts? (worst month)|Em um dia típico, que é a duração total das interrupções / desmaios? (Pior mês)|Katika siku ya kawaida, ni nini jumla ya muda wa kukatika / giza kwa? (Mbaya mwezi)
 Name=D19A
-Start=54
+Start=53
 Len=2
 
 [ValueSet]
@@ -596,7 +602,7 @@ Value=0:24
 [Item]
 Label=In a typical day, what is the total duration of outages/blackouts? (typical month)|Em um dia típico, que é a duração total das interrupções / desmaios? (Mês típico)|Katika siku ya kawaida, ni nini jumla ya muda wa kukatika / giza kwa? (Mfano mwezi)
 Name=D19B
-Start=56
+Start=55
 Len=2
 
 [ValueSet]
@@ -607,25 +613,25 @@ Value=0:24
 [Item]
 Label=In a typical day, how many outages/blackouts of the grid happen? (worst month)|Em um dia típico, quantas interrupções / desmaios da rede acontecem? (Pior mês)|Je, kwa kawaida ni masaa mangapi mchana na usiku umeme unakatika kwa siku (masaa 24)? (Mbaya mwezi)
 Name=D20A
-Start=58
+Start=57
 Len=2
 
 [Item]
 Label=In a typical day, what is the total duration of outages/blackouts? (typical month)|Em um dia típico, quantas interrupções / desmaios da rede acontecem? (Mês típico)|Katika siku ya kawaida, ni nini jumla ya muda wa kukatika / giza kwa? (Mfano mwezi)
 Name=D20B
-Start=60
+Start=59
 Len=2
 
 [Record]
 Label=D Supply 21 - 33|Fornecimento D 22 - 33|D Supply 22-33
 Name=D_21_33
 RecordTypeValue='D'
-RecordLen=74
+RecordLen=73
 
 [Item]
 Label=In the last 12 months, did the power og out for more than 24 hours?|Em um dia típico e noite (24 horas), quantas horas é a eletricidade não está disponível? (Pior mês)|Katika siku ya kawaida na usiku (saa 24), saa ngapi ni umeme hazipatikani? (Mbaya mwezi)
 Name=D21
-Start=42
+Start=41
 Len=2
 
 [ValueSet]
@@ -637,19 +643,19 @@ Value=2;No|Não|Hapana
 [Item]
 Label=.. did the power go out for more than 24 hours?|.. se o poder sair por mais de 24 horas?|Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika kaya nyingi kwa wakati mmoja? Year
 Name=D22
-Start=44
+Start=43
 Len=6
 
 [Item]
 Label=How many days did it take to fix the issue and for the community to regain power?|... última potência tempo sair para> 24 horas em vários agregados familiares?|How many days did it take to fix the issue and for the community to regain power?
 Name=D23
-Start=50
+Start=49
 Len=2
 
 [Item]
 Label=What are the most serious problems this community experiences with the grid electricity?|Quantos dias demorou para corrigir o problema e para a comunidade para recuperar o poder?|What are the most serious problems this community experiences with the grid electricity?
 Name=D24
-Start=52
+Start=51
 Len=2
 
 [ValueSet]
@@ -670,7 +676,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Over the past 5 years,  how has the frequency of black out or brown out in your community changed? |Quais são os problemas mais graves neste experiências comunitárias com a eletricidade da rede?|ni matatizo makubwa zaidi katika uzoefu huu jumuia ya umeme wa gridi ya taifa ni nini?
 Name=D25
-Start=54
+Start=53
 Len=1
 
 [ValueSet]
@@ -682,11 +688,10 @@ Value=3;About the same|Continuam os mesmos|Hakuna mabadiliko
 Value=4;A little harder|Um pouco mais difícil|Ngumu kiasi
 Value=5;Gotten much harder|Ficou muito mais difícil|Ngumu sana
 
-
 [Item]
 Label=Past 5 years, has the frequency of black or brown outs in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
 Name=D26
-Start=55
+Start=54
 Len=1
 
 [ValueSet]
@@ -699,7 +704,7 @@ Value=3;Better|Melhorou|Nzuri zaidi
 [Item]
 Label=Over the past 5 years, how has the price of using grid electricity in your community changed?|Últimos 5 anos, o preço do uso de eletricidade da rede em sua comunidade mudou?|Zamani miaka 5, ina bei ya kutumia umeme wa gridi katika jamii yako imebadilika?
 Name=D27
-Start=56
+Start=55
 Len=1
 
 [ValueSet]
@@ -712,7 +717,7 @@ Value=3;Lower|Baixou|Zimeshuka
 [Item]
 Label=Past 5 years, has the duration of electricity supply at night changed?|Últimos 5 anos, a duração do fornecimento de electricidade à noite mudou?|Zamani miaka 5, ina muda wa ugavi wa umeme wakati wa usiku imebadilika?
 Name=D28
-Start=57
+Start=56
 Len=1
 
 [ValueSet]
@@ -725,7 +730,7 @@ Value=3;Better|Melhorou|Nzuri zaidi
 [Item]
 Label=Over the past 5 years, how has the duration of electricity supply at night changed|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?|Zamani miaka 5, alikuwa huduma kutoka umeme wa gridi ya taifa imebadilika?
 Name=D29
-Start=58
+Start=57
 Len=1
 
 [ValueSet]
@@ -738,7 +743,7 @@ Value=3;Better|Melhorou|Nzuri zaidi
 [Item]
 Label=How satisfied are you with the service from the grid electricity?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
 Name=D30
-Start=59
+Start=58
 Len=1
 
 [ValueSet]
@@ -753,7 +758,7 @@ Value=5;Very unsatisfied|Muito insatisfeito|Siridhishwi kabisa
 [Item]
 Label=Are solar home systems/solar lightning systems used/owned in the community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
 Name=D31
-Start=60
+Start=59
 Len=1
 
 [ValueSet]
@@ -765,7 +770,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What proportion of households use solar systems/solar lightning systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, unaweza kununua au kukodisha mfumo wa jua nyumbani / nishati ya jua mfumo wa umeme katika jamii hii?
 Name=D32
-Start=61
+Start=60
 Len=2
 
 [ValueSet]
@@ -781,7 +786,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Can you buy or lease a solar home systems/solar lightning systems in this community?|Existem quaisquer sistemas de irrigação compartilhados solares / Electricidade impulsionado utilizados pelos agricultores nesta comunidade?|Je, kuna yeyote pamoja jua / umeme inayotokana umwagiliaji mifumo inayotumiwa na wakulima katika jamii hii?
 Name=D33
-Start=63
+Start=62
 Len=10
 DataType=Alpha
 
@@ -797,19 +802,19 @@ Value='55        ';Other|De outros|Nyingine
 [Item]
 Label=How far is the nearest National Electricity Utility Office?|Há algum bombas de água compartilhados solares / eléctricos nesta comunidade?|Je, kuna yeyote pamoja jua / umeme pampu maji katika jamii hii?
 Name=D34
-Start=73
+Start=72
 Len=2
 
 [Record]
 Label=E Energy prices|preços E Energia|bei E Energy
 Name=E_ENERGY_PRICES
 RecordTypeValue='E'
-RecordLen=941
+RecordLen=940
 
 [Item]
 Label=Energy prices|Os preços da energia|bei ya nishati
 Name=ENERGYPRICES
-Start=42
+Start=41
 Len=75
 DataType=Alpha
 Occurrences=12
@@ -817,7 +822,7 @@ Occurrences=12
 [Item]
 Label=Energy item number|número do item energia|idadi Nishati bidhaa
 Name=E1_NO
-Start=42
+Start=41
 Len=2
 ItemType=SubItem
 
@@ -840,7 +845,7 @@ Value=12;Briquette/pellet (Kg)|Briquete / sedimento (kg)|Briquette / pellet (Kg)
 [Item]
 Label=Energy item description|descrição do item energia|Nishati bidhaa maelezo
 Name=E1_DESC
-Start=44
+Start=43
 Len=65
 ItemType=SubItem
 DataType=Alpha
@@ -848,7 +853,7 @@ DataType=Alpha
 [Item]
 Label=Current energy price|preço atual da energia|bei ya nishati kwa sasa
 Name=E1B
-Start=109
+Start=108
 Len=8
 ItemType=SubItem
 
@@ -861,12 +866,12 @@ Value=0:99999999
 Label=F Infrastructure||F Miundombinu
 Name=F_INFRASTRUCTURE
 RecordTypeValue='B'
-RecordLen=65
+RecordLen=64
 
 [Item]
 Label=Village accessible by motor vehicle? Dry season|Vila acessível por veículo motorizado? estação seca|Kijiji kupatikana kwa magari? Msimu wa ukame
 Name=F1A
-Start=42
+Start=41
 Len=2
 
 [ValueSet]
@@ -879,7 +884,7 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
 Name=F1B
-Start=44
+Start=43
 Len=2
 
 [ValueSet]
@@ -892,7 +897,7 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhusiano wa basi?
 Name=F2
-Start=46
+Start=45
 Len=2
 
 [ValueSet]
@@ -904,31 +909,31 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What is the distance in kilometers from the village to the nearest town/city?|Qual é a distância em quilômetros da aldeia para a cidade mais próxima / cidade?|ni umbali wa kilomita kutoka kijiji kwa karibu mji / jiji gani?
 Name=F3
-Start=48
+Start=47
 Len=4
 
 [Item]
 Label=What is the distance in kilometers from the village to the district center?|Qual é a distância em quilômetros da aldeia para o centro do distrito?|ni umbali wa kilomita kutoka kijiji katika kituo cha wilaya gani?
 Name=F4
-Start=52
+Start=51
 Len=4
 
 [Item]
 Label=What is the distance in kilometers from the village to the nearest bank branch?|Qual é a distância em quilômetros da aldeia para a agência bancária mais próxima?|ni umbali wa kilomita kutoka kijiji kwa karibu tawi la benki gani?
 Name=F5
-Start=56
+Start=55
 Len=4
 
 [Item]
 Label=What is the distance in kilometers from the village to the nearest microfinance institution?|Qual é a distância em quilômetros da aldeia para a instituição de microfinanças mais próximo?|ni umbali wa kilomita kutoka kijiji kwa karibu taasisi ndogo ndogo za fedha ni nini?
 Name=F6
-Start=60
+Start=59
 Len=4
 
 [Item]
 Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
 Name=F7
-Start=64
+Start=63
 Len=2
 
 [ValueSet]
@@ -944,12 +949,12 @@ Value=5;No, nowhere in the community|Não, em nenhum lugar da comunidade|No, hak
 Label=F8-F18 Infrastructure||F8-F18 Miundombinu
 Name=F8_F16_INFRASTRUCTURE
 RecordTypeValue='F'
-RecordLen=690
+RecordLen=689
 
 [Item]
 Label=Infrastructure|A infraestrutura|miundombinu
 Name=INFRASTRUCTURE
-Start=42
+Start=41
 Len=59
 DataType=Alpha
 Occurrences=11
@@ -957,7 +962,7 @@ Occurrences=11
 [Item]
 Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
 Name=F8_NO
-Start=42
+Start=41
 Len=2
 ItemType=SubItem
 
@@ -979,7 +984,7 @@ Value=11;Hospital||Hospitali
 [Item]
 Label=Infrastructure name|nome de infra-estrutura|jina miundombinu
 Name=F8_DESC
-Start=44
+Start=43
 Len=50
 ItemType=SubItem
 DataType=Alpha
@@ -987,7 +992,7 @@ DataType=Alpha
 [Item]
 Label=Are there any|Há alguns|Kuna yoyote
 Name=F8A
-Start=94
+Start=93
 Len=1
 ItemType=SubItem
 
@@ -1000,7 +1005,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Distance to nearest facility|Distância para o serviço mais próximo|Umbali wa kituo karibu
 Name=F8B
-Start=95
+Start=94
 Len=4
 ItemType=SubItem
 
@@ -1012,7 +1017,7 @@ Value=0:9999
 [Item]
 Label=Do at least one of these have access to electricty|Fazer pelo menos um deles tem acesso a eletricidade|Je angalau moja ya hizi wanapata electricty
 Name=F8C
-Start=99
+Start=98
 Len=1
 ItemType=SubItem
 
@@ -1025,7 +1030,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did the community have this service five years ago?|A comunidade tem este serviço há cinco anos?|Je jamii na huduma hii ya miaka mitano iliyopita?
 Name=F8D
-Start=100
+Start=99
 Len=1
 ItemType=SubItem
 
@@ -1039,12 +1044,12 @@ Value=2;No|Não|Hapana
 Label=G Business_Manufacturing
 Name=G_MANUFACTURING
 RecordTypeValue='G'
-RecordLen=581
+RecordLen=580
 
 [Item]
 Label=Manufacturing|fabrico|Uzalishaji
 Name=GM
-Start=42
+Start=41
 Len=54
 DataType=Alpha
 Occurrences=10
@@ -1052,7 +1057,7 @@ Occurrences=10
 [Item]
 Label=Business number|número de negócios|idadi ya biashara
 Name=G_NO
-Start=42
+Start=41
 Len=2
 ItemType=SubItem
 
@@ -1070,11 +1075,10 @@ Value=8;Tools and instruments|Ferramentas/Instrumentos|Vitendeakazi
 Value=9;Bricks|Tijolos|Matofali
 Value=10;Other manufacturing|Outras Manufacturas|Viwanda Vingine
 
-
 [Item]
 Label=Business description|Descrição do negócio|Business maelezo
 Name=G_DESC
-Start=44
+Start=43
 Len=50
 ItemType=SubItem
 DataType=Alpha
@@ -1082,7 +1086,7 @@ DataType=Alpha
 [Item]
 Label=Are there any business in this community?|Há qualquer negócio nesta comunidade?|Je, kuna biashara yoyote katika jamii hii?
 Name=G1A
-Start=94
+Start=93
 Len=1
 ItemType=SubItem
 
@@ -1095,7 +1099,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did this business exist in the community five years ago?|Será que este negócio existe na comunidade há cinco anos?|Je biashara hii zipo katika jamii ya miaka mitano iliyopita?
 Name=G1B
-Start=95
+Start=94
 Len=1
 ItemType=SubItem
 
@@ -1109,12 +1113,12 @@ Value=2;No|Não|Hapana
 Label=G Business_Service
 Name=G_BUSINESS_SERVICE
 RecordTypeValue='7'
-RecordLen=797
+RecordLen=796
 
 [Item]
 Label=Services|Serviços|huduma
 Name=GS
-Start=42
+Start=41
 Len=54
 DataType=Alpha
 Occurrences=14
@@ -1122,7 +1126,7 @@ Occurrences=14
 [Item]
 Label=G_Business_service
 Name=G_SER_NO
-Start=42
+Start=41
 Len=2
 ItemType=SubItem
 
@@ -1147,7 +1151,7 @@ Value=14;Mobil phone charging/repairing service|Serviço de carregamento / repar
 [Item]
 Label=G_Descriptives_service
 Name=G_DESC_SER
-Start=44
+Start=43
 Len=50
 ItemType=SubItem
 DataType=Alpha
@@ -1155,7 +1159,7 @@ DataType=Alpha
 [Item]
 Label=Businesses providing the following services in this community|Empresas que fornecem os seguintes serviços nesta comunidade|Biashara na kutoa huduma zifuatazo katika jumuiya hii
 Name=G11A
-Start=94
+Start=93
 Len=1
 ItemType=SubItem
 
@@ -1168,7 +1172,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did this type of service exist in the community five years ago|Será que este tipo de serviço existe na comunidade há cinco anos|Je aina hii ya huduma zipo katika jamii ya miaka mitano iliyopita
 Name=G11B
-Start=95
+Start=94
 Len=1
 ItemType=SubItem
 
@@ -1182,12 +1186,12 @@ Value=2;No|Não|Hapana
 Label=H Development project|projecto H Desenvolvimento|mradi H Development
 Name=H_DEVELOPMENT_PROJECT
 RecordTypeValue='H'
-RecordLen=257
+RecordLen=256
 
 [Item]
 Label=Development|Desenvolvimento|Maendeleo
 Name=HD
-Start=42
+Start=41
 Len=54
 DataType=Alpha
 Occurrences=4
@@ -1195,7 +1199,7 @@ Occurrences=4
 [Item]
 Label=Development project number|número projeto de desenvolvimento|idadi maendeleo ya mradi
 Name=H_NO
-Start=42
+Start=41
 Len=2
 ItemType=SubItem
 
@@ -1210,7 +1214,7 @@ Value=4;Other development program related to power supply|Outro programa de dese
 [Item]
 Label=Development project description|descrição do projeto Desenvolvimento|maelezo maendeleo ya mradi
 Name=H_DESC
-Start=44
+Start=43
 Len=50
 ItemType=SubItem
 DataType=Alpha
@@ -1218,7 +1222,7 @@ DataType=Alpha
 [Item]
 Label=Implemented projects in the community last 5 years|projetos implementados na comunidade últimos 5 anos|miradi iliyotekelezwa katika jamii ya mwisho ya miaka 5
 Name=H1A
-Start=94
+Start=93
 Len=1
 ItemType=SubItem
 
@@ -1231,7 +1235,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Any plan to implement a project in the community|Qualquer plano para implementar um projeto na comunidade|mpango wowote wa kutekeleza mradi katika jumuiya
 Name=H1B
-Start=95
+Start=94
 Len=1
 ItemType=SubItem
 
@@ -1245,12 +1249,12 @@ Value=2;No|Não|Hapana
 Label=I Cooking|eu cozinho|I kupikia
 Name=I_COOKING
 RecordTypeValue='I'
-RecordLen=87
+RecordLen=86
 
 [Item]
 Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina ya cookstove
 Name=I1
-Start=42
+Start=41
 Len=2
 
 [ValueSet]
@@ -1263,7 +1267,7 @@ Value=3;Manufactured stove|Fogão fabricado|Jiko lililotengenezwa kiwandani
 [Item]
 Label=Most common cookstove fuel|A maioria combustível fogão comum|Ya kawaida ya mafuta cookstove
 Name=I2
-Start=44
+Start=43
 Len=2
 
 [ValueSet]
@@ -1292,7 +1296,7 @@ Value=55;Other|De outros|Nyingine, taja
 [Item]
 Label=Do most households puchase or collect wood fuel?|Que a maioria das famílias puchase ou coletar combustível de madeira?|Je kaya zaidi puchase au kukusanya kuni?
 Name=I3
-Start=46
+Start=45
 Len=2
 
 [ValueSet]
@@ -1306,7 +1310,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Do household use improved cookstoves in this community?|Fazer uso doméstico de fogões melhorados nesta comunidade?|Je matumizi ya nyumbani kuboresha cookstoves katika jamii hii?
 Name=I4
-Start=48
+Start=47
 Len=2
 
 [ValueSet]
@@ -1318,7 +1322,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What kind of improved cookstoves do they use?|Que tipo de fogões melhorados que eles usam?|Ni aina gani ya cookstoves kuboreshwa wala wao kutumia?
 Name=I4_1
-Start=50
+Start=49
 Len=26
 DataType=Alpha
 
@@ -1355,7 +1359,7 @@ Image=.\Images\Cook_stoves_32.jpg
 [Item]
 Label=Why are the households not using improved cookstoves?|Por que as famílias não usar fogões melhorados?|Kwa nini hazitumii cookstoves bora?
 Name=I4_2
-Start=76
+Start=75
 Len=2
 
 [ValueSet]
@@ -1371,7 +1375,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Do some households use LPG/cooking gas cookstoves in this community?|Fazer algumas famílias utilizam GLP / cozinhar fogões a gás nesta comunidade?|Endelea na kaya hutumia gesi / kupikia cookstoves gesi katika jamii hii?
 Name=I5
-Start=78
+Start=77
 Len=2
 
 [ValueSet]
@@ -1383,7 +1387,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do some households use electric cookstoves in this community?|Que algumas famílias usam fogões elétricos nesta comunidade?|Je baadhi ya familia kutumia cookstoves umeme katika jamii hii?
 Name=I6
-Start=80
+Start=79
 Len=2
 
 [ValueSet]
@@ -1395,13 +1399,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Ni aina gani ya majiko yaliyoboreshwa yanatumiwa katika jamii hii?
 Name=I7
-Start=82
+Start=81
 Len=2
 
 [Item]
 Label=Why are the households not using improved cookstoves?|Por que as famílias não estão usando fogões melhorados?|Je, kwanini kaya hazitumii majiko yaliyoboreshwa?
 Name=I8
-Start=84
+Start=83
 Len=2
 
 [ValueSet]
@@ -1417,7 +1421,7 @@ Value=55;Other|Outro|Nyingine , taja
 [Item]
 Label=Are there programs that campaign for the awareness of health risks of cookstoves?|programas estão lá que a campanha para a conscientização dos riscos para a saúde de fogões?|Je, kuna programu ambazo kampeni ufahamu wa hatari ya afya ya cookstoves?
 Name=I9
-Start=86
+Start=85
 Len=1
 
 [ValueSet]
@@ -1429,7 +1433,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Are there programs that campaign for the awareness of health risks of cookstoves?
 Name=I10
-Start=87
+Start=86
 Len=1
 
 [ValueSet]
@@ -1442,12 +1446,12 @@ Value=2;No|Não|Hapana
 Label=J Street lightning|relâmpago J Street|umeme J Street
 Name=J_STREET_LIGHTNING
 RecordTypeValue='J'
-RecordLen=54
+RecordLen=53
 
 [Item]
 Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
 Name=J1
-Start=42
+Start=41
 Len=1
 
 [ValueSet]
@@ -1459,7 +1463,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Main energy source for street lightning?|principal fonte de energia para iluminação pública?|Kuu chanzo cha nishati kwa umeme mitaani?
 Name=J2
-Start=43
+Start=42
 Len=2
 
 [ValueSet]
@@ -1474,7 +1478,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
 Name=J3
-Start=45
+Start=44
 Len=1
 
 [ValueSet]
@@ -1489,7 +1493,7 @@ Value=5;Entirely|Inteiramente|Eneo lote
 [Item]
 Label=Who pays for the street lightning?|Quem paga para o relâmpago rua?|Nani hulipia umeme mitaani?
 Name=J4
-Start=46
+Start=45
 Len=2
 
 [ValueSet]
@@ -1503,7 +1507,7 @@ Value=55;Other|De outros|Nyingine, taja
 [Item]
 Label=Who is responsible for mainting the street lightning?|Quem é responsável por mainting o relâmpago rua?|Nani anawajibika mainting umeme mitaani?
 Name=J5
-Start=48
+Start=47
 Len=2
 
 [ValueSet]
@@ -1518,7 +1522,7 @@ Value=55;Other|De outros|Nyingine, taja
 [Item]
 Label=How many hours with street light from sunset to sunrise?|Quantas horas com luz de rua do pôr ao nascer do sol?|Saa ngapi kwa mwanga wa barabara kutoka jioni hadi mashariki?
 Name=J6
-Start=50
+Start=49
 Len=2
 
 [ValueSet]
@@ -1529,7 +1533,7 @@ Value=0:99
 [Item]
 Label=Any significant unscheduled outages/blackouts of streets lightning last 7 days?|Quaisquer significativas não programadas interrupções / apagões de ruas relâmpago últimos 7 dias?|Yoyote muhimu unscheduled kukatika / giza kwa ya mitaa umeme siku 7?
 Name=J7
-Start=52
+Start=51
 Len=1
 
 [ValueSet]
@@ -1541,7 +1545,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How satisfied are you with your street lightning service??|Quão satisfeito você está com o seu serviço relâmpago rua ??|Jinsi unaridhishwa na huduma yako mitaani umeme ??
 Name=J8
-Start=53
+Start=52
 Len=1
 
 [ValueSet]
@@ -1555,7 +1559,7 @@ Value=4;Very unsatisfied|Muito insatisfeito|Haturidhiki kabisa
 [Item]
 Label=What imporvements in street lightning are most important in your community?|O que imporvements no relâmpago rua são mais importantes em sua comunidade?|Nini imporvements katika umeme wa mitaani ni muhimu sana katika jamii yako?
 Name=J9
-Start=54
+Start=53
 Len=1
 
 [ValueSet]

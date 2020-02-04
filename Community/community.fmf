@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.2
+Version=CSPro 7.3
 Name=COMMUNITY_FF
 Label=community
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -15,15 +15,16 @@ Label=community questionnaire
 Level=1
 Size=1095,753
   
-Item=C_DEVICE_ID
+Item=C_LOGIN
 Item=C_A1
 Item=C_A2
 Item=C_A3
-Item=C_A4
+Item=C_A6
 Item=A6
-Item=C_A3_1
+Item=C_A5
 Item=A5
 Item=B_LEADERS000
+Item=C_A4
   
 [EndForm]
   
@@ -201,21 +202,21 @@ LogicControl=No
 Max=1
   
 [Field]
-Name=C_DEVICE_ID
+Name=C_LOGIN
 Position=199,27,409,47
-Item=C_DEVICE_ID,COMMUNITY_DICT
+Item=C_LOGIN,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=110,30,193,46
-Text=C_DEVICE_ID
+Position=110,30,167,46
+Text=C_LOGIN
  
   
 [Field]
 Name=C_A1
-Position=199,57,242,77
+Position=199,57,228,77
 Item=C_A1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=1
@@ -227,7 +228,7 @@ Text=C_A1
   
 [Field]
 Name=C_A2
-Position=199,87,242,107
+Position=199,87,228,107
 Item=C_A2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=1
@@ -250,32 +251,44 @@ Text=C_A3
  
   
 [Field]
-Name=C_A3_1
-Position=199,148,242,168
-Item=C_A3_1,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=110,155,156,171
-Text=C_A3_1
- 
-  
-[Field]
 Name=C_A4
-Position=199,184,242,204
+Position=202,154,231,174
 Item=C_A4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=110,187,142,203
+Position=113,162,145,178
 Text=C_A4
  
   
 [Field]
+Name=C_A5
+Position=199,196,228,216
+Item=C_A5,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=110,203,142,219
+Text=C_A5
+ 
+  
+[Field]
+Name=C_A6
+Position=199,232,242,252
+Item=C_A6,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=110,235,142,251
+Text=C_A6
+ 
+  
+[Field]
 Name=A6
-Position=200,221,215,241
+Position=200,269,215,289
 Item=A6,COMMUNITY_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
@@ -283,19 +296,19 @@ DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=85,221,101,237
+Position=85,269,101,285
 Text=A6
  
   
 [Field]
 Name=A5
-Position=160,259,620,279
+Position=160,307,620,327
 Item=A5,COMMUNITY_DICT
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=95,259,111,275
+Position=95,307,111,323
 Text=A5
  
   

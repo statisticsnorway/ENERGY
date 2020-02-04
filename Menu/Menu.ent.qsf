@@ -7,19 +7,27 @@ PT=Portugues
 SW=Swahili
 
 [QUESTION]
-Field=MENU_DICT.M_COUNTY_CODE
+Field=MENU_DICT.M_DISTRICT
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please choose county\par
+EN=\pard\cf1\fs24 Please choose district\par
 EN=}
 
 [QUESTION]
-Field=MENU_DICT.M_ENUMERATION_AREA
+Field=MENU_DICT.M_EA
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 please choose enumeration area\par
+EN=}
+
+[QUESTION]
+Field=MENU_DICT.M_LOCALITY
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 please choose locality\par
 EN=}
 
 [QUESTION]
@@ -31,6 +39,14 @@ EN=\pard\cf1\fs24 Please select what to do\par
 EN=}
 
 [QUESTION]
+Field=MENU_DICT.M_REGION
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Please choose region\par
+EN=}
+
+[QUESTION]
 Field=MENU_DICT.M_ROLE
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -39,23 +55,15 @@ EN=\pard\cf1\fs24 Please select\par
 EN=}
 
 [QUESTION]
-Field=MENU_DICT.M_STATE_NUMBER
+Field=MENU_DICT.M_SUBDISTRICT
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please choose state\par
+EN=\pard\cf1\fs24 please choose sub district\par
 EN=}
 
 [QUESTION]
-Field=MENU_DICT.M_SUB_COUNTY_CODE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 please choose sub county\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_VILLAGE_CODE
+Field=MENU_DICT.M_VILLAGE
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1

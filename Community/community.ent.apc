@@ -9,9 +9,9 @@ PROC COMMUNITY_FF
 PROC COMMUNITY_QUEST
 
 
-PROC C_DEVICE_ID
+PROC C_LOGIN
 preproc
-	$ = sysparm("DEVICE");
+	$ = sysparm("LOGIN");
 	noinput;
 
 
@@ -19,29 +19,35 @@ preproc
 	
 PROC C_A1
 preproc
-	$ = toNumber(sysparm("STATE"));
+	$ = toNumber(sysparm("REGION"));
 	noinput;
 
 
 PROC C_A2
 preproc
-	$ = toNumber(sysparm("COUNTY"));
+	$ = toNumber(sysparm("DISTRICT"));
 	noinput;
 	
 	
 PROC C_A3
 preproc
- 	$ = toNumber(sysparm("SUBCOUNTY"));
+ 	$ = toNumber(sysparm("SUBDISTRICT"));
  	noinput;
- 	
+ 
 
-PROC C_A3_1
+PROC C_A4 
+preproc
+ 	$ = toNumber(sysparm("LOCALITY"));
+ 	noinput;
+
+
+PROC C_A5
 preproc
 	$ = toNumber(sysparm("VILLAGE"));
 	noinput;
 
 
-PROC C_A4
+PROC C_A6
 preproc
 	$ = toNumber(sysparm("EA"));
 	noinput;

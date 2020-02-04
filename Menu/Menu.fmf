@@ -13,18 +13,20 @@ File=.\Menu.dcf
 Name=FORM000
 Label=Menu questionnaire
 Level=1
-Size=312,570
+Size=314,570
   
-Item=M_STATE_NUMBER
-Item=M_COUNTY_CODE
-Item=M_SUB_COUNTY_CODE
-Item=M_VILLAGE_CODE
-Item=M_ENUMERATION_AREA
+Item=M_REGION
+Item=M_DISTRICT
+Item=M_SUBDISTRICT
+Item=M_VILLAGE
+Item=M_EA
 Item=M_URBAN_RURAL
 Item=M_MENU
 Item=MENU_ID
 Item=M_HOUSEHOLD
 Item=M_SUPERMENU
+Item=M_LOCALITY
+Item=M_LOGIN
   
 [EndForm]
   
@@ -41,8 +43,21 @@ LogicControl=No
 Max=1
   
 [Field]
+Name=M_LOGIN
+Position=159,48,289,68
+Item=M_LOGIN,MENU_DICT
+FieldLabelType=DictionaryName
+UseUnicodeTextBox=Yes
+Form=1
+  
+[Text]
+Position=89,51,148,67
+Text=M_LOGIN
+ 
+  
+[Field]
 Name=M_MENU
-Position=272,127,287,147
+Position=222,128,237,148
 Item=M_MENU,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -55,7 +70,7 @@ Text=M_MENU
   
 [Field]
 Name=M_SUPERMENU
-Position=272,200,287,220
+Position=222,201,237,221
 Item=M_SUPERMENU,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -67,73 +82,86 @@ Text=M_SUPERMENU
  
   
 [Field]
-Name=M_STATE_NUMBER
-Position=244,293,287,313
-Item=M_STATE_NUMBER,MENU_DICT
+Name=M_REGION
+Position=222,294,251,314
+Item=M_REGION,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,296,190,312
-Text=M_STATE_NUMBER
+Position=68,296,136,312
+Text=M_REGION
  
   
 [Field]
-Name=M_COUNTY_CODE
-Position=244,323,287,343
-Item=M_COUNTY_CODE,MENU_DICT
+Name=M_DISTRICT
+Position=222,324,251,344
+Item=M_DISTRICT,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,326,182,342
-Text=M_COUNTY_CODE
+Position=68,326,146,342
+Text=M_DISTRICT
  
   
 [Field]
-Name=M_SUB_COUNTY_CODE
-Position=244,353,287,373
-Item=M_SUB_COUNTY_CODE,MENU_DICT
+Name=M_SUBDISTRICT
+Position=222,354,265,374
+Item=M_SUBDISTRICT,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,356,216,372
-Text=M_SUB_COUNTY_CODE
+Position=68,356,173,372
+Text=M_SUBDISTRICT
  
   
 [Field]
-Name=M_VILLAGE_CODE
-Position=244,383,287,403
-Item=M_VILLAGE_CODE,MENU_DICT
+Name=M_LOCALITY
+Position=222,384,251,404
+Item=M_LOCALITY,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,386,185,402
-Text=M_VILLAGE_CODE
+Position=68,386,150,402
+Text=M_LOCALITY
  
   
 [Field]
-Name=M_ENUMERATION_AREA
-Position=244,413,287,433
-Item=M_ENUMERATION_AREA,MENU_DICT
+Name=M_VILLAGE
+Position=222,420,251,440
+Item=M_VILLAGE,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,416,222,432
-Text=M_ENUMERATION_AREA
+Position=68,422,142,438
+Text=M_VILLAGE
+ 
+  
+[Field]
+Name=M_EA
+Position=222,450,265,470
+Item=M_EA,MENU_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=68,452,103,468
+Text=M_EA
  
   
 [Field]
 Name=M_HOUSEHOLD
-Position=244,162,287,182
+Position=222,163,265,183
 Item=M_HOUSEHOLD,MENU_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -146,7 +174,7 @@ Text=M_HOUSEHOLD
   
 [Field]
 Name=M_URBAN_RURAL
-Position=244,443,259,463
+Position=222,480,237,500
 Item=M_URBAN_RURAL,MENU_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
@@ -154,7 +182,7 @@ DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=68,446,182,462
+Position=68,482,182,498
 Text=M_URBAN_RURAL
  
   

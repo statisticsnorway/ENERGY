@@ -29,42 +29,55 @@ Len=1
 Label=Menu record
 Name=MENU_REC
 RecordTypeValue='1'
-RecordLen=23
+RecordLen=37
 
 [Item]
-Label=State code|Province
-Name=M_STATE_NUMBER
+Label=Login
+Name=M_LOGIN
 Start=3
+Len=15
+DataType=Alpha
+
+[Item]
+Label=Region|Province
+Name=M_REGION
+Start=18
+Len=2
+
+[Item]
+Label=District
+Name=M_DISTRICT
+Start=20
+Len=2
+
+[Item]
+Label=Subdistrict
+Name=M_SUBDISTRICT
+Start=22
 Len=3
 
 [Item]
-Label=County code
-Name=M_COUNTY_CODE
-Start=6
-Len=3
+Label=Locality
+Name=M_LOCALITY
+Start=25
+Len=2
 
 [Item]
-Label=Sub county Code
-Name=M_SUB_COUNTY_CODE
-Start=9
-Len=3
-
-[Item]
-Label=Village Code
-Name=M_VILLAGE_CODE
-Start=12
-Len=3
+Label=Village
+Name=M_VILLAGE
+Start=27
+Len=2
 
 [Item]
 Label=Enumeration Area
-Name=M_ENUMERATION_AREA
-Start=15
+Name=M_EA
+Start=29
 Len=3
 
 [Item]
 Label=Urban/rural
 Name=M_URBAN_RURAL
-Start=18
+Start=32
 Len=1
 
 [ValueSet]
@@ -76,7 +89,7 @@ Value=2;Rural
 [Item]
 Label=Menu
 Name=M_MENU
-Start=19
+Start=33
 Len=1
 
 [ValueSet]
@@ -92,7 +105,7 @@ Value=9;Quit|Sair
 [Item]
 Label=Supervisor menu
 Name=M_SUPERMENU
-Start=20
+Start=34
 Len=1
 
 [ValueSet]
@@ -107,5 +120,5 @@ Value=9;Quit
 [Item]
 Label=Select household
 Name=M_HOUSEHOLD
-Start=21
+Start=35
 Len=3

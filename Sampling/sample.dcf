@@ -15,46 +15,52 @@ Name=SAMPLING_QUEST
 [IdItems]
 
 [Item]
-Label=Device Id at listing time
-Name=SDEVICE_ID
+Label=Login at listing time
+Name=SLOGIN
 Start=2
 Len=25
 DataType=Alpha
 
 [Item]
-Label=State code
+Label=Region
 Name=SA1
 Start=27
-Len=3
+Len=2
 
 [Item]
-Label=County code
+Label=District
 Name=SA2
-Start=30
+Start=29
+Len=2
+
+[Item]
+Label=Subdistrict
+Name=SA3
+Start=31
 Len=3
 
 [Item]
-Label=Sub county Code
-Name=SA3
-Start=33
-Len=3
+Label=Locality
+Name=SA4
+Start=34
+Len=2
 
 [Item]
 Label=Village code
-Name=SA3_1
+Name=SA5
 Start=36
-Len=3
+Len=2
 
 [Item]
 Label=Enumeration Area
-Name=SA4
-Start=39
+Name=SA6
+Start=38
 Len=3
 
 [Item]
 Label=Serial number
 Name=SA8
-Start=42
+Start=41
 Len=3
 
 [Record]
@@ -64,67 +70,73 @@ RecordTypeValue='1'
 RecordLen=151
 
 [Item]
-Label=ID of device assigned to actual interview
-Name=S_INTERVIEWER_DEVICEID
-Start=45
+Label=Login of person done the listing
+Name=S_LISTING_LOGIN
+Start=44
 Len=25
 DataType=Alpha
 
 [Item]
-Label=Address/location
-Name=SA5
-Start=70
-Len=30
-DataType=Alpha
+Label=Urban/rural
+Name=SUR
+Start=69
+Len=1
 
 [Item]
 Label=Import or record GPS coordinates
-Name=SA6A
-Start=100
+Name=SA7
+Start=70
 Len=1
 
 [ValueSet]
 Label=Import or record GPS coordinates
-Name=SA6A_VS1
+Name=SA7_VS1
 Value=1;Gravar coodenadas GPS
 Value=2;Importar GPS do questionário anterior
 
 [Item]
 Label=North coordinate (Latitude)
-Name=SA6
-Start=101
+Name=SA7A
+Start=71
 Len=9
 Decimal=5
 DecimalChar=Yes
 
 [Item]
 Label=East coordinate (Longitude)
-Name=SA7
-Start=110
+Name=SA7B
+Start=80
 Len=10
 Decimal=5
 DecimalChar=Yes
 
 [Item]
-Label=Name of head of household
-Name=SA9
-Start=120
-Len=30
-DataType=Alpha
-
-[Item]
 Label=Presence of household
-Name=SA11
-Start=150
+Name=SA9
+Start=90
 Len=1
 
 [ValueSet]
 Label=Presence of household
-Name=SA11_VS1
+Name=SA9_VS1
 Value=1;Presente
 Value=2;Temporariamente ausente
 Value=3;Fora, sazonal
 Value=4;Desocupado
+
+[Item]
+Label=Name of head of household
+Name=SA10
+Start=91
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Address/location
+Name=SA11
+Start=121
+Len=30
+DataType=Alpha
 
 [Item]
 Label=source of power

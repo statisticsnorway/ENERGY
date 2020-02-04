@@ -47,9 +47,6 @@
     numeric mostoften = 9;
 	
 	
-	//GPS stuff
-	numeric gpsN, gpsE;
-
 	
 	Array memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
 	Array String memberNames(20);
@@ -73,7 +70,6 @@
 		savepartial();
 		stop(1);
 	end;
-
 
 
 
@@ -135,153 +131,104 @@ preproc
 
 postproc
 	stop(1);
-PROC AA_FORM
-preproc 
- errmsg("Device %s",getDeviceId());
+
+
+
 PROC AA1
 preproc
-	seed(systime());
-//	AA1 = random(1,999);
-    AA1 = toNumber(sysparm("STATE"));
+    $ = toNumber(sysparm("REGION"));
 	noinput;
 
 
 
 PROC AA2
 preproc
-	AA2 = toNumber(sysparm("COUNTY"));
+	$ = toNumber(sysparm("DISTRICT"));
 	noInput;
 
 
 
 PROC AA3
 preproc
-	AA3 = toNumber(sysparm("SUBCOUNTY"));
+	$ = toNumber(sysparm("SUBDISTRICT"));
 	noinput;
 
-
-
-PROC AA3_1
-preproc
-	AA3_1 = toNumber(sysparm("VILLAGE"));
-	noinput;
 
 
 PROC AA4
 preproc
-	AA4 = toNumber(sysparm("EA"));
+	$ = toNumber(sysparm("LOCALITY"));
 	noinput;
 
 
 PROC AA5
 preproc
-	AA5 = toNumber(sysparm("SERIAL"));
+	$ = toNumber(sysparm("VILLAGE"));
 	noinput;
 	
 	
 
 
-PROC DEVICE_ID
+PROC AA6
 preproc
-	DEVICE_ID = sysparm("DEVICE");
+	$ = toNumber(sysparm("EA"));
 	noinput;
 
 
 
-PROC AA15
+PROC AA7
 preproc
-	//Look up value in sample file
-	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA3_1 = AA3_1; SA4 = AA4; SA8 = AA5;
-	SDEVICE_ID = DEVICE_ID;
-	numeric ok = loadcase(SAMPLING_DICT, SDEVICE_ID, SA1, SA2, SA3, SA3_1, SA4, SA8);
-	AA15 = SA9;
-	ADDRESS_LOCATION = SA5;
+	$ = toNumber(sysparm("URBANRURAL"));
 	noinput;
-
-
-
-PROC ADDRESS_LOCATION
-preproc
-	noinput;
-
-
 
 
 PROC AA8
 preproc
-	AA8 = toNumber(sysparm("URBANRURAL"));
+	AA8 = toNumber(sysparm("SERIAL"));
 	noinput;
 
 
-PROC AA09
+PROC AALOGIN
 preproc
-    skip to AA11;
-	
-	
+	$ = sysparm("LOGIN");
+	noinput;
+
+
+
+PROC AA14
+preproc
 	//Look up value in sample file
-	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA3_1 = AA3_1; SA4 = AA4; SA8 = AA5;
-	SDEVICE_ID = DEVICE_ID;
-	numeric ok = loadcase(SAMPLING_DICT, SDEVICE_ID, SA1, SA2, SA3, SA3_1, SA4, SA8);
-			
-	if $ = 1 then
-		gps(open); // on Android
-		//gps(open,3,4800); // on a laptop or Windows tablet; COM3, 4800baud
-
-		if gps(read,60) then // a successful attempt at a read, for up to 60 seconds
-		
-			if ok then
-				gpsN = gps(latitude);		//north
-				gpsE = gps(longitude);		//east
-				numeric dist = gps(distance, gpsN, SA6, gpsE, SA7);
-				string what = prompt(maketext(tr(105), dist), numeric);
-				if what = "2" then
-					//Too far from the coordinates of the listing.. Quitting..
-					stop(1);
-				endif;
-			else
-			   errmsg(tr(106));
-		  	endif;
-
-		endif;
-
-		gps(close);
-	else		//Just import from sample file
-		gpsN = SA6;
-		gpsE = SA7;
-	endif;
+	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
+	SLOGIN = AALOGIN;
+	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
+	$ = SA10;
 	
+	//Might as well set the other fields from the sample file too..
+	ADDRESS_LOCATION = SA11;
+	AA7A = SA7A;
+	AA7B = SA7B;
+	skip to AA9;
 
-
-
+	
 PROC AA9
+	
 preproc
-	$ = gpsN;
+	//errmsg("Checking coordinate just in case: %d", visualValue(AA7A));
+	$ = edit("99-99-99",sysdate("YYDDMM"));
 	noinput;
-	
-	
-	
+
+
+
+
 PROC AA10
 preproc
-	$ = gpsE;
-	noinput;
-	
-PROC AA11
-	
-preproc
-		$ = edit("99-99-99",sysdate("YYDDMM"));
-		skip to AA12;
-
-
-
-PROC AA12
-preproc
-	currMember = AA15;
+	currMember = AA14;
 	
 postproc
 	if $ = 1 then //interview OK
-		skip to AA16;	
+		skip to AA15;	
 	elseif $ = 2 then
-		skip to AA13A;
+		skip to AA11;
 	elseif $ = 3 then
 		//Normal flow - why refuse
 	else	//House is vacant. Going to end
@@ -290,19 +237,14 @@ postproc
 
 
 
-PROC AA12_1
+PROC AA10A
 	skip to AA20;
 
 
-PROC AA14
-	skip to AA20;
-
-
-
-PROC AA16
+PROC AA15
 preproc
 	if not ispartial() then
-		currMember = AA15;
+		currMember = AA14;	//To set CAPI question
 	endif;
 	
 	
@@ -313,15 +255,10 @@ postproc
 
 
 
-PROC AA18
+PROC AA17
 	if $ = 1 then
 		skip to HHNAMES;
 	endif;
-
-
-
-PROC AA19
-	skip to HHNAMES;
 
 
 
@@ -329,9 +266,9 @@ PROC AB1
 preproc
 	//Might as well fill in HoH and Main respondent
 	if curocc() = 1 then
-		$ = AA15;
+		$ = AA14;
 	elseif curocc() = 2 then
-		$ = AA19;
+		$ = AA18;
 	endif;
 	
 	
@@ -2175,6 +2112,8 @@ onfocus
 		setValueset($, wcode, wLabel);
 	endif;
 
+
+
 PROC WA_0
 preproc
 //onfocus
@@ -2183,16 +2122,24 @@ preproc
 //	errmsg("Wa1: %s ", lstrip(socAndSec));
 	skip to WA1;
 	
+
+
 PROC WA1
 preproc
 // if WA_0 > 7 then
 //  errmsg("%s",WA_TYPE);
 // endif;
+
+
+
 PROC WA2
 preproc
 // if WA_0 > 7 then
 //  errmsg("%s",WA_TYPE);
 // endif;
+
+
+
 PROC AA20
 	
 preproc

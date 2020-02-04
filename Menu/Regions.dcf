@@ -15,37 +15,44 @@ Name=REGIONS_LEVEL
 [IdItems]
 
 [Item]
-Label=REGION_CODE
+Label=region Code
 Name=REGION_CODE
 Start=1
-Len=3
+Len=2
 ZeroFill=Yes
 
 [Item]
-Label=DISTRICT_CODE
+Label=District code
 Name=DISTRICT_CODE
-Start=4
-Len=3
+Start=3
+Len=2
 ZeroFill=Yes
 
 [Item]
-Label=SUBDISTRICT_CODE
+Label=Subdistrict code
 Name=SUBDISTRICT_CODE
-Start=7
+Start=5
 Len=3
 ZeroFill=Yes
 
 [Item]
-Label=VILLAGE_CODE
+Label=Locality code
+Name=LOCALITY_CODE
+Start=8
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Village code
 Name=VILLAGE_CODE
 Start=10
-Len=3
+Len=2
 ZeroFill=Yes
 
 [Item]
-Label=EA_CODE
+Label=Enumeration area code
 Name=EA_CODE
-Start=13
+Start=12
 Len=3
 ZeroFill=Yes
 
@@ -53,46 +60,53 @@ ZeroFill=Yes
 Label=REGIONS Record
 Name=REGIONS_REC
 RecordTypeValue=''
-RecordLen=67
+RecordLen=195
 
 [Item]
 Label=REGION_NAME
 Name=REGION_NAME
-Start=16
-Len=8
+Start=15
+Len=30
 DataType=Alpha
 
 [Item]
 Label=DISTRICT_NAME
 Name=DISTRICT_NAME
-Start=24
-Len=14
+Start=45
+Len=30
 DataType=Alpha
 
 [Item]
 Label=SUBDISTRICT_NAME
 Name=SUBDISTRICT_NAME
-Start=38
-Len=10
+Start=75
+Len=30
+DataType=Alpha
+
+[Item]
+Label=LOCALITY_NAME
+Name=LOCALITY_NAME
+Start=105
+Len=30
 DataType=Alpha
 
 [Item]
 Label=VILLAGE_NAME
 Name=VILLAGE_NAME
-Start=48
-Len=10
+Start=135
+Len=30
 DataType=Alpha
 
 [Item]
 Label=EA_NAME
 Name=EA_NAME
-Start=58
-Len=9
+Start=165
+Len=30
 DataType=Alpha
 
 [Item]
 Label=URBAN_RURAL
 Name=URBAN_RURAL
-Start=67
+Start=195
 Len=1
 ZeroFill=Yes

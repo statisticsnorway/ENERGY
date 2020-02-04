@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.2
+Version=CSPro 7.3
 Label=Listing
 Name=LISTING_DICT
 RecordTypeStart=0
@@ -20,46 +20,52 @@ Name=LISTING_QUEST
 [IdItems]
 
 [Item]
-Label=Device id|ID de dispositivo
-Name=LDEVICE_ID
+Label=Login|ID de dispositivo
+Name=LLOGIN
 Start=1
 Len=25
 DataType=Alpha
 
 [Item]
-Label=State code|Código provincia
+Label=Region|Código provincia
 Name=LL1
 Start=26
-Len=3
+Len=2
 
 [Item]
-Label=County code|Código do distrito
+Label=District|Código do distrito
 Name=LL2
-Start=29
-Len=3
+Start=28
+Len=2
 
 [Item]
-Label=Sub county Code|Código do posto administrativo
+Label=Subdistrict|Código do posto administrativo
 Name=LL3
-Start=32
+Start=30
 Len=3
 
 [Item]
-Label=Village Code|Código da Localidade
-Name=LL3_1
+Label=Locality
+Name=LL4
+Start=33
+Len=2
+
+[Item]
+Label=Village|Código da Localidade
+Name=LL5
 Start=35
-Len=3
+Len=2
 
 [Item]
 Label=Enumeration Area|Área de enumeração
-Name=LL4
-Start=38
+Name=LL6
+Start=37
 Len=3
 
 [Item]
 Label=Serial number|Número de série
 Name=LL8
-Start=41
+Start=40
 Len=3
 
 [Record]
@@ -69,60 +75,66 @@ RecordTypeValue=''
 RecordLen=127
 
 [Item]
-Label=Address/location|Endereço / localização
-Name=LL5
-Start=44
-Len=30
-DataType=Alpha
+Label=Urban/rural
+Name=LLUR
+Start=43
+Len=1
 
 [Item]
 Label=Import or record GPS coordinates|Importar ou gravar coordenadas de GPS
-Name=LL6A
-Start=74
+Name=LL7
+Start=44
 Len=1
 
 [ValueSet]
 Label=Import or record GPS coordinates|Importar ou gravar coordenadas de GPS
-Name=LL6A_VS1
+Name=LL7_VS1
 Value=1;Record GPS coordinates|Grave coordenadas GPS|Soma vipimo vya GPS
 Value=2;Import GPS from previous questionnaire|Importar GPS do questionário anterior|Chukua vipimo vya GPS kutoka dodoso lililotangulia
 
 [Item]
 Label=North coordinate (Latitude)|Coordenada Norte (Latitude)
-Name=LL6
-Start=75
+Name=LL7A
+Start=45
 Len=10
 Decimal=6
 DecimalChar=Yes
 
 [Item]
 Label=East coordinate (Longitude)|Coordenada Leste (Longitude)
-Name=LL7
-Start=85
+Name=LL7B
+Start=55
 Len=11
 Decimal=6
 DecimalChar=Yes
 
 [Item]
-Label=Name of head of household|Nome do chefe da família
-Name=LL9
-Start=96
-Len=30
-DataType=Alpha
-
-[Item]
 Label=Presence of household|Presença de agregado familiar
-Name=LL11
-Start=126
+Name=LL9
+Start=66
 Len=1
 
 [ValueSet]
 Label=Presence of household|Presença de agregado familiar
-Name=LL11_VS1
+Name=LL9_VS1
 Value=1;Present|Presente|Kaya ipo kwa sasa
 Value=2;Temporary away|Temporáriamente fora|Kaya haipo kwa muda
-Value=3;Seasonal awa|sazonalmente fora|Kaya haipo kwa kipindi kirefu
+Value=3;Seasonal away|sazonalmente fora|Kaya haipo kwa kipindi kirefu
 Value=4;Vacated|desocupado|Kaya imehama
+
+[Item]
+Label=Name of head of household|Nome do chefe da família
+Name=LL10
+Start=67
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Address/location|Endereço / localização
+Name=LL11
+Start=97
+Len=30
+DataType=Alpha
 
 [Item]
 Label=source of power|fonte de energia
@@ -133,6 +145,7 @@ Len=1
 [ValueSet]
 Label=source of power|fonte de energia
 Name=LL12_VS1
-Value=1;Connected to power grid|Conectado à rede eléctrica|Imeunganishwa kwenye grid ya taifa
-Value=2;solar energy supply/device|fornecimento de energia solar / dispositivo|Umeme jua/Kifaa cha umeme jua
-Value=3;None of the above|Nenhuma das 2 acima|Hakuna jibu
+Value=1;Power grid for 5 years or more
+Value=2;Power grid for less than 5 years|Conectado à rede eléctrica|Imeunganishwa kwenye grid ya taifa
+Value=3;No grid, but solar cells with battery or solar home system|fornecimento de energia solar / dispositivo|Umeme jua/Kifaa cha umeme jua
+Value=4;None of the above|Nenhuma das 2 acima|Hakuna jibu

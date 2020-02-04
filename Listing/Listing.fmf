@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.2
+Version=CSPro 7.3
 Name=LISTING_FF
 Label=Listing
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -13,22 +13,24 @@ File=.\Listing.dcf
 Name=FORM000
 Label=Listing questionnaire
 Level=1
-Size=384,530
+Size=413,569
   
-Item=LDEVICE_ID
+Item=LLOGIN
 Item=LL1
 Item=LL2
 Item=LL3
-Item=LL3_1
-Item=LL4
-Item=LL8
 Item=LL5
-Item=LL6A
 Item=LL6
-Item=LL7
-Item=LL9
+Item=LL8
 Item=LL11
+Item=LL7
+Item=LL7A
+Item=LL7B
+Item=LL10
+Item=LL9
 Item=LL12
+Item=LL4
+Item=LLUR
   
 [EndForm]
   
@@ -45,42 +47,42 @@ LogicControl=No
 Max=1
   
 [Field]
-Name=LDEVICE_ID
+Name=LLOGIN
 Position=137,14,347,34
-Item=LDEVICE_ID,LISTING_DICT
+Item=LLOGIN,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=40,17,115,33
-Text=LDEVICE_ID
+Position=60,19,109,35
+Text=LLOGIN
  
   
 [Field]
 Name=LL1
-Position=137,44,180,64
+Position=137,44,166,64
 Item=LL1,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=40,47,63,63
+Position=60,49,83,65
 Text=LL1
  
   
 [Field]
 Name=LL2
-Position=137,74,180,94
+Position=137,74,166,94
 Item=LL2,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=40,77,63,93
+Position=60,79,83,95
 Text=LL2
  
   
@@ -93,135 +95,161 @@ FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=40,107,63,123
+Position=60,109,83,125
 Text=LL3
  
   
 [Field]
-Name=LL3_1
-Position=137,134,180,154
-Item=LL3_1,LISTING_DICT
-Protected=Yes
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=40,137,77,153
-Text=LL3_1
- 
-  
-[Field]
 Name=LL4
-Position=137,164,180,184
+Position=137,133,166,153
 Item=LL4,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=40,167,63,183
+Position=60,138,83,154
 Text=LL4
  
   
 [Field]
+Name=LL5
+Position=137,180,166,200
+Item=LL5,LISTING_DICT
+Protected=Yes
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=60,185,83,201
+Text=LL5
+ 
+  
+[Field]
+Name=LL6
+Position=137,210,180,230
+Item=LL6,LISTING_DICT
+Protected=Yes
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=60,215,83,231
+Text=LL6
+ 
+  
+[Field]
+Name=LLUR
+Position=142,241,157,261
+Item=LLUR,LISTING_DICT
+Protected=Yes
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=65,247,99,263
+Text=LLUR
+ 
+  
+[Field]
 Name=LL8
-Position=137,194,180,214
+Position=137,276,180,296
 Item=LL8,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=40,197,63,213
+Position=60,281,83,297
 Text=LL8
  
   
 [Field]
-Name=LL6A
-Position=104,276,119,296
-Item=LL6A,LISTING_DICT
+Name=LL7
+Position=137,315,152,335
+Item=LL7,LISTING_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=50,279,82,295
-Text=LL6A
- 
-  
-[Field]
-Name=LL6
-Position=104,306,245,326
-Item=LL6,LISTING_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=50,309,73,325
-Text=LL6
- 
-  
-[Field]
-Name=LL7
-Position=104,336,259,356
-Item=LL7,LISTING_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=50,339,73,355
+Position=60,315,83,331
 Text=LL7
  
   
 [Field]
-Name=LL5
-Position=109,369,359,389
-Item=LL5,LISTING_DICT
+Name=LL7A
+Position=137,345,278,365
+Item=LL7A,LISTING_DICT
 FieldLabelType=DictionaryName
-UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=55,372,78,388
-Text=LL5
+Position=60,345,92,361
+Text=LL7A
  
   
 [Field]
-Name=LL11
-Position=108,405,123,425
-Item=LL11,LISTING_DICT
+Name=LL7B
+Position=137,375,292,395
+Item=LL7B,LISTING_DICT
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=60,375,92,391
+Text=LL7B
+ 
+  
+[Field]
+Name=LL9
+Position=139,406,154,426
+Item=LL9,LISTING_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=54,408,84,424
-Text=LL11
+Position=62,406,85,422
+Text=LL9
  
   
 [Field]
-Name=LL9
-Position=108,439,358,459
-Item=LL9,LISTING_DICT
+Name=LL10
+Position=138,445,388,465
+Item=LL10,LISTING_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=54,442,77,458
-Text=LL9
+Position=61,445,91,461
+Text=LL10
+ 
+  
+[Field]
+Name=LL11
+Position=134,485,384,505
+Item=LL11,LISTING_DICT
+FieldLabelType=DictionaryName
+UseUnicodeTextBox=Yes
+Form=1
+  
+[Text]
+Position=57,485,87,501
+Text=LL11
  
   
 [Field]
 Name=LL12
-Position=109,485,124,505
+Position=137,524,152,544
 Item=LL12,LISTING_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=55,488,85,504
+Position=60,524,90,540
 Text=LL12
  
 [EndGroup]

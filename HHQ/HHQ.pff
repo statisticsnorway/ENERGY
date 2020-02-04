@@ -1,11 +1,33 @@
 ﻿[Run Information]
 Version=CSPro 7.3
 AppType=Entry
+Description=Household Questionnaire
+
+[DataEntryInit]
+Interactive=Ask
+StartMode=Add
+AutoAdd=No
+FullScreen=Yes
+ShowInApplicationListing=Never
 
 [Files]
-Application=.\HHQ.ent
-InputData=..\Data\hhq2.csdb
-Paradata=.\HHQ.cslog
+Application=./HHQ.ent
+InputData=../Data/HHQ.csdb|CSPRODB
+Paradata=../Data/HHQ_a0661000b083.cslog
 
 [ExternalFiles]
-SAMPLING_DICT=..\Data\sample.csdb
+SAMPLING_DICT=..\Data\sample.csdb|CSPRODB
+
+[Parameters]
+LOGIN=per            
+REGION= 9
+DISTRICT= 1
+SUBDISTRICT=  4
+LOCALITY= 4
+VILLAGE= 2
+EA=  9
+URBANRURAL=1
+SERIAL=  1
+Language=EN
+OnExit=..\Menu\Menu.pff
+

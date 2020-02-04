@@ -92,13 +92,13 @@ PROC GLOBAL
 		if syncconnect(CSWeb, "http://197.249.5.210:8080/energia/api") = 1 then
 		//if syncconnect(Dropbox) then	//Synching to dropbox for debugging
 
-			string pfileName = "HHQ_" + getDeviceId() +  ".cslog";
+			string pfileName = "HHQ_" + M_LOGIN +  ".cslog";
 			if fileexist("/ENERGY/Data/" + pFileName) then
 				errmsg("writing HHQ");
 				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
 			endif;
 			
-			pfileName = "Listing_" + getDeviceId() +  ".cslog";
+			pfileName = "Listing_" + M_LOGIN +  ".cslog";
 			if fileexist("/ENERGY/Data/" + pFileName) then
 				errmsg("Writing listing");
 				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
@@ -161,33 +161,36 @@ PROC GLOBAL
 		numeric currCount = 0;
 		numeric idx = 0;
 		//errmsg("start: %d, step: %d, count: %d", startPoint, step, theCount);
-		forcase LISTING_DICT where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE) 
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE)
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 and LL12 = connType do
+		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL4 = visualValue(M_EA) 
+							and LL9 = 1 and LL12 = connType do
 			inc(idx);
 			if idx < startPoint and (idx <> startPoint + currstep) then
 				//not selected	
 			else
-				SDEVICE_ID = LDEVICE_ID;
+				S_LISTING_LOGIN = LLOGIN;
 				SA1 = LL1;
 				SA2 = LL2;
 				SA3 = LL3;
-				SA3_1 = LL3_1;
 				SA4 = LL4;
 				SA5 = LL5;
-				SA6 = LL6;
-				SA6A = LL6A;
+				SA6 = LL6;				
 				SA7 = LL7;
+				SA7A = LL7A;
+				SA7B = LL7B;
 				SA8 = LL8;
 				SA9 = LL9;
-				SA11 = LL12;
+				SA10 = SA10;
+				SA11 = LL11;
 				SA12 = LL12;
+				SUR = LLUR;
 				
 				//Need to keep track of how many HH is assigned to each enumerator. Ie find the index of the current
 				//tablet in the array
 				numeric j = 1;
 				while j < 5 do
-					if tabletCount(j,1) = tstrip(LDEVICE_ID) then
+					if tabletCount(j,1) = tstrip(LLOGIN) then
 						break;
 					endif;
 					inc(j);
@@ -204,7 +207,7 @@ PROC GLOBAL
 					//OK. This enumerator needs more HH to interview
 					inc(currHHNum);
 					tabletCount(j,2) = edit("9", currHHNum);
-					S_INTERVIEWER_DEVICEID = LDEVICE_ID;
+					SLOGIN = LLOGIN;
 					writecase(SAMPLING_DICT);
 				else
 					//Need to assign the HH to another one. Try one by one until I find somewhere
@@ -221,7 +224,7 @@ PROC GLOBAL
 						if  currHHNum < numHHPerInt then
 							inc(currHHNum);
 							tabletCount(j,2) = edit("9", currHHNum);
-							S_INTERVIEWER_DEVICEID = tstrip(tabletCount(j,1));
+							SLOGIN = tstrip(tabletCount(j,1));
 							writecase(SAMPLING_DICT);
 							found = 1;
 						endif;
@@ -243,30 +246,32 @@ PROC GLOBAL
 
 	//If the fewer than 20/24 units is listed, we need to sample them all
 	function sampleAll()
-		
 		if fileexist("../Data/Sample.csdb") then
 			setFile(SAMPLING_DICT, "../Data/Sample.csdb");
 		else
 			setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
 		endif;
 		
-		forcase LISTING_DICT where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE) 
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE) 
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 do
-			SDEVICE_ID = LDEVICE_ID;
+		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 do
+			SLOGIN = LLOGIN;
 			SA1 = LL1;
 			SA2 = LL2;
 			SA3 = LL3;
-			SA3_1 = LL3_1;
 			SA4 = LL4;
 			SA5 = LL5;
 			SA6 = LL6;
-			SA6A = LL6A;
 			SA7 = LL7;
+			SA7A = LL7A;
+			SA7B = LL7B;
 			SA8 = LL8;
 			SA9 = LL9;
-			SA11 = LL12;
+			SA10 = LL10;
+			SA11 = LL11;
 			SA12 = LL12;
+			SUR = LLUR;
+			S_LISTING_LOGIN = LLOGIN;
 			numeric wc = writecase(SAMPLING_DICT);
 		endfor;
 		
@@ -278,19 +283,19 @@ PROC GLOBAL
 	function numeric setTabletNames()
 		numeric ctr = 1, numOfInterviewers = 1;
 		
-		forcase LISTING_DICT where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE) 
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE) 
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 do
+		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 do
 			if ctr = 1 then
-				tabletCount(1,1) = tstrip(LDEVICE_ID);
+				tabletCount(1,1) = tstrip(LLOGIN);
 			else
 				numeric j = 2;
 				while j < 5 do
-					if tabletCount(j-1,1) = tStrip(LDEVICE_ID) then
+					if tabletCount(j-1,1) = tStrip(LLOGIN) then
 						break;
 					else
 						if tabletCount(j,1) = "" then
-							tabletCount(j, 1) = tStrip(LDEVICE_ID);
+							tabletCount(j, 1) = tStrip(LLOGIN);
 							inc(numOfInterviewers);
 							//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LDEVICE_ID))
 						endif;
@@ -328,26 +333,26 @@ PROC GLOBAL
 		
 		//Analysis of the listed cases
 		numeric tot = countCases(LISTING_DICT 
-							where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE) 
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE) 
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1);
+							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1);
 		
 		if tot <= sampleSize then
 			sampleall(); 
 		endif;
 		
 		numeric totSolar = countCases(LISTING_DICT 
-							where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE) 
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE) 
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 and LL12 = 2);
+							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 = 3);
 		numeric totGrid = countCases(LISTING_DICT 
-							where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE)
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE)
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 and LL12 = 1);
+							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 in 1:2);
 		numeric totNone = countCases(LISTING_DICT 
-							where LL1 = visualValue(M_STATE_NUMBER) and LL2 = visualValue(M_COUNTY_CODE)
-							and LL3 = visualValue(M_SUB_COUNTY_CODE) and LL3_1 = visualValue(M_VILLAGE_CODE)
-							and LL4 = visualValue(M_ENUMERATION_AREA) and LL11 = 1 and LL12 = 3);
+							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
+							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 = 4);
 							
 		numeric solarCount = sampleSize * totSolar/tot;	//Number of HH with solar that the sample should contain
 		numeric gridCount = sampleSize * totGrid/tot;
@@ -371,7 +376,7 @@ PROC GLOBAL
 		//errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
 		
 		if solarCount > 0 then
-			writeSample(2, solarCOunt, totSolar, sampleSize);
+			writeSample(2, solarCount, totSolar, sampleSize);
 		endif;
 		if gridCount > 0 then
 			writeSample(1, gridCount, totGrid, sampleSize);
@@ -422,18 +427,18 @@ PROC GLOBAL
 			numeric found = 0;
 			
 			forcase HHQ_DICT do
-				if tstrip(AA15) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
-						and AA1 = visualValue(M_STATE_NUMBER) and AA2 = visualValue(M_COUNTY_CODE)
-						and AA3 = visualValue(M_SUB_COUNTY_CODE) and AA3_1 = visualValue(M_VILLAGE_CODE)
-						and AA4 = visualvalue(M_ENUMERATION_AREA) and AA5 = serialNo 						
-						and tstrip(HHQ_DICT.DEVICE_ID) = tstrip(getDeviceId()) then
+				if tstrip(AA14) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
+						and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
+						and AA3 = visualValue(M_SUBDISTRICT) and AA4 = visualValue(M_LOCALITY) and AA5 = visualValue(M_VILLAGE)
+						and AA6 = visualvalue(M_EA) and AA8 = serialNo 						
+						and tstrip(AALOGIN) = tstrip(M_LOGIN) then
 					found = 1;
 					break;
 				endif;
 			enddo;
 			if found = 1 then
-				string idString = concat(AA15, ADDRESS_LOCATION, edit("ZZZ", AA1), edit("ZZZ", AA2), edit("ZZZ", AA3), 
-									edit("ZZZ", AA3_1), edit("ZZZ", AA4), edit("ZZZ", AA5), HHQ_DICT.DEVICE_ID);
+				string idString = concat(AA14, ADDRESS_LOCATION, edit("ZZ", AA1), edit("ZZ", AA2), edit("ZZZ", AA3), 
+									edit("ZZ", AA4), edit("ZZ", AA5), edit("ZZZ", AA6), AALOGIN);
 				pffContent = pffContent + "StartMode=Modify;" + idString + "\n";
 			else
 				pffContent = pffContent + "StartMode=Add\n";
@@ -442,19 +447,20 @@ PROC GLOBAL
 			//Same for Community: Is it partially saved or not?
 			numeric found = 0;
 			forcase COMMUNITY_DICT do
-				if tstrip(C_DEVICE_ID) = tstrip(getDeviceId()) 
-						and C_A1 = visualValue(M_STATE_NUMBER)
-						and C_A2 = visualValue(M_COUNTY_CODE) 
-						and C_A3 = visualValue(M_SUB_COUNTY_CODE) 
-						and C_A3_1 = visualValue(M_VILLAGE_CODE) 
-						and C_A4 = visualvalue(M_ENUMERATION_AREA) then
+				if tstrip(C_LOGIN) = tstrip(M_LOGIN) 
+						and C_A1 = visualValue(M_REGION)
+						and C_A2 = visualValue(M_DISTRICT) 
+						and C_A3 = visualValue(M_SUBDISTRICT) 
+						and C_A4 = visualValue(M_LOCALITY)
+						and C_A5 = visualValue(M_VILLAGE) 
+						and C_A6 = visualvalue(M_EA) then
 					found = 1;
 					break;
 				endif;
 			enddo;
 			if found = 1 then
-				string idString = concat(C_DEVICE_ID, edit("ZZZ", C_A1), edit("ZZZ", C_A2), edit("ZZZ", C_A3), 
-									edit("ZZZ", C_A3_1), edit("ZZZ", C_A4));
+				string idString = concat(C_LOGIN, edit("ZZ", C_A1), edit("ZZ", C_A2), edit("ZZZ", C_A3), 
+									edit("ZZ", C_A4), edit("ZZ", C_A5), edit("ZZZ", C_A6));
 				pffContent = pffContent + "StartMode=Modify;" + idString + "\n";
 			else
 				pffContent = pffContent + "StartMode=Add\n";
@@ -498,12 +504,13 @@ PROC GLOBAL
 		endif;
 		
 		pffContent = pffContent + "[Parameters]\n";
-		pffContent = pffContent + "DEVICE=" + getDeviceId() + "\n";
-		pffContent = pffContent + "STATE=" + edit("ZZZ", visualvalue(M_STATE_NUMBER)) + "\n";
-		pffContent = pffContent + "COUNTY=" + edit("ZZZ", visualvalue(M_COUNTY_CODE)) + "\n";
-		pffContent = pffContent + "SUBCOUNTY=" + edit("ZZZ", visualvalue(M_SUB_COUNTY_CODE)) + "\n";
-		pffContent = pffContent + "VILLAGE=" + edit("ZZZ", visualValue(M_VILLAGE_CODE)) + "\n";
-		pffContent = pffContent + "EA=" + edit("ZZZ", visualvalue(M_ENUMERATION_AREA)) + "\n";
+		pffContent = pffContent + "LOGIN=" + M_LOGIN + "\n";
+		pffContent = pffContent + "REGION=" + edit("ZZ", visualvalue(M_REGION)) + "\n";
+		pffContent = pffContent + "DISTRICT=" + edit("ZZ", visualvalue(M_DISTRICT)) + "\n";
+		pffContent = pffContent + "SUBDISTRICT=" + edit("ZZZ", visualvalue(M_SUBDISTRICT)) + "\n";
+		pffContent = pffContent + "LOCALITY=" + edit("ZZ", visualvalue(M_SUBDISTRICT)) + "\n";
+		pffContent = pffContent + "VILLAGE=" + edit("ZZ", visualValue(M_VILLAGE)) + "\n";
+		pffContent = pffContent + "EA=" + edit("ZZZ", visualvalue(M_EA)) + "\n";
 		pffContent = pffContent + "URBANRURAL=" + edit("Z", visualvalue(M_URBAN_RURAL)) + "\n";
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
@@ -546,63 +553,67 @@ postproc
 
 
 PROC MENU_QUEST_FORM
-preproc
-	//errmsg("%s", getDeviceId());
-
-	//Asking for login and pw
-	loggedIn = sysparm("LOGGEDIN");
-	if loggedIn <> "S" and loggedIn <> "I" then
-		loggedIn = "N"; //Just in case it is missing or "NOT" or something else unexpected.. :)
-		
-		while loggedIn = "N" do
-			LOGIN = prompt(tr(9));
-			string pw = prompt(tr(10), password);
-			numeric load = loadcase(USERS_DICT, LOGIN);
-			if tStrip(pw) = tStrip(password) then
-				//ok. Right password
-				if  tolower(tstrip(ROLE)) = "supervisor" then 
-					loggedIn = "S";					
-				else
-					//Default flow
-					loggedIn = "I";					
-				endif;
-				break;
-			else 
-				errmsg(tr(17)); 
-			endif;
-		enddo;
-	endif;
-	
-	//Defaulting the geography to be same as last time. Asking about it after listing questionnaire
-	//has been chosen..
-	if toNumber(sysparm("STATE")) <> DEFAULT and toNumber(sysparm("STATE")) <> NOTAPPL then
-		M_STATE_NUMBER = toNumber(sysparm("STATE"));
-		M_COUNTY_CODE = toNumber(sysparm("COUNTY"));
-		M_SUB_COUNTY_CODE = toNumber(sysparm("SUBCOUNTY"));
-		M_VILLAGE_CODE = toNumber(sysparm("VILLAGE"));
-		M_ENUMERATION_AREA = toNumber(sysparm("EA"));
-		//M_URBAN_RURAL = toNumber(sysparm("URBANRURAL"));
-		M_URBAN_RURAL  = 1; //JUST FOR DATA TO PER! FIX THIS LATER!
-		M_HOUSEHOLD = toNumber(sysparm("SERIAL"));
-	endif;
-	//errmsg("%d", visualValue(M_HOUSEHOLD));
-	//errmsg("About to check role");
-	if loggedIn = "S" then
-		skip to M_SUPERMENU;
-	else
-		if visualValue(M_HOUSEHOLD) <> NOTAPPL  and visualValue(M_HOUSEHOLD) <> DEFAULT then
-			//coming "back" from interviewing a HH, hence assuming we want to go to the next HH
-			M_HOUSEHOLD = NOTAPPL;
-			skip to M_HOUSEHOLD;
-		else
-			M_HOUSEHOLD = NOTAPPL;
-			//Default flow;
-		endif;
-	endif;
-	
 
 postproc
 	writepff("Menu", "Menu", "", NOTAPPL, "N");	
+	
+
+
+PROC M_LOGIN
+preproc
+	//Defaulting the geography to be same as last time. Asking about it after listing questionnaire
+	//has been chosen..
+	if toNumber(sysparm("REGION")) <> DEFAULT and toNumber(sysparm("REGION")) <> NOTAPPL then
+		M_REGION = toNumber(sysparm("REGION"));
+		M_DISTRICT = toNumber(sysparm("DISTRICT"));
+		M_SUBDISTRICT = toNumber(sysparm("SUBDISTRICT"));
+		M_LOCALITY = toNumber(sysparm("LOCALITY"));
+		M_VILLAGE = toNumber(sysparm("VILLAGE"));
+		M_EA = toNumber(sysparm("EA"));
+		M_URBAN_RURAL = toNumber(sysparm("URBANRURAL"));
+		if sysparm("SERIAL") <> "NOT" then
+			M_HOUSEHOLD = toNumber(sysparm("SERIAL"));
+		endif;
+	endif;
+	
+	
+	//Asking for login and pw
+	loggedIn = sysparm("LOGGEDIN");
+	if loggedIn = "S" or loggedIn = "I" then
+		M_LOGIN = sysparm("LOGIN");
+		if loggedIn = "S" then
+			skip to M_SUPERMENU;
+		else
+			if visualValue(M_HOUSEHOLD) <> NOTAPPL  and visualValue(M_HOUSEHOLD) <> DEFAULT then
+				//coming "back" from interviewing a HH, hence assuming we want to go to the next HH
+				M_HOUSEHOLD = NOTAPPL;
+				skip to M_HOUSEHOLD;
+			else
+				M_HOUSEHOLD = NOTAPPL;
+				Skip to M_MENU;
+			endif;
+		endif;
+	endif;
+	
+	
+postproc
+	loggedIn = "N";	//Just in case it's missing or something
+	LOGIN = $;
+	string pw = prompt(tr(10), password);
+	numeric load = loadcase(USERS_DICT, LOGIN);
+	if tStrip(pw) = tStrip(PASSWORD) then
+		//ok. Right password
+		if  tolower(tstrip(ROLE)) = "supervisor" then 
+			loggedIn = "S";					
+			skip to M_SUPERMENU;
+		else
+			loggedIn = "I";					
+		endif;
+	else 
+		errmsg(tr(17)); 
+		reenter;
+	endif;
+	
 	
 PROC M_MENU
 preproc
@@ -611,28 +622,27 @@ preproc
 	
 postproc
 	//NB: For all of the questionnaires, the actual start-up of the questionnaires happens
-	//at M_ENUMERATION_AREA field..
+	//at M_EA field..
 	
 	if $ = 1 then	//Listing form
-		
-		if visualValue(M_STATE_NUMBER) = DEFAULT or visualValue(M_STATE_NUMBER) = NOTAPPL then
+		if visualValue(M_REGION) = DEFAULT or visualValue(M_REGION) = NOTAPPL then
 			newEA = "1";
 		else
 			newEA = prompt(maketext(tr(5)),numeric);
 		endif;
 		
-		if newEA = "2" and (visualValue(M_STATE_NUMBER) <> DEFAULT and visualValue(M_STATE_NUMBER) <> NOTAPPL) then	//Not new EA
+		if newEA = "2" and (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then	//Not new EA
 			//Not a new EA 
-			skip to M_ENUMERATION_AREA;
+			skip to M_EA;
 		else
-			skip to M_STATE_NUMBER;
+			skip to M_REGION;
 		endif;
 		
 	elseif $ = 2 then	////HHQ questionnaire. 
 		skip to M_HOUSEHOLD
 		
 	//elseif  $ = 3 then 	 //Community questionnaire. Moved to supervisor menu
-		//skip to M_STATE_NUMBER;
+		//skip to M_REGION;
 		
 	elseif $ = 4 then 		//Sync listingdata. 
 		numeric ok = syncSendListing();
@@ -675,12 +685,12 @@ postproc
 	
 PROC M_SUPERMENU
 preproc
-	if visualValue(M_STATE_NUMBER) = NOTAPPL then
-		skip to M_STATE_NUMBER;
+	if visualValue(M_REGION) = NOTAPPL then
+		skip to M_REGION;
 	else
 		newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
 		if newEA = "1" then
-			skip to M_STATE_NUMBER;
+			skip to M_REGION;
 		endif;
 	endif;
 	$ = NOTAPPL;
@@ -711,56 +721,56 @@ postproc
 		
 		
 		
-PROC M_STATE_NUMBER
+PROC M_REGION
 preproc
 	array vsetCodes(vsetMax);
 	array string vsetLabels(vsetMax);
-	numeric currentState = NOTAPPL, idx = 0;
+	numeric currentRegion = NOTAPPL, idx = 0;
 	
 	forcase REGIONS_DICT do
-		if currentState <> NOTAPPL and currentState = REGION_CODE then
+		if currentRegion <> NOTAPPL and currentRegion = REGION_CODE then
 			next;
 		else
 			vsetCodes(idx) = REGION_CODE;
 			vsetLabels(idx) = REGION_NAME;
-			currentState = REGION_CODE;			
+			currentRegion = REGION_CODE;			
 			inc(idx);
 		endif;
 	enddo;
 	
 	vsetCodes(idx) = NOTAPPL;
-	setValueset(M_STATE_NUMBER, vsetCodes, vsetLabels);
+	setValueset(M_REGION, vsetCodes, vsetLabels);
 
 	
 		
-PROC M_COUNTY_CODE
+PROC M_DISTRICT
 preproc
 	array vsetCodes(vsetMax);
 	array string vsetLabels(vsetMax);
-	numeric currentCounty = NOTAPPL, idx = 0;
+	numeric currentDistrict = NOTAPPL, idx = 0;
 	
-	forcase REGIONS_DICT where REGION_CODE = M_STATE_NUMBER do
-		if currentCounty <> NOTAPPL and currentCounty = DISTRICT_CODE then
+	forcase REGIONS_DICT where REGION_CODE = M_REGION do
+		if currentDistrict <> NOTAPPL and currentDistrict = DISTRICT_CODE then
 			next;
 		else
 			vsetCodes(idx) = DISTRICT_CODE;
 			vsetLabels(idx) = DISTRICT_NAME;
-			currentCounty = DISTRICT_CODE;			
+			currentDistrict = DISTRICT_CODE;			
 			inc(idx);
 		endif;
 	enddo;
 	
 	vsetCodes(idx) = NOTAPPL;
-	setValueset(M_COUNTY_CODE, vsetCodes, vsetLabels);
+	setValueset(M_DISTRICT, vsetCodes, vsetLabels);
 	
 		
-PROC M_SUB_COUNTY_CODE
+PROC M_SUBDISTRICT
 preproc
 	array vsetCodes(vsetMax);
 	array string vsetLabels(vsetMax);
 	numeric currentSub = NOTAPPL, idx = 0;
 	
-	forcase REGIONS_DICT where REGION_CODE = M_STATE_NUMBER and DISTRICT_CODE = M_COUNTY_CODE do
+	forcase REGIONS_DICT where REGION_CODE = M_REGION and DISTRICT_CODE = M_DISTRICT do
 		if currentSub <> NOTAPPL and currentsub = SUBDISTRICT_CODE then
 			next;
 		else
@@ -772,18 +782,39 @@ preproc
 	enddo;
 	
 	vsetCodes(idx) = NOTAPPL;
-	setValueset(M_SUB_COUNTY_CODE, vsetCodes, vsetLabels);
+	setValueset(M_SUBDISTRICT, vsetCodes, vsetLabels);
 	
 		
-PROC M_VILLAGE_CODE
+PROC M_LOCALITY
+preproc
+	array vsetCodes(vsetMax);
+	array string vsetLabels(vsetMax);
+	numeric currentLoc = NOTAPPL, idx = 0;
+	
+	forcase REGIONS_DICT where REGION_CODE = M_REGION and DISTRICT_CODE = M_DISTRICT and SUBDISTRICT_CODE = M_SUBDISTRICT do
+		if currentLoc <> NOTAPPL and currentLoc = LOCALITY_CODE then
+			next;
+		else
+			vsetCodes(idx) = LOCALITY_CODE;
+			vsetLabels(idx) = LOCALITY_NAME;
+			currentLoc = LOCALITY_CODE;			
+			inc(idx);
+		endif;
+	enddo;
+	
+	vsetCodes(idx) = NOTAPPL;
+	setValueset(M_LOCALITY, vsetCodes, vsetLabels);
+	
+		
+PROC M_VILLAGE
 preproc
 	array vsetCodes(vsetMax);
 	array string vsetLabels(vsetMax);
 	numeric currentVillage = NOTAPPL, idx = 0;
 	
-	forcase REGIONS_DICT where REGION_CODE = M_STATE_NUMBER 
-						and DISTRICT_CODE = M_COUNTY_CODE 
-						and SUBDISTRICT_CODE = M_SUB_COUNTY_CODE do
+	forcase REGIONS_DICT where REGION_CODE = M_REGION 
+						and DISTRICT_CODE = M_DISTRICT 
+						and SUBDISTRICT_CODE = M_SUBDISTRICT do
 		if currentVillage <> NOTAPPL and currentVillage = VILLAGE_CODE then
 			next;
 		else
@@ -795,20 +826,20 @@ preproc
 	enddo;
 	
 	vsetCodes(idx) = NOTAPPL;
-	setValueset(M_VILLAGE_CODE, vsetCodes, vsetLabels);
+	setValueset(M_VILLAGE, vsetCodes, vsetLabels);
 	
 		
-PROC M_ENUMERATION_AREA
+PROC M_EA
 preproc
-	if newEA = "1" or visualvalue(M_ENUMERATION_AREA) = NOTAPPL or visualvalue(M_ENUMERATION_AREA) = DEFAULT then
+	if newEA = "1" or visualvalue(M_EA) = NOTAPPL or visualvalue(M_EA) = DEFAULT then
 		array vsetCodes(vsetMax);
 		array string vsetLabels(vsetMax);
 		numeric currentEA = NOTAPPL, idx = 0;
 	
-		forcase REGIONS_DICT where REGION_CODE = M_STATE_NUMBER 
-							and DISTRICT_CODE = M_COUNTY_CODE 
-							and SUBDISTRICT_CODE = M_SUB_COUNTY_CODE 
-							and VILLAGE_CODE = M_VILLAGE_CODE do
+		forcase REGIONS_DICT where REGION_CODE = M_REGION 
+							and DISTRICT_CODE = M_DISTRICT 
+							and SUBDISTRICT_CODE = M_SUBDISTRICT 
+							and VILLAGE_CODE = M_VILLAGE do
 			if currentEA <> NOTAPPL and currentEA = EA_CODE then
 				next;
 			else
@@ -820,7 +851,7 @@ preproc
 		enddo;
 	
 		vsetCodes(idx) = NOTAPPL;
-		setValueset(M_ENUMERATION_AREA, vsetCodes, vsetLabels);
+		setValueset(M_EA, vsetCodes, vsetLabels);
 	else
 		noinput;
 	endif;
@@ -829,12 +860,13 @@ preproc
 	
 postproc
 	//Need to get the urban/rural status for the chosen EA
-	REGION_CODE = 	visualvalue(M_STATE_NUMBER); 
-	DISTRICT_CODE = visualvalue(M_COUNTY_CODE);
-	SUBDISTRICT_CODE = visualvalue(M_SUB_COUNTY_CODE);
-	VILLAGE_CODE = visualvalue(M_VILLAGE_CODE);
-	EA_CODE = visualvalue(M_ENUMERATION_AREA);
-	numeric ok = loadcase(REGIONS_DICT, REGION_CODE, DISTRICT_CODE, SUBDISTRICT_CODE, VILLAGE_CODE, EA_CODE);
+	REGION_CODE = 	visualvalue(M_REGION); 
+	DISTRICT_CODE = visualvalue(M_DISTRICT);
+	SUBDISTRICT_CODE = visualvalue(M_SUBDISTRICT);
+	LOCALITY_CODE = visualValue(M_LOCALITY);
+	VILLAGE_CODE = visualvalue(M_VILLAGE);
+	EA_CODE = visualvalue(M_EA);
+	numeric ok = loadcase(REGIONS_DICT, REGION_CODE, DISTRICT_CODE, SUBDISTRICT_CODE, LOCALITY_CODE, VILLAGE_CODE, EA_CODE);
 	M_URBAN_RURAL = URBAN_RURAL;
 	
 	//Writing the pff file for the menu to avoid having to enter the area values again
@@ -871,23 +903,24 @@ preproc
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
 	while loadcase(SAMPLING_DICT) do	
-		if tstrip(S_INTERVIEWER_DEVICEID) = tstrip(getDeviceId()) then	//Setting vset arrays in case it is windows where maps doesn't work
+		if tstrip(SLOGIN) = tstrip(M_LOGIN) then	//Setting vset arrays in case it is windows where maps doesn't work
 			
-			numeric markerId = HHMap.addMarker(SA6, SA7);
-			HHMap.setMarkerDescription(markerId, strip(SA9) + "<br/>" + strip(SA5));
+			numeric markerId = HHMap.addMarker(SA7A, SA7B);
+			HHMap.setMarkerDescription(markerId, strip(SA10) + "<br/>" + strip(SA11));
 			
 			//First check if it is already done
-			AA15 = SA9;
-			ADDRESS_LOCATION = SA5;
+			AA14 = SA10;
+			ADDRESS_LOCATION = SA11;
 			AA1 = SA1;
 			AA2 = SA2;
 			AA3 = SA3;
-			AA3_1 = SA3_1;
 			AA4 = SA4;
-			AA5 = SA8;
-			DEVICE_ID = S_INTERVIEWER_DEVICEID;
-			errmsg("AA15: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA3_1: %d, AA4: %d, AA5: %d, Device: %s",
-				AA15, ADDRESS_LOCATION, AA1, AA2, AA3, AA3_1, AA4, AA5, DEVICE_ID); 
+			AA5 = SA5;
+			AA6 = SA6;
+			AA8 = SA8;
+			M_LOGIN = SLOGIN;
+			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, Login: %s",
+			//	AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AALOGIN); 
 			if loadcase(HHQ_DICT) then				
 				//Already visited. Need to find out if it is finished or not
 				if ispartial(HHQ_DICT) then
@@ -901,10 +934,10 @@ preproc
 			
 			
 			vsetCodes(i) = SA8;
-			vsetLabels(i) = strip(SA9) + ";  " + strip(SA5);	//Separating with semicolon to make it easy to find the name part
+			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11);	//Separating with semicolon to make it easy to find the name part
 			
 			writePff("Menu", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
-			HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA9) + ";  " + strip(SA5), SA8, "I"));
+			HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
 			inc(i);
 		endif;
 	enddo;
@@ -920,7 +953,7 @@ preproc
 	
   //setMarkerImage
 postproc
-	errmsg("%s, serial: %d", getLabel($, $), $);
+	//errmsg("%s, serial: %d", getLabel($, $), $);
 	if getOS() = 10 then
 		writePff("Menu", "Menu", "", $, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 		writepff("Household Questionnaire", "HHQ", getLabel($, $), $, "I");

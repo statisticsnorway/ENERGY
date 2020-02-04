@@ -13,32 +13,32 @@ File=.\HHQ.dcf
 Name=FORM000
 Label=Interview particulars
 Level=1
-Size=842,840
+Size=842,940
   
-Item=AA15
+Item=AA14
 Item=ADDRESS_LOCATION
 Item=AA1
 Item=AA2
 Item=AA3
-Item=AA4
-Item=AA5
-Item=DEVICE_ID
+Item=AA6
 Item=AA8
-Item=AA09
+Item=AALOGIN
+Item=AA7
+Item=AA7A
+Item=AA7B
 Item=AA9
 Item=AA10
+Item=AA10A
 Item=AA11
 Item=AA12
-Item=AA12_1
-Item=AA13A
-Item=AA13B
-Item=AA14
+Item=AA13
+Item=AA15
 Item=AA16
 Item=AA17
 Item=AA18
-Item=AA19
 Item=HHNAMES
-Item=AA3_1
+Item=AA5
+Item=AA4
   
 [EndForm]
   
@@ -618,7 +618,7 @@ Max=1
   
 [Field]
 Name=AA1
-Position=178,19,221,39
+Position=178,19,207,39
 Item=AA1,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
@@ -630,7 +630,7 @@ Text=AA1
   
 [Field]
 Name=AA2
-Position=178,49,221,69
+Position=178,49,207,69
 Item=AA2,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
@@ -653,66 +653,91 @@ Text=AA3
  
   
 [Field]
-Name=AA3_1
-Position=178,111,221,131
-Item=AA3_1,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=20,115,59,131
-Text=AA3_1
- 
-  
-[Field]
 Name=AA4
-Position=178,151,221,171
+Position=193,116,222,136
 Item=AA4,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=20,154,45,170
+Position=19,119,44,135
 Text=AA4
  
   
 [Field]
 Name=AA5
-Position=176,186,219,206
+Position=171,162,200,182
 Item=AA5,HHQ_DICT
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=13,166,38,182
+Text=AA5
+ 
+  
+[Field]
+Name=AA6
+Position=171,202,200,222
+Item=AA6,HHQ_DICT
+FieldLabelType=DictionaryName
+Form=1
+  
+[Text]
+Position=13,205,38,221
+Text=AA6
+ 
+  
+[Field]
+Name=AA7
+Position=139,230,154,250
+Item=AA7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=18,189,43,205
-Text=AA5
+Position=71,233,96,249
+Text=AA7
  
   
 [Field]
-Name=DEVICE_ID
-Position=185,227,395,247
-Item=DEVICE_ID,HHQ_DICT
+Name=AA8
+Position=168,259,211,279
+Item=AA8,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=10,262,35,278
+Text=AA8
+ 
+  
+[Field]
+Name=AALOGIN
+Position=563,186,773,206
+Item=AALOGIN,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=27,230,94,246
-Text=DEVICE_ID
+Position=405,189,464,205
+Text=AALOGIN
  
   
 [Field]
-Name=AA15
+Name=AA14
 Position=567,21,817,41
-Item=AA15,HHQ_DICT
+Item=AA14,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
 Position=409,24,441,40
-Text=AA15
+Text=AA14
  
   
 [Field]
@@ -729,182 +754,156 @@ Text=ADDRESS_LOCATION
  
   
 [Field]
-Name=AA8
-Position=179,266,194,286
-Item=AA8,HHQ_DICT
+Name=AA7A
+Position=179,326,320,346
+Item=AA7A,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=111,269,136,285
-Text=AA8
+Position=111,329,145,345
+Text=AA7A
  
   
 [Field]
-Name=AA09
-Position=179,296,194,316
-Item=AA09,HHQ_DICT
+Name=AA7B
+Position=179,356,320,376
+Item=AA7B,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=111,299,143,315
-Text=AA09
+Position=111,359,145,375
+Text=AA7B
  
   
 [Field]
 Name=AA9
-Position=179,326,320,346
+Position=179,386,292,406
 Item=AA9,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=111,329,136,345
+Position=111,389,136,405
 Text=AA9
  
   
 [Field]
 Name=AA10
-Position=179,356,320,376
-Item=AA10,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=111,359,143,375
-Text=AA10
- 
-  
-[Field]
-Name=AA11
-Position=179,386,292,406
-Item=AA11,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=1
-  
-[Text]
-Position=111,389,143,405
-Text=AA11
- 
-  
-[Field]
-Name=AA12
 Position=179,416,194,436
-Item=AA12,HHQ_DICT
+Item=AA10,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
 Position=111,419,143,435
-Text=AA12
+Text=AA10
  
   
 [Field]
-Name=AA12_1
+Name=AA10A
 Position=179,446,194,466
-Item=AA12_1,HHQ_DICT
+Item=AA10A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=111,449,157,465
-Text=AA12_1
+Position=111,449,152,465
+Text=AA10A
  
   
 [Field]
-Name=AA13A
+Name=AA11
 Position=543,265,617,285
-Item=AA13A,HHQ_DICT
+Item=AA11,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=475,268,516,284
-Text=AA13A
+Position=475,268,507,284
+Text=AA11
  
   
 [Field]
-Name=AA13B
+Name=AA12
 Position=543,295,593,315
-Item=AA13B,HHQ_DICT
+Item=AA12,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=475,298,516,314
-Text=AA13B
+Position=475,298,507,314
+Text=AA12
  
   
 [Field]
-Name=AA14
+Name=AA13
 Position=543,325,793,345
-Item=AA14,HHQ_DICT
+Item=AA13,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
 Position=475,328,507,344
-Text=AA14
+Text=AA13
  
   
 [Field]
-Name=AA16
-Position=544,355,573,375
-Item=AA16,HHQ_DICT
+Name=AA15
+Position=544,355,559,375
+Item=AA15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
 Position=475,358,507,374
-Text=AA16
+Text=AA15
  
   
 [Field]
-Name=AA17
+Name=AA16
 Position=543,385,558,405
-Item=AA17,HHQ_DICT
+Item=AA16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
 Position=475,388,507,404
-Text=AA17
+Text=AA16
  
   
 [Field]
-Name=AA18
+Name=AA17
 Position=543,415,558,435
-Item=AA18,HHQ_DICT
+Item=AA17,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
 Position=475,418,507,434
-Text=AA18
+Text=AA17
  
   
 [Field]
-Name=AA19
+Name=AA18
 Position=543,445,793,465
-Item=AA19,HHQ_DICT
+Item=AA18,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
 Position=475,448,507,464
-Text=AA19
+Text=AA18
  
   
 [Grid]
@@ -915,7 +914,7 @@ Required=No
 Type=Record
 TypeName=AB_HOUSEHOLD_MEMBERS_REC
 Max=20
-DisplaySize=137,511,626,815
+DisplaySize=135,611,624,915
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=24
