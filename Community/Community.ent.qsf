@@ -1,5 +1,5 @@
 ﻿[CAPI QUESTIONS]
-Version=CSPro 7.2
+Version=CSPro 7.3
 
 [LANGUAGES]
 EN=English
@@ -128,17 +128,17 @@ Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %currName%'s age?\par
+EN=\pard\cf1\fs24 What is %currName%'s knowledge/specification?\par
 EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red64\green0\blue64;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\f0\fs24\lang1033 Je, \cf2\f1\lang1044 %currName% ana umri gani?\cf1\f0\lang1033\par
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang1033 Je, \lang1044 %currName%\lang1033  ni kiongozi au ni mtu mwenye uelewa kuhusu mada husika?\cf2\f1\par
 SW=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1044 Qual \'e9 a idade de\cf2  %currName%\cf1 ?\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24\lang1044 Qual \'e9 o conhecimento / especifica\'e7\'e3o de \cf2 %currName%\cf1 ?\par
 PT=}
 
 [QUESTION]
@@ -147,18 +147,13 @@ Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %currName%'s knowledge/specification?\par
+EN=\pard\cf1\fs24 For how many years has %currName% lived in this community?\par
 EN=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, \lang1044 %currName%\lang1033  ni kiongozi au ni mtu mwenye uelewa kuhusu mada husika?\cf2\f1\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang1033 Je, ni miaka mingapi %currName% meishi katika jamii hii?\cf2\f1\par
 SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1044 Qual \'e9 o conhecimento / especifica\'e7\'e3o de \cf2 %currName%\cf1 ?\par
-PT=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.B1_E
@@ -182,9 +177,10 @@ PT=}
 [QUESTION]
 Field=COMMUNITY_DICT.C1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the size of the entire community population?\par
+EN=\pard\cf1\fs24 How many people live in this community? \par
+EN=\cf2 An approximate number.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -200,9 +196,10 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.C2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many households are currently living in the entire community?\par
+EN=\cf2 An approximate number.\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -219,8 +216,8 @@ SW=}
 Field=COMMUNITY_DICT.C3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many households have come to settle in the community during the past years (since 2014)?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Is there more or less households in the community now than five years ago?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -252,16 +249,16 @@ SW=\pard\cf1\fs24 Je, ni kaya ngapi zimehama kutoka katika jamii hii kwa kipindi
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.C5A
+Field=COMMUNITY_DICT.C4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What are the two most widespread economic activities in this community/quarter?\par
-EN=First\par
+EN=\cf2 Multiple response. Two responses possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\fs24 Quais s\'e3o as duas atividades econ\'f4micas mais difundidas nesta comunidade / bairro?\par
 PT=\cf2\par
 PT=Primeira\cf1\par
@@ -321,15 +318,31 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.D10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Is grid service available to the whole community or only a part of the community?\par
+EN=\cf2 Read aloud options\cf1\lang2057\par
+EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+PT=\pard\cf1\fs24\lang103 O servi\'e7o de rede est\'e1 dispon\'edvel para toda a comunidade ou apenas para a alguma parte da comunidade?\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang2057 Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi tu ya sehemu?\par
+SW=\par
+SW=\cf2 MSOMEE MAJIBU KWA SAUTI\cf1\par
+SW=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.D11
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How many households are connected to the grid?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\Sa160\sl252\slmult1\cf1\fs24\lang103 servi\'e7o de rede est\'e1 dispon\'edvel para toda a comunidade ou apenas uma parte da comunidade?\par
-PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -337,7 +350,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang2057  Je, ni kwa kiasi gani 
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D11
+Field=COMMUNITY_DICT.D12
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -355,7 +368,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Nini sababu kuu ya baadh
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D12
+Field=COMMUNITY_DICT.D13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -373,7 +386,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni kwa kiasi gani bi
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D13
+Field=COMMUNITY_DICT.D14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -391,163 +404,92 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kuna baadhi ya miezi
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D14
+Field=COMMUNITY_DICT.D15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What are the worst months for service from the grid?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What are the worst months for service from the grid? \par
+EN=\cf2 Record the months when community has the lowest number of hours of electricity supply. Up to three months are possible.\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Quais s\'e3o os piores meses para o servi\'e7o da rede?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does the community publish a "load-shedding" schedule (announces of hours of electricity available from the grid)?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What are the worst months for service from the grid? \par
+EN=\cf2 Record the months when community has the lowest number of hours of electricity supply. Up to three months are possible.\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 A comunidade publica um " carga-shedding " hor\'e1rio (anuncia de horas de eletricidade dispon\'edvel da rede)?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D15A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Does the community publish a "load-shedding" schedule (announces of hours of electricity available from the grid)? \par
+EN=\pard\cf1\fs24 Do you practice load shedding in this area in the rainy season? \par
+EN=\cf2 Load shedding is the set hours of electricity available from the grid.\cf1\par
 EN=\par
-EN=\lang1033 For the worst month\fs19\lang1044\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\fs24 A comunidade publica um cronograma de "restri\'e7\'e3o de carga" (an\'fancio de horas dispon\'edvel na rede eletricidade)?\par
 PT=\par
-PT=\cf2 Para o pior m\'eas\cf1  \fs19\par
+PT=\fs19\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 SW=\pard\cf1\fs24 Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? \par
 SW=\par
-SW=\lang103 Kwa mwezi mbaya zaidi\fs19\lang1044\par
+SW=\fs19\par
 SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D15B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Does the community publish a "load-shedding" schedule (announces of hours of electricity available from the grid)?\par
-EN=\par
-EN=\lang1033 For a typical month\fs19\lang1044\par
+EN=\pard\cf1\fs24 Do you practice load shedding in this area in the dry season? \par
+EN=\cf2 Load shedding is the set hours of electricity available from the grid.\cf1\par
 EN=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 SW=\pard\cf1\fs24 Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?\par
 SW=\par
-SW=\lang103 Katika miezi ya kawaida\fs19\lang1044\par
+SW=\fs19\par
 SW=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\fs24 A comunidade publica uma agenda "de rejei\'e7\'e3o de cargas" (an\'fancio de horas dispon\'edvel na rede eletricidade)?\par
 PT=\par
-PT=\cf2 Para o m\'eas t\'edpico\cf1\fs19\par
 PT=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D16A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How many hours of electricity are available each day from the grid?\par
-EN=\par
-EN=For the worst month\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs19 Do you practice load shedding in this area in the rainy season?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Quantas horas de eletricidade est\'e3o dispon\'edveis todos os dias a partir da rede?\par
-PT=\par
-PT=\cf2 Pior m\'eas\cf1\par
-PT=\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, umeme wa gridi unapatikana kwa saa ngapi kila siku?\par
-SW=\par
-SW=Kwa mwezi mbaya zaidi\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D16B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How many hours of electricity are available each day from the grid?\par
-EN=\par
-EN=For a typical month\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Do you practice load shedding in this area in the dry season?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Quantas horas de eletricidade est\'e3o dispon\'edveis todos os dias a partir da rede?\par
-PT=\par
-PT=\cf2 m\'eas t\'edpico\cf1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, umeme wa gridi unapatikana kwa saa ngapi kila siku?\par
-SW=\par
-SW=Katika miezi ya kawaida\par
-SW=\lang2057\par
-SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D17A
+Field=COMMUNITY_DICT.D17
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How many hours of electricity are available each evening form 6:00 pm to 10:00?\par
-EN=For the worst month\par
-EN=Don't know = 8\par
+EN=\pard\cf1\fs24\lang1033 Does TANESCO/EDM (or the the community) publish a "load-shedding" schedule?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Em um dia t\'edpico, quantas horas de eletricidade est\'e3o dispon\'edveis todas as noites entre 18:00-22:00?\par
-PT=\par
-PT=\cf2 Pior m\'eas\par
-PT=N\'e3o sabe = 8\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, umeme wa gridi unapatikana kwa saa ngapi kuanzia saa 12:00 jioni hadi saa 4:00 usiku kila siku?\par
-SW=Katika miezi mibaya zaidi\par
-SW=Hajui = 8\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D17B
@@ -576,30 +518,12 @@ SW=\lang2057\par
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D18A
+Field=COMMUNITY_DICT.D18
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 In a typical day, how many outages/blackouts of the grid happen?\par
-EN=For the worst month\par
-EN=Don't know = 88\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Em um dia t\'edpico, quantas interrup\'e7\'f5es / apag\'f5es da rede acontecem?\par
-PT=\par
-PT=\cf2 Pior m\'eas\par
-PT=\par
-PT=N\'e3o sabe = 88\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Kwa kawaida, ni mara ngapi umeme wa gridi huwa unakatika kwa siku?\par
-SW=Katika miezi mibaya zaidi\par
-SW=Hajui = 88\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D18B
@@ -686,22 +610,10 @@ Field=COMMUNITY_DICT.D2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is the community connected to the national grid or a local mini-grid?\par
-EN=\par
-EN=\cf2\fs19 Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?\cf1\fs24\par
+EN=\pard\cf1\fs24 How far is the nearest [TANESCO/EDM]-office?\par
+EN=\cf2 Don't know\'8588\par
+EN=99 km or more\'8599\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 A comunidade est\'e1 ligada \'e0 rede nacional ou uma mini rede local?\par
-PT=\cf2 Entrevistador verifique / CAPI: \cf1\par
-PT=\lang1033\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?\lang1033\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D20A
@@ -766,8 +678,9 @@ SW=}
 Field=COMMUNITY_DICT.D21
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 In the last 12 months, did the power go out for more than 24 hours?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week?\par
+EN=In the last 12 months, did the power go out for more than 24 hours?\par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
@@ -810,22 +723,8 @@ Field=COMMUNITY_DICT.D22
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 When was the last time the power go out for more than 24 hours in multiple households at the same time in the community?\par
-EN=Year (4 digits) and month (2 digits)\par
+EN=\pard\cf1\fs24\lang1033 In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?\par
 EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika kaya nyingi kwa wakati mmoja?\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24 Quando foi a \'faltima vez que a energia desligou-se por mais de 24 horas em v\'e1rias fam\'edlias ao mesmo tempo na comunidade?\par
-PT=\par
-PT=\cf2 A\'f1o (4 d\'edgitos) e m\'eas (2 d\'edgitos)\cf1\par
-PT=\par
-PT=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D22A
@@ -869,26 +768,11 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.D23
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many days did it take to fix the issue and for the community to regain power?\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 When was the last time the power went out for more than 24 hours in this community?\par
 EN=\par
-EN=\cf2 NUMBER OF DAYS\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Quantos dias demorou para corrigir o problema e para a comunidade para recuperar a energia?\lang1044\par
-PT=\cf2\par
-PT=Numero de dias\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, ilichukua siku ngapi kurekebisha na kurejesha huduma ya umeme?\par
-SW=\par
-SW=\cf2 IDADI YA SIKU\cf1\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D23MM
@@ -941,257 +825,121 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.D24
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What are the most serious problem this community experiences with the grid electricity?\par
-EN=\par
-EN=\cf2 READ ALOUD OPTIONS\cf1\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 How many days did it take to fix the issue and for the community to regain power?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Qual \'e9 o problema mais s\'e9rio que esta comunidade experimenta com a eletricidade da rede?\par
-PT=\cf2\par
-PT=LEIA OP\'c7\'d5ES EM VOZ ALTA\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, ni matatizo gani makubwa ambayo jamii inayapata kutokana na umeme wa gridi?\par
-SW=\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\cf1\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Over the past 5 years, how has getting access to an electricity connection in your community changed?\par
-EN=\cf2 READ ALOUD OPTIONS\cf1\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What are the two most serious problems this community experiences with the grid electricity?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\highlight2\fs24\lang103 Nos \'faltimos 5 anos, como foi conseguido o acesso a uma conex\'e3o de eletricidade em sua comunidade?\par
-PT=\cf3\highlight0 Leia as op\'e7\'f5es em voz alta\cf1\highlight2\par
-PT=\highlight0\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Katika kipindi cha miaka 5 iliyopita, ni kwa namna gani upatikanaji wa huduma za kuunganisha umeme zimebadilika?\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\cf1\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years,  how has the frequency of black out or brown out in your community changed? \par
-EN=\par
-EN=\cf3 READ ALOUD OPTIONS\cf1\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?\par
+EN=\cf3\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\highlight2\fs24\lang103 Nos \'faltimos 5 anos, como a frequ\'eancia de apag\'f5es ou oscila\'e7\'e3o  mudaram na sua comunidade?\par
-PT=\par
-PT=
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf3\highlight0 Leia as op\'e7\'f5es em voz alta\cf1\highlight2\par
-PT=
-PT=\pard\highlight0\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Katika kipindi cha miaka 5 iliyopita, ni kwa namna gani kukatika kwa umeme mara kwa mara kumebadirika?\par
-SW=\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\cf1\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years,  how has the frequency of black out or brown out in your community changed? \par
-EN=\par
-EN=\cf3 READ ALOUD OPTIONS\cf1\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?\par
+EN=\cf3\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\highlight2\fs24\lang103 Nos \'faltimos 5 anos, como a frequ\'eancia de apag\'f5es ou oscila\'e7\'e3o  mudaram na sua comunidade?\par
-PT=\par
-PT=
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf3\highlight0 Leia as op\'e7\'f5es em voz alta\cf1\highlight2\par
-PT=
-PT=\pard\highlight0\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Katika kipindi cha miaka 5 iliyopita, ni kwa namna gani kukatika kwa umeme mara kwa mara kumebadirika?\par
-SW=\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\cf1\par
-SW=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.D26A
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the price of getting access to an electricity connection in your community changed?\par
+EN=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D27
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years, how has the price of using grid electricity in your community changed?\par
-EN=\par
-EN=\cf3 READ ALOUD OPTIONS\cf1\par
+EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown-out in your community changed? \par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\highlight2\fs24\lang103 Nos \'faltimos 5 anos (ou desde a primeira casa na comunidade tem acesso), como \'e9 que o pre\'e7o do uso de eletricidade da rede em sua comunidade mudou?\par
-PT=\par
-PT=\cf3\highlight0 Leia as op\'e7\'f5es em voz alta\cf1\highlight2\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red255\green255\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Katika kipindi cha miaka 5 iliyopita, ni namna gani bei za umeme zimebadirika?\par
-SW=\par
-SW=\cf2 MSOMEE MAJIBU KWA SAUTI\cf1\highlight3\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D28
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed? \par
-EN=\par
-EN=\cf3 READ ALOUD OPTIONS\par
+EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\highlight2\fs24\lang103 Nos \'faltimos 5 anos (ou desde a primeira casa na comunidade tem acesso), como \'e9 que a dura\'e7\'e3o do fornecimento de eletricidade \'e0 noite mudou?\par
-PT=\par
-PT=\cf3\highlight0 Leia as op\'e7\'f5es em voz alta\cf1\highlight2\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Katika kipindi cha miaka 5 iliyopita, namna gani usambazaji wa umeme nyakati  za usiku umebadirika?\par
-SW=\highlight2\par
-SW=\cf3\highlight0 MSOMEE MAJIBU KWA SAUTI\cf1\highlight2\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D29
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Over the past 5 years, how has the duration of electricity supply at night changed?\par
-EN=\par
-EN=\cf2 READ ALOUD OPTIONS\cf1\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed? \par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Nos \'faltimos 5 anos, como mudou a dura\'e7\'e3o do fornecimento de eletricidade \'e0 noite?\par
-PT=\par
-PT=\cf2 Leia as op\'e7\'f5es em voz alta\cf1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Katika kipindi cha miaka 5 iliyopita, ni kwa namna gani usambazaji wa umeme nyakati  za usiku umebadilika?\par
-SW=\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\cf1\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the main reason why the community is not connected to the grid?\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is the community connected to the national grid or a local mini-grid?\par
+EN=\par
+EN=\cf2\fs19 Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?\cf1\fs24\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Qual \'e9 a principal raz\'e3o pela qual a comunidade n\'e3o est\'e1 ligado \'e0 rede?\par
+PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 A comunidade est\'e1 ligada \'e0 rede nacional ou uma mini rede local?\par
+PT=\cf2 Entrevistador verifique / CAPI: \cf1\par
+PT=\lang1033\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nini sababu kuu ya kijiji hiki kutounganishwa katika gridi ya Taifa au gridi ndogo?\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?\lang1033\par
 SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D30
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How satisfied are you with the service from the grid electricity?\par
-EN=\cf2 READ ALOUD OPTIONS\cf1\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed? \par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Qu\'e3o satisfeito voc\'ea est\'e1 com o servi\'e7o da eletricidade da rede?\par
-PT=\par
-PT=\cf2 LER EM VOZ ALTA OP\'c7\'d5ES\cf1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni kwa kiasi gani unaridhishwa na huduma ya umeme wa gridi?\par
-SW=\cf2 SOMA MAGERESHO KWA SAUTI\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D31
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Are solar home systems/solar lighting systems used/owned in the community?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Do any households own a solar home system/solar lighting in this community?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Existem sistemas solares dom\'e9sticos / sistemas de ilumina\'e7\'e3o solar usados/que pertencem alguem nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, wanajamii wako wanamiliki au kutumia mifumo ya umeme jua?\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D32
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What proportion of households use solar systems/solar lightning systems in this community?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Qual a propor\'e7\'e3o de fam\'edlias que utilizam sistemas solares / sistemas de ilumina\'e7\'e3o solar nessa comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni sehemu gani katika jamii zinatumia mfumo wa umeme jua?\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D33
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Can you buy or lease a solar home systems/solar lighting systems in this community?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Can you buy or lease a solar home systems/solar lighting system in this area?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1208,19 +956,9 @@ SW=}
 Field=COMMUNITY_DICT.D34
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How far is the nearest National Electricity Utility Office?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Are there any shared solar/electricity driven irrigation systems used by farmers in this community?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs24\lang103 Qual a dist\'e2ncia do Servi\'e7o Nacional de Energia El\'e9trica mais pr\'f3ximo?\f1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, kuna umbali gani kutoka katika jamii hii hadi kwenye ofisi ya karibu ya Shirika la Umeme?\par
-SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D35
@@ -1239,6 +977,24 @@ SW=}
 Field=COMMUNITY_DICT.D4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the main reason why the community is not connected to the grid?\par
+EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Qual \'e9 a principal raz\'e3o pela qual a comunidade n\'e3o est\'e1 ligado \'e0 rede?\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;}
+SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nini sababu kuu ya kijiji hiki kutounganishwa katika gridi ya Taifa au gridi ndogo?\par
+SW=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.D5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does the community expect to get grid connection in the next two years?\par
 EN=}
@@ -1254,7 +1010,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, jamii hii inategemea
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D5
+Field=COMMUNITY_DICT.D6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -1272,7 +1028,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nani anasambaza u
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D6
+Field=COMMUNITY_DICT.D7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -1290,7 +1046,7 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24 Taja jina la kampuni inayosambaz
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D7
+Field=COMMUNITY_DICT.D8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -1316,32 +1072,31 @@ SW=\cf2 ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1\cf1\par
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D8
+Field=COMMUNITY_DICT.D8_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How much did the community pay to get the grid connection?\par
-EN=\par
+EN=\pard\cf1\fs24\lang1033 Did the community have to pay anything to get the grid connection to the community ?\par
 EN=
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\lang2057\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Quanto pagou comunidade para liga\'e7\'e3o \'e0 rede?\par
-PT=\par
-PT=\cf2\fs20 CONSULTE QUALQUER CUSTO COMUNIT\'c1RIO PARA TER A INFRAESTRUTURA INSTALADA.\cf1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Ser\'e1 que a comunidade paga para obter a liga\'e7\'e3o \'e0 rede electrica?\par
+PT=
+PT=\pard\cf2\fs20 CONSULTE QUALQUER CUSTO COMUNIT\'c1RIO PARA TER A INFRAESTRUTURA INSTALADA.\cf1\fs24\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?\par
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24\lang2057\par
 SW=\par
 SW=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\par
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.D8_1
+Field=COMMUNITY_DICT.D9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -1352,9 +1107,10 @@ EN=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\la
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Ser\'e1 que a comunidade paga para obter a liga\'e7\'e3o \'e0 rede electrica?\par
-PT=\cf2 Consulte qualquer custo da comunidade para ter a infraestrutura instalada.\cf1\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24\lang103 Quanto pagou comunidade para liga\'e7\'e3o \'e0 rede?\par
+PT=
+PT=\pard\widctlpar\sa160\sl252\slmult1\cf2 Consulte qualquer custo da comunidade para ter a infraestrutura instalada.\cf1\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1363,26 +1119,6 @@ SW=\pard\cf1\fs24 Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?
 SW=\par
 SW=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED\cf1\par
 SW=\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D9
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is grid service available to the whole community or only a part of the community?\lang2057\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 O servi\'e7o de rede est\'e1 dispon\'edvel para toda a comunidade ou apenas para a alguma parte da comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi tu ya sehemu?\par
-SW=\par
-SW=\cf2 MSOMEE MAJIBU KWA SAUTI\cf1\par
 SW=}
 
 [QUESTION]

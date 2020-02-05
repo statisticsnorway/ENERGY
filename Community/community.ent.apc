@@ -4,6 +4,11 @@ PROC GLOBAL
  string currName;
 
 
+
+
+
+
+	
 PROC COMMUNITY_FF
 
 PROC COMMUNITY_QUEST
@@ -19,44 +24,44 @@ preproc
 	
 PROC C_A1
 preproc
-	$ = toNumber(sysparm("REGION"));
-	noinput;
+//	$ = toNumber(sysparm("REGION"));
+//	noinput;
 
 
 PROC C_A2
 preproc
-	$ = toNumber(sysparm("DISTRICT"));
-	noinput;
+//	$ = toNumber(sysparm("DISTRICT"));
+//	noinput;
 	
 	
 PROC C_A3
 preproc
- 	$ = toNumber(sysparm("SUBDISTRICT"));
- 	noinput;
+// 	$ = toNumber(sysparm("SUBDISTRICT"));
+// 	noinput;
  
 
 PROC C_A4 
 preproc
- 	$ = toNumber(sysparm("LOCALITY"));
- 	noinput;
+// 	$ = toNumber(sysparm("LOCALITY"));
+// 	noinput;
 
 
 PROC C_A5
 preproc
-	$ = toNumber(sysparm("VILLAGE"));
-	noinput;
+//	$ = toNumber(sysparm("VILLAGE"));
+//	noinput;
 
 
 PROC C_A6
 preproc
-	$ = toNumber(sysparm("EA"));
-	noinput;
+//	$ = toNumber(sysparm("EA"));
+//	noinput;
 	
 
 PROC A6
 preproc
-	A6 = toNumber(sysparm("URBANRURAL"));
-	noinput;
+//	A6 = toNumber(sysparm("URBANRURAL"));
+//	noinput;
 	
 
 	
@@ -89,20 +94,6 @@ postproc
 
 
 PROC B1_C
-if $ < 15 then
-		errmsg(tr(2),edit("ZZ9",$));
-		reenter;
-	endif;
-
-
-PROC B1_E
- if $ > B1_C(curocc())  then
-		errmsg(tr(3),edit("ZZ9",B1_C(curocc())));
-		reenter;
-	endif;
-
-
-
 
 PROC C2
 if $ > C1 then
@@ -124,20 +115,6 @@ if $ > C2 then
 	endif;
 
 
-PROC C4
-if $ > (C2 - C3) then
-		errmsg(tr(6),edit("ZZZ9",$),edit("ZZZ9",C2),edit("ZZZ9",C3));
-		reenter;
-	endif;
-
-
-PROC C5B
-	if  $ = C5A  then
-		errmsg(tr(7),getValueLabel(C5A));
-		reenter;
-    endif;
-
-
 PROC D1
 	if  pos("9", $) > 0 and length(strip($)) > 1 then
 		errmsg(tr(8));
@@ -148,25 +125,22 @@ PROC D1
 	endif;
 
 
-PROC D2
+PROC D3
 postproc
 	if $ = 1 then
-		skip to D7;
+		skip to D8;
 	elseif $ = 2 then
- 		 skip to D5;
+ 		 skip to D6;
     endif;
-
-
-PROC D4
+PROC D5
 postproc
- skip D31;
+	skip to D31;
 PROC D8_1
-
 postproc
-
-	if $ = 2 then
-		skip to D9;
+	if $ in 2,88 then
+		skip to D10;
 	endif;
+	
 
 
 PROC D10
@@ -176,16 +150,20 @@ postproc
 	endif;
 
 
+PROC D11
+postproc
+	if $ = 4 then
+		skip to D13;
+	endif;
 PROC D13
+
+
+
+PROC D14
 postproc
 	if $ = 2 then
-		skip to D15A;
+		skip to GROUP_D2;
 	endif;
-
-
-PROC D15A
-preproc
-	errmsg(tr(16));
 PROC D16A
  if $ > 24 and $ <> 88 then
    		errmsg(tr(9),edit("Z9",$));
@@ -200,39 +178,6 @@ PROC D16B
     endif;
 
 
-PROC D17A
- if $ > 4 and $ <> 88 then
-   		errmsg(tr(10),edit("Z9",$));
-		reenter;
-    endif;
-
-
-PROC D17B
- if $ > 4 and $ <> 88 then
-   		errmsg(tr(10),edit("Z9",$));
-		reenter;
-    endif;
-
-
-PROC D20A
- if $ > 24 and $ <> 88 then
-   		errmsg(tr(9),edit("Z9",$));
-		reenter;
-    endif;
-
-
-PROC D20B
- if $ > 24 and $ <> 88 then
-   		errmsg(tr(9),edit("Z9",$));
-		reenter;
-    endif;
-
-
-PROC D21
-	if $ = 2 then
-		skip to D24;
-	endif;
-	
 PROC D22
 postproc
 	if $ = 2 then
@@ -252,7 +197,7 @@ PROC D23
 PROC D31
 postproc
 	if $ = 2 then
-		skip to E1_NO(1);
+		skip to GROUP_H_I;
 	endif;
 
 
@@ -265,21 +210,20 @@ preproc
 
 
 
-PROC ENERGYPRICES000
-preproc
-	errmsg(tr(17));
-PROC E1_NO
+PROC H_NO
 onfocus
 	 numeric i = curocc();
-	 E1_DESC = getLabel(E1_NO, i);
+	 H_DESC = getLabel(H_NO, i);
 	 $ = i;
-	 skip to E1B;
-PROC E1_DESC
-
-PROC E1B
+	 skip to H1A;
+PROC H1A
 preproc
- 
- currentElement = E1_DESC(curocc());
+ currentElement = H_DESC(curocc());
+PROC I4
+postproc
+	if $ = 2 then
+		skip to I4_2;
+	endif;
 PROC F1B
  if $ = 1 and F1A IN 2,3 then
    		errmsg(tr(12),edit("Z9",$));
@@ -328,20 +272,6 @@ onfocus
 PROC G11A
 preproc
  currentElement = G_DESC_SER(curocc());
-PROC H_NO
-onfocus
-	 numeric i = curocc();
-	 H_DESC = getLabel(H_NO, i);
-	 $ = i;
-	 skip to H1A;
-PROC H1A
-preproc
- currentElement = H_DESC(curocc());
-PROC I4
-postproc
-	if $ = 2 then
-		skip to I4_2;
-	endif;
 PROC J1
  if $ = 2 then
   endlevel;

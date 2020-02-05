@@ -13,7 +13,7 @@ File=.\community.dcf
 Name=FORM000
 Label=community questionnaire
 Level=1
-Size=1095,753
+Size=944,635
   
 Item=C_LOGIN
 Item=C_A1
@@ -23,8 +23,8 @@ Item=C_A6
 Item=A6
 Item=C_A5
 Item=A5
-Item=B_LEADERS000
 Item=C_A4
+Item=B_LEADERS000
   
 [EndForm]
   
@@ -32,14 +32,12 @@ Item=C_A4
 Name=FORM001
 Label=C Background
 Level=1
-Size=247,253
+Size=247,193
   
 Item=C2
 Item=C1
 Item=C3
 Item=C4
-Item=C5A
-Item=C5B
   
 [EndForm]
   
@@ -47,10 +45,9 @@ Item=C5B
 Name=FORM002
 Label=D Supply of electricity
 Level=1
-Size=838,545
+Size=835,560
   
 Item=D1
-Item=D2
 Item=D3
 Item=D4
 Item=D5
@@ -64,6 +61,8 @@ Item=D11
 Item=D12
 Item=D13
 Item=D14
+Item=D15
+Item=D2
   
 [EndForm]
   
@@ -71,18 +70,12 @@ Item=D14
 Name=FORM003
 Label=D Supply of electricity (2)
 Level=1
-Size=265,813
+Size=256,710
   
 Item=D16A
 Item=D16B
-Item=D17A
-Item=D17B
-Item=D18A
-Item=D18B
-Item=D19A
-Item=D19B
-Item=D20A
-Item=D20B
+Item=D17
+Item=D18
 Item=D23
 Item=D24
 Item=D25
@@ -95,20 +88,30 @@ Item=D31
 Item=D32
 Item=D33
 Item=D34
-Item=D21
 Item=D22
-Item=D15A
-Item=D15B
+Item=D35
+Item=D26A
   
 [EndForm]
   
 [Form]
-Name=FORM004
-Label=E Energy Prices
+Name=FORM008
+Label=H Development project & I Cooking
 Level=1
-Size=1179,353
+Size=1042,609
   
-Item=ENERGYPRICES000
+Item=I1
+Item=I2
+Item=I3
+Item=I4
+Item=I4_1
+Item=I4_2
+Item=I5
+Item=I6
+Item=I8
+Item=I9
+Item=HD000
+Item=I10
   
 [EndForm]
   
@@ -147,27 +150,6 @@ Size=980,734
   
 Item=GM000
 Item=GS000
-  
-[EndForm]
-  
-[Form]
-Name=FORM008
-Label=H Development project & I Cooking
-Level=1
-Size=1042,609
-  
-Item=I1
-Item=I2
-Item=I3
-Item=I4
-Item=I4_1
-Item=I4_2
-Item=I5
-Item=I6
-Item=I8
-Item=I9
-Item=HD000
-Item=I10
   
 [EndForm]
   
@@ -290,7 +272,7 @@ Text=C_A6
 Name=A6
 Position=200,269,215,289
 Item=A6,COMMUNITY_DICT
-Protected=Yes
+Verify=No
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
@@ -320,7 +302,7 @@ Required=Yes
 Type=Record
 TypeName=B_LEADERS
 Max=7
-DisplaySize=63,460,1070,728
+DisplaySize=38,390,919,610
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -366,20 +348,20 @@ Width=10
 [EndColumn]
   
 [Column]
-Width=56
+Width=37
   
 [HeaderText]
-Position=0,48,56,72
-Text=ID code
+Position=0,0,37,24
+Text=B_ID
  
 [Field]
 Name=B_ID
-Position=33,0,48,20
+Position=14,0,29,20
 Item=B_ID,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
+FieldLabelType=DictionaryName
   
 [Text]
-Text=ID code
+Text=B_ID
  
 [EndColumn]
   
@@ -387,92 +369,76 @@ Text=ID code
 Width=709
   
 [HeaderText]
-Position=664,48,709,72
-Text=Name
+Position=669,0,709,24
+Text=B1_A
  
 [Field]
 Name=B1_A
 Position=0,0,701,20
 Item=B1_A,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
+FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
   
 [Text]
-Text=Name
+Text=B1_A
  
 [EndColumn]
   
 [Column]
-Width=33
+Width=40
   
 [HeaderText]
-Position=0,48,33,72
-Text=Sex
+Position=0,0,40,24
+Text=B1_B
  
 [Field]
 Name=B1_B
-Position=10,0,25,20
+Position=17,0,32,20
 Item=B1_B,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
+FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
   
 [Text]
-Text=Sex
+Text=B1_B
  
 [EndColumn]
   
 [Column]
-Width=38
+Width=40
   
 [HeaderText]
-Position=5,48,38,72
-Text=Age
+Position=0,0,40,24
+Text=B1_C
  
 [Field]
 Name=B1_C
-Position=0,0,29,20
+Position=3,0,32,20
 Item=B1_C,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
-  
-[Text]
-Text=Age
- 
-[EndColumn]
-  
-[Column]
-Width=80
-  
-[HeaderText]
-Position=5,16,80,72
-Text=Chair or specialist in a topic?
- 
-[Field]
-Name=B1_D
-Position=34,0,63,20
-Item=B1_D,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
+FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
   
 [Text]
-Text=Chair or specialist in a topic?
+Text=B1_C
  
 [EndColumn]
   
 [Column]
-Width=86
+Width=40
   
 [HeaderText]
-Position=0,0,86,72
-Text=How many years lived in community?
+Position=0,0,40,24
+Text=B1_D
  
 [Field]
-Name=B1_E
-Position=49,0,78,20
-Item=B1_E,COMMUNITY_DICT
-FieldLabelType=DictionaryLabel
+Name=B1_D
+Position=3,0,32,20
+Item=B1_D,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
   
 [Text]
-Text=How many years lived in community?
+Position=0,0,42,20
+Text=B1_D
  
 [EndColumn]
   
@@ -514,9 +480,10 @@ Text=C1
   
 [Field]
 Name=C3
-Position=151,118,208,138
+Position=151,118,166,138
 Item=C3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=2
   
 [Text]
@@ -526,40 +493,15 @@ Text=C3
   
 [Field]
 Name=C4
-Position=151,148,208,168
+Position=149,148,206,168
 Item=C4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=CheckBox
 Form=2
   
 [Text]
-Position=104,151,120,167
+Position=102,151,118,167
 Text=C4
- 
-  
-[Field]
-Name=C5A
-Position=151,178,180,198
-Item=C5A,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=2
-  
-[Text]
-Position=104,181,129,197
-Text=C5A
- 
-  
-[Field]
-Name=C5B
-Position=151,208,180,228
-Item=C5B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=2
-  
-[Text]
-Position=104,211,129,227
-Text=C5B
  
 [EndGroup]
   
@@ -586,181 +528,194 @@ Text=D1
   
 [Field]
 Name=D2
-Position=112,80,127,100
+Position=235,78,250,98
 Item=D2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,83,76,99
+Position=54,81,70,97
 Text=D2
  
   
 [Field]
 Name=D3
-Position=112,110,141,130
+Position=109,125,124,145
 Item=D3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,113,76,129
+Position=57,128,73,144
 Text=D3
  
   
 [Field]
 Name=D4
-Position=112,140,127,160
+Position=109,155,138,175
 Item=D4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,143,76,159
+Position=57,158,73,174
 Text=D4
  
   
 [Field]
 Name=D5
-Position=112,170,141,190
+Position=109,185,124,205
 Item=D5,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,173,76,189
+Position=57,188,73,204
 Text=D5
  
   
 [Field]
 Name=D6
-Position=112,200,813,220
+Position=109,215,138,235
 Item=D6,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,203,76,219
+Position=57,218,73,234
 Text=D6
  
   
 [Field]
 Name=D7
-Position=112,230,141,250
+Position=109,245,810,265
 Item=D7,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=3
   
 [Text]
-Position=60,233,76,249
+Position=57,248,73,264
 Text=D7
  
   
 [Field]
+Name=D8
+Position=109,275,138,295
+Item=D8,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=3
+  
+[Text]
+Position=57,278,73,294
+Text=D8
+ 
+  
+[Field]
 Name=D8_1
-Position=107,255,122,275
+Position=99,299,212,319
 Item=D8_1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=55,258,85,274
+Position=47,302,77,318
 Text=D8_1
  
   
 [Field]
-Name=D8
-Position=105,289,218,309
-Item=D8,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=3
-  
-[Text]
-Position=53,292,69,308
-Text=D8
- 
-  
-[Field]
 Name=D9
-Position=112,320,127,340
+Position=107,333,122,353
 Item=D9,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,323,76,339
+Position=55,336,71,352
 Text=D9
  
   
 [Field]
 Name=D10
-Position=112,350,127,370
+Position=109,365,124,385
 Item=D10,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,353,83,369
+Position=57,368,80,384
 Text=D10
  
   
 [Field]
 Name=D11
-Position=112,380,141,400
+Position=109,395,124,415
 Item=D11,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,383,83,399
+Position=57,398,80,414
 Text=D11
  
   
 [Field]
 Name=D12
-Position=112,410,127,430
+Position=109,425,138,445
 Item=D12,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,413,83,429
+Position=57,428,80,444
 Text=D12
  
   
 [Field]
 Name=D13
-Position=112,440,127,460
+Position=109,455,124,475
 Item=D13,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=60,443,83,459
+Position=57,458,80,474
 Text=D13
  
   
 [Field]
 Name=D14
-Position=112,470,197,490
+Position=109,485,124,505
 Item=D14,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=3
+  
+[Text]
+Position=57,488,80,504
+Text=D14
+ 
+  
+[Field]
+Name=D15
+Position=109,515,194,535
+Item=D15,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
 Form=3
   
 [Text]
-Position=60,473,83,489
-Text=D14
+Position=57,518,80,534
+Text=D15
  
 [EndGroup]
   
@@ -773,32 +728,8 @@ LogicControl=No
 Max=1
   
 [Field]
-Name=D15A
-Position=89,9,104,29
-Item=D15A,COMMUNITY_DICT
-DataCaptureType=RadioButton
-Form=4
-  
-[Text]
-Position=42,13,74,29
-Text=D15A
- 
-  
-[Field]
-Name=D15B
-Position=102,49,117,69
-Item=D15B,COMMUNITY_DICT
-DataCaptureType=RadioButton
-Form=4
-  
-[Text]
-Position=47,49,79,65
-Text=D15B
- 
-  
-[Field]
 Name=D16A
-Position=102,82,131,102
+Position=102,82,117,102
 Item=D16A,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -811,7 +742,7 @@ Text=D16A
   
 [Field]
 Name=D16B
-Position=102,112,131,132
+Position=102,112,117,132
 Item=D16B,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -823,362 +754,262 @@ Text=D16B
  
   
 [Field]
-Name=D17A
+Name=D17
 Position=102,142,117,162
-Item=D17A,COMMUNITY_DICT
+Item=D17,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=48,145,80,161
-Text=D17A
+Position=48,145,71,161
+Text=D17
  
   
 [Field]
-Name=D17B
-Position=102,172,117,192
-Item=D17B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,175,80,191
-Text=D17B
- 
-  
-[Field]
-Name=D18A
+Name=D18
 Position=102,202,131,222
-Item=D18A,COMMUNITY_DICT
+Item=D18,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=48,205,80,221
-Text=D18A
- 
-  
-[Field]
-Name=D18B
-Position=102,232,131,252
-Item=D18B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,235,80,251
-Text=D18B
- 
-  
-[Field]
-Name=D19A
-Position=102,262,131,282
-Item=D19A,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,265,80,281
-Text=D19A
- 
-  
-[Field]
-Name=D19B
-Position=102,292,131,312
-Item=D19B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,295,80,311
-Text=D19B
- 
-  
-[Field]
-Name=D20A
-Position=102,322,131,342
-Item=D20A,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,325,80,341
-Text=D20A
- 
-  
-[Field]
-Name=D20B
-Position=102,352,131,372
-Item=D20B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-Form=4
-  
-[Text]
-Position=48,355,80,371
-Text=D20B
- 
-  
-[Field]
-Name=D21
-Position=103,383,132,403
-Item=D21,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=4
-  
-[Text]
-Position=54,389,77,405
-Text=D21
+Position=48,205,71,221
+Text=D18
  
   
 [Field]
 Name=D22
-Position=101,413,186,433
+Position=94,240,109,260
 Item=D22,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=55,418,78,434
+Position=48,245,71,261
 Text=D22
  
   
 [Field]
 Name=D23
-Position=99,438,128,458
+Position=92,265,121,285
 Item=D23,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=54,441,77,457
+Position=47,268,70,284
 Text=D23
  
   
 [Field]
 Name=D24
-Position=99,468,128,488
+Position=92,295,121,315
 Item=D24,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,471,77,487
+Position=47,298,70,314
 Text=D24
  
   
 [Field]
 Name=D25
-Position=99,498,114,518
+Position=92,325,149,345
 Item=D25,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,501,77,517
+Position=47,328,70,344
 Text=D25
  
   
 [Field]
 Name=D26
-Position=99,528,114,548
+Position=92,355,107,375
 Item=D26,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,531,77,547
+Position=47,358,70,374
 Text=D26
  
   
 [Field]
+Name=D26A
+Position=94,392,109,412
+Item=D26A,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=4
+  
+[Text]
+Position=42,392,74,408
+Text=D26A
+ 
+  
+[Field]
 Name=D27
-Position=99,558,114,578
+Position=90,424,105,444
 Item=D27,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,561,77,577
+Position=45,427,68,443
 Text=D27
  
   
 [Field]
 Name=D28
-Position=99,588,114,608
+Position=90,454,105,474
 Item=D28,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,591,77,607
+Position=45,457,68,473
 Text=D28
  
   
 [Field]
 Name=D29
-Position=99,618,114,638
+Position=90,484,105,504
 Item=D29,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,621,77,637
+Position=45,487,68,503
 Text=D29
  
   
 [Field]
 Name=D30
-Position=99,648,114,668
+Position=90,514,105,534
 Item=D30,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,651,77,667
+Position=45,517,68,533
 Text=D30
  
   
 [Field]
 Name=D31
-Position=99,678,114,698
+Position=90,544,105,564
 Item=D31,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,681,77,697
+Position=45,547,68,563
 Text=D31
  
   
 [Field]
 Name=D32
-Position=99,708,128,728
+Position=90,574,119,594
 Item=D32,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,711,77,727
+Position=45,577,68,593
 Text=D32
  
   
 [Field]
 Name=D33
-Position=99,738,240,758
+Position=90,604,231,624
 Item=D33,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
 Form=4
   
 [Text]
-Position=54,741,77,757
+Position=45,607,68,623
 Text=D33
  
   
 [Field]
 Name=D34
-Position=99,768,128,788
+Position=90,634,105,654
 Item=D34,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=54,771,77,787
+Position=45,637,68,653
 Text=D34
+ 
+  
+[Field]
+Name=D35
+Position=93,665,108,685
+Item=D35,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=45,665,68,681
+Text=D35
  
 [EndGroup]
   
 [Group]
 Required=Yes
-Name=GROUP_E
-Label=E Energy Prices
+Name=GROUP_H_I
+Label=H Development project & I Cooking
 Form=5
 LogicControl=No
 Max=1
   
 [Grid]
-Name=ENERGYPRICES000
-Label=Energy prices
+Name=HD000
+Label=Development
 Form=5
 Required=Yes
 Type=Item
-TypeName=ENERGYPRICES
-Max=12
-DisplaySize=26,24,1154,328
+TypeName=HD
+Max=4
+DisplaySize=31,13,1017,229
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
 FreeMovement=No
  
 [Text]
-Position=7,4,22,28
+Position=0,4,15,28
 Text=1
  
   
 [Text]
-Position=7,4,22,28
+Position=0,4,15,28
 Text=2
  
   
 [Text]
-Position=7,4,22,28
+Position=0,4,15,28
 Text=3
  
   
 [Text]
-Position=7,4,22,28
+Position=0,4,15,28
 Text=4
- 
-  
-[Text]
-Position=7,4,22,28
-Text=5
- 
-  
-[Text]
-Position=7,4,22,28
-Text=6
- 
-  
-[Text]
-Position=7,4,22,28
-Text=7
- 
-  
-[Text]
-Position=7,4,22,28
-Text=8
- 
-  
-[Text]
-Position=7,4,22,28
-Text=9
- 
-  
-[Text]
-Position=0,4,22,28
-Text=10
- 
-  
-[Text]
-Position=1,4,22,28
-Text=11
- 
-  
-[Text]
-Position=0,4,22,28
-Text=12
  
   
 [Column]
@@ -1186,64 +1017,220 @@ Width=10
 [EndColumn]
   
 [Column]
-Width=49
+Width=92
   
 [HeaderText]
-Position=0,0,49,24
-Text=E1_NO
+Position=49,0,92,24
+Text=H_NO
  
 [Field]
-Name=E1_NO
-Position=12,0,41,20
-Item=E1_NO,COMMUNITY_DICT
-FieldLabelType=DictionaryName
+Name=H_NO
+Position=55,0,84,20
+Item=H_NO,COMMUNITY_DICT
 DataCaptureType=RadioButton
   
 [Text]
-Text=E1_NO
+Text=H_NO
  
 [EndColumn]
   
 [Column]
-Width=919
+Width=709
   
 [HeaderText]
-Position=854,0,919,24
-Text=E1_DESC
+Position=650,0,709,24
+Text=H_DESC
  
 [Field]
-Name=E1_DESC
-Position=0,0,911,20
-Item=E1_DESC,COMMUNITY_DICT
-Protected=Yes
-FieldLabelType=DictionaryName
+Name=H_DESC
+Position=0,0,701,20
+Item=H_DESC,COMMUNITY_DICT
 UseUnicodeTextBox=Yes
   
 [Text]
-Position=0,0,62,16
-Text=E1_DESC
+Text=H_DESC
  
 [EndColumn]
   
 [Column]
-Width=121
+Width=92
   
 [HeaderText]
-Position=89,0,121,24
-Text=E1B
+Position=59,0,92,24
+Text=H1A
  
 [Field]
-Name=E1B
-Position=0,0,113,20
-Item=E1B,COMMUNITY_DICT
-FieldLabelType=DictionaryName
+Name=H1A
+Position=69,0,84,20
+Item=H1A,COMMUNITY_DICT
+DataCaptureType=RadioButton
   
 [Text]
-Text=E1B
+Text=H1A
+ 
+[EndColumn]
+  
+[Column]
+Width=78
+  
+[HeaderText]
+Position=46,0,78,24
+Text=H1b
+ 
+[Field]
+Name=H1B
+Position=55,0,70,20
+Item=H1B,COMMUNITY_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=H1b
  
 [EndColumn]
   
 [EndGrid]
+ 
+  
+[Field]
+Name=I1
+Position=87,249,116,269
+Item=I1,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,252,51,268
+Text=I1
+ 
+  
+[Field]
+Name=I2
+Position=87,279,116,299
+Item=I2,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,282,51,298
+Text=I2
+ 
+  
+[Field]
+Name=I3
+Position=87,309,116,329
+Item=I3,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,312,51,328
+Text=I3
+ 
+  
+[Field]
+Name=I4
+Position=87,339,116,359
+Item=I4,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,342,51,358
+Text=I4
+ 
+  
+[Field]
+Name=I4_1
+Position=87,369,452,389
+Item=I4_1,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=CheckBox
+Form=5
+  
+[Text]
+Position=40,372,65,388
+Text=I4_1
+ 
+  
+[Field]
+Name=I4_2
+Position=87,399,116,419
+Item=I4_2,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,402,65,418
+Text=I4_2
+ 
+  
+[Field]
+Name=I5
+Position=87,429,116,449
+Item=I5,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,432,51,448
+Text=I5
+ 
+  
+[Field]
+Name=I6
+Position=87,459,116,479
+Item=I6,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,462,51,478
+Text=I6
+ 
+  
+[Field]
+Name=I8
+Position=87,489,116,509
+Item=I8,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,492,51,508
+Text=I8
+ 
+  
+[Field]
+Name=I9
+Position=87,519,102,539
+Item=I9,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=40,522,51,538
+Text=I9
+ 
+  
+[Field]
+Name=I10
+Position=96,563,111,583
+Item=I10,COMMUNITY_DICT
+DataCaptureType=RadioButton
+Form=5
+  
+[Text]
+Position=39,568,57,584
+Text=I10
  
 [EndGroup]
   
@@ -1889,273 +1876,9 @@ Text=G11B
   
 [Group]
 Required=Yes
-Name=GROUP_H_I
-Label=H Development project & I Cooking
-Form=9
-LogicControl=No
-Max=1
-  
-[Grid]
-Name=HD000
-Label=Development
-Form=9
-Required=Yes
-Type=Item
-TypeName=HD
-Max=4
-DisplaySize=31,13,1017,229
-Orientation=Horizontal
-FieldRowHeight=0
-HeadingRowHeight=0
-FreeMovement=No
- 
-[Text]
-Position=0,4,15,28
-Text=1
- 
-  
-[Text]
-Position=0,4,15,28
-Text=2
- 
-  
-[Text]
-Position=0,4,15,28
-Text=3
- 
-  
-[Text]
-Position=0,4,15,28
-Text=4
- 
-  
-[Column]
-Width=10
-[EndColumn]
-  
-[Column]
-Width=92
-  
-[HeaderText]
-Position=49,80,92,104
-Text=H_NO
- 
-[Field]
-Name=H_NO
-Position=55,0,84,20
-Item=H_NO,COMMUNITY_DICT
-DataCaptureType=RadioButton
-  
-[Text]
-Text=H_NO
- 
-[EndColumn]
-  
-[Column]
-Width=709
-  
-[HeaderText]
-Position=650,80,709,104
-Text=H_DESC
- 
-[Field]
-Name=H_DESC
-Position=0,0,701,20
-Item=H_DESC,COMMUNITY_DICT
-UseUnicodeTextBox=Yes
-  
-[Text]
-Text=H_DESC
- 
-[EndColumn]
-  
-[Column]
-Width=92
-  
-[HeaderText]
-Position=59,80,92,104
-Text=H1A
- 
-[Field]
-Name=H1A
-Position=69,0,84,20
-Item=H1A,COMMUNITY_DICT
-DataCaptureType=RadioButton
-  
-[Text]
-Text=H1A
- 
-[EndColumn]
-  
-[Column]
-Width=78
-  
-[HeaderText]
-Position=46,80,78,104
-Text=H1b
- 
-[Field]
-Name=H1B
-Position=55,0,70,20
-Item=H1B,COMMUNITY_DICT
-DataCaptureType=RadioButton
-  
-[Text]
-Text=H1b
- 
-[EndColumn]
-  
-[EndGrid]
- 
-  
-[Field]
-Name=I1
-Position=87,249,116,269
-Item=I1,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,252,51,268
-Text=I1
- 
-  
-[Field]
-Name=I2
-Position=87,279,116,299
-Item=I2,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,282,51,298
-Text=I2
- 
-  
-[Field]
-Name=I3
-Position=87,309,116,329
-Item=I3,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,312,51,328
-Text=I3
- 
-  
-[Field]
-Name=I4
-Position=87,339,116,359
-Item=I4,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,342,51,358
-Text=I4
- 
-  
-[Field]
-Name=I4_1
-Position=87,369,452,389
-Item=I4_1,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=CheckBox
-Form=9
-  
-[Text]
-Position=40,372,65,388
-Text=I4_1
- 
-  
-[Field]
-Name=I4_2
-Position=87,399,116,419
-Item=I4_2,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,402,65,418
-Text=I4_2
- 
-  
-[Field]
-Name=I5
-Position=87,429,116,449
-Item=I5,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,432,51,448
-Text=I5
- 
-  
-[Field]
-Name=I6
-Position=87,459,116,479
-Item=I6,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,462,51,478
-Text=I6
- 
-  
-[Field]
-Name=I8
-Position=87,489,116,509
-Item=I8,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,492,51,508
-Text=I8
- 
-  
-[Field]
-Name=I9
-Position=87,519,102,539
-Item=I9,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=40,522,51,538
-Text=I9
- 
-  
-[Field]
-Name=I10
-Position=96,563,111,583
-Item=I10,COMMUNITY_DICT
-DataCaptureType=RadioButton
-Form=9
-  
-[Text]
-Position=39,568,57,584
-Text=I10
- 
-[EndGroup]
-  
-[Group]
-Required=Yes
 Name=GROUP_J
 Label=J Street lighting
-Form=10
+Form=9
 LogicControl=No
 Max=1
   
@@ -2165,7 +1888,7 @@ Position=64,31,79,51
 Item=J1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,34,42,50
@@ -2178,7 +1901,7 @@ Position=64,61,93,81
 Item=J2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,64,42,80
@@ -2191,7 +1914,7 @@ Position=64,91,79,111
 Item=J3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,94,42,110
@@ -2204,7 +1927,7 @@ Position=64,121,93,141
 Item=J4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,124,42,140
@@ -2217,7 +1940,7 @@ Position=64,151,93,171
 Item=J5,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,154,42,170
@@ -2229,7 +1952,7 @@ Name=J6
 Position=64,181,93,201
 Item=J6,COMMUNITY_DICT
 FieldLabelType=DictionaryName
-Form=10
+Form=9
   
 [Text]
 Position=28,184,42,200
@@ -2242,7 +1965,7 @@ Position=64,211,79,231
 Item=J7,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,214,42,230
@@ -2255,7 +1978,7 @@ Position=64,241,79,261
 Item=J8,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,244,42,260
@@ -2268,7 +1991,7 @@ Position=64,271,79,291
 Item=J9,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
-Form=10
+Form=9
   
 [Text]
 Position=28,274,42,290
