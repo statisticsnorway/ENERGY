@@ -233,24 +233,6 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.C4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many households have moved out of the community during the past years (since 2016)?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24Quantas fam\'edlias se mudaram para fora da comunidade durante os \'faltimos anos (desde 2016)?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, ni kaya ngapi zimehama kutoka katika jamii hii kwa kipindi cha miaka miwili iliyopita?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.C4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What are the two most widespread economic activities in this community/quarter?\par
@@ -269,6 +251,24 @@ SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 SW=\pard\cf1\fs24\lang2057 Taja shughuli ngapi kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii\par
 SW=\par
 SW=Ya kwanza\par
+SW=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.C4
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many households have moved out of the community during the past years (since 2016)?\par
+EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24Quantas fam\'edlias se mudaram para fora da comunidade durante os \'faltimos anos (desde 2016)?\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green0\blue0;}
+SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+SW=\pard\cf1\fs24 Je, ni kaya ngapi zimehama kutoka katika jamii hii kwa kipindi cha miaka miwili iliyopita?\par
 SW=}
 
 [QUESTION]
@@ -472,7 +472,7 @@ Field=COMMUNITY_DICT.D16A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Do you practice load shedding in this area in the rainy season?\par
+EN=\pard\cf1\fs24 Do you practice load shedding in this area in the rainy season?\fs19\par
 EN=}
 
 [QUESTION]
@@ -522,7 +522,7 @@ Field=COMMUNITY_DICT.D18
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week?\par
+EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week (hours)?\par
 EN=}
 
 [QUESTION]
@@ -1100,7 +1100,7 @@ Field=COMMUNITY_DICT.D9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Did the community pay to get the grid connection to the community ?\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How much did the community pay to get the grid connection?\par
 EN=
 EN=\pard\par
 EN=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\lang2057\par
@@ -1147,12 +1147,11 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.F1A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is the village accessible by motor vehicle (car or truck)?\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 First we would like to know whether Is the community accessible by motor vehicle (car or truck) during the dry season?\par
 EN=\par
-EN=\cf2 ASK FOR DRY SEASON IN COUNTRY.\par
-EN=\cf1\par
+EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -1172,12 +1171,9 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.F1B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is the village accessible by motor vehicle (car or truck)?\par
-EN=\par
-EN=\cf2 ASK FOR RAINY SEASON IF SEASONALITY IN COUNTRY.\par
-EN=\cf1\par
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Is the community also accessible by motor vehicle (car or truck) during the rainy season?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1213,12 +1209,11 @@ SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.F3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset0 Calibri;}}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 If not in town/city. What is the distance in kilometers from the community to the nearest town/city?\par
-EN=\par
-EN=\cf2\f1 IF COMMUNITY IN A TOWN/CITY CODE DISTANCE AS 0 KM WITHOUT ASKING\cf1\f0\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest town/city?\par
+EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Calibri;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;}
@@ -1243,11 +1238,11 @@ SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.F4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Calibri;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 If not in district center.  What is the distance in kilometers from the community to the district center?\par
-EN=\cf2\f1 If community in a district center code distance as 0 km without asking\cf1\f0\par
+EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the district center?\par
+EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -1273,9 +1268,10 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.F5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 If not in district center.  What is the distance in kilometers from the community to the nearest bank branch?\par
+EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest bank branch?\par
+EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -1299,9 +1295,10 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.F6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 If not in district center.  What is the distance in kilometers from the community to the nearest microfinance institution?\par
+EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest microfinance institution?\par
+EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -1462,7 +1459,7 @@ Occurrences=1:10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any %currentElement% making goods of the following types in this community?\par
+EN=\pard\cf1\fs24\lang1033 Are there any %currentElement% making goods in this community?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1608,6 +1605,38 @@ SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kaya nyingi zinanunu
 SW=}
 
 [QUESTION]
+Field=COMMUNITY_DICT.I3B
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using firewood, dung, twigs, rice husks or leaves?\par
+EN=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.I3C
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using charcoal?\par
+EN=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.I3D
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using  pellets or briquettes?\par
+EN=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.I3E
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use stoves with LPG, biogass, electrical stove or solar cooker?\par
+EN=}
+
+[QUESTION]
 Field=COMMUNITY_DICT.I4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -1660,6 +1689,22 @@ SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Kwanini kaya hazitumii majiko yaliyoboreshwa?\par
 SW=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.I4A
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Is it possible to buy an improved cookstove in this community?\par
+EN=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.I4B
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Where is the closest location to buy an improved cookstove in this community?\par
+EN=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.I5

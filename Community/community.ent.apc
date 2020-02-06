@@ -5,9 +5,6 @@ PROC GLOBAL
 
 
 
-
-
-
 	
 PROC COMMUNITY_FF
 
@@ -24,44 +21,44 @@ preproc
 	
 PROC C_A1
 preproc
-//	$ = toNumber(sysparm("REGION"));
-//	noinput;
+	$ = toNumber(sysparm("REGION"));
+	noinput;
 
 
 PROC C_A2
 preproc
-//	$ = toNumber(sysparm("DISTRICT"));
-//	noinput;
+	$ = toNumber(sysparm("DISTRICT"));
+	noinput;
 	
 	
 PROC C_A3
 preproc
-// 	$ = toNumber(sysparm("SUBDISTRICT"));
-// 	noinput;
+ 	$ = toNumber(sysparm("SUBDISTRICT"));
+ 	noinput;
  
 
 PROC C_A4 
 preproc
-// 	$ = toNumber(sysparm("LOCALITY"));
-// 	noinput;
+ 	$ = toNumber(sysparm("LOCALITY"));
+ 	noinput;
 
 
 PROC C_A5
 preproc
-//	$ = toNumber(sysparm("VILLAGE"));
-//	noinput;
+	$ = toNumber(sysparm("VILLAGE"));
+	noinput;
 
 
 PROC C_A6
 preproc
-//	$ = toNumber(sysparm("EA"));
-//	noinput;
+	$ = toNumber(sysparm("EA"));
+	noinput;
 	
 
 PROC A6
 preproc
-//	A6 = toNumber(sysparm("URBANRURAL"));
-//	noinput;
+	A6 = toNumber(sysparm("URBANRURAL"));
+	noinput;
 	
 
 	
@@ -194,36 +191,32 @@ PROC D23
 
 
 
+PROC D27
+preproc
+	if not (pos("1", D1) > 0 or pos("2", D1) > 0) then
+	 skip to D31;
+	endif; 
 PROC D31
 postproc
 	if $ = 2 then
-		skip to GROUP_H_I;
-	endif;
-
-
-
-PROC D34
-preproc
-	if A6 = 1 then
-		skip to E1_NO(1);
+		skip to GROUP_H;
 	endif;
 
 
 
 PROC H_NO
 onfocus
-	 numeric i = curocc();
-	 H_DESC = getLabel(H_NO, i);
-	 $ = i;
+	 $ = curocc();
 	 skip to H1A;
 PROC H1A
 preproc
- currentElement = H_DESC(curocc());
-PROC I4
+	currentElement = getLabel(H_NO, curocc());
 postproc
-	if $ = 2 then
-		skip to I4_2;
-	endif;
+	if $ = 1 then
+	 skip to next;
+	endif; 
+ 
+
 PROC F1B
  if $ = 1 and F1A IN 2,3 then
    		errmsg(tr(12),edit("Z9",$));
@@ -242,45 +235,41 @@ PROC F4
     endif;
 PROC F8_NO
 onfocus
-	 numeric i = curocc();
-	 F8_DESC = getLabel(F8_NO, i);
-	 $ = i;
+	 $ = curocc();
 	 skip to F8A;
 
 PROC F8A
 preproc
- currentElement = F8_DESC(curocc());
+ currentElement = getLabel(F8_NO, curocc());
 postproc
  if $ = 1 then
   skip F8C(curocc());
  endif;
+PROC F8B
+postproc
+	skip to F8D;
+	
 PROC G_NO
 onfocus
-	 numeric i = curocc();
-	 G_DESC = getLabel(G_NO, i);
-	 $ = i;
+	 $ = curocc();
 	 skip to G1A;
 PROC G1A
 preproc
- currentElement = G_DESC(curocc());
+ currentElement = getLabel(G_NO, curocc());
 PROC G_SER_NO
 onfocus
-	 numeric i = curocc();
-	 G_DESC_SER = getLabel(G_SER_NO, i);
-	 $ = i;
+	 $ = curocc();
 	 skip to G11A;
 PROC G11A
 preproc
- currentElement = G_DESC_SER(curocc());
+ currentElement = getLabel(G_SER_NO, curocc());
+PROC I4A
+ if $ in 2,88 then
+  skip to I9;
+ endif; 
 PROC J1
  if $ = 2 then
   endlevel;
  endif;
   
-PROC J6
-if $ > 12 then
-		errmsg(tr(14),edit("Z9",$));
-		reenter;
-	endif;
-PROC J9
 
