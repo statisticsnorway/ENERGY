@@ -9,17 +9,19 @@ PT=Portuguese
 [QUESTION]
 Field=LISTING_DICT.LL10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the name of the head of the household?\par
+EN=\cf2 (This is dwelling number %serial%)\cf1\par
 EN=}
 
 [QUESTION]
 Field=LISTING_DICT.LL10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the name of the head of the household?\par
+EN=\cf2 (This is dwelling number %serial%)\cf1\par
 EN=}
 
 [QUESTION]

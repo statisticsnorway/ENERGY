@@ -168,7 +168,7 @@ preproc
 
 
 PROC LL9
-	if $ <> 1 then
+	if $ <> 1 and $ <> 2 then
 		//Ending the listing. Nobody here. 
 		savesettings();
 		endlevel;
@@ -176,3 +176,16 @@ PROC LL9
 	
 	
 	
+PROC LL10
+	if $ = "" then
+		errmsg(tr(106))
+				select(maketext(tr(107)), reenter, makeText(tr(108)), LL9);
+	endif;
+	
+	
+	
+PROC LL11
+	if $ = "" then
+		errmsg(tr(109));
+		reenter;
+	endif;

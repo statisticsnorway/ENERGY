@@ -134,7 +134,7 @@ PROC GLOBAL
 			intNum = 4;
 		endif;
 		
-
+		
 		if fileexist("../Data/Sample.csdb") then
 			setFile(SAMPLING_DICT, "../Data/Sample.csdb");
 		else
@@ -147,26 +147,30 @@ PROC GLOBAL
 		if theCount = 1 or theCount = theTotal then
 			step = 1;
 			startPoint = 1;
+			errmsg("set to one, but why?");
 		else			
-			step = int(theTotal/theCount);
+			step = theTotal/theCount;
+			errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
 			if step = 0 then
 				step = 1;
 			endif;
 			seed(systime());
-			startPoint = random(1, step + 1);
+			startPoint = random(1, int(step) + 1);
 		endif;
 		
 		
-		numeric currStep = step;
+		numeric currIntStep = int(step);	//The "actual" step need to be integer
+		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
 		numeric currCount = 0;
 		numeric idx = 0;
-		//errmsg("start: %d, step: %d, count: %d", startPoint, step, theCount);
+		errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL4 = visualValue(M_EA) 
-							and LL9 = 1 and LL12 = connType do
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) 
+							and LL9 in 1,2 and LL12 = connType do
 			inc(idx);
-			if idx < startPoint and (idx <> startPoint + currstep) then
+			if idx < startPoint and (idx <> startPoint + currIntstep) then
 				//not selected	
 			else
 				S_LISTING_LOGIN = LLOGIN;
@@ -200,7 +204,7 @@ PROC GLOBAL
 				if currHHNum = DEFAULT then
 					currHHNum = 0;
 				endif;
-				//errmsg("tablet: %s, currHHNum: %d, HHnum: %d, sampleSize: %d", tabletCount(j,1), currHHNum, numHHPerInt, sampleSize); 		
+				//errmsg("Int: %s, Ant. assignet denne int så langt: %d, Skal bli: %d, sampleSize: %d", tabletCount(j,1), currHHNum, numHHPerInt, sampleSize); 		
 			
 		
 				if currHHNum < numHHPerInt then
@@ -232,6 +236,7 @@ PROC GLOBAL
 				endif;
 				
 				currstep = currstep + step;
+				currIntStep = int(currStep);
 				inc(currCount);
 			endif;
 			
@@ -254,7 +259,7 @@ PROC GLOBAL
 		
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 do
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 do
 			SLOGIN = LLOGIN;
 			SA1 = LL1;
 			SA2 = LL2;
@@ -280,12 +285,12 @@ PROC GLOBAL
 	
 	//Setting table names in the array for counting number of HHs assigned.
 	//The function returns total number of HH to sample
-	function numeric setTabletNames()
+	function numeric setEnumerators()
 		numeric ctr = 1, numOfInterviewers = 1;
 		
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 do
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 do
 			if ctr = 1 then
 				tabletCount(1,1) = tstrip(LLOGIN);
 			else
@@ -306,14 +311,15 @@ PROC GLOBAL
 			inc(ctr);			
 		endfor;
 		if visualValue(M_URBAN_RURAL) = 2 then
-			setTabletNames = 24;	//Samplesize always the same for rural areas
+			setEnumerators = 24;	//Samplesize always the same for rural areas
 		else
 			if numOfInterviewers = 3 then
-				setTabletNames = 21;	//Need a number divisible by 3
+				setEnumerators = 21;	//Need a number divisible by 3
 			else
-				setTabletNames = 20
+				setEnumerators = 20
 			endif;
 		endif;
+		
 	end;
 
 
@@ -324,8 +330,9 @@ PROC GLOBAL
 		//Reset the variables keeping track of number of households assigned to interviewers and get the sample size
 		//which is dependent on the number of interviewers as well as urban/rural
 		tabletCount.clear();
-		numeric sampleSize = setTabletNames();
+		numeric sampleSize = setEnumerators();
 		//errmsg("%s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), tabletCount(4,1));
+		//errmsg("About to sample %d", sampleSize);
 		
 		//get rid of sample data from previous EA:
 		numeric ok = close(SAMPLING_DICT);
@@ -335,7 +342,7 @@ PROC GLOBAL
 		numeric tot = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2);
 		
 		if tot <= sampleSize then
 			sampleall(); 
@@ -344,25 +351,35 @@ PROC GLOBAL
 		numeric totSolar = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 = 3);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 = 3);
 		numeric totGrid = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 in 1:2);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 in 1:2);
 		numeric totNone = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 = 1 and LL12 = 4);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in  1,2 and LL12 = 4);
 							
-		numeric solarCount = sampleSize * totSolar/tot;	//Number of HH with solar that the sample should contain
-		numeric gridCount = sampleSize * totGrid/tot;
-		numeric noneCount = sampleSize * totNone/tot;
+		//solarCount = number of HH with solar panels that the sample should contain
+		numeric solarCount = round(2 * sampleSize * totSolar/tot);	//Solar should have double chance of being sampled
 		
-		
-		//We need to have at least 1 with solar system. Ensuring this:
-		if int(solarCount) <> solarCount then	//Not sure if this works..
-			solarCount = int(solarCount) + 1;
+		//Need to check if I have enogh HHs with solar
+		if solarCount > totSolar then
+			solarCount = totSolar;
 		endif;
+		
+		//Drawing at least one.. Just to be sure:
+		if solarCount = 0 and totSolar > 0 then
+			solarCount = 1;
+		endif;
+		
+		numeric theRest = sampleSize - solarCount;
+		numeric theDenom = tot - totSolar;
+		
+		numeric gridCount = theRest * totGrid/theDenom;
+		numeric noneCount = theREst * totNone/theDenom;
+		
 			
 		//Checking the decimal part of the two others to find which to decrease accordingly
 		if gridcount * 100 - int(gridCount) * 100 < noneCount * 100 - int(noneCount) * 100 then
@@ -376,12 +393,15 @@ PROC GLOBAL
 		//errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
 		
 		if solarCount > 0 then
+			errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
 			writeSample(2, solarCount, totSolar, sampleSize);
 		endif;
 		if gridCount > 0 then
+			errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
 			writeSample(1, gridCount, totGrid, sampleSize);
 		endif;
 		if noneCount > 0 then
+			errmsg("Sampling none. count: %d, tot: %d, sampleSize: %d", noneCount, totNone, sampleSize);
 			writeSample(3, noneCount, totNone, sampleSize);
 		endif;
 
@@ -508,7 +528,7 @@ PROC GLOBAL
 		pffContent = pffContent + "REGION=" + edit("ZZ", visualvalue(M_REGION)) + "\n";
 		pffContent = pffContent + "DISTRICT=" + edit("ZZ", visualvalue(M_DISTRICT)) + "\n";
 		pffContent = pffContent + "SUBDISTRICT=" + edit("ZZZ", visualvalue(M_SUBDISTRICT)) + "\n";
-		pffContent = pffContent + "LOCALITY=" + edit("ZZ", visualvalue(M_SUBDISTRICT)) + "\n";
+		pffContent = pffContent + "LOCALITY=" + edit("ZZ", visualvalue(M_LOCALITY)) + "\n";
 		pffContent = pffContent + "VILLAGE=" + edit("ZZ", visualValue(M_VILLAGE)) + "\n";
 		pffContent = pffContent + "EA=" + edit("ZZZ", visualvalue(M_EA)) + "\n";
 		pffContent = pffContent + "URBANRURAL=" + edit("Z", visualvalue(M_URBAN_RURAL)) + "\n";
@@ -792,6 +812,7 @@ preproc
 	numeric currentLoc = NOTAPPL, idx = 0;
 	
 	forcase REGIONS_DICT where REGION_CODE = M_REGION and DISTRICT_CODE = M_DISTRICT and SUBDISTRICT_CODE = M_SUBDISTRICT do
+		
 		if currentLoc <> NOTAPPL and currentLoc = LOCALITY_CODE then
 			next;
 		else
@@ -814,7 +835,8 @@ preproc
 	
 	forcase REGIONS_DICT where REGION_CODE = M_REGION 
 						and DISTRICT_CODE = M_DISTRICT 
-						and SUBDISTRICT_CODE = M_SUBDISTRICT do
+						and SUBDISTRICT_CODE = M_SUBDISTRICT
+						and LOCALITY_CODE = M_LOCALITY do
 		if currentVillage <> NOTAPPL and currentVillage = VILLAGE_CODE then
 			next;
 		else
@@ -839,6 +861,7 @@ preproc
 		forcase REGIONS_DICT where REGION_CODE = M_REGION 
 							and DISTRICT_CODE = M_DISTRICT 
 							and SUBDISTRICT_CODE = M_SUBDISTRICT 
+							and LOCALITY_CODE = M_LOCALITY
 							and VILLAGE_CODE = M_VILLAGE do
 			if currentEA <> NOTAPPL and currentEA = EA_CODE then
 				next;
@@ -918,17 +941,21 @@ preproc
 			AA5 = SA5;
 			AA6 = SA6;
 			AA8 = SA8;
-			M_LOGIN = SLOGIN;
-			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, Login: %s",
-			//	AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AALOGIN); 
+			AALOGIN = SLOGIN;
+			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, AA8: %d, Login: %s",
+				//AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6,AA8, AALOGIN); 
 			if loadcase(HHQ_DICT) then				
 				//Already visited. Need to find out if it is finished or not
+				//errmsg("Been here. Checking if finalised");
 				if ispartial(HHQ_DICT) then
+					errmsg("not final");
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
 				else	//Finished
+					//errmsg("Finnished");
 					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
 				endif;
 			else
+				//errmsg("never been here at all");
 				HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
 			endif;
 			

@@ -13,3 +13,11 @@ PT(104) Não
 
 EN(105) Could not register GPS coordinates. Try again?
 PT(105) Não foi possível registrar coordenadas de GPS. Tente novamente?
+
+EN(106) Name of Head of household can't be missing if presence of household is "present" or "Temporary away". Please choose
+
+EN(107) reenter name of head of household
+
+EN(108) change presence status of HH
+
+EN(109) Please enter address/description of location
