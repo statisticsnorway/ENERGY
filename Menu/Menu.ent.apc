@@ -8,6 +8,7 @@ PROC GLOBAL
 									// first dimension: Id of tablet, second: number of HH assigned to tablet
 									
 	map HHmap;		//for showing the HHs on a map
+	String currentBaseMap;	//To keep track when toggling between satelite and default map
 	
 	
 
@@ -56,6 +57,12 @@ PROC GLOBAL
 
 	//Interviewer get Sample from supervisor
 	function syncGetSample()
+		//Delete the old sample file first
+		if fileexist("../Data/Sample.csdb") then
+			filedelete("../Data/Sample.csdb");
+		endif;
+		setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
+	
 		if syncconnect(bluetooth) = 1 then
 			syncdata(GET, SAMPLING_DICT);
 			syncdisconnect();
@@ -111,6 +118,19 @@ PROC GLOBAL
 	end;
 
 
+
+	//Toggle between satelite and normal view on maps
+	function toggleView()
+		if currentBaseMap = "Normal" then
+			HHmap.setBaseMap(Satellite);
+			currentBaseMap = "Satellite";
+		else
+			HHmap.setBaseMap(Normal);
+			currentBaseMap = "Normal";
+		endif;
+		HHMap.show();
+	end;
+			
 	
 	//*******************************writes to the sample dictionary**********************
 	//Parameters:
@@ -147,10 +167,9 @@ PROC GLOBAL
 		if theCount = 1 or theCount = theTotal then
 			step = 1;
 			startPoint = 1;
-			errmsg("set to one, but why?");
-		else			
+			else			
 			step = theTotal/theCount;
-			errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
+			//errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
 			if step = 0 then
 				step = 1;
 			endif;
@@ -163,7 +182,7 @@ PROC GLOBAL
 		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
 		numeric currCount = 0;
 		numeric idx = 0;
-		errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
 							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -185,7 +204,7 @@ PROC GLOBAL
 				SA7B = LL7B;
 				SA8 = LL8;
 				SA9 = LL9;
-				SA10 = SA10;
+				SA10 = LL10;
 				SA11 = LL11;
 				SA12 = LL12;
 				SUR = LLUR;
@@ -336,7 +355,7 @@ PROC GLOBAL
 		
 		//get rid of sample data from previous EA:
 		numeric ok = close(SAMPLING_DICT);
-		ok = Filedelete("../Data/sample*.csdb");
+		ok = Filedelete("../Data/Sample.csdb");
 		
 		//Analysis of the listed cases
 		numeric tot = countCases(LISTING_DICT 
@@ -393,15 +412,15 @@ PROC GLOBAL
 		//errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
 		
 		if solarCount > 0 then
-			errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
+			//errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
 			writeSample(2, solarCount, totSolar, sampleSize);
 		endif;
 		if gridCount > 0 then
-			errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
+			//errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
 			writeSample(1, gridCount, totGrid, sampleSize);
 		endif;
 		if noneCount > 0 then
-			errmsg("Sampling none. count: %d, tot: %d, sampleSize: %d", noneCount, totNone, sampleSize);
+			//errmsg("Sampling none. count: %d, tot: %d, sampleSize: %d", noneCount, totNone, sampleSize);
 			writeSample(3, noneCount, totNone, sampleSize);
 		endif;
 
@@ -510,7 +529,7 @@ PROC GLOBAL
 		
 		if questName = "HHQ" then
 			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "SAMPLING_DICT=..\Data\sample.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n\n";
 		endif;
 		
 		if questName = "Menu" then
@@ -519,8 +538,8 @@ PROC GLOBAL
 			pffContent = pffContent + "HHQ_DICT=..\Data\HHQ.csdb|CSPRODB\n";
 			pffContent = pffContent + "LISTING_DICT=..\Data\Listing.csdb|CSPRODB\n";
 			pffContent = pffContent + "REGIONS_DICT=..\LookupFiles\Regions.csdb|CSPRODB\n";
-			pffContent = pffContent + "SAMPLING_DICT=..\Data\sample.csdb|CSPRODB\n";
-			pffContent = pffContent + "USERS_DICT=..\LookupFiles\users.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n";
+			pffContent = pffContent + "USERS_DICT=..\LookupFiles\Users.csdb|CSPRODB\n\n";
 		endif;
 		
 		pffContent = pffContent + "[Parameters]\n";
@@ -618,10 +637,10 @@ preproc
 	
 postproc
 	loggedIn = "N";	//Just in case it's missing or something
-	LOGIN = $;
+	LOGIN = toLower($);
 	string pw = prompt(tr(10), password);
 	numeric load = loadcase(USERS_DICT, LOGIN);
-	if tStrip(pw) = tStrip(PASSWORD) then
+	if toLower(tStrip(pw)) = toLower(tStrip(PASSWORD)) then
 		//ok. Right password
 		if  tolower(tstrip(ROLE)) = "supervisor" then 
 			loggedIn = "S";					
@@ -660,9 +679,6 @@ postproc
 		
 	elseif $ = 2 then	////HHQ questionnaire. 
 		skip to M_HOUSEHOLD
-		
-	//elseif  $ = 3 then 	 //Community questionnaire. Moved to supervisor menu
-		//skip to M_REGION;
 		
 	elseif $ = 4 then 		//Sync listingdata. 
 		numeric ok = syncSendListing();
@@ -925,6 +941,14 @@ preproc
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
+	if visualValue(M_URBAN_RURAL) = 1 then
+		//Urban area
+		HHMap.setBaseMap(Normal);
+		currentBaseMap = "Normal";
+	else
+		HHMap.setBaseMap(Satellite);
+		currentBaseMap = "Satelite";
+	endif;
 	while loadcase(SAMPLING_DICT) do	
 		if tstrip(SLOGIN) = tstrip(M_LOGIN) then	//Setting vset arrays in case it is windows where maps doesn't work
 			
@@ -943,19 +967,19 @@ preproc
 			AA8 = SA8;
 			AALOGIN = SLOGIN;
 			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, AA8: %d, Login: %s",
-				//AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6,AA8, AALOGIN); 
-			if loadcase(HHQ_DICT) then				
+			//	AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6,AA8, AALOGIN);
+			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
+			if loaded then				
 				//Already visited. Need to find out if it is finished or not
-				//errmsg("Been here. Checking if finalised");
 				if ispartial(HHQ_DICT) then
-					errmsg("not final");
+					//errmsg("not final. Serial: %d", SA8);
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
 				else	//Finished
-					//errmsg("Finnished");
+					//errmsg("Finnished. Serial: %d", SA8);
 					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
 				endif;
 			else
-				//errmsg("never been here at all");
+				//errmsg("never been here at all. Serial: %d", SA8);
 				HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
 			endif;
 			
@@ -973,6 +997,7 @@ preproc
 		errmsg(tr(7));
 		stop(1);
 	endif;
+	HHmap.addTextButton("Toggle view", toggleView());
 	HHmap.show();
 	vsetCodes(i) = NOTAPPL;
 	setValueset(M_HOUSEHOLD, vsetCodes, vsetLabels);
