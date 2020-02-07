@@ -1,4 +1,4 @@
-*.csdb
+#*.csdb
 *.cslog
 *.xlsx
 *.pff
