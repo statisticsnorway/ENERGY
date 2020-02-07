@@ -1,7 +1,9 @@
-#*.csdb
+*.csdb
 *.cslog
 *.xlsx
 *.pff
+*.lst
+*.log
 /Docs/*
 .bak
 LookupFiles/Regions_old.csdb
