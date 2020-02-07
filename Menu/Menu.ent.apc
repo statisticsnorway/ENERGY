@@ -370,15 +370,15 @@ PROC GLOBAL
 		numeric totSolar = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 = 3);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 = 2);
 		numeric totGrid = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 in 1:2);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 and LL12 = 1);
 		numeric totNone = countCases(LISTING_DICT 
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT) 
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
-							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in  1,2 and LL12 = 4);
+							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in  1,2 and LL12 = 3);
 							
 		//solarCount = number of HH with solar panels that the sample should contain
 		numeric solarCount = round(2 * sampleSize * totSolar/tot);	//Solar should have double chance of being sampled
