@@ -915,7 +915,21 @@ postproc
 		reenter M_SUPERMENU;
 	else
 		if M_MENU = 1 then 	//Listing
-			writepff("Listing questionnaire", "Listing", "", NOTAPPL, "I");
+
+			numeric currSerial = 0;
+			if newEA = "2" then
+				//Need to find biggest HH number until now
+								forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and 
+							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
+							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
+					if LL8 > currSerial then
+						currSerial = LL8;
+					endif;
+				endfor;
+			endif;
+				
+			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
 		
 		elseif M_MENU = 3 then	//HHQ
 			//Select household first

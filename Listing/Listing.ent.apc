@@ -57,7 +57,7 @@ preproc
 
 PROC LISTING_QUEST_FORM
 preproc
-	LLOGIN = loadSetting("Slogin");	//Haven't quite decided about what to do with the deviceId yet
+	LLOGIN = loadSetting("Slogin");	
 	region = loadSetting("Sregion");
 	district = loadSetting("Sdistrict");
 	subdistrict = loadSetting("SsubDistrict");
@@ -82,8 +82,16 @@ preproc
 				lstrip(ea) = lstrip(sysparm("EA")) and
 				lstrip(urbRUr) = lstrip(sysparm("URBANRURAL")) then
 		
-		//Still in the same ea
-		LL8 = toNumber(serial) + 1;
+		//Still in the same ea. For some reason it doesn't quite work, so choosing highest serial to avoid duplicates
+		if lstrip(sysparm("SERIAL")) <> "NOT" then
+			if toNumber(lstrip(sysparm("SERIAL"))) > toNumber(serial) then
+				LL8 = toNumber(lstrip(sysparm("SERIAL"))) + 1;
+			else
+				LL8 = toNumber(serial) + 1;
+			endif;
+		else
+			LL8 = toNumber(serial) + 1;
+		endif;
 		
 	else
 		//new ea
