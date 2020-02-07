@@ -33,6 +33,9 @@
     },
     {
       "path": ".\\Images\\Location-yellow.png"
+    },
+    {
+      "path": ".\\Data\\Listing.csdb"
     }
   ],
   "dictionaries": [
