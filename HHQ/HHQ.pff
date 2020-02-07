@@ -4,30 +4,28 @@ AppType=Entry
 Description=Household Questionnaire
 
 [DataEntryInit]
-Interactive=Ask
 StartMode=Add
-AutoAdd=No
-FullScreen=Yes
 ShowInApplicationListing=Never
+FullScreen=Yes
+AutoAdd=No
 
 [Files]
-Application=./HHQ.ent
-InputData=../Data/HHQ.csdb|CSPRODB
-Paradata=../Data/HHQ_a0661000b083.cslog
+Application=.\HHQ.ent
+InputData=..\Data\HHQ.csdb
+Paradata=..\Data\HHQ_38afd7a8a8f8.cslog
 
 [ExternalFiles]
-SAMPLING_DICT=..\Data\sample.csdb|CSPRODB
+SAMPLING_DICT=..\Data\Sample.csdb
 
 [Parameters]
-LOGIN=per            
-REGION= 9
-DISTRICT= 1
-SUBDISTRICT=  4
-LOCALITY= 4
-VILLAGE= 2
-EA=  9
-URBANRURAL=1
-SERIAL=  1
 Language=EN
 OnExit=..\Menu\Menu.pff
-
+DISTRICT=1
+EA=2
+LOCALITY=99
+LOGIN=erna
+REGION=9
+SERIAL=13
+SUBDISTRICT=1
+URBANRURAL=1
+VILLAGE=5

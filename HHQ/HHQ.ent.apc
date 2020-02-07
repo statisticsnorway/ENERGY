@@ -472,6 +472,9 @@ postproc
 PROC B_FORM
 
 PROC B2
+preproc
+ errmsg(179);
+postproc
  // should be the oldest person, not the first
 	if $ > AB5(1) then
 		errmsg(tr(157),AB5(1));
@@ -495,6 +498,9 @@ PROC B5
 
 
 PROC B17
+preproc
+ errmsg(180);
+postproc
 	if $ = 2 then
 		skip to B19;
 	endif;
@@ -515,6 +521,8 @@ PROC B23
 
 
 PROC C1
+preproc
+ errmsg(181);
 onfocus
 	setValueset(C1, memberNumbers, memberNames);
 	
@@ -603,6 +611,9 @@ PROC C7
   skip to C80
  endif
 PROC C4
+preproc
+ errmsg(174);
+postproc 
  if $ = 88 then
   skip to C6
  endif; 
@@ -738,6 +749,9 @@ If C2G <> 3 then
  skip to C82K;
 endif; 
  
+PROC C82C
+preproc
+ errmsg(176,strip(solarDeviceType));
 PROC C82G
 preproc
  rangeStart = 20;
@@ -848,6 +862,8 @@ preproc
  if C2g <> 4 then 
   skip to C5_FORM;
  endif;
+ errmsg(177);
+
 onfocus 
  if C2g <> 4 then 
   skip to C110;
@@ -933,6 +949,8 @@ preproc
 	if C2g <> 6 then
 		skip to C6_FORM;
 	endif;
+	errmsg(178);
+
 	
 
 
@@ -1014,6 +1032,9 @@ PROC C146B
 		reenter;
 	endif;
 PROC C149
+preproc
+	errmsg(182);
+postproc
 	if $ = 0 then
 		skip to D_FORM;
 	endif;
@@ -1046,7 +1067,7 @@ preproc
  If (c2g = 1 or c2h = 1) then 
   skip to E_FORM;
  endif;
- 
+ errmsg(171);
 onfocus
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
@@ -1085,7 +1106,13 @@ preproc
   errmsg(169);
   skip to E3;
 PROC E3
-		
+preproc
+ if C2h = 1 or C2g = 1 then
+  errmsg(172);
+ else
+  errmsg(173);
+ endif;
+ 
 onfocus	
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
@@ -1115,6 +1142,9 @@ PROC G_FORM
   skip to F1;
  endif; 
 PROC G2
+preproc
+ errmsg(175);
+postproc
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
 		reenter;
@@ -1394,15 +1424,25 @@ PROC I6
 postproc 
   skip to i8;
  
+PROC I15A
+	If not((I15 in 1,2,3 or $ in 1,2,3) and (I2a=1 or I2c=1 or I2e=1)) then 
+	 skip to I18a;
+	endif; 
 PROC I18A
  fueltype1 = getvaluelabel($);
+ If $ in 18, 66, 55 then 
+  skip to I19c ;
+ endif;
 PROC I18B
 postproc
  if $ = i18a then
   errmsg(151);
   reenter;
- endif;  
+ endif;
  fueltype2 = getvaluelabel($);
+ If $ in 18, 66, 55 then 
+  skip to I19c ;
+ endif;
 PROC I19B
 preproc
 	if i18b in 55, 66 then 
@@ -1410,7 +1450,10 @@ preproc
 	endif; 
 
 PROC I19D
- 
+preproc
+If I18a in 3,8,17 then 
+ skip to I20;
+endif; 
 postproc 
   UnitFuel = getvaluelabel($);
   
@@ -1464,6 +1507,7 @@ PROC O1_1
 onfocus
 	errmsg(tr(146),strip(namePersonCooksMostOften));
 	$ = I1;
+	currMember = memberNames(PersonCooksMostOften);
 	noinput;
 
 

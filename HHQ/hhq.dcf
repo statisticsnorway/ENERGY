@@ -744,15 +744,13 @@ DataType=Alpha
 [ValueSet]
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B11_VS1
-Value='1      ';No toilet|Nenhum (campo aberto)|Hakuna choo
-Value='2      ';Pit latrine without slab/Open pit|Descarga para esgoto|Shimo la wazi lisilo na mfuniko/Choo cha wazi kisicho na mfuniko
-Value='3      ';Pit latrine with slab (not washable)|Descarga a fossa séptica|Choo cha shimo chenye mfuniko (kisichosafishika)
-Value='4      ';Pit latrine with slab (washable)|Balde|Choo cha shimo chenye mfuniko (kinachosafishika)
-Value='5      ';VIP|Latrina a céu cobertos|Choo cha shimo cha kisasa (VIP)
-Value='6      ';Pour flush|Latrina a céu não coberto|Choo cha kuvuta
-Value='7      ';Flush toilet|Latrina comunitária|Choo cha kumwagia maji
-Value='8      ';Ecosan|Ecosan|Choo cha ecosan
-Value='9      ';Other|De outros|Nyingine
+Value='1      ';None (open field)|Nenhum (campo aberto)|Hakuna choo
+Value='2      ';Flush to sewage
+Value='3      ';Flush to septic tank
+Value='4      ';Pail/Bucket
+Value='5      ';Covered pit latrine
+Value='6      ';Uncovered pit latrine
+Value='7      ';Community latrine
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
@@ -763,19 +761,17 @@ Len=2
 [ValueSet]
 Label=Source drinking water|Principal fonte de água potável do AF
 Name=B12_VS1
-Value=1;Tap water within the household|Tubulação de água nascido|Maji ya bomba ndani ya nyumba au eneo la nyumba - katika kaya
-Value=2;Tap water within the neighbouring household|Furo / bomba de mão|Maji ya bomba kwa jirani/kaya nyingine
-Value=3;Community tap water|Bomba de água elétrica|Maji ya bomba ya jumuiya
-Value=4;Deep drilled well|Fonte|Kisima kirefu cha bomba
-Value=5;Covered well|Rio / primavera|Kisima kilichofunikwa
-Value=6;Uncovered well|Lago / reservatório|Kisima kisichofunikwa
-Value=7;Taped/captured spring|A água da chuva|Chemchem iliyojengewa
-Value=8;Unraped spring|Tanque / caminhão / fornecedor|Chemche isiyojengewa
-Value=9;Rain water|A água da chuva|Maji ya mvua
-Value=10;Mineral bottled water|Garrafa de água|Maji ya chupa - ya dukani
-Value=11;Vendors water (Bucket)|Saquinho de agua|Maji ya kununua kwenye ndoo/madumu
-Value=12;River/lake/Dam water|Água do rio/Água do lago/Reservatório|Maji ya mto/bwawa/ziwa/lambo
-Value=13;Other|De outros|Nyingine
+Value=1;Pipe borne water
+Value=2;Bore hole/ hand pump
+Value=3;Electric water pump
+Value=4;Protected well/spring
+Value=5;Unprotected well/spring
+Value=6;River/spring
+Value=7;Lake/reservoir
+Value=8;Rain water
+Value=9;Tanker/truck/vendor
+Value=10;Sachet water
+Value=11;Bottle water
 
 [Item]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
