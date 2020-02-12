@@ -933,8 +933,8 @@ DataType=Alpha
 [ValueSet]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B25_VS1
-Value='01                        ';Receive money from family/friends/other|Receber dinheiro de família / amigos / outros|Kupokea fedha kutoka kwa ndugu/rafiki
-Value='02                        ';Transfer credit or money to family/relatives|Transferência de crédito para a família / parentes|Kuhamisha fedha kwenda kwa ndugu/rafiki
+Value='01                        ';Receive money FROM family/friends/other|Receber dinheiro de família / amigos / outros|Kupokea fedha kutoka kwa ndugu/rafiki
+Value='02                        ';Transfer credit or money TO family/friends/other|Transferência de crédito para a família / parentes|Kuhamisha fedha kwenda kwa ndugu/rafiki
 Value='03                        ';Top up credit|Encher de crédito|Kuongeza fedha kwenye akaunti yangu
 Value='04                        ';Receive NGO/state support|Receber apoio de ONG / estado|Kupokea msaada kutoka NGO/Serikali
 Value='05                        ';Pay for electricity|Pagar a electricidade|Kulipia bili ya umeme
@@ -1758,6 +1758,12 @@ Name=C87
 Start=163
 Len=1
 
+[ValueSet]
+Label=Did you pay full or partial amount for your [DEVICE]
+Name=C87_VS1
+Value=1;Full amount
+Value=2;Partial amount
+
 [Item]
 Label=What is the term period for the payment?
 Name=C88
@@ -1818,6 +1824,12 @@ Name=C92
 Start=186
 Len=2
 
+[ValueSet]
+Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
+Name=C92_VS1
+Value=1;Yes
+Value=2;No
+
 [Item]
 Label=How many hours did you receive service from this [DEVICE] each day and night, during the last seven days?
 Name=C93
@@ -1846,6 +1858,7 @@ Value=4;Breaks too often|Pausas demasiado frequentemente|Huharibika mara kwa mar
 Value=5;Maintenance and availability of spare parts|Manutenção e disponibilidade de peças|Matengenezo na upatikanaji wa vipuri
 Value=6;Quality of light|Qualidade da luz|Ubora wa mwanga
 Value=7;Battery problems|Problemas de bateria|Matatizo ya betri
+Value=8;Too low capacity
 Value=55;Other|De outros|Nyingine.
 Value=66;No problems|Sem problemas|Hakuna matatizo
 
@@ -4022,7 +4035,6 @@ Value=2;Electric kettle/coil|Chaleira elétrica / bobina|Birika la umeme
 Value=3;Electric stove|Fogão elétrico|Jiko la umeme
 Value=4;Gas heater|Aquecedor a Gas|Hita ya gesi
 Value=5;Gas stove|Fogão a gás|Jiko la gesi
-Value=6;District heating|Aquecimento urbano
 Value=7;Solar thermal system|Sistema solar térmico|Mfumo wa maji moto wa umeme jua
 Value=8;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Baadhi ya majiko yanayotumia nishati yabisi
 Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Majiko maalum yanayotumia nishati yabisi
@@ -5223,11 +5235,9 @@ Len=1
 [ValueSet]
 Label=The quality of my household is better than 5 years ago|A qualidade da minha casa é melhor do que há 5 anos
 Name=S5_VS1
-Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
-Value=2;Agree|Concorda|Nakubaliana
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
-Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
-Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Item]
 Label=The monthly electric bill is or will be a financial burden|A conta de energia elétrica mensal é ou será um encargo financeiro
@@ -5238,11 +5248,9 @@ Len=1
 [ValueSet]
 Label=The monthly electric bill is or will be a financial burden|A qualidade da minha casa é melhor do que há 5 anos
 Name=S6_VS1
-Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
-Value=2;Agree|Concorda|Nakubaliana
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
-Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
-Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Item]
 Label=Smoke from stove is good at chasing insects away|Fumaça de fogão é bom em insetos afugentando
@@ -5253,11 +5261,9 @@ Len=1
 [ValueSet]
 Label=Smoke from stove is good at chasing insects away|A qualidade da minha casa é melhor do que há 5 anos
 Name=S7_VS1
-Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
-Value=2;Agree|Concorda|Nakubaliana
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
-Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
-Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Item]
 Label=Certain food tastes better when cooked with biomass|Certain comida tem gosto melhor quando cozidos com biomassa
@@ -5268,11 +5274,9 @@ Len=1
 [ValueSet]
 Label=Certain food tastes better when cooked with biomass|A qualidade da minha casa é melhor do que há 5 anos
 Name=S8_VS1
-Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
-Value=2;Agree|Concorda|Nakubaliana
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
-Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
-Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Item]
 Label=The stove is needed for lighting up the house in the evening|O fogão é necessário para relâmpago a casa à noite
@@ -5283,11 +5287,9 @@ Len=1
 [ValueSet]
 Label=The stove is needed for lighting up the house in the evening|A qualidade da minha casa é melhor do que há 5 anos
 Name=S9_VS1
-Value=1;Strongly agree|Concorda plenamente|Nakubaliana kabisa
-Value=2;Agree|Concorda|Nakubaliana
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
-Value=4;Strongly disagree|Discorda fortemente|Sikubaliani kabisa
-Value=5;No opinions|Sem opinião|Sina maoni yoyote
 
 [Record]
 Label=T Women's empowerment|O empoderamento das mulheres T
