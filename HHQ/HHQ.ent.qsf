@@ -66,9 +66,10 @@ SW=}
 Field=HHQ_DICT.A4
 Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Out of the last 12 months, how many months were %currMember% engaged in this activity?\par
+EN=\cf2 Max 12\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -85,9 +86,10 @@ SW=}
 Field=HHQ_DICT.A5
 Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How many days per month does %currMember% work in this activity?\par
+EN=\cf2 Max 30\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -533,9 +535,7 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Please enter names of all household member starting with head of household.\par
 EN=\cf2\fs19\par
-EN=\fs24 To end entering names, leave the field blank\par
-EN=\par
-EN=Signe\fs19\par
+EN=\fs24 To end entering names, leave the field blank\fs19\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\froman\fcharset0 Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -628,9 +628,10 @@ SW=}
 Field=HHQ_DICT.AB5
 Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How old was %currMember% at his/her last birthday?\cf0\f1\fs22\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How old was %currMember% at his/her last birthday?\par
+EN=\cf2 Write 00 if less than 1 year\cf0\f1\fs22\par
 EN=
 EN=\pard\cf1\f0\fs24\par
 EN=}
@@ -714,7 +715,7 @@ Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Did %currMember% attend to school this school year?\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Did %currMember% start school this school year?\par
 EN=
 EN=\pard\par
 EN=}
@@ -736,8 +737,8 @@ Field=HHQ_DICT.AC4
 Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What grade is %currMember% currently attending?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What grade did %currMember% start?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -790,9 +791,9 @@ SW=}
 Field=HHQ_DICT.AC7
 Occurrences=1:20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Did %currMember% attend school at any time during the previous school year?\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Did %currMember% attend school at any time during the \cf2 previous school year\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -882,9 +883,10 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.B10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 The floor of the dwelling is mainly made of what material?\par
+EN=\cf2 Enumerator: Check with observation\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -958,9 +960,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is your household\rquote s main source of energy for lighting?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is your household\rquote s main source of \cf2 energy for lighting\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -976,9 +978,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is your household\rquote s main source of energy for cooking?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is your household\rquote s main source of \cf2 energy for cooking\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1008,8 +1010,9 @@ PT=}
 Field=HHQ_DICT.B17
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does anybody in this household have an account or savings in a bank, credit union, or in micro-finance bank ? \par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 The next questions is about the households use of bank services. \par
+EN=Does anybody in this household have an account or savings in a bank, credit union, or in micro-finance bank? \par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1025,9 +1028,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B18
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 At which formal institution does this household have an account or savings?\par
+EN=\cf2 Read options aloud\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1057,8 +1061,8 @@ PT=}
 Field=HHQ_DICT.B19
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does anybody in this household participate in a rotating saving scheme or an informal saving institution ? \par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does anybody in this household participate in a rotating saving scheme or an informal saving institution? \par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1076,7 +1080,7 @@ Field=HHQ_DICT.B2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Now we would like to know more about the household and the dwelling. How many years have you been living in this community?\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Now we would like to know more about your dwelling. How many years have you been living in this community?\par
 EN=\cf2 Record 1 if less than 1\par
 EN=\cf0\f1\fs22\par
 EN=}
@@ -1100,9 +1104,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 At which informal institution does this household have an account or savings?\par
+EN=\cf2 Multiple response possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1131,9 +1136,10 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.B21
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 If you can get a loan/credit, what are the sources of credit/loans?\par
+EN=\cf2 Multiple response possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1202,9 +1208,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24\lang1033 How do you use the mobile money services?\par
+EN=\par
+EN=\cf2 Multiple response possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1221,8 +1229,9 @@ SW=}
 Field=HHQ_DICT.B3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the type of dwelling?\cf2\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the type of dwelling?\par
+EN=\cf2 Enumerator, check with observation\par
 EN=
 EN=\pard\cf1\par
 EN=}
@@ -1311,9 +1320,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 The walls of the dwelling are mainly made of what material?\par
+EN=\cf2 Enumerator: Check with observation\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1329,9 +1339,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.B9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 The roof of the dwelling is mainly made of what material?\par
+EN=\cf2 Enumerator: Check with observation\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1347,9 +1358,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Please select most knowledgeable person of the household to answer questions about household characteristics\par
+EN=\pard\cf1\fs24\lang1033 The respondent for the next section should be the most knowledgeable household member on household electricity. Are you well informed about these issues or would you like to have somebody else in the household to answer these questions? \cf2\par
+EN=\par
+EN=Please select most knowledgeable person of the household to answer questions about electricity.\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\froman\fcharset0 Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue255;}
@@ -1373,10 +1386,11 @@ SW=}
 Field=HHQ_DICT.C10
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much did your household pay for the internal wiring fee?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did your household pay for the internal wiring?\par
+EN=\par
 EN=\cf2 Do not include the connection fee from earlier question here\par
-EN=Enter 888888888 for "Don't know"\par
+EN=If dwelling was already connected to the grid when the household moved in, enter 888888888 for "Don't know".  For those that rent the dweling, choose 999999999\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1438,7 +1452,7 @@ Field=HHQ_DICT.C101
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Are you satisfied with the service provided by the %solardevicetype%?\cf2\f1\fs16\par
+EN=\pard\cf1\fs24 Are you satisfied with the service provided by the \cf2 %solardevicetype%\cf1 ?\cf2\f1\fs16\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1530,9 +1544,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C106
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What appliances do you use today that you did not use with your first solar lighting device?\par
+EN=\par
+EN=\cf2 Multiple response possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -1589,7 +1605,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many households are sharing electricity from this generator?\cf2\par
-EN=Ask about main generator\cf1 .\par
+EN=If more than one generator, ask about main generator.\cf1\par
 EN=\cf2 Don't know = 88\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -1615,7 +1631,8 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many days after you applied for the grid connection did your household get connected?\par
-EN=\cf2 Insert 0 if immediate, 88 for don't know\cf1\par
+EN=\cf2\par
+EN=Insert 0 if less than 1 day, 88 for don't know\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1710,7 +1727,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 In the last 12 months, what did your household use this generator for? \par
-EN=\cf2 Multiple response possible\par
+EN=\cf2 Multiple response possible. Read options aloud if needed.\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1889,7 +1906,8 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many weeks after you were connected were you able to use electricity in your home? \par
-EN=\cf2 Insert 0 if immediate, 88 for "don't know"\cf1\par
+EN=\cf2\par
+EN=Insert 0 if Less than 1 week, 88 for "don't know"\cf1\par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -1962,10 +1980,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C123
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours did you use this generator each day and night, during the last seven days?\par
-EN=\cf2 Max 24 hours\par
+EN=\pard\cf1\fs24 How many hours did you use this generator each \cf2 day and night\cf1 , during the last seven days?\par
+EN=\cf3 Max 24 hours\par
 EN=Don't know = 88\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -1988,10 +2006,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C124
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours did you use this generator each evening, from 6:00 pm to 10:00 pm, during the last seven days?\par
-EN=\cf2 Max 4 hours\par
+EN=\pard\cf1\fs24 How many hours did you use this generator each\cf2  evening\cf1 , from 6:00 pm to 10:00 pm, during the last seven days?\par
+EN=\cf3 Max 4 hours\par
 EN=Don't know = 88\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -2062,10 +2080,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C127A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the most serious problem you experience with the generator? \par
-EN=\cf2\par
+EN=\pard\cf1\fs24 What is the \cf2 most \cf1 serious problem you experience with the generator? \par
+EN=\cf3\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -2084,9 +2102,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C127B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the scond most serious problem you experience with the generator? \par
+EN=\pard\cf1\fs24 What is the \cf2 second most\cf1  serious problem you experience with the generator? \par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -2221,9 +2239,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C131A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 How many years have you had this battery?\par
+EN=\cf2 Record in years, if less than 1 year record 0. \cf1\par
 EN=}
 
 [QUESTION]
@@ -2304,9 +2323,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C135
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the capacity of the inverter?\par
+EN=\cf2 Given in Watt (W).\par
+EN=Read the information plate of the inverter if available.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -2422,10 +2443,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C140
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours can you use rechargeable batteries for electricity supply each day when fully charged if you wanted to? \par
-EN=\cf2 Max 24 hours\par
+EN=\pard\cf1\fs24 How many hours can you use rechargeable batteries for electricity supply \cf2 each day and night\cf1  when fully charged if you wanted to? \par
+EN=\cf3 Max 24 hours\par
 EN=Don't know = 88\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -2448,18 +2469,19 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C141
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours can you use rechargeable batteries for electricity supply each evening, from 6:00 pm to 10:00 pm if you wanted to? \par
-EN=\cf2 Max 4 hours\par
-EN=Don't know = 88\cf1\par
+EN=\pard\cf1\fs24 How many hours can you use rechargeable batteries for electricity supply each \cf2 evening\cf1 , from 6:00 pm to 10:00 pm if you wanted to? \par
+EN=\cf3 Max 4 hours\par
+EN=\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Quantas horas voc\'ea pode usar baterias recarreg\'e1veis para o fornecimento de eletricidade a cada noite, das 18:00 \'e0s 22:00, se voc\'ea quisesse?\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantas horas voc\'ea pode usar baterias recarreg\'e1veis para o fornecimento de eletricidade a cada noite, das 18:00 \'e0s 22:00, se voc\'ea quisesse?\par
 PT=\f1\fs24\par
 PT=\cf2 Maximo 4 horas\par
-PT=N\'e3o sabe = 88\cf1\par
+PT=\cf1\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -2533,7 +2555,9 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the Amp-hours (Ah) stated on the battery?\par
-EN=\cf2 If multiple batteries, record capacity for the most used battery. \par
+EN=\cf2 Capacity: ampere-hours (Ah).\par
+EN=Read the information plate of the battery if available.\par
+EN=If multiple batteries, sum up the Ah of all the batteries. \par
 EN=Don't know = 888\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -2559,7 +2583,8 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the voltage (V) of the rechargeable batteries?\par
-EN=\cf2 If multiple batteries, record voltage for the most used battery.\par
+EN=\cf2 If multiple batteries, record voltage for the most used battery. Volts (V).\par
+EN=Read the information plate of the battery if available.\par
 EN=Don't know = 88\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -2586,16 +2611,16 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the watt hours  (Wh) stated on the battery?\par
 EN=\cf2 Read the information plate of the battery if available. If multiple batteries, sum up the Wh of all the batteries.\par
-EN=Unknown=88\par
+EN=Don't know=88\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.C146A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What are the most serious problems you experience with the rechargeable batteries?\par
-EN=\cf2 First response\cf1\par
+EN=\pard\cf1\fs24 What is the \cf2 most \cf1 serious problems you experience with the rechargeable batteries?\par
+EN=\cf3 First response\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -2615,10 +2640,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C146B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What are the most serious problems you experience with the rechargeable batteries?\par
-EN=\cf2 Second response\cf1\par
+EN=\pard\cf1\fs24 What is the \cf2 second most\cf1  serious problems you experience with the rechargeable batteries?\par
+EN=\cf3 Second response\cf1\par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -3109,6 +3134,16 @@ EN=\cf2 Number of days\cf1\par
 EN=}
 
 [QUESTION]
+Field=HHQ_DICT.C24E
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many kWh did you pay for?\par
+EN=\par
+EN=\cf2 Look at the card or the app.\cf1\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.C25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -3152,7 +3187,8 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Do you receive information about a \ldblquote load-shedding\rdblquote  schedule?\par
-EN=\cf2 Load shedding is the set hours of electricity available from the grid for certain customers.\cf1\par
+EN=\cf2\par
+EN=Load shedding is the set hours of electricity available from the grid for certain customers.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\froman\fcharset0 Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -3172,17 +3208,18 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C28
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours of electricity was available each day and night from the grid, during the last seven days?\par
+EN=\pard\cf1\fs24 How many hours was electricity available each \cf2 day and night\cf1  from the grid, during the last seven days?\par
 EN=\par
-EN=\cf2 Max 24 hours, Don't know = 88\cf1\par
+EN=\cf3 Max 24 hours\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Quantas horas de electricidade est\'e3o dispon\'edveis a cada dia e noite da rede el\'e9ctrica, durante um m\'eas t\'edpico?\f1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantas horas de electricidade est\'e3o dispon\'edveis a cada dia e noite da rede el\'e9ctrica, durante um m\'eas t\'edpico?\f1\fs24\par
 PT=\par
-PT=\cf2 Maximo 24 horas, N\'e3o sabe = 88\cf1\par
+PT=\cf2 Maximo 24 horas\cf1\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -3195,16 +3232,17 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C29
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours of electricity was available each evening, from 6:00 pm to 10:00 pm from the grid, during the last seven days? \par
-EN=\cf2 Max 4 hours, Don't know = 88\cf1\par
+EN=\pard\cf1\fs24 How many hours was electricity available each \cf2 evening\cf1 , from 6:00 pm to 10:00 pm from the grid, during the last seven days? \par
+EN=\cf3 Max 4 hours\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Quantas horas de electricidade est\'e3o dispon\'edveis todas as noites, das 18:00 \'e0s 22:00 da rede electrica, durante um m\'eas t\'edpico?\f1\fs24\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantas horas de electricidade est\'e3o dispon\'edveis todas as noites, das 18:00 \'e0s 22:00 da rede electrica, durante um m\'eas t\'edpico?\f1\fs24\par
 PT=\par
-PT=\cf2 Maximo 4 horas, N\'e3o sabe = 88\cf1\par
+PT=\cf2 Maximo 4 horas\cf1\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -3233,17 +3271,26 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.C2B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 Do you have any devices or power supply using solar power?\par
+EN=\par
+EN=\cf2 Probe if respondent hesitates or ask to see the lantern/system: Can be anything from a single solar lantern to lights or appliances powered by a solar panel.\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.C2B1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What kind of solar power supply do you have?\par
+EN=\par
+EN=\cf2 SHS: Most advanced. Separate solar panel and a separate battery. Can power appliances (e.g radio, fan).\par
+EN=SOLAR MULITILIGHT PRODUCT: Medium advanced. Can power more than one light and charge mobile phone. Separate solar panel. Integrated battery, no separate battery. \par
+EN=SOLAR LANTERN: Least advanced. Single light. All-in-one. Might charge mobile phone and some also have a radio.\par
+EN=\par
+EN=Illustrative photos.\par
+EN=MULTIPLE ANSWER\par
 EN=}
 
 [QUESTION]
@@ -3267,7 +3314,7 @@ Field=HHQ_DICT.C2E
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Do you use rechargeable battery (not linked to a solar device)?\par
+EN=\pard\cf1\f0\fs30 Do you use rechargeable batteries (not linked to a solar device)?\par
 EN=}
 
 [QUESTION]
@@ -3281,17 +3328,22 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.C2G
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Which of these power sources is your main electrical power source?\par
+EN=\pard\cf1\f0\fs30 Which of these power sources is your \cf2 main\cf1  electrical power source?\par
+EN=\par
+EN=\cf3 Read options aloud if needed. If only one source, mark the source and continue.\par
+EN=Main source: Leave this to the respondent. If they ask, say that we are after the source providing most energy. \par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.C2H
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Which of these power sources is your main back-up source?\par
+EN=\pard\cf1\f0\fs30 Which of these power sources is your main \cf2 back-up\cf1  source?\par
+EN=\par
+EN=\cf3 Read options aloud if needed.\cf1\par
 EN=}
 
 [QUESTION]
@@ -3378,9 +3430,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C33
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you have a back up source for lighting? IF SO: What is your main back-up source of lighting during outages/blackouts of the grid?\par
+EN=\pard\cf1\fs24 Do you have a back up source for\cf2  lighting\cf1 ? IF SO: What is your main back-up source of lighting during outages/blackouts of the grid?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -3396,9 +3448,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C34
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you have a back up source for electricity for appliances? IF SO: What is your main back-up source of electricity for appliances (including mobile phone charging) during outages/blackouts of the grid?\par
+EN=\pard\cf1\fs24 Do you have a back up source for electricity for \cf2 appliances\cf1 ? IF SO: What is your main back-up source of electricity for appliances (including mobile phone charging) during outages/blackouts of the grid?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -3528,7 +3580,7 @@ Field=HHQ_DICT.C39
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 In the last 12 months, did any household members die or have permanent limb (bodily injury) damage because of the grid electricity?\cf2\par
+EN=\pard\cf1\fs24 In the last 12 months, did any household members have permanent limb (bodily injury) damage or even passed away because of the grid electricity?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -3632,8 +3684,11 @@ Field=HHQ_DICT.C4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\f0\fs30\lang1033 Did the electricity supplier connect your household to the main grid or did you do it yourself?\cf2\f1\fs24  \par
-EN=Is this household connected to the main grid, just hooked up or not connected at all? Enumerator may answer by observation\par
+EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\f0\fs30\lang1033 Did the electricity supplier connect your household to the grid, did you do it yourself,  did someone else do it or was the house connected when your household moved into this house? \cf2\f1\fs24\par
+EN=Enumerator may answer by observation\par
+EN=ELECTRICITY SUPPLIER: \par
+EN=Tanzania: TANESCO/REA\par
+EN=Mozambique: EDM\par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -3672,13 +3727,8 @@ Field=HHQ_DICT.C41
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is the household connected to a local mini-grid within the community or other neighbours?\par
+EN=\pard\cf1\fs24 Is there a limit for the load and/or appliances you are allowed to power from this local grid?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 O agregado familiar est\'e1 ligado a uma mini rede local?\f1\fs24\par
-PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
@@ -3849,10 +3899,10 @@ SW=}
 Field=HHQ_DICT.C5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24\lang1033 How many years have you had this grid connection?\par
 EN=\par
-EN=\cf2 Record in years, if less than 1 year record 1 (Cannot be greater than B2)   \par
+EN=\cf2 Record in years, if less than 1 year record 1. Cannot be greater than years lived in community.  \par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4574,9 +4624,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 When do you expect to get grid connection?\par
+EN=\par
+EN=\cf2 Approximately. If not in the foreseeable future, choose "More than 2 years".\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -4690,9 +4742,9 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.C82D
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Can you charge a mobile phone with the \cf2  %solarDeviceType%\cf1 ?\par
+EN=\pard\cf1\fs24 Can you charge a mobile phone with the \cf2  \cf3 %solarDeviceType%\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4707,7 +4759,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82E
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Does the \cf2 %solarDeviceType%\cf1  have a radio?\par
 EN=}
@@ -4743,7 +4795,7 @@ Field=HHQ_DICT.C82G
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 What is the power rating of the solar panel?  \par
+EN=\pard\cf1\f0\fs30 What is the total power rating of the solar panels?  \par
 EN=\cf2\f1\fs24 (Watt)\par
 EN=\par
 EN=Read the information plate of the solar panel if available. \par
@@ -4769,8 +4821,9 @@ Field=HHQ_DICT.C82H
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 What is the Amp-hours (Ah) stated on the batteries?\f1\fs24\par
-EN=\cf2 Unknown=888    Read the name plate of the battery (Amp-hours (Ah))\cf1\par
+EN=\pard\cf1\f0\fs30 What is the total Amp-hours (Ah) stated on the batteries?\f1\fs24\par
+EN=\cf2 Unknown=888    Read the information plate of the batteries if available. Sum up Ah for all batteries. \par
+EN=(Amp-hours (Ah).\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4792,7 +4845,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 What is the voltage (V) of the rechargeable batteries?\par
-EN=\cf2 If multiple batteries, record voltage for the most used battery. Volts (V).\par
+EN=\cf2 If multiple batteries, they usually have the same voltage. Record voltage for the most used battery. Volts (V).\par
 EN=Read the information plate of the battery if available.\par
 EN=Unknown=88\par
 EN=}
@@ -4802,7 +4855,7 @@ Field=HHQ_DICT.C82H2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 What is the watt hours (Wh) stated on the batteries?\par
+EN=\pard\cf1\f0\fs30 What is the total watt hours (Wh) stated on the batteries?\par
 EN=\cf2 Read the information plate of the batteries if available. Sum up Wh for all batteries.\par
 EN=Unknown=8888\par
 EN=}
@@ -4839,9 +4892,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.C82K
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many years have you had this \cf2 %solarDeviceType%\cf1 ?  \par
+EN=\par
+EN=\cf3 Record in years, if less than 1, record 1\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4858,7 +4913,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82L
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Who decided to purchase/ acquire the \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
@@ -4875,9 +4930,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82M
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How did you get this \cf2 %solarDeviceType%\cf1 ?\par
+EN=\par
+EN=\cf3 Read options aloud if needed\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4892,7 +4949,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82N
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Who gave you this \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
@@ -4909,7 +4966,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82O
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How much did you pay for this \cf2 %solarDeviceType%\cf1  upfront?\par
 EN=}
@@ -4926,9 +4983,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82P
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Does this \cf2 %solarDeviceType%\cf1  have a warranty ?\par
+EN=\par
+EN=\cf3 I.e.to exchange or repair if the device does not work.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -4945,7 +5004,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82Q
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Did you receive some information on the use and maintenance of this \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
@@ -4989,9 +5048,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C82S
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the most serious problem you experience with \cf2 %solarDeviceType%\cf1 ?\par
+EN=\pard\cf1\fs24 What is the most\cf2  \cf1 serious problem you experience with \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5701,9 +5760,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C87
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did you pay full or partial amount for your \cf2 %solarDeviceType%\par
+EN=\pard\cf1\fs24 Did you pay full or partial amount for your \cf2 %solarDeviceType%\cf1 ?\cf3\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5732,9 +5791,11 @@ PT=}
 Field=HHQ_DICT.C88
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the term period for the payment?\par
-EN=\cf2 %solarDeviceType%\cf1\par
+EN=\cf2 %solarDeviceType%\par
+EN=\par
+EN=If less than 1 month record 0\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5770,9 +5831,9 @@ SW=}
 Field=HHQ_DICT.C9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much did your household pay for the grid connection fee?\par
-EN=\cf2 Refer to connection fee ONLY. Enter 888888888 for "Don't know"\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How much did your household pay to get connected to the grid? \par
+EN=\cf2 Refer to connection fee ONLY. If dwelling was  already connected to the grid when the household moved in, enter 888888888 for "Don't know".  For those that rent the dweling, choose 999999999\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\froman\fcharset0 Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5796,9 +5857,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C90
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the monthly payment for this %solarDeviceType% (installment/ fee to rent/use)?\par
+EN=\pard\cf1\fs24 What is the monthly payment for this \cf2 %solarDeviceType%\cf1  (installment/ fee to rent/use)?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5813,9 +5874,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C91
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did/do you borrow money to make your payment for %solarDeviceType%?\par
+EN=\pard\cf1\fs24 Did/do you borrow money to make your payment for \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5830,7 +5891,7 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C92
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Are there certain months/seasons every year when the service is not as strong from \cf2 %solarDeviceType%\cf1 ?\par
 EN=}
@@ -5855,9 +5916,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C93
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours did you receive service from this \cf2 %solarDeviceType%\cf1  each day and night, during the last seven days? \par
+EN=\pard\cf1\fs24 How many hours did you receive service from this \cf2 %solarDeviceType%\cf1  each \cf2 day and night\cf1 , during the last seven days? \par
 EN=}
 
 [QUESTION]
@@ -5889,10 +5950,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C94
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours is service available from this %solarDeviceType% each evening, from 6:00 pm to 10:00 pm? \par
-EN=\cf2 Max 4 hours\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many hours is service available from this \cf2 %solarDeviceType%\cf1  each \cf2 evening\cf1 , from 6:00 pm to 10:00 pm? \par
+EN=\cf3 Max 4 hours\par
 EN=Don't know = 88\fs19\par
 EN=\cf1\fs24\par
 EN=}
@@ -5991,8 +6052,11 @@ PT=}
 Field=HHQ_DICT.C98
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What appliances do you currently use with your solar device (\cf2 %solarDeviceType%)\cf1 ?\par
+EN=\par
+EN=\cf2 Multiple response.\par
+EN=Read options aloud one by one.\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -6249,7 +6313,7 @@ Field=HHQ_DICT.E3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Would you be willing to pay %CF% upfront for this \f1 high capacity solar device (good enough to power a television)?\par
+EN=\pard\cf1\fs24 Would you be willing to pay %CF% upfront for this solar device?\f1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -6340,10 +6404,10 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.F1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 The next questions is about the households use of lamps/candles and fuel used for lighting. Are you well informed about these issues, or would you like somebody else in the household to answer these questions?\par
-EN=Please select respondent for the following section on Kerosene/Paraffin/Fuel-Based Lighting\par
+EN=\cf2 Please select respondent for the following section on Kerosene/Paraffin/Fuel-Based Lighting.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -6456,10 +6520,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.F3B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Which of these is the main source of lighting in the household?\par
-EN=\cf2 Read options aloud. Main: the type you use the most.\cf1\par
+EN=\pard\cf1\f0\fs30 Which of these is the \cf2 main source of lighting\cf1  in the household?\par
+EN=\cf3 Read options aloud. Main: the type you use the most.\cf1\par
 EN=}
 
 [QUESTION]
@@ -6511,9 +6575,9 @@ SW=}
 Field=HHQ_DICT.F4C
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many of these lamps (%lampType%) does your household have?\par
+EN=\pard\cf1\fs24 How many of these lamps (\cf2 %lampType%\cf1 ) does your household have?\par
 EN=\par
 EN=\f1\fs16\par
 EN=\f0\fs24\par
@@ -6534,11 +6598,12 @@ SW=}
 Field=HHQ_DICT.F4D
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much did you pay for each %lampType%?   \par
+EN=\pard\cf1\fs24 How much did you pay for each \cf2 %lampType%\cf1 ?   \par
 EN=\par
-EN=\cf2 If paying in installment, enter total value of payments\cf1\par
+EN=\cf3 If paying in installment, enter total value of payments.\par
+EN=If more than 1 device, input the average.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -6557,9 +6622,9 @@ SW=}
 Field=HHQ_DICT.F4E
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 In the last 30 days, how many days did you use %lampType%?   \par
+EN=\pard\cf1\fs24 In the last 30 days, how many days did you use \cf2 %lampType%\cf1 ?   \par
 EN=\f1\fs16\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
@@ -6578,9 +6643,9 @@ SW=}
 Field=HHQ_DICT.F4F
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many hours do you use %lampType% each day?   \par
+EN=\pard\cf1\fs24 How many hours do you use \cf2 %lampType%\cf1  each day?   \par
 EN=\f1\fs16\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
@@ -6620,19 +6685,18 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.F4G1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the most important problem when using the %lampType%? \par
+EN=\pard\cf1\fs24 What is the most important problem when using the \cf2 %lampType%\cf1 ? \par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.F4G2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the second most important problem when using the %lampType%? \par
-EN=
-EN=\pard\par
+EN=\pard\cf1\fs24 What is the second most important problem when using the \cf2 %lampType%\cf1 ? \par
+EN=\par
 EN=}
 
 [QUESTION]
@@ -6662,7 +6726,7 @@ SW=}
 Field=HHQ_DICT.F4I
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 In the last 12 months, did anybody in your household face any serious harm/injury from \cf2 %lampType%\cf1 ? \par
 EN=\f1\fs16\par
@@ -6683,10 +6747,12 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.F5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Which of the following do you use as fuel?\f1\fs22\par
+EN=\pard\cf1\fs24 Which of the following do you use as fuel for your \cf2\f1\fs30 %lampType%\cf1\f0\fs24 ?\par
+EN=\par
+EN=\cf3 Mutiple response\cf1\f2\fs22\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -6774,7 +6840,7 @@ Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much of the fuel you bought was  used for %fuelType%?\par
+EN=\pard\cf1\fs24 How much of the fuel you bought was used for %fuelType%?\par
 EN=\b\f1\fs17\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
@@ -6812,7 +6878,7 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Which of the following devices did you use dry cell batteries to power?\f1\fs18\par
 EN=\par
-EN=\cf2\f0\fs24 mutiple responses\cf1\par
+EN=\cf2\f0\fs24 Mutiple responses. Read options aloud.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -6831,10 +6897,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.G7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 How many of dry cell batteries do you purchase each month?\par
-EN=\cf2 NUMBER OF BATTERIES FOR ALL DEVICES\cf1\f1\fs24\par
+EN=\pard\cf1\f0\fs30 How many of dry cell batteries do you purchase \cf2 each month\cf1 ?\par
+EN=\cf3 NUMBER OF BATTERIES FOR ALL DEVICES\cf1\f1\fs24\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -6850,9 +6916,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.G8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 How much do you spend each month on dry cell batteries?\f1\fs24\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 How much do you spend \cf2 each month\cf1  on dry cell batteries?\f1\fs24\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -7203,12 +7269,12 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Now we would like to talk to %namePersonCooksMostOften% about cooking and fuels used for cooking.\par
+EN=\pard\cf1\fs24 Now we would like to talk to \cf2 %namePersonCooksMostOften%\cf3  \cf1 about cooking and fuels used for cooking.\par
+EN=\cf3\par
+EN=If %namePersonCooksMostOften% is not present, ask to speak to another person knowledgeable about cooking.\par
 EN=Please record respondent\par
-EN=\par
-EN=The respondent should be the household member who most frequently cooks food for the household,\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;}
@@ -7264,25 +7330,26 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Is the %mostUsedStove% fixed in one place or moveable?\par
+EN=\cf2 Might be answered by observation\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the dry season?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the \cf2 dry season\cf1 ?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I15A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the rainy season?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, where did you normally cook with %mostUsedStove% in the \cf2 rainy season\cf1 ?\par
 EN=}
 
 [QUESTION]
@@ -7296,33 +7363,40 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I18A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, what are the fuels you used the most on %mostUsedStove%?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, what are the fuels you used the\cf2  most\cf1  on %mostUsedStove%?\par
+EN=\cf3 A\~\~\~ Most Used   Single response\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I18B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 12 months, what are the second most used fuel you used on %mostUsedStove%?\par
+EN=\pard\cf1\f0\fs24 In the last 12 months, what are the \cf2 second most\cf1  used fuel you used on %mostUsedStove%?\par
+EN=\cf3 B\~\~\~ Second most Used.   Single response.\par
+EN=If only one type of fuel is used, choose "Not applicalble...66"\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I19A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the %fueltype1% available?\par
+EN=\cf2 Read aloud options.. \par
+EN=A Most used\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I19B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 In the last 12 months, how often was the %fueltype2% available?\par
+EN=\cf2 Read aloud options.. \par
+EN=B Second most used\par
 EN=}
 
 [QUESTION]
@@ -7336,17 +7410,17 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I19D
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 What kind of unit do you usually buy the %fueltype1% in?\par
+EN=\pard\cf1\f0\fs24 What kind of \cf2 unit\cf1  do you usually buy the %fueltype1% in?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I19E
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much did you pay the last time you purchased one %UnitFuel% of %fueltype1%?\par
+EN=\pard\cf1\f0\fs24 How much did you\cf2  pay\cf1  the last time you purchased one %UnitFuel% of %fueltype1%?\par
 EN=}
 
 [QUESTION]
@@ -7363,7 +7437,7 @@ Field=HHQ_DICT.I19G
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of the fuel you bought was  used for cooking?\par
+EN=\pard\cf1\f0\fs24 How much of the fuel you bought was used for cooking?\par
 EN=}
 
 [QUESTION]
@@ -7388,57 +7462,66 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.I20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much time do household members spend preparing the %mostUsedStove% and fuel for each meal on average? (minutes)\par
+EN=\pard\cf1\f0\fs24 How much time do household members spend \cf2 preparing\cf1  the %mostUsedStove% and fuel for each meal on average? \par
+EN=\cf3 (minutes)\par
+EN=Including setting up the fuel and turning on the stove but not gathering fuel or cooking time.\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I21
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, how many days did you use %mostUsedStove%?\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, \cf2 how many days\cf1  did you use %mostUsedStove%?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I22
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how many times did you light the %mostUsedStove% per day?\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, on average, \cf2 how many times \cf1 did you light the %mostUsedStove%\cf2  per day\cf1 ?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I23
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... morning? (Minutes)\par
+EN=\pard\cf1\f0\fs24 Now we would like to know how much time your household use [STOVE] per day to \cf2 cook or reheat meals\cf1  at different times of the day. Do not include boiling water. Think about the last 7 days when you answer these questions. \par
+EN=\par
+EN=On average, how much time do you spend in the... \cf2 morning\cf1 ? \par
+EN=\cf3 (Minutes)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I24
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... afternoon? (Minutes)\par
+EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... \cf2 afternoon\cf1 ? \par
+EN=\cf3 (Minutes)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... evening? (Minutes)\par
+EN=\pard\cf1\f0\fs24 On average, how much time do you spend in the... \cf2 evening\cf1 ? \par
+EN=\cf3 (Minutes)\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In the last 7 days, on average, how much time did your household use %mostUsedStove% per day to boil water (for cooking, washing, and drinking)? (Minutes)\par
+EN=\pard\cf1\f0\fs24 In the last 7 days, on average, \cf2 how much time\cf1  did your household use %mostUsedStove% per day to \cf2 boil water \cf1 (for cooking, washing, and drinking)? \par
+EN=\cf3 (Minutes)\par
+EN=If the stove is not used for boiling water, record 0.\cf1\par
 EN=}
 
 [QUESTION]
@@ -7452,9 +7535,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I2B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Which type of stove is this?\par
+EN=\cf2 Ask to see the oven or show pictures. The enumerator should make sure to identify the right type of stove.\par
+EN=Multiple answer.\par
 EN=}
 
 [QUESTION]
@@ -8127,9 +8212,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I2D
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Which type of stove is this?\par
+EN=\cf2 Ask to see the oven or show pictures. The enumerator should make sure to identify the right type of stove.\par
+EN=Multiple answer.\cf1\par
 EN=}
 
 [QUESTION]
@@ -8143,9 +8230,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I2F
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Which type of stove is this?\par
+EN=\cf2 Ask to see the oven or show pictures. The enumerator should make sure to identify the right type of stove.\par
+EN=Multiple answer.\cf1\par
 EN=}
 
 [QUESTION]
@@ -8159,9 +8248,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I2H
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Which type of stove is this?\par
+EN=\cf2 Ask to see the oven or show pictures. The enumerator should make sure to identify the right type of stove.\par
+EN=Multiple answer.\cf1\par
 EN=}
 
 [QUESTION]
@@ -8191,33 +8282,35 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I32
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many times did the household gather, collect or purchase fuel  during the last seven days?\par
+EN=\pard\cf1\f0\fs24 How many times\cf2  did the household gather, collect or purchase fuel  during the \cf1 last seven days\cf2 ?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I33
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many members of the household were involved each time?\par
+EN=\pard\cf1\f0\fs24 How many \cf2 members\cf1  of the household were involved each time?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I34_HH
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long time did it typicall take to gather, collect or purchase fuel per person each time they did  so during the last seven days? (hours)\par
+EN=\pard\cf1\f0\fs24 How long time \cf2 did it typicall take to gather, collect or purchase fuel \cf1 per person each time \cf2 they did so during the last seven days? \par
+EN=\cf3 (hours) minutes in next question\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I34_MM
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long time did it typicall take to gather, collect or purchase fuel per person each time they did  so during the last seven days? (minutes)\par
+EN=\pard\cf1\f0\fs24 How long time did it typicall take to gather, collect or purchase fuel per person each time they did  so during the last seven days? \par
+EN=\cf2 (minutes)\par
 EN=}
 
 [QUESTION]
@@ -8258,11 +8351,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I38
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \par
+EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20   \cf2  \par
 EN=\par
-EN=\cf2\f0\fs24 Square, record one side in paces  \cf1\f1\fs20\par
+EN=\cf1\f0\fs24 Square, record one side in paces  \cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8282,11 +8375,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I39
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \f0\fs24    \par
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \f0\fs24  \cf2   \par
 EN=\f1\fs20\par
-EN=\cf2\f0\fs24 Rectangle, record side 1 in paces\cf1\f1\fs20\par
+EN=\cf1\f0\fs24 Rectangle, record side 1 in paces\cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8314,11 +8407,11 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.I40
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20      \par
+EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20     \cf2  \par
 EN=\par
-EN=\cf2\f0\fs24 Rectangle, record side 2   in paces\cf1\f1\fs20\par
+EN=\cf1\f0\fs24 Rectangle, record side 2   in paces\cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8338,10 +8431,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I41
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \f0\fs24   \f1\fs20\par
-EN=\cf2\f0\fs24 Circle, record diameter in paces\cf1\f1\fs20\par
+EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \f0\fs24   \cf2\f1\fs20\par
+EN=\cf1\f0\fs24 Circle, record diameter in paces\cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8361,11 +8454,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I42
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \f0\fs24  \par
+EN=\pard\cf1\fs24 Record the dimensions of the cooking space in paces\f1\fs20    \cf2\f0\fs24  \par
 EN=\par
-EN=\cf2 Estimate total size in square paces\cf1\f1\fs20\par
+EN=\cf1 Estimate total size in square paces\cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8419,9 +8512,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.I45
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many doors and windows (opening to the outside) does the cooking space have?\f1\fs20\par
+EN=\pard\cf1\fs24 How many doors and windows (opening to the outside) does the cooking space have?\cf2\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -8520,9 +8613,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.J2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 What is the main source you use to heat water?\par
+EN=\cf2 Select one. \cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -8572,9 +8666,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.J5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the main source you use to heat your house?\par
+EN=\pard\cf1\fs24 What is the main\cf2  source\cf1  you use to heat your house?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -8589,9 +8683,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.J6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the MAIN fuel you use in this stove?\par
+EN=\pard\cf1\fs24 What is the main \cf2 fuel\cf1  you use in this stove?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -8650,7 +8744,7 @@ SW=}
 Field=HHQ_DICT.K3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 The following questions are about the following improved cooking stove: %cooktype%\cf2\par
 EN= \cf1\par
 EN=\cf2 An improved cooking stove can reduce the smoke and fuel consumption significantly. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.\par
@@ -8748,9 +8842,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.L1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record respondent for this section (Household assets: Furniture, transportation, agricultural equipment and electrical appliances)\cf2\par
+EN=\pard\cf1\fs24 Now we would like to know more about what the household own, material items, electric appliances and domestic animals. Are you well informed about these issues or would you like somebody else in the household to answer these questions? \cf2\par
+EN=Record respondent for this section (Household assets: Furniture, transportation, agricultural equipment and electrical appliances)\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -8864,11 +8959,11 @@ SW=}
 Field=HHQ_DICT.LA
 Occurrences=1:43
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Do your household have\par
-EN=\cf2\i %hhItem%\i0\par
-EN=\cf1\f1 in working condition?\par
+EN=\cf2 %hhItem%\cf3\par
+EN=\cf1\f1 which is regularly used?\par
 EN=%hhItemExtra%\f0\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -8893,11 +8988,12 @@ SW=}
 Field=HHQ_DICT.LB
 Occurrences=1:43
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 How many hours does your household use  \par
-EN=\cf2\i %hhItem%\cf1  \i0\par
-EN=in a typical day?\par
+EN=\pard\cf1\f0\fs30 How many hours did your household use  \par
+EN=\cf2 %hhItem%\cf1  \par
+EN=yesterday?\par
+EN=\cf3 Both day and night\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -8951,7 +9047,7 @@ Field=HHQ_DICT.M2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Now we would like to ask about security lights in your neighbourhood. Does your neighborhood have any form of street lighting? \par
+EN=\pard\cf1\fs24 Now we would like to ask about security lights in your neighbourhood. Does your neighborhood have any form of outdoor security lights/street lighting?  \par
 EN=\cf2\ldblquote Neighborhood\rdblquote  means 0.5 KM from Household\cf1   \par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
@@ -8978,7 +9074,7 @@ Field=HHQ_DICT.M3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is the street lighting used at night?\par
+EN=\pard\cf1\fs24 Is the security lights/street lighting used troughout the night?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -8996,7 +9092,7 @@ Field=HHQ_DICT.M4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Does the police patrol the streets in your neighbourhood after dark?\f1\fs24\par
+EN=\pard\cf1\f0\fs30 Does the police or local security groups patrol the streets in your neighbourhood after dark?\f1\fs24\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -9422,53 +9518,93 @@ SW=\pard\cf1\fs24 Je, \cf2\lang1044 %currMember%\cf1\lang2057  alikuwa na kikoho
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.N_B
+Field=HHQ_DICT.N_ACTIVITY_BOYS
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Lastly, we would like to know about the the time-use of boys in the age og 5-14 years old\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.N_ACTIVITY_GIRLS
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Then we continue with the time-use of girls in the age og 5-14 years old\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.N_ACTIVITY_MEN
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Then we continue with the time-use of men 15 years and older\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.N_ACTIVITY_WOMEN
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 We start with adult women which is 15 years or older.\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.N_B
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Did the women 15 years and older use any time on this activity 5 years ago? \par
-EN=(%activity%)\par
+EN=\cf2 (%activity%)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_C_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? (hours)\par
-EN=(%ACTIVITY%)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? \par
+EN=\cf2 (hours)\cf1\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_C_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? (minutes)\par
-EN=(%ACTIVITY%)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average?\cf2  \par
+EN=(minutes)\cf1\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_D_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark? (hours)\par
-EN=(%activity%)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark? \par
+EN=\cf2 (hours)\cf1\par
+EN=\cf2 (%activity%)\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_D_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark? (minutes)\par
-EN=(%activity%)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark?\cf2  \par
+EN=(minutes)\cf1\par
+EN=\cf2 (%activity%)\cf1\par
 EN=\par
 EN=}
 
@@ -9476,10 +9612,10 @@ EN=}
 Field=HHQ_DICT.N_E
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Do women 15 years and older spend more or less time on this activity than 5 years ago?\par
-EN=(%ACTIVITY%)\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
 EN=}
 
 [QUESTION]
@@ -9495,60 +9631,59 @@ EN=}
 Field=HHQ_DICT.N_G
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Did the girls 5-14 years use any time on this activity 5 years ago? \par
-EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf2 (%activity%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_H_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? (hours)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? \par
+EN=\cf2 (hours)\par
 EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_H_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? (minutes)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? \par
+EN=\cf2 (minutes)\par
 EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_I_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark? (hours)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark? \par
+EN=\cf2 (hours)\par
 EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_I_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark? (minutes)\par
-EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark?\cf2  \par
+EN=(minutes)\cf1\par
+EN=\cf2 (%activity%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
@@ -9576,60 +9711,59 @@ EN=}
 Field=HHQ_DICT.N_L
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Did the men 15 years and older use any time on this activity 5 years ago? \par
-EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf2 (%activity%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_M_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? (hours)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? \par
+EN=\cf2 (hours)\par
 EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_M_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? (minutes)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? \par
+EN=\cf2 (minutes)\par
 EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_N_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? (hours)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? \par
+EN=\cf2 (hours)\par
 EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_N_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? (minutes)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? \par
+EN=\cf2 (minutes)\par
 EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
@@ -9645,12 +9779,11 @@ SW=}
 Field=HHQ_DICT.N_O
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Do men 15 years and older spend more or less time on this activity than 5 years ago?\par
-EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
@@ -9666,72 +9799,70 @@ EN=}
 Field=HHQ_DICT.N_Q
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Did the boys 5-14 years use any time on this activity 5 years ago? \par
-EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf2 (%activity%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_R_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? (hours)\par
-EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? \par
+EN=\cf2 (hours)\cf1\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_R_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? (minutes)\par
+EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? \par
+EN=\cf2 (minutes)\par
 EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_S_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? (hours)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? \par
+EN=\cf2 (hours)\par
 EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_S_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? (minutes)\par
+EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? \par
+EN=\cf2 (minutes)\par
 EN=(%activity%)\par
-EN=
-EN=\pard\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_T
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 Do boys 5-14 years spend more or less time on this activity than 5 years ago?\par
-EN=(%ACTIVITY%)\par
-EN=
-EN=\pard\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\par
 EN=}
 
 [QUESTION]
@@ -9994,15 +10125,15 @@ Field=HHQ_DICT.O2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Did  you have persistent coughing or an illness with a cough at any time in the last 14 days?\par
+EN=\pard\cf1\fs24\lang1033 Did you have persistent coughing or an illness with a cough at any time in the last 14 days?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.O3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did %currMember% go to see a doctor/clinic for the cough?\cf2\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did you go to see a doctor/clinic for the cough?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -10018,9 +10149,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.O4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did %currMember% breath faster than usual with short, rapid breaths or had difficulty breathing?\par
+EN=\pard\cf1\fs24 Did you breath faster than usual with short, rapid breaths or had difficulty breathing?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -10036,9 +10167,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.O5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did %currMember% also experience a problem in the chest or a blocked or runny nose?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did you also experience a problem in the chest or a blocked or runny nose?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -10054,9 +10185,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.O6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did %currMember% have an eye irritation or eye problems in the last 14 days?\par
+EN=\pard\cf1\fs24 Did you have an eye irritation or eye problems in the last 14 days?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -10204,9 +10335,10 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.Q1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please select head of household to answer this section\cf2\par
+EN=\pard\cf1\fs24 The next section is about household expenditure. Are you well informed about this issue or would you like somebody else in the household to answer these questions?\par
+EN=\cf2 Please select head of household to answer this section\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -10954,12 +11086,12 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.S1_1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record Respondent: MemberNo for this section\par
-EN=\cf2\f1\fs30 Now I would like to ask about your opinion on some energy related questions.\par
-EN=\f0\fs24\par
+EN=\pard\cf1\f0\fs30 Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?\par
+EN=\cf2\f1\fs24\par
+EN=Record Respondent: MemberNo for this section\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -11028,7 +11160,7 @@ Field=HHQ_DICT.S4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How satisfied are you with the service from %mainElSource%? \par
+EN=\pard\cf1\fs24 Are you satisfied with the service from %mainElSource%? \par
 EN=\cf2 Read aloud these options.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -11050,9 +11182,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.S5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Today, the quality of life of my household is better than it was 5 years ago.\par
+EN=\cf2 Read aloud options if needed.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11068,9 +11201,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.S6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 The monthly electric bill is or would be a financial burden for my family.\par
+EN=\cf2 Read aloud options if needed.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11086,9 +11220,12 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.S7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Smoke from traditional stove is good for chasing insects away\par
+EN=\pard\cf1\fs24 There may be a number of reasons why people keep a traditional stove. Do you agree or disagree that the following statements are important arguments for keeping the traditional stove? \par
+EN=\par
+EN=Smoke from traditional stove is good for chasing insects away.\par
+EN=\cf2 Read aloud options if needed.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11103,9 +11240,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.S8
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Certain food tastes better when cooked on a traditional stove.\par
+EN=\cf2 Read aloud options if needed.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11121,9 +11259,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.S9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 The traditional stove is good for lighting up the house in the evening\par
+EN=\pard\cf1\fs24 The traditional stove is good for lighting up the house in the evening.\par
+EN=\cf2 Read aloud options if needed.\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11139,9 +11278,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.T1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Who usually makes decisions about health care for yourself?\par
+EN=\cf2 Read options aloud\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11161,15 +11301,16 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Now I will ask you some questions regarding decision making in your household. We would now like to talk to %femaleHeadName% %spouseName% or another adult female in the household.\f1\fs30\par
-EN=\cf2\f0\fs24\par
+EN=\cf2\f0\fs24 Please record respondent for this section\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.T2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Who usually makes decisions about major household purchases?\par
+EN=\cf2 Read options aloud\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11185,9 +11326,10 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.T3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Who usually makes decisions about visits to your family or relatives?\par
+EN=\cf2 Read options aloud\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11203,11 +11345,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U10A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 Has anybody in the household\par
-EN=\par
-EN= -  done some piecemeal farm work during the last 12 months?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Has anybody in the household done some \cf2 piecemeal farm work\cf1  during the \cf2 last 12 months\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11226,9 +11366,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U10B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did household members do \cf2 some piecemeal farm work\cf1  during a 12 months period 5-6 years ago?\b\f1\fs20\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did household members do some \cf2 piecemeal farm work\cf1  during a 12 months period \cf2 5-6 years ago\cf1 ?\b\f1\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11244,11 +11384,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U11A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Has anybody in the household\par
-EN=\par
-EN=-  \cf2 done some other piecemeal work for a business or somebody outside the household\cf1  during the last 12 months?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Has anybody in the household done some\cf2  \cf3 other piecemeal work \cf1 for a business or somebody outside the household during the \cf3 last 12 months\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11269,9 +11407,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U11B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did household members do \cf2\f1 some other piecemeal work for a business or somebody outside the household\cf1\f0  during a 12 months period 5-6 years ago?\f2\fs16\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did household members do \f1 some\cf2  \cf3 other piecemeal work \cf1 for a business or somebody outside the household\f0  during a 12 months period \cf3 5-6 years ago\cf1 ?\f2\fs16\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11287,11 +11425,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U12A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Has anybody in the household\par
-EN=\par
-EN=-  \cf2 done some public work (for the government, donors, charities) such as cash-for-work\cf1  during the last 12 months?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Has anybody in the household done some\cf2  \cf3 public work (for the government, donors, charities)\cf2  \cf1 such as cash-for-work during the \cf3 last 12 months\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11312,9 +11448,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U12B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did household members do \cf2\f1 some public work (for the government, donors, charities) such as cash-for-work\cf1\f0  during a 12 months period 5-6 years ago?\f2\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did household members do \f1 some \cf2 public work (for the government, donors, charitie\cf1 s) such as cash-for-work\f0  during a 12 months period \cf2 5-6 years ago\cf1 ?\f2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11330,9 +11466,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U13A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did anybody in this household go for work outside the community \f1 during the last 12 months?\fs30\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did anybody in this household \cf2 go for work outside the community\cf1  \f1 during the \cf2 last 12 months\cf1 ?\fs30\par
 EN=\f2\fs20\par
 EN=\b\par
 EN=}
@@ -11352,9 +11488,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U13B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did household members go for work outside the community during a 12 months period 5-6 years ago?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Did household members \cf2 go for work outside the community\cf1  during a 12 months period \cf2 5-6 years ago\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -11372,11 +11508,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U14A
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 Where did they go during the last 12 months?\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Where did they go during the \cf2 last 12 months\cf1 ?\par
 EN=\par
-EN=\cf2\f1\fs24 If different area, record for the eldest\cf1\b\f2\fs20\par
+EN=\cf3\f1\fs24 If different area, record for the eldest\cf1\b\f2\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}{\f2\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -11396,11 +11532,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.U14B
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Where did they go \f1 during a 12 months period 5-6 years ago\f0 ?\fs30\par
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Where did they go \f1 during a 12 months period \cf2 5-6 years ago\cf1\f0 ?\fs30\par
 EN=\par
-EN=\cf2\f1\fs24 IF DIFFERENT AREA, RECORD FOR THE ELDEST\cf1\b\f2\fs20\par
+EN=\cf3\f1\fs24 IF DIFFERENT AREA, RECORD FOR THE ELDEST\cf1\b\f2\fs20\par
 EN=\b0\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
@@ -11431,7 +11567,8 @@ SW=}
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs30 We would now like to know what the household members are doing for your livelihood in addition to their main work.\cf2\f1\fs24\par
+EN=\pard\cf1\f0\fs30 We would now like to know what the household members are doing for the livelihood in addtion to their main work. Are you well informed about these issues or would you like somebody else in the household to answer these questions?\par
+EN=\cf2\f1\fs24\par
 EN=Please record respondent for this section\par
 EN=\par
 EN=\par
@@ -11627,11 +11764,13 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.W1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 The respondent for the section on Social Life and Security should be a woman.\par
+EN=\pard\cf1\fs24 We will now ask you some questions about how safe you feel in different situations. \cf2\par
 EN=\par
-EN=Record Respondent: MemberNo for this section:\cf2\par
+EN=The respondent for the section on Social Life and Security should be a woman.\par
+EN=\par
+EN=Record Respondent: MemberNo for this section:\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
