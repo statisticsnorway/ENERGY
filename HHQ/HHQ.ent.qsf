@@ -3389,7 +3389,9 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 How many outages/blackouts occured during the last seven days?\par
 EN=\cf2\f1\fs24\par
-EN=Don't know = 88\cf1\par
+EN=No outages/blackouts = 66\cf1\par
+EN=\cf2 Don't know = 88\par
+EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -3410,9 +3412,8 @@ Field=HHQ_DICT.C32
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What was the total duration of all the outages/blackouts during the last seven days?\par
-EN=\cf2 Hours\par
-EN=\par
+EN=\pard\cf1\fs24 What was the total duration of all the outages/blackouts during the last seven days (hours)?\par
+EN=\cf2\par
 EN=Don't know = 88\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
@@ -5916,9 +5917,11 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.C93
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many hours did you receive service from this \cf2 %solarDeviceType%\cf1  each \cf2 day and night\cf1 , during the last seven days? \par
+EN=\par
+EN=\cf3 Don't know = 88\cf1\par
 EN=}
 
 [QUESTION]
@@ -5954,15 +5957,16 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 How many hours is service available from this \cf2 %solarDeviceType%\cf1  each \cf2 evening\cf1 , from 6:00 pm to 10:00 pm? \par
 EN=\cf3 Max 4 hours\par
-EN=Don't know = 88\fs19\par
+EN=Don't know = 8\fs19\par
 EN=\cf1\fs24\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs30 Quantas horas o servi\'e7o est\'e1 dispon\'edvel a partir deste \cf2 %solarDeviceType%\cf1  todas as noites, das 18:00 \'e0s 22:00?\par
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\f0\fs30 Quantas horas o servi\'e7o est\'e1 dispon\'edvel a partir deste \cf2 %solarDeviceType%\cf1  todas as noites, das 18:00 \'e0s 22:00?\par
 PT=\f1\fs24\par
 PT=\cf2 Maximo 4 horas\par
-PT=N\'e3o sabe = 88\cf1\par
+PT=N\'e3o sabe = 8\cf1\par
 PT=\par
 PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
@@ -7490,7 +7494,7 @@ Field=HHQ_DICT.I23
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Now we would like to know how much time your household spend per day to \cf2 cook or reheat meals\cf1  at different times of the day on the [STOVE] . Do not include boiling water. Think about the last 7 days when you answer these questions. \par
+EN=\pard\cf1\f0\fs24 Now we would like to know how much time your household spend per day to \cf2 cook or reheat meals\cf1  at different times of the day on the  %mostUsedStove%. Do not include boiling water. Think about the last 7 days when you answer these questions. \par
 EN=\par
 EN=On average, how much time do you spend in the... \cf2 morning\cf1 ? \par
 EN=\cf3 (Minutes)\cf1\par
@@ -10028,6 +10032,22 @@ PT=\par
 PT=}
 
 [QUESTION]
+Field=HHQ_DICT.O10
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Did [NAME] have an eye irritation or eye problems in the last 14 days?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.O11
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Did [NAME] go to see a doctor/clinic for the illness?\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.O1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -10199,6 +10219,30 @@ SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 SW=\pard\cf1\fs24 Je \cf2\lang1044 %currMember%\cf1\lang2057  alipata matatizo ya macho au kuwashwa macho katika siku 14 zilizopita??\par
 SW=}
+
+[QUESTION]
+Field=HHQ_DICT.O7
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Did  [NAME] have persistent coughing or an illness with a cough at any time in the last 14 days?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.O8
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Did  [NAME]  breath faster than usual with short, rapid breaths or had difficulty breathing?\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.O9
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Did  [NAME] also experience a problem in the chest or a blocked or runny nose?\par
+EN=}
 
 [QUESTION]
 Field=HHQ_DICT.Q1

@@ -4468,13 +4468,11 @@ ItemType=SubItem
 [ValueSet]
 Label=Activity girls 5-14 years
 Name=N_ACTIVITY_GIRLS_VS1
-Link=22334455
 Value=1;Collecting water
 Value=2;Collecting firewood
 Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale
 Value=4;Watching TV, listening to the radio or using smart phone
 Value=5;Spending time on entertainment and socializing outside the house
-Value=6;Doing own homework
 
 [Item]
 Label=How many girls 5-14 years have been involved in (ACTIVITY)?
@@ -4642,7 +4640,11 @@ ItemType=SubItem
 [ValueSet]
 Label=Activity boys 5-14 years
 Name=N_ACTIVITY_BOYS_VS1
-Link=22334455
+Value=1;Collecting water
+Value=2;Collecting firewood
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale
+Value=4;Watching TV, listening to the radio or using smart phone
+Value=5;Spending time on entertainment and socializing outside the house
 
 [Item]
 Label=How many boys 5-14 years have been involved in (ACTIVITY)?
@@ -5095,7 +5097,8 @@ Label=U2 Livelihood means u1-u9|U2 Livelihood
 Name=U_LIVELIHOOD_1_9
 RecordTypeValue='T'
 Required=No
-RecordLen=219
+MaxRecords=9
+RecordLen=111
 
 [Item]
 Label=item no/description|item não / descrição
@@ -5194,133 +5197,6 @@ Name=U2A7_VS1
 Value=1;Smaller 5 years ago|Menores de 5 anos atrás|Kidogo zaidi miaka 5 iliopita
 Value=2;Same as 5 years ago|Mesmo que há 5 anos|Sawa na miaka 5 iliopita
 Value=3;Larger than 5 years ago|Maior do que 5 anos atrás|Kubwa kuliko miaka 5 iliopita
-
-[Item]
-Label=Product
-Name=PRODUCT
-Start=112
-Len=9
-DataType=Alpha
-Occurrences=6
-
-[Item]
-Label=Product no
-Name=U3_NO
-Start=112
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Do you produce or process [PRODUCT] in the household today?
-Name=U3A
-Start=113
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did you produce or process [PRODUCT] in the household 5  years ago?
-Name=U3A1
-Start=114
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=You said that your household produce/process [PRODUCT]. Who is the manager for this production?
-Name=U3B
-Start=115
-Len=2
-ItemType=SubItem
-
-[Item]
-Label=Where and how was this sale done?
-Name=U3C
-Start=117
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was any electricity used for light or machinery for this processing / production?
-Name=U3D
-Start=118
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did this person or anybody else in the household do this type of activity 5 years ago?
-Name=U3F
-Start=119
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
-Name=U3G
-Start=120
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Business
-Name=BUSINESS
-Start=166
-Len=9
-Occurrences=6
-
-[Item]
-Label=Business no
-Name=U4_NO
-Start=166
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Does anybody in the household  [BUSINESS] today?
-Name=U4A
-Start=167
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did anybody  [BUSINESS] in the household 5  years ago?
-Name=U4A1
-Start=168
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=You said that your household [BUSINESS]. Who is the manager for this business/service?
-Name=U4B
-Start=169
-Len=2
-ItemType=SubItem
-
-[Item]
-Label=Where is this business/service operated?
-Name=U4C
-Start=171
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was any electricity used for light or machinery for this processing / production?
-Name=U4D
-Start=172
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did this person or anybody else in the household do this type of activity 5 years ago?
-Name=U4F
-Start=173
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
-Name=U4G
-Start=174
-Len=1
-ItemType=SubItem
 
 [Record]
 Label=U3 Livelihood means u1_1 and u10-u14|U3 Livelihood
