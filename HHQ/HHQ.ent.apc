@@ -29,6 +29,8 @@
 	string socAndSec;
 	string healthQuestion;
 	string consumeItem;
+	string productName;
+	string businessName;
 	numeric years;
 	string activity;
 	numeric c2yes; // number of energy sources, used in first C section
@@ -45,8 +47,9 @@
 	string  fueltype2;
 	string  UnitFuel;
     numeric mostoften = 9;
-	string  chosenChildNo; // Name of chosen child for O section (health)
-	numeric schoolkids = 0;
+	string  chosenChildName; // Name of chosen child for O section (health)
+	numeric schoolBoys = 0;
+	numeric schoolGirls = 0;
 	
 	Array memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
 	Array String memberNames(20);
@@ -75,59 +78,6 @@
 		savepartial();
 		stop(1);
 	end;
-
-
-
-PROC U2_NO
-onfocus
-	livelyhood = getLabel($, curocc());
-	$ = curocc();
-	skip to U2A1;
-
-
-
-PROC U2A1
-	if $ = 2 then
-//		skip to next;
-	endif;
-
-
-
-PROC U2A3
-onfocus
-	if curocc() in 1,2,3 then
-		array codeset(5) = 1,2,3,4, NOTAPPL;
-		array string labelset(5) = 	maketext(tr(128)),
-									maketext(tr(129)),
-									maketext(tr(130)),
-									maketext(tr(131)),
-									"";
-		setValueset($, codeset, labelset);
-	elseif curocc() in 4,5,6,7,8,9 then
-		array codeset(9) = 1,2,3,4,5,6,7,8, NOTAPPL;
-		array string labelset(9) = 	maketext(tr(132)),
-									maketext(tr(133)),
-									maketext(tr(134)),
-									maketext(tr(135)),
-									maketext(tr(136)),
-									maketext(tr(137)),
-									maketext(tr(138)),
-									maketext(tr(139)),
-									"";
-		setValueset($, codeset, labelset);
-	endif;
-
-PROC U2A6
-onfocus
-	if AB5(1) < 25 or B2 < 5 then	//Only ask HH with head 25 years or older who lived in community >= 5 years
-//		skip to next;
-	endif;
-
-postproc
-	if $ = 2 then
-//		skip to next;
-	endif;
-
 
 
 PROC HHQ_FF
@@ -394,10 +344,12 @@ PROC AB4
   femaleHeadName = concat(strip(ab1(curocc())),", ");
  endif; 
 PROC AB5
+	numeric j;
 	//adding to relevant hhdemographic group
 	if AB4 = 2 then
 		if $ > 14 then	//woman
 			inc(hhDemographics(1));
+			inc(hhDemographics(6));
 		elseif $ <=4 then	//little child
 			inc(hhDemographics(5));
 		else	//girl
@@ -406,6 +358,7 @@ PROC AB5
 	else
 		if $ > 14 then	//man
 			inc(hhDemographics(3));
+			inc(hhDemographics(6));
 		elseif $ <= 4 then	//little child
 			inc(hhDemographics(5));
 		else		//boy
@@ -413,6 +366,13 @@ PROC AB5
 		endif;
 	endif;
 	
+	j = 0;
+	if $ >= 0 and $ < 16 then
+		inc(j);
+		inc(hhDemographics(7));
+		childrenNames(j) = AB1;
+		errmsg("Child name %s",childrenNames(j));
+	endif;	
 
 
 
@@ -457,9 +417,19 @@ PROC AC5
  
 PROC AC6
 preproc
-	if AB5(curocc()) > 17 then	//less than 17 years
+	if AB5(curocc()) > 17 then	//more than 17 years
 		skip to A8;
 	endif;	
+postproc
+    if AC3 = 1 then
+	 if AB4 = 2 then
+			inc(schoolGirls);
+		elseif AB4 = 1 then	
+			inc(schoolBoys);
+		endif
+	endif;
+//	errmsg("Girls: %d, Boys: %d, School kids: %d",schoolGirls,schoolBoys,hhdemographics(7));
+	
 PROC AC7
 preproc
 	numeric currYear = sysdate("YYYY");
@@ -913,6 +883,11 @@ preproc
   skip to C82_FORM;
  endif; 
 
+PROC C43
+preproc 
+	if c42 = 2 then
+		skip to c82_FORM;
+	endif;	
 PROC C82C
 preproc
 	If not(C2G  in 3, 7, 8) then 
@@ -1092,6 +1067,10 @@ PROC C124
 		reenter;
 	endif;
 
+ if $ > C123 then
+  errmsg(tr(159), $, C123);
+  reenter;
+ endif;
 
 
 PROC C127A
@@ -1170,6 +1149,10 @@ PROC C141
 		reenter;
 	endif;
 
+ if $ > C140 then
+  errmsg(tr(159), $, C140);
+  reenter;
+ endif;
 
 
 PROC C144
@@ -1243,7 +1226,7 @@ preproc
  If (c2g = 1 or c2h = 1) then 
   skip to E_FORM;
  endif;
- errmsg(171);
+ errmsg(189);
 onfocus
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
@@ -1252,7 +1235,7 @@ onfocus
 		
 postproc
 	if $ = 1 then
-	//	skip to D9;
+		skip to E_FORM;
 	endif;	
 	
 PROC D6
@@ -1306,6 +1289,7 @@ PROC E5
 
 
 PROC G_FORM
+preproc
  if C2g <> 9 then 
   skip to F_FORM;
  endif; 
@@ -1365,7 +1349,7 @@ onfocus
 	if hhDemographics(6) < 1 or hhDemographics(6) in NOTAPPL, DEFAULT then //No adults in household
 		skip to I_FORM;
 	else
-  errmsg(tr(147));
+  errmsg(tr(192));
 		array aCode(20); //Max 20 adults in HH
 		array String aLabel(20);
 
@@ -1396,16 +1380,17 @@ onfocus
 PROC F2
 onfocus
 	//Loop through HH to find if there are children attending school
-	numeric i = 1;
-	while AB5(i) <> NOTAPPL do
-		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
-			schoolkids = 1;
-			break;
-		endif;
-		inc(i);
-	enddo;
-	
-	if schoolkids = 0 then
+//	numeric i = 1;
+//	while AB5(i) <> NOTAPPL do
+//		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
+//			schoolkids = 1;
+//			break;
+//		endif;
+//		inc(i);
+//	enddo;
+
+// School attendance set in AC6	
+	if not(schoolGirls > 0 or schoolBoys > 0) then
 		skip to F3B;
 	endif;
 
@@ -1415,6 +1400,7 @@ preproc
   skip to I_FORM;
  endif; 
 postproc
+ lampType = getvaluelabel($);
  if $ = 1 then
   skip to F4e;
  endif; 
@@ -1582,6 +1568,12 @@ preproc
 postproc
  mostUsedStove = getvaluelabel($);
 PROC I4
+preproc
+	if lstrip(strip(i2b)) = "101" then 
+		$ = 4;
+		skip to I12;
+	endif;	
+postproc
 	if $ = 3 then
 	 skip to i7;
 	endif; 
@@ -1643,7 +1635,7 @@ preproc
     errmsg(171);
 PROC I37
 preproc
-	if not(I18a in 2,3,4,7,8,9,10,11,12,14,17 or I18b in 2,3,4,7,8,9,10,11,12,14,17) AND I15 in 1,2,3 then
+	if not((I18a in 2,3,4,7,8,9,10,11,12,14,17 or I18b in 2,3,4,7,8,9,10,11,12,14,17) AND (I15 in 1,2,3 or I15a in 1,2,3)) then
 	 skip to O_FORM;
 	endif; 
 postproc
@@ -1658,23 +1650,26 @@ postproc
 
 
 PROC I38
-	//skip to I43;
+postproc
+	skip to I43;
 
 
 
 PROC I40
-//	skip to I43;
+postproc
+	skip to I43;
 
 
 
 PROC I41
+postproc
 	skip to I43;
 
 
 
 PROC I43
 	if $ = 4 then
-		skip to O_FORM;
+		skip to I45;
 	endif;
 
 	
@@ -1683,7 +1678,7 @@ preproc
   errmsg(183);
 PROC O1_1
 onfocus
-	errmsg(tr(146),strip(namePersonCooksMostOften));
+//	errmsg(tr(146),strip(namePersonCooksMostOften));
 	$ = I1;
 	currMember = memberNames(PersonCooksMostOften);
 	noinput;
@@ -1698,7 +1693,8 @@ preproc
   if hhDemographics(7) > 0 then
 	seed(systime());
     O1_C = random(1, hhDemographics(7));
-	chosenChildNo = childrenNames(O1_C);
+	chosenChildName = childrenNames(O1_C);
+	errmsg("Child number %d, Child name %s",chosenChildName,O1_C);
 	skip to O7;
   else	
     skip to K_FORM;
@@ -1709,7 +1705,8 @@ PROC K_FORM
 preproc
 	if not(I2i in 1,2,7) then 
 	  skip to J_FORM;
-	endif;  
+	endif; 
+    errmsg(190);	
 PROC K2
 onfocus
 	string woodOrCharcoal;
@@ -2022,17 +2019,22 @@ preproc
  endif;
  $ = curocc();
  activity = getLabel($, curocc());
+ errmsg("%s",activity);
  skip to N_F;
 
 PROC N_F
+preproc
+	if N_ACTIVITY_GIRLS = 6 and not(schoolGirls > 0) then
+		skip to next;
+	endif; 
 postproc
- if $ > hhDemographics(2) then
-  errmsg(166,$,hhDemographics(2)); 
-  reenter;
- endif;
-  if $ > 0 then
-   skip to N_H_HH;
-  endif; 
+	if $ > hhDemographics(2) then
+		errmsg(166,$,hhDemographics(2)); 
+		reenter;
+	endif;
+	if $ > 0 then
+		skip to N_H_HH;
+	endif; 
 PROC N_G
 postproc
   skip to next;
@@ -2155,6 +2157,10 @@ preproc
  skip to N_P;
 
 PROC N_P
+preproc
+	if N_ACTIVITY_BOYS = 6 and not(schoolBoys > 0) then
+		skip to next;
+	endif; 
 postproc
  if $ > hhDemographics(4) then
   errmsg(166,$,hhDemographics(4)); 
@@ -2208,6 +2214,7 @@ PROC N_S_MM
  endif;
 
 PROC Q_FORM
+preproc
  errmsg(188);
 PROC Q1_1
 onfocus
@@ -2222,6 +2229,15 @@ onfocus
 	$ = curocc();
 	consumeItem = getLabel($, curocc());
 	skip to Q1A;
+PROC Q12
+preproc
+	if not(schoolGirls > 0 or schoolBoys > 0) then
+		skip to Q13;
+	endif;
+
+PROC S_FORM
+preproc
+ errmsg(191);
 PROC S1_1
 onfocus
 	setValueset($, memberNumbers, memberNames);
@@ -2238,6 +2254,38 @@ PROC U1_1
 onfocus
 	setValueset($, memberNumbers, memberNames);
 
+PROC U3_NO
+onfocus
+	 $ = curocc();
+	 productName = getLabel($, curocc());
+	 skip to U3A;
+PROC U3A
+postproc
+	if $ = 1 then
+		skip to u3b;
+	endif; 
+PROC U3A1
+postproc
+	skip to next;
+PROC U3B
+onfocus
+	setValueset($, memberNumbers, memberNames);
+PROC U4_NO
+onfocus
+	 $ = curocc();
+	 businessName = getLabel($, curocc());
+	 skip to U4A;
+PROC U4A
+postproc
+	if $ = 1 then
+		skip to u4b;
+	endif; 
+PROC U4A1
+postproc
+	skip to next;
+PROC U4B
+onfocus
+	setValueset($, memberNumbers, memberNames);
 PROC U14A
 preproc
   if U13A = 2 then

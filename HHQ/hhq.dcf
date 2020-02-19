@@ -2121,6 +2121,11 @@ Name=C117A
 Start=186
 Len=1
 
+[ValueSet]
+Label=Valueset
+Name=C117A_VS1
+Link=133482376
+
 [Item]
 Label=Amount repair generator|Montante pago para reparacção
 Name=C117
@@ -2288,7 +2293,7 @@ Value=55;Other, specify|De outros, especificar|Nyingine, taja
 Label=C Externally recharged battery|C Externamente bateria recarregada
 Name=C_EXTERNALLY_RECHARGED_BATTERY
 RecordTypeValue='b'
-RecordLen=191
+RecordLen=189
 
 [Item]
 Label=rechargable batteries as main or backup source|baterias recarregáveis como fonte principal ou alternativa
@@ -2434,18 +2439,18 @@ Decimal=2
 Label=voltage|Voltagem
 Name=C145
 Start=180
-Len=3
+Len=2
 
 [Item]
 Label=What is the watt hours  (Wh) stated on the battery?
 Name=C145A
-Start=183
+Start=182
 Len=4
 
 [Item]
 Label=most serious problems|a maioria dos problemas graves
 Name=C146A
-Start=187
+Start=186
 Len=2
 
 [ValueSet]
@@ -2464,8 +2469,8 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=other problems|outros problemas
 Name=C146B
-Start=189
-Len=3
+Start=188
+Len=2
 
 [ValueSet]
 Label=Most serious problems generator|Mais grave gerador de problemas|other problems
@@ -5091,242 +5096,11 @@ Name=T3_VS1
 Link=11223344
 
 [Record]
-Label=U2 Livelihood means u1-u9|U2 Livelihood
+Label=U Livelihood means
 Name=U_LIVELIHOOD_1_9
 RecordTypeValue='T'
 Required=No
-RecordLen=219
-
-[Item]
-Label=item no/description|item não / descrição
-Name=U2_NO
-Start=103
-Len=1
-
-[ValueSet]
-Label=item no/description|item não / descrição
-Name=U2_NO_VS1
-Value=1;- processed and sold any agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc., (but excluding livestock by-products, fresh/processed fish?)|- (? Mas excluindo animais subprodutos, peixe fresco / processados) processado e vendido qualquer subprodutos agrícolas, incluindo farinha, amido, suco, cerveja, compotas, óleo, semente, farelo, etc,|- alisindika na kuuza bidhaa zitokanazo na kilimo, ikiwa ni pamoja na unga, wanga, juisi, pombe, mafuta, mbegu, n.k., (bila kuhusisha mazao yatokanyo na mifugo au samaki)?
-Value=2;- processed any livestock by-products or fresh/processed fish for sale?|- processado qualquer animal subprodutos ou peixe fresco / processados para venda?|- alisindika bidhaa yoyote ya mifugo au samaki kwa ajili ya kuuza?
-Value=3;- produced and sold anything on a street, in a market or to a trader, including firewood, home-made charcoal, curios, construction timber, wood-poles, traditional medicine, mats, bricks, cane furniture, weave baskets, thatch grass etc.?|- produzido e vendido qualquer coisa em uma rua, em um mercado ou a um comerciante, incluindo lenha, carvão caseiro, curiosidades, madeira de construção, madeira pólos, a medicina tradicional, tapetes, tijolos, móveis de vime, cestas de tecer, palha grama|- alizalisha na kuuza chochote barabarani, sokoni au kwa mfanyabiashara, ikiwa ni pamoja na kuni, mkaa, mbao za ujenzi, fito, dawa za jadi, mikeka, vinyago, matofali, miwa, samani, vikapu, nyasi kavu n.k.?
-Value=4;- owned a non-agricultural business or provided a non-agricultural service from home or a household-owned shop, as a carwash owner, metal worker, mechanic, carpenter, tailor, barber, etc.?|- possuiu um negócio não-agrícola ou prestado um serviço não-agrícola a partir de casa ou uma loja de propriedade familiar, como proprietário de uma lavagem de carros, metalúrgico, mecânico, carpinteiro, alfaiate, barbeiro, etc.?|- alimiliki biashara isiyo ya kilimo au kutoa huduma isiyo ya kilimo ndani ya kaya au duka linalomilikiwa na kaya, kama vile mmiliki wa sehemu za kuoshea magari, mfuaji wa vyuma, fundi makenika, fundi seremala, fundi nguo, kinyozi, n.k.?
-Value=5;- owned a trading or service business on a street or in a market?|- dono de uma negociação ou serviço de negócio em uma rua ou em um mercado?|- alimiki biashara au kutoa huduma katika mtaa au soko?
-Value=6;- owned a professional office or offered professional services from home as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?|- possuía um escritório profissional ou oferecidos serviços profissionais a partir de casa como um médico, contador, advogado, tradutor, professor particular, parteira, pedreiro, etc.?|- alimiki ofisi ya kitaalam au kutoa huduma za kitaalam nyumbani kama daktari, mhasibu, mwanasheria, mtafsiri, mwalimu binafsi, mkunga, n.k.
-Value=7;- driven a household-owned taxi or pick-up truck to provide transportation or moving services?|- dirigiu um táxi de propriedade do agregado familiar ou Pick-up para fornecer transporte ou serviços em movimento?|- aliendesha teksi inayomilikiwa na kaya au lori kwa ajili ya kutoa huduma za usafirishaji?
-Value=8;- owned a bar or restaurant?|- possuía um bar ou restaurante?|- alimiliki na bar au mgahawa?
-Value=9;- owned any other non-agricultural business, even if it is a small business run from home or on a street?|- propriedade qualquer outra empresa não agrícola, mesmo que seja um pequeno negócio funcionar a partir de casa ou em uma rua?|- alimiliki biashara nyingine yoyote isiyo ya kilimo, hata kama ni biashara ndogo inayoendeshwa hapo hapo nyumbani au mtaani?
-
-[Item]
-Label=Response|Resposta
-Name=U2A1
-Start=104
-Len=1
-
-[ValueSet]
-Label=Response|Resposta
-Name=U2A1_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Who is the manager?|Quem é o gerente?
-Name=U2A2
-Start=105
-Len=1
-
-[ValueSet]
-Label=Who is the manager?|Quem é o gerente?
-Name=U2A2_VS1
-Value=1;Male HH member|Membro do AF masculino|Mwanakaya mwanaume
-Value=2;Female HH member|Membro do AF Feminino|Mwanakaya mwanamke
-Value=3;Outside household|Agregado familiar exterior|Nje ya kaya
-
-[Item]
-Label=Where do you operate..|Onde você operar ..
-Name=U2A3
-Start=106
-Len=1
-
-[ValueSet]
-Label=Onde você operar ..|Onde você operar ..
-Name=U2A3_VS1
-Value=1;Value Set programatically|ValueSet programatically|Geresho linwekwa na program
-
-[Item]
-Label=Did you use electricty|Você usou electricty
-Name=U2A4
-Start=107
-Len=1
-
-[ValueSet]
-Label=Response|Resposta|Did you use electricty
-Name=U2A4_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Number of employees|Número de empregados
-Name=U2A5
-Start=108
-Len=2
-
-[Item]
-Label=Did you run this business 5 years ago?|Você executar este negócio 5 anos atrás?
-Name=U2A6
-Start=110
-Len=1
-
-[ValueSet]
-Label=Response|Resposta|Did you run this business 5 years ago?
-Name=U2A6_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Was the profit smaller, the same or larger than now?|Foi o lucro menor, igual ou maior do que agora?
-Name=U2A7
-Start=111
-Len=1
-
-[ValueSet]
-Label=Was the profit smaller, the same or larger than now?|Foi o lucro menor, igual ou maior do que agora?
-Name=U2A7_VS1
-Value=1;Smaller 5 years ago|Menores de 5 anos atrás|Kidogo zaidi miaka 5 iliopita
-Value=2;Same as 5 years ago|Mesmo que há 5 anos|Sawa na miaka 5 iliopita
-Value=3;Larger than 5 years ago|Maior do que 5 anos atrás|Kubwa kuliko miaka 5 iliopita
-
-[Item]
-Label=Product
-Name=PRODUCT
-Start=112
-Len=9
-DataType=Alpha
-Occurrences=6
-
-[Item]
-Label=Product no
-Name=U3_NO
-Start=112
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Do you produce or process [PRODUCT] in the household today?
-Name=U3A
-Start=113
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did you produce or process [PRODUCT] in the household 5  years ago?
-Name=U3A1
-Start=114
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=You said that your household produce/process [PRODUCT]. Who is the manager for this production?
-Name=U3B
-Start=115
-Len=2
-ItemType=SubItem
-
-[Item]
-Label=Where and how was this sale done?
-Name=U3C
-Start=117
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was any electricity used for light or machinery for this processing / production?
-Name=U3D
-Start=118
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did this person or anybody else in the household do this type of activity 5 years ago?
-Name=U3F
-Start=119
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
-Name=U3G
-Start=120
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Business
-Name=BUSINESS
-Start=166
-Len=9
-Occurrences=6
-
-[Item]
-Label=Business no
-Name=U4_NO
-Start=166
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Does anybody in the household  [BUSINESS] today?
-Name=U4A
-Start=167
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did anybody  [BUSINESS] in the household 5  years ago?
-Name=U4A1
-Start=168
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=You said that your household [BUSINESS]. Who is the manager for this business/service?
-Name=U4B
-Start=169
-Len=2
-ItemType=SubItem
-
-[Item]
-Label=Where is this business/service operated?
-Name=U4C
-Start=171
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was any electricity used for light or machinery for this processing / production?
-Name=U4D
-Start=172
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Did this person or anybody else in the household do this type of activity 5 years ago?
-Name=U4F
-Start=173
-Len=1
-ItemType=SubItem
-
-[Item]
-Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
-Name=U4G
-Start=174
-Len=1
-ItemType=SubItem
-
-[Record]
-Label=U3 Livelihood means u1_1 and u10-u14|U3 Livelihood
-Name=U_LIVELIHOOD_U10_U14
-RecordTypeValue='U'
-RecordLen=114
+RecordLen=222
 
 [Item]
 Label=Respondent number
@@ -5335,9 +5109,230 @@ Start=103
 Len=2
 
 [Item]
+Label=Product
+Name=PRODUCT
+Start=105
+Len=9
+DataType=Alpha
+Occurrences=6
+
+[Item]
+Label=Product no
+Name=U3_NO
+Start=105
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Product no
+Name=U3_NO_VS1
+Value=1;Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
+Value=2;Livestock by-products (milk, cheese)
+Value=3;Fresh/processed fish
+Value=4;Firewood, home-made charcoal
+Value=5;Construction timber, wood-poles or other construction material
+Value=6;Mats, bricks, cane furniture, weave baskets, thatch grass etc
+
+[Item]
+Label=Do you produce or process [PRODUCT] in the household today?
+Name=U3A
+Start=106
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Do you produce or process [PRODUCT] in the household today?
+Name=U3A_VS1
+Link=133482376
+
+[Item]
+Label=Did you produce or process [PRODUCT] in the household 5  years ago?
+Name=U3A1
+Start=107
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Did you produce or process [PRODUCT] in the household 5  years ago?
+Name=U3A1_VS1
+Link=133482376
+
+[Item]
+Label=You said that your household produce/process [PRODUCT]. Who is the manager for this production?
+Name=U3B
+Start=108
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=Where and how was this sale done?
+Name=U3C
+Start=110
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Where and how was this sale done?
+Name=U3C_VS1
+Value=1;To traders coming home
+Value=2;To traders elsewhere
+Value=3;Through own trading business
+Value=4;To customers coming home
+
+[Item]
+Label=Was any electricity used for light or machinery for this processing / production?
+Name=U3D
+Start=111
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U3D_VS1
+Link=133482376
+
+[Item]
+Label=Did this person or anybody else in the household do this type of activity 5 years ago?
+Name=U3F
+Start=112
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U3F_VS1
+Link=133482376
+
+[Item]
+Label=Did this activity make more money 5 years ago, less money or the same?
+Name=U3G
+Start=113
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U3G_VS1
+Value=1;More money 5 years ago
+Value=2;Less money 5 years ago
+Value=3;Same 5 years ago
+
+[Item]
+Label=Business
+Name=BUSINESS
+Start=159
+Len=9
+Occurrences=6
+
+[Item]
+Label=Business no
+Name=U4_NO
+Start=159
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Business no
+Name=U4_NO_VS1
+Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
+Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
+Value=3;own a trading or service business on a street or in a market?
+Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services?
+Value=5;own a bar or restaurant?
+Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street?
+
+[Item]
+Label=Does anybody in the household  [BUSINESS] today?
+Name=U4A
+Start=160
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4A_VS1
+Link=133482376
+
+[Item]
+Label=Did anybody  [BUSINESS] in the household 5  years ago?
+Name=U4A1
+Start=161
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4A1_VS1
+Link=133482376
+
+[Item]
+Label=You said that your household [BUSINESS]. Who is the manager for this business/service?
+Name=U4B
+Start=162
+Len=2
+ItemType=SubItem
+
+[Item]
+Label=Where is this business/service operated?
+Name=U4C
+Start=164
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4C_VS1
+Value=1;Home (inside residence)
+Value=2;Home (outside residence
+Value=3;Industrical site
+Value=4;Traditional market place
+Value=5;Commercial area shop
+Value=6;Roadside
+Value=7;Other fixed place
+Value=8;Mobile location
+
+[Item]
+Label=Was any electricity used for light or machinery for this processing / production?
+Name=U4D
+Start=165
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4D_VS1
+Link=133482376
+
+[Item]
+Label=Did this person or anybody else in the household do this type of activity 5 years ago?
+Name=U4F
+Start=166
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4F_VS1
+Link=133482376
+
+[Item]
+Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
+Name=U4G
+Start=167
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U4G_VS1
+Value=1;Smaller 5 yrs ago
+Value=2;Same 5 yrs ago
+Value=3;Larger 5 yrs ago
+
+[Item]
 Label=Response|trabalho agrícola piecemal
 Name=U10A
-Start=105
+Start=213
 Len=1
 
 [ValueSet]
@@ -5351,7 +5346,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U10B
-Start=106
+Start=214
 Len=1
 
 [ValueSet]
@@ -5365,7 +5360,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U11A
-Start=107
+Start=215
 Len=1
 
 [ValueSet]
@@ -5379,7 +5374,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U11B
-Start=108
+Start=216
 Len=1
 
 [ValueSet]
@@ -5393,7 +5388,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U12A
-Start=109
+Start=217
 Len=1
 
 [ValueSet]
@@ -5407,7 +5402,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U12B
-Start=110
+Start=218
 Len=1
 
 [ValueSet]
@@ -5421,7 +5416,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Did anybody in this household go for work outside the community during last 12 months|trabalhar fora da comunidade últimos 12 meses
 Name=U13A
-Start=111
+Start=219
 Len=1
 
 [ValueSet]
@@ -5433,7 +5428,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?|trabalhar fora da comunidade 5-6 anos atrás
 Name=U13B
-Start=112
+Start=220
 Len=1
 
 [ValueSet]
@@ -5445,7 +5440,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Where, last 12 months|Onde, últimos 12 meses
 Name=U14A
-Start=113
+Start=221
 Len=1
 
 [ValueSet]
@@ -5460,7 +5455,7 @@ Value=5;Other areas|Outras áreas|Maeneo mengine
 [Item]
 Label=Where, 5-6 years ago|Onde, 5-6 anos atrás
 Name=U14B
-Start=114
+Start=222
 Len=1
 
 [ValueSet]
