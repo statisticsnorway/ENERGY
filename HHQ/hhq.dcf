@@ -85,7 +85,7 @@ DataType=Alpha
 [Record]
 Label=Interview particulars|particularidades da entrevista
 Name=AA_INTERVIEW_PARTICULAR_REC
-RecordTypeValue='2'
+RecordTypeValue='P'
 RecordLen=209
 
 [Item]
@@ -219,7 +219,7 @@ DataType=Alpha
 [Record]
 Label=A Household members|A membros do agregado familiar
 Name=AB_HOUSEHOLD_MEMBERS_REC
-RecordTypeValue='1'
+RecordTypeValue='A'
 Required=No
 MaxRecords=20
 RecordLen=164
@@ -602,7 +602,7 @@ Value=6;Never|Nunca|Hajawahi
 [Record]
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
-RecordTypeValue='4'
+RecordTypeValue='B'
 RecordLen=187
 
 [Item]
@@ -949,7 +949,7 @@ Value='55                        ';Other|De outros|Nyingine
 [Record]
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
-RecordTypeValue='5'
+RecordTypeValue='1'
 RecordLen=250
 
 [Item]
@@ -1633,7 +1633,7 @@ Value=55;Other
 [Record]
 Label=C Solar home system|sistema de home C Solar
 Name=C_SOLAR_HOME_SYSTEM
-RecordTypeValue='3'
+RecordTypeValue='2'
 RecordLen=240
 
 [Item]
@@ -1767,6 +1767,13 @@ Name=C89
 Start=165
 Len=1
 
+[ValueSet]
+Label=ValueSet
+Name=C89_VS1
+Value=1;Mobile Pay-as-you-go
+Value=2;Other Pay-as-you go (scratch card, etc.)
+Value=3;Fixed fee
+
 [Item]
 Label=What is the monthly payment for this [DEVICE] (installment/ fee to rent/use)?
 Name=C90
@@ -1778,6 +1785,11 @@ Label=Did/do you borrow money to make your payment for [DEVICE]?
 Name=C91
 Start=174
 Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=C91_VS1
+Link=133482376
 
 [Item]
 Label=Amount paid for device upfront|Valor inicial pago para o dispositivo
@@ -1999,7 +2011,7 @@ Value='55            ';Other|De outros|Nyingine
 [Record]
 Label=C Electric generator set|C grupo gerador eléctrico
 Name=C_ELECTRIC_GENERATOR_SET
-RecordTypeValue='a'
+RecordTypeValue='3'
 RecordLen=219
 
 [Item]
@@ -2292,7 +2304,7 @@ Value=55;Other, specify|De outros, especificar|Nyingine, taja
 [Record]
 Label=C Externally recharged battery|C Externamente bateria recarregada
 Name=C_EXTERNALLY_RECHARGED_BATTERY
-RecordTypeValue='b'
+RecordTypeValue='4'
 RecordLen=189
 
 [Item]
@@ -2488,7 +2500,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Record]
 Label=C Main source of el - charging mobile phone|fonte C principal do el - o carregamento do telefone móvel
 Name=C_MAIN_SOURCE_OF_EL_CHARGING_M
-RecordTypeValue='c'
+RecordTypeValue='5'
 RecordLen=116
 
 [Item]
@@ -2561,7 +2573,7 @@ Value=2;No|Não|Hapana
 [Record]
 Label=D Willingness to pay for a grid connection|Disposição D para pagar por uma ligação à rede
 Name=D_WILLINGNESS_TO_PAY_FOR_A_GRID
-RecordTypeValue='7'
+RecordTypeValue='D'
 RecordLen=109
 
 [Item]
@@ -2620,7 +2632,7 @@ Value=55;Other|De outros|Nyingine
 [Record]
 Label=E Willingness to pay for solar device|E Disposição para pagar por dispositivo de energia solar
 Name=E_WILLINGNESS_TO_PAY_FOR_SOLAR_D
-RecordTypeValue='8'
+RecordTypeValue='E'
 RecordLen=107
 
 [Item]
@@ -2666,7 +2678,7 @@ Value=55;Other|De outro|Nyingine
 [Record]
 Label=F_HH Kerosene/Fuel-based/Candle lighting|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
-RecordTypeValue='9'
+RecordTypeValue='f'
 RecordLen=149
 
 [Item]
@@ -2836,7 +2848,7 @@ Value='7      ';None|Nenhum|Hakuna
 [Record]
 Label=F5 Main source of fuel|fonte F5 principal de combustível
 Name=F5_MAIN_SOURCE_FUEL
-RecordTypeValue='Y'
+RecordTypeValue='F'
 Required=No
 MaxRecords=6
 RecordLen=118
@@ -2878,11 +2890,11 @@ Value=4;Less than half
 [Record]
 Label=G_HH
 Name=G_HH
-RecordTypeValue='S'
+RecordTypeValue='g'
 RecordLen=117
 
 [Item]
-Label=which devices did you power with dry cell batteries|Que dispositivos de alimentação com pilhas secas
+Label=which devices did you power with dry cell batteries
 Name=G2
 Start=103
 Len=8
@@ -2912,40 +2924,34 @@ Len=5
 [Record]
 Label=G1 Dry-cell batteries|pilhas secas G1
 Name=G_DRY_CELL
-RecordTypeValue='A'
+RecordTypeValue='G'
 Required=No
 MaxRecords=4
-RecordLen=112
+RecordLen=111
 
 [Item]
 Label=Number of items powered with dry-cell batteries|Número de itens movidos a pilhas secas
 Name=GB
 Start=103
-Len=1
-
-[Item]
-Label=Number of ... purchased each year|Número de ... comprados a cada ano
-Name=GC
-Start=104
 Len=2
 
 [Item]
 Label=Avarage price for ...|preço avarage para ...
 Name=GD
-Start=106
+Start=105
 Len=5
 
 [Item]
 Label=On a typical day, how many hours do you use ...|Em um dia típico, quantas horas você usa ...
 Name=GE
-Start=111
+Start=110
 Len=2
 
 [Record]
-Label=I_HH Use of cooking sloutions|I_HH Uso de sloutions cozinha
+Label=I Use of cooking sloutions|I_HH Uso de sloutions cozinha
 Name=I_COOKING_SOLUTIONS
-RecordTypeValue='C'
-RecordLen=292
+RecordTypeValue='I'
+RecordLen=290
 
 [Item]
 Label=HH MN for Household Cooking solutions|HH MN para uso doméstico Cozinhar solutionâ
@@ -2975,11 +2981,17 @@ DataType=Alpha
 Label=Which type of stove is this?
 Name=I2B_VS1
 Value='101               ';Three-stone stove
+Image=..\Images\Cookstoves_101.jpg
 Value='102               ';Round mud stove
+Image=..\Images\Cookstoves_102.jpg
 Value='111               ';ICS w/ ceramic fire chamber
+Image=..\Images\Cookstoves_111.jpg
 Value='121               ';Rocket stove
+Image=..\Images\Cookstoves_121.jpg
 Value='131               ';Lorena 1 Rocket stove with high insulation
+Image=..\Images\Cookstoves_131.jpg
 Value='141               ';Lorena 2 Rocket stove with well- sealed chimney
+Image=..\Images\Cookstoves_141.jpg
 
 [Item]
 Label=Have you used any stoves using charcoal during the last 12 months?
@@ -3003,11 +3015,17 @@ DataType=Alpha
 Label=Which type of stove is this?
 Name=I2D_VS1
 Value='201               ';Traditional charcoal stove - Open access for air
+Image=..\Images\Cookstoves_201.jpg
 Value='211               ';Charcoal stove, Old ICS Opening for air may be closed
+Image=..\Images\Cookstoves_211.jpg
 Value='221               ';Ceramic lined charcoal ICS
+Image=..\Images\Cookstoves_221.jpg
 Value='231               ';Ceramic lined and insulated charcoal ICS
+Image=..\Images\Cookstoves_231.jpg
 Value='233               ';Kerosene cooking stove (Mchina)
+Image=..\Images\Cookstoves_233.jpg
 Value='241               ';Efficient charcoal stove with controlled airflow
+Image=..\Images\Cookstoves_241.jpg
 
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
@@ -3031,7 +3049,9 @@ DataType=Alpha
 Label=Which type of stove is this?
 Name=I2F_VS1
 Value='331   ';Gasifier stove
+Image=..\Images\Cookstoves_331.jpg
 Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney
+Image=..\Images\Cookstoves_341.jpg
 
 [Item]
 Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
@@ -3055,9 +3075,13 @@ DataType=Alpha
 Label=Which type of stove is this?
 Name=I2H_VS1
 Value='451         ';Biogas stove
+Image=..\Images\Cookstoves_451.jpg
 Value='452         ';Multiple LPG stove
+Image=..\Images\Cookstoves_452.jpg
 Value='461         ';Electrical stove
+Image=..\Images\Cookstoves_461.jpg
 Value='471         ';Solar oven (Non-electric)
+Image=..\Images\Cookstoves_471.jpg
 
 [Item]
 Label=Which one is your main stove?
@@ -3171,12 +3195,12 @@ Value=2;Moveable
 Label=In the last 12 months, where did you normally cook with [STOVE] in the dry season?
 Name=I15
 Start=226
-Len=2
+Len=1
 
 [ValueSet]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=COOKPLACE
-Link=127061200
+Link=133482344
 Value=1;In dwelling, NOT in sleeping area
 Value=2;In dwelling, in a sleeping area
 Value=3;In a separate kitchen
@@ -3187,18 +3211,18 @@ Value=6;Open air
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I15A
-Start=228
-Len=2
+Start=227
+Len=1
 
 [ValueSet]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I15A_VS1
-Link=127061200
+Link=133482344
 
 [Item]
 Label=Do you use a chimney, hood or other exhaust system while using this stove?
 Name=I16
-Start=230
+Start=228
 Len=1
 
 [ValueSet]
@@ -3209,7 +3233,7 @@ Link=133482376
 [Item]
 Label=In the last 12 months, what are the fuels you used the most on [STOVE]?
 Name=I18A
-Start=231
+Start=229
 Len=2
 
 [ValueSet]
@@ -3240,7 +3264,7 @@ Value=55;Other
 [Item]
 Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
 Name=I18B
-Start=233
+Start=231
 Len=2
 
 [ValueSet]
@@ -3251,7 +3275,7 @@ Link=138883072
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19A
-Start=235
+Start=233
 Len=1
 
 [ValueSet]
@@ -3266,7 +3290,7 @@ Value=4;Rarely available
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I19B
-Start=236
+Start=234
 Len=1
 
 [ValueSet]
@@ -3277,13 +3301,13 @@ Link=123456789
 [Item]
 Label=In the last 12 months, how many months did you use [FUEL]?
 Name=I19C
-Start=237
+Start=235
 Len=2
 
 [Item]
 Label=What kind of unit do you usually buy the [FUEL] in?
 Name=I19D
-Start=239
+Start=237
 Len=1
 
 [ValueSet]
@@ -3299,19 +3323,19 @@ Value=6;Packets
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
 Name=I19E
-Start=240
+Start=238
 Len=8
 
 [Item]
 Label=How long does a [UNIT] of [FUEL] typically last?
 Name=I19F
-Start=248
+Start=246
 Len=2
 
 [Item]
 Label=How much of the fuel you bought was  used for cooking?
 Name=I19G
-Start=250
+Start=248
 Len=1
 
 [ValueSet]
@@ -3325,49 +3349,49 @@ Value=4;Less than half
 [Item]
 Label=How much time do household members spend preparing the [STOVE] and fuel for each meal on average?
 Name=I20
-Start=251
+Start=249
 Len=3
 
 [Item]
 Label=In the last 7 days, how many days did you use [STOVE]?
 Name=I21
-Start=254
+Start=252
 Len=1
 
 [Item]
 Label=In the last 7 days, on average, how many times did you light the [STOVE] per day?
 Name=I22
-Start=255
+Start=253
 Len=1
 
 [Item]
 Label=On average, how much time do you spend in the... morning?
 Name=I23
-Start=256
+Start=254
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... afternoon?
 Name=I24
-Start=259
+Start=257
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... evening?
 Name=I25
-Start=262
+Start=260
 Len=3
 
 [Item]
 Label=In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)?
 Name=I26
-Start=265
+Start=263
 Len=3
 
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?
 Name=I30
-Start=268
+Start=266
 Len=1
 
 [ValueSet]
@@ -3378,7 +3402,7 @@ Link=133482376
 [Item]
 Label=Did you seek professinal medical assistance for this injury/ any of these injuries?
 Name=I31
-Start=269
+Start=267
 Len=1
 
 [ValueSet]
@@ -3389,31 +3413,31 @@ Link=133482376
 [Item]
 Label=How many of times did the household gather, collect or purchase fuel  during the last seven days?
 Name=I32
-Start=270
+Start=268
 Len=2
 
 [Item]
 Label=How many members of the household were involved each time?
 Name=I33
-Start=272
+Start=270
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Hours)
 Name=I34_HH
-Start=274
+Start=272
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Minutes)
 Name=I34_MM
-Start=276
+Start=274
 Len=2
 
 [Item]
 Label=Shape of cooking space|Forma de espaço de cozinha
 Name=I37
-Start=278
+Start=276
 Len=1
 
 [ValueSet]
@@ -3427,37 +3451,37 @@ Value=4;Other|De outros|Nyingine
 [Item]
 Label=Dimension of cooking space (square)|Dimensão do espaço de cozinha (quadrado)
 Name=I38
-Start=279
+Start=277
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 1|Dimensão do lugar lado cozinhar rectagular 1
 Name=I39
-Start=281
+Start=279
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 2|Dimensão do lugar lado cozinhar rectagular 2
 Name=I40
-Start=283
+Start=281
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place circular|Dimensão de cozinhar rectagular lugar circular
 Name=I41
-Start=285
+Start=283
 Len=2
 
 [Item]
 Label=Size of rectagular cooking place|Tamanho do lugar cozinhar rectagular
 Name=I42
-Start=287
+Start=285
 Len=2
 
 [Item]
 Label=Type of roof covering cooking place|Tipo de telhado que cobre lugar de cozinha
 Name=I43
-Start=289
+Start=287
 Len=1
 
 [ValueSet]
@@ -3471,7 +3495,7 @@ Value=4;None of the above|Nenhuma das acima|Hakuna jibu kati ya 1,2 na 3
 [Item]
 Label=Height of highest point to ceiling|Altura do ponto mais alto ao teto
 Name=I44
-Start=290
+Start=288
 Len=1
 
 [ValueSet]
@@ -3486,13 +3510,13 @@ Value=5;More than 2 * my height|Mais de 2 * minha altura|Zaidi ya mara 2 ya uref
 [Item]
 Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
 Name=I45
-Start=291
+Start=289
 Len=1
 
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?
 Name=I46
-Start=292
+Start=290
 Len=1
 
 [ValueSet]
@@ -3505,504 +3529,9 @@ Value=4;Yes, two or three of these
 Value=5;No
 
 [Record]
-Label=I_1_Use of cooking solutions|I_1_Use de soluções de cozinha
-Name=I_1_COOKING_SOLUTIONS
-RecordTypeValue='['
-Required=No
-MaxRecords=3
-RecordLen=206
-
-[Item]
-Label=Cookstove type|tipo de cookstove
-Name=I2B3
-Start=103
-Len=2
-
-[ValueSet]
-Label=Cookstove type|tipo de cookstove
-Name=I2B3_VS1
-Value=1;3-stone/open fire stove|3-pedra / fogão lareira|Jiko la kuni
-Value=2;Biomass self-built stove|Biomassa auto-construção fogão|Jiko linalotumia mabaki ya mimea lililotengenezwa kienyeji
-Value=3;Manufactured stove|Fogão fabricado|Jiko lililotengenezwa kiwandani
-Value=4;LPG/Natural gas stove|LPG / fogão de gás natural|Jikola gesi
-Value=5;Kerosene stove|Fogão de querosene|Jiko la mafuta ya taa
-Value=6;Electric stove|Fogão eléctrico|Jiko la umeme
-Value=7;Solar cooker|Fogão Solar|Jiko la umeme jua
-Value=8;Charcoal burner|Queimador de carvão|Jiko la mkaa
-Value=9;None|Nenhum|Hakuna
-Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=How did you obtain this cookstove?|Como você obter este fogão?
-Name=I2B4
-Start=105
-Len=1
-
-[ValueSet]
-Label=How did you obtain this cookstove?|Como você obter este fogão?
-Name=I2B4_VS1
-Value=1;Purchased, upfront|Adquirido, antecipadamente|Nilinunua kwa kulipiakwa mkupuo
-Value=2;Purchased, in installment|Comprado, em parcela|Nilinunua kwa kulipia kidogo kidogo
-Value=3;Recieve for free|Receber gratuitamente|Nilipata bure
-Value=4;Built ourselves||Nimetengeneza Mwenyewe
-
-[Item]
-Label=Who decided to purchase this stove?|Quem decidiu comprar esse fogão?
-Name=I2B5
-Start=106
-Len=2
-
-[ValueSet]
-Label=Who decided to purchase this stove?|Quem decidiu comprar esse fogão?
-Name=I2B5_VS1
-Value=1:99
-
-[Item]
-Label=How much did you pay for stove?|Quanto você paga para o fogão?
-Name=I2B6
-Start=108
-Len=6
-
-[Item]
-Label=Who gave stove to you?|Quem deu fogão para você?
-Name=I2B7
-Start=114
-Len=2
-
-[ValueSet]
-Label=Who gave stove to you?|Quem deu fogão para você?
-Name=I2B7_VS1
-Value=1;Local private organsation (NGO)|Organização não local (ONG)|Mashirika binafsi yasiyo ya Serikali (NGO)
-Value=2;Chief of village|Chefe da aldeia|Mwenyekiti wa Kijiji
-Value=3;Local government|Governo local|Serikali ya mtaa
-Value=4;Friend/relative|Amigo / parente|Rafiki/Ndugu
-Value=5;Other|De outros|Nyingine
-
-[Item]
-Label=Receive training/information on stove?|Receber formação / informação no fogão?
-Name=I2B8
-Start=116
-Len=1
-
-[ValueSet]
-Label=Receive training/information on stove?|Receber formação / informação no fogão?
-Name=I2B8_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Manufacturer and model of stove|Fabricante e modelo de fogão
-Name=I2B9
-Start=117
-Len=30
-DataType=Alpha
-
-[Item]
-Label=If you want to sell it, how much would you get?|Se você quiser vendê-lo, o quanto você teria?
-Name=I2B10
-Start=147
-Len=6
-
-[Item]
-Label=How many working burners?|Quantos queimadores trabalhar?
-Name=I2B11
-Start=153
-Len=1
-
-[Item]
-Label=How long have you had the stove|Há quanto tempo você teve o fogão
-Name=I2B12
-Start=154
-Len=1
-
-[ValueSet]
-Label=How long have you had the stove|Há quanto tempo você teve o fogão
-Name=I2B12_VS1
-Value=1;Less than 6 months|Menos de 6 meses|Chini ya miezi 6
-Value=2;6-12 months|6-12 meses|Miezi 6-12
-Value=3;1-2 years|1-2 anos|Mwaka 1-2
-Value=4;More than 2 years|Mais de 2 anos|Zaidi ya miaka 2
-
-[Item]
-Label=Which months did you use stove?|Que meses você usou fogão?
-Name=I2B13
-Start=155
-Len=2
-
-[ValueSet]
-Label=Which months did you use stove?|Que meses você usou fogão?
-Name=I2B13_VS1
-Value=1;Used it all year round|Usou-o durante todo o ano|Kipindi cha Mwaka mzima
-Value=2;Mainly in dry season|principalmente na estação seca|Zaidi kipindi cha kiangazi
-Value=3;Mainly in rainy season|principalmente na estação chuvosa|Zaidi kipindi cha Mvua
-
-[Item]
-Label=Stove fixed or moveable|Fogão fixos ou móveis
-Name=I2B14
-Start=157
-Len=1
-
-[ValueSet]
-Label=Stove fixed or moveable|Fogão fixos ou móveis
-Name=I2B14_VS1
-Value=1;Fixed|Fixo|Halihamishiki
-Value=2;Moveable|Movível|Linahamishika
-
-[Item]
-Label=Where did you normally cook with stove?|Onde você normalmente cozinhar com fogão?
-Name=I2B15
-Start=158
-Len=2
-
-[ValueSet]
-Label=Where did you normally cook with stove?|Onde você normalmente cozinhar com fogão?
-Name=I2B15_VS1
-Value=1;In dwelling, NOT in sleeping area|Em habitação, e não na área de dormir|Ndani ya makazi, SIO sehemu ya kulala
-Value=2;In dwelling, in a sleeping area|Em habitação, em uma área de dormir|Ndani ya makazi, sehemu ya kulala
-Value=3;In a separate kitchen|Em uma cozinha separada|Katika sehemu ya jiko inayojitegemea
-Value=4;In a veranda (roofed platform with at least 2 open sides)|Em uma varanda (telhado plataforma com, pelo menos, 2 lados abertos)|Kwenye kibaraza chenye madirisha mawili ya wazi
-Value=5;Separate open kitchen house|Casa separada cozinha aberta|Jiko la wazi lililojitenga
-Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=Use chimney, hood or other while using stove?|Use chaminé, capuz ou outro ao usar fogão?
-Name=I2B16
-Start=160
-Len=1
-
-[ValueSet]
-Label=Use chimney, hood or other while using stove?|Use chaminé, capuz ou outro ao usar fogão?
-Name=I2B16_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Regularly clean a chimneym hood or other?|Limpe regularmente um capuz chimneym ou outro?
-Name=I2B17
-Start=161
-Len=1
-
-[ValueSet]
-Label=Regularly clean a chimneym hood or other?|Limpe regularmente um capuz chimneym ou outro?
-Name=I2B17_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=What are the fuels you used on stove? most used|Quais são os combustíveis que você usou no fogão? mais usado
-Name=I2B18A
-Start=162
-Len=2
-
-[ValueSet]
-Label=What are the fuels you used on stove? most used|Quais são os combustíveis que você usou no fogão? mais usado
-Name=I2B18A_VS1
-Value=1;LPG/cooking gas|LPG / gás de cozinha|LPG/Gesi ya mtungi
-Value=2;Wood purchased|Madeira comprada|Kuni za kununua
-Value=3;Wood collected|Madeira recolhidas|Kuni za kuokota
-Value=4;Charcoal|Carvão|Mkaa
-Value=5;Solar||Nishati ya Jua
-Value=6;Kerosene|Querosene|Mafuta ya taa
-Value=7;Piped Natural Gas|Gás Natural Canalizado|Gesi asili kwenye mabomba
-Value=8;Coal/lignite|Carvão / lenhite|Makaa ya mawe
-Value=9;Animal Waste/Dung|Resíduos animais / Dung|Kinyesi cha wanyama
-Value=10;Crop Residue/Plant Biomass|Colheita de Resíduos / biomassa vegetal|Tungamotaka (mabaki ya mazao)
-Value=11;Saw Dust|Pó de serra|Maranda
-Value=12;Coal Briquette|Carvão Briquete|Mkaa utokanao na vumbi la makaa ya mawe
-Value=13;Biomass Briquette|Biomassa Briquete|Mkaa utokanao na vumbi la makaa ya mawe
-Value=14;Electric|Elétrico|Umeme
-Value=15;Processed biomass (pellets)/ woodchips|Biomassa processada (peletes) / aparas de madeira|Mkaa mbadala utokanao na vumbi la mbao
-Value=16;Biogas|Biogás|Bayogesi
-Value=17;Ethanol|Etanol|Ethano
-Value=18;Garbage/plastic|Lixo / plástico|Takataka/plastiki
-Value=66;Not applicable|Não aplicável|Haihusiki
-Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=What are the fuels you used on stove? second most used|Quais são os combustíveis que você usou no fogão? segundo mais utilizados
-Name=I2B18B
-Start=164
-Len=2
-
-[ValueSet]
-Label=What are the fuels you used on stove? second most used|Quais são os combustíveis que você usou no fogão? mais usado
-Name=I2B18B_VS1
-Value=1;LPG/cooking gas|LPG / gás de cozinha|LPG/Gesi ya mtungi
-Value=2;Wood purchased|Madeira comprada|Kuni za kununua
-Value=3;Wood collected|Madeira recolhidas|Kuni za kuokota
-Value=4;Charcoal|Carvão|Mkaa
-Value=5;Solar||Nishati ya Jua
-Value=6;Kerosene|Querosene|Mafuta ya taa
-Value=7;Piped Natural Gas|Gás Natural Canalizado|Gesi asili kwenye mabomba
-Value=8;Coal/lignite|Carvão / lenhite|Makaa ya mawe
-Value=9;Animal Waste/Dung|Resíduos animais / Dung|Kinyesi cha wanyama
-Value=10;Crop Residue/Plant Biomass|Colheita de Resíduos / biomassa vegetal|Tungamotaka (mabaki ya mazao)
-Value=11;Saw Dust|Pó de serra|Maranda
-Value=12;Coal Briquette|Carvão Briquete|Mkaa utokanao na vumbi la makaa ya mawe
-Value=13;Biomass Briquette|Biomassa Briquete|Mkaa utokanao na vumbi la makaa ya mawe
-Value=14;Electric|Elétrico|Umeme
-Value=15;Processed biomass (pellets)/ woodchips|Biomassa processada (peletes) / aparas de madeira|Mkaa mbadala utokanao na vumbi la mbao
-Value=16;Biogas|Biogás|Bayogesi
-Value=17;Ethanol|Etanol|Ethano
-Value=18;Garbage/plastic|Lixo / plástico|Takataka/plastiki
-Value=66;Not applicable|Não aplicável|Haihusiki
-Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=How often was most used fuel type available? most used|Quantas vezes foi mais utilizado tipo de combustível disponível? mais usado
-Name=I2B19A
-Start=166
-Len=1
-
-[ValueSet]
-Label=How often was most used fuel type available? most used|Quantas vezes foi mais utilizado tipo de combustível disponível? mais usado
-Name=I2B19A_VS1
-Value=1;Always available|Sempre disponível|Inapatikana wakati wote
-Value=2;Mostly available|Na maior parte disponíveis|Inapatikana mara nyingi
-Value=3;Sometimes available|A vezes disponíveis|Haipatikani wakati wote
-Value=4;Rarely available|Raramente disponíveis|Inapatikana mara chache
-
-[Item]
-Label=How often was most used fuel type available? second most used|Quantas vezes foi mais utilizado tipo de combustível disponível? segundo mais utilizados
-Name=I2B19B
-Start=167
-Len=1
-
-[ValueSet]
-Label=How often was most used fuel type available? second most used|Quantas vezes foi mais utilizado tipo de combustível disponível? mais usado
-Name=I2B19B_VS1
-Value=1;Always available|Sempre disponível|Inapatikana wakati wote
-Value=2;Mostly available|Na maior parte disponíveis|Inapatikana mara nyingi
-Value=3;Sometimes available|A vezes disponíveis|Haipatikani wakati wote
-Value=4;Rarely available|Raramente disponíveis|Inapatikana mara chache
-
-[Item]
-Label=Time spend on preparing stove and fuel for each meal|tempo gasto na preparação de fogão e combustível para cada refeição
-Name=I2B20
-Start=168
-Len=3
-
-[Item]
-Label=Days stove used last 7 days|Dias fogão usado últimos 7 dias
-Name=I2B21
-Start=171
-Len=1
-
-[ValueSet]
-Label=Days stove used last 7 days|Dias fogão usado últimos 7 dias
-Name=I2B21_VS1
-Value=0:7
-
-[Item]
-Label=Times stove lighted per day|Vezes fogão aceso por dia
-Name=I2B22
-Start=172
-Len=1
-
-[Item]
-Label=Time spend to cook/reheat meals in the morning|Tempo gasto para cozinhar refeições / reaquecimento da manhã
-Name=I2B23
-Start=173
-Len=2
-
-[ValueSet]
-Label=Time spend to cook/reheat meals in the morning|Tempo gasto para cozinhar refeições / reaquecimento da manhã
-Name=I2B23_VS1
-Value=0;0 minutes|0 minutos|Dakika 0
-Value=1;1-30 minutes|1-30 minutos|Dakika 1-30
-Value=2;31-60 minutes|31-60 minutos|Dakika 31-60
-Value=3;1-2 hours|1-2 horas|Masaa 1-2
-Value=4;2-3 hours|2-3 horas|Masaa 2-3
-Value=5;3-5 hours|3-5 horas|Masaa 3-5
-Value=6;More than 5 hours|Mais do que 5 horas|Zaidi ya masaa 5
-
-[Item]
-Label=Time spend to cook/reheat meals in the afternoon|Tempo gasto para cozinhar refeições / reaquecimento da tarde
-Name=I2B24
-Start=175
-Len=2
-
-[ValueSet]
-Label=Time spend to cook/reheat meals in the morning|Tempo gasto para cozinhar refeições / reaquecimento da manhã|Time spend to cook/reheat meals in the afternoon
-Name=I2B24_VS1
-Value=0;0 minutes|0 minutos|Dakika 0
-Value=1;1-30 minutes|1-30 minutos|Dakika 1-30
-Value=2;31-60 minutes|31-60 minutos|Dakika 31-60
-Value=3;1-2 hours|1-2 horas|Masaa 1-2
-Value=4;2-3 hours|2-3 horas|Masaa 2-3
-Value=5;3-5 hours|3-5 horas|Masaa 3-5
-Value=6;More than 5 hours|Mais do que 5 horas|Zaidi ya masaa 5
-
-[Item]
-Label=Time spend to cook/reheat meals in the evening|Tempo gasto para cozinhar refeições / reaquecimento da noite
-Name=I2B25
-Start=177
-Len=2
-
-[ValueSet]
-Label=Time spend to cook/reheat meals in the morning|Tempo gasto para cozinhar refeições / reaquecimento da manhã|Time spend to cook/reheat meals in the evening
-Name=I2B25_VS1
-Value=0;0 minutes|0 minutos|Dakika 0
-Value=1;1-30 minutes|1-30 minutos|Dakika 1-30
-Value=2;31-60 minutes|31-60 minutos|Dakika 31-60
-Value=3;1-2 hours|1-2 horas|Masaa 1-2
-Value=4;2-3 hours|2-3 horas|Masaa 2-3
-Value=5;3-5 hours|3-5 horas|Masaa 3-5
-Value=6;More than 5 hours|Mais do que 5 horas|Zaidi ya masaa 5
-
-[Item]
-Label=Time spend per day to boil water|tempo gasto por dia para ferver água
-Name=I2B26
-Start=179
-Len=2
-
-[ValueSet]
-Label=Time spend to cook/reheat meals in the morning|Tempo gasto para cozinhar refeições / reaquecimento da manhã|Time spend per day to boil water
-Name=I2B26_VS1
-Value=0;0 minutes|0 minutos|Dakika 0
-Value=1;1-30 minutes|1-30 minutos|Dakika 1-30
-Value=2;31-60 minutes|31-60 minutos|Dakika 31-60
-Value=3;1-2 hours|1-2 horas|Masaa 1-2
-Value=4;2-3 hours|2-3 horas|Masaa 2-3
-Value=5;3-5 hours|3-5 horas|Masaa 3-5
-Value=6;More than 5 hours|Mais do que 5 horas|Zaidi ya masaa 5
-
-[Item]
-Label=Stove for space heating|Fogão para aquecimento
-Name=I2B27
-Start=181
-Len=1
-
-[ValueSet]
-Label=Stove for space heating|Fogão para aquecimento
-Name=I2B27_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|No|Hapana
-
-[Item]
-Label=Months that stove are used for heating|Meses que fogão são utilizados para aquecimento
-Name=I2B28
-Start=182
-Len=2
-
-[ValueSet]
-Label=Months that stove are used for heating|Meses que fogão são utilizados para aquecimento
-Name=I2B28_VS1
-Value=1;Dry season|Estação seca|Msimu wa kiangazi
-Value=2;Wet season|Estação chuvosa|Msimu wa masika
-Value=3;All year|Todo o ano|Mwaka mzima
-
-[Item]
-Label=Hours stove used for heating each day|Horas fogão usado para aquecer cada dia
-Name=I2B29
-Start=184
-Len=2
-
-[Item]
-Label=Types of harm/injuries faced from stove|Tipos de danos / lesões enfrentado de fogão
-Name=I2B30
-Start=186
-Len=9
-DataType=Alpha
-
-[ValueSet]
-Label=Types of harm/injuries faced from stove|Tipos de danos / lesões enfrentado de fogão
-Name=I2B30_VS1
-Value='1        ';Death or permanent damage|Morte ou danos permanentes|Kifo au ulemavu wa kudumu
-Value='2        ';Burn/fire/poisoning|Queimar / incêndio / envenenamento|Kuungua/sumu
-Value='3        ';Severe cough/respiratory problems|Tosse severa / problemas respiratórios|Kikohozi kikali/tatizo la upumuaji
-Value='4        ';Other Major injury|Outro grande prejuízo|Majeraha mengine makubwa
-Value='5        ';Minor injury|Pequena lesão|Majeraha madogo
-Value='6        ';Fire with noe injury|Fogo com ferimentos noe|Moto bila majeraha
-Value='7        ';Itchy/watery eyes|Olhos lacrimejantes pruriginosos|Maumivu ya macho
-Value='8        ';Light cough|Tosse luz|Kikohozi chepesi
-Value='9        ';None|Nenhum|Hakuna
-
-[Item]
-Label=Reason for injury|Motivo da lesão
-Name=I2B31
-Start=195
-Len=2
-
-[ValueSet]
-Label=Reason for injury|Motivo da lesão
-Name=I2B31_VS1
-Value=1;Carelessness or error|Descuido ou erro|Uzembe au kukosa umakini
-Value=2;Problem with stove|Problema com fogão|Tatizo la jiko
-Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=Do you use this stove most of the time?|Você usa este fogão a maior parte do tempo?
-Name=I2B32
-Start=197
-Len=1
-
-[ValueSet]
-Label=Do you use this stove most of the time?|Você usa este fogão a maior parte do tempo?
-Name=I2B32_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Why don't you use this stove most of the time? First|Por que você não usar este fogão a maior parte do tempo? Primeiro
-Name=I2B33
-Start=198
-Len=4
-DataType=Alpha
-
-[ValueSet]
-Label=Why don't you use this stove most of the time? First|Por que você não usar este fogão a maior parte do tempo? Primeiro
-Name=I2B33_VS1
-Value='1   ';Electricity/fuel for this stove unavailabl|Eletricidade / combustível para este fogão não está disponível|Umeme/mafuta kwa ajili ya jiko hili halipatikani
-Value='2   ';Electricity/fuel for this stove too expensive|Electricidade / combustível para este fogão é demasiado caro|Umeme/mafuta kwa ajili ya jiko hili  ni ghali sana
-Value='3   ';Certain type of cooking is not possible with this stove|Certo tipo de cozinhar não é possível com este fogão|Baadhi ya mapishi hayawezekani kwa jiko hili
-Value='4   ';Cookstove does not have enough burners|O fogão não tem queimadores suficientes|Jiko halina  vijisahani vya kutosha
-Value='5   ';Cookstove flame is too weak|Chama do fogão é muito fraco|Mwale wa jiko hili ni hafifu
-Value='6   ';Stove takes a long time to cook food|O Fogão leva um longo tempo para cozinhar alimentos|Jiko linachukua muda mrefu kuivisha chakula
-Value='7   ';Electricity/fuel takes a long time to prepare|Eletricidade / combustível leva um longo tempo para se preparar|Umeme/mafuta yanachukua muda mrefu kuandaa
-Value='8   ';Stove is difficult/inconvenient to use|Fogão é difícil / inconveniente de usar|Jiko hili ni gumu kulitumia
-Value='9   ';I prefer another energy source but the electricity/fuel  is too expensive or often not available|Eu prefiro uma outra fonte de energia, mas a eletricidade / combustível é muito caro ou muitas vezes não está disponível|Napendelea chanzo kingine cha nishati kwa sababu umeme/mafuta ni ghali au mara nyingi hayapatikani
-Value='10  ';Certain type of meals taste better with another stove|Certo tipo de comida é melhor com outro fogão|Baadhi ya vyakula vinakuwa na radha nzuri vikipikwa na radha nyingine
-Value='55  ';Other|De outros|Nyingine
-
-[Item]
-Label=Why don't you use this stove most of the time? second|Por que você não usar este fogão a maior parte do tempo? segundo
-Name=I2B34
-Start=202
-Len=4
-DataType=Alpha
-
-[ValueSet]
-Label=Why don't you use this stove most of the time? second|Por que você não usar este fogão a maior parte do tempo? Primeiro
-Name=I2B34_VS1
-Value='1   ';Electricity/fuel for this stove unavailabl|Eletricidade / combustível para este fogão não está disponível|Umeme/mafuta kwa ajili ya jiko hili halipatikani
-Value='2   ';Electricity/fuel for this stove too expensive|Electricidade / combustível para este fogão é demasiado caro|Umeme/mafuta kwa ajili ya jiko hili ni ghali sana
-Value='3   ';Certain type of cooking is not possible with this stove|Certo tipo de cozinhar não é possível com este fogão|Baadhi ya mapishi hayawezekani kwa jiko hili
-Value='4   ';Cookstove does not have enough burners|O fogão não tem queimadores suficientes|Jiko halina  vijisahani vya kutosha
-Value='5   ';Cookstove flame is too weak|Chama do fogão é muito fraco|Mwale wa jiko hili ni hafifu
-Value='6   ';Stove takes a long time to cook food|O Fogão leva um longo tempo para cozinhar alimentos|Jiko linachukua muda mrefu kuivisha chakula
-Value='7   ';Electricity/fuel takes a long time to prepare|Eletricidade / combustível leva um longo tempo para se preparar|Umeme/mafuta yanachukua muda mrefu kuandaa
-Value='8   ';Stove is difficult/inconvenient to use|Fogão é difícil / inconveniente de usar|Jiko hili ni gumu kulitumia
-Value='9   ';I prefer another energy source but the electricity/fuel is too expensive or often not available|Eu prefiro uma outra fonte de energia, mas a eletricidade / combustível é muito caro ou muitas vezes não está disponível|Napendelea chanzo kingine cha nishati  kwa sababu umeme/mafuta ni ghali au mara nyingi hayapatikani
-Value='10  ';Certain type of meals taste better with another stove|Certo tipo de comida é melhor com outro fogão|Baadhi ya vyakula vinakuwa na radha nzuri vikipikwa na radha nyingine
-Value='55  ';Other|De outros|Nyingine
-
-[Item]
-Label=Is this your main stove?|É este o seu principal fogão?
-Name=I2B35
-Start=206
-Len=1
-
-[ValueSet]
-Label=Is this your main stove?|É este o seu principal fogão?
-Name=I2B35_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Record]
 Label=J Space and water heating|J espaço e aquecimento de água
 Name=J_SPACE_AND_WATER
-RecordTypeValue='D'
+RecordTypeValue='J'
 RecordLen=108
 
 [Item]
@@ -4095,7 +3624,7 @@ Value=55;Other|De outros|Nyingine
 [Record]
 Label=K Willingness to pay for an improved stove|K disposição de pagar por um fogão melhorado
 Name=K_IMPROVED_STOVE
-RecordTypeValue='E'
+RecordTypeValue='K'
 RecordLen=109
 
 [Item]
@@ -4147,7 +3676,7 @@ Value=55;Other|De outros|Nyingine
 [Record]
 Label=L Household assets|ativos L domésticos
 Name=L_HOUSEHOLD_ASSETS
-RecordTypeValue='F'
+RecordTypeValue='L'
 RecordLen=264
 
 [Item]
@@ -4324,7 +3853,7 @@ Value=3;21 or more|21 ou mais|21 au zaidi
 [Record]
 Label=M Street lighting|relâmpago M Street
 Name=M_STREET_LIGHTNING
-RecordTypeValue='G'
+RecordTypeValue='M'
 RecordLen=105
 
 [Item]
@@ -4366,7 +3895,7 @@ Value=2;No|Não|Hapana
 [Record]
 Label=N Time use - day time and after work
 Name=N_TIME_USE
-RecordTypeValue='6'
+RecordTypeValue='N'
 RecordLen=388
 
 [Item]
@@ -4714,7 +4243,7 @@ Value=3;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
 [Record]
 Label=O Health impacts|impactos O Saúde
 Name=O_HEALTH_IMPACTS
-RecordTypeValue='I'
+RecordTypeValue='O'
 RecordLen=116
 
 [Item]
@@ -4852,7 +4381,7 @@ Value=2;No|Não|Hapana
 [Record]
 Label=Q1 Consumption/expenditure|Q1 Consumo / despesas
 Name=Q_CONSUMPTION_EXPENDITURE
-RecordTypeValue='K'
+RecordTypeValue='Q'
 RecordLen=329
 
 [Item]
@@ -4959,7 +4488,7 @@ Len=10
 [Record]
 Label=S Attitudes|Atitudes S
 Name=S_ATTITUDES
-RecordTypeValue='M'
+RecordTypeValue='S'
 RecordLen=110
 
 [Item]
@@ -5049,7 +4578,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Record]
 Label=T Women's empowerment|O empoderamento das mulheres T
 Name=T_WOMENS_EMPOWERMENT
-RecordTypeValue='N'
+RecordTypeValue='T'
 RecordLen=107
 
 [Item]
@@ -5097,8 +4626,8 @@ Link=11223344
 
 [Record]
 Label=U Livelihood means
-Name=U_LIVELIHOOD_1_9
-RecordTypeValue='T'
+Name=U_LIVELIHOOD_MEANS
+RecordTypeValue='U'
 Required=No
 RecordLen=222
 
@@ -5470,7 +4999,7 @@ Value=5;Other areas|Outras áreas|Maeneo mengine
 [Record]
 Label=W Social life and security|A vida social W e segurança
 Name=W_SOCIAL_LIFE_AND_SECURITY
-RecordTypeValue='Q'
+RecordTypeValue='W'
 RecordLen=131
 
 [Item]
@@ -5540,7 +5069,7 @@ Value=4;Not applicable|Não aplicável|Haihusiki
 [Record]
 Label=AA Interview particulars - end of interview|particularidades AA entrevista - final da entrevista
 Name=AA_END_OF_INTERVIEW
-RecordTypeValue='J'
+RecordTypeValue='Z'
 RecordLen=132
 
 [Item]

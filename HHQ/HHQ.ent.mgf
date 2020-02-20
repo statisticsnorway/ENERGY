@@ -233,67 +233,69 @@ EN(159) Time used after dark (%d hours) cannot be more than time used in total (
 
 EN(160) Time used after dark (%d hours, %d minutes) cannot be more than time used in total (%d hours, %d minutes)
 
-EN (161) %d is more than the maximum of 24 hours.
-SW (161) %d ni zaidi ya saa 24.
+EN(161) %d is more than the maximum of 24 hours.
+SW(161) %d ni zaidi ya saa 24.
 
-EN (162) %d is more than the maximum of 15 hours of darkness.
+EN(162) %d is more than the maximum of 15 hours of darkness.
 
-EN (163) %d.%d is more than the maximum of 24 hours a day.
+EN(163) %d.%d is more than the maximum of 24 hours a day.
 
-EN (164) %d.%d is more than the maximum of 15 hours of darkness.
+EN(164) %d.%d is more than the maximum of 15 hours of darkness.
 
-EN (165) %d is more than the maximum of 59 minutes.
+EN(165) %d is more than the maximum of 59 minutes.
 
-EN (166) %d is more than the number of persons in this group (%d)
+EN(166) %d is more than the number of persons in this group (%d)
 
-EN (167) Value must be between %d and %d (or unkwown: %d), entered value is %d
+EN(167) Value must be between %d and %d (or unkwown: %d), entered value is %d
 
-EN (168) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. We know that you already have a grid connection, but as you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+EN(168) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. We know that you already have a grid connection, but as you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 
-EN (169) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+EN(169) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 
-EN (170) You have to choose at least one of the options
+EN(170) You have to choose at least one of the options
 
-EN (171) We would now like to talk about the time used to collect wood.
+EN(171) We would now like to talk about the time used to collect wood.
 
-EN (172) We would now like to know more about how the members of this household spend their time, both today and 5 years ago. We will ask about time use for women and men and children and grown-ups separately.
+EN(172) We would now like to know more about how the members of this household spend their time, both today and 5 years ago. We will ask about time use for women and men and children and grown-ups separately.
 
-EN (173) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+EN(173) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 
-EN (174) We would now like to ask you some questions about your grid connection.
+EN(174) We would now like to ask you some questions about your grid connection.
 
-EN (175) You said that your main source of electricity is dry cell batteries. We would now like to ask you some questions about these batteries
+EN(175) You said that your main source of electricity is dry cell batteries. We would now like to ask you some questions about these batteries
 
-EN (176) You said that your main source of electrical power is a %s. We would now like to ask you some questions about this device. We would like you to consider only devices in working condition. If you have more than one device, think about the MAIN solar device.
+EN(176) You said that your main source of electrical power is a %s. We would now like to ask you some questions about this device. We would like you to consider only devices in working condition. If you have more than one device, think about the MAIN solar device.
 
-EN (177) We would now like to ask you some questions about your electric generator
+EN(177) We would now like to ask you some questions about your electric generator
 
-EN (178) We would now like to ask you some questions about your externally recharged battery.
+EN(178) We would now like to ask you some questions about your externally recharged battery.
 
-EN (179) Now we would like to know more about your dwelling.
+EN(179) Now we would like to know more about your dwelling.
 
-EN (180) The next questions is about the households use of bank services
+EN(180) The next questions is about the households use of bank services
 
-EN (181) The next questions is about the use and sources of energy in this household. We start with electricity and then move to other energy sources. First we would like to know if you have any electrical power in this household.
+EN(181) The next questions is about the use and sources of energy in this household. We start with electricity and then move to other energy sources. First we would like to know if you have any electrical power in this household.
 
-EN (182) The next questions are about mobile phones in the household.
+EN(182) The next questions are about mobile phones in the household.
 
-EN (183) To learn about the health impacts of cooking we would like to ask you some questions about your health.
+EN(183) To learn about the health impacts of cooking we would like to ask you some questions about your health.
 
-EN (184) We start with adult women which is 15 years or older
+EN(184) We start with adult women which is 15 years or older
 
-EN (185) Then we continue with the time-use of girls in the age og 5-14 years old
+EN(185) Then we continue with the time-use of girls in the age og 5-14 years old
 
-EN (186) Then we continue with the time-use of men 15 years and older
+EN(186) Then we continue with the time-use of men 15 years and older
 
-EN (187) Lastly, we would like to know about the the time-use of boys in the age og 5-14 years old
+EN(187) Lastly, we would like to know about the the time-use of boys in the age og 5-14 years old
 
-EN (188) Now we would like to ask you for some information on the households expenditures for food and for non-food.
+EN(188) Now we would like to ask you for some information on the households expenditures for food and for non-food.
 
-EN (189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  2. Within your house you need wires that connect appliances to the meter.  This is the wiring.  3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. I would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
+EN(189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  2. Within your house you need wires that connect appliances to the meter.  This is the wiring.  3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. I would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
 
-EN (190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
+EN(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
 
-EN (191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
+EN(191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
 
-EN (192) The next questions is about the households use of lamps/candles and fuel used for lighting. Are you well informed about these issues, or would you like somebody else in the household to answer these questions?
+EN(192) The next questions is about the households use of lamps/candles and fuel used for lighting. Are you well informed about these issues, or would you like somebody else in the household to answer these questions?
+
+EN(193) We would also like to ask you about the health of %s

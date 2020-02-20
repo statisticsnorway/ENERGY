@@ -5,7 +5,6 @@ Description=Household Questionnaire
 
 [DataEntryInit]
 StartMode=Add
-ShowInApplicationListing=Never
 FullScreen=Yes
 AutoAdd=No
 

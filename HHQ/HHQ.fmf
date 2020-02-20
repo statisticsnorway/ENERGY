@@ -323,11 +323,11 @@ Name=FORM014
 Label=G - Dry-cell batteries
 QuestionTextHeight=96
 Level=1
-Size=353,475
+Size=301,475
   
-Item=G2
 Item=G7
 Item=G8
+Item=G2
 Item=G_DRY_CELL000
   
 [EndForm]
@@ -3226,7 +3226,7 @@ Text=C144
   
 [Field]
 Name=C145
-Position=98,479,141,499
+Position=98,479,127,499
 Item=C145,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=7
@@ -3263,7 +3263,7 @@ Text=C146A
   
 [Field]
 Name=C146B
-Position=98,583,141,603
+Position=98,583,127,603
 Item=C146B,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -3482,7 +3482,7 @@ Text=E7
 [EndGroup]
   
 [Group]
-Required=Yes
+Required=No
 Name=G_FORM
 Label=G - Dry-cell batteries
 Form=11
@@ -3491,14 +3491,14 @@ Max=1
   
 [Field]
 Name=G2
-Position=85,86,198,106
+Position=163,33,276,53
 Item=G2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
 Form=11
   
 [Text]
-Position=46,89,63,105
+Position=37,36,54,52
 Text=G2
  
   
@@ -3510,7 +3510,7 @@ Required=No
 Type=Record
 TypeName=G_DRY_CELL
 Max=4
-DisplaySize=44,170,228,306
+DisplaySize=44,116,212,252
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -3541,15 +3541,15 @@ Width=10
 [EndColumn]
   
 [Column]
-Width=27
+Width=37
   
 [HeaderText]
-Position=0,0,27,24
+Position=10,0,37,24
 Text=GB
  
 [Field]
 Name=GB
-Position=4,0,19,20
+Position=0,0,29,20
 Item=GB,HHQ_DICT
 FieldLabelType=DictionaryName
   
@@ -4173,7 +4173,7 @@ Text=I14
   
 [Field]
 Name=I15
-Position=590,19,619,39
+Position=590,19,605,39
 Item=I15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -4186,7 +4186,7 @@ Text=I15
   
 [Field]
 Name=I15A
-Position=590,49,619,69
+Position=590,49,605,69
 Item=I15A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -6492,8 +6492,10 @@ Name=U3A1
 Position=17,0,32,20
 Item=U3A1,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
   
 [Text]
+Position=0,0,34,16
 Text=U3A1
  
 [EndColumn]

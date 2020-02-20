@@ -57,6 +57,7 @@
 	array hhDemographics(7) = 0,0,0,0,0,0,0;	//splitting household in age and gender groups. To facilitate skipping
 											//element 1 = #women, 2 = #girls, 3 = #men, 4 = #boys, 5 = #children under 5, 6 = adults (15 years and above)
 											// 7 = children 0-15 years
+	Array numeric childrenNos(20);
 	Array String childrenNames(20);
 
  	array numeric powerSources(9);
@@ -370,8 +371,9 @@ PROC AB5
 	if $ >= 0 and $ < 16 then
 		inc(j);
 		inc(hhDemographics(7));
+		childrenNos(j) = j;
 		childrenNames(j) = AB1;
-		errmsg("Child name %s",childrenNames(j));
+//		errmsg("Child name %s",childrenNames(j));
 	endif;	
 
 
@@ -421,7 +423,7 @@ preproc
 		skip to A8;
 	endif;	
 postproc
-    if AC3 = 1 then
+    if $ = 1 then
 	 if AB4 = 2 then
 			inc(schoolGirls);
 		elseif AB4 = 1 then	
@@ -514,7 +516,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
- skip to C1_FORM;	
+// skip to C1_FORM;	
 PROC B3
 //	skip to W_FORM;
 
@@ -623,6 +625,7 @@ onfocus
   skip to C3;
  endif; 
     numeric i = 1;
+	numeric code;
 	do while i < 9 ;
 	 if powerSources(i) = 0 then
 	  powerSources(i) = NOTAPPL;
@@ -632,60 +635,60 @@ onfocus
 	i = 0;
 	if c2a = 1 then
 	  inc(i);
-	  c2g = 1;
+	  code = 1;
 	  powerSources(i) = 1;
-	  powerSourcesLabels(i) =  getvaluelabel($);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,c2g,powerSources(i),powerSourcesLabels(i));
 	endif; 
 	if c2b = 1 then
 	 if pos("1", c2b1) > 0 then
 	  inc(i);
-	  $ = 3;
+	  code = 3;
 	  powerSources(i) = 3;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	 endif; 
 	 if pos("2", c2b1) > 0 then
 	  inc(i);
-	  $ = 7;
+	  code = 7;
 	  powerSources(i) = 7;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	 endif; 
 	 if pos("3", c2b1) > 0 then
 	  inc(i); 
-	  $ = 8;
+	  code = 8;
 	  powerSources(i) = 8;
- 	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+ 	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(7),powerSourcesLabels(i));
  	 endif; 
 	endif; 
 	if c2c = 1 then
 	  inc(i);
-	  $ = 4;
+	  code = 4;
 	  powerSources(i) = 4;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif; 
 	if c2d = 1 then
 	  inc(i);
-	  $ = 5;
+	  code = 5;
 	  powerSources(i) = 5;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif; 
 	if c2e = 1 then
 	  inc(i);
-	  $ = 6;
+	  code = 6;
 	  powerSources(i) = 6;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif; 
 	if c2f = 1 then
 	  inc(i);
-	  $ = 9;
+	  code = 9;
 	  powerSources(i) = 9;
-	  powerSourcesLabels(i) =  getvaluelabel(c2g);
+	  powerSourcesLabels(i) =  getlabel($,code);
 //	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif; 
 
@@ -713,21 +716,29 @@ postproc
 //	errmsg("c2yes er %d",c2yes);
 PROC C2H
 preproc
+ numeric code;
  if c2yes = 1 then
   skip to C3;
  endif; 
- $ = 66;
- powerSources(c2yes+1) = 66;
- powerSourcesLabels(c2yes+1) =  getvaluelabel(c2h);
-// Take out the answer from c2g in the valueset
-//  numeric i = 1;
-//  do while i < 9 ;
-//	 if powerSources(i) = 0 or powerSources(i) = c2g then
-//	  powerSources(i) = NOTAPPL;
-// 	 endif;
-//    inc(i);
-//	enddo;
  
+// Take out the answer from c2g in the valueset
+  numeric i = 1;
+  numeric main = 0;
+  do while i <= c2yes-1 ;
+	 if powerSources(i) = c2g then
+	  main = 1;
+	 endif;
+     if main = 1 then	 
+	  powerSources(i) = powerSources(i+1);
+	  powerSourcesLabels(i) = powerSourcesLabels(i+1);
+ 	 endif;
+    inc(i);
+  enddo;
+
+ code = 66;
+ powerSources(c2yes) = 66;
+ powerSourcesLabels(c2yes) =  getlabel(c2h,code);
+
  setValueset($, powerSources, powerSourcesLabels);
   
  $ = NOTAPPL;
@@ -854,7 +865,7 @@ PROC C29
   reenter;
  endif;
 PROC C31
-	if $ in 66,88 then
+	if $ in 0,66,88 then
 		skip to C36;
 	endif;
 
@@ -894,6 +905,10 @@ preproc
 	 skip to C108;
 	endif; 
  errmsg(176,strip(solarDeviceType));
+PROC C82C1
+	if $ = 2 then
+		skip to c82g;
+	endif;	
 PROC C82G
 preproc
  rangeStart = 20;
@@ -1295,12 +1310,6 @@ preproc
  endif; 
  errmsg(175);
 PROC G2
-preproc
- if not c2f = 1 then
-  skip to f_form;
- endif; 
-// errmsg(175);
-postproc
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
 		reenter;
@@ -1309,8 +1318,7 @@ postproc
 	if pos("66", $) > 0  then
 		//"none" is chosen
 		skip to F_FORM;
-	endif;
-	
+	endif;	
 
 
 PROC GB
@@ -1606,7 +1614,7 @@ postproc
   reenter;
  endif;
  fueltype2 = getvaluelabel($);
- If $ in 18, 66, 55 then 
+ If $ in 13, 18, 66, 55 then 
   skip to I19c ;
  endif;
 PROC I19B
@@ -1633,6 +1641,10 @@ preproc
 	 skip to i37;
 	endif; 
     errmsg(171);
+postproc
+	if $ = 0 then 
+		skip to I37;
+	endif;	
 PROC I37
 preproc
 	if not((I18a in 2,3,4,7,8,9,10,11,12,14,17 or I18b in 2,3,4,7,8,9,10,11,12,14,17) AND (I15 in 1,2,3 or I15a in 1,2,3)) then
@@ -1692,15 +1704,21 @@ PROC O1_C
 preproc
   if hhDemographics(7) > 0 then
 	seed(systime());
-    O1_C = random(1, hhDemographics(7));
-	chosenChildName = childrenNames(O1_C);
-	errmsg("Child number %d, Child name %s",chosenChildName,O1_C);
+	numeric child;
+    child = random(1, hhDemographics(7));
+	setValueset($, childrenNos, childrenNames);
+	chosenChildName = getlabel($,child);
+//	errmsg("Child number %d, Child name %s",child,chosenChildName);
+	$ = child;
 	skip to O7;
   else	
     skip to K_FORM;
   endif;
   	
    
+PROC O7
+preproc
+ errmsg(193,chosenChildName);
 PROC K_FORM
 preproc
 	if not(I2i in 1,2,7) then 
@@ -1853,10 +1871,6 @@ preproc
 	  skip to next;
 	endif;  
 
-onfocus
-	if curocc() = 11 and LA = 2 then
-		skip to L27;
-	endif;
 	
 	
 	
@@ -1945,6 +1959,7 @@ preproc
  if hhDemographics(1) < 1 then
   skip to N_ACTIVITY_GIRLS;
  endif; 
+ 
  if curocc() = 1 then
    errmsg(184);
  endif;
@@ -2019,7 +2034,7 @@ preproc
  endif;
  $ = curocc();
  activity = getLabel($, curocc());
- errmsg("%s",activity);
+// errmsg("%s",activity);
  skip to N_F;
 
 PROC N_F

@@ -25,6 +25,8 @@ File=.\HHQ.ent.mgf
 File=.\HHQ.ent.qsf
 [Forms]
 File=.\HHQ.fmf
+[Resources]
+Folder=..\Images
 [Dictionary Types]
 Dict-Type=.\HHQ.dcf,Input,.\HHQ.fmf
 Dict-Type=..\Sampling\sample.dcf,External
