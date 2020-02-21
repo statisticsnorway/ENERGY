@@ -822,6 +822,11 @@ postproc
   reenter;
  endif;  
  
+PROC C17
+preproc
+	if C17 = 1 then
+		skip to C24c;
+	endif;
 PROC C13
 	if $ = 66 then
 		skip to C26;
@@ -1619,7 +1624,7 @@ postproc
  endif;
 PROC I19B
 preproc
-	if i18b in 55, 66 then 
+	if i18b in 13, 18, 55, 66 then 
 	 skip to i19c;
 	endif; 
 
