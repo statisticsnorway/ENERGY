@@ -44,7 +44,7 @@ PROC GLOBAL
 	function numeric syncSendListing()
 		if syncconnect(bluetooth) = 1 then
 			syncdata(PUT, LISTING_DICT);
-			syncData(PUT(HHQ_DICT);
+			syncData(PUT, HHQ_DICT);
 			syncdisconnect();
 			syncSendListing = 1;
 		else
