@@ -40,10 +40,11 @@ PROC GLOBAL
 
 
 
-	//Send listing data to supervisor from interviewer
+	//Send data (both listing and HHQ to supervisor from interviewer
 	function numeric syncSendListing()
 		if syncconnect(bluetooth) = 1 then
 			syncdata(PUT, LISTING_DICT);
+			syncData(PUT(HHQ_DICT);
 			syncdisconnect();
 			syncSendListing = 1;
 		else
