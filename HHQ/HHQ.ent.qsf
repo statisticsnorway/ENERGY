@@ -11983,28 +11983,29 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.WA1
-Occurrences=1:7
+Occurrences=1:9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 How safe do you feel\cf2  %socAndSec%\cf1  - today?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 How safe do you feel \cf2 %socAndSec%\cf1  - today?\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\f0\fs30 Qu\'e3o seguro voc\'ea se sente \cf2 %socAndSec%\cf1  hoje?\f1\fs24\par
-PT=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 SW=\pard\cf1\fs24\lang1044 Je! Unahisi salama\cf2\par
 SW=%socAndSec%\cf1  \par
 SW=- leo?\par
 SW=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24\par
+PT=Qu\'e3o seguro voc\'ea se sente %socAndSec% hoje?\par
+PT=}
 
 [QUESTION]
 Field=HHQ_DICT.WA2
-Occurrences=1:8
+Occurrences=1:9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
@@ -12027,7 +12028,7 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.WA_0
-Occurrences=1:8
+Occurrences=1:9
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
