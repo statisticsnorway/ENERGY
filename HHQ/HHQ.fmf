@@ -823,10 +823,10 @@ Text=AA10A
   
 [Field]
 Name=AA11
-Position=543,265,617,285
+Position=543,265,558,285
 Item=AA11,HHQ_DICT
 FieldLabelType=DictionaryName
-UseUnicodeTextBox=Yes
+DataCaptureType=DropDown
 Form=1
   
 [Text]

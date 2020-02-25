@@ -257,6 +257,10 @@ PROC AA10A
 	skip to AA20;
 
 
+PROC AA13
+postproc
+	savepartial();
+	stop(1);
 PROC AA15
 preproc
 	if not ispartial() then

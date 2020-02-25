@@ -86,7 +86,7 @@ DataType=Alpha
 Label=Interview particulars|particularidades da entrevista
 Name=AA_INTERVIEW_PARTICULAR_REC
 RecordTypeValue='P'
-RecordLen=209
+RecordLen=202
 
 [Item]
 Label=Urban/Rural|Urbano Rural
@@ -153,27 +153,32 @@ Value=2;Refusing|Recusando|Amekataa
 Label=Appointment day|Apontar o dia
 Name=AA11
 Start=134
-Len=8
-DataType=Alpha
+Len=1
+
+[ValueSet]
+Label=Appointment day|Apontar o dia
+Name=AA11_VS1
+Value=1;Later today
+Value=2;Tomorrow
 
 [Item]
 Label=Appointment time|Apontar a hora
 Name=AA12
-Start=142
+Start=135
 Len=5
 DataType=Alpha
 
 [Item]
 Label=Appointment name|Apontar o nome
 Name=AA13
-Start=147
+Start=140
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Household head months in household|Chefe residiu no agregado?
 Name=AA15
-Start=177
+Start=170
 Len=1
 
 [ValueSet]
@@ -186,7 +191,7 @@ Value=3;6 months or more|6 meses ou mais|Miezi 6 au zaidi
 [Item]
 Label=Household head send cash or provisions|Meses em que chefe enviou algum dinheiro ou provisões?
 Name=AA16
-Start=178
+Start=171
 Len=1
 
 [ValueSet]
@@ -200,7 +205,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Household head main respondent|Mesma pessoa?
 Name=AA17
-Start=179
+Start=172
 Len=1
 
 [ValueSet]
@@ -212,7 +217,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Name of main respondent|Nome do entrevistado?
 Name=AA18
-Start=180
+Start=173
 Len=30
 DataType=Alpha
 
