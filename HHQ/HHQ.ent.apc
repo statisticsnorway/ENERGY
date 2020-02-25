@@ -3,7 +3,7 @@
 	//Country specific variables
 	numeric gridPrice = 3700;	//country specific price to connect to the grid
 	numeric highDevicePrice = 5000;//Country specific prices for solar devices
-	
+
 	//NB: When filling the following array with country specific cookstoves
 	//Please notice that the order is important: The two first elements should be wood stoves, the to last charcoal!
 	array String cookstove(4) = "COUNTRY SPECIFIC Aspirational wood ICS",
@@ -11,10 +11,10 @@
 								"COUNTRY SPECIFIC Aspirational charcoal ICS",
 								"LOCALLY AVAILABLE, popular affordable charcoal ICS";
 	array cookStovePrices(4) = 2100,700,2100,700;	//Reference prices for the above defined cookStoves
-	
+
 
 	//Variables to use in the CAPI question. Has to be globally declared
-	string currMember;	
+	string currMember;
 	string solarDeviceType; // Type of solar home system, used in second C section
 	string mainElSource;
 	string lampType;
@@ -46,11 +46,11 @@
 	string  fueltype1;
 	string  fueltype2;
 	string  UnitFuel;
-    numeric mostoften = 9;
+	numeric mostoften = 9;
 	string  chosenChildName; // Name of chosen child for O section (health)
 	numeric schoolBoys = 0;
 	numeric schoolGirls = 0;
-	
+
 	Array memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
 	Array String memberNames(20);
 
@@ -60,43 +60,48 @@
 	Array numeric childrenNos(20);
 	Array String childrenNames(20);
 
- 	array numeric powerSources(9);
+	 array numeric powerSources(9);
 	array string powerSourcesLabels(9);
 
 
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
-	function string lstrip(string theString)
-		numeric aPos = pos(" ", theString);
-		while aPos = 1 do
-			//leading space
-			theString = theString[2];
-			aPos = pos(" ", theString);
-		enddo;
+
+
+function string lstrip(string theString)
+	numeric aPos = pos(" ", theString);
+	while aPos = 1 do
+		//leading space
+		theString = theString[2];
+		aPos = pos(" ", theString);
+	enddo;
 		lstrip = theString;
-	end;
-	
-	function onStop()
-		savepartial();
-		stop(1);
-	end;
+end;
+
+
+function onStop()
+	savepartial();
+	stop(1);
+end;
 
 
 PROC HHQ_FF
 
+
 PROC HHQ_QUEST
+
 preproc
 
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC);
-	
+
 		numeric i = 1;
 		numeric j = 0;
 		while i <= memNum do
 			memberNumbers(i) = i;
 			memberNames(i) = AB1(i);
-			
-			//adding to relevant hhdemographic group			
+
+			//adding to relevant hhdemographic group
 			if AB4(i) = 2 then
 				if AB5(i) > 14 then	//woman
 					inc(hhDemographics(1));
@@ -121,17 +126,17 @@ preproc
 				inc(hhDemographics(7));
 				childrenNos(j) = j;
 				childrenNames(j) = AB1(i);
-			endif;	
+			endif;
 
 			inc(i);
 		enddo;
-		
+
 		memberNumbers(i) = NOTAPPL;
-		
+
 		//Need to find the name of the current respondent if we're still registering hh members
 		string currField = getSymbol(savepartial);
-		if currField[1:2] = "AB" or currField[1:2] = "AC" 
-				or currField in "A2","A3","A4","A5","A6","A7","A8" then
+		if currField[1:2] = "AB" or currField[1:2] = "AC"
+			or currField in "A2","A3","A4","A5","A6","A7","A8" then
 			numeric currNo;
 			if length(currField) = 6 then
 				currNo = tonumber(currField[5:1]);
@@ -139,96 +144,118 @@ preproc
 				currNo = tonumber(currField[4:1]);
 			endif;
 			currMember = AB1(currNo);
-		endif; 
-	endif;				
-	
+		endif;
+	endif;
+
 	string language = sysparm(language);
 	setLanguage(language);
 
 postproc
+
 	stop(1);
 
 
 
 PROC AA1
+
 preproc
-    $ = toNumber(sysparm("REGION"));
+
+	$ = toNumber(sysparm("REGION"));
 	noinput;
 
 
 
 PROC AA2
+
 preproc
+
 	$ = toNumber(sysparm("DISTRICT"));
 	noInput;
 
 
 
 PROC AA3
+
 preproc
+
 	$ = toNumber(sysparm("SUBDISTRICT"));
 	noinput;
 
 
 
 PROC AA4
+
 preproc
+
 	$ = toNumber(sysparm("LOCALITY"));
 	noinput;
 
 
 PROC AA5
+
 preproc
+
 	$ = toNumber(sysparm("VILLAGE"));
 	noinput;
-	
-	
+
+
 
 
 PROC AA6
+
 preproc
+
 	$ = toNumber(sysparm("EA"));
 	noinput;
 
 
 
 PROC AA7
+
 preproc
+
 	$ = toNumber(sysparm("URBANRURAL"));
 	noinput;
 
 
 PROC AA8
+
 preproc
+
 	AA8 = toNumber(sysparm("SERIAL"));
 	noinput;
 
 
 PROC AALOGIN
+
 preproc
+
 	$ = sysparm("LOGIN");
 	noinput;
 
 
 
 PROC AA14
+
 preproc
+
 	//Look up value in sample file
 	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
 	SLOGIN = AALOGIN;
 	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
 	$ = SA10;
-	
+
 	//Might as well set the other fields from the sample file too..
 	ADDRESS_LOCATION = SA11;
 	AA7A = SA7A;
 	AA7B = SA7B;
 	skip to AA9;
 
-	
+
 PROC AA9
-	
+
 preproc
+
 	//errmsg("Checking coordinate just in case: %d", visualValue(AA7A));
 	$ = edit("99-99-99",sysdate("YYDDMM"));
 	noinput;
@@ -237,12 +264,15 @@ preproc
 
 
 PROC AA10
+
 preproc
+
 	currMember = AA14;
-	
+
 postproc
+
 	if $ = 1 then //interview OK
-		skip to AA15;	
+		skip to AA15;
 	elseif $ = 2 then
 		skip to AA11;
 	elseif $ = 3 then
@@ -254,21 +284,29 @@ postproc
 
 
 PROC AA10A
+
 	skip to AA20;
 
 
 PROC AA13
+
 postproc
+
 	savepartial();
 	stop(1);
+
+
 PROC AA15
+
 preproc
+
 	if not ispartial() then
 		currMember = AA14;	//To set CAPI question
 	endif;
-	
-	
+
+
 postproc
+
 	if $ = 2 or $ = 3 then
 		skip to AA18;
 	endif;
@@ -276,6 +314,7 @@ postproc
 
 
 PROC AA17
+
 	if $ = 1 then
 		skip to HHNAMES;
 	endif;
@@ -283,75 +322,85 @@ PROC AA17
 
 
 PROC AA18
- 
+
+
 PROC AB1
+
 preproc
+
 	//Might as well fill in HoH and Main respondent
 	if curocc() = 1 then
 		$ = AA14;
 	elseif curocc() = 2 then
 		$ = AA18;
 	endif;
-	
-	
+
+
 postproc
-    if $ = "" and curocc() = 1 then
-     errmsg(tr(158));
-     reenter;
-    endif;
+
+	if $ = "" and curocc() = 1 then
+		errmsg(tr(158));
+		reenter;
+	endif;
 
 	if $ = "" then	//finished
 		memberNumbers(curocc()) = NOTAPPL; //this is to indicate the end of the valueset
-		skip to AB_AC_FORM; 
+		skip to AB_AC_FORM;
 	endif;
 
 
 	//make a valueset for hh members as this question is asked frequently
 	memberNumbers(curocc()) = curocc();
 	memberNames(curocc()) = $;
-	
-				
-		
 
-	
+
+
+
+
 
 
 PROC AB3
+
 onfocus
 
 	currMember = AB1(curocc());
 	if currMember = "" then
 		skip to B_FORM;	//Finished with all family members
 	endif;
-	
+
 	//Setting HoH as I already know that
 	if curocc() = 1 then
 		$ = 1;
-	 	headName = currMember;
+		 headName = currMember;
 		skip to AB3B;	//Should we tell that we already recorded the HoH?
 	endif;
 
 postproc
+
 	if curocc() > 1 and $ = 1 then
 		errmsg(tr(107), strip(lstrip(AB1(1))));
 		reenter;
 	endif;
 	if $ = 1 then
-	 	headName = currMember;
+		headName = currMember;
 	endif;
 	if $ = 2 then
-	 	spouseName = currMember;
+		spouseName = currMember;
 	endif;
 	if curocc() > 1 then
-	 skip to AB4;
-	endif; 
+		skip to AB4;
+	endif;
 
 
 PROC AB4
- if ab3(curocc()) = 1 and $ = 2 then
-  femaleHeadName = concat(strip(ab1(curocc())),", ");
- endif; 
+
+	if ab3(curocc()) = 1 and $ = 2 then
+		femaleHeadName = concat(strip(ab1(curocc())),", ");
+	endif;
+
+
 PROC AB5
+
 	numeric j;
 	//adding to relevant hhdemographic group
 	if AB4 = 2 then
@@ -373,38 +422,43 @@ PROC AB5
 			inc(hhDemographics(4));
 		endif;
 	endif;
-	
+
 	j = 0;
 	if $ >= 0 and $ < 16 then
 		inc(j);
 		inc(hhDemographics(7));
 		childrenNos(j) = j;
 		childrenNames(j) = AB1;
-//		errmsg("Child name %s",childrenNames(j));
-	endif;	
+		//		errmsg("Child name %s",childrenNames(j));
+	endif;
 
 
 
 PROC AB6
+
 preproc
+
 	if AB5 < 12 then
 		$ = 8;
 		skip to AC1;
 	endif;
-	
-	
-	
+
+
+
 PROC AC1
+
 preproc
+
 	if AB5 < 6 then //Only ask those 6  years and above for the rest of the section
 		skip to next;
 	endif;
 
 
-	
-	
-	
+
+
+
 PROC AC2
+
 	if $ = 2 then
 		skip to A2;
 	endif;
@@ -412,6 +466,7 @@ PROC AC2
 
 
 PROC AC3
+
 	if $ = 2 then
 		skip to AC7;
 	endif;
@@ -419,33 +474,43 @@ PROC AC3
 
 
 PROC AC5
-    if $ > AB5 or $ < AB5 -1 then
+
+	if $ > AB5 or $ < AB5 -1 then
 		errmsg(tr(150),strip(lstrip(currMember)),AB5);
 		reenter;
 	endif;
- 
+
+
 PROC AC6
+
 preproc
+
 	if AB5(curocc()) > 17 then	//more than 17 years
 		skip to A8;
-	endif;	
+	endif;
+
 postproc
-    if $ = 1 then
-	 if AB4 = 2 then
+
+	if $ = 1 then
+		if AB4 = 2 then
 			inc(schoolGirls);
-		elseif AB4 = 1 then	
+		elseif AB4 = 1 then
 			inc(schoolBoys);
 		endif
 	endif;
-//	errmsg("Girls: %d, Boys: %d, School kids: %d",schoolGirls,schoolBoys,hhdemographics(7));
-	
+	//	errmsg("Girls: %d, Boys: %d, School kids: %d",schoolGirls,schoolBoys,hhdemographics(7));
+
+
 PROC AC7
+
 preproc
+
 	numeric currYear = sysdate("YYYY");
-	
-	
+
+
 
 postproc
+
 	if $ = 2 then
 		skip to AC9;
 	endif;
@@ -453,31 +518,42 @@ postproc
 
 
 PROC AC8
+
 postproc
+
 	if  $ > AC4(curocc()) then
 		errmsg(tr(155), AC4(curocc()));
 		reenter;
 	endif;
 
+
 PROC AC9
+
 postproc
+
 	if  $ > AC4(curocc()) then
 		errmsg(tr(156), AC4(curocc()));
 		reenter;
 	endif;
+
+
 PROC A2
+
 preproc
+
 	if AB5 < 12 then
 		skip to next;
 	endif;
-	
+
 postproc
+
 	if $ >= 15 then
 		skip to A6;
 	endif;
-	
+
 
 PROC A4
+
 	if $ > 12 then
 		errmsg(tr(108));
 		reenter;
@@ -486,6 +562,7 @@ PROC A4
 
 
 PROC A5
+
 	if $ > 31 then
 		errmsg(tr(109));
 		reenter;
@@ -493,39 +570,56 @@ PROC A5
 
 
 PROC A6
+
 preproc
-    if AB5 < 17 then
-      skip to A8;
-    endif;
+
+	if AB5 < 17 then
+		skip to A8;
+	endif;
+
 postproc
+
 	if $ >= 15 then
 		skip to A8;
 	endif;
+
+
 PROC A8
 
 postproc
- // Find the person who cooks most often = the first of those with lowest values for A8;
- if $ < mostoften then
-  mostoften = $;
-  personCooksMostOften = curocc();
-  namePersonCooksMostOften = memberNames(curocc());
-//  errmsg("I test Person,%d %s, value, %d, curocc, %d, mostoften %d",personCooksMostOften,namePersonCooksMostOften,$,curocc(),mostoften);
- endif; 
- //if $ = 2 and personCooksMostOften < $ then
+
+	// Find the person who cooks most often = the first of those with lowest values for A8;
+	if $ < mostoften then
+		mostoften = $;
+		personCooksMostOften = curocc();
+		namePersonCooksMostOften = memberNames(curocc());
+		//  errmsg("I test Person,%d %s, value, %d, curocc, %d, mostoften %d",personCooksMostOften,namePersonCooksMostOften,$,curocc(),mostoften);
+	endif;
+	//if $ = 2 and personCooksMostOften < $ then
+
+
 PROC B_FORM
 
+
 PROC B2
+
 preproc
- errmsg(179);
+
+	errmsg(179);
+
 postproc
- // should be the oldest person, not the first
+
+	// should be the oldest person, not the first
 	if $ > AB5(1) then
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
- skip to I_FORM;	
+	skip to I_FORM;
+
+
 PROC B3
-//	skip to W_FORM;
+
+	//	skip to W_FORM;
 
 	if $ in 1,3,6 then
 		skip to B5;
@@ -534,6 +628,7 @@ PROC B3
 
 
 PROC B5
+
 	if $ = 1 then
 		skip to B7;
 	endif;
@@ -541,9 +636,13 @@ PROC B5
 
 
 PROC B17
+
 preproc
- errmsg(180);
+
+	errmsg(180);
+
 postproc
+
 	if $ = 2 then
 		skip to B19;
 	endif;
@@ -551,6 +650,7 @@ postproc
 
 
 PROC B19
+
 	if $ = 2 then
 		skip to B21;
 	endif;
@@ -558,18 +658,24 @@ PROC B19
 
 
 PROC B23
+
 	if $ = 2 then
 		skip to C1_form;
 	endif;
 
 
 PROC C1
+
 preproc
- errmsg(181);
+
+	errmsg(181);
+
 onfocus
+
 	setValueset(C1, memberNumbers, memberNames);
-	
+
 postproc
+
 	//Need to add an item to the household menbers array to cover for person not in household anymore
 	//This is needed for all C sections. To be removed
 	numeric i = 0;
@@ -589,211 +695,267 @@ postproc
 
 
 PROC C2A
+
 preproc
- c2yes = 0;
+
+	c2yes = 0;
+
 postproc
- if $ = 2 then
-  skip to C2B;
- endif; 
- if $ = 1 then
-   inc(c2yes);
- endif;  
+
+	if $ = 2 then
+		skip to C2B;
+	endif;
+	if $ = 1 then
+		inc(c2yes);
+	endif;
+
+
 PROC C2B
+
 postproc
- if $ = 2 then
-  skip to c2c;
- endif; 
+
+	if $ = 2 then
+		skip to c2c;
+	endif;
+
+
 PROC C2B1
- c2yes = c2yes + length(lstrip(strip($)));
+
+	c2yes = c2yes + length(lstrip(strip($)));
+
+
 PROC C2C
+
 postproc
- if $ = 1 then
-   inc(c2yes);
- endif;  
+
+	if $ = 1 then
+		inc(c2yes);
+	endif;
+
+
 PROC C2D
+
 postproc
- if $ = 1 then
-   inc(c2yes);
- endif;  
+
+	if $ = 1 then
+		inc(c2yes);
+	endif;
+
+
 PROC C2E
+
 postproc
- if $ = 1 then
-   inc(c2yes);
- endif;  
+
+	if $ = 1 then
+		inc(c2yes);
+	endif;
+
+
 PROC C2F
+
 postproc
- if $ = 1 then
-   inc(c2yes);
- endif;  
-  
+
+	if $ = 1 then
+		inc(c2yes);
+	endif;
+
+
 PROC C2G
+
 onfocus
- if c2yes = 0 then
-  skip to C3;
- endif; 
-    numeric i = 1;
+
+	if c2yes = 0 then
+		skip to C3;
+	endif;
+	numeric i = 1;
 	numeric code;
 	do while i < 9 ;
-	 if powerSources(i) = 0 then
-	  powerSources(i) = NOTAPPL;
- 	 endif;
-    inc(i);
+		if powerSources(i) = 0 then
+			powerSources(i) = NOTAPPL;
+		endif;
+		inc(i);
 	enddo;
 	i = 0;
 	if c2a = 1 then
-	  inc(i);
-	  code = 1;
-	  powerSources(i) = 1;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,c2g,powerSources(i),powerSourcesLabels(i));
-	endif; 
+		inc(i);
+		code = 1;
+		powerSources(i) = 1;
+		powerSourcesLabels(i) =  getlabel($,code);
+		//	  errmsg("%d, %d, %d, %s",i,c2g,powerSources(i),powerSourcesLabels(i));
+	endif;
 	if c2b = 1 then
-	 if pos("1", c2b1) > 0 then
-	  inc(i);
-	  code = 3;
-	  powerSources(i) = 3;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	 endif; 
-	 if pos("2", c2b1) > 0 then
-	  inc(i);
-	  code = 7;
-	  powerSources(i) = 7;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	 endif; 
-	 if pos("3", c2b1) > 0 then
-	  inc(i); 
-	  code = 8;
-	  powerSources(i) = 8;
- 	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(7),powerSourcesLabels(i));
- 	 endif; 
-	endif; 
+		if pos("1", c2b1) > 0 then
+			inc(i);
+			code = 3;
+			powerSources(i) = 3;
+			powerSourcesLabels(i) =  getlabel($,code);
+			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+		endif;
+		if pos("2", c2b1) > 0 then
+			inc(i);
+			code = 7;
+			powerSources(i) = 7;
+			powerSourcesLabels(i) =  getlabel($,code);
+			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+		endif;
+		if pos("3", c2b1) > 0 then
+			inc(i);
+			code = 8;
+			powerSources(i) = 8;
+			 powerSourcesLabels(i) =  getlabel($,code);
+			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(7),powerSourcesLabels(i));
+		endif;
+	endif;
 	if c2c = 1 then
-	  inc(i);
-	  code = 4;
-	  powerSources(i) = 4;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	endif; 
+		inc(i);
+		code = 4;
+		powerSources(i) = 4;
+		powerSourcesLabels(i) =  getlabel($,code);
+		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+	endif;
 	if c2d = 1 then
-	  inc(i);
-	  code = 5;
-	  powerSources(i) = 5;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	endif; 
+		inc(i);
+		code = 5;
+		powerSources(i) = 5;
+		powerSourcesLabels(i) =  getlabel($,code);
+		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+	endif;
 	if c2e = 1 then
-	  inc(i);
-	  code = 6;
-	  powerSources(i) = 6;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	endif; 
+		inc(i);
+		code = 6;
+		powerSources(i) = 6;
+		powerSourcesLabels(i) =  getlabel($,code);
+		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+	endif;
 	if c2f = 1 then
-	  inc(i);
-	  code = 9;
-	  powerSources(i) = 9;
-	  powerSourcesLabels(i) =  getlabel($,code);
-//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
-	endif; 
+		inc(i);
+		code = 9;
+		powerSources(i) = 9;
+		powerSourcesLabels(i) =  getlabel($,code);
+		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
+	endif;
 
-// Only one source of electricity, hence no back up electricity
-    if i = 1 then
-	 $ = powerSources(i);
-	 c2h = 66;
-	 skip to c3;
-	endif; 
+	// Only one source of electricity, hence no back up electricity
+	if i = 1 then
+		$ = powerSources(i);
+		c2h = 66;
+		skip to c3;
+	endif;
 	i = 1;
-	
-//	do while i < 9 ;
-//	 if powerSources(i) = 0 then
-//	  powerSources(i) = NOTAPPL;
-// 	 endif;
-//    inc(i);
-//	enddo;
-	setValueset($, powerSources, powerSourcesLabels);
-    $ = NOTAPPL;
+
+	//	do while i < 9 ;
+	//	 if powerSources(i) = 0 then
+	//	  powerSources(i) = NOTAPPL;
+	// 	 endif;
+	//    inc(i);
+	//	enddo;
+		setValueset($, powerSources, powerSourcesLabels);
+		$ = NOTAPPL;
 
 postproc
+
 	if $ in 3, 7, 8 then
 		solarDeviceType = getvaluelabel($) ;
 	endif;
-//	errmsg("c2yes er %d",c2yes);
+	//	errmsg("c2yes er %d",c2yes);
+
+
 PROC C2H
+
 preproc
- numeric code;
- if c2yes = 1 then
-  skip to C3;
- endif; 
- 
-// Take out the answer from c2g in the valueset
-  numeric i = 1;
-  numeric main = 0;
-  do while i <= c2yes-1 ;
-	 if powerSources(i) = c2g then
-	  main = 1;
-	 endif;
-     if main = 1 then	 
-	  powerSources(i) = powerSources(i+1);
-	  powerSourcesLabels(i) = powerSourcesLabels(i+1);
- 	 endif;
-    inc(i);
-  enddo;
 
- code = 66;
- powerSources(c2yes) = 66;
- powerSourcesLabels(c2yes) =  getlabel(c2h,code);
+	numeric code;
+	if c2yes = 1 then
+		skip to C3;
+	endif;
 
- setValueset($, powerSources, powerSourcesLabels);
-  
- $ = NOTAPPL;
+	// Take out the answer from c2g in the valueset
+	  numeric i = 1;
+	  numeric main = 0;
+	do while i <= c2yes-1 ;
+		if powerSources(i) = c2g then
+			main = 1;
+		endif;
+		if main = 1 then
+			powerSources(i) = powerSources(i+1);
+			powerSourcesLabels(i) = powerSourcesLabels(i+1);
+		endif;
+		inc(i);
+	enddo;
+
+	code = 66;
+	powerSources(c2yes) = 66;
+	powerSourcesLabels(c2yes) =  getlabel(c2h,code);
+
+	setValueset($, powerSources, powerSourcesLabels);
+
+	$ = NOTAPPL;
+
 postproc
- if $ = c2g then
-  errmsg(151);
-  reenter;
- endif;  
+
+	if $ = c2g then
+		errmsg(151);
+		reenter;
+	endif;
+
+
 PROC C6
+
 preproc
- if c2a = 1 then
-  skip to C4;
- endif;  
+
+	if c2a = 1 then
+		skip to C4;
+	endif;
+
+
 PROC C7
- if $ in 66,88 then
-  skip to C82_FORM;
- endif
+
+	if $ in 66,88 then
+		skip to C82_FORM;
+	endif
+
+
 PROC C8
- 
+
 postproc
-  skip to C82_FORM;
+
+	skip to C82_FORM;
+
+
 PROC C4
+
 preproc
- errmsg(174);
-postproc 
- if $ = 88 then
-  skip to C6
- endif; 
- 
+
+	errmsg(174);
+
+postproc
+
+	if $ = 88 then
+		skip to C6
+	endif;
+
+
 PROC C5
+
 	if $ > B2 then
 		errmsg(tr(123),B2);
 		reenter;
 	endif;
-	
-	
+
+
 	if C4 = 1 then
 		skip to C9;
 	elseif C4 = 2 then
 		skip to C28;
 	endif;
-	
-	
-	
+
+
+
 
 
 
 PROC C15
+
 	if $ = 2 then
 		skip to C16A;
 	endif;
@@ -801,6 +963,7 @@ PROC C15
 
 
 PROC C18
+
 	if $ = 2 then
 		skip to C16A;
 	endif;
@@ -808,33 +971,48 @@ PROC C18
 
 
 PROC C16A
+
 preproc
- rangeStart = 5;
- rangeEnd = 150;
- rangeUnknown = 888;
-postproc 
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
- 
+
+	rangeStart = 5;
+	rangeEnd = 150;
+	rangeUnknown = 888;
+
+postproc
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C16B
+
 preproc
- rangeStart = 1000;
- rangeEnd = 99999;
- rangeUnknown = 88;
-postproc 
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
- 
+
+	rangeStart = 1000;
+	rangeEnd = 99999;
+	rangeUnknown = 88;
+
+postproc
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C17
+
 preproc
+
 	if C17 = 1 then
 		skip to C24c;
 	endif;
+
+
 PROC C13
+
 	if $ = 66 then
 		skip to C26;
 	endif;
@@ -843,40 +1021,51 @@ PROC C13
 
 
 PROC C22
- 
+
 preproc
+
 	if c17 = 1 then
-	 skip to C23;
-	endif; 
+		skip to C23;
+	endif;
 
 
 PROC C24C
+
 preproc
- if C17 <> 1 then
-  skip to C26;
- endif; 
+
+	if C17 <> 1 then
+		skip to C26;
+	endif;
+
+
 PROC C28
+
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
 		reenter;
 	endif;
- if $ = 24 then
-  C29 = 4;
-  skip to c31;
- endif  
-	
+	if $ = 24 then
+		C29 = 4;
+		skip to c31;
+	endif
+
+
 PROC C29
+
 	if $ <> 88 and $ > 4 then
 		errmsg(tr(111),4);
 		reenter;
-		
+
 	endif;
 
- if $ > C28 then
-  errmsg(tr(159), $, C28);
-  reenter;
- endif;
+	if $ > C28 then
+		errmsg(tr(159), $, C28);
+		reenter;
+	endif;
+
+
 PROC C31
+
 	if $ in 0,66,88 then
 		skip to C36;
 	endif;
@@ -884,16 +1073,23 @@ PROC C31
 
 
 PROC C37A
+
 	if $ = 66 then
 		//no problems
 		skip to C39;
 	endif;
+
+
 PROC C37B
+
 	if $ = C37A then
 		errmsg(tr(151));
 		reenter;
 	endif;
+
+
 PROC C39
+
 	if $ = 2 then
 		skip to C41;
 	endif;
@@ -901,104 +1097,158 @@ PROC C39
 
 
 PROC C41
+
 preproc
- if C2a1 <> 2 then
-  skip to C82_FORM;
- endif; 
+
+	if C2a1 <> 2 then
+		skip to C82_FORM;
+	endif;
+
 
 PROC C43
-preproc 
+
+preproc
+
 	if c42 = 2 then
 		skip to c82_FORM;
-	endif;	
+	endif;
+
+
 PROC C82C
+
 preproc
-	If not(C2G  in 3, 7, 8) then 
-	 skip to C108;
-	endif; 
- errmsg(176,strip(solarDeviceType));
+
+	If not(C2G  in 3, 7, 8) then
+		skip to C108;
+	endif;
+	errmsg(176,strip(solarDeviceType));
+
+
 PROC C82C1
+
 	if $ = 2 then
 		skip to c82g;
-	endif;	
+	endif;
+
+
 PROC C82G
+
 preproc
- rangeStart = 20;
- rangeEnd = 300;
- rangeUnknown = 888;
-postproc 
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	rangeStart = 20;
+	rangeEnd = 300;
+	rangeUnknown = 888;
+
+postproc
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C82H
+
 preproc
- rangeStart = 20;
- rangeEnd = 500;
- rangeUnknown = 888;
+
+	rangeStart = 20;
+	rangeEnd = 500;
+	rangeUnknown = 888;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C82H1
+
 preproc
- rangeStart = 6;
- rangeEnd = 24;
- rangeUnknown = 88;
+
+	rangeStart = 6;
+	rangeEnd = 24;
+	rangeUnknown = 88;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C82H2
+
 preproc
- rangeStart = 200;
- rangeEnd = 6000;
- rangeUnknown = 88;
+
+	rangeStart = 200;
+	rangeEnd = 6000;
+	rangeUnknown = 88;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C82I
+
 postproc
- if $ = 2 then
-  skip to C82k;
- endif; 
+
+	if $ = 2 then
+		skip to C82k;
+	endif;
+
+
 PROC C82J
+
 preproc
- rangeStart = 5;
- rangeEnd = 1500;
- rangeUnknown = 8888;
+
+	rangeStart = 5;
+	rangeEnd = 1500;
+	rangeUnknown = 8888;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C82L
+
 onfocus
+
 	//Value set with extra person.
 	setValueset($, memberNumbers, memberNames);
-	
-	
+
+
 
 
 PROC C82M
+
 	if $ = 1 then
 		skip to C87
 	elseif $ = 2 then
 		skip to C82Q;
 	endif;
-	
-	
+
+
 PROC C82N
+
 postproc
+
 	skip to C82Q;
-	
-	
-	
+
+
+
 PROC C87
+
 	if $ = 1 then
 		skip to C91;
 	endif;
@@ -1006,6 +1256,7 @@ PROC C87
 
 
 PROC C93
+
 	if $ = 24 then
 		C94 = 4;
 		skip to c98;
@@ -1014,63 +1265,85 @@ PROC C93
 		errmsg(tr(111),24);
 		reenter;
 	endif;
- 
+
+
 PROC C94
+
 	if $ > 4 and $ <> 8 then
 		errmsg(tr(111),4);
 		reenter;
 	endif;
-	
- if $ > C93 then
-  errmsg(tr(159), $, C93);
-  reenter;
- endif;
+
+	if $ > C93 then
+		errmsg(tr(159), $, C93);
+		reenter;
+	endif;
 
 
 PROC C82E
-If C2g = 8 then
- skip to C99;
-endif; 
+
+	If C2g = 8 then
+		skip to C99;
+	endif;
+
+
 PROC C99
+
 	if $ = 2 then
 		skip to C101;
 	endif;
-PROC C108
-preproc
- if C2g <> 4 then 
-  skip to C5_FORM;
- endif;
- errmsg(177);
 
-onfocus 
- if C2g <> 4 then 
-  skip to C110;
- endif;
-	
+
+PROC C108
+
+preproc
+
+	if C2g <> 4 then
+		skip to C5_FORM;
+	endif;
+	errmsg(177);
+
+onfocus
+
+	if C2g <> 4 then
+		skip to C110;
+	endif;
+
 
 
 PROC C113A
+
 	if pos("55", $) = 0 then
 		skip to C114;
 	endif;
-	
-	
-	
+
+
+
 PROC C111
+
 	if pos("44", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(142));
 		reenter;
 	endif;
+
+
 PROC C112
+
 	if $ > 31 and $ <> 88 then
 		errmsg(tr(111),31);
 		reenter;
 	endif;
+
+
 PROC C117A
+
 	if $ = 2 then
 		skip to C118;
 	endif;
+
+
 PROC C120
+
 	if $ = 2 then
 		skip to C122;
 	endif;
@@ -1078,48 +1351,56 @@ PROC C120
 
 
 PROC C123
+
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
 		reenter;
 	endif;
 
- if $ = 24 then
-  C124 = 4;
-  skip to c126;
- endif 
+	if $ = 24 then
+		C124 = 4;
+		skip to c126;
+	endif
+
 
 PROC C124
+
 	if $ > 4 then
 		errmsg(tr(111),4);
 		reenter;
 	endif;
 
- if $ > C123 then
-  errmsg(tr(159), $, C123);
-  reenter;
- endif;
+	if $ > C123 then
+		errmsg(tr(159), $, C123);
+		reenter;
+	endif;
 
 
 PROC C127A
+
 	if $ in 55,66 then
 		skip to C129;
 	endif;
 
 
 PROC C127B
+
 	if $ = C127A then
 		errmsg(tr(151));
 		reenter;
 	endif;
 
+
 PROC C129
+
 	if $ = 2 then
 		skip to C5_FORM;
 	endif;
-	
+
 
 
 PROC C130
+
 	if $ <> 55 then
 		skip to C5_FORM;
 	endif;
@@ -1127,17 +1408,20 @@ PROC C130
 
 
 PROC C131a
+
 preproc
+
 	if C2g <> 6 then
 		skip to C6_FORM;
 	endif;
 	errmsg(178);
 
-	
+
 
 
 
 PROC C132
+
 	if pos("77", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(142));
 		reenter;
@@ -1146,6 +1430,7 @@ PROC C132
 
 
 PROC C134
+
 	if $ = 2 then
 		skip to C136;
 	endif;
@@ -1153,74 +1438,107 @@ PROC C134
 
 
 PROC C135
+
 preproc
- rangeStart = 5;
- rangeEnd = 1500;
- rangeUnknown = 8888;
+
+	rangeStart = 5;
+	rangeEnd = 1500;
+	rangeUnknown = 8888;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C140
+
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
 		reenter;
 	endif;
-		
+
 
 
 PROC C141
+
 	if $ > 4 and $ <> 88 then
 		errmsg(tr(111),4);
 		reenter;
 	endif;
 
- if $ > C140 then
-  errmsg(tr(159), $, C140);
-  reenter;
- endif;
+	if $ > C140 then
+		errmsg(tr(159), $, C140);
+		reenter;
+	endif;
 
 
 PROC C144
+
 preproc
- rangeStart = 20;
- rangeEnd = 500;
- rangeUnknown = 888;
+
+	rangeStart = 20;
+	rangeEnd = 500;
+	rangeUnknown = 888;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C145
+
 preproc
- rangeStart = 6;
- rangeEnd = 24;
- rangeUnknown = 88;
+
+	rangeStart = 6;
+	rangeEnd = 24;
+	rangeUnknown = 88;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C145A
+
 preproc
- rangeStart = 200;
- rangeEnd = 600;
- rangeUnknown = 88;
+
+	rangeStart = 200;
+	rangeEnd = 600;
+	rangeUnknown = 88;
+
 postproc
- if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-  errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
-  reenter;
- endif;  
+
+	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
+		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		reenter;
+	endif;
+
+
 PROC C146B
+
 	if $ = C146A then
 		errmsg(tr(151));
 		reenter;
 	endif;
+
+
 PROC C149
+
 preproc
+
 	errmsg(182);
+
 postproc
+
 	if $ = 0 then
 		skip to D_FORM;
 	endif;
@@ -1228,44 +1546,54 @@ postproc
 
 
 PROC C150
+
 	if $ = 1 then
 		skip to C155;
 	endif;
-	
-	
-	
+
+
+
 PROC C151
+
 	if $ = 1 then
 		skip to C155;
 	endif;
-	
-	
-	
+
+
+
 PROC C153
+
 	if $ = 0 then
 		skip to D_FORM;
 	endif;
-	
-	
-	
+
+
+
 PROC D3
+
 preproc
- If (c2g = 1 or c2h = 1) then 
-  skip to E_FORM;
- endif;
- errmsg(189);
+
+	If (c2g = 1 or c2h = 1) then
+		skip to E_FORM;
+	endif;
+	errmsg(189);
+
 onfocus
+
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
 	CF = round(thePercentages(random(1,2)) * gridPrice);
-		
+
 postproc
+
 	if $ = 1 then
 		skip to E_FORM;
-	endif;	
-	
+	endif;
+
+
 PROC D6
+
 	if $ =  1 then
 		skip to  E_FORM;
 	endif;
@@ -1273,6 +1601,7 @@ PROC D6
 
 
 PROC D7
+
 	if $ =  1 then
 		skip to E_FORM;
 	endif;
@@ -1280,33 +1609,41 @@ PROC D7
 
 
 PROC E_FORM
+
 preproc
-  if C2g = 3 or C2h = 3  then 
-   skip to G_FORM;
-  endif; 
-  If C2h = 1 or C2g = 1 then 
-   errmsg(168);
-   skip to E3;
-  endif; 
-  errmsg(169);
-  skip to E3;
+
+	if C2g = 3 or C2h = 3  then
+		skip to G_FORM;
+	endif;
+	If C2h = 1 or C2g = 1 then
+		errmsg(168);
+		skip to E3;
+	endif;
+	errmsg(169);
+	skip to E3;
+
+
 PROC E3
-onfocus	
+
+onfocus
+
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
 	CF = round(thePercentages(random(1,2)) * highDevicePrice);
-		
-		
+
+
 postproc
+
 	if $ = 1 then
 		skip to G_FORM;
 	endif;
-		
-	
+
+
 
 
 PROC E5
+
 	if $ = 1 then
 		skip to G_FORM;
 	endif;
@@ -1316,31 +1653,38 @@ PROC E5
 
 
 PROC G_FORM
+
 preproc
- if C2g <> 9 then 
-  skip to F_FORM;
- endif; 
- errmsg(175);
+
+	if C2g <> 9 then
+		skip to F_FORM;
+	endif;
+	errmsg(175);
+
+
 PROC G2
+
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
 		reenter;
 	endif;
-	
+
 	if pos("66", $) > 0  then
 		//"none" is chosen
 		skip to F_FORM;
-	endif;	
+	endif;
 
 
 PROC GB
+
 onfocus
+
 	string current = edit("99", curocc());
-	
+
 	//deal with "other" first
 	if curocc() = 4 and pos("55", G2) > 0 then
 		lampType = getLabel(G2, "55");
-	else 	
+	else
 		if  pos(current, G2) > 0 then
 			lampType = getLabel(G2, current);
 		else
@@ -1351,6 +1695,7 @@ onfocus
 
 
 postproc
+
 	if $ = 0 then
 		errmsg(tr(124));
 		reenter;
@@ -1359,22 +1704,26 @@ postproc
 
 
 PROC GE
+
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
 		reenter;
 	endif;
+
+
 PROC F1
+
 onfocus
 
 	if hhDemographics(6) < 1 or hhDemographics(6) in NOTAPPL, DEFAULT then //No adults in household
 		skip to I_FORM;
 	else
-  errmsg(tr(192));
-		array aCode(20); //Max 20 adults in HH
-		array String aLabel(20);
+		errmsg(tr(192));
+			  array aCode(20); //Max 20 adults in HH
+			  array String aLabel(20);
 
-		//Loop through household members to find adults
-		numeric i = 1, j = 0;
+			  //Loop through household members to find adults
+			  numeric i = 1, j = 0;
 		while i <= 20 do
 			if AB1(i) = "" then
 				//finished.
@@ -1394,77 +1743,99 @@ onfocus
 		setValueset($, acode, aLabel);
 	endif;
 
-//	setValueset($, memberNumbers, memberNames);
+	//	setValueset($, memberNumbers, memberNames);
 
 
 PROC F2
-onfocus
-	//Loop through HH to find if there are children attending school
-//	numeric i = 1;
-//	while AB5(i) <> NOTAPPL do
-//		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
-//			schoolkids = 1;
-//			break;
-//		endif;
-//		inc(i);
-//	enddo;
 
-// School attendance set in AC6	
+onfocus
+
+	//Loop through HH to find if there are children attending school
+	//	numeric i = 1;
+	//	while AB5(i) <> NOTAPPL do
+	//		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
+	//			schoolkids = 1;
+	//			break;
+	//		endif;
+	//		inc(i);
+	//	enddo;
+
+	// School attendance set in AC6
 	if not(schoolGirls > 0 or schoolBoys > 0) then
 		skip to F3B;
 	endif;
 
-PROC F3B
-preproc
- if C2g in 1,3,4 then
-  skip to I_FORM;
- endif; 
-postproc
- lampType = getvaluelabel($);
- if $ = 1 then
-  skip to F4e;
- endif; 
- if $ in 5,6,7 then
-  skip to I_FORM;
- endif; 
-  
-PROC F4G1
-postproc
- if $ = 66 then 
-  skip to F5;
- endif; 
-PROC F4G2
-postproc
- if $ = f4g1 then
-  errmsg(151);
-  reenter;
- endif;  
 
- if $ = 66 then 
-  skip to F5;
- endif; 
-PROC F5
+PROC F3B
+
 preproc
- if F3b = 1 then
-  skip to I_FORM;
- endif; 
+
+	if C2g in 1,3,4 then
+		skip to I_FORM;
+	endif;
+
 postproc
+
+	lampType = getvaluelabel($);
+	if $ = 1 then
+		skip to F4e;
+	endif;
+	if $ in 5,6,7 then
+		skip to I_FORM;
+	endif;
+
+
+PROC F4G1
+
+postproc
+
+	if $ = 66 then
+		skip to F5;
+	endif;
+
+
+PROC F4G2
+
+postproc
+
+	if $ = f4g1 then
+		errmsg(151);
+		reenter;
+	endif;
+
+	if $ = 66 then
+		skip to F5;
+	endif;
+
+
+PROC F5
+
+preproc
+
+	if F3b = 1 then
+		skip to I_FORM;
+	endif;
+
+postproc
+
 	if pos("7", $ ) > 0  and length(strip($)) > 1 then
 		errmsg(tr(118));
 		reenter;
 	endif;
 	if pos("7", $ ) > 0 then
-	 skip to I_FORM;
-	endif; 
-	
-	
+		skip to I_FORM;
+	endif;
+
+
 
 
 
 PROC F5A
+
 onfocus
+
 	string current = edit("Z", curocc());
-	
+
 	//The skip for "7 none" has been done in F5
 	if  pos(current, F5) > 0 then
 		fuelType = getLabel(F5, current);
@@ -1478,216 +1849,293 @@ onfocus
 
 
 PROC I1
+
 preproc
- $ = PersonCooksMostOften;
-//errmsg("Person, %s, %d",namePersonCooksMostOften,personCooksMostOften);
+
+	$ = PersonCooksMostOften;
+	//errmsg("Person, %s, %d",namePersonCooksMostOften,personCooksMostOften);
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
 
 
 
 PROC I2A
- if $ = 2 then
-  skip to i2c;
- endif; 
+
+	if $ = 2 then
+		skip to i2c;
+	endif;
+
+
 PROC I2B
+
 	if $ = "" then
-	 errmsg(170);
-	 reenter;
-	endif; 
+		errmsg(170);
+		reenter;
+	endif;
+
+
 PROC I2C
- if $ = 2 then
-  skip to i2e;
- endif; 
+
+	if $ = 2 then
+		skip to i2e;
+	endif;
+
+
 PROC I2D
+
 	if $ = "" then
-	 errmsg(170);
-	 reenter;
-	endif; 
+		errmsg(170);
+		reenter;
+	endif;
+
+
 PROC I2E
- if $ = 2 then
-  skip to i2g;
- endif; 
+
+	if $ = 2 then
+		skip to i2g;
+	endif;
+
+
 PROC I2F
+
 	if $ = "" then
-	 errmsg(170);
-	 reenter;
-	endif; 
+		errmsg(170);
+		reenter;
+	endif;
+
+
 PROC I2G
- if $ = 2 then
-  skip to i2i;
- endif; 
+
+	if $ = 2 then
+		skip to i2i;
+	endif;
+
+
 PROC I2H
+
 	if $ = "" then
-	 errmsg(170);
-	 reenter;
-	endif; 
+		errmsg(170);
+		reenter;
+	endif;
+
+
 PROC I2I
+
 preproc
-    if i2a = 2 and i2c = 2 and i2e = 2 and i2g = 2 then // Have no stoves at all
-	 skip to O_FORM
-	endif; 
+
+	if i2a = 2 and i2c = 2 and i2e = 2 and i2g = 2 then // Have no stoves at all
+		skip to O_FORM
+	endif;
 	array numeric cookstoves(18);
 	array string cookstovesLabels(18);
 	array string cookstovesImages(18);
-    numeric i = 1;
+	numeric i = 1;
 	numeric j = 1;
 	string stove;
-	
-	if i2b <> '' then
-	 do while i2b[i:3] <> ''  
-	  cookstoves(j) = tonumber(i2b[i:3]);
-	  cookstovesLabels(j) =  getvaluelabel(i2b[i:3]);
-	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2b[i:3],".jpg");
-	  i = i + 3;
-	  j = j + 1;
-//      errmsg("B Cook %d %s, i %d, Image: %s",cookstoves(j-1),cookstovesLabels(j-1),i,cookstovesImages(j-1));
-	 enddo;
-	endif; 
 
-    i = 1;	
+	if i2b <> '' then
+		do while i2b[i:3] <> ''
+			cookstoves(j) = tonumber(i2b[i:3]);
+			cookstovesLabels(j) =  getvaluelabel(i2b[i:3]);
+			cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2b[i:3],".jpg");
+			i = i + 3;
+			j = j + 1;
+			//      errmsg("B Cook %d %s, i %d, Image: %s",cookstoves(j-1),cookstovesLabels(j-1),i,cookstovesImages(j-1));
+		enddo;
+	endif;
+
+	i = 1;
 	if i2d <> '' then
-	 do while i2d[i:3] <> ''  
-	  cookstoves(j) = tonumber(i2d[i:3]);
-	  cookstovesLabels(j) =  getvaluelabel(i2d[i:3]);
-	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2d[i:3],".jpg");
-	  i = i + 3;
-	  j = j + 1;
-//      errmsg("D Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
-	 enddo;
-	endif; 
-	
-    i = 1;	
+		do while i2d[i:3] <> ''
+			cookstoves(j) = tonumber(i2d[i:3]);
+			cookstovesLabels(j) =  getvaluelabel(i2d[i:3]);
+			cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2d[i:3],".jpg");
+			i = i + 3;
+			j = j + 1;
+			//      errmsg("D Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
+		enddo;
+	endif;
+
+	i = 1;
 	if i2f <> '' then
-	 do while i2f[i:3] <> '' 
-	  cookstoves(j) = tonumber(i2f[i:3]);
-	  cookstovesLabels(j) =  getvaluelabel(i2f[i:3]);
-	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2f[i:3],".jpg");
-	  i = i + 3;
-	  j = j + 1;
-//      errmsg("F Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
-	 enddo;
-	endif; 
-	
-    i = 1;	
+		do while i2f[i:3] <> ''
+			cookstoves(j) = tonumber(i2f[i:3]);
+			cookstovesLabels(j) =  getvaluelabel(i2f[i:3]);
+			cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2f[i:3],".jpg");
+			i = i + 3;
+			j = j + 1;
+			//      errmsg("F Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
+		enddo;
+	endif;
+
+	i = 1;
 	if i2h <> '' then
-	 do while i2h[i:3] <> ''  
-	  cookstoves(j) = tonumber(i2h[i:3]);
-	  cookstovesLabels(j) =  getvaluelabel(i2h[i:3]);
-	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2h[i:3],".jpg");
-	  i = i + 3;
-	  j = j + 1;
-//      errmsg("H Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
-	 enddo;
-	endif; 
-	
+		do while i2h[i:3] <> ''
+			cookstoves(j) = tonumber(i2h[i:3]);
+			cookstovesLabels(j) =  getvaluelabel(i2h[i:3]);
+			cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2h[i:3],".jpg");
+			i = i + 3;
+			j = j + 1;
+			//      errmsg("H Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
+		enddo;
+	endif;
+
 	i = 1;
 	do while i < 18;
-	 if cookstoves(i) = 0 then
-	  cookstoves(i) = NOTAPPL;
-//      errmsg("Nulling Cook %d %s",cookstoves(j-1),cookstovesLabels(j-1));
- 	 endif;
-    i = i + 1;
+		if cookstoves(i) = 0 then
+			cookstoves(i) = NOTAPPL;
+			//      errmsg("Nulling Cook %d %s",cookstoves(j-1),cookstovesLabels(j-1));
+		endif;
+		i = i + 1;
 	enddo;
 	setValueset($, cookstoves, cookstovesLabels, cookstovesImages);
 
-//     valueset string I2I_VS;
-//     valueset numeric i2i_valueset ;
-//	 string y;
-//	 numeric zn;
-//	 string zs;
-//	 numeric x;
+	//     valueset string I2I_VS;
+	//     valueset numeric i2i_valueset ;
+	//	 string y;
+	//	 numeric zn;
+	//	 string zs;
+	//	 numeric x;
 
-//	 i = 0;
-//     do while cookstoves(i) <> NOTAPPL;
-//	     inc(i);
-//		 y = cookstovesLabels(i);
-//		 zn = cookstoves(i);
-//		 zs = cookstovesImages(j);
-//		 errmsg("%s, %s, %d",y,zs,zn);
-//         i2i_valueset.add(y, zs,zn);
-//     enddo;
+	//	 i = 0;
+	//     do while cookstoves(i) <> NOTAPPL;
+	//	     inc(i);
+	//		 y = cookstovesLabels(i);
+	//		 zn = cookstoves(i);
+	//		 zs = cookstovesImages(j);
+	//		 errmsg("%s, %s, %d",y,zs,zn);
+	//         i2i_valueset.add(y, zs,zn);
+	//     enddo;
 
-//	setValueset($, i2i_valueset);
-	
+	//	setValueset($, i2i_valueset);
+
 postproc
- mostUsedStove = getvaluelabel($);
+
+	mostUsedStove = getvaluelabel($);
+
+
 PROC I4
+
 preproc
-	if lstrip(strip(i2b)) = "101" then 
+
+	if lstrip(strip(i2b)) = "101" then
 		$ = 4;
 		skip to I12;
-	endif;	
+	endif;
+
 postproc
+
 	if $ = 3 then
-	 skip to i7;
-	endif; 
+		skip to i7;
+	endif;
 	if $ = 4 then
-	 skip to i12;
-	endif; 
+		skip to i12;
+	endif;
+
+
 PROC I5
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
+
+
 PROC I6
-postproc 
-  skip to i8;
- 
-PROC I15A
-	If not((I15 in 1,2,3 or $ in 1,2,3) and (I2a=1 or I2c=1 or I2e=1)) then 
-	 skip to I18a;
-	endif; 
-PROC I18A
- fueltype1 = getvaluelabel($);
- If $ in 18, 66, 55 then 
-  skip to I19c ;
- endif;
- If $ in 13 then 
-  skip to I23 ;
- endif;
-PROC I18B
+
 postproc
- if $ = i18a then
-  errmsg(151);
-  reenter;
- endif;
- fueltype2 = getvaluelabel($);
- If $ in 13, 18, 66, 55 then 
-  skip to I19c ;
- endif;
+
+	skip to i8;
+
+
+PROC I15A
+
+	If not((I15 in 1,2,3 or $ in 1,2,3) and (I2a=1 or I2c=1 or I2e=1)) then
+		skip to I18a;
+	endif;
+
+
+PROC I18A
+
+	fueltype1 = getvaluelabel($);
+	If $ in 18, 66, 55 then
+		skip to I19c ;
+	endif;
+	If $ in 13 then
+		skip to I23 ;
+	endif;
+
+
+PROC I18B
+
+postproc
+
+	if $ = i18a then
+		errmsg(151);
+		reenter;
+	endif;
+	fueltype2 = getvaluelabel($);
+	If $ in 13, 18, 66, 55 then
+		skip to I19c ;
+	endif;
+
+
 PROC I19B
+
 preproc
-	if i18b in 13, 18, 55, 66 then 
-	 skip to i19c;
-	endif; 
+
+	if i18b in 13, 18, 55, 66 then
+		skip to i19c;
+	endif;
+
 
 PROC I19D
+
 preproc
-If I18a in 3,8,17 then 
- skip to I20;
-endif; 
-postproc 
-  UnitFuel = getvaluelabel($);
-  
+
+	If I18a in 3,8,17 then
+		skip to I20;
+	endif;
+
+postproc
+
+	UnitFuel = getvaluelabel($);
+
+
 PROC I30
+
 	if $ = 2 then
-	 skip to i32;
-	endif; 
+		skip to i32;
+	endif;
+
+
 PROC I32
+
 preproc
+
 	if not(I18a in 2,3 or I18b in 2,3) then
-	 skip to i37;
-	endif; 
-    errmsg(171);
+		skip to i37;
+	endif;
+	errmsg(171);
+
 postproc
-	if $ = 0 then 
+
+	if $ = 0 then
 		skip to I37;
-	endif;	
+	endif;
+
+
 PROC I37
+
 preproc
+
 	if not((I18a in 2,3,4,7,8,9,10,11,12,14,17 or I18b in 2,3,4,7,8,9,10,11,12,14,17) AND (I15 in 1,2,3 or I15a in 1,2,3)) then
-	 skip to O_FORM;
-	endif; 
+		skip to O_FORM;
+	endif;
+
 postproc
+
 	if $ = 2 then
 		skip to I39;
 	elseif $ = 3 then
@@ -1699,122 +2147,160 @@ postproc
 
 
 PROC I38
+
 postproc
+
 	skip to I43;
 
 
 
 PROC I40
+
 postproc
+
 	skip to I43;
 
 
 
 PROC I41
+
 postproc
+
 	skip to I43;
 
 
 
 PROC I43
+
 	if $ = 4 then
 		skip to I45;
 	endif;
 
-	
+
 PROC O_FORM
+
 preproc
-  errmsg(183);
+
+	errmsg(183);
+
+
 PROC O1_1
+
 onfocus
-//	errmsg(tr(146),strip(namePersonCooksMostOften));
-	$ = I1;
-	currMember = memberNames(PersonCooksMostOften);
-	noinput;
+
+	//	errmsg(tr(146),strip(namePersonCooksMostOften));
+		$ = I1;
+		currMember = memberNames(PersonCooksMostOften);
+		noinput;
 
 
 PROC O2
-// if $ = 2 then
-// 	skip to Q_FORM;
-// endif;
+
+	// if $ = 2 then
+	// 	skip to Q_FORM;
+	// endif;
+
+
 PROC O1_C
+
 preproc
-  if hhDemographics(7) > 0 then
-	seed(systime());
-	numeric child;
-    child = random(1, hhDemographics(7));
-	setValueset($, childrenNos, childrenNames);
-	chosenChildName = getlabel($,child);
-//	errmsg("Child number %d, Child name %s",child,chosenChildName);
-	$ = child;
-	skip to O7;
-  else	
-    skip to K_FORM;
-  endif;
-  	
-   
+
+	if hhDemographics(7) > 0 then
+		seed(systime());
+		numeric child;
+		child = random(1, hhDemographics(7));
+		setValueset($, childrenNos, childrenNames);
+		chosenChildName = getlabel($,child);
+		//	errmsg("Child number %d, Child name %s",child,chosenChildName);
+			$ = child;
+			skip to O7;
+	else
+		skip to K_FORM;
+	endif;
+
+
 PROC O7
+
 preproc
- errmsg(193,chosenChildName);
+
+	errmsg(193,chosenChildName);
+
+
 PROC K_FORM
+
 preproc
-	if not(I2i in 1,2,7) then 
-	  skip to J_FORM;
-	endif; 
-    errmsg(190);	
+
+	if not(I2i in 1,2,7) then
+		skip to J_FORM;
+	endif;
+	errmsg(190);
+
+
 PROC K2
+
 onfocus
+
 	string woodOrCharcoal;
 	numeric tmp;
 	seed(systime());
-	
+
 	//Finding out how to skip and setting variables
 	if I2i = 7  then
 		woodOrCharcoal = "wood";
 		tmp = random(1,2);	//The two first elements of the cookStove array are wood..
 	elseif I2i in 1,2 then
 		woodOrCharcoal = "charcoal";
-		tmp = random(3,4);		
+		tmp = random(3,4);
 	endif;
-	
+
 	cookType = cookStove(tmp);
 	CF = round(random(1,3) * cookStovePrices(tmp)/3);	//this gives 0.33, 0.66 or 1 of the price of the randomly chosen cookstove
-	
+
 	//errmsg("cooktype: %s, price: %d", cookType, CF);
 	if woodOrCharcoal = "" then
 		skip to J_FORM;
 	endif;
-	
+
 	//Setting the person to answer
 	setValueset($, memberNumbers, memberNames);
 	currMember = memberNames(I1);
-	
-	
-	
+
+
+
 
 PROC K3
+
 	if $ = 1 then
 		skip to J_FORM;
 	endif;
+
+
 PROC K5
+
 	if $ = 1 then
 		skip to J_FORM;
 	endif;
+
+
 PROC J1
-    //skip to W_FORM;
+
+	//skip to W_FORM;
 	if $ = 2 then
 		skip to J4;
 	endif;
-	
-	
-	
+
+
+
 
 PROC J2
+
 	if $ <> 9 then
 		skip to J4;
 	endif;
-	
+
+
 PROC J4
+
 	if $ = 2 then
 		skip to L_FORM;
 	endif;
@@ -1822,61 +2308,70 @@ PROC J4
 
 
 PROC J5
+
 	if $ <> 6 then
 		skip to L_FORM;
 	endif;
-	
-	
-	
+
+
+
 PROC L1_1
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
 
 
 
 PROC L_NO
+
 preproc
+
 	//Skip if they have no lightbulbs
 	if curocc() < 11 and curocc() > 6 and LA(6) = 2 then
 		skip to next;
 	endif;
 	// categories 7-9 only for households with electricity as main or back-up source
 	if not(C2g in 1,3,4,5,7 or C2h in 1,3,4,5,7) and curocc() in 7:9 then
-	  skip to next;
-	endif;  
+		skip to next;
+	endif;
 
 	// categories 10-19 only for households with electricity as main or back-up source
 	if not(C2g in 1,3,4,5 or C2h in 1,3,4,5) and curocc() in 10:19 then
-	  skip to next;
-	endif;  
+		skip to next;
+	endif;
 
 	// categories 20-22 only for households with electricity as main or back-up source
 	if not(C2g in 1,3,4,5,7 or C2h in 1,3,4,5,7) and curocc() in 20:22 then
-	  skip to next;
-	endif;  
+		skip to next;
+	endif;
 
 onfocus
-	 hhitem = getLabel($, curocc());
-	 $ = curocc();
-	 skip to LA;
-	
+
+	hhitem = getLabel($, curocc());
+	$ = curocc();
+	skip to LA;
+
 
 
 
 PROC LA
+
 onfocus
+
 	//Setting the CAPI text
 	//hhItem = strip(L_DESC);
-	
+
 	if curocc() in 20-22 then
-		hhItemExtra = makeText(tr(148)); 
+		hhItemExtra = makeText(tr(148));
 		setValueset(LA,LA_NUMBER);
-	else	
+	else
 		hhItemExtra = "";
 		setValueset(LA,LA_YESNO);
 	endif;
 
 postproc
+
 	if !(curocc() in 9,22) then
 		skip to LC;
 	else
@@ -1884,34 +2379,40 @@ postproc
 			skip to LC;
 		endif;
 	endif;
-	
+
 
 PROC LB
+
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);
 		reenter;
 	endif;
+
+
 PROC LC
+
 preproc
+
 	// 7c-9c only for those that had grid electricity 5 years ago C3 in (1,2,3,4,5,7)
 	if not(C3 in 1,2,3,4,5,7) and curocc() in 7:9 then
-	  skip to next;
-	endif;  
-	
+		skip to next;
+	endif;
+
 	// categories 10-19 only for households with electricity as main or back-up source
 	if not(C2g in 1,3,4,5 or C2h in 1,3,4,5) and curocc() in 10:19 then
-	  skip to next;
-	endif;  
+		skip to next;
+	endif;
 
 	// categories 20-22 only for households with electricity as main or back-up source
 	if not(C2g in 1,3,4,5,7 or C2h in 1,3,4,5,7) and curocc() in 20:22 then
-	  skip to next;
-	endif;  
+		skip to next;
+	endif;
 
-	
-	
-	
+
+
+
 PROC L26
+
 	if $ = 2 then
 		skip to M_FORM;
 	endif;
@@ -1919,6 +2420,7 @@ PROC L26
 
 
 PROC M2
+
 	if $ = 2 then
 		skip to M4;
 	endif
@@ -1927,436 +2429,605 @@ PROC M2
 
 
 
-//PROC N1000
-//onfocus
-//	//First need to draw random group of family to ask question to.
-//	//Looping until I find one..
-//	numeric gr;
-//	while 1 do
-//		seed(systime());
-//		gr = random(1,4);
-//		if hhDemographics(gr) > 0 then
-//			break;
-//		endif;
-//	enddo;
-//
-//	//And now I want a random person in that group
-//	numeric personNo = random(1, hhDemographics(gr));
-//
-//	//Getting the name of the person
-//	numeric gender, minAge;
-//	if gr = 1 then	//Woman
-//		gender = 2;
-//		minAge = 15;
-//	elseif gr = 2 then	//girl
-//		gender = 2;
-//		minAge = 5;
-//	elseif gr = 3 then	//man
-//		gender = 1;
-//		minAge = 15;
-//	else	//boy
-//		gender = 1;
-//		minAge = 5;
-//	endif;
-//
-//	numeric i = 1, currPersonNo = 1;
-//	while i <= 20 do //Max 20 persons in a household
-//		if AB4(i) <> gender then
-//			inc(i);
-//			next;
-//		else	//Right gender
-//			if minAge = 5 and (AB5(i) >= 5 and AB5(i) < 15) then
-//				if currPersonNo = personNo then
-//					//Found the right person: The i-th family member
-//					break;
-//				else
-//					inc(currPersonNo);
-//				endif;
-//			elseif minAge = 15 and AB5(i) >= 15 then
-//				if currPersonNo = PersonNo then
-//					//Again found the person
-//					break
-//				else
-//					inc(currPersonNo);
-//				endif;
-//			endif;
-//			inc(i);
-//		endif;
-//	enddo;
-//
-//	currMember = AB1(i);
-//
+	//PROC N1000
+	//onfocus
+	//	//First need to draw random group of family to ask question to.
+	//	//Looping until I find one..
+	//	numeric gr;
+	//	while 1 do
+	//		seed(systime());
+	//		gr = random(1,4);
+	//		if hhDemographics(gr) > 0 then
+	//			break;
+	//		endif;
+	//	enddo;
+	//
+	//	//And now I want a random person in that group
+	//	numeric personNo = random(1, hhDemographics(gr));
+	//
+	//	//Getting the name of the person
+	//	numeric gender, minAge;
+	//	if gr = 1 then	//Woman
+	//		gender = 2;
+	//		minAge = 15;
+	//	elseif gr = 2 then	//girl
+	//		gender = 2;
+	//		minAge = 5;
+	//	elseif gr = 3 then	//man
+	//		gender = 1;
+	//		minAge = 15;
+	//	else	//boy
+	//		gender = 1;
+	//		minAge = 5;
+	//	endif;
+	//
+	//	numeric i = 1, currPersonNo = 1;
+	//	while i <= 20 do //Max 20 persons in a household
+	//		if AB4(i) <> gender then
+	//			inc(i);
+	//			next;
+	//		else	//Right gender
+	//			if minAge = 5 and (AB5(i) >= 5 and AB5(i) < 15) then
+	//				if currPersonNo = personNo then
+	//					//Found the right person: The i-th family member
+	//					break;
+	//				else
+	//					inc(currPersonNo);
+	//				endif;
+	//			elseif minAge = 15 and AB5(i) >= 15 then
+	//				if currPersonNo = PersonNo then
+	//					//Again found the person
+	//					break
+	//				else
+	//					inc(currPersonNo);
+	//				endif;
+	//			endif;
+	//			inc(i);
+	//		endif;
+	//	enddo;
+	//
+	//	currMember = AB1(i);
+	//
 
 
 PROC N_FORM
+
 preproc
+
 	errmsg(172);
+
+
 PROC N_ACTIVITY_WOMEN
+
 preproc
- if hhDemographics(1) < 1 then
-  skip to N_ACTIVITY_GIRLS;
- endif; 
- 
- if curocc() = 1 then
-   errmsg(184);
- endif;
- $ = curocc();
- activity = getLabel($, curocc());
- skip to N_A;
+
+	if hhDemographics(1) < 1 then
+		skip to N_ACTIVITY_GIRLS;
+	endif;
+
+	if curocc() = 1 then
+		errmsg(184);
+	endif;
+	$ = curocc();
+	activity = getLabel($, curocc());
+	skip to N_A;
+
 
 PROC N_A
 
 postproc
- if $ > hhDemographics(1) then
-  errmsg(166,$,hhDemographics(1)); 
-  reenter;
- endif;
-  if $ > 0 then
-   skip to N_C_HH;
-  endif; 
+
+	if $ > hhDemographics(1) then
+		errmsg(166,$,hhDemographics(1));
+		reenter;
+	endif;
+	if $ > 0 then
+		skip to N_C_HH;
+	endif;
+
+
 PROC N_B
+
 postproc
-  skip to next;
+
+	skip to next;
+
+
 PROC N_C_HH
+
 postproc
- if $ > 24 then
-  errmsg(tr(161), $);
-  reenter;
- endif;
- 
+
+	if $ > 24 then
+		errmsg(tr(161), $);
+		reenter;
+	endif;
+
+
 PROC N_C_MM
+
 postproc
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_C_HH = 24 and $ > 0 then
-  errmsg(tr(163), N_C_HH, $);
-  reenter;
- endif;
- 
+
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_C_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_C_HH, $);
+		reenter;
+	endif;
+
+
 PROC N_D_HH
- if $ > 15 then
-  errmsg(tr(162), $);
-  reenter;
- endif;
 
- if $ > N_C_HH then
-  errmsg(tr(159), $, N_C_HH);
-  reenter;
- endif;
- 
+	if $ > 15 then
+		errmsg(tr(162), $);
+		reenter;
+	endif;
+
+	if $ > N_C_HH then
+		errmsg(tr(159), $, N_C_HH);
+		reenter;
+	endif;
+
+
 PROC N_D_MM
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_D_HH = 15 and $ > 0 then
-  errmsg(tr(164), N_D_HH, $);
-  reenter;
- endif;
 
- if N_C_HH = N_D_HH and $ > N_C_MM  then
-  errmsg(tr(160), N_D_HH, $, N_C_HH, N_C_MM);
-  reenter;
- endif;
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_D_HH = 15 and $ > 0 then
+		errmsg(tr(164), N_D_HH, $);
+		reenter;
+	endif;
+
+	if N_C_HH = N_D_HH and $ > N_C_MM  then
+		errmsg(tr(160), N_D_HH, $, N_C_HH, N_C_MM);
+		reenter;
+	endif;
+
 
 PROC N_ACTIVITY_GIRLS
+
 preproc
- if hhDemographics(2) < 1 then
-  skip to N_ACTIVITY_MEN;
- endif; 
- if curocc() = 1 then
-   errmsg(185);
- endif;
- $ = curocc();
- activity = getLabel($, curocc());
-// errmsg("%s",activity);
- skip to N_F;
+
+	if hhDemographics(2) < 1 then
+		skip to N_ACTIVITY_MEN;
+	endif;
+	if curocc() = 1 then
+		errmsg(185);
+	endif;
+	$ = curocc();
+	activity = getLabel($, curocc());
+	// errmsg("%s",activity);
+	 skip to N_F;
+
 
 PROC N_F
+
 preproc
+
 	if N_ACTIVITY_GIRLS = 6 and not(schoolGirls > 0) then
 		skip to next;
-	endif; 
+	endif;
+
 postproc
+
 	if $ > hhDemographics(2) then
-		errmsg(166,$,hhDemographics(2)); 
+		errmsg(166,$,hhDemographics(2));
 		reenter;
 	endif;
 	if $ > 0 then
 		skip to N_H_HH;
-	endif; 
+	endif;
+
+
 PROC N_G
+
 postproc
-  skip to next;
+
+	skip to next;
+
+
 PROC N_H_HH
+
 postproc
- if $ > 24 then
-  errmsg(tr(161), $);
-  reenter;
- endif;
+
+	if $ > 24 then
+		errmsg(tr(161), $);
+		reenter;
+	endif;
+
+
 PROC N_H_MM
+
 postproc
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_H_HH = 24 and $ > 0 then
-  errmsg(tr(163), N_H_HH, $);
-  reenter;
- endif;
+
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_H_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_H_HH, $);
+		reenter;
+	endif;
+
+
 PROC N_I_HH
- if $ > 15 then
-  errmsg(tr(162), $);
-  reenter;
- endif;
 
- if $ > N_H_HH then
-  errmsg(tr(159), $, N_H_HH);
-  reenter;
- endif;
+	if $ > 15 then
+		errmsg(tr(162), $);
+		reenter;
+	endif;
+
+	if $ > N_H_HH then
+		errmsg(tr(159), $, N_H_HH);
+		reenter;
+	endif;
+
+
 PROC N_I_MM
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_I_HH = 15 and $ > 0 then
-  errmsg(tr(164), N_I_HH, $);
-  reenter;
- endif;
 
- if N_H_HH = N_I_HH and $ > N_H_MM  then
-  errmsg(tr(160), N_I_HH, $, N_H_HH, N_H_MM);
-  reenter;
- endif;
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_I_HH = 15 and $ > 0 then
+		errmsg(tr(164), N_I_HH, $);
+		reenter;
+	endif;
+
+	if N_H_HH = N_I_HH and $ > N_H_MM  then
+		errmsg(tr(160), N_I_HH, $, N_H_HH, N_H_MM);
+		reenter;
+	endif;
+
+
 PROC N_ACTIVITY_MEN
+
 preproc
- if hhDemographics(3) < 1 then
-  skip to N_ACTIVITY_BOYS;
- endif; 
- if curocc() = 1 then
-   errmsg(186);
- endif;
- $ = curocc();
- activity = getLabel($, curocc());
- skip to N_K;
+
+	if hhDemographics(3) < 1 then
+		skip to N_ACTIVITY_BOYS;
+	endif;
+	if curocc() = 1 then
+		errmsg(186);
+	endif;
+	$ = curocc();
+	activity = getLabel($, curocc());
+	skip to N_K;
+
 
 PROC N_K
+
 postproc
- if $ > hhDemographics(3) then
-  errmsg(166,$,hhDemographics(3)); 
-  reenter;
- endif;
-  if $ > 0 then
-   skip to N_M_HH;
-  endif; 
+
+	if $ > hhDemographics(3) then
+		errmsg(166,$,hhDemographics(3));
+		reenter;
+	endif;
+	if $ > 0 then
+		skip to N_M_HH;
+	endif;
+
+
 PROC N_L
+
 postproc
-  skip to next;
+
+	skip to next;
+
+
 PROC N_M_HH
+
 postproc
- if $ > 24 then
-  errmsg(tr(161), $);
-  reenter;
- endif;
+
+	if $ > 24 then
+		errmsg(tr(161), $);
+		reenter;
+	endif;
+
+
 PROC N_M_MM
+
 postproc
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_M_HH = 24 and $ > 0 then
-  errmsg(tr(163), N_M_HH, $);
-  reenter;
- endif;
- 
+
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_M_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_M_HH, $);
+		reenter;
+	endif;
+
+
 PROC N_N_HH
- if $ > 15 then
-  errmsg(tr(162), $);
-  reenter;
- endif;
 
- if $ > N_M_HH then
-  errmsg(tr(159), $, N_M_HH);
-  reenter;
- endif;
+	if $ > 15 then
+		errmsg(tr(162), $);
+		reenter;
+	endif;
+
+	if $ > N_M_HH then
+		errmsg(tr(159), $, N_M_HH);
+		reenter;
+	endif;
+
+
 PROC N_N_MM
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_N_HH = 15 and $ > 0 then
-  errmsg(tr(164), N_N_HH, $);
-  reenter;
- endif;
 
- if N_M_HH = N_N_HH and $ > N_M_MM  then
-  errmsg(tr(160), N_N_HH, $, N_M_HH, N_M_MM);
-  reenter;
- endif;
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_N_HH = 15 and $ > 0 then
+		errmsg(tr(164), N_N_HH, $);
+		reenter;
+	endif;
+
+	if N_M_HH = N_N_HH and $ > N_M_MM  then
+		errmsg(tr(160), N_N_HH, $, N_M_HH, N_M_MM);
+		reenter;
+	endif;
+
 
 PROC N_ACTIVITY_BOYS
+
 preproc
- if hhDemographics(4) < 1 then
-  skip to Q_FORM;
- endif; 
- if curocc() = 1 then
-   errmsg(187);
- endif;
- $ = curocc();
- activity = getLabel($, curocc());
- skip to N_P;
+
+	if hhDemographics(4) < 1 then
+		skip to Q_FORM;
+	endif;
+	if curocc() = 1 then
+		errmsg(187);
+	endif;
+	$ = curocc();
+	activity = getLabel($, curocc());
+	skip to N_P;
+
 
 PROC N_P
+
 preproc
+
 	if N_ACTIVITY_BOYS = 6 and not(schoolBoys > 0) then
 		skip to next;
-	endif; 
+	endif;
+
 postproc
- if $ > hhDemographics(4) then
-  errmsg(166,$,hhDemographics(4)); 
-  reenter;
- endif;
-  if $ > 0 then
-   skip to N_R_HH;
-  endif; 
+
+	if $ > hhDemographics(4) then
+		errmsg(166,$,hhDemographics(4));
+		reenter;
+	endif;
+	if $ > 0 then
+		skip to N_R_HH;
+	endif;
+
+
 PROC N_Q
+
 postproc
-  skip to next;
+
+	skip to next;
+
+
 PROC N_R_HH
+
 postproc
- if $ > 24 then
-  errmsg(tr(161), $);
-  reenter;
- endif;
+
+	if $ > 24 then
+		errmsg(tr(161), $);
+		reenter;
+	endif;
+
+
 PROC N_R_MM
+
 postproc
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_R_HH = 24 and $ > 0 then
-  errmsg(tr(163), N_R_HH, $);
-  reenter;
- endif;
+
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_R_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_R_HH, $);
+		reenter;
+	endif;
+
+
 PROC N_S_HH
- if $ > 15 then
-  errmsg(tr(162), $);
-  reenter;
- endif;
 
- if $ > N_R_HH then
-  errmsg(tr(159), $, N_R_HH);
-  reenter;
- endif;
+	if $ > 15 then
+		errmsg(tr(162), $);
+		reenter;
+	endif;
+
+	if $ > N_R_HH then
+		errmsg(tr(159), $, N_R_HH);
+		reenter;
+	endif;
+
+
 PROC N_S_MM
- if $ > 59 then
-  errmsg(tr(165), $);
-  reenter;
- endif;
- if N_S_HH = 15 and $ > 0 then
-  errmsg(tr(164), N_S_HH, $);
-  reenter;
- endif;
 
- if N_R_HH = N_S_HH and $ > N_R_MM  then
-  errmsg(tr(160), N_S_HH, $, N_R_HH, N_R_MM);
-  reenter;
- endif;
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_S_HH = 15 and $ > 0 then
+		errmsg(tr(164), N_S_HH, $);
+		reenter;
+	endif;
+
+	if N_R_HH = N_S_HH and $ > N_R_MM  then
+		errmsg(tr(160), N_S_HH, $, N_R_HH, N_R_MM);
+		reenter;
+	endif;
+
 
 PROC Q_FORM
+
 preproc
- errmsg(188);
+
+	errmsg(188);
+
+
 PROC Q1_1
+
 onfocus
-    $ = 1;
+
+	$ = 1;
 	setValueset($, membernumbers, memberNames);
 
 postproc
- //skip to w_form;
+
+	//skip to w_form;
+
 
 PROC Q1_NUM
+
 onfocus
+
 	$ = curocc();
 	consumeItem = getLabel($, curocc());
 	skip to Q1A;
+
+
 PROC Q12
+
 preproc
+
 	if not(schoolGirls > 0 or schoolBoys > 0) then
 		skip to Q13;
 	endif;
 
+
 PROC S_FORM
+
 preproc
- errmsg(191);
+
+	errmsg(191);
+
+
 PROC S1_1
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
 
 
 
 PROC S4
+
 preproc
-    If not(C2a = 1 or C2b = 1 or C2c = 1 or C2d = 1 or C2e = 1 or C2f = 1) then 
-	 skip to S7;
+
+	If not(C2a = 1 or C2b = 1 or C2c = 1 or C2d = 1 or C2e = 1 or C2f = 1) then
+		skip to S7;
 	endif;
 	mainElSource = getvaluelabel(C2g);
+
+
 PROC U1_1
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
+
 
 PROC U3_NO
+
 onfocus
-	 $ = curocc();
-	 productName = getLabel($, curocc());
-	 skip to U3A;
+
+	$ = curocc();
+	productName = getLabel($, curocc());
+	skip to U3A;
+
+
 PROC U3A
+
 postproc
+
 	if $ = 1 then
 		skip to u3b;
-	endif; 
+	endif;
+
+
 PROC U3A1
+
 postproc
+
 	skip to next;
+
+
 PROC U3B
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
+
+
 PROC U4_NO
+
 onfocus
-	 $ = curocc();
-	 businessName = getLabel($, curocc());
-	 skip to U4A;
+
+	$ = curocc();
+	businessName = getLabel($, curocc());
+	skip to U4A;
+
+
 PROC U4A
+
 postproc
+
 	if $ = 1 then
 		skip to u4b;
-	endif; 
+	endif;
+
+
 PROC U4A1
+
 postproc
+
 	skip to next;
+
+
 PROC U4B
+
 onfocus
+
 	setValueset($, memberNumbers, memberNames);
+
+
 PROC U14A
+
 preproc
-  if U13A = 2 then
-   skip U14B;
-  endif; 
+
+	if U13A = 2 then
+		skip U14B;
+	endif;
+
+
 PROC U14B
+
 preproc
-  if U13B = 2 then
-   skip W_FORM;
-  endif; 
+
+	if U13B = 2 then
+		skip W_FORM;
+	endif;
+
 
 PROC T1_1
+
 onfocus
+
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
 		skip to U_FORM;
 	else
 		array wCode(10); //Max 10 women in HH
 		array String wLabel(10);
-		
+
 		//Loop through household memebers to find women
 		numeric i = 1, j = 0;
 		while i <= 20 do
@@ -2372,26 +3043,27 @@ onfocus
 				inc(i);
 			endif;
 		enddo;
-		
+
 		wcode(j) = NOTAPPL;
-		
+
 		setValueset($, wcode, wLabel);
 	endif;
 
 
 
 PROC W1_1
+
 onfocus
 
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
 		skip to AA_END_FORM;
 	else
-  errmsg(tr(147));
-		array wCode(10); //Max 10 women in HH
-		array String wLabel(10);
+		errmsg(tr(147));
+			  array wCode(10); //Max 10 women in HH
+			  array String wLabel(10);
 
-		//Loop through household memebers to find women
-		numeric i = 1, j = 0;
+			  //Loop through household memebers to find women
+			  numeric i = 1, j = 0;
 		while i <= 20 do
 			if AB1(i) = "" then
 				//finished.
@@ -2414,33 +3086,41 @@ onfocus
 
 
 PROC WA_0
+
 preproc
-//onfocus
-	$ = curocc();
-	socAndSec = getLabel($, curocc());
-//	errmsg("Wa1: %s ", lstrip(socAndSec));
-	skip to WA1;
-	
+
+	//onfocus
+		$ = curocc();
+		socAndSec = getLabel($, curocc());
+	//	errmsg("Wa1: %s ", lstrip(socAndSec));
+		skip to WA1;
+
 
 
 PROC WA1
+
 preproc
-// if WA_0 > 7 then
-//  errmsg("%s",WA_TYPE);
-// endif;
+
+	// if WA_0 > 7 then
+	//  errmsg("%s",WA_TYPE);
+	// endif;
 
 
 
 PROC WA2
+
 preproc
-// if WA_0 > 7 then
-//  errmsg("%s",WA_TYPE);
-// endif;
+
+	// if WA_0 > 7 then
+	//  errmsg("%s",WA_TYPE);
+	// endif;
 
 
 
 PROC AA20
-	
+
 preproc
-		//$ = DEVICE_ID;	//To be login later.. :)
-		//noinput;
+
+	//$ = DEVICE_ID;	//To be login later.. :)
+	//noinput;
+
