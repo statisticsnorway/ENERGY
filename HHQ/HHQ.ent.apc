@@ -278,6 +278,8 @@ PROC AA17
 
 
 
+PROC AA18
+ 
 PROC AB1
 preproc
 	//Might as well fill in HoH and Main respondent
@@ -517,7 +519,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
-// skip to C1_FORM;	
+ skip to I_FORM;	
 PROC B3
 //	skip to W_FORM;
 
@@ -1523,6 +1525,7 @@ preproc
 	endif; 
 	array numeric cookstoves(18);
 	array string cookstovesLabels(18);
+	array string cookstovesImages(18);
     numeric i = 1;
 	numeric j = 1;
 	string stove;
@@ -1531,9 +1534,10 @@ preproc
 	 do while i2b[i:3] <> ''  
 	  cookstoves(j) = tonumber(i2b[i:3]);
 	  cookstovesLabels(j) =  getvaluelabel(i2b[i:3]);
+	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2b[i:3],".jpg");
 	  i = i + 3;
 	  j = j + 1;
-//      errmsg("B Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
+//      errmsg("B Cook %d %s, i %d, Image: %s",cookstoves(j-1),cookstovesLabels(j-1),i,cookstovesImages(j-1));
 	 enddo;
 	endif; 
 
@@ -1542,6 +1546,7 @@ preproc
 	 do while i2d[i:3] <> ''  
 	  cookstoves(j) = tonumber(i2d[i:3]);
 	  cookstovesLabels(j) =  getvaluelabel(i2d[i:3]);
+	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2d[i:3],".jpg");
 	  i = i + 3;
 	  j = j + 1;
 //      errmsg("D Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
@@ -1553,6 +1558,7 @@ preproc
 	 do while i2f[i:3] <> '' 
 	  cookstoves(j) = tonumber(i2f[i:3]);
 	  cookstovesLabels(j) =  getvaluelabel(i2f[i:3]);
+	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2f[i:3],".jpg");
 	  i = i + 3;
 	  j = j + 1;
 //      errmsg("F Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
@@ -1564,6 +1570,7 @@ preproc
 	 do while i2h[i:3] <> ''  
 	  cookstoves(j) = tonumber(i2h[i:3]);
 	  cookstovesLabels(j) =  getvaluelabel(i2h[i:3]);
+	  cookstovesImages(j) =  concat("..\Images\Cookstoves_",i2h[i:3],".jpg");
 	  i = i + 3;
 	  j = j + 1;
 //      errmsg("H Cook %d %s, i %d",cookstoves(j-1),cookstovesLabels(j-1),i);
@@ -1578,7 +1585,27 @@ preproc
  	 endif;
     i = i + 1;
 	enddo;
-	setValueset($, cookstoves, cookstovesLabels);
+	setValueset($, cookstoves, cookstovesLabels, cookstovesImages);
+
+//     valueset string I2I_VS;
+//     valueset numeric i2i_valueset ;
+//	 string y;
+//	 numeric zn;
+//	 string zs;
+//	 numeric x;
+
+//	 i = 0;
+//     do while cookstoves(i) <> NOTAPPL;
+//	     inc(i);
+//		 y = cookstovesLabels(i);
+//		 zn = cookstoves(i);
+//		 zs = cookstovesImages(j);
+//		 errmsg("%s, %s, %d",y,zs,zn);
+//         i2i_valueset.add(y, zs,zn);
+//     enddo;
+
+//	setValueset($, i2i_valueset);
+	
 postproc
  mostUsedStove = getvaluelabel($);
 PROC I4

@@ -1,0 +1,29 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+Description=Menu
+
+[DataEntryInit]
+Interactive=Ask
+StartMode=Add
+AutoAdd=No
+FullScreen=Yes
+ShowInApplicationListing=Always
+
+[Files]
+Application=./Menu.ent
+InputData=../Data/Menu.csdb|CSPRODB
+Paradata=../Data/Menu_a0661000b083.cslog
+
+[ExternalFiles]
+COMMUNITY_DICT=..\Data\Community.csdb|CSPRODB
+HHQ_DICT=..\Data\HHQ.csdb|CSPRODB
+LISTING_DICT=..\Data\Listing.csdb|CSPRODB
+REGIONS_DICT=..\LookupFiles\Regions.csdb|CSPRODB
+SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB
+USERS_DICT=..\LookupFiles\Users.csdb|CSPRODB
+
+[Parameters]
+Language=EN
+LOGGEDIN=I
+
