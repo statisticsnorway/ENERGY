@@ -308,7 +308,7 @@ preproc
 postproc
 
 	if $ = 2 or $ = 3 then
-		skip to AA18;
+		skip to AA17;
 	endif;
 
 
