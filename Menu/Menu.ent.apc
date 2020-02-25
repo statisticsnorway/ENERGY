@@ -478,7 +478,7 @@ PROC GLOBAL
 			enddo;
 			if found = 1 then
 				string idString = concat(AA14, ADDRESS_LOCATION, edit("ZZ", AA1), edit("ZZ", AA2), edit("ZZZ", AA3), 
-									edit("ZZ", AA4), edit("ZZ", AA5), edit("ZZZ", AA6), AALOGIN);
+									edit("ZZ", AA4), edit("ZZ", AA5), edit("ZZ", AA6), edit("ZZZ", AA8), AALOGIN);
 				pffContent = pffContent + "StartMode=Modify;" + idString + "\n";
 			else
 				pffContent = pffContent + "StartMode=Add\n";
@@ -701,8 +701,6 @@ postproc
 		$ = NOTAPPL;
 		reenter;
 
-	elseif $ = 6 then	//Log in as supervisor
-		//just continue to next field
 		
 {	elseif $ = 8 then 		//Upload paradata
 		string para = prompt(maketext(tr(6)), numeric);
@@ -721,7 +719,7 @@ postproc
 	
 	
 PROC M_SUPERMENU
-preproc
+{preproc	--this preproc was relevant before login field was entered.. Just keeping it for now..
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else
@@ -731,7 +729,7 @@ preproc
 		endif;
 	endif;
 	$ = NOTAPPL;
-	
+}	
 
 postproc	
 	if $ = 1 then	//Sync with interviewer
