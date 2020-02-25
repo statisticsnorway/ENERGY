@@ -119,12 +119,13 @@ preproc
 			if AB5(i) >= 0 and AB5(i) < 16 then
 				inc(j);
 				inc(hhDemographics(7));
+				childrenNos(j) = j;
 				childrenNames(j) = AB1(i);
 			endif;	
-			
-			
+
 			inc(i);
 		enddo;
+		
 		memberNumbers(i) = NOTAPPL;
 		
 		//Need to find the name of the current respondent if we're still registering hh members
