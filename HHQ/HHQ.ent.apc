@@ -613,7 +613,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
-	skip to I_FORM;
+//	skip to I_FORM;
 
 
 PROC B3
