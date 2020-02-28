@@ -954,19 +954,12 @@ PROC C5
 
 
 PROC C15
-
-	if $ = 2 then
+	if $ = 1 then
 		skip to C16A;
 	endif;
-
-
-
-PROC C18
-
-	if $ = 2 then
-		skip to C16A;
+	if $ = 3 then
+		skip to C13;
 	endif;
-
 
 
 PROC C16A
@@ -1064,8 +1057,7 @@ PROC C29
 
 
 PROC C31
-
-	if $ in 0,66,88 then
+	if $ in 0,88 then
 		skip to C36;
 	endif;
 
@@ -1151,7 +1143,7 @@ PROC C82H
 preproc
 
 	rangeStart = 20;
-	rangeEnd = 500;
+	rangeEnd = 900;
 	rangeUnknown = 888;
 
 postproc
@@ -1183,7 +1175,7 @@ PROC C82H2
 preproc
 
 	rangeStart = 200;
-	rangeEnd = 6000;
+	rangeEnd = 10000;
 	rangeUnknown = 88;
 
 postproc
@@ -2125,6 +2117,11 @@ postproc
 	endif;
 
 
+PROC I34_MM
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
 PROC I37
 
 preproc

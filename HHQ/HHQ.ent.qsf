@@ -3389,7 +3389,7 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 How many outages/blackouts occured during the last seven days?\par
 EN=\cf2\f1\fs24\par
-EN=No outages/blackouts = 66\cf1\par
+EN=No outages/blackouts = 0\cf1\par
 EN=\cf2 Don't know = 88\par
 EN=\par
 EN=}
@@ -7381,7 +7381,7 @@ EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs24 In the last 12 months, what are the \cf2 second most\cf1  used fuel you used on %mostUsedStove%?\par
 EN=\cf3 B\~\~\~ Second most Used.   Single response.\par
-EN=If only one type of fuel is used, choose "Not applicalble...66"\cf1\par
+EN=If only one type of fuel is used, choose "Not applicable"\cf1\par
 EN=}
 
 [QUESTION]
@@ -8301,21 +8301,27 @@ EN=\pard\cf1\f0\fs24 How many \cf2 members\cf1  of the household were involved e
 EN=}
 
 [QUESTION]
+Field=HHQ_DICT.I34
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days?\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.I34_HH
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long time \cf2 did it typically take to gather, collect or purchase fuel \cf1 per person each time \cf2 they did so during the last seven days? \par
-EN=\cf3 (hours) minutes in next question\cf2\par
+EN=\pard\cf1\f0\fs24 Hours\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.I34_MM
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How long time\cf2  did it typically take to gather, collect or purchase fuel \cf1 per person each time\cf2  they did  so during the last seven days? \par
-EN=\cf3 (minutes)\par
+EN=\pard\cf1\f0\fs24 Minutes\par
 EN=}
 
 [QUESTION]
@@ -9499,9 +9505,9 @@ SW=}
 Field=HHQ_DICT.N_A
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many women 15 years and older have been involved in %ACTIVITY%?\par
+EN=\pard\cf1\f0\fs24 How many women 15 years and older have been involved in \cf2 %ACTIVITY%\cf1  the last 7 days??\par
 EN=}
 
 [QUESTION]
@@ -9572,44 +9578,38 @@ EN=}
 Field=HHQ_DICT.N_C_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? \par
-EN=\cf2 (hours)\cf1\par
-EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\cf2\par
+EN=\cf1\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_C_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average?\cf2  \par
-EN=(minutes)\cf1\par
-EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_D_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark? \par
-EN=\cf2 (hours)\cf1\par
-EN=\cf2 (%activity%)\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\cf2\par
+EN=\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_D_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the women 15 years and older spend after dark?\cf2  \par
-EN=(minutes)\cf1\par
-EN=\cf2 (%activity%)\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\cf2\par
 EN=\par
 EN=}
 
@@ -9627,9 +9627,9 @@ EN=}
 Field=HHQ_DICT.N_F
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many girls 5-14 years and older have been involved in %ACTIVITY%?\par
+EN=\pard\cf1\f0\fs24 How many girls 5-14 years and older have been involved in \cf2 %ACTIVITY%\cf1  the last 7 days?\par
 EN=}
 
 [QUESTION]
@@ -9647,47 +9647,39 @@ EN=}
 Field=HHQ_DICT.N_H_HH
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? \par
-EN=\cf2 (hours)\par
-EN=(%ACTIVITY%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_H_MM
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? \par
-EN=\cf2 (minutes)\par
-EN=(%ACTIVITY%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_I_HH
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark? \par
-EN=\cf2 (hours)\par
-EN=(%activity%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\par
+EN=\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_I_MM
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the girls 5-14 years spend after dark?\cf2  \par
-EN=(minutes)\cf1\par
-EN=\cf2 (%activity%)\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\cf2\par
 EN=\par
 EN=}
 
@@ -9707,9 +9699,9 @@ EN=}
 Field=HHQ_DICT.N_K
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many men 15 years and older have been involved in %ACTIVITY%?\par
+EN=\pard\cf1\f0\fs24 How many men 15 years and older have been involved in \cf2 %ACTIVITY%\cf1  the last 7 days??\par
 EN=}
 
 [QUESTION]
@@ -9727,48 +9719,40 @@ EN=}
 Field=HHQ_DICT.N_M_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? \par
-EN=\cf2 (hours)\par
-EN=(%ACTIVITY%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\par
+EN=\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_M_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? \par
-EN=\cf2 (minutes)\par
-EN=(%ACTIVITY%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_N_HH
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? \par
-EN=\cf2 (hours)\par
-EN=(%activity%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_N_MM
 Occurrences=1:5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the men 15 years and older spend after dark? \par
-EN=\cf2 (minutes)\par
-EN=(%activity%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\cf2\par
 EN=}
 
 [QUESTION]
@@ -9795,9 +9779,9 @@ EN=}
 Field=HHQ_DICT.N_P
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How many boys 5-14 years and older have been involved in %ACTIVITY%?\par
+EN=\pard\cf1\f0\fs24 How many boys 5-14 years and older have been involved in \cf2 %ACTIVITY%\cf1  the last 7 days??\par
 EN=}
 
 [QUESTION]
@@ -9815,11 +9799,10 @@ EN=}
 Field=HHQ_DICT.N_R_HH
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? \par
-EN=\cf2 (hours)\cf1\par
-EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\cf2\par
+EN=\par
 EN=\par
 EN=}
 
@@ -9827,36 +9810,30 @@ EN=}
 Field=HHQ_DICT.N_R_MM
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? \par
-EN=\cf2 (minutes)\par
-EN=(%ACTIVITY%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_S_HH
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? \par
-EN=\cf2 (hours)\par
-EN=(%activity%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Hours\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.N_S_MM
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 How much of this time did the boys 5-14 years spend after dark? \par
-EN=\cf2 (minutes)\par
-EN=(%activity%)\par
-EN=\cf1\par
+EN=\pard\cf1\f0\fs24 Minutes\par
+EN=\cf2\par
 EN=}
 
 [QUESTION]
@@ -10561,13 +10538,11 @@ PT=}
 Field=HHQ_DICT.Q1A
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much of \par
-EN=%consumeItem%\par
-EN=have you \cf2 purchased\cf1  last 7 days?\par
-EN=\cf3 Amount in local currency\par
-EN=88=don't know\par
+EN=\pard\cf1\fs24 A. How much did you spend to buy \cf2 %consumeItem%\cf1 ? In local currency\par
+EN=I\cf2 n local currency\par
+EN=88888888=don't know\par
 EN=\cf1\par
 EN=}
 
@@ -10575,45 +10550,26 @@ EN=}
 Field=HHQ_DICT.Q1B
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much of\par
-EN=%consumeItem%\par
-EN=have you \cf2 produced/aquired\cf1  last 7 days?\par
-EN=\cf3 Amount in local currency\par
-EN=88=don't know\par
+EN=\pard\cf1\fs24 B. What is the value of \cf2 %consumeItem%\cf1  that you produced yourself, if you had to buy it in the market?\par
+EN=\cf2 In local currency\par
+EN=88888888=don't know\par
 EN=\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 How much of\par
-PT=%consumeItem%\par
-PT=have you produced/aquired last 7 days?\par
-PT=\par
-PT=}
 
 [QUESTION]
 Field=HHQ_DICT.Q1C
 Occurrences=1:13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How much of\par
-EN=%consumeItem%\par
-EN=have you \cf2 received as a gift/donation\cf1  last 7 days?\par
-EN=\cf3 Amount in local currency\par
-EN=88=don't know\par
+EN=\pard\cf1\fs24 C. What is the value of \cf2 %consumeItem%\cf1  that you received as a gift or donation?\par
+EN=\cf2 In local currency\par
+EN=If respondent had to buy it in the market.\par
+EN=88888888=don't know\par
 EN=\cf1\par
 EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-PT=\pard\cf1\fs24 How much of\par
-PT=%consumeItem%\par
-PT=have you received as a gift/donation last 7 days?\par
-PT=\par
-PT=}
 
 [QUESTION]
 Field=HHQ_DICT.Q20
@@ -11955,6 +11911,15 @@ EN=\pard\cf1\fs24 Was the profit from this business 5 years ago, smaller, the sa
 EN=}
 
 [QUESTION]
+Field=HHQ_DICT.U4H
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24 Was any electricity used for this processing/ production 5 years ago?\par
+EN=}
+
+[QUESTION]
 Field=HHQ_DICT.W1_1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -12044,4 +12009,96 @@ SW={\colortbl ;\red0\green0\blue0;}
 SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 SW=\pard\cf1\fs24\lang1044 %socAndSec%\lang1033\par
 SW=}
+
+[QUESTION]
+Field=I34
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How long time \cf2 did it typically take to gather, collect or purchase fuel \cf1 per person each time \cf2 they did so during the last seven days?\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_C
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 In the last 7 days, how many hours did each of these women use?\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=\par
+EN=}
+
+[QUESTION]
+Field=N_D
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How many of these hours were spent after dark?\cf2\par
+EN=(%activity%)\par
+EN=}
+
+[QUESTION]
+Field=N_H
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 In the last 7 days, how many hours did each of these girls involved use?\par
+EN=\cf2 (%ACTIVITY%)\par
+EN=\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_I
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How many of these hours were spent after dark?\par
+EN=\cf2 (%activity%)\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_M
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 In the last 7 days, how many hours did each of these men involved use?\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_N
+Occurrences=1:5
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How many of these hours were spent after dark?\par
+EN=\cf2 (%activity%)\par
+EN=\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_R
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 In the last 7 days, how many hours did each of these boys involved use?\par
+EN=\cf2 (%ACTIVITY%)\cf1\par
+EN=}
+
+[QUESTION]
+Field=N_S
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 How many of these hours were spent after dark?\par
+EN=\cf2 (%activity%)\par
+EN=\cf1\par
+EN=}
 
