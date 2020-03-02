@@ -155,12 +155,13 @@ PROC GLOBAL
 			intNum = 4;
 		endif;
 		
-		
+		numeric test;
 		if fileexist("../Data/Sample.csdb") then
-			setFile(SAMPLING_DICT, "../Data/Sample.csdb");
+			test = setFile(SAMPLING_DICT, "../Data/Sample.csdb");
 		else
-			setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
+			test = setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
 		endif;
+		//errmsg("Setfile? %d (should be 1) ", test);
 				
 		
 		//Then do the actual sample process
@@ -322,7 +323,7 @@ PROC GLOBAL
 						if tabletCount(j,1) = "" then
 							tabletCount(j, 1) = tStrip(LLOGIN);
 							inc(numOfInterviewers);
-							//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LDEVICE_ID))
+							//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LLOGIN))
 						endif;
 					endif;
 					inc(j);
@@ -357,6 +358,7 @@ PROC GLOBAL
 		//get rid of sample data from previous EA:
 		numeric ok = close(SAMPLING_DICT);
 		ok = Filedelete("../Data/Sample.csdb");
+		//errmsg("Deleted %d files", ok);
 		
 		//Analysis of the listed cases
 		numeric tot = countCases(LISTING_DICT 
