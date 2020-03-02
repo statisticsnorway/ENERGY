@@ -588,6 +588,7 @@ PROC GLOBAL
 
 PROC MENU_FF
 postproc
+	//Writing the pff file to start up correctly next time
 	writepff("Menu", "Menu", "", NOTAPPL, "N");
 
 
@@ -734,15 +735,18 @@ PROC M_SUPERMENU
 postproc	
 	if $ = 1 then	//Sync with interviewer
 		bluetoothServer();
+		$ = NOTAPPL;
 		reenter;
 	elseif $ = 2 then
 		//Generate sample.
 		//Probably shpould have warnings that all gadget must be synced first
 		CalculateSample();
+		$ = NOTAPPL;
 		reenter;
 	elseif $ = 3 then
 		//Sync with HQ
 		syncHQ();
+		$ = NOTAPPL;
 		reenter;
 	elseif $ = 4 then
 		writepff("Menu", "Menu", "", NOTAPPL, "S");
