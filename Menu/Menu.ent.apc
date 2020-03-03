@@ -722,7 +722,7 @@ postproc
 	
 	
 PROC M_SUPERMENU
-{preproc	--this preproc was relevant before login field was entered.. Just keeping it for now..
+preproc	
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else
@@ -732,7 +732,7 @@ PROC M_SUPERMENU
 		endif;
 	endif;
 	$ = NOTAPPL;
-}	
+	
 
 postproc	
 	if $ = 1 then	//Sync with interviewer
