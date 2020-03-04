@@ -2376,7 +2376,7 @@ Text=C82H1
   
 [Field]
 Name=C82H2
-Position=246,195,303,215
+Position=246,195,317,215
 Item=C82H2,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=5
@@ -2422,18 +2422,6 @@ Form=5
 [Text]
 Position=90,284,122,300
 Text=C82K
- 
-  
-[Field]
-Name=C90
-Position=207,452,320,472
-Item=C90,HHQ_DICT
-FieldLabelType=DictionaryName
-Form=5
-  
-[Text]
-Position=81,455,104,471
-Text=C90
  
   
 [Field]
@@ -2511,6 +2499,18 @@ Form=5
 [Text]
 Position=83,436,106,452
 Text=C89
+ 
+  
+[Field]
+Name=C90
+Position=207,452,320,472
+Item=C90,HHQ_DICT
+FieldLabelType=DictionaryName
+Form=5
+  
+[Text]
+Position=81,455,104,471
+Text=C90
  
   
 [Field]

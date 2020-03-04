@@ -90,6 +90,30 @@
     },
     {
       "path": ".\\Data\\Listing.csdb"
+    },
+    {
+      "path": ".\\Images\\Toilet_1.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_2.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_3.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_4.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_5.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_6.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_7.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_8.jpg"
     }
   ],
   "dictionaries": [
