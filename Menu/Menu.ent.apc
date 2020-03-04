@@ -6,6 +6,7 @@ PROC GLOBAL
 	string newEA = "2";			//To keep track if we moved to a new EA. 2 = No
 	array string tabletCount(4,2); //To keep track of number of households assigned to each interviewer/tablet
 									// first dimension: Id of tablet, second: number of HH assigned to tablet
+	numeric serialStart;			//Sets the start value of the serial number used for households (to be found in the users.csdb
 									
 	map HHmap;		//for showing the HHs on a map
 	String currentBaseMap;	//To keep track when toggling between satelite and default map
@@ -650,6 +651,7 @@ postproc
 			loggedIn = "S";					
 			skip to M_SUPERMENU;
 		else
+			serialStart = COUNTERSTART;
 			loggedIn = "I";					
 		endif;
 	else 
@@ -923,8 +925,8 @@ postproc
 
 			numeric currSerial = 0;
 			if newEA = "2" then
-				//Need to find biggest HH number until now
-								forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and 
+				//Not  NEW EA. Need to find biggest HH number until now
+				forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and 
 							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
 							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
@@ -932,6 +934,8 @@ postproc
 						currSerial = LL8;
 					endif;
 				endfor;
+			else	//New EA
+				currSerial = serialStart - 1;
 			endif;
 				
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
