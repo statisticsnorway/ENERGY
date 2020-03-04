@@ -103,10 +103,10 @@ preproc
 		locality = sysparm("LOCALITY");
 		village = sysparm("VILLAGE");
 		ea = sysparm("EA");
-		serial = "1";
-		LL8 = 1;
+		serial = sysparm("SERIAL");
+		LL8 = toNumber(serial);
 		urbRur = sysparm("URBANRURAL");
-		endif;
+	endif;
 
 	LL1 = toNumber(region);
 	LL2 = toNumber(district);

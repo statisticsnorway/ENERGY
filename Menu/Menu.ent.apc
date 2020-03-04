@@ -6,7 +6,7 @@ PROC GLOBAL
 	string newEA = "2";			//To keep track if we moved to a new EA. 2 = No
 	array string tabletCount(4,2); //To keep track of number of households assigned to each interviewer/tablet
 									// first dimension: Id of tablet, second: number of HH assigned to tablet
-	numeric serialStart;			//Sets the start value of the serial number used for households (to be found in the users.csdb
+	numeric serialStart = 0;			//Sets the start value of the serial number used for households (to be found in the users.csdb
 									
 	map HHmap;		//for showing the HHs on a map
 	String currentBaseMap;	//To keep track when toggling between satelite and default map
@@ -148,7 +148,13 @@ PROC GLOBAL
 		//Going to need number of interviewers. Assuming always 3 or 4
 		numeric numHHPerInt;	//Number of HH per interviewer
 		numeric intNum;			//Number of interviewers
-		if tabletCount(4,1) = "" then
+		if tabletCount(2,1) = "" then	//Only one interviewer
+			numHHPerInt = sampleSize;
+			intNum = 1;
+		elseif tabletCount(3,1) = "" then	//Two interviewers
+			numHHPerInt = sampleSize / 2;	
+			intNum = 2;
+		elseif tabletCount(4,1) = "" then	//3
 			numHHPerInt = sampleSize / 3;
 			intNum = 3;
 		else
@@ -680,6 +686,12 @@ postproc
 			//Not a new EA 
 			skip to M_EA;
 		else
+			//Need to set the serialstart if it hasn't been done
+			if serialStart = 0 then
+				LOGIN = M_LOGIN;
+				loadCase(USERS_DICT, LOGIN);
+				serialStart = COUNTERSTART;
+			endif;
 			skip to M_REGION;
 		endif;
 		
@@ -935,7 +947,7 @@ postproc
 					endif;
 				endfor;
 			else	//New EA
-				currSerial = serialStart - 1;
+				currSerial = serialStart;
 			endif;
 				
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
