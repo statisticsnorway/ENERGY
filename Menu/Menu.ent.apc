@@ -696,7 +696,13 @@ postproc
 		endif;
 		
 	elseif $ = 2 then	////HHQ questionnaire. 
-		skip to M_HOUSEHOLD
+		if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT) = NOTAPPL or visualvalue(M_SUBDISTRICT) = NOTAPPL
+				or visualValue(M_LOCALITY) = NOTAPPL or visualValue(M_VILLAGE) = NOTAPPL or visualvalue(M_EA) = NOTAPPL then
+			errmsg(tr(18));
+			skip to M_REGION;
+		else
+			skip to M_HOUSEHOLD;
+		endif;
 		
 	elseif $ = 4 then 		//Sync listingdata. 
 		numeric ok = syncSendListing();
@@ -952,7 +958,7 @@ postproc
 				
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
 		
-		elseif M_MENU = 3 then	//HHQ
+		elseif M_MENU = 2 then	//HHQ
 			//Select household first
 			skip to M_HOUSEHOLD;
 

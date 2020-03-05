@@ -1327,8 +1327,11 @@ preproc
 
 	if C2g <> 4 then
 		skip to C5_FORM;
+		
 	endif;
-	errmsg(177);
+	if !ispartial() then
+		errmsg(177);
+	endif;
 
 onfocus
 
@@ -1647,10 +1650,11 @@ preproc
 	if C2g = 3 or C2h = 3  then
 		skip to G_FORM;
 	endif;
-	If C2h = 1 or C2g = 1 then
+	If !isPartial() and (C2h = 1 or C2g = 1) then
 		errmsg(168);
 		skip to E3;
 	endif;
+	
 	if !ispartial() then
 		errmsg(169);
 	endif;
@@ -1754,12 +1758,14 @@ onfocus
 	if hhDemographics(6) < 1 or hhDemographics(6) in NOTAPPL, DEFAULT then //No adults in household
 		skip to I_FORM;
 	else
-		errmsg(tr(192));
-			  array aCode(20); //Max 20 adults in HH
-			  array String aLabel(20);
+		if !ispartial() then
+			errmsg(tr(192));
+		endif;
+		array aCode(20); //Max 20 adults in HH
+		array String aLabel(20);
 
-			  //Loop through household members to find adults
-			  numeric i = 1, j = 0;
+		//Loop through household members to find adults
+		numeric i = 1, j = 0;
 		while i <= 20 do
 			if AB1(i) = "" then
 				//finished.
@@ -2553,7 +2559,7 @@ preproc
 		skip to N_ACTIVITY_GIRLS;
 	endif;
 
-	if curocc() = 1 then
+	if !ispartial()  and curocc() = 1 then
 		errmsg(184);
 	endif;
 	$ = curocc();
@@ -2738,7 +2744,7 @@ preproc
 	if hhDemographics(3) < 1 then
 		skip to N_ACTIVITY_BOYS;
 	endif;
-	if curocc() = 1 then
+	if !ispartial() and curocc() = 1 then
 		errmsg(186);
 	endif;
 	$ = curocc();
@@ -2827,7 +2833,7 @@ preproc
 	if hhDemographics(4) < 1 then
 		skip to Q_FORM;
 	endif;
-	if curocc() = 1 then
+	if !ispartial() and curocc() = 1 then
 		errmsg(187);
 	endif;
 	$ = curocc();
@@ -3108,12 +3114,14 @@ onfocus
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
 		skip to AA_END_FORM;
 	else
-		errmsg(tr(147));
-			  array wCode(10); //Max 10 women in HH
-			  array String wLabel(10);
+		if !ispartial() then
+			errmsg(tr(147));
+		endif;
+		array wCode(10); //Max 10 women in HH
+		array String wLabel(10);
 
-			  //Loop through household memebers to find women
-			  numeric i = 1, j = 0;
+		//Loop through household memebers to find women
+		numeric i = 1, j = 0;
 		while i <= 20 do
 			if AB1(i) = "" then
 				//finished.

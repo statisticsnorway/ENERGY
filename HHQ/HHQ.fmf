@@ -4,7 +4,7 @@ Name=HHQ_FF
 Label=HHQ
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
-Type=OperatorControlled
+Type=SystemControlled
   
 [Dictionaries]
 File=.\HHQ.dcf

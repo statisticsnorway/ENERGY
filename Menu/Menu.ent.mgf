@@ -38,3 +38,5 @@ EN(15) This is only for supervisors
 EN(16) Server name: %s
 
 EN(17) Wrong password or user name. Please try again
+
+EN(18) Need to set the locality first

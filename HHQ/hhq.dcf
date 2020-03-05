@@ -108,6 +108,13 @@ Len=10
 Decimal=5
 DecimalChar=Yes
 
+[ValueSet]
+Label=North coordinate|A Sul coordenadas
+Name=AA7A_VS1
+Value=-90.00000:90.00000;values
+Value='          ';notappl
+Name=NOTAPPL,Special
+
 [Item]
 Label=East coordinate|A leste coordenadas
 Name=AA7B
@@ -115,6 +122,13 @@ Start=114
 Len=10
 Decimal=5
 DecimalChar=Yes
+
+[ValueSet]
+Label=East coordinate|A Sul coordenadas
+Name=AA7B_VS1
+Value=-90.00000:90.00000;values
+Value='          ';notappl
+Name=NOTAPPL,Special
 
 [Item]
 Label=Date of interview|Data da entrevista
