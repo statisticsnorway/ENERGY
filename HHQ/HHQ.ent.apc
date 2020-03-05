@@ -60,7 +60,7 @@
 	Array numeric childrenNos(20);
 	Array String childrenNames(20);
 
-	 array numeric powerSources(9);
+	array numeric powerSources(9);
 	array string powerSourcesLabels(9);
 
 
@@ -793,6 +793,7 @@ preproc
 	
 	numeric i = 1;
 	numeric code;
+	string text;
 	do while i < 9 ;
 		if powerSources(i) = 0 then
 			powerSources(i) = NOTAPPL;
@@ -831,7 +832,7 @@ preproc
 			inc(i);
 			code = 8;
 			powerSources(i) = 8;
-			 powerSourcesLabels(i) =  getlabel($,code);
+			powerSourcesLabels(i) =  getlabel($,code);
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(7),powerSourcesLabels(i));
 		endif;
 	endif;
@@ -870,8 +871,12 @@ preproc
 
 	// Only one source of electricity, hence no back up electricity
 	if i = 1 then
+		code = powerSources(i);
 		$ = powerSources(i);
 		c2h = 66;
+		if code in 3, 7, 8 then
+			solarDeviceType = powerSourcesLabels(i) ;
+		endif;
 		skip to c3;
 	endif;
 	
@@ -939,7 +944,7 @@ preproc
 
 PROC C7
 
-	if $ in 66,88 then
+	if $ in 2, 88 then
 		skip to C82_FORM;
 	endif
 
