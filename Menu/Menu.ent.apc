@@ -589,7 +589,7 @@ PROC GLOBAL
 
 	//Make sure that the pff file is not set to start at a HH when starting next time
 	function onstop()
-		writepff("Menu", "Menu", "", NOTAPPL, "N");
+		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);
 	end;	
 
@@ -598,14 +598,14 @@ PROC GLOBAL
 PROC MENU_FF
 postproc
 	//Writing the pff file to start up correctly next time
-	writepff("Menu", "Menu", "", NOTAPPL, "N");
+	writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 
 
 
 PROC MENU_QUEST_FORM
 
 postproc
-	writepff("Menu", "Menu", "", NOTAPPL, "N");	
+	writepff("Energy survey", "Menu", "", NOTAPPL, "N");	
 	
 
 
@@ -729,7 +729,7 @@ postproc
 }
 	else	//$ = 9. quit
 		//First need to reset pff file so that we don't start at M_HOUSEHOLD field when starting up again
-		writepff("Menu", "Menu", "", NOTAPPL, "N");
+		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);	
 	endif;
 		
@@ -765,10 +765,10 @@ postproc
 		$ = NOTAPPL;
 		reenter;
 	elseif $ = 4 then
-		writepff("Menu", "Menu", "", NOTAPPL, "S");
+		writepff("Energy survey", "Menu", "", NOTAPPL, "S");
 		writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
 	else	//$ = 9. Quit
-		writepff("Menu", "Menu", "", NOTAPPL, "N");
+		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);
 	endif;
 	
@@ -928,7 +928,7 @@ postproc
 	M_URBAN_RURAL = URBAN_RURAL;
 	
 	//Writing the pff file for the menu to avoid having to enter the area values again
-	writePff("Menu", "Menu", "", NOTAPPL, "I");
+	writePff("Energy survey", "Menu", "", NOTAPPL, "I");
 	
 	if loggedIn = "S" then	//supervisor. Back to Supermenu
 		reenter M_SUPERMENU;
@@ -1022,7 +1022,7 @@ preproc
 			vsetCodes(i) = SA8;
 			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11);	//Separating with semicolon to make it easy to find the name part
 			
-			writePff("Menu", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
+			writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 			HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
 			inc(i);
 		endif;
@@ -1042,7 +1042,7 @@ preproc
 postproc
 	//errmsg("%s, serial: %d", getLabel($, $), $);
 	if getOS() = 10 then
-		writePff("Menu", "Menu", "", $, "I"); //Need this to know where to start up again when returning from a HH questionnaire
+		writePff("Energy survey", "Menu", "", $, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 		writepff("Household Questionnaire", "HHQ", getLabel($, $), $, "I");
 	endif;
 	//launchQuest("Household Questionnaire", "HHQ");
