@@ -79,8 +79,13 @@ end;
 
 
 function onStop()
-	savepartial();
-	stop(1);
+	string currField = getSymbol();
+	if currField = "AB1" then
+		reenter AA10;
+	else
+		savepartial();	
+		stop(1);
+	endif;
 end;
 
 
@@ -90,66 +95,72 @@ PROC HHQ_FF
 PROC HHQ_QUEST
 
 preproc
-
-	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
-	if ispartial() then
-		numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC);
-
-		numeric i = 1;
-		numeric j = 0;
-		while i <= memNum do
-			memberNumbers(i) = i;
-			memberNames(i) = AB1(i);
-
-			//adding to relevant hhdemographic group
-			if AB4(i) = 2 then
-				if AB5(i) > 14 then	//woman
-					inc(hhDemographics(1));
-					inc(hhDemographics(6));
-				elseif AB5(i) <=4 then	//little child
-					inc(hhDemographics(5));
-				else	//girl
-					inc(hhDemographics(2));
-				endif
-			else
-				if AB5(i) > 14 then	//man
-					inc(hhDemographics(3));
-					inc(hhDemographics(6));
-				elseif AB5(i) <= 4 then	//little child
-					inc(hhDemographics(5));
-				else		//boy
-					inc(hhDemographics(4));
-				endif;
-			endif;
-			if AB5(i) >= 0 and AB5(i) < 16 then
-				inc(j);
-				inc(hhDemographics(7));
-				childrenNos(j) = j;
-				childrenNames(j) = AB1(i);
-			endif;
-
-			inc(i);
-		enddo;
-
-		memberNumbers(i) = NOTAPPL;
-
-		//Need to find the name of the current respondent if we're still registering hh members
-		string currField = getSymbol(savepartial);
-		if currField[1:2] = "AB" or currField[1:2] = "AC"
-			or currField in "A2","A3","A4","A5","A6","A7","A8" then
-			numeric currNo;
-			if length(currField) = 6 then
-				currNo = tonumber(currField[5:1]);
-			else
-				currNo = tonumber(currField[4:1]);
-			endif;
-			currMember = AB1(currNo);
-		endif;
-	endif;
-
 	string language = sysparm(language);
 	setLanguage(language);
 
+	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
+	if ispartial() then
+		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
+		if getSymbol(savePartial) = "AA13" then
+			advance to AA15;
+		else
+		
+			numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC);
+
+			numeric i = 1;
+			numeric j = 0;
+			while i <= memNum do
+				memberNumbers(i) = i;
+				memberNames(i) = AB1(i);
+
+				//adding to relevant hhdemographic group
+				if AB4(i) = 2 then
+					if AB5(i) > 14 then	//woman
+						inc(hhDemographics(1));
+						inc(hhDemographics(6));
+					elseif AB5(i) <=4 then	//little child
+						inc(hhDemographics(5));
+					else	//girl
+						inc(hhDemographics(2));
+					endif
+				else
+					if AB5(i) > 14 then	//man
+						inc(hhDemographics(3));
+						inc(hhDemographics(6));
+					elseif AB5(i) <= 4 then	//little child
+						inc(hhDemographics(5));
+					else		//boy
+						inc(hhDemographics(4));
+					endif;
+				endif;
+				if AB5(i) >= 0 and AB5(i) < 16 then
+					inc(j);
+					inc(hhDemographics(7));
+					childrenNos(j) = j;
+					childrenNames(j) = AB1(i);
+				endif;
+
+				inc(i);
+			enddo;
+	
+			memberNumbers(i) = NOTAPPL;
+
+			//Need to find the name of the current respondent if we're still registering hh members
+			string currField = getSymbol(savepartial);
+			if currField[1:2] = "AB" or currField[1:2] = "AC"
+				or currField in "A2","A3","A4","A5","A6","A7","A8" then
+				numeric currNo;
+				numeric curr = curocc();
+				numeric posX = pos("(", currField);
+				numeric posY = pos(")", currField);
+				currNo = toNumber(currField[posX+1:posY-posX]);
+				
+				currMember = AB1(currNo);
+			endif;
+			advance to getsymbol(savePartial);
+		endif;
+	endif;
+	
 postproc
 
 	stop(1);
@@ -243,15 +254,25 @@ preproc
 	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
 	SLOGIN = AALOGIN;
 	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
-	$ = SA10;
+		$ = SA10;
 
 	//Might as well set the other fields from the sample file too..
 	ADDRESS_LOCATION = SA11;
 	AA7A = SA7A;
 	AA7B = SA7B;
-	skip to AA9;
+	noInput;
+	//skip to AA9;
+	
 
-
+PROC ADDRESS_LOCATION
+preproc
+	noinput;
+PROC AA7A
+preproc
+	noinput;
+PROC AA7B
+preproc
+	noinput;
 PROC AA9
 
 preproc
@@ -291,9 +312,10 @@ PROC AA10A
 PROC AA13
 
 postproc
-
-	savepartial();
-	stop(1);
+	if !ispartial() then
+		savepartial();
+		stop(1);
+	endif;
 
 
 PROC AA15
@@ -603,8 +625,9 @@ PROC B_FORM
 PROC B2
 
 preproc
-
-	errmsg(179);
+	if !ispartial() then
+		errmsg(179);
+	endif;
 
 postproc
 
@@ -637,9 +660,10 @@ PROC B5
 PROC B17
 
 preproc
-
-	errmsg(180);
-
+	if !ispartial() then
+		errmsg(180);
+	endif;
+	
 postproc
 
 	if $ = 2 then
@@ -666,8 +690,9 @@ PROC B23
 PROC C1
 
 preproc
-
-	errmsg(181);
+	if !ispartial() then
+		errmsg(181);
+	endif;
 
 onfocus
 
@@ -761,11 +786,11 @@ postproc
 
 PROC C2G
 
-onfocus
-
+preproc
 	if c2yes = 0 then
 		skip to C3;
 	endif;
+	
 	numeric i = 1;
 	numeric code;
 	do while i < 9 ;
@@ -774,7 +799,9 @@ onfocus
 		endif;
 		inc(i);
 	enddo;
+
 	i = 0;
+
 	if c2a = 1 then
 		inc(i);
 		code = 1;
@@ -782,6 +809,7 @@ onfocus
 		powerSourcesLabels(i) =  getlabel($,code);
 		//	  errmsg("%d, %d, %d, %s",i,c2g,powerSources(i),powerSourcesLabels(i));
 	endif;
+
 	if c2b = 1 then
 		if pos("1", c2b1) > 0 then
 			inc(i);
@@ -790,6 +818,7 @@ onfocus
 			powerSourcesLabels(i) =  getlabel($,code);
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
+
 		if pos("2", c2b1) > 0 then
 			inc(i);
 			code = 7;
@@ -797,6 +826,7 @@ onfocus
 			powerSourcesLabels(i) =  getlabel($,code);
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
+
 		if pos("3", c2b1) > 0 then
 			inc(i);
 			code = 8;
@@ -805,6 +835,7 @@ onfocus
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(7),powerSourcesLabels(i));
 		endif;
 	endif;
+
 	if c2c = 1 then
 		inc(i);
 		code = 4;
@@ -812,6 +843,7 @@ onfocus
 		powerSourcesLabels(i) =  getlabel($,code);
 		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif;
+
 	if c2d = 1 then
 		inc(i);
 		code = 5;
@@ -819,6 +851,7 @@ onfocus
 		powerSourcesLabels(i) =  getlabel($,code);
 		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif;
+
 	if c2e = 1 then
 		inc(i);
 		code = 6;
@@ -826,6 +859,7 @@ onfocus
 		powerSourcesLabels(i) =  getlabel($,code);
 		//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 	endif;
+
 	if c2f = 1 then
 		inc(i);
 		code = 9;
@@ -840,16 +874,11 @@ onfocus
 		c2h = 66;
 		skip to c3;
 	endif;
-	i = 1;
+	
+	//Final value in the powerSources array should be notappl
+	powerSources(i+1) = NOTAPPL;
+	setValueset($, powerSources, powerSourcesLabels);
 
-	//	do while i < 9 ;
-	//	 if powerSources(i) = 0 then
-	//	  powerSources(i) = NOTAPPL;
-	// 	 endif;
-	//    inc(i);
-	//	enddo;
-		setValueset($, powerSources, powerSourcesLabels);
-		$ = NOTAPPL;
 
 postproc
 
@@ -888,7 +917,7 @@ preproc
 
 	setValueset($, powerSources, powerSourcesLabels);
 
-	$ = NOTAPPL;
+	
 
 postproc
 
@@ -896,6 +925,7 @@ postproc
 		errmsg(151);
 		reenter;
 	endif;
+
 
 
 PROC C6
@@ -924,8 +954,9 @@ postproc
 PROC C4
 
 preproc
-
-	errmsg(174);
+	if !ispartial() then
+		errmsg(174);
+	endif;
 
 postproc
 
@@ -1405,7 +1436,9 @@ preproc
 	if C2g <> 6 then
 		skip to C6_FORM;
 	endif;
-	errmsg(178);
+	if !ispartial() then
+		errmsg(178);
+	endif;
 
 
 
@@ -1525,8 +1558,9 @@ PROC C146B
 PROC C149
 
 preproc
-
-	errmsg(182);
+	if !ispartial() then
+		errmsg(182);
+	endif;
 
 postproc
 
@@ -1567,7 +1601,9 @@ preproc
 	If (c2g = 1 or c2h = 1) then
 		skip to E_FORM;
 	endif;
-	errmsg(189);
+	if !ispartial() then
+		errmsg(189);
+	endif;
 
 onfocus
 
@@ -1610,7 +1646,9 @@ preproc
 		errmsg(168);
 		skip to E3;
 	endif;
-	errmsg(169);
+	if !ispartial() then
+		errmsg(169);
+	endif;
 	skip to E3;
 
 
@@ -1650,7 +1688,9 @@ preproc
 	if C2g <> 9 then
 		skip to F_FORM;
 	endif;
-	errmsg(175);
+	if !ispartial() then
+		errmsg(175);
+	endif;
 
 
 PROC G2
@@ -2108,7 +2148,9 @@ preproc
 	if not(I18a in 2,3 or I18b in 2,3) then
 		skip to i37;
 	endif;
-	errmsg(171);
+	if !ispartial() then
+		errmsg(171);
+	endif;
 
 postproc
 
@@ -2176,8 +2218,9 @@ PROC I43
 PROC O_FORM
 
 preproc
-
-	errmsg(183);
+	if !ispartial() then
+		errmsg(183);
+	endif;
 
 
 PROC O1_1
@@ -2218,8 +2261,9 @@ preproc
 PROC O7
 
 preproc
-
-	errmsg(193,chosenChildName);
+	if !ispartial() then
+		errmsg(193,chosenChildName);
+	endif;
 
 
 PROC K_FORM
@@ -2229,7 +2273,9 @@ preproc
 	if not(I2i in 1,2,7) then
 		skip to J_FORM;
 	endif;
-	errmsg(190);
+	if !ispartial() then
+		errmsg(190);
+	endif;
 
 
 PROC K2
@@ -2489,8 +2535,9 @@ PROC M2
 PROC N_FORM
 
 preproc
-
-	errmsg(172);
+	if !ispartial() then
+		errmsg(172);
+	endif;
 
 
 PROC N_ACTIVITY_WOMEN
@@ -2866,8 +2913,9 @@ PROC N_S_MM
 PROC Q_FORM
 
 preproc
-
-	errmsg(188);
+	if !ispartial() then
+		errmsg(188);
+	endif;
 
 
 PROC Q1_1
@@ -2903,8 +2951,9 @@ preproc
 PROC S_FORM
 
 preproc
-
-	errmsg(191);
+	if !ispartial() then
+		errmsg(191);
+	endif;
 
 
 PROC S1_1
