@@ -193,6 +193,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\f0\fs30 %currMember%\par
+EN=\par
 EN=T\f1\fs24 hank you for allowing us to collect information on the use of energy in this household. The information from you and other households will provide important information for the energy planning in the country\cf2 . \par
 EN=\cf3 Accept of interview: \par
 EN=(Read out explanatory text about the survey (see manual).  Then ask if the interview is accepted and can continue.)\par
@@ -201,6 +202,7 @@ PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq
 PT={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 PT=\pard\cf1\f0\fs30 %currMember%\par
+PT=\par
 PT=Obrigado por nos permitir coletar informa\'e7\'f5es sobre o uso de energia neste agregado familiar. As suas informa\'e7\'f5es e de outras fam\'edlias, fornecer\'e3o informa\'e7\'f5es importantes para o planejamento energ\'e9tico no pa\'eds.\par
 PT=\cf2\f1\fs20\par
 PT=\cf3\f2\fs24 Ent\'e3o \'e9 hora de come\'e7ar a entrevista\cf2\f3\fs20\par
@@ -254,10 +256,11 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.AA12
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 If enumerator should come back later, make appointment /contact details\cf2\f1\fs20\par
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs30 Enter time for appoinment\cf2\f1\fs24\par
+EN=If enumerator should come back later, make appointment /contact details\cf3\f2\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -272,10 +275,11 @@ SW=}
 
 [QUESTION]
 Field=HHQ_DICT.AA13
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green128\blue0;}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Times New Roman;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 If enumerator should come back later, make appointment /contact details\cf2\f1\fs20\par
+EN=\pard\cf1\f0\fs30 Who do I ask for when I return for the interview?\cf2\f1\fs24\par
+EN=If enumerator should come back later, make appointment /contact details\cf3\f2\fs20\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green128\blue0;}
