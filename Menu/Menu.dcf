@@ -98,7 +98,7 @@ Name=M_MENU_INT
 Value=1;Listing form|Formulário de listagem
 Value=2;Household questionnaire|Questionário do Agregado Familiar
 Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central
-Value=5;Sync with SV: Recieve sample file
+Value=5;Sync with SV: Receive sample file
 Value=9;Quit|Sair
 
 [Item]
