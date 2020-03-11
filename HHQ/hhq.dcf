@@ -108,13 +108,6 @@ Len=10
 Decimal=5
 DecimalChar=Yes
 
-[ValueSet]
-Label=North coordinate|A Sul coordenadas
-Name=AA7A_VS1
-Value=-90,00000:90,00000;values
-Value='          ';notappl
-Name=NOTAPPL,Special
-
 [Item]
 Label=East coordinate|A leste coordenadas
 Name=AA7B
@@ -122,13 +115,6 @@ Start=114
 Len=10
 Decimal=5
 DecimalChar=Yes
-
-[ValueSet]
-Label=East coordinate|A Sul coordenadas
-Name=AA7B_VS1
-Value=-90,00000:90,00000;values
-Value='          ';notappl
-Name=NOTAPPL,Special
 
 [Item]
 Label=Date of interview|Data da entrevista
@@ -645,7 +631,7 @@ Value=3;Multi-storied building with one household|Edifício de vários andares c
 Value=4;Multi-storied building with multiple households|Edifício de vários andares com mais famílias|Jengo la ghorofa linalotumiwa na kaya zaidi ya moja
 Value=5;Group of enclosed dwellings: multiple households|Grupo de habitações fechado: várias famílias|Makazi ya kaya nyingi pamoja
 Value=6;Group of enclosed dwellings occupied by a single household|Grupo de habitações fechados ocupados por uma única casa|Makazi mengi yanayokaliwa na kaya moja
-Value=7;Other, specify|Outro especificar|Nyingine, taja
+Value=7;Other|Outro|Nyingine
 
 [Item]
 Label=Number of households share building|Número de famílias que compartilham
@@ -1202,6 +1188,7 @@ Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|EDM
 Value=2;By the household|pela casa|Kaya
 Value=3;By others|por outros|Wengine
 Value=4;Was connected when they moved in|Não conectado de alguma forma|Haijaunganishwa
+Value=8;Don't know|Não sabe|Hajui
 
 [Item]
 Label=Years grid connection|Há quantos anos você teve conexão de rede?
@@ -1431,7 +1418,7 @@ Value=8;Kerosene/paraffin lamp|Lâmpada de querosene|Taa ya Mafuta
 Value=9;Fuel-based lighting|Iluminação baseada em combustíveis|Kibatari
 Value=10;Dry-cell (non-rchargeable) battery/ torch/ flashlight|Pilha seca (não-recarregaveis) bateria / tocha / lanterna|Tochi ya betri (isiyochajika)
 Value=11;Candle|Vela|Mshumaa
-Value=55;Other, specify|Outro especificar|Nyinginezo
+Value=55;Other|Outro|Nyinginezo
 Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 
 [Item]
@@ -1449,7 +1436,7 @@ Value=4;Solar lantern|Lanterna Solar|Taa ya umeme jua
 Value=5;Solar multi-light product|Produto multi-luz solar|Kifaa cha umeme jua chenye matumizi mbalimbali (mf. kuchaji simu, kuwasha taa n.k)
 Value=6;Solar home system|Sistema de home Solar|Mfumo wa umeme jua wa nyumbani
 Value=7;Pico-hydro|Pico-hidro|Mtambo mdogo wa maji
-Value=55;Other, specify|Outro especificar|Nyinginezo
+Value=55;Other|Outro|Nyinginezo
 Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 
 [Item]
@@ -2219,7 +2206,7 @@ Name=C111_VS1
 Value=1;Carelessness or error|Descuido ou erro|Uzembe au kukosa umakini
 Value=2;Lack of knowledge about the use of the appliance|A falta de conhecimento sobre o uso do aparelho|Ukosefu wa maarifa kuhusu matumizi ya kifaa cha umeme
 Value=3;Faulty wiring/connection|Instalação defeituosa / conexão|Kasoro ya mtandao wa umeme wa nyumba/kuungainishwa
-Value=55;Other, specify|De outros, especificar|Nyingine, taja
+Value=55;Other|De outrosr|Nyingine
 
 [Record]
 Label=C Externally recharged battery|C Externamente bateria recarregada

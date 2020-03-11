@@ -59,6 +59,8 @@
 											// 7 = children 0-15 years
 	Array numeric childrenNos(20);
 	Array String childrenNames(20);
+	numeric childCount = 0; // child counter
+
 
 	array numeric powerSources(9);
 	array string powerSourcesLabels(9);
@@ -137,7 +139,7 @@ preproc
 				if AB5(i) >= 0 and AB5(i) < 16 then
 					inc(j);
 					inc(hhDemographics(7));
-					childrenNos(j) = j;
+					childrenNos(j) = i;
 					childrenNames(j) = AB1(i);
 				endif;
 
@@ -161,7 +163,7 @@ preproc
 			advance to getsymbol(savePartial);
 		endif;
 	endif;
-	
+
 postproc
 
 	stop(1);
@@ -423,8 +425,6 @@ PROC AB4
 
 
 PROC AB5
-preproc 
-	numeric j = 0;
 postproc	
 	//adding to relevant hhdemographic group
 	if AB4 = 2 then
@@ -448,11 +448,11 @@ postproc
 	endif;
 
 	if $ >= 0 and $ < 16 then
-		inc(j);
+		inc(childCount);
 		inc(hhDemographics(7));
-		childrenNos(j) = j;
-		childrenNames(j) = AB1;
-		errmsg("childrenNos: %d, childrenNames: %S",childrenNos(j),childrenNames(j))
+		childrenNos(childCount) = curocc($);
+		childrenNames(childCount) = AB1;
+//		errmsg("childrenNos: %d, childrenNames: %S",childrenNos(childCount),childrenNames(childCount))
 	endif;
 
 	
@@ -634,7 +634,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
-	skip to O_FORM;
+//	skip to O_FORM;
 
 
 PROC B2
@@ -961,18 +961,21 @@ preproc
 	if !ispartial() then
 		errmsg(174);
 	endif;
+onfocus;
+	string electricityCompany;
 
-postproc
-
-	if $ = 88 then
-		skip to C22
+	if getlanguage() = "EN" then
+		electricityCompany = "Tanzania: TANESCO/REA, Mozambique: EDM";
+	elseif getlanguage() = "SW" then 
+		electricityCompany = "TANESCO/REA";
+	elseif getlanguage() = "PT" then
+		electricityCompany = "EDM";
 	endif;
-
-
+//	errmsg("Electricity: %s", electricityCompany);
 PROC C17
 
-	if $ > B2 then
-		errmsg(tr(123),B2);
+	if $ > B1 then
+		errmsg(tr(123),B1);
 		reenter;
 	endif;
 
@@ -1709,7 +1712,7 @@ PROC G1
 	endif;
 
 
-PROC G2B
+PROC G2A
 
 onfocus
 
@@ -2245,6 +2248,11 @@ PROC O2
 	// endif;
 
 
+PROC O6
+preproc
+	if O2 = 2 and O3 = 2 and O4 = 2 and O5 = 2 then
+		skip to O7;
+	endif;	
 PROC O7
 
 preproc
@@ -2254,9 +2262,9 @@ preproc
 		numeric child;
 		child = random(1, hhDemographics(7));
 		setValueset($, childrenNos, childrenNames);
-		chosenChildName = getlabel($,child);
-			errmsg("Child number %d, Child name %s",child,chosenChildName);
-			$ = child;
+		chosenChildName = getlabel($,childrenNos(child));
+//			errmsg("Chosen child: %d, Child number %d, Child name %s, hhDemographics(7): %d",child,childrenNos(child),chosenChildName,hhDemographics(7));
+			$ = childrenNos(child);
 			noinput;
 			skip to O8;
 	else
@@ -2272,6 +2280,11 @@ preproc
 	endif;
 
 
+PROC O12
+preproc
+	if O8 = 2 and O9 = 2 and O10 = 2 and O11 = 2 then
+		skip to K_FORM;
+	endif;	
 PROC K_FORM
 
 preproc
@@ -3000,15 +3013,15 @@ postproc
 
 
 PROC U2B
+postproc
+	skip to next;
 
+
+
+PROC U2C
 onfocus
 
 	setValueset($, memberNumbers, memberNames);
-
-
-postproc
-
-	skip to next;
 
 
 PROC U3
@@ -3017,7 +3030,7 @@ onfocus
 
 	$ = curocc();
 	businessName = getLabel($, curocc());
-	skip to U3B;
+	skip to U3A;
 
 
 PROC U3A
@@ -3030,16 +3043,14 @@ postproc
 
 
 PROC U3B
-
+postproc
+	skip to next;
+PROC U3C
 onfocus
 
 	setValueset($, memberNumbers, memberNames);
 
 
-
-postproc
-
-	skip to next;
 
 
 PROC T1
