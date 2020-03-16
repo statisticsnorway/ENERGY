@@ -3084,7 +3084,7 @@ Field=HHQ_DICT.C72
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Does this \cf2 %solarDeviceType%\cf1 have a warranty ?\par
+EN=\pard\cf1\fs24 Does this \cf2 %solarDeviceType% \cf1 have a warranty ?\par
 EN=\par
 EN=\cf3 I.e.to exchange or repair if the device does not work.\cf1\par
 EN=}
@@ -3806,8 +3806,7 @@ SW=\cf2 [JIBU ZAIDI YA MOJA]\cf1\par
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.F11A
-Occurrences=1:6
+Field=HHQ_DICT.F12
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -3830,8 +3829,7 @@ SW=\cf2\lang1044 Lita za mafuta/Idadi ya mishumaa\cf1\lang1033\par
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.F11B
-Occurrences=1:6
+Field=HHQ_DICT.F13
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -3853,8 +3851,7 @@ SW=\cf2\lang1044 SIKU\cf1\lang1033\par
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.F11C
-Occurrences=1:6
+Field=HHQ_DICT.F14
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -3873,8 +3870,7 @@ SW=\pard\cf1\fs24\lang1033 Je, unalipa jumla ya TZS ngapi kwa kiasi cha \lang104
 SW=}
 
 [QUESTION]
-Field=HHQ_DICT.F11D
-Occurrences=1:6
+Field=HHQ_DICT.F15
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Times New Roman;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
@@ -6099,18 +6095,21 @@ EN=}
 Field=HHQ_DICT.U2D
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Where and how was this sale done?\par
+EN=\cf2 (%PRODUCTName%\cf1 )\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.U2E
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Was any electricity used for light or machinery for this processing / production?\par
+EN=\cf2 (%PRODUCTName%\cf1 )\par
+EN=\par
 EN=}
 
 [QUESTION]
@@ -6120,6 +6119,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Did this person or anybody else in the household do this type of activity 5 years ago?\par
+EN=\cf2 (%PRODUCTName%\cf1 )\par
 EN=\cf2 (Describe events 5 yrs ago \f1\endash\f0  DROUGHT, FLOOD, PRESIDENT ETC.)\par
 EN=}
 
@@ -6127,9 +6127,22 @@ EN=}
 Field=HHQ_DICT.U2G
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Did this activity make more money 5 years ago, less money or the same?\par
+EN=\cf2 (%PRODUCTName%\cf1 )\par
+EN=\par
+EN=}
+
+[QUESTION]
+Field=HHQ_DICT.U2H
+Occurrences=1:6
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Was any electricity used for this produse/process 5 years ago?\par
+EN=\cf2\f1 (%PRODUCTName%\cf1 )\par
+EN=\f0\par
 EN=}
 
 [QUESTION]
@@ -6173,18 +6186,20 @@ EN=}
 Field=HHQ_DICT.U3D
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Where is this business/service operated?\par
+EN=\cf2 (%businessName%\cf1 )\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.U3E
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Was any electricity used for light or machinery for this processing / production?\par
+EN=\cf2 (%businessName%\cf1 )\par
 EN=}
 
 [QUESTION]
@@ -6194,6 +6209,7 @@ EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fchars
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Did this person or anybody else in the household do this type of activity 5 years ago?\par
+EN=\cf2 (%businessName%\cf1 )\par
 EN=\cf2 (Describe events 5 years ago \f1\endash\f0  DROUGHT, FLOOD, PRESIDENT ETC.)\par
 EN=}
 
@@ -6201,18 +6217,20 @@ EN=}
 Field=HHQ_DICT.U3G
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Was the profit from this business 5 years ago, smaller, the same or larger than now?\par
+EN=\cf2 (%businessName%\cf1 )\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.U3H
 Occurrences=1:6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24 Was any electricity used for this processing/ production 5 years ago?\par
+EN=\cf2 (%businessName%\cf1 )\par
 EN=}
 
 [QUESTION]

@@ -336,12 +336,10 @@ Name=FORM006
 Label=F- Kerosene/fuel-based/candle lighting
 QuestionTextHeight=79
 Level=1
-Size=372,704
+Size=291,551
   
 Item=F1
 Item=F2
-Item=F11
-Item=F11_MAIN_SOURCE_FUEL000
 Item=F3
 Item=F4
 Item=F5
@@ -350,6 +348,11 @@ Item=F7
 Item=F8
 Item=F9
 Item=F10
+Item=F11
+Item=F12
+Item=F13
+Item=F14
+Item=F15
   
 [EndForm]
   
@@ -554,7 +557,7 @@ Name=FORM028
 Label=U - Livelihood means
 QuestionTextHeight=79
 Level=1
-Size=839,715
+Size=839,655
   
 Item=U1
 Item=U4
@@ -3742,139 +3745,64 @@ Text=F10
   
 [Field]
 Name=F11
-Position=87,419,186,439
+Position=215,345,230,365
 Item=F11,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=CheckBox
+DataCaptureType=RadioButton
 Form=12
   
 [Text]
-Position=50,422,72,438
+Position=34,348,56,364
 Text=F11
  
   
-[Grid]
-Name=F11_MAIN_SOURCE_FUEL000
-Label=F11 Main source of fuel
+[Field]
+Name=F12
+Position=180,388,251,408
+Item=F12,HHQ_DICT
+FieldLabelType=DictionaryName
 Form=12
-Required=No
-Type=Record
-TypeName=F11_MAIN_SOURCE_FUEL
-Max=6
-DisplaySize=37,480,347,679
-Orientation=Horizontal
-FieldRowHeight=0
-HeadingRowHeight=0
-FreeMovement=No
- 
-[Text]
-Position=0,4,15,28
-Text=1
- 
   
 [Text]
-Position=0,4,15,28
-Text=2
+Position=26,391,48,407
+Text=F12
  
   
-[Text]
-Position=0,4,15,28
-Text=3
- 
-  
-[Text]
-Position=0,4,15,28
-Text=4
- 
-  
-[Text]
-Position=0,4,15,28
-Text=5
- 
-  
-[Text]
-Position=0,4,15,28
-Text=6
- 
-  
-[Column]
-Width=10
-[EndColumn]
-  
-[Column]
-Width=79
-  
-[HeaderText]
-Position=41,0,79,24
-Text=F11A
- 
 [Field]
-Name=F11A
-Position=0,0,71,20
-Item=F11A,HHQ_DICT
+Name=F13
+Position=197,429,240,449
+Item=F13,HHQ_DICT
 FieldLabelType=DictionaryName
+Form=12
   
 [Text]
-Text=F11A
+Position=34,432,56,448
+Text=F13
  
-[EndColumn]
   
-[Column]
-Width=51
-  
-[HeaderText]
-Position=13,0,51,24
-Text=F11B
- 
 [Field]
-Name=F11B
-Position=0,0,43,20
-Item=F11B,HHQ_DICT
+Name=F14
+Position=153,467,266,487
+Item=F14,HHQ_DICT
 FieldLabelType=DictionaryName
+Form=12
   
 [Text]
-Text=F11B
+Position=35,470,57,486
+Text=F14
  
-[EndColumn]
   
-[Column]
-Width=121
-  
-[HeaderText]
-Position=83,0,121,24
-Text=F11C
- 
 [Field]
-Name=F11C
-Position=0,0,113,20
-Item=F11C,HHQ_DICT
-FieldLabelType=DictionaryName
-  
-[Text]
-Text=F11C
- 
-[EndColumn]
-  
-[Column]
-Width=38
-  
-[HeaderText]
-Position=0,0,38,24
-Text=F11D
- 
-[Field]
-Name=F11D
-Position=0,0,15,20
-Item=F11D,HHQ_DICT
+Name=F15
+Position=218,506,233,526
+Item=F15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
+Form=12
   
 [Text]
-Text=F11D
- 
-[EndColumn]
-  
-[EndGrid]
+Position=37,509,59,525
+Text=F15
  
 [EndGroup]
   
@@ -6451,7 +6379,7 @@ Required=No
 Type=Item
 TypeName=PRODUCT
 Max=6
-DisplaySize=102,85,409,277
+DisplaySize=102,85,442,277
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -6646,6 +6574,25 @@ DataCaptureType=RadioButton
 [Text]
 Position=0,0,34,20
 Text=U2G
+ 
+[EndColumn]
+  
+[Column]
+Width=33
+  
+[HeaderText]
+Position=0,0,33,24
+Text=U2H
+ 
+[Field]
+Name=U2H
+Position=10,0,25,20
+Item=U2H,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+  
+[Text]
+Text=U2H
  
 [EndColumn]
   

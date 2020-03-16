@@ -634,7 +634,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
-//	skip to O_FORM;
+//	skip to F_FORM;
 
 
 PROC B2
@@ -1336,7 +1336,7 @@ preproc
 
 onfocus
 
-	if C10 <> 4 then
+	if $ = 2 then
 		skip to C91;
 	endif;
 
@@ -1856,32 +1856,16 @@ preproc
 	endif;
 
 postproc
-
-	if pos("7", $ ) > 0  and length(strip($)) > 1 then
-		errmsg(tr(118));
-		reenter;
-	endif;
-	if pos("7", $ ) > 0 then
+	if $ = 7 then
 		skip to I_FORM;
 	endif;
+    fuelType = getValueLabel($);
 
 
 
 
 
-PROC F11A
-
-onfocus
-
-	string current = edit("Z", curocc());
-
-	//The skip for "7 none" has been done in F5
-	if  pos(current, F11) > 0 then
-		fuelType = getLabel(F11, current);
-	else
-		//Not chosen
-		skip to next;
-	endif;
+PROC F12
 
 
 

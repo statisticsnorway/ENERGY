@@ -2620,8 +2620,8 @@ Len=2
 [Record]
 Label=F_HH Kerosene/Fuel-based/Candle lighting|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
-RecordTypeValue='f'
-RecordLen=127
+RecordTypeValue='F'
+RecordLen=137
 
 [Item]
 Label=Household member|membro do agregado familiar
@@ -2745,55 +2745,46 @@ Value=2;No|Nao|Hapana
 Label=Which fuel use|Qual usa como combustível?
 Name=F11
 Start=121
-Len=7
-DataType=Alpha
+Len=1
 
 [ValueSet]
 Label=Which fuel use|Qual usa como combustível?
 Name=F11_VS1
-Value='2      ';Kerosene/Paraffin|Querosene|Mafuta ya taa
-Value='3      ';Diesel||Diseli
-Value='4      ';Gasoline|Gasolina|Petroli
-Value='5      ';Biogas|Biogás|Bayogesi
-Value='6      ';Paraffin|Parafina
-Value='7      ';None|Nenhum|Hakuna
-
-[Record]
-Label=F11 Main source of fuel|fonte F5 principal de combustível
-Name=F11_MAIN_SOURCE_FUEL
-RecordTypeValue='F'
-Required=No
-MaxRecords=6
-RecordLen=118
+Value=2;Kerosene/Paraffin|Querosene|Mafuta ya taa
+Value=3;Diesel||Diseli
+Value=4;Gasoline|Gasolina|Petroli
+Value=5;Biogas|Biogás|Bayogesi
+Value=6;Paraffin|Parafina
+Value=7;None|Nenhum|Hakuna
 
 [Item]
 Label=Total quantity of purchase at a typical time?|quantidade total de compra em um momento típico?
-Name=F11A
-Start=103
+Name=F12
+Start=122
 Len=4
 Decimal=1
 
 [Item]
 Label=How long does this quantity typically last?|Quanto tempo esta quantidade geralmente duram?
-Name=F11B
-Start=107
+Name=F13
+Start=126
 Len=3
 
 [Item]
 Label=How much do you pay for the typical purchase?|Quanto você paga para a compra típico?
-Name=F11C
-Start=110
+Name=F14
+Start=129
 Len=8
 
 [Item]
 Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
-Name=F11D
-Start=118
+Name=F15
+Start=137
 Len=1
 
 [ValueSet]
 Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
-Name=F11D_VS1
+Name=F15_VS1
 Value=0;Don't use it for lighting|Não usá-lo para a iluminação|Haitumiki kwa mwanga
 Value=1;All
 Value=2;More than half
@@ -4433,7 +4424,7 @@ Label=U Livelihood means
 Name=U_LIVELIHOOD_MEANS
 RecordTypeValue='U'
 Required=No
-RecordLen=226
+RecordLen=232
 
 [Item]
 Label=Respondent number
@@ -4445,7 +4436,7 @@ Len=2
 Label=Product
 Name=PRODUCT
 Start=105
-Len=9
+Len=10
 DataType=Alpha
 Occurrences=6
 
@@ -4551,9 +4542,21 @@ Value=2;Less money 5 years ago
 Value=3;Same 5 years ago
 
 [Item]
+Label=Was any electricity used for this produse/process 5 years ago?
+Name=U2H
+Start=114
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=U2H_VS1
+Link=133482376
+
+[Item]
 Label=Business
 Name=BUSINESS
-Start=159
+Start=165
 Len=10
 DataType=Alpha
 Occurrences=6
@@ -4561,7 +4564,7 @@ Occurrences=6
 [Item]
 Label=Business no
 Name=U3
-Start=159
+Start=165
 Len=1
 ItemType=SubItem
 
@@ -4578,7 +4581,7 @@ Value=6;own any other non-agricultural business, even if it is a small business 
 [Item]
 Label=Does anybody in the household  [BUSINESS] today?
 Name=U3A
-Start=160
+Start=166
 Len=1
 ItemType=SubItem
 
@@ -4590,7 +4593,7 @@ Link=133482376
 [Item]
 Label=Did anybody  [BUSINESS] in the household 5  years ago?
 Name=U3B
-Start=161
+Start=167
 Len=1
 ItemType=SubItem
 
@@ -4602,14 +4605,14 @@ Link=133482376
 [Item]
 Label=You said that your household [BUSINESS]. Who is the manager for this business/service?
 Name=U3C
-Start=162
+Start=168
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Where is this business/service operated?
 Name=U3D
-Start=164
+Start=170
 Len=1
 ItemType=SubItem
 
@@ -4628,7 +4631,7 @@ Value=8;Mobile location
 [Item]
 Label=Was any electricity used for light or machinery for this processing / production?
 Name=U3E
-Start=165
+Start=171
 Len=1
 ItemType=SubItem
 
@@ -4640,7 +4643,7 @@ Link=133482376
 [Item]
 Label=Did this person or anybody else in the household do this type of activity 5 years ago?
 Name=U3F
-Start=166
+Start=172
 Len=1
 ItemType=SubItem
 
@@ -4652,7 +4655,7 @@ Link=133482376
 [Item]
 Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
 Name=U3G
-Start=167
+Start=173
 Len=1
 ItemType=SubItem
 
@@ -4666,7 +4669,7 @@ Value=3;Larger 5 yrs ago
 [Item]
 Label=Was any electricity used for this processing/ production 5 years ago?
 Name=U3H
-Start=168
+Start=174
 Len=1
 ItemType=SubItem
 
@@ -4678,7 +4681,7 @@ Link=133482376
 [Item]
 Label=Has anybody in the household done some piecemeal farm work during the last 12 months?|trabalho agrícola piecemal
 Name=U4
-Start=219
+Start=225
 Len=1
 
 [ValueSet]
@@ -4692,7 +4695,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U5
-Start=220
+Start=226
 Len=1
 
 [ValueSet]
@@ -4706,7 +4709,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U6
-Start=221
+Start=227
 Len=1
 
 [ValueSet]
@@ -4720,7 +4723,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U7
-Start=222
+Start=228
 Len=1
 
 [ValueSet]
@@ -4734,7 +4737,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U8
-Start=223
+Start=229
 Len=1
 
 [ValueSet]
@@ -4748,7 +4751,7 @@ Value=4;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U9
-Start=224
+Start=230
 Len=1
 
 [ValueSet]
@@ -4762,7 +4765,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Did anybody in this household go for work outside the community during last 12 months|trabalhar fora da comunidade últimos 12 meses
 Name=U10
-Start=225
+Start=231
 Len=1
 
 [ValueSet]
@@ -4774,7 +4777,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?|trabalhar fora da comunidade 5-6 anos atrás
 Name=U11
-Start=226
+Start=232
 Len=1
 
 [ValueSet]
