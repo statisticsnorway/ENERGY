@@ -592,7 +592,33 @@ PROC GLOBAL
 		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);
 	end;	
-
+	
+	
+	
+	//If there are more than 1 household with the same GPS coordinates, we need to make it possible to choose
+	//between them
+	function showHHs(gpsN, gpsW)
+		//loop through to see if there's more than one HH at this location
+		numeric  ctr = 0;
+		array string acceptOptions(20);
+		array serialNos(20);
+		
+		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and SLOGIN = M_LOGIN do
+			inc(ctr);
+			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11);
+			serialNos(ctr) = SA8;
+		endfor;
+		
+		if ctr = 1 then
+			//only one HH at this spot.. Open it now
+			writePff("Energy survey", "Menu", "", serialNos(1), "I");
+			writePff("Household Questionnaire", "HHQ", acceptOptions(1), serialNos(1), "I");
+		else		
+			numeric theOne = accept(maketext(tr(19)), acceptOptions);
+			writePff("Energy survey", "Menu", "", serialNos(theOne), "I");
+			writePff("Household Questionnaire", "HHQ", acceptOptions(theOne), serialNos(theOne), "I");
+		endif;
+	end;
 	
 
 PROC MENU_FF
@@ -715,11 +741,14 @@ postproc
 		reenter;
 
 	elseif $ = 5 then 		//get Sample/Households to interview
-		numeric ok = syncGetSample();
-		if ok = 1 then
-			errmsg(tr(13));
-		else
-			errmsg(tr(14));
+		numeric answer = accept(makeText(tr(20)), makeText(tr(21)), makeText(tr(22)));
+		if answer = 1 then	//sure. Go ahead.. :)			
+			numeric ok = syncGetSample();
+			if ok = 1 then
+				errmsg(tr(13));
+			else
+				errmsg(tr(14));
+			endif;
 		endif;
 		$ = NOTAPPL;
 		reenter;
@@ -977,8 +1006,8 @@ PROC M_HOUSEHOLD
 preproc
 	
 	//create value set (Despite using map to navigate from here, I need the value set for debugging: Maps doesn't work for windows
-	array vsetCodes(95);
-	array String vsetLabels(95);
+	array vsetCodes(vsetMax);
+	array String vsetLabels(vsetMax);
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
@@ -991,7 +1020,7 @@ preproc
 		currentBaseMap = "Satelite";
 	endif;
 	while loadcase(SAMPLING_DICT) do	
-		if tstrip(SLOGIN) = tstrip(M_LOGIN) then	//Setting vset arrays in case it is windows where maps doesn't work
+		if tstrip(SLOGIN) = tstrip(M_LOGIN) then	
 			
 			numeric markerId = HHMap.addMarker(SA7A, SA7B);
 			HHMap.setMarkerDescription(markerId, strip(SA10) + "<br/>" + strip(SA11));
@@ -1028,8 +1057,9 @@ preproc
 			vsetCodes(i) = SA8;
 			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11);	//Separating with semicolon to make it easy to find the name part
 			
-			writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
-			HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
+			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
+			//HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
+			HHMap.SetMarkerOnClick(markerId, showHHs(SA7A, SA7B));
 			inc(i);
 		endif;
 	enddo;

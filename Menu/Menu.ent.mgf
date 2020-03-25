@@ -40,3 +40,10 @@ EN(16) Server name: %s
 EN(17) Wrong password or user name. Please try again
 
 EN(18) Need to set the locality first
+
+EN(19) Select household to interview
+
+EN(20) This will delete the current sample file. Are you sure
+
+EN(21) Yes
+EN(22) No
