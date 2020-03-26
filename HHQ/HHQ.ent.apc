@@ -495,6 +495,16 @@ PROC AC3
 
 
 
+PROC AC4
+preproc
+	if getlanguage() = "EN" then
+		setvalueset($,EDUC_EN);
+	elseif getlanguage() = "SW" then
+		setvalueset($,EDUC_TZ);
+	elseif getlanguage() = "PT" then
+		setvalueset($,EDUC_MZ);
+	endif;
+
 PROC AC5
 
 	if $ > AB5 or $ < AB5 -1 then
@@ -540,6 +550,14 @@ postproc
 
 
 PROC AC8
+preproc
+	if getlanguage() = "EN" then
+		setvalueset($,EDUC_EN);
+	elseif getlanguage() = "SW" then
+		setvalueset($,EDUC_TZ);
+	elseif getlanguage() = "PT" then
+		setvalueset($,EDUC_MZ);
+	endif;
 
 postproc
 
@@ -550,6 +568,14 @@ postproc
 
 
 PROC AC9
+preproc
+	if getlanguage() = "EN" then
+		setvalueset($,EDUC_EN);
+	elseif getlanguage() = "SW" then
+		setvalueset($,EDUC_TZ);
+	elseif getlanguage() = "PT" then
+		setvalueset($,EDUC_MZ);
+	endif;
 
 postproc
 
@@ -623,7 +649,8 @@ postproc
 PROC B1
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(179);
 	endif;
 
@@ -634,7 +661,7 @@ postproc
 		errmsg(tr(157),AB5(1));
 		reenter;
 	endif;
-//	skip to F_FORM;
+//	skip to N_FORM;
 
 
 PROC B2
@@ -658,7 +685,8 @@ PROC B4
 PROC B15
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(180);
 	endif;
 	
@@ -688,7 +716,8 @@ PROC B20
 PROC C1
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(181);
 	endif;
 
@@ -958,7 +987,8 @@ postproc
 PROC C16
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(174);
 	endif;
 onfocus;
@@ -1149,7 +1179,9 @@ preproc
 	If not(C10 in 3, 7, 8) then
 		skip to C89;
 	endif;
-	errmsg(176,strip(solarDeviceType));
+	If (ispartial() and not highlighted($)) or !ispartial() then
+		errmsg(176,strip(solarDeviceType));
+	endif;	
 
 
 PROC C54
@@ -1330,7 +1362,8 @@ preproc
 		skip to C4_FORM;
 		
 	endif;
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(177);
 	endif;
 
@@ -1441,7 +1474,8 @@ preproc
 	if C10 <> 6 then
 		skip to C5_FORM;
 	endif;
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(178);
 	endif;
 
@@ -1563,7 +1597,8 @@ PROC C127
 PROC C128
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(182);
 	endif;
 
@@ -1606,7 +1641,8 @@ preproc
 	If (C10 = 1 or C11 = 1) then
 		skip to E_FORM;
 	endif;
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(189);
 	endif;
 
@@ -1647,18 +1683,16 @@ preproc
 	if C10 = 3 or C11 = 3  then
 		skip to G_FORM;
 	endif;
-	If !isPartial() and (C11 = 1 or C10 = 1) then
-		errmsg(168);
-		skip to E1;
-	endif;
 	
-	if !ispartial() then
-		errmsg(169);
-	endif;
 	skip to E1;
 
 
 PROC E1
+preproc
+//	If !isPartial() and (C11 = 1 or C10 = 1) then
+	If (C11 = 1 or C10 = 1) and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
+		errmsg(168);
+	endif;
 
 onfocus
 
@@ -1694,13 +1728,16 @@ preproc
 	if C10 <> 9 then
 		skip to F_FORM;
 	endif;
-	if !ispartial() then
-		errmsg(175);
-	endif;
 
 
 PROC G1
+preproc
+//	if !ispartial() then
+	If (ispartial() and $ = "") or !ispartial() then
+		errmsg(175);
+	endif;
 
+postproc
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
 		reenter;
@@ -1754,8 +1791,11 @@ onfocus
 
 	if hhDemographics(6) < 1 or hhDemographics(6) in NOTAPPL, DEFAULT then //No adults in household
 		skip to I_FORM;
+	elseif not(schoolGirls > 0 or schoolBoys > 0) and C10 in 1,3,4 then
+		skip to I_FORM;
 	else
-		if !ispartial() then
+//	if !ispartial() then
+		If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 			errmsg(tr(192));
 		endif;
 		array aCode(20); //Max 20 adults in HH
@@ -1829,7 +1869,7 @@ PROC F8
 postproc
 
 	if $ = 66 then
-		skip to F11;
+		skip to F10;
 	endif;
 
 
@@ -1840,10 +1880,6 @@ postproc
 	if $ = F8 then
 		errmsg(151);
 		reenter;
-	endif;
-
-	if $ = 66 then
-		skip to F11;
 	endif;
 
 
@@ -2140,7 +2176,8 @@ preproc
 	if not(I25 in 2,3 or I26 in 2,3) then
 		skip to i46;
 	endif;
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(171);
 	endif;
 
@@ -2209,13 +2246,12 @@ PROC I52
 
 PROC O_FORM
 
+PROC O1
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(183);
 	endif;
-
-
-PROC O1
 
 onfocus
 
@@ -2259,7 +2295,8 @@ preproc
 PROC O8
 
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(193,chosenChildName);
 	endif;
 
@@ -2276,12 +2313,14 @@ preproc
 	if not(I10 in 1,2,7) then
 		skip to J_FORM;
 	endif;
-	if !ispartial() then
-		errmsg(190);
-	endif;
 
 
 PROC K1
+preproc
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(190);
+	endif;
 
 onfocus
 
@@ -2531,25 +2570,26 @@ PROC M1
 
 PROC N_FORM
 
-preproc
-	if !ispartial() then
-		errmsg(172);
-	endif;
-
-
 PROC N_ACTIVITY_WOMEN
 
 preproc
-
+//	if !ispartial() then
 	if hhDemographics(1) < 1 then
 		skip to N_ACTIVITY_GIRLS;
 	endif;
 
-	if !ispartial() and curocc() = 1 then
+	If curocc() = 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(172);
+	endif;
+
+
+//	if !ispartial() and curocc() = 1 then
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(184);
 	endif;
 	$ = curocc();
 	activity = getLabel($, curocc());
+	noinput;
 	skip to N_A;
 
 
@@ -2634,13 +2674,21 @@ preproc
 	if hhDemographics(2) < 1 then
 		skip to N_ACTIVITY_MEN;
 	endif;
-	if !ispartial() and curocc() = 1 then
+
+	If curocc() = 1 and hhDemographics(1) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(172);
+	endif;
+
+
+//	if !ispartial() and curocc() = 1 then
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(185);
 	endif;
 	$ = curocc();
 	activity = getLabel($, curocc());
+	noinput;
 	// errmsg("%s",activity);
-	 skip to N_F;
+	skip to N_F;
 
 
 PROC N_F
@@ -2648,6 +2696,7 @@ PROC N_F
 preproc
 
 	if N_ACTIVITY_GIRLS = 6 and not(schoolGirls > 0) then
+		N_ACTIVITY_GIRLS = NOTAPPL;
 		skip to next;
 	endif;
 
@@ -2730,11 +2779,17 @@ preproc
 	if hhDemographics(3) < 1 then
 		skip to N_ACTIVITY_BOYS;
 	endif;
-	if !ispartial() and curocc() = 1 then
+//	if !ispartial() and curocc() = 1 then
+	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(172);
+	endif;
+
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(186);
 	endif;
 	$ = curocc();
 	activity = getLabel($, curocc());
+	noinput;
 	skip to N_K;
 
 
@@ -2819,11 +2874,17 @@ preproc
 	if hhDemographics(4) < 1 then
 		skip to Q_FORM;
 	endif;
-	if !ispartial() and curocc() = 1 then
+//	if !ispartial() and curocc() = 1 then
+	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(172);
+	endif;
+
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(187);
 	endif;
 	$ = curocc();
 	activity = getLabel($, curocc());
+	noinput;
 	skip to N_P;
 
 
@@ -2832,6 +2893,7 @@ PROC N_P
 preproc
 
 	if N_ACTIVITY_BOYS = 6 and not(schoolBoys > 0) then
+		N_ACTIVITY_BOYS = NOTAPPL;
 		skip to next;
 	endif;
 
@@ -2909,13 +2971,13 @@ PROC N_S_MM
 
 PROC Q_FORM
 
+PROC Q1
 preproc
-	if !ispartial() then
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(188);
 	endif;
 
-
-PROC Q1
 
 onfocus
 
@@ -2947,13 +3009,13 @@ preproc
 
 PROC S_FORM
 
-preproc
-	if !ispartial() then
-		errmsg(191);
-	endif;
-
 
 PROC S1
+preproc
+//	if !ispartial() then
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(191);
+	endif;
 
 onfocus
 
@@ -3077,7 +3139,8 @@ onfocus
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
 		skip to AA_END_FORM;
 	else
-		if !ispartial() then
+//	if !ispartial() then
+		If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 			errmsg(tr(147));
 		endif;
 		array wCode(10); //Max 10 women in HH

@@ -344,31 +344,57 @@ Len=2
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
-Name=AC4_VS1
-Value=1;Pre-primary|ALFABETIZAÇÃO|Shule ya awali
-Value=2;Adult education|PRIMÁRIO 1-Classe |Elimu ya watu wazima
-Value=11;Primary Standard 1|PRIMÁRIO 2-Classe |Shule ya msingi Darasa la 1
-Value=12;Primary Standard 2|PRIMÁRIO 3-Classe |Shule ya msingi Darasa la 2
-Value=13;Primary Standard 3|PRIMÁRIO 4-Classe |Shule ya msingi Darasa la 3
-Value=14;Primary Standard 4|PRIMÁRIO 5-Classe |Shule ya msingi Darasa la 4
-Value=15;Primary Standard 5|PRIMÁRIO 6-Classe |Shule ya msingi Darasa la 5
-Value=16;Primary Standard 6|PRIMÁRIO 7-Classe |Shule ya msingi Darasa la 6
-Value=17;Primary Standard 7|SECUNDÁRIO 8-Classe|Shule ya msingi Darasa la 7
-Value=18;Primary Standard 8|SECUNDÁRIO 9-Classe|Shule ya msingi Darasa la 8
-Value=19;OSC|SECUNDÁRIO 10-Classe|OSC
-Value=21;Secondary Form 1|SECUNDÁRIO 11-Classe|Sekondari kidato cha 1
-Value=22;Secondary Form 2|SECUNDÁRIO 12-Classe|Sekondari kidato cha 2
-Value=23;Secondary Form 3|TÉCNICO-PROFISSIONAL 1 ANO|Sekondari kidato cha 3
-Value=24;Secondary Form 4|TÉCNICO-PROFISSIONAL 2 ANO|Sekondari kidato cha 4
-Value=25;Courses after Secondary O-level|TÉCNICO-PROFISSIONAL 3 ANO|Kozi baada ya kidato cha 4
-Value=31;Secondary Form 5|UNIVERSIDADE 1 ANO|Sekondari kidato cha 5
-Value=32;Secondary Form 6|UNIVERSIDADE 2 ANO|Sekondari kidato cha 6
-Value=33;Courses after secondary A-level|UNIVERSIDADE 3 ANO|Kozi baada ya kidato cha 6
-Value=41;University year 1|UNIVERSIDADE 4 ANO|Chuo kikuu mwaka wa 1
-Value=42;University year 2|UNIVERSIDADE 5 ANO|Chuo kikuu mwaka wa 2
-Value=43;University year 3|UNIVERSIDADE 6 ANO|Chuo kikuu mwaka wa 3
-Value=44;University year 4|PHD|Chuo kikuu mwaka wa 4
-Value=45;University year 5+|OSC|Chuo kikuu mwaka wa 5 au zaidi
+Name=EDUC_EN
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;Primary grade 1-4
+Value=4;Primary grade 5+
+Value=5;Secondary
+Value=6;Technical & diploma courses
+Value=7;University
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=EDUC_TZ
+Value=1;PP
+Value=11;D1
+Value=12;D2
+Value=13;D3
+Value=14;D4
+Value=15;D5
+Value=16;D6
+Value=17;D7
+Value=18;D8
+Value=19;OSC
+Value=20;MS+COURSE
+Value=2;ADULT
+Value=21;F1
+Value=22;F2
+Value=23;F3
+Value=24;F4
+Value=25;'O'+COURSE
+Value=31;F5
+Value=32;F6
+Value=33;'A'+COURSE
+Value=34;DIPLOMA
+Value=41;U1
+Value=42;U2
+Value=43;U3
+Value=44;U4
+Value=45;U5&+
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=EDUC_MZ
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;EP1
+Value=4;EP2
+Value=5;Secondary, basic
+Value=6;Secondary, medium
+Value=7;Technician, basic
+Value=8;Technician, medium
+Value=9;University
 
 [Item]
 Label=Age at beginning this school year|Quantos anos tinha?
@@ -406,34 +432,6 @@ Name=AC8
 Start=148
 Len=2
 
-[ValueSet]
-Label=Grade last school year|Nivel frenquentado
-Name=AC8_VS1
-Value=1;Pre-primary|ALFABETIZAÇÃO|Shule ya awali
-Value=2;Adult education|PRIMÁRIO 1-Classe |Elimu ya watu wazima
-Value=11;Primary Standard 1|PRIMÁRIO 2-Classe |Shule ya msingi Darasa la 1
-Value=12;Primary Standard 2|PRIMÁRIO 3-Classe |Shule ya msingi Darasa la 2
-Value=13;Primary Standard 3|PRIMÁRIO 4-Classe |Shule ya msingi Darasa la 3
-Value=14;Primary Standard 4|PRIMÁRIO 5-Classe |Shule ya msingi Darasa la 4
-Value=15;Primary Standard 5|PRIMÁRIO 6-Classe |Shule ya msingi Darasa la 5
-Value=16;Primary Standard 6|PRIMÁRIO 7-Classe |Shule ya msingi Darasa la 6
-Value=17;Primary Standard 7|SECUNDÁRIO 8-Classe|Shule ya msingi Darasa la 7
-Value=18;Primary Standard 8|SECUNDÁRIO 9-Classe|Shule ya msingi Darasa la 8
-Value=19;OSC|SECUNDÁRIO 10-Classe|OSC
-Value=21;Secondary Form 1|SECUNDÁRIO 11-Classe|Sekondari kidato cha 1
-Value=22;Secondary Form 2|SECUNDÁRIO 12-Classe|Sekondari kidato cha 2
-Value=23;Secondary Form 3|TÉCNICO-PROFISSIONAL 1 ANO|Sekondari kidato cha 3
-Value=24;Secondary Form 4|TÉCNICO-PROFISSIONAL 2 ANO|Sekondari kidato cha 4
-Value=25;Courses after Secondary O-level|TÉCNICO-PROFISSIONAL 3 ANO|Kozi baada ya kidato cha 4
-Value=31;Secondary Form 5|UNIVERSIDADE 1 ANO|Sekondari kidato cha 5
-Value=32;Secondary Form 6|UNIVERSIDADE 2 ANO|Sekondari kidato cha 6
-Value=33;Courses after secondary A-level|UNIVERSIDADE 3 ANO|Kozi baada ya kidato cha 6
-Value=41;University year 1|UNIVERSIDADE 4 ANO|Chuo kikuu mwaka wa 1
-Value=42;University year 2|UNIVERSIDADE 5 ANO|Chuo kikuu mwaka wa 2
-Value=43;University year 3|UNIVERSIDADE 6 ANO|Chuo kikuu mwaka wa 3
-Value=44;University year 4|PHD|Chuo kikuu mwaka wa 4
-Value=45;University year 5+|OSC|Chuo kikuu mwaka wa 5 au zaidi
-
 [Item]
 Label=Highest education completed|Qual é o grau mais alto
 Name=AC9
@@ -443,18 +441,6 @@ Len=2
 [ValueSet]
 Label=Highest education completed|Qual é o grau mais alto
 Name=AC9_VS1
-Value=1;Pre-primary|ALFABETIZAÇÃO|Shule ya awali
-Value=2;Adult education|PRIMÁRIO EP1|Elimu ya watu wazima
-Value=11;Primary Standard 1|PRIMÁRIO EP2|Shule ya msingi Darasa la 1
-Value=12;Primary Standard 2|SECUNDÁRIO ESG1|Shule ya msingi Darasa la 2
-Value=13;Primary Standard 3|SECUNDÁRIO ESG2|Shule ya msingi Darasa la 3
-Value=14;Primary Standard 4|TÉCNICO ELEMENTAR|Shule ya msingi Darasa la 4
-Value=15;Primary Standard 5|TÉCNICO BÁSICO|Shule ya msingi Darasa la 5
-Value=16;Primary Standard 6|TÉCNICO MÉDIO|Shule ya msingi Darasa la 6
-Value=17;T|TÉCNICO PROFISSIONAL
-Value=18;Primary Standard 7|FOR.DE PROFESSORES|Shule ya msingi Darasa la 7
-Value=19;Primary Standard 8|SUPERIOR|Shule ya msingi Darasa la 8
-Value=20;OSC||OSC
 
 [Item]
 Label=Main occupation|Ocupação principal
