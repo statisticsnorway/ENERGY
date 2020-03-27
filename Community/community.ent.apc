@@ -62,13 +62,11 @@ preproc
 	
 
 	
-PROC B_LEADERS000
-preproc
-	errmsg(tr(15));
-	
+PROC B_LEADERS000	
 	
 PROC B_ID
 preproc
+
  	if curocc() = 1 then
 		$ = 1;
 	endif;	
@@ -81,7 +79,7 @@ preproc
 PROC B1_A
 postproc
  if $ = "" and curocc() > 1 then	//finished
-  	B_ID = missing;
+  	B_ID = NOTAPPL;
 	skip to GROUP_C; //Actual skip
  elseif $ = "" then
   	errmsg(tr(1));
@@ -92,27 +90,23 @@ postproc
 
 PROC B1_C
 
-PROC C2
-if $ > C1 then
-		errmsg(tr(4),edit("ZZZ9",$),edit("ZZZZ9",C1));
-		reenter;
-	endif;
-
-
 PROC C1
-if $ < C2 then
-		errmsg(tr(4),edit("ZZZZ9",C2),edit("ZZZ9",$));
-		reenter;
+preproc
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(201);
 	endif;
-	
+PROC C2
+
 PROC C3
-if $ > C2 then
-		errmsg(tr(5),edit("ZZZ9",$),edit("ZZZ9",C2));
-		reenter;
-	endif;
 
 
 PROC D1
+preproc
+	If (ispartial() and $ = "") or !ispartial() then
+		errmsg(202);
+	endif;
+
+postproc
 	if  pos("9", $) > 0 and length(strip($)) > 1 then
 		errmsg(tr(8));
 		reenter;
@@ -132,53 +126,53 @@ postproc
 PROC D5
 postproc
 	skip to D31;
-PROC D8_1
+
+
+
+PROC D9
 postproc
 	if $ in 2,88 then
-		skip to D10;
+		skip to D11;
 	endif;
-	
-
-
 PROC D10
-postproc
-	if $ = 1 then
-		skip to D12;
-	endif;
 
 
-PROC D11
+PROC D12
 postproc
 	if $ = 4 then
-		skip to D13;
+		skip to D14;
 	endif;
 PROC D13
 
 
 
 PROC D14
+
+PROC D15
 postproc
 	if $ = 2 then
-		skip to GROUP_D2;
+		skip to D17;
 	endif;
-PROC D16A
+PROC D17
  if $ > 24 and $ <> 88 then
    		errmsg(tr(9),edit("Z9",$));
 		reenter;
     endif;
 
 
-PROC D16B
- if $ > 24 and $ <> 88 then
+PROC D18
+	if $ > 24 and $ <> 88 then
    		errmsg(tr(9),edit("Z9",$));
 		reenter;
     endif;
+	if $ = 2 then
+		skip to D20;
+	endif;
 
-
-PROC D22
+PROC D21
 postproc
 	if $ = 2 then
-		skip to D25;
+		skip to D24;
 	endif;
 
 
@@ -199,77 +193,89 @@ preproc
 PROC D31
 postproc
 	if $ = 2 then
-		skip to GROUP_H;
+		skip to D34;
 	endif;
 
 
 
-PROC H_NO
-onfocus
-	 $ = curocc();
-	 skip to H1A;
-PROC H1A
+PROC D34
 preproc
-	currentElement = getLabel(H_NO, curocc());
-postproc
-	if $ = 1 then
-	 skip to next;
-	endif; 
- 
-
-PROC F1B
- if $ = 1 and F1A IN 2,3 then
+	if A6 = 1 then
+		skip to GROUP_H;
+	endif;
+PROC F1
+preproc
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(203);
+	endif;
+PROC F2
+ if $ = 1 and F1 IN 2,3 then
    		errmsg(tr(12),edit("Z9",$));
 		reenter;
  endif;
- if $ = 2 and F1A = 3 then
+ if $ = 2 and F1 = 3 then
    		errmsg(tr(12),edit("Z9",$));
 		reenter;
  endif;
 
 
-PROC F4
- if $ > F3 then
+PROC F5
+ if $ > F4 then
    		errmsg(tr(13),edit("ZZZ9",F3));
 		reenter;
     endif;
-PROC F8_NO
+PROC F9_NO
 onfocus
 	 $ = curocc();
-	 skip to F8A;
+	 skip to F9A;
 
-PROC F8A
+PROC F9A
 preproc
- currentElement = getLabel(F8_NO, curocc());
+ currentElement = getLabel(F9_NO, curocc());
 postproc
  if $ = 1 then
-  skip F8C(curocc());
+  skip F9C(curocc());
  endif;
-PROC F8B
+PROC F9B
 postproc
-	skip to F8D;
+	skip to F9D;
 	
-PROC G_NO
+PROC G1_NO
 onfocus
 	 $ = curocc();
 	 skip to G1A;
 PROC G1A
 preproc
- currentElement = getLabel(G_NO, curocc());
-PROC G_SER_NO
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
+		errmsg(204);
+	endif;
+
+	currentElement = getLabel(G1_NO, curocc());
+PROC G2_NO
 onfocus
 	 $ = curocc();
-	 skip to G11A;
-PROC G11A
+	 skip to G2A;
+PROC G2A
 preproc
- currentElement = getLabel(G_SER_NO, curocc());
-PROC I4A
+ currentElement = getLabel(G2_NO, curocc());
+PROC I1
+preproc
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(205);
+	endif;
+PROC I6
  if $ in 2,88 then
-  skip to I9;
+  skip to I8;
  endif; 
 PROC J1
- if $ = 2 then
-  endlevel;
- endif;
+preproc
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(206);
+	endif;
+
+postproc
+	if $ = 2 then
+		endlevel;
+	endif;
   
 

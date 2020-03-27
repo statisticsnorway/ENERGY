@@ -996,7 +996,7 @@ onfocus;
 
 	if getlanguage() = "EN" then
 		electricityCompany = "Tanzania: TANESCO/REA, Mozambique: EDM";
-	elseif getlanguage() = "SW" then 
+	elseif getlanguage() = "SW" then
 		electricityCompany = "TANESCO/REA";
 	elseif getlanguage() = "PT" then
 		electricityCompany = "EDM";
@@ -1179,7 +1179,7 @@ preproc
 	If not(C10 in 3, 7, 8) then
 		skip to C89;
 	endif;
-	If (ispartial() and not highlighted($)) or !ispartial() then
+	If (ispartial() and $ = "") or !ispartial() then
 		errmsg(176,strip(solarDeviceType));
 	endif;	
 
@@ -2578,13 +2578,13 @@ preproc
 		skip to N_ACTIVITY_GIRLS;
 	endif;
 
-	If curocc() = 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(172);
 	endif;
 
 
 //	if !ispartial() and curocc() = 1 then
-	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
+	If curocc() = 1 and (((ispartial() and visualValue($) = NOTAPPL) or !ispartial())) then
 		errmsg(184);
 	endif;
 	$ = curocc();
@@ -2675,7 +2675,7 @@ preproc
 		skip to N_ACTIVITY_MEN;
 	endif;
 
-	If curocc() = 1 and hhDemographics(1) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+	If curocc() = 1 and hhDemographics(1) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(172);
 	endif;
 
@@ -2780,7 +2780,7 @@ preproc
 		skip to N_ACTIVITY_BOYS;
 	endif;
 //	if !ispartial() and curocc() = 1 then
-	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(172);
 	endif;
 
@@ -2875,7 +2875,7 @@ preproc
 		skip to Q_FORM;
 	endif;
 //	if !ispartial() and curocc() = 1 then
-	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(172);
 	endif;
 
