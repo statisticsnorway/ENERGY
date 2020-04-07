@@ -451,6 +451,7 @@ Len=2
 [ValueSet]
 Label=Main occupation|Ocupação principal
 Name=A2_VS1
+Link=98711222
 Value=1;Farmer with non-family employees|Agricultor com empregados não familiares|Mkulima aliyeajiri wafanyakazi wasiokuwa wanakaya
 Value=2;Farmer with only family members|Agricultor com apenas membros da família|Mkulima mwenye wanakaya tu
 Value=3;Farm worker|Trabalhador rural familiar|Mfanyakazi wa shamba bila malipo [mwanakaya]
@@ -481,6 +482,7 @@ Len=2
 [ValueSet]
 Label=Main activity at work|Actividade principal no local de trabalho
 Name=A3_VS1
+Link=98711223
 Value=11;Agriculture - crops/forestry|Agricultura - culturas / florestal|Kilimo - mazao/misitu
 Value=12;Agriculture - animal husbandry|Agricultura - zootecnia|Kilimo– mifugo ufugaji
 Value=13;Fishing|Pescaria|Uvuvi
@@ -523,26 +525,7 @@ Len=2
 [ValueSet]
 Label=Main occupation 5 years ago|Qual foi a ocupação principal há 5 anos?
 Name=A6_VS1
-Value=1;Farmer with non-family employees|Agricultor com empregados não familiares|Mkulima aliyeajiri wafanyakazi wasiokuwa wanakaya
-Value=2;Farmer with only family members|Agricultor com apenas membros da família|Mkulima mwenye wanakaya tu
-Value=3;Unpaid family farm worker|Trabalhador rural familiar não remunerado|Mfanyakazi wa shamba bila malipo [mwanakaya]
-Value=4;Non-farm employer with non-family employees|Empregador não agrícola com empregados não familiares|Mwajiri asiye Mkulima aliyeajiri wafanyakazi wasio wanakaya
-Value=5;Non-farm employer with only family employees|Empregador não agrícola com apenas empregados da família|Mwajiri asiye mkulima aliyeajiri wanakaya tu
-Value=6;Unpaid assistance in family enterprise|Assistência não remunerada na empresa familiar|Msaidizi katika biashara ya kaya asiyelipwa
-Value=7;Self-Employed Independent contractor, technician, professional, etc|Contratante independente, técnico, profissional, etc.|Mtaalamu aliyejiajiri (mkandarasi, fundi mchundo, n.k. )
-Value=8;Wage Employee in Private Company (with contract)|Empregado assalariado em empresa privada (com contrato)|Mwajiriwa katika kampuni binafsi (kwa mkataba)
-Value=9;Paid Employee in Private Company (without contract)|Empregado pago em empresa privada (sem contrato)|Mwajiriwa katika kampuni binafsi (bila mkataba)
-Value=10;Wage Employee for Government|Empregado de salário para o governo|Mwajiriwa wa Serikali
-Value=11;Wage Employee in Parastatal (government owned company)|Empregado de salário na Parastatal (empresa estatal)|Mwajiriwa katika Shirika la Umma
-Value=12;Casual/Day Laborer|Casual/Diarista|Mfanyakazi wa muda/kibarua
-Value=13;Intern/free labor/voluntary work|Estagiário / trabalho livre / trabalho voluntário|Mfanyakazi aliye kwenye mafunzo/anayejitolea
-Value=14;Home maker|Dono/dona de casa|Mfanyakazi wa nyumbani
-Value=15;Was not working, but was looking for work and has worked previously|Não estava trabalhando, mas estava procurando trabalho e trabalhou anteriormente|Hakufanya kazi, lakini alikuwa anatafuta kazi na hapo awali aliwahi kufanya kazi
-Value=16;Was not working, but was looking for work. Has never worked before|Não estava funcionando, mas estava procurando trabalho. Nunca trabalhou antes|Hakufanya kazi, lakini alikuwa anatafuta kazi na hajawahi kufanya kazi
-Value=17;Was not working, and was not looking for work|Não estava funcionando e não estava procurando trabalho|Hakufanya kazi, na alikuwa hatafuti kazi
-Value=18;Student|Aluno/Aluna|Mwanafunzi
-Value=19;Retired/pensioner|Aposentado / pensionista|Mstaafu
-Value=20;Was not working because of disability or chronical illness|Não estava trabalhando por causa de deficiência ou doença crônica|Hakufanya kazi kwa sababu ya ulemavu/ugonjwa muda mrefu
+Link=98711222
 
 [Item]
 Label=Main activity at work place 5 years ago|Qual foi a actividade principal
@@ -553,26 +536,7 @@ Len=2
 [ValueSet]
 Label=Main activity at work place 5 years ago|Qual foi a actividade principal|Main activity at work place 5 years ago
 Name=A7_VS1
-Value=11;Agriculture - crops/forestry|Agricultura - culturas / florestal|Kilimo - mazao/misitu
-Value=12;Agriculture - animal husbandry|Agricultura - zootecnia|Kilimo– mifugo ufugaji
-Value=13;Fishing|Pescaria|Uvuvi
-Value=14;Mining and quarrying|Minas e pedreiras|Uchimbaji wa Madini/kokoto/mchanga
-Value=15;Manufacturing|Fabrico|Uzalishaji Viwandani
-Value=16;Electricity and water supply|Electricidade e de água de alimentação|Umeme na usambazaji wa maji
-Value=17;Building and construction|Construção civil|Ujenzi
-Value=18;Trade|Comércio|Biashara
-Value=19;Repair|Manutenção e reparação|Ukarabati
-Value=20;Transportation|Transporte|Usafirishaji/Uchukuzi
-Value=21;Accomodation and food service|Serviço de alojamento e restauração|Huduma za malazi na chakula
-Value=22;Information and communication|Informação e comunicação|Huduma za mawasiliano
-Value=23;Financial, professional, administrative and support service|Serviço financeiro, profissional, administrativo e de apoio|Huduma za kifedha, kitaalamu na utawala
-Value=24;Public administration and defence|Administração pública e defesa|Utawala wa Umma na ulinzi
-Value=25;Education|Educação|Elimu
-Value=26;Human health and social work|Saúde humana e acção social|Afya na ustawi wa jamii
-Value=27;Arts, entertainment and recreation|Artes, entretenimento e recreação|Sanaa na burudani
-Value=28;Personal service|Serviço pessoal|Huduma binafsi
-Value=29;Domestic service|Serviço Domestico|Kazi za nyumbani
-Value=30;Embassies and interntional organizations|Embaixadas e organizações interntional|Ubalozi na na Mashirika ya kimataifa
+Link=98711223
 
 [Item]
 Label=Frequency cook food|Frequência em cozinhar alimentos
@@ -1222,6 +1186,49 @@ Value=4;T3||T3
 Value=5;T5||T5
 
 [Item]
+Label=Electric meter|Casa tem um contador elétrico?
+Name=C23
+Start=154
+Len=1
+
+[ValueSet]
+Label=Electric meter|Casa tem um contador elétrico?
+Name=C23_VS1
+Value=1;Yes, alone
+Value=2;Yes, sharing with other households
+Value=3;No
+
+[Item]
+Label=Number of households sharing|Número de famílias compartilhando
+Name=C24
+Start=156
+Len=2
+
+[Item]
+Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
+Name=C25
+Start=158
+Len=3
+
+[Item]
+Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
+Name=C26
+Start=161
+Len=5
+
+[Item]
+Label=Pre-paid meter|Pré-pago metros
+Name=C27
+Start=155
+Len=1
+
+[ValueSet]
+Label=Pre-paid meter|Pré-pago metros
+Name=C27_VS1
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
 Start=152
@@ -1242,49 +1249,6 @@ Value=9;Bank|Banco|Benki
 Value=10;Post office|Agência dos Correios|Ofisi ya posta
 Value=66;No one|Ninguém|Hakuna
 Value=55;Other|De outros|Nyingine
-
-[Item]
-Label=Electric meter|Casa tem um contador elétrico?
-Name=C23
-Start=154
-Len=1
-
-[ValueSet]
-Label=Electric meter|Casa tem um contador elétrico?
-Name=C23_VS1
-Value=1;Yes, alone
-Value=2;Yes, sharing with other households
-Value=3;No
-
-[Item]
-Label=Pre-paid meter|Pré-pago metros
-Name=C27
-Start=155
-Len=1
-
-[ValueSet]
-Label=Pre-paid meter|Pré-pago metros
-Name=C27_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Number of households sharing|Número de famílias compartilhando
-Name=C24
-Start=156
-Len=2
-
-[Item]
-Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
-Name=C25
-Start=158
-Len=3
-
-[Item]
-Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
-Name=C26
-Start=161
-Len=5
 
 [Item]
 Label=Electricity bill provided|factura de electricidade fornecida
@@ -4367,19 +4331,6 @@ Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
 
 [Item]
-Label=The monthly electric bill is or will be a financial burden|A conta de energia elétrica mensal é ou será um encargo financeiro
-Name=S6
-Start=108
-Len=1
-
-[ValueSet]
-Label=The monthly electric bill is or will be a financial burden|A qualidade da minha casa é melhor do que há 5 anos
-Name=S6_VS1
-Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
-Value=2;No opinion|Concorda|Nakubaliana
-Value=3;Disagree|Discorda|Sikubaliani
-
-[Item]
 Label=The stove is needed for lighting up the house in the evening|O fogão é necessário para relâmpago a casa à noite
 Name=S5
 Start=109
@@ -4388,6 +4339,19 @@ Len=1
 [ValueSet]
 Label=The stove is needed for lighting up the house in the evening|A qualidade da minha casa é melhor do que há 5 anos
 Name=S5_VS1
+Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
+Value=2;No opinion|Concorda|Nakubaliana
+Value=3;Disagree|Discorda|Sikubaliani
+
+[Item]
+Label=The monthly electric bill is or will be a financial burden|A conta de energia elétrica mensal é ou será um encargo financeiro
+Name=S6
+Start=108
+Len=1
+
+[ValueSet]
+Label=The monthly electric bill is or will be a financial burden|A qualidade da minha casa é melhor do que há 5 anos
+Name=S6_VS1
 Value=1;Agrees|Concorda plenamente|Nakubaliana kabisa
 Value=2;No opinion|Concorda|Nakubaliana
 Value=3;Disagree|Discorda|Sikubaliani
@@ -4557,12 +4521,12 @@ ItemType=SubItem
 [ValueSet]
 Label=Business no
 Name=U3_VS1
-Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
-Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
-Value=3;own a trading or service business on a street or in a market?
-Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services?
-Value=5;own a bar or restaurant?
-Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street?
+Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.
+Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc
+Value=3;own a trading or service business on a street or in a market
+Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services
+Value=5;own a bar or restaurant
+Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street
 
 [Item]
 Label=Does anybody in the household  [BUSINESS] today?

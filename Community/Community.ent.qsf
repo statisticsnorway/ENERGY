@@ -75,7 +75,15 @@ EN=\pard\cf1\fs19 Latitude\par
 EN=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.B1_A
+Field=COMMUNITY_DICT.B1
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs19 Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.\par
+EN=}
+
+[QUESTION]
+Field=COMMUNITY_DICT.B2_A
 Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -104,7 +112,7 @@ SW=\pard\cf3\f2\fs19\par
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.B1_B
+Field=COMMUNITY_DICT.B2_B
 Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green176\blue80;}
@@ -123,7 +131,7 @@ PT=\pard\cf1\fs24\lang1044 Qual \'e9 o sexo de \cf2 %currName%\cf1 ?\par
 PT=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.B1_C
+Field=COMMUNITY_DICT.B2_C
 Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -142,7 +150,7 @@ PT=\pard\cf1\fs24\lang1044 Qual \'e9 o conhecimento / especifica\'e7\'e3o de \cf
 PT=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.B1_D
+Field=COMMUNITY_DICT.B2_D
 Occurrences=1:7
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
@@ -154,25 +162,6 @@ SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
 SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 SW=\pard\cf1\fs24\lang1033 Je, ni miaka mingapi %currName% meishi katika jamii hii?\cf2\f1\par
 SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B1_E
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 For how many years has %currName% lived in this community?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033  Je, ni miaka mingapi \lang1044 %currName% a\lang1033 meishi katika jamii hii?\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1044 H\'e1 quantos anos \cf2 %currName%\cf1  viveu nesta comunidade?\par
-PT=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.C1
@@ -283,7 +272,7 @@ Field=COMMUNITY_DICT.D11
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is grid service available to the whole community or only a part of the community?\par
+EN=\pard\cf1\fs24\lang1033 Is grid service available in the whole community or only in a part of the community?\par
 EN=\cf2 Read aloud options\cf1\lang2057\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
@@ -424,27 +413,48 @@ PT=}
 [QUESTION]
 Field=COMMUNITY_DICT.D19
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Does TANESCO/EDM (or the the community) publish a "load-shedding" schedule?\par
+EN=\pard\cf1\fs24\lang1033 Does \cf2\lang1044 %elecCompany%\cf1\lang1033  (or the the community) publish a "load-shedding" schedule?\par
 EN=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green128\blue0;}
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24 %elecCompany%\par
+SW=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green128\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24 %elecCompany%\par
+PT=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How far is the nearest [TANESCO/EDM]-office?\par
-EN=\cf2 Don't know\'8588\par
+EN=\pard\cf1\fs24 How far is the nearest \cf2 %elecCompany%\cf1  office?\par
+EN=\cf3 Don't know\'8588\par
 EN=99 km or more\'8599\par
 EN=}
+PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+PT={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
+PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+PT=\pard\cf1\fs24 %elecCompany%\cf2\lang1033\par
+PT=}
+SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+SW={\colortbl ;\red0\green128\blue0;}
+SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+SW=\pard\cf1\fs24 %elecCompany%\par
+SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D20
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week (hours)?\par
+EN=\cf2 If no outages occured, record 0.\cf1\par
 EN=}
 
 [QUESTION]
@@ -485,7 +495,7 @@ Field=COMMUNITY_DICT.D25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?\par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?\par
 EN=\cf3\par
 EN=}
 
@@ -494,7 +504,7 @@ Field=COMMUNITY_DICT.D25
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?\par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?\par
 EN=\cf3\par
 EN=}
 
@@ -503,7 +513,7 @@ Field=COMMUNITY_DICT.D26
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the price of getting access to an electricity connection in your community changed?\par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?\par
 EN=}
 
 [QUESTION]
@@ -511,7 +521,7 @@ Field=COMMUNITY_DICT.D27
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown-out in your community changed? \par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%,  has there been less or more black-oust or brown-outs  in your community, or is the frequencie about the same?\par
 EN=}
 
 [QUESTION]
@@ -519,15 +529,15 @@ Field=COMMUNITY_DICT.D28
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?\par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has the price of using electricity become higher or lower, or is the price about the same?\par
 EN=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.D29
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed? \par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?\highlight0\par
 EN=}
 
 [QUESTION]
@@ -555,9 +565,9 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.D30
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed? \par
+EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?\highlight0\par
 EN=}
 
 [QUESTION]
@@ -579,9 +589,10 @@ EN=}
 [QUESTION]
 Field=COMMUNITY_DICT.D33
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Can you buy or lease a solar home systems/solar lighting system in this area?\par
+EN=\cf2 Multiple responses possible\cf1\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -739,11 +750,12 @@ SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.F1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 First we would like to know whether Is the community accessible by motor vehicle (car or truck) during the dry season?\par
-EN=\par
+EN=\pard\widctlpar\f0\fs24\lang1033 Is the community accessible by motor vehicle (car or truck) during \cf1 the dry season\cf0 ?\lang1044\par
+EN=
+EN=\pard\cf2\f1\lang1033\par
 EN=\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
@@ -764,9 +776,9 @@ SW=}
 [QUESTION]
 Field=COMMUNITY_DICT.F2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is the community also accessible by motor vehicle (car or truck) during the rainy season?\par
+EN=\pard\cf1\fs24\lang1033 Is the community also accessible by motor vehicle (car or truck) during \cf2 the rainy season\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;}
@@ -938,7 +950,7 @@ Occurrences=1:11
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 a. Are there any  \cf2 %currentElement%\cf1  in this community?\par
+EN=\pard\cf1\fs24\lang1033 a. Are there any \cf2 %currentElement%\cf1  in this community?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -957,7 +969,7 @@ Occurrences=1:11
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 b. What is the distance to the nearest  \cf2 %currentElement%\cf1 ?\par
+EN=\pard\cf1\fs24\lang1033 b. What is the distance to the nearest \cf2 %currentElement%\cf1 ?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1010,11 +1022,11 @@ SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.G1A
-Occurrences=1:10
+Occurrences=1:24
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any \cf2 %currentElement%\cf1  making goods in this community?\par
+EN=\pard\cf1\fs24\lang1033 Are there any \cf2 %currentElement%\cf1  in this community?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -1031,11 +1043,11 @@ SW=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.G1B
-Occurrences=1:10
+Occurrences=1:24
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Did \cf2 %currentElement%\cf1  exist in the community five years ago?\par
+EN=\pard\cf1\fs24\lang1033 Was there any \cf2 %currentElement%\cf1  in the community 5 years ago?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -1049,68 +1061,30 @@ SW=\pard\cf1\fs24\lang1033 Je, biashara %currentElement% ilikuwepo kwenye jamii 
 SW=}
 
 [QUESTION]
-Field=COMMUNITY_DICT.G2A
-Occurrences=1:14
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any \cf2 %currentElement%\cf1  in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 H\'e1 algum/a \cf2 %currentElement%\cf1  nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, kuna %currentElement% yoyote inayotoa huduma katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.G2B
-Occurrences=1:14
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Did \cf2 %currentElement%\cf1  exist in the community five years ago?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 %CurrentElement%\cf2  existe na comunidade h\'e1 cinco anos?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, %currentElement% ilikuepo kwenye jamii katika kipindi cha miaka 5 iliyopita?\par
-SW=}
-
-[QUESTION]
 Field=COMMUNITY_DICT.H1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs19 Has a \cf2 Power lines program: Construction, maintenance or rehabilitation\cf1  been implemented in the community in the last 5 years?\par
+EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf1\par
 EN=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.H2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs19 Has a \cf2 Solar based community mini-grid program\cf1  been implemented in the community in the last 5 years?\par
-EN=\cf2 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf1\par
-EN=\par
+EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf1\fs19\par
 EN=}
 
 [QUESTION]
 Field=COMMUNITY_DICT.H3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
 EN=\pard\cf1\fs19 Has an \cf2 Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator\cf1  been implemented in the community in the last 5 years?\par
-EN=\cf2 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\par
+EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf2\fs19\par
 EN=}
 
 [QUESTION]
@@ -1236,10 +1210,8 @@ SW=}
 Field=COMMUNITY_DICT.J1
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Now we would like to know whether there are any community lights or private lights outside businesses or private homes. \par
-EN=\par
-EN=Does your community have any form of community street lights or private outdoor lights?\par
+EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
+EN=\pard\cf1\fs24\lang1033 Does your community have any form of community street lights or private outdoor lights?\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}

@@ -66,7 +66,7 @@ Len=3
 Label=A Community identification|A identificação Comunidade|kitambulisho Community
 Name=COMMUNITY_REC
 RecordTypeValue='A'
-RecordLen=117
+RecordLen=139
 
 [Item]
 Label=Village/Town Name|Aldeia / Nome da Cidade|Kijiji / Jina Town
@@ -134,6 +134,29 @@ Len=11
 Decimal=6
 DecimalChar=Yes
 
+[Item]
+Label=Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.
+Name=B1
+Start=118
+Len=22
+DataType=Alpha
+
+[ValueSet]
+Label=Valueset
+Name=B1_VS1
+Value='01                    ';Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
+Value='02                    ';Electricity / energy |Electricidade / energia
+Value='03                    ';Village committee|Comitê da vila|Kamati ya kijiji
+Value='04                    ';Elderly|Idoso|Wazee
+Value='05                    ';School|Escola|Shule
+Value='06                    ';Agriculture|Agricultura|Kilimo
+Value='07                    ';Health|Saúde|Afya
+Value='08                    ';Business|O negócio|Biashara
+Value='09                    ';Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
+Value='10                    ';Young adult
+Value='11                    ';Adult woman/man
+Value='66                    ';None of these|Nenhum desses|Hakuna kati hizi
+
 [Record]
 Label=B Community leaders|líderes comunitários B|Viongozi B Community
 Name=B_LEADERS
@@ -154,53 +177,54 @@ Value=1:9
 
 [Item]
 Label=Name|Nome|jina
-Name=B1_A
+Name=B2_A
 Start=42
 Len=50
 DataType=Alpha
 
 [Item]
 Label=Sex|Sexo
-Name=B1_B
+Name=B2_B
 Start=92
 Len=1
 
 [ValueSet]
 Label=Sex|Sexo|sex
-Name=B1_B_VS1
+Name=B2_B_VS1
 Value=1;Male|Masculino|Mwanaume
 Value=2;Female|Feminina|Mwanamke
 
 [Item]
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
-Name=B1_C
+Name=B2_C
 Start=93
 Len=2
 
 [ValueSet]
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
-Name=B1_C_VS1
+Name=B2_C_VS1
 Value=1;Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
-Value=2;Electricity / energy Representative|Electricidade Representante / energia|Umeme / Mwakilishi wa nishati
+Value=2;Electricity / energy |Electricidade / energia
 Value=3;Village committee|Comitê da vila|Kamati ya kijiji
 Value=4;Elderly|Idoso|Wazee
 Value=5;School|Escola|Shule
 Value=6;Agriculture|Agricultura|Kilimo
-Value=8;Health|Saúde|Afya
-Value=9;Business|O negócio|Biashara
-Value=10;Religious leader|líder questões religiosas|Kiongozi wa masuala ya kidini
-Value=11;Police|Polícia|Polisi
+Value=7;Health|Saúde|Afya
+Value=8;Business|O negócio|Biashara
+Value=9;Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
+Value=10;Young adult
+Value=11;Adult woman/man
 Value=66;None of these|Nenhum desses|Hakuna kati hizi
 
 [Item]
 Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
-Name=B1_D
+Name=B2_D
 Start=95
 Len=2
 
 [ValueSet]
 Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
-Name=B1_D_VS1
+Name=B2_D_VS1
 Value=1;Less than 5 years
 Value=2;5 -10 years
 Value=3;More than 10 years
@@ -209,13 +233,13 @@ Value=3;More than 10 years
 Label=C Background|Antecedentes C
 Name=C_BACKGROUND
 RecordTypeValue='C'
-RecordLen=50
+RecordLen=54
 
 [Item]
 Label=How many households?|Quantas famílias?|Kaya ngapi?
 Name=C1
 Start=41
-Len=5
+Len=9
 
 [ValueSet]
 Label=How many households?|Quantas famílias?|Kaya ngapi?
@@ -225,7 +249,7 @@ Value=1:99999
 [Item]
 Label=Is there more or less households in the community now than five years ago?
 Name=C2
-Start=46
+Start=50
 Len=1
 
 [ValueSet]
@@ -238,7 +262,7 @@ Value=3;Same as 5 years ago
 [Item]
 Label=What are the two most widespread economic activities?|Quais são as duas atividades econômicas mais amplas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
 Name=C3
-Start=47
+Start=51
 Len=4
 DataType=Alpha
 
@@ -296,9 +320,10 @@ Len=1
 [ValueSet]
 Label=Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?
 Name=D3_VS1
-Value=1;Yes, national grid|Sim, nacional|Ndio, gridi ya taifa
-Value=2;Yes, local mini grid|Sim, locais mini rede|Ndio, gridi ndogo
-Value=3;No|Não|Hapana
+Value=1;Yes, both national grid and local mini grid
+Value=2;Yes, national grid|Sim, nacional|Ndio, gridi ya taifa
+Value=3;Yes, local mini grid|Sim, locais mini rede|Ndio, gridi ndogo
+Value=4;No|Não|Hapana
 
 [Item]
 Label=What is the main reason why the community is not connected to the grid?|Comunidade conectado à rede nacional ou local?|Community kushikamana na gridi ya taifa au ya ndani?
@@ -437,8 +462,8 @@ Label=How many businesses are connected to the grid?|Quantas empresas estão con
 Name=D14_VS1
 Value=0;None|Nenhum
 Value=1;All businesses|Pequena parte dos negócios|Biashara zote
-Value=2;Most of the businesses|Metade das empresas|Biashara nyingi
-Value=3;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
+Value=2;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
+Value=3;Most of the businesses|Metade das empresas|Biashara nyingi
 Value=4;Small part of the businesses|todas as empresas|Biashara chache
 
 [Item]
@@ -952,10 +977,10 @@ Value=1;Yes|sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Record]
-Label=G Business_Manufacturing
-Name=G_MANUFACTURING
+Label=G Business_Manufacturing_services
+Name=G_MANUFACTURING_SERVICES
 RecordTypeValue='G'
-RecordLen=80
+RecordLen=136
 
 [Item]
 Label=Manufacturing|fabrico|Uzalishaji
@@ -963,7 +988,7 @@ Name=GM
 Start=41
 Len=4
 DataType=Alpha
-Occurrences=10
+Occurrences=24
 
 [Item]
 Label=Business number|número de negócios|idadi ya biashara
@@ -975,16 +1000,30 @@ ItemType=SubItem
 [ValueSet]
 Label=Text From Clipboard|número de negócios
 Name=G1_NO_VS1
-Value=1;Tailor/Shoe Manufacturer/Repair|Fabricante/Reparação De Alfaiate/Sapato|Washonaji/watengenezaji  viatu/matengenezo
-Value=2;Baker/baked goods|Padreiro/Assados|Waoka mikate/bidhaa zilizookwa
-Value=3;Processed food such as coffee, tea, sugar, oil, dry fruits and other  (exclude restaurants, street-food sellers)|Café, chá, açúcar, óleo, frutas secas e outro|Kahawa, chai, sugari, mafuta, matunda yaliyokaushwa, na vyakula vingine vya kusindika
-Value=4;Handcrafts|Artesanato|Kazi za Mikono (Handcrafts)
-Value=5;Furniture|Mobiliarios|Samani
-Value=6;Metal products|Produção De Metal|Bidhaa za Chuma
-Value=7;Household items|Coisas de casa|Vyombo vya Nyumbani
-Value=8;Tools and instruments|Ferramentas/Instrumentos|Vitendeakazi
-Value=9;Bricks|Tijolos|Matofali
-Value=10;Other manufacturing|Outras Manufacturas|Viwanda Vingine
+Value=1;Tailor, shoe manufacturer or shoe repair
+Value=2;Baker or business making baked goods
+Value=3;business making Coffee, tea, sugar, oil, dry fruits and other processed foods
+Value=4;business making Handcrafts
+Value=5;business making Furniture
+Value=6;business making Metal Products
+Value=7;business making Household Items
+Value=8;business making Tools and Instruments
+Value=9;business making Bricks
+Value=10;business doing Other Manufacturing
+Value=11;business Selling food or Groceries (street food sellers, restaurants)
+Value=12;business Selling clothing or household items
+Value=13;business Selling business, computer or phone services
+Value=14;business Selling other goods
+Value=15;business providing Transport
+Value=16;providing Cleaning and washing
+Value=17;Hairdressers or barber shops
+Value=18;Doctor, lawyer, accountant, or other professional services
+Value=19;business Selling or giving service to Solar Home Systems or Solar Lighting Systems
+Value=20;business providing Construction work
+Value=21;Grain or oil mill
+Value=22;Internet or TV caf�
+Value=23;Restaurant, tea or coffee shop
+Value=24;Mobile phone charging or repairing service
 
 [Item]
 Label=Are there any business in this community?|Há qualquer negócio nesta comunidade?|Je, kuna biashara yoyote katika jamii hii?
@@ -1009,71 +1048,6 @@ ItemType=SubItem
 [ValueSet]
 Label=Did this business exist in the community five years ago?|Será que este negócio existe na comunidade há cinco anos?|Je biashara hii zipo katika jamii ya miaka mitano iliyopita?
 Name=G1B_VS1
-Value=1;Yes|sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Record]
-Label=G Business_Service
-Name=G_BUSINESS_SERVICE
-RecordTypeValue='g'
-RecordLen=96
-
-[Item]
-Label=Services|Serviços|huduma
-Name=GS
-Start=41
-Len=4
-DataType=Alpha
-Occurrences=14
-
-[Item]
-Label=G_Business_service
-Name=G2_NO
-Start=41
-Len=2
-ItemType=SubItem
-
-[ValueSet]
-Label=G_Business_service
-Name=G2_NO_VS1
-Value=1;Selling food or groceries (street food sellers, restaurants)|Venda de alimentos ou mantimentos (rua vendedores de alimentos, restaurantes)|Chakula (Mama Lishe, Migahawa)
-Value=2;Selling clothing or household items|Vendendo roupas ou utensílios domésticos|Mavazi au Vifaa vya nyumbani
-Value=3;Selling business/computer/phone services|Vender / computador / serviços de telefone de negócios|Biashara/Komputa/Huduma za simu
-Value=4;Selling other goods|Venda de outros bens|Bidhaa nyingine
-Value=5;Transport|Transporte|Usafiri
-Value=6;Cleaning and washing|Limpeza e lavagem|Usafi na ufuaji
-Value=7;Hairdressers and barber shops|Cabeleireiros e barbearias|Watengeneza nywele na Vinyozi
-Value=8;Doctor, lawyer, accountant, or other professional services|Médico, advogado, contador ou outros serviços profissionais|Huduma za kitaalamu ( Daktari, mwanasheria, mhasibu n.k)
-Value=9;Selling or giving service to solar home services/ligthing systems|Vender ou dar serviço aos serviços domésticos de energia solar / sistemas iluminação solar|Mfumo wa Umeme jua wa nyumbani
-Value=10;Construction|Construção|Ujenzi
-Value=11;Grain /oil mill|Grãos / lagar de azeite|Kusaga nafaka/kukamua mafuta
-Value=12;Internet café|Internet café|Huduma za Mtandao (Intaneti)
-Value=13;Restaurant/tea or coffee shop|Restaurante / chá ou café|Migahawa/chai au duka la kahawa
-Value=14;Mobil phone charging/repairing service|Serviço de carregamento / reparação de telemóveis|Sehemu za kuchajia simu/ sehemu za matengenezo
-
-[Item]
-Label=Businesses providing the following services in this community|Empresas que fornecem os seguintes serviços nesta comunidade|Biashara na kutoa huduma zifuatazo katika jumuiya hii
-Name=G2A
-Start=43
-Len=1
-ItemType=SubItem
-
-[ValueSet]
-Label=Businesses providing the following services in this community|Empresas que fornecem os seguintes serviços nesta comunidade|Biashara na kutoa huduma zifuatazo katika jumuiya hii
-Name=G2A_VS1
-Value=1;Yes|sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Did this type of service exist in the community five years ago|Será que este tipo de serviço existe na comunidade há cinco anos|Je aina hii ya huduma zipo katika jamii ya miaka mitano iliyopita
-Name=G2B
-Start=44
-Len=1
-ItemType=SubItem
-
-[ValueSet]
-Label=Did this type of service exist in the community five years ago|Será que este tipo de serviço existe na comunidade há cinco anos|Je aina hii ya huduma zipo katika jamii ya miaka mitano iliyopita
-Name=G2B_VS1
 Value=1;Yes|sim|Ndiyo
 Value=2;No|Não|Hapana
 

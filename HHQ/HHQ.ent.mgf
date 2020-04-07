@@ -183,9 +183,9 @@ EN(146) To learn about the health impact we would like to ask some questions for
 PT(146) Para saber mais sobre o impacto na saúde, gostaríamos de fazer algumas perguntas para a mesma pessoa que para o uso do tempo (%s).
 SW(146) Ili kujifunza kuhusu athari za afya tunataka kuuliza maswali kwa mtu huyo sawa na matumizi ya muda (%s)
 
-EN(147) To enumerator: \n\n These questions are only to be asked to a woman in the household who is 15 years or older. \n\nTo respondent: \n\n Now we would like to know how safe you feel in different situations. We would like to know how safe you feel today and how safe you felt 5 years ago
-PT(147) Para entrevistador: Estas perguntas só serão feitas a uma mulher na família que é 15 anos ou mais velho. Para respondente: Agora nós gostaríamos de saber como seguro você sente em situações diferentes. Nós gostaríamos de saber como seguro você sente hoje e como seguro você sentia 5 anos atrás
-SW(147) Kwa mdadisi: Maswali haya yanatakiwa kuulizwa kwa mwanamke kwenye kaya mwenye miaka 15 au zaidi. Kwa mhojiwa: Sasa tungependa kujua unajisikia salama kwa kiasi gani katika mazingira tofauti. Tungependa kujua unajisikia salama kiasi gani leo ukilinganisha na miaka mitano iliyopita.
+EN(147) Now we would like to know how safe you feel in different situations. We would like to know how safe you feel today and how safe you felt 5 years ago
+PT(147) Agora nós gostaríamos de saber como seguro você sente em situações diferentes. Nós gostaríamos de saber como seguro você sente hoje e como seguro você sentia 5 anos atrás
+SW(147) Sasa tungependa kujua unajisikia salama kwa kiasi gani katika mazingira tofauti. Tungependa kujua unajisikia salama kiasi gani leo ukilinganisha na miaka mitano iliyopita.
 
 EN(148) If so: How many all together (in working condition)?
 PT(148) Em caso afirmativo: quantos todos juntos (em condições de trabalho)?
@@ -292,7 +292,7 @@ EN(188) Now we would like to ask you for some information on the households expe
 
 EN(189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  \n\n 1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  \n 2. Within your house you need wires that connect appliances to the meter.  This is the wiring. \n 3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. \n\nI would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
 
-EN(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
+N(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
 
 EN(191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
 
@@ -301,3 +301,20 @@ EN(192) The next questions is about the households use of lamps/candles and fuel
 EN(193) We would also like to ask you about the health of %s
 
 EN(194) Could not find case in sample data. Please contact your system administrator
+
+EN(195) May I please have a look at your kitchen? \n\nI would like to record the shape and size of the kitchen. \n\n\nEnumerator: Estimate the size of the cooking space by filling the following fields. One pace = 3 feet or 0.75 metres. Approximately one walking step.
+
+EN(196) In this section we would like to ask you about the kind of stoves you use for cooking and its details.
+
+EN(197) The next questions are about space and water heating
+
+EN(198) or
+PT(198) ou
+SW(198) au
+
+EN(199) who decided to purchase the cookstove
+
+EN(200) Now we would like to ask about security lights in your neighbourhood.
+PT(200) Agora gostar�amos perguntas sobre as luzes de segurança em seu bairro.
+SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
+
