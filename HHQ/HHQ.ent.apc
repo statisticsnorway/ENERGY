@@ -1797,7 +1797,7 @@ postproc
 		reenter;
 	endif;
 
-	if pos("55", $) > 0 or pos("66", $) > 0  then
+	if pos("66", $) > 0  then
 		//"none" is chosen
 		skip to F_FORM;
 	endif;
@@ -1829,6 +1829,10 @@ postproc
 		reenter;
 	endif;
 
+// Don't ask g2b and g2c for other devices
+	if curocc() = 4 and pos("55", G1) > 0 then
+		skip to G3;
+	endif;
 
 
 PROC G2C

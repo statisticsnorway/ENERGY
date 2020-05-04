@@ -438,10 +438,6 @@ Name=AC9
 Start=150
 Len=2
 
-[ValueSet]
-Label=Highest education completed|Qual é o grau mais alto
-Name=AC9_VS1
-
 [Item]
 Label=Main occupation|Ocupação principal
 Name=A2
@@ -1188,7 +1184,7 @@ Value=5;T5||T5
 [Item]
 Label=Electric meter|Casa tem um contador elétrico?
 Name=C23
-Start=154
+Start=152
 Len=1
 
 [ValueSet]
@@ -1201,25 +1197,25 @@ Value=3;No
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
 Name=C24
-Start=156
+Start=153
 Len=2
 
 [Item]
 Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
 Name=C25
-Start=158
+Start=155
 Len=3
 
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
-Start=161
+Start=158
 Len=5
 
 [Item]
 Label=Pre-paid meter|Pré-pago metros
 Name=C27
-Start=155
+Start=163
 Len=1
 
 [ValueSet]
@@ -1231,7 +1227,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
-Start=152
+Start=164
 Len=2
 
 [ValueSet]
@@ -2556,7 +2552,7 @@ Start=103
 Len=2
 
 [Item]
-Label=Avarage price for ...|preço avarage para ...
+Label=Average price for ...|preço avarage para ...
 Name=G2B
 Start=105
 Len=5
@@ -4333,7 +4329,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=The stove is needed for lighting up the house in the evening|O fogão é necessário para relâmpago a casa à noite
 Name=S5
-Start=109
+Start=108
 Len=1
 
 [ValueSet]
@@ -4346,7 +4342,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=The monthly electric bill is or will be a financial burden|A conta de energia elétrica mensal é ou será um encargo financeiro
 Name=S6
-Start=108
+Start=109
 Len=1
 
 [ValueSet]
@@ -4637,10 +4633,11 @@ Len=1
 [ValueSet]
 Label=Has anybody in the household done some piecemeal farm work during the last 12 months?|trabalho agrícola piecemal
 Name=U4_VS1
-Value=1;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
-Value=2;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
-Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 au zaidi
-Value=4;No|Não|Hapana
+Link=343566279
+Value=1;No|Não|Hapana
+Value=2;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
+Value=3;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
+Value=4;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 au zaidi
 
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
@@ -4665,10 +4662,7 @@ Len=1
 [ValueSet]
 Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U6_VS1
-Value=1;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
-Value=2;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
-Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 au zaidi
-Value=4;No|Não|Hapana
+Link=343566279
 
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
@@ -4693,10 +4687,7 @@ Len=1
 [ValueSet]
 Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U8_VS1
-Value=1;Yes, 1 person did|Sim, uma pessoa fez|Ndiyo, mtu 1
-Value=2;Yes, 2-3 people did|Sim, 2-3 pessoas fizeram|Ndiyo, watu 2 hadi 3
-Value=3;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 au zaidi
-Value=4;No|Não|Hapana
+Link=343566279
 
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?

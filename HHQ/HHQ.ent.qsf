@@ -5562,17 +5562,17 @@ EN=}
 [QUESTION]
 Field=HHQ_DICT.O2
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Did \cf2 %currMember%\cf1  have persistent coughing or an illness with a cough at any time in the last 14 days?\par
+EN=\pard\cf1\fs24\lang1033 Did you have persistent coughing or an illness with a cough at any time in the last 14 days?\par
 EN=}
 
 [QUESTION]
 Field=HHQ_DICT.O3
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did \cf2\lang1033 %currMember%\lang1044  \cf1 breath faster than usual with short, rapid breaths or had difficulty breathing?\par
+EN=\pard\cf1\fs24 Did \lang1033 you \lang1044 breath faster than usual with short, rapid breaths or had difficulty breathing?\par
 EN=}
 SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 SW={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
@@ -5588,9 +5588,9 @@ PT=}
 [QUESTION]
 Field=HHQ_DICT.O4
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did \cf2\lang1033 %currMember%\cf1\lang1044  experience a problem in the chest or a blocked or runny nose?\cf3\par
+EN=\pard\cf1\fs24 Did \lang1033 you \lang1044 experience a problem in the chest or a blocked or runny nose?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
@@ -5606,9 +5606,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.O5
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did \cf2\lang1033 %currMember%\cf1\lang1044  have an eye irritation or eye problems in the last 14 days?\cf3\par
+EN=\pard\cf1\fs24 Did \lang1033 you \lang1044 have an eye irritation or eye problems in the last 14 days?\cf2\par
 EN=}
 PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
 PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
@@ -5624,9 +5624,9 @@ SW=}
 [QUESTION]
 Field=HHQ_DICT.O6
 EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
+EN={\colortbl ;\red0\green0\blue0;}
 EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Did \cf2\lang1033 %currMember%\cf1\lang1044  go to see a doctor/clinic for the illness?\par
+EN=\pard\cf1\fs24 Did \lang1033 you \lang1044 go to see a doctor/clinic for the illness?\par
 EN=}
 
 [QUESTION]
