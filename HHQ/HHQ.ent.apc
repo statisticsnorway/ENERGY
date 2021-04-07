@@ -354,7 +354,6 @@ preproc
 		currMember = AA14;	//To set CAPI question
 	endif;
 
-
 postproc
 
 	if $ = 2 or $ = 3 then
@@ -1036,7 +1035,7 @@ onfocus;
 	elseif getlanguage() = "PT" then
 		electricityCompany = "EDM";
 	endif;
-//	errmsg("Electricity: %s", electricityCompany);
+//	errmsg("Electricity: %s, language: %s", electricityCompany,getlanguage());
 PROC C17
 
 	if $ > B1 then
