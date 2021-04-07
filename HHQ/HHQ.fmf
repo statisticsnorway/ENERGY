@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Name=HHQ_FF
 Label=HHQ
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -619,7 +619,6 @@ Required=Yes
 Name=AA_FORM
 Label=Interview particulars
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -1060,7 +1059,6 @@ Required=No
 Name=AB_AC_FORM
 Label=Household members - sections AB and AC
 Form=2
-LogicControl=No
 Type=Record
 TypeName=AB_HOUSEHOLD_MEMBERS_REC
 Max=20
@@ -1340,7 +1338,6 @@ Required=Yes
 Name=B_FORM
 Label=B - Household Characteristics
 Form=3
-LogicControl=No
 Max=1
   
 [Field]
@@ -1632,7 +1629,6 @@ Required=Yes
 Name=C1_FORM
 Label=C supply and demand for electricity
 Form=4
-LogicControl=No
 Max=1
   
 [Field]
@@ -2300,7 +2296,6 @@ Required=Yes
 Name=C2_FORM
 Label=C - Solar based devices and solar home systems
 Form=5
-LogicControl=No
 Max=1
   
 [Field]
@@ -2764,7 +2759,6 @@ Required=Yes
 Name=C3_FORM
 Label=C - Electric generator set
 Form=6
-LogicControl=No
 Max=1
   
 [Field]
@@ -3062,7 +3056,6 @@ Required=Yes
 Name=C4_FORM
 Label=C - externally recharged battery
 Form=7
-LogicControl=No
 Max=1
   
 [Field]
@@ -3269,7 +3262,6 @@ Required=Yes
 Name=C5_FORM
 Label=C - Main source of energy for charging mobile phone
 Form=8
-LogicControl=No
 Max=1
   
 [Field]
@@ -3366,7 +3358,6 @@ Required=Yes
 Name=D_FORM
 Label=D - willingness to pay for a grid connection
 Form=9
-LogicControl=No
 Max=1
   
 [Field]
@@ -3427,7 +3418,6 @@ Required=Yes
 Name=E_FORM
 Label=E - Willingness to pay for solar device
 Form=10
-LogicControl=No
 Max=1
   
 [Field]
@@ -3475,7 +3465,6 @@ Required=No
 Name=G_FORM
 Label=G - Dry-cell batteries
 Form=11
-LogicControl=No
 Max=1
   
 [Field]
@@ -3616,7 +3605,6 @@ Required=Yes
 Name=F_FORM
 Label=F- Kerosene/fuel-based/candle lighting
 Form=12
-LogicControl=No
 Max=1
   
 [Field]
@@ -3813,7 +3801,6 @@ Required=Yes
 Name=I_FORM
 Label=I - Use of cooking solutions
 Form=13
-LogicControl=No
 Max=1
   
 [Field]
@@ -4534,7 +4521,6 @@ Required=Yes
 Name=O_FORM
 Label=O Health Impacts
 Form=14
-LogicControl=No
 Max=1
   
 [Field]
@@ -4698,7 +4684,6 @@ Required=Yes
 Name=K_FORM
 Label=K - Willingness to pay for improved cookstove
 Form=15
-LogicControl=No
 Max=1
   
 [Field]
@@ -4759,7 +4744,6 @@ Required=Yes
 Name=J_FORM
 Label=J - Space and water heating
 Form=16
-LogicControl=No
 Max=1
   
 [Field]
@@ -4833,7 +4817,6 @@ Required=Yes
 Name=L_FORM
 Label=L - Household assets
 Form=17
-LogicControl=No
 Max=1
   
 [Field]
@@ -5139,7 +5122,6 @@ Required=Yes
 Name=M_FORM
 Label=M - Street Lightning
 Form=18
-LogicControl=No
 Max=1
   
 [Field]
@@ -5187,7 +5169,6 @@ Required=Yes
 Name=N_FORM
 Label=N - Time use
 Form=19
-LogicControl=No
 Max=1
   
 [Grid]
@@ -6034,7 +6015,6 @@ Required=Yes
 Name=Q_FORM
 Label=Q - consumption/expendityre
 Form=20
-LogicControl=No
 Max=1
   
 [Field]
@@ -6257,7 +6237,6 @@ Required=Yes
 Name=S_FORM
 Label=S - attitudes
 Form=21
-LogicControl=No
 Max=1
   
 [Field]
@@ -6357,7 +6336,6 @@ Required=Yes
 Name=U_FORM
 Label=U - Livelihood means
 Form=22
-LogicControl=No
 Max=1
   
 [Field]
@@ -6940,7 +6918,6 @@ Required=Yes
 Name=T_FORM
 Label=T - Women's empowerment
 Form=23
-LogicControl=No
 Max=1
   
 [Field]
@@ -7001,7 +6978,6 @@ Required=Yes
 Name=W_FORM
 Label=W - Social Life and Security
 Form=24
-LogicControl=No
 Max=1
   
 [Field]
@@ -7146,7 +7122,6 @@ Required=Yes
 Name=AA_END_FORM
 Label=AA - Interview particulars. End of quest
 Form=25
-LogicControl=No
 Max=1
   
 [Field]

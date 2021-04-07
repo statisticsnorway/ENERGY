@@ -485,7 +485,7 @@ PROC AB6
 
 preproc
 
-	if AB5 < 12 then
+	if AB5 < 15 then
 		$ = 8;
 		skip to AC1;
 	endif;

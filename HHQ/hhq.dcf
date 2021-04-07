@@ -294,11 +294,13 @@ Len=1
 Label=Marital status|Estado civil
 Name=AB6_VS1
 Value=1;Never married|Nunca se casou|Hajawahi kuoa/Kuolewa
-Value=2;Married|Casado/a|Ameoa/Ameolewa
-Value=3;Widowed|Viúva/o|Mjane/Mgane
-Value=4;Separated|Separado/a|Wametengana
-Value=5;Divorced|Divorciado/a|Wameachana
-Value=8;Not applicable (less than 12 yrs)|Não aplicável (menos de 12 anos)|Haihusiki
+Value=2;Monogamous married|Casado/a|Ameoa/Ameolewa
+Value=3;Polygamous married|Casado/a|Ameoa/Ameolewa
+Value=4;Living together
+Value=5;Widow(er)|Viúva/o|Mjane/Mgane
+Value=6;Separated|Separado/a|Wametengana
+Value=7;Divorced|Divorciado/a|Wameachana
+Value=8;Not applicable (less than 15 yrs)|Não aplicável (menos de 15 anos)|Haihusiki
 
 [Item]
 Label=Literacy read and write|Pode ler e escrever uma frase
@@ -741,10 +743,13 @@ Len=2
 [ValueSet]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
 Name=B12_VS1
-Link=87677111
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-Value=88;Don't know|Não sabe|Hajui
+Value=1;None
+Value=2;Boil
+Value=3;Add bleach/chlorone
+Value=4;Use a water fileter
+Value=5;Solar disinfection
+Value=6;Let it stand and settle
+Value=7;Other
 
 [Item]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
@@ -1105,7 +1110,10 @@ Len=2
 [ValueSet]
 Label=Expect to get grid connection|Espera obter conexão de rede?
 Name=C14_VS1
-Link=87677111
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+Value=88;Don't know|Não sabe|Hajui
+
 
 [Item]
 Label=Time at grid connection|Que mês e ano espera obter conexão de rede?
