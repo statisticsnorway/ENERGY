@@ -498,10 +498,16 @@ preproc
 	if AB5 < 6 then //Only ask those 6  years and above for the rest of the section
 		skip to next;
 	endif;
-
-
-
-
+	
+	if getlanguage() = "EN" and country = "TZ" then
+		setvalueset($,READ_EN_TZ);
+	elseif getlanguage() = "SW" and country = "TZ" then
+		setvalueset($,READ_TZ);
+	elseif getlanguage() = "EN"  and country = "MZ" then
+		setvalueset($,READ_EN_MZ);
+	elseif getlanguage() = "PT"  and country = "MZ" then
+		setvalueset($,READ_MZ);
+	endif;
 
 PROC AC2
 
@@ -521,11 +527,13 @@ PROC AC3
 
 PROC AC4
 preproc
-	if getlanguage() = "EN" then
-		setvalueset($,EDUC_EN);
-	elseif getlanguage() = "SW" then
+	if getlanguage() = "EN" and country = "TZ" then
+		setvalueset($,EDUC_EN_TZ);
+	elseif getlanguage() = "SW" and country = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "PT" then
+	elseif getlanguage() = "EN"  and country = "MZ" then
+		setvalueset($,EDUC_EN_MZ);
+	elseif getlanguage() = "PT"  and country = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -572,11 +580,13 @@ postproc
 
 PROC AC8
 preproc
-	if getlanguage() = "EN" then
-		setvalueset($,EDUC_EN);
-	elseif getlanguage() = "SW" then
+	if getlanguage() = "EN" and country = "TZ" then
+		setvalueset($,EDUC_EN_TZ);
+	elseif getlanguage() = "SW" and country = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "PT" then
+	elseif getlanguage() = "EN"  and country = "MZ" then
+		setvalueset($,EDUC_EN_MZ);
+	elseif getlanguage() = "PT"  and country = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -683,7 +693,7 @@ preproc
 			highestAge = ab5(k);
 			oldestMember=memberNumbers(k);
 		endif;
-		if aCode(k) = 0 then 
+		if aCode(k) = 0 then
 			aCode(k) = NOTAPPL;
 			aLabel(k) = "";
 		endif;
@@ -1124,7 +1134,7 @@ preproc
 
 
 PROC C30
-preproc 
+preproc
 	if C27 = 1 then
 		skip to C33;
 	endif;
@@ -1431,7 +1441,7 @@ PROC C92
 
 PROC C93
 
-	if pos("44", $) > 0 and length(strip($)) > 2 then
+	if pos("q", $) > 0 and length(strip($)) > 1 then
 		errmsg(tr(142));
 		reenter;
 	endif;
@@ -1535,7 +1545,7 @@ preproc
 
 PROC C113
 
-	if pos("77", $) > 0 and length(strip($)) > 2 then
+	if pos("q", $) > 0 and length(strip($)) > 1 then
 		errmsg(tr(142));
 		reenter;
 	endif;
@@ -2171,7 +2181,7 @@ PROC I23
 PROC I25
 
 	fueltype1 = getvaluelabel($);
-	If $ in 18, 66, 55 then
+	If $ in 18, 99, 55 then
 		skip to I29 ;
 	endif;
 	If $ in 13 then
@@ -2197,7 +2207,7 @@ PROC I28
 
 preproc
 
-	if i26 in 13, 18, 55, 66 then
+	if i26 in 13, 18, 55, 99 then
 		skip to i29;
 	endif;
 
