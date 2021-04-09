@@ -79,6 +79,11 @@ preproc
 
 
 PROC B2_A
+preproc
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(200);
+	endif;
+
 postproc
  if $ = "" and curocc() > 1 then	//finished
   	B_ID = NOTAPPL;

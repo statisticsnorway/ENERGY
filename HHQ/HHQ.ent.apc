@@ -1,4 +1,7 @@
 ﻿PROC GLOBAL
+    
+	// This is supposed to be set only in the Menu application
+	String country = "TZ";
 
 	//Country specific variables
 	numeric gridPrice = 3700;	//country specific price to connect to the grid
@@ -51,6 +54,7 @@
 	string  chosenChildName; // Name of chosen child for O section (health)
 	numeric schoolBoys = 0;
 	numeric schoolGirls = 0;
+	string electricityCompany;
 
 	Array memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
 	Array String memberNames(20);
@@ -600,11 +604,13 @@ postproc
 
 PROC AC9
 preproc
-	if getlanguage() = "EN" then
-		setvalueset($,EDUC_EN);
-	elseif getlanguage() = "SW" then
+	if getlanguage() = "EN" and country= "TZ" then
+		setvalueset($,EDUC_EN_TZ);
+	elseif getlanguage() = "SW" and country= "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "PT" then
+	elseif getlanguage() = "PT" and country= "MZ" then
+		setvalueset($,EDUC_EN_MZ);
+	elseif getlanguage() = "PT" and country= "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -1036,7 +1042,6 @@ preproc
 		errmsg(174);
 	endif;
 onfocus;
-	string electricityCompany;
 
 	if getlanguage() = "EN" then
 		electricityCompany = "Tanzania: TANESCO/REA, Mozambique: EDM";
@@ -3266,6 +3271,30 @@ preproc
 
 
 
+PROC GP1
+postproc
+
+	if $ = 2 then 
+		skip to GP5;
+	endif;	
+PROC GP18
+postproc
+
+	if $ = 1 then 
+		skip to GP20;
+	endif;	
+PROC GP20
+postproc
+
+	if $ = 2 then 
+		skip to GP23;
+	endif;	
+PROC X1
+postproc
+
+	if $ = 2 then 
+		skip to AA_END_FORM;
+	endif;	
 PROC AA20
 
 preproc
