@@ -46,10 +46,6 @@ SW (13) Umbali kwenda katikati ya wilaya hauwezi ukawa mrefu zaidi ya kwenda mji
 EN (14) %s hours is more than possible day light hours.
 SW (14) Masaa %s ni zaidi ya masaa ya mchana.
 
-EN (15) We would like to make an interview with a small group being the village chief (or another authority) and 2 other persons in the community. You will hand over a paper version of the questionnaire to the community when you arrive in the village. Then you ask him to look at the questions, ask him/her to gather information from people in the village that have knowledge about energy supply, health, education, agriculture, business and manufacturing and to find two other persons who could join you for the interview. Ideally this should be at least one woman and young person below 25 years.
-SW (15) Tunapenda kufanya mahojiano na watu 5-7 kutoka katika jamii hii. Tunatumaini Chifu/Mwenyekiti anaweza kushiriki. kwa kuongezea tunapenda uandae watu wenye ufaham mzuri na kama inawezekana watu wenye uzoefu na mambo ya ugawaji wa umeme/nishati, afya, elimu, kilimo,biashara na uzalishaji.Angalau kuwe na wanawake 2 na watu 2 wenye umri chini ya miaka 25 kati yao. Tungependa kuanza kwa kusikiliza baadhi ya taarifa kuhusu historia ya juu ya jinsi, umri, utaalam wao na idadi ya miaka ambayo kila mmoja ameishi katika jamii hii.
-PT (15) Gostaríamos de fazer uma entrevista em grupo com 5-7 pessoas desta comunidade. Esperamos que o chefe/presidente possa participar. Além disso, gostaríamos que você organizasse um grupo com bons conhecimentos e, se possível, até mesmo experiência em fornecimento de energia, saúde, educação, agricultura, negócios e manufatura. Deve haver pelo menos duas mulheres e duas pessoas com menos de 25 anos de idade no grupo. Gostaríamos de começar listando algumas informações sobre o histórico dessas pessoas em relação a gênero, idade, especialidade e número de anos que cada um de vocês viveu nessa comunidade.
-
 EN (16) CAPI: Ask respondent first about the worst months and then about a typical month for D15-D20. If no seasonal changes, ask only about typical month. Ask questions by row.
 SW (16) CAPI: Muulize mhojiwa kuhusu mwezi mbaya zaidi halafu mwezi wa kawaida kwa maswali D15-D20. Kama hakuna mabadililo katika msimu, uliza tu kuhusu mwezi wa kawaida, Uliza maswali kwa kufuata ro.
 PT (16) CAPI: Pergunte ao entrevistado primeiro sobre os piores meses e, em seguida, sobre um mês típico para o D15-D20. Se não houver mudanças sazonais, pergunte apenas sobre o mês típico. Faça perguntas por linha..
@@ -82,14 +78,31 @@ PT(104) Não
 SW(103) Ndio
 SW(104) Hapana
 
-EN(201) First we start with some questions about the people living in this community
+EN(200) These questions should be asked to Knowledgable or Persons working at that particular community
+
+EN(201) Thank you for participating in this Impact of Access to Sustainable Energy Survey. As well as interviewing some of the households in this community, we would like the participants in this group to answer some questions about the community as a whole. We would like you to have an open discussion about the questions and agree on an answer. \n\nFirst we would like to know a little bit about the participants in this group.
 
 EN(202) Now we continue with the main topic for this survey, which is electricity.
 
-EN(203) Now we would like to know more about the access to the community and to various service infrastructures that are available in this community.
+EN(203) Has any of the following programs been implemented in the community in the last 5 years?
 
-EN(204) We would now like to know about the presence of different types of businesses and services in this community. \n\nWe would like to know both about the situation today and 5 years ago.
+EN(204) Now we would like to know more about the access to the community and to various service infrastructures that are available in this community.
 
-EN(205) Now we would like to know what kind of cookstoves that are used in this community.
+EN(205) We would now like to know about the presence of  markets, educational institutions and health services in this community.
 
-EN(206) Now we would like to know whether there are any community street lights, security lights or private lights outside businesses or private homes.
+EN(206) We would now like to know about the presence of different types of businesses and services in this community. \n\nWe would like to know both about the situation today and 5 years ago.
+
+EN(207) Now we would like to know what kind of cookstoves that are used in this community.
+
+EN(208) An improved cooking stove can reduce the fuel consumption significantly. It can also reduce the smoke. Possibly, the cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. \n\nWe would now like to know if such ovens are being used in this community.
+
+EN(209) Now we would like to know whether there are any community street lights, security lights or private lights outside businesses or private homes.
+
+EN(301) Tan: TANESCO, Moz: EDM
+PT(301) EDM
+SW(301) TANESCO
+
+EN(302) Over the past 5 years
+
+EN(303) Since the community first got access to the grid
+
