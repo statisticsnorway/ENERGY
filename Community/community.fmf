@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Name=COMMUNITY_FF
 Label=community
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -174,7 +174,6 @@ Required=Yes
 Name=COMMUNITY_QUEST_FORM
 Label=community questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -458,7 +457,6 @@ Required=Yes
 Name=GROUP_C
 Label=C Background
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -505,7 +503,6 @@ Required=Yes
 Name=GROUP_D
 Label=D Supply of electricity
 Form=3
-LogicControl=No
 Max=1
   
 [Field]
@@ -984,7 +981,6 @@ Required=Yes
 Name=GROUP_H
 Label=H Development project
 Form=4
-LogicControl=No
 Max=1
   
 [Field]
@@ -1058,7 +1054,6 @@ Required=Yes
 Name=GROUP_F
 Label=F Infrastructure
 Form=5
-LogicControl=No
 Max=1
   
 [Field]
@@ -1167,7 +1162,6 @@ Required=Yes
 Name=GROUP_F2
 Label=F Infrastructure (2)
 Form=6
-LogicControl=No
 Max=1
   
 [Grid]
@@ -1346,7 +1340,6 @@ Required=Yes
 Name=GROUP_G
 Label=G Business and sevices
 Form=7
-LogicControl=No
 Max=1
   
 [Grid]
@@ -1555,7 +1548,6 @@ Required=Yes
 Name=GROUP_I
 Label=I Cooking
 Form=8
-LogicControl=No
 Max=1
   
 [Field]
@@ -1681,7 +1673,6 @@ Required=Yes
 Name=GROUP_J
 Label=J Street lighting
 Form=9
-LogicControl=No
 Max=1
   
 [Field]
