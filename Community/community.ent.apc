@@ -80,7 +80,7 @@ preproc
 
 PROC B2_A
 preproc
-	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+	If (ispartial() and $ = "") or !ispartial() then
 		errmsg(200);
 	endif;
 
