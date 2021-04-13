@@ -4928,7 +4928,7 @@ Value=4;Not applicable|Não aplicável|Haihusiki
 Label=GP Global Pandemic
 Name=GP_GLOBAL_PANDEMIC
 RecordTypeValue='V'
-RecordLen=305
+RecordLen=315
 
 [Item]
 Label=Has anybody 12 years or above in this household changed their main occupation over the last year during the global pandemic up to today
@@ -4999,7 +4999,7 @@ ItemType=SubItem
 Label=Value Set 0
 Name=GP4_VS1
 Value=11;Agriculture - crops/forestry
-Value=12;Agriculture � animal husbandry
+Value=12;Agriculture - animal husbandry
 Value=13;Fishing
 Value=14;Mining & quarrying
 Value=15;Manufacturing
@@ -5317,23 +5317,24 @@ Link=326777112
 Label=Did you have to close down any household  production over the last year during the global pandemic up to today?
 Name=GP26
 Start=288
-Len=1
+Len=6
+DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=GP26_VS1
-Value=1;Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc
-Value=2;Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc
-Value=3;Yes, own a trading or service business on a street or in a market
-Value=4;Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services
-Value=5;Yes, own a bar or restaurant
-Value=6;Yes, own any other non-agricultural business, even if it is a small business run from home or on a street
-Value=7;No
+Value='1     ';Yes, agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran
+Value='2     ';Yes, livestock by-products (milk, cheese)
+Value='3     ';Yes, fresh/processed fish
+Value='4     ';Yes, firewood, home-made charcoal
+Value='5     ';Yes, construction timber, wood-poles or other construction material
+Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass
+Value='7     ';No
 
 [Item]
 Label=Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
 Name=GP27
-Start=289
+Start=294
 Len=1
 
 [ValueSet]
@@ -5344,7 +5345,7 @@ Link=133482376
 [Item]
 Label=Livestock by-products (milk, cheese)
 Name=GP28
-Start=290
+Start=295
 Len=1
 
 [ValueSet]
@@ -5355,7 +5356,7 @@ Link=133482376
 [Item]
 Label=Fresh/processed fish
 Name=GP29
-Start=291
+Start=296
 Len=1
 
 [ValueSet]
@@ -5366,7 +5367,7 @@ Link=133482376
 [Item]
 Label=Firewood, home-made charcoal
 Name=GP30
-Start=292
+Start=297
 Len=1
 
 [ValueSet]
@@ -5377,7 +5378,7 @@ Link=133482376
 [Item]
 Label=Construction timber, wood-poles or other construction material
 Name=GP31
-Start=293
+Start=298
 Len=1
 
 [ValueSet]
@@ -5388,7 +5389,7 @@ Link=133482376
 [Item]
 Label=Did you have to close down any household business or service over the last year during the global pandemic up to today?
 Name=GP32
-Start=294
+Start=299
 Len=1
 
 [ValueSet]
@@ -5399,24 +5400,25 @@ Link=133482376
 [Item]
 Label=Did you close down any [BUSINESS] or any [SERVICE]?
 Name=GP33
-Start=295
-Len=1
+Start=300
+Len=6
+DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=GP33_VS1
-Value=1;Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc
-Value=2;Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc
-Value=3;Yes, own a trading or service business on a street or in a market
-Value=4;Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services
-Value=5;Yes, own a bar or restaurant
-Value=6;Yes, own any other non-agricultural business, even if it is a small business run from home or on a street
-Value=7;No
+Value='1     ';Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc
+Value='2     ';Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc
+Value='3     ';Yes, own a trading or service business on a street or in a market
+Value='4     ';Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services
+Value='5     ';Yes, own a bar or restaurant
+Value='6     ';Yes, own any other non-agricultural business, even if it is a small business run from home or on a street
+Value='7     ';No
 
 [Item]
 Label=offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
 Name=GP34
-Start=296
+Start=306
 Len=1
 
 [ValueSet]
@@ -5427,7 +5429,7 @@ Link=133482376
 [Item]
 Label=run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
 Name=GP35
-Start=297
+Start=307
 Len=1
 
 [ValueSet]
@@ -5438,7 +5440,7 @@ Link=133482376
 [Item]
 Label=own a trading or service business on a street or in a market?
 Name=GP36
-Start=298
+Start=308
 Len=1
 
 [ValueSet]
@@ -5449,7 +5451,7 @@ Link=133482376
 [Item]
 Label=drive a household-owned taxi or pick-up truck to provide transportation or moving services?
 Name=GP37
-Start=299
+Start=309
 Len=1
 
 [ValueSet]
@@ -5460,7 +5462,7 @@ Link=133482376
 [Item]
 Label=own a bar or restaurant?
 Name=GP38
-Start=300
+Start=310
 Len=1
 
 [ValueSet]
@@ -5471,7 +5473,7 @@ Link=133482376
 [Item]
 Label=own any other non-agricultural business, even if it is a small business run from home or on a street?
 Name=GP39
-Start=301
+Start=311
 Len=1
 
 [ValueSet]
@@ -5482,7 +5484,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some piecemeal farm work before the global pandemic started last year
 Name=GP40
-Start=302
+Start=312
 Len=1
 
 [ValueSet]
@@ -5493,7 +5495,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?
 Name=GP41
-Start=303
+Start=313
 Len=1
 
 [ValueSet]
@@ -5504,7 +5506,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some public work (for the government, donors, charities) such as cash-for-work before the global pandemic started last year?
 Name=GP42
-Start=304
+Start=314
 Len=1
 
 [ValueSet]
@@ -5515,7 +5517,7 @@ Link=133482376
 [Item]
 Label=Did anybody in this household go for work outside the community before the global pandemic started last year?
 Name=GP43
-Start=305
+Start=315
 Len=1
 
 [ValueSet]
@@ -5534,6 +5536,11 @@ Label=Is it all right with you that INE/NBS contact you by telephone
 Name=X1
 Start=103
 Len=1
+
+[ValueSet]
+Label=Is it all right with you that INE/NBS contact you by telephone
+Name=X1_VS2
+Link=133482376
 
 [Item]
 Label=Telephone number 1

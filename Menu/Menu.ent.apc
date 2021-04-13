@@ -101,7 +101,7 @@ PROC GLOBAL
 
 	//upload (put) the paradata files to the server
 	//This function is currently not in use. Keeping it in case we decide to use it after all
-	function syncParadata()
+	function syncTheParadata()
 		if syncconnect(CSWeb, "http://197.249.5.210:8080/energia/api") = 1 then
 		//if syncconnect(Dropbox) then	//Synching to dropbox for debugging
 
@@ -762,7 +762,7 @@ postproc
 {	elseif $ = 8 then 		//Upload paradata
 		string para = prompt(maketext(tr(6)), numeric);
 		if para = "1" then
-			syncParadata();
+			syncTheParadata();
 		endif;
 		$ = NOTAPPL;
 		reenter;

@@ -7203,10 +7203,10 @@ Text=GP1
   
 [Field]
 Name=GP_MEM
-Position=147,90,517,110
+Position=147,90,708,110
 Item=GP_MEM,HHQ_DICT
 FieldLabelType=DictionaryName
-UseUnicodeTextBox=Yes
+DataCaptureType=CheckBox
 Form=25
   
 [Text]
@@ -7666,10 +7666,10 @@ Text=GP25
   
 [Field]
 Name=GP26
-Position=458,687,473,707
+Position=458,687,543,707
 Item=GP26,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=25
   
 [Text]
@@ -7757,10 +7757,10 @@ Text=GP32
   
 [Field]
 Name=GP33
-Position=867,224,882,244
+Position=867,224,952,244
 Item=GP33,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=25
   
 [Text]
@@ -7911,6 +7911,7 @@ Name=X1
 Position=271,54,286,74
 Item=X1,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=26
   
 [Text]
@@ -7922,6 +7923,7 @@ Text=X1
 Name=X2_1
 Position=168,89,337,109
 Item=X2_1,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=26
   
@@ -7934,6 +7936,7 @@ Text=X2_1
 Name=X2_2
 Position=169,119,338,139
 Item=X2_2,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=26
   
@@ -7946,6 +7949,7 @@ Text=X2_2
 Name=X2_3
 Position=168,152,337,172
 Item=X2_3,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=26
   

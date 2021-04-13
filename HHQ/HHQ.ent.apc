@@ -736,7 +736,7 @@ postproc
 
 PROC B2
 
-	//	skip to W_FORM;
+//	skip to GP_FORM;
 
 	if $ in 1,3,6 then
 		skip to B4;
@@ -3317,9 +3317,72 @@ postproc
 	if $ = 2 then
 		skip to GP23;
 	endif;	
+PROC GP27
+preproc
+ if pos("1", GP26) = 0 then
+  skip to GP28;
+ endif; 
+PROC GP28
+preproc
+ if pos("2", GP26) = 0 then
+  skip to GP29;
+ endif; 
+PROC GP29
+preproc
+ if pos("3", GP26) = 0 then
+  skip to GP30;
+ endif; 
+PROC GP30
+preproc
+ if pos("4", GP26) = 0 then
+  skip to GP31;
+ endif; 
+PROC GP31
+preproc
+ if pos("5", GP26) = 0 then
+  skip to GP32;
+ endif; 
+PROC GP32
+preproc
+ if pos("6", GP26) = 0 then
+  skip to GP33;
+ endif; 
+PROC GP34
+preproc
+ if pos("1", GP33) = 0 then
+  skip to GP35;
+ endif; 
+PROC GP35
+preproc
+ if pos("2", GP33) = 0 then
+  skip to GP36;
+ endif; 
+PROC GP36
+preproc
+ if pos("3", GP33) = 0 then
+  skip to GP37;
+ endif; 
+PROC GP37
+preproc
+ if pos("4", GP33) = 0 then
+  skip to GP38;
+ endif; 
+PROC GP38
+preproc
+ if pos("5", GP33) = 0 then
+  skip to GP39;
+ endif; 
+PROC GP39
+preproc
+ if pos("6", GP33) = 0 then
+  skip to GP40;
+ endif; 
+PROC X_FORM
+ if c128 < 1 then
+  skip to AA_END_FORM;
+ endif; 
 PROC X1
 postproc
-
 	if $ = 2 then
 		skip to AA_END_FORM;
 	endif;	
