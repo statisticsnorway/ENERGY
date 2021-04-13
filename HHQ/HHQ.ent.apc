@@ -1,8 +1,8 @@
 ﻿PROC GLOBAL
-    
-	// This is supposed to be set only in the Menu application
-	String country = "TZ";
 
+	// This is supposed to be set only in the Menu application
+	//String country = sysparm("country");
+    String country = "TZ";
 	//Country specific variables
 	numeric gridPrice = 3700;	//country specific price to connect to the grid
 	numeric highDevicePrice = 5000;//Country specific prices for solar devices
@@ -18,6 +18,7 @@
 
 	//Variables to use in the CAPI question. Has to be globally declared
 	string currMember;
+	string Member12AndAbove; // Membername person 12 years and above
 	string solarDeviceType; // Type of solar home system, used in second C section
 	string mainElSource;
 	string lampType;
@@ -56,7 +57,7 @@
 	numeric schoolGirls = 0;
 	string electricityCompany;
 
-	Array memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
+	Array numeric memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
 	Array String memberNames(20);
 	//Setting the person to answer
 	array aCode(20); // Keeping the list of adults, max 20
@@ -69,6 +70,10 @@
 	Array numeric childrenNos(20);
 	Array String childrenNames(20);
 	numeric childCount = 0; // child counter
+
+	Array string persons12AndAboveNos(20);
+	Array String persons12AndAboveNames(20);
+	numeric persons12AndAboveCount = 0; // Persons 12 year and above, counter
 
 
 	array numeric powerSources(9);
@@ -468,12 +473,21 @@ postproc
 		endif;
 	endif;
 
+// Children
 	if $ >= 0 and $ < 16 then
 		inc(childCount);
 		inc(hhDemographics(7));
 		childrenNos(childCount) = curocc($);
 		childrenNames(childCount) = AB1;
 //		errmsg("childrenNos: %d, childrenNames: %S",childrenNos(childCount),childrenNames(childCount))
+	endif;
+
+// Persons 12 years and above
+	if $ >= 12 then
+		inc(persons12AndAboveCount);
+		persons12AndAboveNos(persons12AndAboveCount) = maketext("%02d",curocc($));
+		persons12AndAboveNames(persons12AndAboveCount) = AB1;
+//		errmsg("persons12AndAboveNos: %d, persons12AndAboveNames: %S",persons12AndAboveNos(persons12AndAboveCount),persons12AndAboveNames(persons12AndAboveCount))
 	endif;
 
 	//make a valueset for adult hh members as this question is asked frequently
@@ -3274,25 +3288,39 @@ preproc
 PROC GP1
 postproc
 
-	if $ = 2 then 
+	if $ = 2 then
 		skip to GP5;
 	endif;	
+PROC GP_MEM
+preproc
+	setValueset($, persons12AndAboveNos, persons12AndAboveNames);
+PROC GP2
+preproc
+    $ = GP_MEM[(curocc()*2)-1:2];
+	Member12AndAbove = getlabel(GP_MEM,$);
+	if $ <> "" then
+	 skip;
+	else
+     skip to next;
+	endif;
+
+
 PROC GP18
 postproc
 
-	if $ = 1 then 
+	if $ = 1 then
 		skip to GP20;
 	endif;	
 PROC GP20
 postproc
 
-	if $ = 2 then 
+	if $ = 2 then
 		skip to GP23;
 	endif;	
 PROC X1
 postproc
 
-	if $ = 2 then 
+	if $ = 2 then
 		skip to AA_END_FORM;
 	endif;	
 PROC AA20

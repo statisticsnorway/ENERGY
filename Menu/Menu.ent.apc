@@ -476,14 +476,14 @@ PROC GLOBAL
 			numeric spos = pos(";", HH);
 			string head = HH[1:spos-1];
 			string location = HH[spos+1];
-			
+
 			numeric found = 0;
-			
+
 			forcase HHQ_DICT do
 				if tstrip(AA14) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
 						and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
 						and AA3 = visualValue(M_SUBDISTRICT) and AA4 = visualValue(M_LOCALITY) and AA5 = visualValue(M_VILLAGE)
-						and AA6 = visualvalue(M_EA) and AA8 = serialNo 						
+						and AA6 = visualvalue(M_EA) and AA8 = serialNo
 						and tstrip(AALOGIN) = tstrip(M_LOGIN) then
 					found = 1;
 					break;
@@ -529,7 +529,7 @@ PROC GLOBAL
 		endif;
 		pffContent = pffContent + "FullScreen=Yes\n";	//experimental..
 		//pffContent = pffContent + "Lock=CaseListing\n";	//Also experimental
-		
+
 		if questName = "Menu" then
 			pffContent = pffContent + "ShowInApplicationListing=Always\n\n";
 		else
@@ -540,12 +540,12 @@ PROC GLOBAL
 		pffContent = pffContent + "Application=./" + questName + ".ent\n";
 		pffContent = pffContent + "InputData=../Data/" + questName + ".csdb|CSPRODB\n";
 		pffContent = pffContent + "Paradata=../Data/" + questName + "_" + getDeviceId() +  ".cslog\n\n";
-		
+
 		if questName = "HHQ" then
 			pffContent = pffContent + "[ExternalFiles]\n";
 			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n\n";
 		endif;
-		
+
 		if questName = "Menu" then
 			pffContent = pffContent + "[ExternalFiles]\n";
 			pffContent = pffContent + "COMMUNITY_DICT=..\Data\Community.csdb|CSPRODB\n";
@@ -555,7 +555,7 @@ PROC GLOBAL
 			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n";
 			pffContent = pffContent + "USERS_DICT=..\LookupFiles\Users.csdb|CSPRODB\n\n";
 		endif;
-		
+
 		pffContent = pffContent + "[Parameters]\n";
 		pffContent = pffContent + "LOGIN=" + M_LOGIN + "\n";
 		pffContent = pffContent + "REGION=" + edit("ZZ", visualvalue(M_REGION)) + "\n";
@@ -567,13 +567,14 @@ PROC GLOBAL
 		pffContent = pffContent + "URBANRURAL=" + edit("Z", visualvalue(M_URBAN_RURAL)) + "\n";
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
-		
+		pffContent = pffContent + "country=" + country + "\n";
+
 		if questName <> "Menu" then
-			pffContent = pffContent + "OnExit=..\Menu\Menu.pff\n";	
+			pffContent = pffContent + "OnExit=..\Menu\Menu.pff\n";
 		else
 			pffContent = pffContent + "LOGGEDIN=" + theRole + "\n";
 		endif;
-			
+
 		string questfileName = "../" + questName + "/" + questName + ".pff";
 		file fileHandle;
 		numeric ok = setFile(fileHandle, questfileName, create);
@@ -1023,12 +1024,12 @@ preproc
 		HHMap.setBaseMap(Satellite);
 		currentBaseMap = "Satelite";
 	endif;
-	while loadcase(SAMPLING_DICT) do	
-		if tstrip(SLOGIN) = tstrip(M_LOGIN) then	
-			
+	while loadcase(SAMPLING_DICT) do
+		if tstrip(SLOGIN) = tstrip(M_LOGIN) then
+
 			numeric markerId = HHMap.addMarker(SA7A, SA7B);
 			HHMap.setMarkerDescription(markerId, strip(SA10) + "<br/>" + strip(SA11));
-			
+
 			//First check if it is already done
 			AA14 = SA10;
 			ADDRESS_LOCATION = SA11;
@@ -1043,7 +1044,7 @@ preproc
 			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, AA8: %d, Login: %s",
 			//	AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6,AA8, AALOGIN);
 			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
-			if loaded then				
+			if loaded then
 				//Already visited. Need to find out if it is finished or not
 				if ispartial(HHQ_DICT) then
 					//errmsg("not final. Serial: %d", SA8);
@@ -1056,18 +1057,18 @@ preproc
 				//errmsg("never been here at all. Serial: %d", SA8);
 				HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
 			endif;
-			
-			
+
+
 			vsetCodes(i) = SA8;
 			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11);	//Separating with semicolon to make it easy to find the name part
-			
+
 			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 			//HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
 			HHMap.SetMarkerOnClick(markerId, showHHs(SA7A, SA7B));
 			inc(i);
 		endif;
 	enddo;
-	
+
 	if i = 0 then
 		errmsg(tr(7));
 		stop(1);
@@ -1077,7 +1078,7 @@ preproc
 	vsetCodes(i) = NOTAPPL;
 	setValueset(M_HOUSEHOLD, vsetCodes, vsetLabels);
 
-	
+
   //setMarkerImage
 postproc
 	//errmsg("%s, serial: %d", getLabel($, $), $);

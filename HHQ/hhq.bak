@@ -5517,6 +5517,36 @@ Name=GP43_VS1
 Link=133482376
 
 [Record]
+Label=X Telephone number for future contact
+Name=X_TELEPHONE_NUMBER_FOR_FUTURE_CONTACT
+RecordTypeValue='X'
+RecordLen=139
+
+[Item]
+Label=Is it all right with you that INE/NBS contact you by telephone
+Name=X1
+Start=103
+Len=1
+
+[Item]
+Label=Telephone number 1
+Name=X2_1
+Start=104
+Len=12
+
+[Item]
+Label=Telephone number 2
+Name=X2_2
+Start=116
+Len=12
+
+[Item]
+Label=Telephone number 3
+Name=X2_3
+Start=128
+Len=12
+
+[Record]
 Label=AA Interview particulars - end of interview|particularidades AA entrevista - final da entrevista
 Name=AA_END_OF_INTERVIEW
 RecordTypeValue='Z'
@@ -5528,9 +5558,3 @@ Name=AA20
 Start=103
 Len=30
 DataType=Alpha
-
-[Record]
-Label=X Telephone number for future contact
-Name=X_TELEPHONE_NUMBER_FOR_FUTURE_CONTACT
-RecordTypeValue='X'
-RecordLen=102
