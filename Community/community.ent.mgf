@@ -78,6 +78,8 @@ PT(104) Não
 SW(103) Ndio
 SW(104) Hapana
 
+EN(200) These questions should be asked to Knowledgable or Persons working at that particular community
+
 EN(201) Thank you for participating in this Impact of Access to Sustainable Energy Survey. As well as interviewing some of the households in this community, we would like the participants in this group to answer some questions about the community as a whole. We would like you to have an open discussion about the questions and agree on an answer. \n\nFirst we would like to know a little bit about the participants in this group.
 
 EN(202) Now we continue with the main topic for this survey, which is electricity.
@@ -103,4 +105,6 @@ SW(301) TANESCO/REA
 EN(302) Over the past 5 years
 
 EN(303) Since the community first got access to the grid
+
+EN(401) This last section presents a few questions related to the global pandemic and period of closed schools from March 2020.\n\nThe other sections of this community questionnaire include a number of questions on livelihood and economic situation as well as living conditions today and 5 years ago. This would allow us to estimate the change during these years for communities with long term access to energy versus only short term access or still no access to energy.\n\nWe would like to ask you whether the situation for people in this community has changed over the last year from March 2020  up to today.\n\n
 

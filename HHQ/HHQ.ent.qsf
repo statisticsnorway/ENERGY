@@ -5117,7 +5117,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            What was&nbsp;<span style="color: rgb(0, 128, 0);">~~currMember~~</span>’s main occupation before the global pandemic started last year?<p></p>
+            What was&nbsp;<span style="color: rgb(0, 128, 0);"></span>~~Member12AndAbove~~<span style="color: rgb(0, 128, 0);"></span>’s main occupation before the global pandemic started last year?<br><p></p>
             
   - name: HHQ_DICT.GP30
     conditions:
@@ -5183,7 +5183,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            What was the main activity at&nbsp;<span style="color: rgb(0, 128, 0);">~~currMember~~</span>’s place of work before the global pandemic started last year?<p></p>
+            What was the main activity at&nbsp;<span style="color: rgb(0, 128, 0);"></span>~~Member12AndAbove~~<span style="color: rgb(0, 128, 0);"></span>’s place of work before the global pandemic started last year?<br><p></p>
             
           PT: |
             
@@ -5241,6 +5241,11 @@ questions:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Remittances from abroad<br></div><p></p>
             
+  - name: HHQ_DICT.GP_MEM
+    conditions:
+      - questionText:
+          EN: |
+            Which household members have changed their main occupation over the last year during the global pandemic up to today?<p></p>
   - name: HHQ_DICT.I1
     conditions:
       - questionText:

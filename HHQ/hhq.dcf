@@ -378,8 +378,8 @@ Len=2
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_EN_TZ
-Value=1;PP
-Value=2;ADULT
+Value=1;Pre-premary
+Value=2;Adult education
 Value=11;D1
 Value=12;D2
 Value=13;D3
@@ -421,8 +421,8 @@ Value=9;University
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_TZ
-Value=1;PP
-Value=2;ADULT
+Value=1;Pre-premary
+Value=2;Adult education
 Value=11;D1
 Value=12;D2
 Value=13;D3
@@ -4923,6 +4923,642 @@ Value=1;Not safe|Não é seguro|Si Salama
 Value=2;Fairly safe|Razoavelmente seguro|Salama Kiasi
 Value=3;Completely safe|Completamente seguro|Salama Kabisa
 Value=4;Not applicable|Não aplicável|Haihusiki
+
+[Record]
+Label=GP Global Pandemic
+Name=GP_GLOBAL_PANDEMIC
+RecordTypeValue='V'
+RecordLen=315
+
+[Item]
+Label=Has anybody 12 years or above in this household changed their main occupation over the last year during the global pandemic up to today
+Name=GP1
+Start=103
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP1_VS1
+Link=133482376
+
+[Item]
+Label=Household members with activity
+Name=GP_MEM
+Start=104
+Len=40
+DataType=Alpha
+
+[Item]
+Label=Activity information
+Name=GP_ACTIVITY
+Start=144
+Len=6
+DataType=Alpha
+Occurrences=20
+
+[Item]
+Label=Household member
+Name=GP2
+Start=144
+Len=2
+ItemType=SubItem
+DataType=Alpha
+
+[Item]
+Label=What was [NAME]’s main occupation before the global pandemic started last year?
+Name=GP3
+Start=146
+Len=2
+ItemType=SubItem
+
+[ValueSet]
+Label=Value Set 0
+Name=GP3_VS1
+Value=1;Farmer with non-family employees
+Value=2;Farmer with only family members
+Value=3;Farm worker
+Value=4;Non-farm business with non-family employees
+Value=5;Non-farm business with only family employees
+Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer
+Value=8;Wage Employee in Private Company (with contract)
+Value=9;Wage Employee in Private Company (without contract)
+Value=10;Wage Employee for Government
+Value=11;Wage Employee in Parastatal (government owned company)
+Value=15;Was not working, but was looking for work and has worked previously
+Value=16;Was not working, but was looking for work. Had never worked before
+Value=17;Was not working, and was not looking for work (student, retired, disabled etc)
+
+[Item]
+Label=What was the main activity at [NAME]’s place of work before the global pandemic started last year?
+Name=GP4
+Start=148
+Len=2
+ItemType=SubItem
+
+[ValueSet]
+Label=Value Set 0
+Name=GP4_VS1
+Value=11;Agriculture - crops/forestry
+Value=12;Agriculture - animal husbandry
+Value=13;Fishing
+Value=14;Mining & quarrying
+Value=15;Manufacturing
+Value=16;Electricity and water supply
+Value=17;Building and construction
+Value=18;Trade
+Value=19;Repair
+Value=20;Transportation
+Value=21;Accommodation and food service
+Value=22;Information and communication
+Value=23;Financial, professional, administrative and support service
+Value=24;Public administration and defence
+Value=25;Education
+Value=26;Human health and social work
+Value=27;Arts, entertainment and recreation
+Value=28;Personal service
+Value=29;Domestic service
+Value=30;Embassies and international organizations
+
+[Item]
+Label=Family farming, livestock or fishing
+Name=GP5
+Start=264
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP5_VS1
+Link=837371282
+Value=1;Increased
+Value=2;Stayed the same
+Value=3;Decreased
+Value=4;No such income, not applicable
+
+[Item]
+Label=Non-agricultural family businesses, including family businesses
+Name=GP6
+Start=265
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP6_VS1
+Link=837371282
+
+[Item]
+Label=Salaried employment of household members
+Name=GP7
+Start=266
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP7_VS1
+Link=837371282
+
+[Item]
+Label=Unemployment benefits
+Name=GP8
+Start=267
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP8_VS1
+Link=837371282
+
+[Item]
+Label=Remittances from abroad
+Name=GP9
+Start=268
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP9_VS1
+Link=837371282
+
+[Item]
+Label=Remittances within the country
+Name=GP10
+Start=269
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP10_VS1
+Link=837371282
+
+[Item]
+Label=Income from property, investments or savings
+Name=GP11
+Start=270
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP11_VS1
+Link=837371282
+
+[Item]
+Label=Pension
+Name=GP12
+Start=271
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP12_VS1
+Link=837371282
+
+[Item]
+Label=Government Assistance
+Name=GP13
+Start=272
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP13_VS1
+Link=837371282
+
+[Item]
+Label=Financial assistance from friends / family
+Name=GP14
+Start=273
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP14_VS1
+Link=837371282
+
+[Item]
+Label=Assistance from NGOs / charity organizations
+Name=GP15
+Start=274
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP15_VS1
+Link=837371282
+
+[Item]
+Label=What about the total household income, has that increased, stayed the same or decreased
+Name=GP16
+Start=275
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP16_VS1
+Link=326777112
+Value=1;Increased
+Value=2;Stayed the same
+Value=3;Decreased
+
+[Item]
+Label=Have your use of electrical power increased, stayed the same or decreased over the last year during the global pandemic up to today?
+Name=GP17
+Start=276
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP17_VS1
+Value=1;Increased
+Value=2;Stayed the same
+Value=3;Decreased
+Value=4;We have no electricity, not applicable
+
+[Item]
+Label=Have you changed the type of fuel you have been using over the last year during the global pandemic up to today?
+Name=GP18
+Start=277
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP18_VS1
+Value=1;No, continued with the same fuel
+Value=2;Yes, switched fuel
+
+[Item]
+Label=What type of fuel did you use before the global pandemic started last year for your main stove?
+Name=GP19
+Start=278
+Len=1
+
+[ValueSet]
+Label=Value Set 0
+Name=GP19_VS1
+Value=1;Firewood, dung, twigs and leaves
+Value=2;Charcoal
+Value=3;Kerosene
+Value=4;Rice husks, pellets or briquettes
+Value=5;LPG, biogas
+Value=6;Electricity
+Value=7;Solar oven (non-electric)
+
+[Item]
+Label=Have your consumption of fuel for cooking increased, stayed the same or decreased over the last year during the global pandemic up to today?
+Name=GP20
+Start=279
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP20_VS1
+Link=326777112
+
+[Item]
+Label=Have you changed which stove to use as your main stove over the last year during the global pandemic up to today?
+Name=GP21
+Start=280
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP21_VS1
+Value=1;No, continued with the same stove
+Value=2;Yes, have changed to another main stove
+
+[Item]
+Label=Which type of stove did you use as your main stove before the global pandemic started last year?
+Name=GP22
+Start=281
+Len=3
+
+[ValueSet]
+Label=Valueset
+Name=GP22_VS1
+Value=999;No change of oven
+Value=101;Three-stone stove
+Value=102;Round mud stove
+Value=111;ICS w/ ceramic fire chamber
+Value=112;ICS w/ metal ring
+Value=121;Rocket stove
+Value=122; High traditional burned mud/clay stove
+Value=131;Lorena 1 Rocket stove w high insulation
+Value=132;Rocket stove metal w/internal chimney/ Canamakeivuguruye
+Value=141;Lorena 2 Rocket stove with well- sealed chimney
+Value=142;Metal rocket stove
+Value=201;Traditional charcoal stove - Open access for air
+Value=202;Traditional raised charcoal stove
+Value=211;Charcoal stove, Old ICS Opening for air may be closed
+Value=221;Ceramic lined charcoal ICS
+Value=231;Ceramic lined and insulated charcoal ICS
+Value=233;Kerosene cooking stove (Mchina)
+Value=241;Efficient charcoal stove with controlled airflow
+Value=331;Gasifier stove
+Value=332;Saw dust, risk husk gasifier stove
+Value=341;Jiko Safi Gasifier stove w/forced air & chimney
+Value=451;Biogas stove
+Value=452;Multiple LPG stove
+Value=453;Single LPG stove
+Value=461;Electrical stove
+Value=462;Electrical plates without oven
+Value=463;LPG/ gas and electrical stove
+Value=471;Solar cooker (Non-electric)
+
+[Item]
+Label=Have you sold any of household items since before the global pandemic started last year?
+Name=GP23
+Start=284
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP23_VS1
+Link=133482376
+
+[Item]
+Label=Which type of items did you sell?
+Name=GP24
+Start=285
+Len=2
+
+[ValueSet]
+Label=Valueset
+Name=GP24_VS1
+Value=1;Bed
+Value=2;Table
+Value=3;Bicycle
+Value=4;Motorcycle
+Value=5;Car
+Value=6;Radio using batteries
+Value=7;Mobile phone charger
+Value=8;Electric radio
+Value=9;Fan
+Value=10;Refrigerator
+Value=11;Microwave oven
+Value=12;Freezer
+Value=13;Washing machine
+Value=14;Electric sewing machine
+Value=15;Air Conditioner (AC)
+Value=16;Computer/ Tablet
+Value=17;Electric hot water pot/kettle
+Value=18;TV
+Value=19;Electric water pump
+
+[Item]
+Label=Have your total consumption increased, stayed the same or decreased over the last year during the global pandemic up to today?
+Name=GP25
+Start=287
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP25_VS1
+Link=326777112
+
+[Item]
+Label=Did you have to close down any household  production over the last year during the global pandemic up to today?
+Name=GP26
+Start=288
+Len=6
+DataType=Alpha
+
+[ValueSet]
+Label=Valueset
+Name=GP26_VS1
+Value='1     ';Yes, agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran
+Value='2     ';Yes, livestock by-products (milk, cheese)
+Value='3     ';Yes, fresh/processed fish
+Value='4     ';Yes, firewood, home-made charcoal
+Value='5     ';Yes, construction timber, wood-poles or other construction material
+Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass
+Value='7     ';No
+
+[Item]
+Label=Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
+Name=GP27
+Start=294
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP27_VS1
+Link=133482376
+
+[Item]
+Label=Livestock by-products (milk, cheese)
+Name=GP28
+Start=295
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP28_VS1
+Link=133482376
+
+[Item]
+Label=Fresh/processed fish
+Name=GP29
+Start=296
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP29_VS1
+Link=133482376
+
+[Item]
+Label=Firewood, home-made charcoal
+Name=GP30
+Start=297
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP30_VS1
+Link=133482376
+
+[Item]
+Label=Construction timber, wood-poles or other construction material
+Name=GP31
+Start=298
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP31_VS1
+Link=133482376
+
+[Item]
+Label=Did you have to close down any household business or service over the last year during the global pandemic up to today?
+Name=GP32
+Start=299
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP32_VS1
+Link=133482376
+
+[Item]
+Label=Did you close down any [BUSINESS] or any [SERVICE]?
+Name=GP33
+Start=300
+Len=6
+DataType=Alpha
+
+[ValueSet]
+Label=Valueset
+Name=GP33_VS1
+Value='1     ';Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc
+Value='2     ';Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc
+Value='3     ';Yes, own a trading or service business on a street or in a market
+Value='4     ';Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services
+Value='5     ';Yes, own a bar or restaurant
+Value='6     ';Yes, own any other non-agricultural business, even if it is a small business run from home or on a street
+Value='7     ';No
+
+[Item]
+Label=offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
+Name=GP34
+Start=306
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP34_VS1
+Link=133482376
+
+[Item]
+Label=run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
+Name=GP35
+Start=307
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP35_VS1
+Link=133482376
+
+[Item]
+Label=own a trading or service business on a street or in a market?
+Name=GP36
+Start=308
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP36_VS1
+Link=133482376
+
+[Item]
+Label=drive a household-owned taxi or pick-up truck to provide transportation or moving services?
+Name=GP37
+Start=309
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP37_VS1
+Link=133482376
+
+[Item]
+Label=own a bar or restaurant?
+Name=GP38
+Start=310
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP38_VS1
+Link=133482376
+
+[Item]
+Label=own any other non-agricultural business, even if it is a small business run from home or on a street?
+Name=GP39
+Start=311
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP39_VS1
+Link=133482376
+
+[Item]
+Label=Did anybody in the household do some piecemeal farm work before the global pandemic started last year
+Name=GP40
+Start=312
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP40_VS1
+Link=133482376
+
+[Item]
+Label=Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?
+Name=GP41
+Start=313
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP41_VS1
+Link=133482376
+
+[Item]
+Label=Did anybody in the household do some public work (for the government, donors, charities) such as cash-for-work before the global pandemic started last year?
+Name=GP42
+Start=314
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP42_VS1
+Link=133482376
+
+[Item]
+Label=Did anybody in this household go for work outside the community before the global pandemic started last year?
+Name=GP43
+Start=315
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=GP43_VS1
+Link=133482376
+
+[Record]
+Label=X Telephone number for future contact
+Name=X_TELEPHONE_NUMBER_FOR_FUTURE_CONTACT
+RecordTypeValue='X'
+RecordLen=139
+
+[Item]
+Label=Is it all right with you that INE/NBS contact you by telephone
+Name=X1
+Start=103
+Len=1
+
+[ValueSet]
+Label=Is it all right with you that INE/NBS contact you by telephone
+Name=X1_VS2
+Link=133482376
+
+[Item]
+Label=Telephone number 1
+Name=X2_1
+Start=104
+Len=12
+
+[Item]
+Label=Telephone number 2
+Name=X2_2
+Start=116
+Len=12
+
+[Item]
+Label=Telephone number 3
+Name=X2_3
+Start=128
+Len=12
 
 [Record]
 Label=AA Interview particulars - end of interview|particularidades AA entrevista - final da entrevista

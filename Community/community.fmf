@@ -165,6 +165,18 @@ Item=J2
   
 [EndForm]
   
+[Form]
+Name=FORM003
+Label=GP Global Pandemic
+Level=1
+Size=370,197
+  
+Item=GP1
+Item=GP2
+Item=GP3
+  
+[EndForm]
+  
 [Level]
 Name=COMMUNITY_QUEST
 Label=community questionnaire
@@ -1699,6 +1711,50 @@ Form=9
 [Text]
 Position=28,94,42,110
 Text=J2
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=GROUP_GP
+Label=GP Global Pandemic
+Form=10
+Max=1
+  
+[Field]
+Name=GP1
+Position=329,73,344,93
+Item=GP1,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=148,76,174,92
+Text=GP1
+ 
+  
+[Field]
+Name=GP2
+Position=330,109,345,129
+Item=GP2,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=149,112,175,128
+Text=GP2
+ 
+  
+[Field]
+Name=GP3
+Position=329,152,344,172
+Item=GP3,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=148,155,174,171
+Text=GP3
  
 [EndGroup]
   

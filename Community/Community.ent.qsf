@@ -13,22 +13,27 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
+
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
-  - name: Heading 1
+
+   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
+
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
+     
   - name: Heading 3
     className: heading3
     css: |
       font-family: Arial;font-size: 18px;
+      
 questions:
   - name: A6
     conditions:
@@ -1289,6 +1294,24 @@ questions:
           PT: |
             
           SW: |
+            
+  - name: COMMUNITY_DICT.GP1
+    conditions:
+      - questionText:
+          EN: |
+            Have the job-opportunities in this community increased, remained the same or decreased over the last year from March 2020 up to today?<p></p>
+            
+  - name: COMMUNITY_DICT.GP2
+    conditions:
+      - questionText:
+          EN: |
+            Have the business-opportunities in this community increased, remained the same or decreased over the last year from March 2020 up to today?<p></p>
+            
+  - name: COMMUNITY_DICT.GP3
+    conditions:
+      - questionText:
+          EN: |
+            Have the market acess in this community increased, remained the same or decreased over the last year from March 2020 up to today?<p></p>
             
   - name: COMMUNITY_DICT.H1
     conditions:
