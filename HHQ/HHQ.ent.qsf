@@ -5147,14 +5147,13 @@ questions:
     conditions:
       - questionText:
           EN: |
-            Did you close down professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?<p></p>
-            
+            <p>Did you use any electricity for your professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?</p><p><p></p>
+            </p>
   - name: HHQ_DICT.GP35
     conditions:
       - questionText:
           EN: |
-            Did you close down a household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?<p></p>
-            
+            <p>Did you use any electricity for your&nbsp; household-owned shop or service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?<br></p>
   - name: HHQ_DICT.GP36
     conditions:
       - questionText:
@@ -5246,6 +5245,7 @@ questions:
       - questionText:
           EN: |
             Which household members have changed their main occupation over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.I1
     conditions:
       - questionText:
