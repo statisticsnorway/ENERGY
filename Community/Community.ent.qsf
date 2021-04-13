@@ -13,22 +13,22 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
-      
+
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
-      
-  - name: Heading 1
+
+   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
-      
+
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
-      
+     
   - name: Heading 3
     className: heading3
     css: |
@@ -248,7 +248,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">An approximate number.&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quantas famílias atualmente estão vivendo em toda a comunidade?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Quantas famílias atualmente estão vivendo em toda a comunidade?&nbsp;</span></p><p></p><p><font color="#0000ff">Um número aproximado bastará</font></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kwa sasa ni kaya ngapi zinaishi katika jamii hii?&#160;</span></p>
@@ -267,7 +267,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Is there more or less households in the community now than five years ago?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quantas famílias têm vindo a estabelecer-se na comunidade durante os últimos anos (desde 2014)?&#160;</span></p>
+            <p>Há mais ou menos famílias na comunidade agora do que há cinco anos?<br></p><div><br></div>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni kaya ngapi zimehamia katika jamii hii kwa kipindi cha miaka miwili iliyopita?&#160;</span></p>
@@ -287,9 +287,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Multiple response. Two responses possible&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quais são as duas atividades econômicas mais difundidas nesta comunidade / bairro?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Primeira&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Quais são as duas atividades econômicas mais difundidas nesta comunidade / bairro?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Multiplas respostas. Duas respostas possiveis&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Taja shughuli ngapi kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii&#160;</span></p>

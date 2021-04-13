@@ -2758,7 +2758,7 @@ questions:
             <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Is this the national grid or a local grid?&#160;</span></p>
             
           PT: |
-            
+            Esta é a rede nacional ou local?<p></p>
           SW: |
             
         helpText:
