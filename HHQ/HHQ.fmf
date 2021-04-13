@@ -603,7 +603,7 @@ Item=W2000
 Name=FORM009
 Label=GP - Global Pandemic
 Level=1
-Size=900,690
+Size=912,796
   
 Item=GP1
 Item=GP_ACTIVITY000
@@ -646,17 +646,7 @@ Item=GP40
 Item=GP41
 Item=GP42
 Item=GP43
-  
-[EndForm]
-  
-[Form]
-Name=FORM030
-Label=AA - Interview particulars. End of quest
-QuestionTextHeight=70
-Level=1
-Size=204,219
-  
-Item=AA20
+Item=GP_MEM
   
 [EndForm]
   
@@ -670,6 +660,17 @@ Item=X1
 Item=X2_1
 Item=X2_2
 Item=X2_3
+  
+[EndForm]
+  
+[Form]
+Name=FORM030
+Label=AA - Interview particulars. End of quest
+QuestionTextHeight=70
+Level=1
+Size=204,219
+  
+Item=AA20
   
 [EndForm]
   
@@ -7189,7 +7190,7 @@ Max=1
   
 [Field]
 Name=GP1
-Position=241,40,256,60
+Position=212,43,227,63
 Item=GP1,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -7200,6 +7201,19 @@ Position=60,43,86,59
 Text=GP1
  
   
+[Field]
+Name=GP_MEM
+Position=147,90,708,110
+Item=GP_MEM,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=CheckBox
+Form=25
+  
+[Text]
+Position=50,93,106,109
+Text=GP_MEM
+ 
+  
 [Grid]
 Name=GP_ACTIVITY000
 Label=Activity information
@@ -7208,7 +7222,7 @@ Required=Yes
 Type=Item
 TypeName=GP_ACTIVITY
 Max=20
-DisplaySize=58,74,212,378
+DisplaySize=61,139,215,443
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -7379,508 +7393,508 @@ Text=GP4
   
 [Field]
 Name=GP5
-Position=470,39,485,59
+Position=482,145,497,165
 Item=GP5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=286,42,312,58
+Position=298,148,324,164
 Text=GP5
  
   
 [Field]
 Name=GP6
-Position=469,67,484,87
+Position=481,173,496,193
 Item=GP6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=288,70,314,86
+Position=300,176,326,192
 Text=GP6
  
   
 [Field]
 Name=GP7
-Position=469,101,484,121
+Position=481,207,496,227
 Item=GP7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=284,103,310,119
+Position=296,209,322,225
 Text=GP7
  
   
 [Field]
 Name=GP8
-Position=468,132,483,152
+Position=480,238,495,258
 Item=GP8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=287,135,313,151
+Position=299,241,325,257
 Text=GP8
  
   
 [Field]
 Name=GP9
-Position=468,162,483,182
+Position=480,268,495,288
 Item=GP9,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=287,165,313,181
+Position=299,271,325,287
 Text=GP9
  
   
 [Field]
 Name=GP10
-Position=462,190,477,210
+Position=474,296,489,316
 Item=GP10,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=281,193,314,209
+Position=293,299,326,315
 Text=GP10
  
   
 [Field]
 Name=GP11
-Position=464,213,479,233
+Position=476,319,491,339
 Item=GP11,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=283,216,316,232
+Position=295,322,328,338
 Text=GP11
  
   
 [Field]
 Name=GP12
-Position=464,233,479,253
+Position=476,339,491,359
 Item=GP12,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=283,236,316,252
+Position=295,342,328,358
 Text=GP12
  
   
 [Field]
 Name=GP13
-Position=462,255,477,275
+Position=474,361,489,381
 Item=GP13,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=281,258,314,274
+Position=293,364,326,380
 Text=GP13
  
   
 [Field]
 Name=GP14
-Position=460,276,475,296
+Position=472,382,487,402
 Item=GP14,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=279,279,312,295
+Position=291,385,324,401
 Text=GP14
  
   
 [Field]
 Name=GP15
-Position=464,297,479,317
+Position=476,403,491,423
 Item=GP15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=283,300,316,316
+Position=295,406,328,422
 Text=GP15
  
   
 [Field]
 Name=GP16
-Position=450,321,465,341
+Position=462,427,477,447
 Item=GP16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=269,324,302,340
+Position=281,430,314,446
 Text=GP16
  
   
 [Field]
 Name=GP17
-Position=449,345,464,365
+Position=461,451,476,471
 Item=GP17,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=268,348,301,364
+Position=280,454,313,470
 Text=GP17
  
   
 [Field]
 Name=GP18
-Position=449,375,464,395
+Position=461,481,476,501
 Item=GP18,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=268,378,301,394
+Position=280,484,313,500
 Text=GP18
  
   
 [Field]
 Name=GP19
-Position=451,401,466,421
+Position=463,507,478,527
 Item=GP19,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=270,404,303,420
+Position=282,510,315,526
 Text=GP19
  
   
 [Field]
 Name=GP20
-Position=453,423,468,443
+Position=465,529,480,549
 Item=GP20,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=272,426,305,442
+Position=284,532,317,548
 Text=GP20
  
   
 [Field]
 Name=GP21
-Position=452,449,467,469
+Position=464,555,479,575
 Item=GP21,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=271,452,304,468
+Position=283,558,316,574
 Text=GP21
  
   
 [Field]
 Name=GP22
-Position=434,480,477,500
+Position=446,586,489,606
 Item=GP22,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=271,483,304,499
+Position=283,589,316,605
 Text=GP22
  
   
 [Field]
 Name=GP23
-Position=452,507,467,527
+Position=464,613,479,633
 Item=GP23,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=271,510,304,526
+Position=283,616,316,632
 Text=GP23
  
   
 [Field]
 Name=GP24
-Position=439,534,468,554
+Position=451,640,480,660
 Item=GP24,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=267,537,300,553
+Position=279,643,312,659
 Text=GP24
  
   
 [Field]
 Name=GP25
-Position=444,557,459,577
+Position=456,663,471,683
 Item=GP25,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=263,560,296,576
+Position=275,666,308,682
 Text=GP25
  
   
 [Field]
 Name=GP26
-Position=446,581,461,601
+Position=458,687,543,707
 Item=GP26,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=25
   
 [Text]
-Position=265,584,298,600
+Position=277,690,310,706
 Text=GP26
  
   
 [Field]
 Name=GP27
-Position=441,602,456,622
+Position=453,708,468,728
 Item=GP27,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=260,605,293,621
+Position=272,711,305,727
 Text=GP27
  
   
 [Field]
 Name=GP28
-Position=447,623,462,643
+Position=459,729,474,749
 Item=GP28,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=266,626,299,642
+Position=278,732,311,748
 Text=GP28
  
   
 [Field]
 Name=GP29
-Position=445,645,460,665
+Position=457,751,472,771
 Item=GP29,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=264,648,297,664
+Position=276,754,309,770
 Text=GP29
  
   
 [Field]
 Name=GP30
-Position=855,38,870,58
+Position=867,144,882,164
 Item=GP30,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=674,41,707,57
+Position=686,147,719,163
 Text=GP30
  
   
 [Field]
 Name=GP31
-Position=851,73,866,93
+Position=863,179,878,199
 Item=GP31,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=670,76,703,92
+Position=682,182,715,198
 Text=GP31
  
   
 [Field]
 Name=GP32
-Position=849,97,864,117
+Position=861,203,876,223
 Item=GP32,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=668,100,701,116
+Position=680,206,713,222
 Text=GP32
  
   
 [Field]
 Name=GP33
-Position=855,118,870,138
+Position=867,224,952,244
 Item=GP33,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=25
   
 [Text]
-Position=674,121,707,137
+Position=686,227,719,243
 Text=GP33
  
   
 [Field]
 Name=GP34
-Position=860,141,875,161
+Position=872,247,887,267
 Item=GP34,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=679,144,712,160
+Position=691,250,724,266
 Text=GP34
  
   
 [Field]
 Name=GP35
-Position=849,165,864,185
+Position=861,271,876,291
 Item=GP35,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=668,168,701,184
+Position=680,274,713,290
 Text=GP35
  
   
 [Field]
 Name=GP36
-Position=847,188,862,208
+Position=859,294,874,314
 Item=GP36,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=666,191,699,207
+Position=678,297,711,313
 Text=GP36
  
   
 [Field]
 Name=GP37
-Position=845,215,860,235
+Position=857,321,872,341
 Item=GP37,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=664,218,697,234
+Position=676,324,709,340
 Text=GP37
  
   
 [Field]
 Name=GP38
-Position=847,244,862,264
+Position=859,350,874,370
 Item=GP38,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=666,247,699,263
+Position=678,353,711,369
 Text=GP38
  
   
 [Field]
 Name=GP39
-Position=850,268,865,288
+Position=862,374,877,394
 Item=GP39,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=669,271,702,287
+Position=681,377,714,393
 Text=GP39
  
   
 [Field]
 Name=GP40
-Position=852,293,867,313
+Position=864,399,879,419
 Item=GP40,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=671,296,704,312
+Position=683,402,716,418
 Text=GP40
  
   
 [Field]
 Name=GP41
-Position=849,313,864,333
+Position=861,419,876,439
 Item=GP41,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=668,316,701,332
+Position=680,422,713,438
 Text=GP41
  
   
 [Field]
 Name=GP42
-Position=845,335,860,355
+Position=857,441,872,461
 Item=GP42,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=664,338,697,354
+Position=676,444,709,460
 Text=GP42
  
   
 [Field]
 Name=GP43
-Position=842,355,857,375
+Position=854,461,869,481
 Item=GP43,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=25
   
 [Text]
-Position=661,358,694,374
+Position=673,464,706,480
 Text=GP43
  
 [EndGroup]
@@ -7889,7 +7903,7 @@ Text=GP43
 Required=Yes
 Name=X_FORM
 Label=x - Telephone number for future contact
-Form=27
+Form=26
 Max=1
   
 [Field]
@@ -7897,7 +7911,8 @@ Name=X1
 Position=271,54,286,74
 Item=X1,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=27
+DataCaptureType=RadioButton
+Form=26
   
 [Text]
 Position=90,57,106,73
@@ -7908,8 +7923,9 @@ Text=X1
 Name=X2_1
 Position=168,89,337,109
 Item=X2_1,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
-Form=27
+Form=26
   
 [Text]
 Position=86,92,116,108
@@ -7920,8 +7936,9 @@ Text=X2_1
 Name=X2_2
 Position=169,119,338,139
 Item=X2_2,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
-Form=27
+Form=26
   
 [Text]
 Position=87,122,117,138
@@ -7932,8 +7949,9 @@ Text=X2_2
 Name=X2_3
 Position=168,152,337,172
 Item=X2_3,HHQ_DICT
+ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
-Form=27
+Form=26
   
 [Text]
 Position=86,155,116,171
@@ -7945,7 +7963,7 @@ Text=X2_3
 Required=Yes
 Name=AA_END_FORM
 Label=AA - Interview particulars. End of quest
-Form=26
+Form=27
 Max=1
   
 [Field]
@@ -7953,7 +7971,7 @@ Name=AA20
 Position=105,24,526,44
 Item=AA20,HHQ_DICT
 FieldLabelType=DictionaryName
-Form=26
+Form=27
   
 [Text]
 Position=51,27,83,43

@@ -4986,171 +4986,205 @@ questions:
       - questionText:
           EN: |
             Has anybody 12 years or above in this household changed their main occupation over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP10
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Remittances within the country<br></div><p></p>
+            
   - name: HHQ_DICT.GP11
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Income from property, investments or savings<br></div><p></p>
+            
   - name: HHQ_DICT.GP12
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Pension<br></div><p></p>
+            
   - name: HHQ_DICT.GP13
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Government Assistance<br></div><p></p>
+            
   - name: HHQ_DICT.GP14
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Financial assistance from friends / family<br></div><p></p>
+            
   - name: HHQ_DICT.GP15
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Assistance from NGOs / charity organizations<br></div><p></p>
+            
   - name: HHQ_DICT.GP16
     conditions:
       - questionText:
           EN: |
             <p>Thank you for all this detailed information! </p><p>What about the total household income, has that increased, stayed the same or decreased<p></p></p>
+            
   - name: HHQ_DICT.GP17
     conditions:
       - questionText:
           EN: |
             Have your use of electrical power increased, stayed the same or decreased over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP18
     conditions:
       - questionText:
           EN: |
             Have you changed the type of fuel you have been using over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP19
     conditions:
       - questionText:
           EN: |
             What type of fuel did you use before the global pandemic started last year for your main stove?<p></p>
+            
   - name: HHQ_DICT.GP2
     conditions:
       - questionText:
           EN: |
             Which household members have changed their main occupation over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP20
     conditions:
       - questionText:
           EN: |
             Have your consumption of fuel for cooking increased, stayed the same or decreased over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP21
     conditions:
       - questionText:
           EN: |
             Have you changed which stove to use as your main stove over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP22
     conditions:
       - questionText:
           EN: |
             <p>Which type of stove did you use as your main stove before the global pandemic started last year?</p><p></p>
+            
   - name: HHQ_DICT.GP23
     conditions:
       - questionText:
           EN: |
             Have you sold any of household items since before the global pandemic started last year?<p></p>
+            
   - name: HHQ_DICT.GP24
     conditions:
       - questionText:
           EN: |
             <p>Which type of items did you sell?<br></p><p></p>
+            
   - name: HHQ_DICT.GP25
     conditions:
       - questionText:
           EN: |
             Have your total consumption increased, stayed the same or decreased over the last year during the global pandemic up to today?<p></p>
+            
   - name: HHQ_DICT.GP26
     conditions:
       - questionText:
           EN: |
             <p>The final section is about the livelihood of your household.</p><p>Did you have to close down any household&nbsp; production over the last year during the global pandemic up to today?&nbsp;</p><p>[ANSWER YES, EVEN IF YOU STILL HAVE SOME LEFT]</p><p></p>
+            
   - name: HHQ_DICT.GP27
     conditions:
       - questionText:
           EN: |
             Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc.<p></p>
+            
   - name: HHQ_DICT.GP28
     conditions:
       - questionText:
           EN: |
             Livestock by-products (milk, cheese)<p></p>
+            
   - name: HHQ_DICT.GP29
     conditions:
       - questionText:
           EN: |
             Fresh/processed fish<p></p>
+            
   - name: HHQ_DICT.GP3
     conditions:
       - questionText:
           EN: |
-            What was&nbsp;<span style="color: rgb(0, 128, 0);">~~currMember~~</span>’s main occupation before the global pandemic started last year?<p></p>
+            What was&nbsp;<span style="color: rgb(0, 128, 0);"></span>~~Member12AndAbove~~<span style="color: rgb(0, 128, 0);"></span>’s main occupation before the global pandemic started last year?<br><p></p>
+            
   - name: HHQ_DICT.GP30
     conditions:
       - questionText:
           EN: |
             Firewood, home-made charcoal<p></p>
+            
   - name: HHQ_DICT.GP31
     conditions:
       - questionText:
           EN: |
             Construction timber, wood-poles or other construction material<p></p>
+            
   - name: HHQ_DICT.GP32
     conditions:
       - questionText:
           EN: |
             Mats, bricks, cane furniture, weave baskets, thatch grass etc.<p></p>
+            
   - name: HHQ_DICT.GP33
     conditions:
       - questionText:
           EN: |
             <p>Did you have to close down any household business or service over the last year during the global pandemic up to today?&nbsp;</p><p>[ANSWER YES, EVEN IF YOU STILL HAVE SOME LEFT]</p><p></p>
+            
   - name: HHQ_DICT.GP34
     conditions:
       - questionText:
           EN: |
             Did you close down professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?<p></p>
+            
   - name: HHQ_DICT.GP35
     conditions:
       - questionText:
           EN: |
             Did you close down a household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?<p></p>
+            
   - name: HHQ_DICT.GP36
     conditions:
       - questionText:
           EN: |
             Did you close down your own trading or service business on a street or in a market?<p></p>
+            
   - name: HHQ_DICT.GP37
     conditions:
       - questionText:
           EN: |
             Did you close down a household-owned taxi or pick-up truck to provide transportation or moving services?<p></p>
+            
   - name: HHQ_DICT.GP38
     conditions:
       - questionText:
           EN: |
             Did you close down your own bar or restaurant?<p></p>
+            
   - name: HHQ_DICT.GP39
     conditions:
       - questionText:
           EN: |
             Did you close down your own other non-agricultural business, even if it is a small business run from home or on a street?<p></p>
+            
   - name: HHQ_DICT.GP4
     conditions:
       - questionText:
           EN: |
-            What was the main activity at&nbsp;<span style="color: rgb(0, 128, 0);">~~currMember~~</span>’s place of work before the global pandemic started last year?<p></p>
+            What was the main activity at&nbsp;<span style="color: rgb(0, 128, 0);"></span>~~Member12AndAbove~~<span style="color: rgb(0, 128, 0);"></span>’s place of work before the global pandemic started last year?<br><p></p>
+            
           PT: |
             
   - name: HHQ_DICT.GP40
@@ -5158,46 +5192,60 @@ questions:
       - questionText:
           EN: |
             Did anybody in the household do some piecemeal farm work before the global pandemic started last year?<p></p>
+            
   - name: HHQ_DICT.GP41
     conditions:
       - questionText:
           EN: |
             Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?<p></p>
+            
   - name: HHQ_DICT.GP42
     conditions:
       - questionText:
           EN: |
             Did anybody in the household do some public work (for the government, donors, charities) such as cash-for-work before the global pandemic started last year?<p></p>
+            
   - name: HHQ_DICT.GP43
     conditions:
       - questionText:
           EN: |
             Did anybody in this household go for work outside the community before the global pandemic started last year?<p></p>
+            
   - name: HHQ_DICT.GP5
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><p>Family farming, livestock or fishing<br></p><p><p></p></p>
+            
   - name: HHQ_DICT.GP6
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Non-agricultural family businesses, including family businesses<br></div><p></p>
+            
   - name: HHQ_DICT.GP7
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Salaried employment of household members<br></div><p></p>
+            
   - name: HHQ_DICT.GP8
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Unemployment benefits<br></div><p></p>
+            
   - name: HHQ_DICT.GP9
     conditions:
       - questionText:
           EN: |
             <p>Has the household income from the following sources increased, stayed the same or decreased over the last year during the global pandemic up to today?</p><div>Remittances from abroad<br></div><p></p>
+            
+  - name: HHQ_DICT.GP_MEM
+    conditions:
+      - questionText:
+          EN: |
+            Which household members have changed their main occupation over the last year during the global pandemic up to today?<p></p>
   - name: HHQ_DICT.I1
     conditions:
       - questionText:
@@ -8556,21 +8604,25 @@ questions:
       - questionText:
           EN: |
             It is important for INE/NBS to follow up on the energy situation in the households in [Tanzania/Mozambique]. We would therefore like to do a follow up of this interview in a year or two. Is it all right with you that INE/NBS contact you by telephone for this purpose?<p></p>
+            
   - name: HHQ_DICT.X2_1
     conditions:
       - questionText:
           EN: |
             <p>Thank you. On which telephone number or numbers can we contact you?</p><p>Telephone number 1</p><p></p><p></p><p></p>
+            
   - name: HHQ_DICT.X2_2
     conditions:
       - questionText:
           EN: |
             <p>Thank you. On which telephone number or numbers can we contact you?</p><p>Telephone number 2</p><p></p>
+            
   - name: HHQ_DICT.X2_3
     conditions:
       - questionText:
           EN: |
             <p>Thank you. On which telephone number or numbers can we contact you?</p><p>Telephone number 3</p><p></p>
+            
   - name: I34
     conditions:
       - questionText:
