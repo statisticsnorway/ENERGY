@@ -5149,34 +5149,35 @@ questions:
           EN: |
             <p>Did you use any electricity for your professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?</p><p><p></p>
             </p>
+            
   - name: HHQ_DICT.GP35
     conditions:
       - questionText:
           EN: |
             <p>Did you use any electricity for your&nbsp; household-owned shop or service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?<br></p>
+            
   - name: HHQ_DICT.GP36
     conditions:
       - questionText:
           EN: |
-            Did you close down your own trading or service business on a street or in a market?<p></p>
-            
+            <p>Did you use any electricity for your trading or service business on a street or in a market?<br></p>
   - name: HHQ_DICT.GP37
     conditions:
       - questionText:
           EN: |
-            Did you close down a household-owned taxi or pick-up truck to provide transportation or moving services?<p></p>
+            Did you use any electricity for your household-owned taxi or pick-up truck to provide transportation or moving services?<p></p>
             
   - name: HHQ_DICT.GP38
     conditions:
       - questionText:
           EN: |
-            Did you close down your own bar or restaurant?<p></p>
+            Did you use any electricity for your bar or restaurant?<p></p>
             
   - name: HHQ_DICT.GP39
     conditions:
       - questionText:
           EN: |
-            Did you close down your own other non-agricultural business, even if it is a small business run from home or on a street?<p></p>
+            Did you use any electricity for your other non-agricultural business, even if it is a small business run from home or on a street?<p></p>
             
   - name: HHQ_DICT.GP4
     conditions:
