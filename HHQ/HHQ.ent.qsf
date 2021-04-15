@@ -5099,19 +5099,19 @@ questions:
     conditions:
       - questionText:
           EN: |
-            Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc.<p></p>
+            Did you use any electricity for your production of agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc.?<p></p>
             
   - name: HHQ_DICT.GP28
     conditions:
       - questionText:
           EN: |
-            Livestock by-products (milk, cheese)<p></p>
+            Did you use any electricity for your production of livestock by-products (milk, cheese)?<p></p>
             
   - name: HHQ_DICT.GP29
     conditions:
       - questionText:
           EN: |
-            Fresh/processed fish<p></p>
+            Did you use any electricity for your production of fresh/processed fish?<p></p>
             
   - name: HHQ_DICT.GP3
     conditions:
@@ -5123,19 +5123,19 @@ questions:
     conditions:
       - questionText:
           EN: |
-            Firewood, home-made charcoal<p></p>
+            Did you use any electricity for your production of firewood, home-made charcoal?<p></p>
             
   - name: HHQ_DICT.GP31
     conditions:
       - questionText:
           EN: |
-            Construction timber, wood-poles or other construction material<p></p>
+            Did you use any electricity for your production of construction-timber, wood-poles or other construction material?<p></p>
             
   - name: HHQ_DICT.GP32
     conditions:
       - questionText:
           EN: |
-            Mats, bricks, cane furniture, weave baskets, thatch grass etc.<p></p>
+            Did you use any electricity for your production of mats, bricks, cane furniture, weave baskets, thatch grass etc.?<p></p>
             
   - name: HHQ_DICT.GP33
     conditions:
@@ -5161,6 +5161,7 @@ questions:
       - questionText:
           EN: |
             <p>Did you use any electricity for your trading or service business on a street or in a market?<br></p>
+            
   - name: HHQ_DICT.GP37
     conditions:
       - questionText:
