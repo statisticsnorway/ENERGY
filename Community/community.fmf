@@ -711,7 +711,7 @@ Text=D15
   
 [Field]
 Name=D16
-Position=109,515,194,535
+Position=109,515,152,535
 Item=D16,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -821,7 +821,7 @@ Form=3
   
 [Field]
 Name=D24
-Position=968,312,1025,332
+Position=968,312,997,332
 Item=D24,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox

@@ -13,22 +13,22 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
-
+      
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
-
-   - name: Heading 1
+      
+  - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
-
+      
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
-     
+      
   - name: Heading 3
     className: heading3
     css: |
@@ -248,7 +248,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">An approximate number.&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quantas famílias atualmente estão vivendo em toda a comunidade?&nbsp;</span></p><p></p><p><font color="#0000ff">Um número aproximado bastará</font></p>
+            <p><span style="font-size:16px;color:#000000;">Quantos agregados familiares atualmente estão vivendo em toda a comunidade?&nbsp;</span></p><p></p><p><font color="#0000ff">Um número aproximado</font></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kwa sasa ni kaya ngapi zinaishi katika jamii hii?&#160;</span></p>
@@ -264,10 +264,10 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">Is there more or less households in the community now than five years ago?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Is there more or less households in the community now than five years ago?&nbsp;</span></p><p><span style="font-size:16px;color:#000000;"><br></span></p>
             
           PT: |
-            <p>Há mais ou menos famílias na comunidade agora do que há cinco anos?<br></p><div><br></div>
+            <p>Há mais ou menos agregados famíliares na comunidade agora do que há cinco anos atrá?<br></p><div><br></div>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni kaya ngapi zimehamia katika jamii hii kwa kipindi cha miaka miwili iliyopita?&#160;</span></p>
@@ -287,7 +287,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Multiple response. Two responses possible&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quais são as duas atividades econômicas mais difundidas nesta comunidade / bairro?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Quais são as duas actividades econômicas mais praticadas nesta comunidade/bairro?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">Multiplas respostas. Duas respostas possiveis&nbsp;</span></p>
             
           SW: |
@@ -309,7 +309,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What are all the different sources of electricity that are available in this community?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quais são todas as diferentes fontes de eletricidade que estão disponíveis nesta comunidade?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quais são as diferentes fontes de eletricidade disponíveis nesta comunidade?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni nini vyanzo vya umeme vinavyopatikana katika jamii hii?&#160;</span></p>
@@ -330,8 +330,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Quanto pagou comunidade para ligação à rede?&#160;</span></p>
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Consulte qualquer custo da comunidade para ter a infraestrutura instalada.&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Quanto é que a comunidade&nbsp;</span>pagou para obter a ligação à rede?&nbsp;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Consulte qualquer custo da comunidade para ter a infraestrutura instalada.&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?&#160;</span></p>
@@ -354,7 +354,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Read aloud options&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">O serviço de rede está disponível para toda a comunidade ou apenas para a alguma parte da comunidade?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">O serviço da rede eléctrica está disponível em toda a comunidade ou apenas para uma parte da comunidade?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">Leia as opções em voz alta&nbsp;</span><span style="font-size:16px;color:#000000;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi tu ya sehemu?&#160;</span></p>
@@ -375,7 +375,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many households are connected to the grid?&#160;</span></p>
             
           PT: |
-            
+            Quantos agregados familiares estão ligados à rede eléctrica?<p></p>
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;"> Je, ni kwa kiasi gani kaya za jamii hii zimeunganishwa kwenye gridi?&#160;</span></p>
             
@@ -393,7 +393,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the main reason some households are not connected to the grid?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Qual é a principal razão que algumas famílias não estão conectados à rede?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Qual é a principal razão pela qual alguns agregados famíliares não estão conectados à rede?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?&#160;</span></p>
@@ -412,7 +412,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many businesses are connected to the grid?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quantas empresas estão conectados à rede?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quantas empresas estão ligadas à rede?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?&#160;</span></p>
@@ -431,7 +431,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Are there certain months/seasons every year when the community experiences bad electricity service from the grid?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Existem alguns meses durante todo o ano onde a comunidade tem tido má experiencia com serviço de rede eléctrica?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Existem alguns meses/estações durante o ano onde a comunidade tem tido má experiencia com serviço de rede eléctrica?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?&#160;</span></p>
@@ -451,7 +451,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Record the months when community has the lowest number of hours of electricity supply. Up to three months are possible.&#160;</span></p>
             
           PT: |
-            
+            <p>Quais são os péssimos meses de serviço da rede eléctrica?</p><p><span style="color: rgb(0, 0, 255);">Registe os meses que a comunidade o número mais baixo de horas de fornecimento de energia. Até três meses é possível.&nbsp;</span>&nbsp;&nbsp;</p><p><br></p><p><p></p></p>
           SW: |
             
         helpText:
@@ -470,9 +470,9 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">A comunidade publica um cronograma de &quot;restrição de carga&quot; (anúncio de horas disponível na rede eletricidade)?&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Vocês publicam um cronograma de "restrição de carga" (anúncio de horas disponível na rede eléctrica)?&nbsp;</span></p>
+            <p>Restrição de carga&nbsp;<span style="color: rgb(0, 0, 255);"> refere-se ao conjunto de horas de disponibilidade de energia na rede eléctica.&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? &#160;</span></p>
@@ -494,8 +494,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Load shedding is the set hours of electricity available from the grid.&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">A comunidade publica uma agenda &quot;de rejeição de cargas&quot; (anúncio de horas disponível na rede eletricidade)?&#160;</span></p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Vocês publicam uma agenda "de rejeição de cargas" (anúncio de horas disponível na rede eletricidade)?&nbsp;</span></p>
+            <p>&nbsp;Restrição de carga&nbsp;<span style="color: rgb(0, 0, 255);">&nbsp;refere-se ao conjunto de horas de disponibilidade de energia na rede eléctica.&nbsp;</span></p><p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?&#160;</span></p>
@@ -516,7 +516,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Does <span style="color:#008000;">~~elecCompany~~</span> (or the the community) publish a &quot;load-shedding&quot; schedule?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
+            <p>A&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;(ou a comunidade) anuncia o calendário de "restrição da caga"?&nbsp;<br></p><p><span style="font-size:16px;color:#008000;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
@@ -537,7 +537,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">99 km or more…99&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
+            <p><span style="font-size:16px;color:#008000;">A que distância fica o posto mais próximo~~elecCompany~~ ?</span></p><p><span style="color: rgb(0, 0, 255);">Não sabe…88&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">99 km ou mais…99&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
@@ -557,7 +557,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If no outages occured, record 0.&#160;</span></p>
             
           PT: |
-            
+            <p>Qual foi a duração total de corte de energia durante a última semana (em horas)?</p><p><span style="color: rgb(0, 0, 255);">Se não ocorreu nenhum corte, registe 0.&nbsp;</span></p><p><br></p><p><p></p></p>
           SW: |
             
         helpText:
@@ -574,7 +574,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?&#160;</span></p>
             
           PT: |
-            
+            Nos últimos 12 meses,&nbsp; houve corte de energia por mais de 24 horas para muitos agregados familiares ao mesmo tempo?<p></p>
           SW: |
             
         helpText:
@@ -592,7 +592,7 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            
+            Qual foi a última vez que houve corte de energia por mais de 24 horas na comunidade?<p></p>
           SW: |
             
         helpText:
@@ -609,7 +609,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">How many days did it take to fix the issue and for the community to regain power?&#160;</span></p>
             
           PT: |
-            
+            Quantos dias levou para resolver o problema e reestabelecer a energia eléctrica na comunidade?<p></p>
           SW: |
             
         helpText:
@@ -626,7 +626,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">What are the two most serious problems this community experiences with the grid electricity?&#160;</span></p>
             
           PT: |
-            
+            Quais são os dois problemas mais sérios que a comunidade tem com a rede eléctrica?<p></p>
           SW: |
             
         helpText:
@@ -644,7 +644,7 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            
+            <p>A ~~elecAccess~~, tem facitado ou dificultado a ligação à rede eléctrica aos novos agregados familiares ou a situação está na mesma?&nbsp;</p><p></p>
           SW: |
             
         helpText:
@@ -661,7 +661,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?&#160;</span></p>
             
           PT: |
-            
+            <p>~~elecAccess~~, tem tornado o preço mais barrato ou mais caro a ligação à rede eléctrica ou a situação está na mesma?&nbsp;</p><p><br></p><p></p><p></p>
           SW: |
             
         helpText:
@@ -678,7 +678,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~,  has there been less or more black-oust or brown-outs  in your community, or is the frequencie about the same?&#160;</span></p>
             
           PT: |
-            
+            ~~elecAccess~~, tem havido mais ou menos cortes de energia/apagão,na sua comunidade ou a situação está na mesma?&nbsp;<p></p>
           SW: |
             
         helpText:
@@ -695,7 +695,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the price of using electricity become higher or lower, or is the price about the same?&#160;</span></p>
             
           PT: |
-            
+            ~~elecAccess~~, o preço de uso de energia tornou-se mais elevado ou ou mais baixo, ou asituação está na mema?&nbsp;<p></p>
           SW: |
             
         helpText:
@@ -712,7 +712,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?&#160;</span></p>
             
           PT: |
-            
+            <span style="background-color: rgb(0, 0, 255);"></span>~~~elecAccess~~, a electricidade está disponível para mais ou menos horas&nbsp; à noite&nbsp; ou as horas de disponibilidade de energia à noite está na mesma?<br><p></p>
           SW: |
             
         helpText:
@@ -726,14 +726,13 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is the community connected to the national grid or a local mini-grid?&#160;</span></p>
-            <p style="margin-bottom:8pt;">&#160;</p>
-            <p style="margin-bottom:8pt;"><span style="font-size:12px;color:#0000ff;">Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is the community connected to the national grid or a local mini-grid?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;">&nbsp;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:12px;color:#0000ff;">Interviewer/CAPI check:&nbsp;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade está ligada à rede nacional ou uma mini rede local?&#160;</span></p>
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Entrevistador verifique / CAPI: &#160;</span></p>
-            <p style="margin-bottom:8pt;">&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade está ligada à rede eléctrica nacional ou uma mini rede local?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Entrevistador verifique / CAPI:&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?&#160;</span></p>
@@ -752,7 +751,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?&#160;</span></p>
             
           PT: |
-            
+            ~~elecAccess~~, os serviços de reparação ou de manutenção do fornrecedor melhoram ou pioraram, ou a situação está na mesma?&nbsp;<p></p>
           SW: |
             
         helpText:
@@ -769,7 +768,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Do any households own a solar home system/solar lighting in this community?&#160;</span></p>
             
           PT: |
-            
+            Algum agregado familiar possui um sistema solar doméstico/de iluminação solar nesta comunidade?<p></p>
           SW: |
             
         helpText:
@@ -786,7 +785,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?&#160;</span></p>
             
           PT: |
-            
+            Existem muitos ou poucos agregados familiares que utilizam um sistema solar/sistema de iluminação solar na comunidade?<p></p>
           SW: |
             
         helpText:
@@ -804,7 +803,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#008000;">Multiple responses possible&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Você pode comprar ou arrendar um sistema doméstico solar / sistemas de iluminação solar nesta comunidade?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Você pode comprar ou alugar um sistema doméstico solar / sistemas de iluminação solar nesta comunidade?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Múltiplas respostas</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, unaweza kununua au kukodi mfumo wa umeme jua kwenye jamii hii?&#160;</span></p>
@@ -823,7 +822,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Are there any shared solar/electricity driven irrigation systems used by farmers in this community?&#160;</span></p>
             
           PT: |
-            
+            <p>Existe um sistema de irrigação solar/eléctrico partilhado&nbsp; usado por agricultores nesta comunidade?<br></p><p><p><br></p></p>
           SW: |
             
         helpText:
@@ -840,7 +839,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Are there any shared solar/electric water pumps in this community?&#160;</span></p>
             
           PT: |
-            
+            Existe uma pomba de água solar/eléctrica partilhada&nbsp; nesta comunidade?<p></p>
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kuna umeme wa jua wa kuchangia/pampu maji ya umeme katika jamii hii?&#160;</span></p>
             
@@ -896,7 +895,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Who is running the local mini-grid system in this community?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quem está executando o sistema mini rede local nesta comunidade?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quem é o responsável pelo sistema da mini-rede local nesta comunidade?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni nani anasambaza umeme wa gridi ndogo katika jamii hii?&#160;</span></p>
@@ -915,7 +914,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the name of the local mini-grid company?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Qual é o nome da empresa mini rede local?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Qual é o nome da empresa responsável pela mini-rede local?&nbsp;</span></p>
             
           SW: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Taja jina la kampuni inayosambaza umeme wa gridi ndogo?&#160;</span></p>
@@ -937,10 +936,10 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">A quantos anos a comunidade tem essa ligação à rede?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registre em anos. Se menos de 1 ano de registro 1&#160;</span></p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">A quantos anos a comunidade tem essa ligação à rede?&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registe em anos. Se menos de 1 ano de registo 1&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa?.&#160;</span></p>
@@ -962,8 +961,8 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Será que a comunidade paga para obter a ligação à rede electrica?&#160;</span></p>
-            <p><span style="font-size:13px;color:#0000ff;">CONSULTE QUALQUER CUSTO COMUNITÁRIO PARA TER A INFRAESTRUTURA INSTALADA.&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Será que a comunidade pagou para obter a ligação à rede electrica?&nbsp;</span></p>
+            <p><span style="font-size:13px;color:#0000ff;">CONSULTE QUALQUER CUSTO COMUNITÁRIO PARA TER A INFRAESTRUTURA INSTALADA.&nbsp;</span></p>
             
           SW: |
             <p>&#160;</p>
@@ -986,9 +985,8 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Agora nós gostaríamos de saber sobre o acesso à comunidade e vários infra-estrutura de serviço. &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Primeiro nós gostaríamos de saber se a comunidade é acessível através de veículo motorizado (Carro ou Camião) durante a estação seca?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Agora nós gostaríamos de saber sobre o acesso à comunidade e vários infra-estrutura de serviço. &nbsp;</span></p>
+            <p>A comunidade é acessível por veículo a motor (carro ou caminhão) durante a estação seca?&nbsp;<br></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kijiji kinafikika kwa pikipiki (gari)?&#160;</span></p>
@@ -1009,7 +1007,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Is the community also accessible by motor vehicle (car or truck) during <span style="color:#008000;">the rainy season</span>?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">A comunidade é também acessível por automóvel (Carro ou Camião) durante a estação chuvosa?&#160;</span></p>
+            <p>A comunidade também é acessível por veículo a motor (carro ou caminhão) durante a estação chuvosa?&nbsp;<br></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kijiji kinafikika kwa pikipiki (gari)?&#160;</span></p>
@@ -1051,15 +1049,12 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver na cidade o codigo da distancia deve ser 0 km &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Se não for na cidade<span style="color:#000000;">: &#160;</span></span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a cidade mais próxima?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver na cidade o codigo da distancia deve ser 0 km &nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255);">Se não for na cidade</span>:&nbsp; &nbsp;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a cidade mais próxima?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;"> Kama si mjini/Jiji. Je, kuna umbali gani kutoka kijijini mpaka kwenye mji/jiji wa karibu?&#160;</span></p>
@@ -1081,13 +1076,10 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para o centro do distrito?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km&nbsp;</span><span style="color: rgb(0, 0, 255);">(</span><span style="color: rgb(0, 0, 255);">não precisa perguntar).</span><span style="font-size:16px;color:#0000ff;">.</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito:&nbsp;&nbsp;</span>&nbsp;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para o centro do distrito?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA. &#160;</span></p>
@@ -1111,13 +1103,10 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a agência bancária mais próxima?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km (</span><span style="color: rgb(0, 0, 255);">não precisa perguntar).</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito:&nbsp;&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a agência bancária mais próxima?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA. &#160;</span></p>
@@ -1139,13 +1128,10 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a instituição de microfinanças mais próximo? &#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km&nbsp;</span><span style="color: rgb(0, 0, 255);">(</span><span style="color: rgb(0, 0, 255);">não precisa perguntar).</span></p>
+            <p><span style="color: rgb(0, 0, 255);">Se não for no centro do distrito:&nbsp;&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a instituição de microfinanças mais próximo?&nbsp;&nbsp;</span>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA.&#160;</span></p>
@@ -1317,11 +1303,11 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:12px;color:#000000;">Has a <span style="color:#008000;">Power lines program: Construction, maintenance or rehabilitation</span> been implemented in the community in the last 5 years?&#160;</span></p>
-            <p><span style="font-size:10px;color:#0000ff;">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&#160;</span></p>
+            <p><span style="font-size: 12px;">Has a <span style="color: rgb(0, 128, 0);">Power lines program: Con</span>structi<span style="color: rgb(0, 128, 0);">on, maintenance or rehabilitation</span> been implemented in the community in the last 5 years?&nbsp;</span></p>
+            <p><span style="font-size: 10px;"><font color="#0000ff">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</font></span></p>
             
           PT: |
-            
+            <p><span class="VIiyi" jsaction="mouseup:BR6jm" jsname="jqKxS" lang="pt" style="-webkit-tap-highlight-color: transparent; display: inline; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="3" jsdata="uqLsIf;_;$71" style="-webkit-tap-highlight-color: transparent; cursor: pointer; font-size: 12px;">Existe algum programa de ligaçaão eletrica: construção, manutenção ou reabilitação implementado na comunidade nos últimos 5 anos?</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span></p><p><span style="background-color: rgb(245, 245, 245);"><br></span><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="0" jsdata="uqLsIf;_;$68" style="-webkit-tap-highlight-color: transparent; cursor: pointer; background-color: rgb(210, 227, 252); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap;"><span jsaction="click:qtZ4nf,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:qtZ4nf,c2aHje" jsname="W297wb" style="-webkit-tap-highlight-color: transparent; font-size: 14px;">Dispositivos que usam energia solar podem ser usados mesmo por residências remotas sem acesso à rede.</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;">Ele usa energia solar e dependendo da capacidade do sistema pode alimentar tudo, desde uma única luz até aparelhos como rádio, ventilador, TV etc.</span></p><p><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;"><br></span></p><p></p><p></p><p></p>
           SW: |
             
         helpText:
@@ -1339,7 +1325,7 @@ questions:
             <p><span style="font-size:10px;color:#0000ff;">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&#160;</span></p>
             
           PT: |
-            
+            <p>Na comunidade foi implementado um programa comunitário solar de mini-redes nos últimos 5 anos?&nbsp;</p><p><font color="#0000ff"><span style="font-size: 10px;">Os dispositivos que utilizam energia solar podem ser utilizados mesmo por famílias remotas(distantes) sem acesso à rede eléctrica. Utiliza energia solar e depende da capacidade do sistema, pode alimentar tudo, desde uma única luz até aparelhos como um rádio, ventuinha, TV, etc.&nbsp;</span></font><p></p></p>
           SW: |
             
         helpText:
@@ -1357,7 +1343,7 @@ questions:
             <p><span style="font-size:10px;color:#0000ff;">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&#160;</span></p>
             
           PT: |
-            
+            <p>Tem um programa de distribuição de energia off-grid para agregados famíliares individuais, (por exemplo lanternas solares, sistemas solares domésticos, gerador elétrico) que foi implementado na comunidade nos últimos 5 anos?&nbsp;</p><p><font color="#0000ff">Os dispositivos que utilizam energia solar podem ser utilizados mesmo por agregados famíliares remotas(distantes) sem acesso à rede. Utiliza energia solar e depende da capacidade do sistema, pode alimentar tudo, desde uma única luz até aparelhos como um rádio, ventoinha, TV, etc.&nbsp;</font></p><p></p>
           SW: |
             
         helpText:
@@ -1374,7 +1360,7 @@ questions:
             <p><span style="font-size:12px;color:#000000;">Has any <span style="color:#004000;">Other development program related to power supply</span> been implemented in the community in the last 5 years?&#160;</span></p>
             
           PT: |
-            
+            Algum outro programa de desenvolvimento relacionado com o fornecimento de energia foi implementado na comunidade nos últimos 5 anos?&nbsp;<p></p>
           SW: |
             
         helpText:
@@ -1391,7 +1377,7 @@ questions:
             <p><span style="font-size:12px;color:#000000;">Has a <span style="color:#008000;">Solar irrigation program for farmers</span> been implemented in the community in the last 5 years?&#160;</span></p>
             
           PT: |
-            
+            Tem sido implementado um programa de irrigação solar para agricultores na comunidade nos últimos 5 anos?&nbsp;<p></p>
           SW: |
             
         helpText:
