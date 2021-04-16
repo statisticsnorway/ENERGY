@@ -607,10 +607,22 @@ PROC GLOBAL
 		numeric  ctr = 0;
 		array string acceptOptions(20);
 		array serialNos(20);
+		string vsetStatus;
 		
 		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and SLOGIN = M_LOGIN do
 			inc(ctr);
-			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11);
+			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
+			if loaded then
+				//Already visited. Need to find out if it is finished or not
+				if ispartial(HHQ_DICT) then
+					vsetStatus = tr(23);
+				else	//Finished
+					vsetStatus = tr(24);
+				endif;
+			else
+				vsetStatus = tr(25);
+			endif;
+			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11) + " " + strip(vsetStatus);
 			serialNos(ctr) = SA8;
 		endfor;
 		
@@ -1013,6 +1025,7 @@ preproc
 	//create value set (Despite using map to navigate from here, I need the value set for debugging: Maps doesn't work for windows
 	array vsetCodes(vsetMax);
 	array String vsetLabels(vsetMax);
+	string vsetStatus;
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
@@ -1049,18 +1062,21 @@ preproc
 				if ispartial(HHQ_DICT) then
 					//errmsg("not final. Serial: %d", SA8);
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
+					vsetStatus = tr(23);
 				else	//Finished
 					//errmsg("Finnished. Serial: %d", SA8);
 					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
+					vsetStatus = tr(24);
 				endif;
 			else
 				//errmsg("never been here at all. Serial: %d", SA8);
 				HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
+				vsetStatus = tr(25);
 			endif;
 
 
 			vsetCodes(i) = SA8;
-			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11);	//Separating with semicolon to make it easy to find the name part
+			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11) + " " + strip(vsetStatus);	//Separating with semicolon to make it easy to find the name part
 
 			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 			//HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));

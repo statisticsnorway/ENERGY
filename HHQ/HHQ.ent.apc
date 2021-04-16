@@ -3,6 +3,7 @@
 	// This is supposed to be set only in the Menu application
 	//String country = sysparm("country");
     String country = "TZ";
+	//country = Menu.getproperty("country");
 	//Country specific variables
 	numeric gridPrice = 3700;	//country specific price to connect to the grid
 	numeric highDevicePrice = 5000;//Country specific prices for solar devices
@@ -126,6 +127,7 @@ preproc
 
 			numeric i = 1;
 			numeric j = 0;
+			numeric k = 0;
 			while i <= memNum do
 				memberNumbers(i) = i;
 				memberNames(i) = AB1(i);
@@ -157,7 +159,15 @@ preproc
 					childrenNames(j) = AB1(i);
 				endif;
 
+				// Persons 12 years and above
+				if AB5(i) >= 12 then
+					inc(k);
+					persons12AndAboveNos(k) = maketext("%02d",i);
+					persons12AndAboveNames(k) = AB1(i);
+				endif;
 				inc(i);
+
+				
 			enddo;
 	
 			memberNumbers(i) = NOTAPPL;
