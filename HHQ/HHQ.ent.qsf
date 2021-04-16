@@ -3228,17 +3228,16 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">What kind of solar power supply do you have?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">SHS: Most advanced. Separate solar panel and a separate battery. Can power appliances (e.g radio, fan).&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">SOLAR MULITILIGHT PRODUCT: Medium advanced. Can power more than one light and charge mobile phone. Separate solar panel. Integrated battery, no separate battery. &#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">SOLAR LANTERN: Least advanced. Single light. All-in-one. Might charge mobile phone and some also have a radio.&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Illustrative photos.&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">MULTIPLE ANSWER&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">What kind of solar power supply do you have?&nbsp;</span></p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255);">SHS: Most advanced. Separate solar panel and a separate battery. Can power appliances (e.g radio, fan).&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">SOLAR MULITILIGHT PRODUCT: Medium advanced. Can power more than one light and charge mobile phone. Separate solar panel. Integrated battery, no separate battery. &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">SOLAR LANTERN: Least advanced. Single light. All-in-one. Might charge mobile phone and some also have a rádio.&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Illustrative photos.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">MULTIPLE ANSWER&nbsp;</span></p>
             
           PT: |
-            
+            <p>Que tipo de fonte de energia solar tem?&nbsp;</p><p><font color="#0000ff">SSD: Mais avançado. Painel solar separado e uma bateria separada. Pode alimentar os electrodoésticos (por exemplo, rádio, ventuinha).&nbsp;<br></font></p><p><font color="#0000ff">PRODUTO SOLAR MULITlLUZ: Médio avançado. Pode alimentar mais do que uma luz e carregar um telemóvel. Painel solar separado. Bateria integrada, sem bateria separada.&nbsp;&nbsp;<br></font></p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">LANTERNA SOLAR: Menos avançado. Luz única. Tudo em um. Pode carregar o telemóvel e alguns também têm um rádio.&nbsp;</font></p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">Fotos ilustrativas.&nbsp;</font></p><p><br></p><p>POSSIVEIS MÚLTIPLA RESPOSTA&nbsp;</p><p></p>
           SW: |
             
         helpText:
