@@ -83,7 +83,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What was the main activity at <span style="color:#008000;">~~currMember~~</span>&rsquo;s place of work during the last 12 months?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual foi a actividade principal no local de trabalho da/o <span style="color:#0000ff;">~~currMember~~</span> nos últimos 12 meses?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual foi a&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">principal</span><span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;actividade&nbsp; no local de trabalho da/o </span><span style="font-family: Arial, sans-serif; font-size: 20px; color: rgb(0, 0, 255);">~~currMember~~</span><span style="font-family: Arial, sans-serif; font-size: 20px;"> nos últimos 12 meses?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Nini ilikuwa shughuli kuu ya mahali anapofanyia kazi ~~currMember~~ katika kipindi cha miezi 12 iliyopita?&#160;</span></p>
@@ -103,7 +103,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Max 12&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Nos últimos 12 meses, quantos meses <span style="color:#0000ff;">~~currMember~~</span> esteve envolvido nesta actividade?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Nos últimos 12 meses, quantos meses <span style="color:#0000ff;">~~currMember~~</span> esteve envolvido nesta actividade?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Máximo 12</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Katika muda miezi 12 iliyopita je ni miezi mingapi ~~currMember~~ alijishughulisha na shughuli hii?&#160;</span></p>
@@ -123,7 +123,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Max 30&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos dias por mês o/a <span style="color:#0000ff;">~~currMember~~</span> trabalha nesta atividade?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos dias por mês o/a <span style="color:#0000ff;">~~currMember~~</span> trabalha nesta atividade?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Máximo 30</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Ni Siku ngapi katika mwezi ~~currMember~~ hufanya shughuli hii?&#160;</span></p>
@@ -143,8 +143,8 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual foi a ocupação principal do/a <span style="color:#0000ff;">~~currMember~~</span> há 5 anos?&#160;</span></p>
-            <p>&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual era a&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">principal&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">ocupação&nbsp; do/a </span><span style="font-family: Arial, sans-serif; font-size: 20px; color: rgb(0, 0, 255);">~~currMember~~</span><span style="font-family: Arial, sans-serif; font-size: 20px;"> há 5 anos atrás?&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, nini Shughuli kuu ambayo ~~currMember~~ alikuwa akifanya  miaka 5 iliyopita?&#160;</span></p>
@@ -163,7 +163,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">What was the main activity at <span style="color:#008000;">~~currMember~~</span>&rsquo;s place of work 5 years ago?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual foi a actividade principal no local de trabalho do/a <span style="color:#0000ff;">~~currMember~~</span> há 5 anos?&#160;</span></p>
+            <p><span style="font-size: 20px; font-family: Arial, sans-serif;">Qual era a&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">principal</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">&nbsp;actividade no local de trabalho do/a <span style="color:#0000ff;">~~currMember~~</span> há 5 anos&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">atrás</span><span style="font-family: Arial, sans-serif; font-size: 20px;">?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Ni shughuli gani kuu katika mahali pa kazi ~~currMember~~ anapofanyia kazi katika miaka 5 iliyopita?&#160;</span></p>
@@ -182,7 +182,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">How frequently does <span style="color:#008000;">~~currMember~~</span> cook food for the household?&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Com que frequência <span style="color:#0000ff;">~~currMember~~</span> cozinha alimentos para o seu Agregado?&#160;</span></p>
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Com que frequência <span style="color:#0000ff;">~~currMember~~</span> cozinha alimentos para o seu agregado?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Ni mara ngapi ~~currMember~~ hupika chakula kwa ajili ya kaya?&#160;</span></p>
@@ -682,12 +682,12 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a relação de parentesco entre <span style="color:#0000ff;">~~currMember~~</span> com o chefe do agregado familiar?&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
-            <p>&#160;</p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a relação de parentesco do(a)&nbsp;<span style="color:#0000ff;">~~currMember~~</span> com o(a) chefe do agregado familiar?&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ~~currMember~~  ana uhusuano gani na mkuu wa kaya?&#160;</span></p>
@@ -706,7 +706,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Was <span style="color:#008000;">~~currMember~~</span> the head of household 5 years ago?&#160;</span></p>
             
           PT: |
-            
+            O(A)<span style="color: rgb(0, 128, 0);">~~currMember~~era chefe do agregdo familiar ha 5 anos atrás</span>?&nbsp;<p></p>
           SW: |
             
         helpText:
@@ -787,7 +787,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Can <span style="color:#008000;">~~currMember~~</span> read and write?&nbsp;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> pode ler e escrever uma frase simples em qualquer idioma?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> sabe ler e escrever?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Kwa wanakaya wote wenye umri ya miaka 5 au zaidi tungependa kujua viwango vya elimu yao.&#160;</span></p>
@@ -808,7 +808,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Has <span style="color:#008000;">~~currMember~~</span> ever attended school?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> já frequentou a escola?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> alguma vez frequentou a escola?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je ~~currMember~~ aliwahi kuhudhuria shule?&#160;</span></p>
@@ -828,8 +828,8 @@ questions:
             <p>&nbsp;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">OA <span style="color:#0000ff;">~~currMember~~</span> matriculou se neste ano lectivo?&#160;</span></p>
-            <p>&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> matriculou-se neste ano lectivo?&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je ~~currMember~~ aliandikishwa shule mwaka huu?&#160;</span></p>
@@ -848,7 +848,7 @@ questions:
             <p style="margin-bottom:8pt;">What grade was&nbsp;<span style="color: rgb(0, 128, 0); font-size: 16px;">~~currMember~~</span>&nbsp;attending this year?&nbsp;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que classe <span style="color:#0000ff;">~~currMember~~</span> se matriculou?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que classe <span style="color:#0000ff;">~~currMember~~</span>&nbsp;matriculou-se?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ~~currMember~~ aliandikishwa shule kiwango gani??&#160;</span></p>
@@ -905,7 +905,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Did <span style="color:#008000;">~~currMember~~</span> attend school at any time during the <span style="color:#008000;">previous school year </span>(2020)?&nbsp;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> frequentou a escola em qualquer momento durante o último ano lectivo?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O/A <span style="color:#0000ff;">~~currMember~~</span> frequentou a escola em qualquer momento durante o último ano lectivo(2020)?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je ~~currMember~~ alihudhuria shule wakati wowote  kwa mwaka uliopita  yaani (2018)?&#160;</span></p>
@@ -925,8 +925,8 @@ questions:
             <p>&nbsp;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que nivel o <span style="color:#0000ff;">~~currMember~~</span> frenquentou no último ano lectivo?&#160;</span></p>
-            <p>&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Que nivel o/a&nbsp;<span style="color:#0000ff;">~~currMember~~</span> frenquentou no último ano lectivo?&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni  darasa gani ~~currMember~~ alihudhuria  shule kwa mara ya mwisho kwa mwaka uliopita?&#160;</span></p>
@@ -985,9 +985,9 @@ questions:
             <p style="margin-bottom:8pt;">&#160;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">A quantos anos você vive nesta comunidade?&#160;</span></p>
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registro 1 se for menos de 1&#160;</span></p>
-            <p style="margin-bottom:8pt;">&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Há quantos anos você vive nesta comunidade?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registe 1 se for menos de 1&nbsp;</span></p>
+            <p style="margin-bottom:8pt;">&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, umeishi kwa miaka mingapi katika jamii hii?&#160;</span></p>
@@ -1008,7 +1008,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What types of toilet facility does your household use?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Que tipos de casa de banho a sua casa usa?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Que tipos de casa de banho usa o seu agregado familiar?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni aina gani ya Choo ambacho kinatumiwa na kaya yako?&#160;</span></p>
@@ -1048,7 +1048,7 @@ questions:
             <p style="margin-bottom:8pt;">What do you usually do to make the water safer to drink?&nbsp;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">A sua água potável é tratada (tratamento químico)?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">O que faz para tornar a sua água mais segura para beber?</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, maji ya kunywa katika kaya hii huwekwa dawa (kekemikali za kusafishia maji)?&#160;</span></p>
@@ -1067,7 +1067,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is your household&rsquo;s main source of <span style="color:#008000;">energy for lighting</span>?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a principal fonte de energia do seu Agregado familiar para iluminação?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a principal fonte de energia&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">para iluminação&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">do seu agregado familiar?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, nini chanzo kikuu cha nishati kinachotumika na kaya hii  kwa ajili ya kuangazia/mwanga?&#160;</span></p>
@@ -1086,7 +1086,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is your household&rsquo;s main source of <span style="color:#008000;">energy for cooking</span>?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a principal fonte de energia do seu Agregado famíliar para cozinhar?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é a principal fonte de energia&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">para cozinhar&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">do seu agregado famíliar?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, nini chanzo kikuu cha nishati kinachotumika na kaya hii  kwa ajili ya kupikia?&#160;</span></p>
@@ -1105,7 +1105,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Does anybody in this household have an account or savings in a bank, credit union, or in micro-finance bank?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Alguém nesta casa tem uma conta ou poupança em um banco, cooperativa de crédito ou banco de microfinanças?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Alguém neste agregado familiar tem uma conta ou poupança em um banco, cooperativa de crédito ou banco de microfinanças?</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kuna mtu yoyote katika kaya hii anamiliki akaunti ya benki au akiba ya fedha benki, vyama vya ushirika au taasisi ndogo za fedha? &#160;</span></p>
@@ -1125,7 +1125,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Read options aloud&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que instituição formal esse agregado familiar tem conta ou poupança?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que instituição formal esse agregado familiar tem conta ou poupança?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Leia a opçoes em voz alta&nbsp;</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni katika taasisi gani ya kifedha kaya hii inamiliki akaunti au akiba?&#160;</span></p>
@@ -1164,7 +1164,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Multiple response possible&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que instituição informal esse agregado tem conta ou poupança?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Em que instituição informal esse agregado familiar tem uma conta ou poupança?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Possiveis multiplas respostas</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni katika taasisi gani za kifedha zisizo rasmi ambazo kaya hii ina akaunti au akiba?&#160;</span></p>
@@ -1184,7 +1184,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Multiple response possible&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Se você conseguisse um empréstimo / crédito, quais seriam as fontes de crédito / empréstimos?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Se você conseguisse um empréstimo / crédito, quais seriam as fontes de crédito / empréstimos?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Possiveis multiplas respostas</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;"> Kama unaweza kupata mkopo, je unaweza kupata kutoka chanzo gani?&#160;</span></p>
@@ -1205,8 +1205,8 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o tipo de habitação?&#160;</span></p>
-            <p>&#160;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o tipo de habitação?&nbsp;</span></p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni aina gani ya makazi ya kaya hii?&#160;</span></p>
@@ -1224,10 +1224,10 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Do you use mobile money to make payments over the mobile phone?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Do you use mobile money to make payments over the mobile phone?</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Você usa dinheiro móvel para fazer pagamentos pelo celular?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Você usa conta móvel para fazer pagamentos por celular?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, unatumia huduma za kifedha za mitandao ya simu kutuma fedha kwa ndugu/marafiki kufanya malipo kwa kutumia simu ya mkononi?&#160;</span></p>
@@ -1269,7 +1269,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Multiple response possible&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Como você usa os serviços de dinheiro móvel?&#160;</span></p>
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Como você usa os serviços de conta móvel?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">Possiveis multiplas respostas</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, unatumiaje huduma za kifedha za mitandao ya simu za mikononi? &#160;</span></p>
@@ -1288,7 +1288,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many households share your dwelling?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos Agregados familiares partilham a sua habitação?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos agregados familiares partilham a sua habitação?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni kaya ngapi zinaishi katika makazi haya?&#160;</span></p>
@@ -1345,7 +1345,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many rooms (excluding the kitchen, toilet, and bathroom) does the household occupy?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos quartos (excluindo a cozinha, e banheiro) da casa ocupa?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantos quartos (excluindo a cozinha, e banheiro) da casa ocupa?&nbsp;</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Ni jumla ya vyumba vingapi (ukiondoa jiko,choo na bafu) vinatumiwa na kaya hii?&#160;</span></p>
@@ -1365,7 +1365,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o material principal das paredes da casa?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o material principal das paredes da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kuta za jengo kuu la kaya hii zimejengwa kwa kutumia nini?&#160;</span></p>
@@ -1385,7 +1385,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o material principal do tecto da casa?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o material principal do tecto da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, jengo kuu la kaya hii limeezekwa kwa kutumia nini?&#160;</span></p>
@@ -1405,7 +1405,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o material principal do chão da casa?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Qual é o&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">principal&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;">material&nbsp; do chão da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je,  jengo kuu la kaya hii limesakafiwa kwa kutumia nini?&#160;</span></p>
@@ -1428,8 +1428,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Please select most knowledgeable person of the household to answer questions about electricity.&#160;</span></p>
             
           PT: |
-            <p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;">Por favor, selecione a pessoa com maior conhecimento do agregado familiar para responder a perguntas sobre as características do agregado familiar.&#160;</span></p>
-            <p>&#160;</p>
+            <p style="margin-top:5pt;margin-bottom:5pt;">O respondente&nbsp; da proxima secçao deve ser o que tem mais conhecimentos sobre electricidade do agregado familiar. Está bem informado nessa materia ou gostaria de ter mais alguem do seu agregado para responder essas perguntas?&nbsp;&nbsp;</p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;"><br></span></p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;">Por favor, selecione a pessoa com maior conhecimento do agregado familiar para responder a perguntas sobre a electricidade.&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           SW: |
             <p><span style="font-size:16px;color:#0000ff;">Maelekezo: Sehemu hii ahojiwe mwanakaya mwenye ufahamu zaidi juu ya matumizi ya umeme katika kaya. Majibu ya pamoja pia yanaruhusiwa.&#160;</span></p>
@@ -2524,8 +2524,8 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Do you have a grid connection?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;">&#160;</p>
-            <p style="margin-bottom:8pt;">&#160;</p>
+            <p style="margin-bottom:8pt;">&nbsp;Está ligado à rede electríca</p>
+            <p style="margin-bottom:8pt;">&nbsp;</p>
             
           SW: |
             
@@ -2758,7 +2758,8 @@ questions:
             <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Is this the national grid or a local grid?&#160;</span></p>
             
           PT: |
-            Esta é a rede nacional ou local?<p></p>
+            Esta é a rede eléctrica nacional ou local?<p></p>
+            
           SW: |
             
         helpText:
@@ -2985,7 +2986,7 @@ questions:
             <p><span style="font-size:20px;color:#0000ff;font-family:'Arial', sans-serif;">Probe if respondent hesitates or ask to see the lantern/system: Can be anything from a single solar lantern to lights or appliances powered by a solar panel.&#160;</span></p>
             
           PT: |
-            
+            <p><span style="font-size: 20px; font-family: Arial, sans-serif;">Tem algum dispositivo ou fonte de energia que usa energia solar?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif; font-size: 20px;">Confirme</span><font color="#0000ff" face="Arial, sans-serif"><span style="font-size: 20px;">&nbsp;se o respondente hesitar ou peça para ver a lanterna/sistema: Pode ser qualquer coisa, desde uma única lanterna solar a luzes ou aparelhos alimentados por um painel solar.&nbsp;</span></font><br></p><p></p>
           SW: |
             
         helpText:
@@ -3227,17 +3228,16 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">What kind of solar power supply do you have?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">SHS: Most advanced. Separate solar panel and a separate battery. Can power appliances (e.g radio, fan).&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">SOLAR MULITILIGHT PRODUCT: Medium advanced. Can power more than one light and charge mobile phone. Separate solar panel. Integrated battery, no separate battery. &#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">SOLAR LANTERN: Least advanced. Single light. All-in-one. Might charge mobile phone and some also have a radio.&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Illustrative photos.&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">MULTIPLE ANSWER&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">What kind of solar power supply do you have?&nbsp;</span></p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255);">SHS: Most advanced. Separate solar panel and a separate battery. Can power appliances (e.g radio, fan).&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">SOLAR MULITILIGHT PRODUCT: Medium advanced. Can power more than one light and charge mobile phone. Separate solar panel. Integrated battery, no separate battery. &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">SOLAR LANTERN: Least advanced. Single light. All-in-one. Might charge mobile phone and some also have a rádio.&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Illustrative photos.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">MULTIPLE ANSWER&nbsp;</span></p>
             
           PT: |
-            
+            <p>Que tipo de fonte de energia solar tem?&nbsp;</p><p><font color="#0000ff">SSD: Mais avançado. Painel solar separado e uma bateria separada. Pode alimentar os electrodoésticos (por exemplo, rádio, ventuinha).&nbsp;<br></font></p><p><font color="#0000ff">PRODUTO SOLAR MULITlLUZ: Médio avançado. Pode alimentar mais do que uma luz e carregar um telemóvel. Painel solar separado. Bateria integrada, sem bateria separada.&nbsp;&nbsp;<br></font></p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">LANTERNA SOLAR: Menos avançado. Luz única. Tudo em um. Pode carregar o telemóvel e alguns também têm um rádio.&nbsp;</font></p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">Fotos ilustrativas.&nbsp;</font></p><p><br></p><p>POSSIVEIS MÚLTIPLA RESPOSTA&nbsp;</p><p></p>
           SW: |
             
         helpText:
