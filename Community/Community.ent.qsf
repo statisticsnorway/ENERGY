@@ -149,6 +149,7 @@ questions:
             
           PT: |
             <span style="font-size: 12px;">Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -230,6 +231,7 @@ questions:
             
           PT: |
             A quantos anos ~~currName~~ vive nesta comunidade?<p></p>
+            
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ni miaka mingapi ~~currName~~ meishi katika jamii hii?&#160;</span></p>
             
@@ -472,7 +474,7 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p><span style="font-size:16px;color:#000000;">Vocês publicam um cronograma de "restrição de carga" (anúncio de horas disponível na rede eléctrica)?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Vocês publicam um cronograma de "restrição de corrente" (anúncio de horas disponível na rede eléctrica)?&nbsp;</span></p>
             <p>Restrição de carga&nbsp;<span style="color: rgb(0, 0, 255);"> refere-se ao conjunto de horas de disponibilidade de energia na rede eléctica.&nbsp;</span></p>
             <p>&nbsp;</p>
             
@@ -1306,6 +1308,7 @@ questions:
             
           PT: |
             As oportunidades de emprego nesta comunidade aumentaram, mantiveram-se as mesmas ou diminuíram no último ano, de março de 2020 até hoje?<p></p>
+            
   - name: COMMUNITY_DICT.GP2
     conditions:
       - questionText:
@@ -1314,6 +1317,7 @@ questions:
             
           PT: |
             As oportunidades de negócio nesta comunidade aumentaram, mantiveram-se as mesmas ou diminuíram ao longo do último ano, de março de 2020 até hoje?<p></p>
+            
   - name: COMMUNITY_DICT.GP3
     conditions:
       - questionText:
@@ -1322,6 +1326,7 @@ questions:
             
           PT: |
             O acesso do mercado nesta comunidade aumentou, manteve-se igual ou diminuiu no último ano, de março de 2020 até hoje?<p></p>
+            
   - name: COMMUNITY_DICT.H1
     conditions:
       - questionText:
@@ -1443,6 +1448,7 @@ questions:
             
           PT: |
             Alguns dos agregados famíliares desta comunidade usam fogões&nbsp;melhorados que usam lenha, esterco, galhos, cascas de arroz ou folhas?<p></p>
+            
           SW: |
             
         helpText:
@@ -1460,6 +1466,7 @@ questions:
             
           PT: |
             Alguns agregados famíliares desta comunidade usam fogões melhorados a carvão?<p></p>
+            
           SW: |
             
         helpText:
@@ -1477,6 +1484,7 @@ questions:
             
           PT: |
             Algumas casas desta comunidade usam fogões&nbsp;de cozinha melhorados usando pellets ou briquetes?<p></p>
+            
           SW: |
             
         helpText:
@@ -1494,6 +1502,7 @@ questions:
             
           PT: |
             Algumas famílias desta comunidade usam fogões com GPL, biogás, fogão elétrico ou fogão solar?<p></p>
+            
           SW: |
             
         helpText:
@@ -1511,6 +1520,7 @@ questions:
             
           PT: |
             É possível comprar um fogão de cozinha melhorado nesta comunidade?<p></p>
+            
           SW: |
             
         helpText:
@@ -1528,6 +1538,7 @@ questions:
             
           PT: |
             Onde é o local mais próximo para comprar um fogão de cozinha melhorado&nbsp;nesta comunidade?<p></p>
+            
           SW: |
             
         helpText:
