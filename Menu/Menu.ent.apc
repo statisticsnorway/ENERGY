@@ -602,7 +602,7 @@ PROC GLOBAL
 	
 	//If there are more than 1 household with the same GPS coordinates, we need to make it possible to choose
 	//between them
-	function showHHs(gpsN, gpsW, string vsetStatus)
+	function showHHs(gpsN, gpsW, hashmap string status)
 		//loop through to see if there's more than one HH at this location
 		numeric  ctr = 0;
 		array string acceptOptions(20);
@@ -610,7 +610,7 @@ PROC GLOBAL
 		
 		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and SLOGIN = M_LOGIN do
 			inc(ctr);
-			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11) + " Status: " + strip(vsetStatus);
+			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11) + " Status: " + status(SA10);
 			serialNos(ctr) = SA8;
 		endfor;
 		
@@ -1014,6 +1014,8 @@ preproc
 	array vsetCodes(vsetMax);
 	array String vsetLabels(vsetMax);
 	string vsetStatus;
+	
+	hashmap string statusByPerson;
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
@@ -1030,7 +1032,7 @@ preproc
 
 			numeric markerId = HHMap.addMarker(SA7A, SA7B);
 			HHMap.setMarkerDescription(markerId, strip(SA10) + "<br/>" + strip(SA11));
-
+			
 			//First check if it is already done
 			AA14 = SA10;
 			ADDRESS_LOCATION = SA11;
@@ -1065,10 +1067,12 @@ preproc
 
 			vsetCodes(i) = SA8;
 			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11) + " " + strip(vsetStatus);	//Separating with semicolon to make it easy to find the name part
+			statusByPerson(SA10) = vsetStatus;
+			
 
 			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 			//HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
-			HHMap.SetMarkerOnClick(markerId, showHHs(SA7A, SA7B, vsetStatus));
+			HHMap.SetMarkerOnClick(markerId, showHHs(SA7A, SA7B, statusByPerson));
 			inc(i);
 		endif;
 	enddo;
