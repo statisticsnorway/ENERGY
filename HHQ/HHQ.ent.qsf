@@ -1755,6 +1755,7 @@ questions:
             
           PT: |
             <p>Há quantos anos tem esta bateria?</p><p></p>
+            
           SW: |
             
         helpText:
@@ -1859,6 +1860,7 @@ questions:
             
           PT: |
             Qual é o número total de baterias recarregáveis que usa num mês típico?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -1898,6 +1900,7 @@ questions:
             
           PT: |
             Quanto é que o seu agregado familiar gasta num mês típico para recarregar as baterias (no total)?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -2012,6 +2015,7 @@ questions:
             
           PT: |
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">O que é que o Amp-hours (Ah) indica na bateria?&nbsp;</span></font></p><p><font color="#0000ff"><span style="font-family: Arial, sans-serif;">Capacidade: ampere-hora (Ah).&nbsp;</span><br></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Se forem várias pilhas, resumir o Ah de todas as pilhas.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Gama: 20-500&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Não sabe=88&nbsp;</span></font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -2033,6 +2037,7 @@ questions:
             
           PT: |
             <p>Qual é a voltagem (V) das pilhas recarregáveis?&nbsp;</p><p><font color="#0000ff">Se forem várias pilhas, regeste a tensão para a bateria mais utilizada. Volts (V).&nbsp;</font></p><p><font color="#0000ff">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</font></p><p><font color="#0000ff">Alcance: 6-24&nbsp;</font></p><p><font color="#0000ff">Não sabe=88&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -2050,6 +2055,7 @@ questions:
             
           PT: |
             Quais são as horas watt (Wh) indicadas na bateria?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -2204,6 +2210,7 @@ questions:
             
           PT: |
             <p>Pode recarregar pelo menos um telemóvel até completar a carga em 3 dias dentro da sua casa/habitação?<br></p><p><p></p></p>
+            
           SW: |
             
         helpText:
@@ -2259,6 +2266,7 @@ questions:
             
           PT: |
             A sua família tem um carregador solar ou um power bank solar que pode ser usado para carregar telemóveis?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -2417,7 +2425,7 @@ questions:
             <p style="margin-bottom:8pt;">&#160;</p>
             
           PT: |
-            <p>Será que a ~~eletricidadeCompany~~ fez a ligação da sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><br></p><p><font color="#0000ff">Inquiridor pode responder por observação.</font></p><p></p>
+            <p>Será que a ~~electricityCompany~~ fez a ligação da sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><br></p><p><font color="#0000ff">Inquiridor pode responder por observação.</font></p><p></p>
             
           SW: |
             
@@ -4308,6 +4316,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, gastou alguma coisa em reparações/peças/ manutenção do gerador?<p></p>
+            
           SW: |
             
         helpText:
@@ -4706,6 +4715,7 @@ questions:
             
           PT: |
             <p>Qual destes é a principal fonte de iluminação do seu agregado familiar?&nbsp;</p><p><font color="#0000ff">Leia as opções em voz alta. Principal: o tipo que mais se usa.&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -4810,6 +4820,7 @@ questions:
             
           PT: |
             Qual é o problema mais importante quando se usa o&nbsp;<span style="color: rgb(0, 128, 0);">~~lampType~~</span>?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -4828,6 +4839,7 @@ questions:
             
           PT: |
             Qual é o segundo problema mais importante quando se usa o ~~lampType~~?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5247,7 +5259,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Please record respondent&#160;</span></p>
             
           PT: |
-            <p>Agora gostaríamos de falar com<font color="#0000ff"> ~~nomePersonCooksMostOften~~ </font>sobre cozinhar e combustíveis usados para cozinhar.&nbsp;</p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">Se ~~namePersonCooksMostOften~~ não estiver presente, peça para falar com outra pessoa conhecedora de cozinha.&nbsp;</font></p><p></p><p><font color="#0000ff">Por favor, registe o respondente&nbsp;</font></p>
+            <p>Agora gostaríamos de falar com<font color="#0000ff"> ~~namePersonCooksMostOften~~ </font>sobre cozinhar e combustíveis usados para cozinhar.&nbsp;</p><p><font color="#0000ff"><br></font></p><p><font color="#0000ff">Se ~~namePersonCooksMostOften~~ não estiver presente, peça para falar com outra pessoa conhecedora de cozinha.&nbsp;</font></p><p></p><p><font color="#0000ff">Por favor, registe o respondente&nbsp;</font></p>
             <p><span style="font-size:16px;color:#0000ff;">O entrevistado deve ser o membro do agregado familiar que mais frequentemente cozinha comida para o agregado familiar,&nbsp;</span></p>
             <p>&nbsp;</p>
             
@@ -5269,6 +5281,7 @@ questions:
             
           PT: |
             Qual deles é o seu fogão principal?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5286,6 +5299,7 @@ questions:
             
           PT: |
             Como você obteve o&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5303,6 +5317,7 @@ questions:
             
           PT: |
             Quem decidiu comprar este<span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5320,6 +5335,7 @@ questions:
             
           PT: |
             <font face="Arial, sans-serif">Quanto é que pagou pelo&nbsp;</font><span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><br><p></p>
+            
           SW: |
             
         helpText:
@@ -5337,6 +5353,7 @@ questions:
             
           PT: |
             <span style="font-family: Arial, sans-serif;">Quem te deu o</span><span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);"> ~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5354,6 +5371,7 @@ questions:
             
           PT: |
             Recebeu formação ou informação sobre o&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5371,6 +5389,7 @@ questions:
             
           PT: |
             <font face="Arial, sans-serif">Qual é o fabricante e modelo do</font><font color="#008000" face="Arial, sans-serif">&nbsp;~~mostUsedStove~~</font><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5388,6 +5407,7 @@ questions:
             
           PT: |
             Se quiser vender o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>&nbsp;na sua comunidade hoje, quanto você receberia?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5407,6 +5427,7 @@ questions:
             
           PT: |
             <div><font face="Arial, sans-serif">Há quanto tempo usas esta</font><font color="#008000" face="Arial, sans-serif"> ~~mostUsedStove~?&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Número de anos&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></div><p></p>
+            
           SW: |
             
         helpText:
@@ -5427,6 +5448,7 @@ questions:
             
           PT: |
             <p>Quantos anos espera continuar a usar este&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;</p><p><font color="#0000ff">Número de anos&nbsp;</font></p><p><font color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5444,6 +5466,7 @@ questions:
             
           PT: |
             <p>Durante os últimos 12 meses, usou fogões a lenha, esterco, galhos e folhas?&nbsp;<p></p></p>
+            
           SW: |
             
         helpText:
@@ -5461,6 +5484,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, durante qual parte do ano você usou esta&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~mostUsedStove~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            
           SW: |
             
         helpText:
@@ -5479,6 +5503,7 @@ questions:
             
           PT: |
             <p>O&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>&nbsp;está fixo num lugar ou é movivel?&nbsp;</p><p><font color="#0000ff">Pode ser respondida por observação&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5496,6 +5521,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, onde você normalmente cozinhava com ~~mostUsedStove~~ na estação seca(Inverno)?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5513,6 +5539,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, onde você normalmente cozinhava com ~~mostUsedStove~~ na estação chuvosa(Verão)?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5530,6 +5557,7 @@ questions:
             
           PT: |
             Usa uma chaminé, exaustor ou outro sistema de escape enquanto utiliza este&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5548,6 +5576,7 @@ questions:
             
           PT: |
             <p>Nos últimos 12 meses, quais são os combustíveis que mais usou em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;</p><p><span style="color: rgb(0, 0, 255);">A&nbsp;</span><span style="color: rgb(0, 0, 255);">&nbsp;</span><span style="color: rgb(0, 0, 255);">Mais usada. Uma&nbsp;</span><span style="color: rgb(0, 0, 255);">única&nbsp;</span><span style="color: rgb(0, 0, 255);">resposta&nbsp;</span></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5567,6 +5596,7 @@ questions:
             
           PT: |
             <p>Nos últimos 12 meses, qual é o segundo combustível mais usado que usou em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;</p><p><font color="#0000ff">B Segundo mais usado. Uma resposta única.&nbsp;</font></p><p><font color="#0000ff">Se for utilizado apenas um tipo de combustível, escolha "Não aplicável"&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5586,6 +5616,7 @@ questions:
             
           PT: |
             <p>Nos últimos 12 meses, com que frequência o ~~fueltype1~~ estave disponível?&nbsp;</p><p><font color="#0000ff">Leia em voz alta as opções.&nbsp;&nbsp;</font></p><p><font color="#0000ff">A Mais usada&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5605,6 +5636,7 @@ questions:
             
           PT: |
             <p>Nos últimos 12 meses, com que frequência o ~~fueltype2~~ estave disponível?&nbsp;</p><p><font color="#0000ff">Leia em voz alta as opções.&nbsp;&nbsp;</font></p><p><font color="#0000ff">B Segundo mais utilizado&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5622,6 +5654,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, quantos meses usou&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~fueltype1~~</span>?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5641,6 +5674,7 @@ questions:
             
           PT: |
             <p>Que tipo de fogão é este?&nbsp;</p><p><font color="#0000ff">Peça para ver o forno ou mostrar imagens. O Inquiridor deve identificar o tipo certo de fogão.&nbsp;</font></p><p><font color="#0000ff">Múltiplas respostas.&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5658,6 +5692,7 @@ questions:
             
           PT: |
             Que tipo de unidade costuma comprar o&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~fueltype1~~</span><span style="font-family: Arial, sans-serif;">&nbsp;</span>&nbsp;dentro?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5675,6 +5710,7 @@ questions:
             
           PT: |
             Na última vez que comprou um ~~UnitFuel~~ de&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~fueltype1~~ q</span>uanto é que pagou?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5693,6 +5729,7 @@ questions:
             
           PT: |
             <p>Quanto tempo&nbsp; normalmente um ~~UnitFuel~~ de ~~fueltype1~~ dura&nbsp;?&nbsp;&nbsp;</p><p><span style="font-size: 16px;"><font color="#0000ff">NÚMERO DE DIAS&nbsp;</font></span></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5710,6 +5747,7 @@ questions:
             
           PT: |
             Quanto do combustível que comprou foi usado para cozinhar?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5728,6 +5766,7 @@ questions:
             
           PT: |
             <p>Quanto tempo os membros do agregado familiar passam a preparar o ~~mostUsedStove~~ e combustível para cada refeição, em média?&nbsp;</p><p><font color="#0000ff">Minutos&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5745,6 +5784,7 @@ questions:
             
           PT: |
             Nos últimos 7 dias, quantos dias usou&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5762,6 +5802,7 @@ questions:
             
           PT: |
             Nos últimos 7 dias, em média, quantas vezes acendeu o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>&nbsp;por dia?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5782,6 +5823,7 @@ questions:
             
           PT: |
             <p>Agora gostaríamos de saber quanto tempo a seu agregado familiar passa por dia para cozinhar ou reaquecer as refeições em diferentes horas do dia na/o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~.</span>&nbsp;Não inclua água fervida. Pense nos últimos 7 dias quando responder a estas perguntas.&nbsp;&nbsp;</p><p><font color="#0000ff">Em média, quanto tempo passas no... Manhã?&nbsp;&nbsp;</font></p><p><font color="#0000ff">(Minutos)&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5800,6 +5842,7 @@ questions:
             
           PT: |
             <p>Em média, quanto tempo passas no... <font color="#397b21">Tarde</font>?&nbsp;&nbsp;</p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">(Minutos)&nbsp;</span><br></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5818,6 +5861,7 @@ questions:
             
           PT: |
             <p>Em média, quanto tempo passas no... <font color="#397b21">Início da noite</font>?&nbsp;&nbsp;</p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">(Minutes)&nbsp;</span><br></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5835,6 +5879,7 @@ questions:
             
           PT: |
             Durante os últimos 12 meses, usou fogões com carvão ou querosene?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5854,6 +5899,7 @@ questions:
             
           PT: |
             <p>Nos últimos 7 dias, em média, quanto tempo a seu agregado famíliar usou&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>&nbsp;por dia para ferver água (para cozinhar, lavar e beber)?&nbsp;&nbsp;</p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">(Minutos)&nbsp;</span><br></p><p><font color="#0000ff">Se o fogão não for utilizado para&nbsp;</font><span style="color: rgb(0, 0, 255);">&nbsp;</span><span style="color: rgb(0, 0, 255);">ferver&nbsp;</span><span style="color: rgb(0, 0, 255);">a</span><span style="color: rgb(0, 0, 255);">&nbsp;</span><span style="color: rgb(0, 0, 255);">água, registe 0.&nbsp;</span></p><p></p>
+            
           SW: |
             
         helpText:
@@ -5871,6 +5917,7 @@ questions:
             
           PT: |
             Nos últimos 12 meses, alguém no seu agregado familiar teve danos graves/ferimentos por&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~mostUsedStove~~</span>?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5888,6 +5935,7 @@ questions:
             
           PT: |
             Procurou assistência médica profissional para esta lesão/algum destes ferimentos?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5905,6 +5953,7 @@ questions:
             
           PT: |
             Durante os últimos sete dias, quantas vezes o agregado familiar&nbsp;reuniu, recolheu ou comprou combustível?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5922,6 +5971,7 @@ questions:
             
           PT: |
             Quantos membros do agregado familiar estiveram envolvidos cada vez?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -5939,6 +5989,7 @@ questions:
             
           PT: |
             <font color="#0000ff">Horas</font><p></p>
+            
           SW: |
             
         helpText:
@@ -5956,6 +6007,7 @@ questions:
             
           PT: |
             <font color="#0000ff">Minutos</font><p></p>
+            
           SW: |
             
         helpText:
@@ -6067,6 +6119,7 @@ questions:
             
           PT: |
             <p>Que tipo de fogão é este?&nbsp;</p><p><font color="#0000ff">Peça para ver o forno ou mostrar imagens. O Inquiridor deve identificar o tipo certo de fogão.&nbsp;</font></p><p><font color="#0000ff">Múltiplas respostas.&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -6190,6 +6243,7 @@ questions:
             
           PT: |
             <p>O forno de cozedura ou a cozinha têm alguma ventilação, como uma chaminé, um capuz ou um ventilador?&nbsp;</p><p><font color="#0000ff">Pode ser registado por observação&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -6207,6 +6261,7 @@ questions:
             
           PT: |
             Já usou fogões com cascas de arroz, pellets ou briquetes?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -6226,6 +6281,7 @@ questions:
             
           PT: |
             <p>Que tipo de fogão é este?&nbsp;</p><p><font color="#0000ff">Peça para ver o forno ou mostrar imagens. O Inquiridor deve identificar o tipo certo de fogão.&nbsp;</font></p><p><font color="#0000ff">Múltiplas respostas.&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -6243,6 +6299,7 @@ questions:
             
           PT: |
             Já utilizou fogões com GPL, biogás, eletricidade (rede eléctrica ou solar), forno solar (não elétrico)?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -6260,6 +6317,7 @@ questions:
             
           PT: |
             <p>Que tipo de fogão é este?&nbsp;</p><p><font color="#0000ff">Peça para ver o forno ou mostrar imagens. O Inquiridor deve identificar o tipo certo de fogão.&nbsp;</font></p><p><font color="#0000ff">Múltiplas respostas.&nbsp;</font></p><p></p>
+            
           SW: |
             
         helpText:
@@ -6614,6 +6672,7 @@ questions:
             
           PT: |
             Cultivaste alguma terra há 5 anos atrás? <font color="#0000ff">Se sim: </font>Qual era o tamanho da área?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -6649,6 +6708,7 @@ questions:
             
           PT: |
             Quanto gado/bovinos?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7367,6 +7427,7 @@ questions:
             
           PT: |
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~chosenChildName~~</span>&nbsp;teve um problema no peito ou um nariz obstruída ou escorrendo?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7384,6 +7445,7 @@ questions:
             
           PT: |
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;teve uma irritação nos olhos ou problemas oculares nos últimos 14 dias?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7401,6 +7463,7 @@ questions:
             
           PT: |
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;foi ver um médico/clínica por causa da doença?&nbsp;&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7418,6 +7481,7 @@ questions:
             
           PT: |
             Teve tosse persistente ou uma doença com tosse nos últimos 14 dias?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7492,6 +7556,7 @@ questions:
             
           PT: |
             <p><span class="normal">﻿Foi a um médico/clínica por causa da doença?&nbsp;</span></p>
+            
           SW: |
             
         helpText:
@@ -7509,6 +7574,7 @@ questions:
             
           PT: |
             Criança<p></p>
+            
           SW: |
             
         helpText:
@@ -7526,6 +7592,7 @@ questions:
             
           PT: |
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;teve tosse persistente ou uma doença com tosse em qualquer momento nos últimos 14 dias?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
@@ -7543,6 +7610,7 @@ questions:
             
           PT: |
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;respira mais rápido do que o habitual com respirações curtas e rápidas ou teve dificuldade em respirar?&nbsp;<p></p>
+            
           SW: |
             
         helpText:
