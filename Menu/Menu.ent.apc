@@ -1052,16 +1052,16 @@ preproc
 				if ispartial(HHQ_DICT) then
 					//errmsg("not final. Serial: %d", SA8);
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
-					vsetStatus = tr(23)+edit("ZZZ9",i);
+					vsetStatus = tr(23)+" (☐)";
 				else	//Finished
 					//errmsg("Finnished. Serial: %d", SA8);
 					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
-					vsetStatus = tr(24)+edit("ZZZ9",i);
+					vsetStatus = tr(24)+" (☑)";
 				endif;
 			else
 				//errmsg("never been here at all. Serial: %d", SA8);
 				HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
-				vsetStatus = tr(25)+edit("ZZZ9",i);
+				vsetStatus = tr(25)+" (☒)");
 			endif;
 
 
