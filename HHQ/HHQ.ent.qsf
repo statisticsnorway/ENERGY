@@ -5091,7 +5091,7 @@ questions:
             Have you changed which stove to use as your main stove over the last year during the global pandemic up to today?<p></p>
             
           PT: |
-            <p>Mudou o fogão para usar como&nbsp;&nbsp;principal fogão durante o último ano durante a pandemia global até hoje?</p><p></p><p></p><p></p>
+            <p>Chegou a trocar algum fogão de cozinha para ser seu fogão principal no último ano durante a pandemia global até hoje?<br></p><p><br></p><p></p><p></p><p></p>
             
   - name: HHQ_DICT.GP22
     conditions:
@@ -5100,8 +5100,8 @@ questions:
             <p>Which type of stove did you use as your main stove before the global pandemic started last year?</p><p></p>
             
           PT: |
-            Que tipo de fogão usou como fogão principal antes da pandemia global começar no ano passado?<p></p>
-            
+            <p>Que tipo de fogão você usava como fogão principal antes do início da pandemia global no ano passado?<br></p><p><p></p>
+            </p>
   - name: HHQ_DICT.GP23
     conditions:
       - questionText:
@@ -5109,8 +5109,8 @@ questions:
             Have you sold any of household items since before the global pandemic started last year?<p></p>
             
           PT: |
-            Vendeu algum dos artigos domésticos desde antes da pandemia global ter começado no ano passado?<p></p>
-            
+            <p>Vendeu algum dos artigos domésticos desde antes da pandemia global ter começado no ano passado?</p><p><p></p>
+            </p>
   - name: HHQ_DICT.GP24
     conditions:
       - questionText:
@@ -5136,7 +5136,7 @@ questions:
             <p>The final section is about the livelihood of your household.</p><p>Did you have to close down any household&nbsp; production over the last year during the global pandemic up to today?&nbsp;</p><p>[ANSWER YES, EVEN IF YOU STILL HAVE SOME LEFT]</p><p></p>
             
           PT: |
-            <p>A secção final é sobre o sustento do seu agregado familiar.</p><p>Teve que encerrar qualquer produção doméstica ao longo do último ano durante a pandemia global até hoje?&nbsp;</p><p><font color="#0000ff">[RESPONDA SIM, MESMO QUE AINDA TENHA ALGUM RESTANTE]</font></p><p></p>
+            <p>A secção final é sobre o sustento do seu agregado familiar.</p><p>Teve que encerrar qualquer produção doméstica ao longo do último ano durante a pandemia global até hoje?&nbsp;</p><p><font color="#0000ff">[RESPONDA SIM, MESMO SE VOCÊ AINDA TIVER DEIXADO ALGUNS]</font><br></p><p></p>
             
   - name: HHQ_DICT.GP27
     conditions:
@@ -5154,8 +5154,8 @@ questions:
             Did you use any electricity for your production of livestock by-products (milk, cheese)?<p></p>
             
           PT: |
-            Usou alguma eletricidade para a sua produção de sub-produtos de gado (leite, queijo)?<p></p>
-            
+            <p>Usou alguma eléctricidade&nbsp;para a sua produção de subprodutos da pecuária&nbsp;&nbsp;(leite, queijo)?</p><p><p></p>
+            </p>
   - name: HHQ_DICT.GP29
     conditions:
       - questionText:
@@ -5290,8 +5290,7 @@ questions:
             Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?<p></p>
             
           PT: |
-            Alguém do deste agregado familiar fez outro trabalho fragmentada para um negócio ou alguém fora da casa antes da pandemia global começar no ano passado?<p></p>
-            
+            <p>Alguém deste agregado familiar fez algum outro trabalho fragmentado para uma empresa ou alguém fora do agregado familiar&nbsp;&nbsp;antes do início da pandemia global no ano passado?<br></p>
   - name: HHQ_DICT.GP42
     conditions:
       - questionText:
@@ -6357,7 +6356,7 @@ questions:
             <p><span style="font-size:20px;color:#0000ff;font-family:'Arial', sans-serif;">May be recorded by observation&#160;</span></p>
             
           PT: |
-            <p>O forno de cozedura ou a cozinha têm alguma ventilação, como uma chaminé, um capuz ou um ventilador?&nbsp;</p><p><font color="#0000ff">Pode ser registado por observação&nbsp;</font></p><p></p>
+            <p>O forno de cozinha ou a cozinha tem ventilação, como uma chaminé, um exaustor ou uma ventoinha?&nbsp;</p><p><font color="#0000ff">Pode ser registado por observação&nbsp;</font></p><p></p>
             
           SW: |
             
@@ -8866,7 +8865,7 @@ questions:
             <p><span style="font-size:16px;font-family:'Arial', sans-serif;">How much time did it typically take to gather, collect or purchase fuel per person each time they did&#160; so during the last seven days?&#160;</span></p>
             
           PT: |
-            Quanto tempo é que normalmente leva para reunir&nbsp;, recolher ou comprar combustível por pessoa cada vez que o faziam durante os últimos sete dias?&nbsp;<p></p>
+            <p>Quanto tempo é que normalmente leva para reunir, recolher ou comprar combustível por pessoa cada vez que o faziam durante os últimos sete dias?&nbsp;</p>
           SW: |
             
         helpText:
