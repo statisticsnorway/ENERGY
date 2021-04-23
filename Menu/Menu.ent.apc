@@ -1070,24 +1070,29 @@ preproc
 			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
 			if not loaded then
 				//Haven't been her yet for this HH but need to check in case another HH has same coordinates
-				if not visitStatus.contains(SA7A + SA7B)
-					or (visitStatus.contains(SA7A + SA7B) and visitStatus(SA7A + SA7B) = "red") then 
-						HHMap.setMarkerImage(markerId, "../Images/Location-red.png");												
+				//Red flag to be set if there are any not-started HHs
+				if not visitStatus.contains(SA7A + SA7B) 
+					or (visitStatus.contains(SA7A + SA7B) and visitStatus(SA7A +SA7B) <> "yellow") then 
+						HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
+						visitStatus(SA7A + SA7B) = "red";
 				endif;
-				visitStatus(SA7A + SA7B) = "red";
 				vsetStatus = tr(25)+" (☒)";
 				
-			else
-				//Already visited. Need to find out if it is finished or not
-				if ispartial(HHQ_DICT) then					
+			else			//Already visited. Need to find out if it is finished or not
+				
+				if ispartial(HHQ_DICT) then		
+					//Yellow marker should always be set if relevant. 
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
-					vsetStatus = tr(23)+" (☐)";
 					visitStatus(SA7A + SA7B) = "yellow";
-				else	//Finished
-					//errmsg("Finnished. Serial: %d", SA8);
-					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
-					vsetStatus = tr(24)+" (☑)";
-					visitStatus(SA7A + SA7B) = "green";
+					vsetStatus = tr(23)+" (☐)";					
+					
+				else	//Finished. Green marker only to be set if no other HH are in this location or all are done
+					if not visitStatus.contains(SA7A + SA7B) 
+						or (visitStatus.contains(SA7A + SA7B) and visitStatus(SA7A + SA7B) = "green") then 
+						HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
+						visitStatus(SA7A + SA7B) = "green";
+					endif;
+					vsetStatus = tr(24)+" (☑)";					
 				endif;
 			endif;
 
