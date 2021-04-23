@@ -1075,18 +1075,18 @@ preproc
 						HHMap.setMarkerImage(markerId, "../Images/Location-red.png");												
 				endif;
 				visitStatus(SA7A + SA7B) = "red";
-				vsetStatus = tr(25)+edit("ZZZ9",i);
+				vsetStatus = tr(25)+" (☒)";
 				
 			else
 				//Already visited. Need to find out if it is finished or not
 				if ispartial(HHQ_DICT) then					
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
-					vsetStatus = tr(23)+edit("ZZZ9",i);
+					vsetStatus = tr(23)+" (☐)";
 					visitStatus(SA7A + SA7B) = "yellow";
 				else	//Finished
 					//errmsg("Finnished. Serial: %d", SA8);
 					HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
-					vsetStatus = tr(24)+edit("ZZZ9",i);
+					vsetStatus = tr(24)+" (☑)";
 					visitStatus(SA7A + SA7B) = "green";
 				endif;
 			endif;
