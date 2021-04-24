@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Label=community
 Name=COMMUNITY_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=25750592E6E2390DF083DFE5D279E44B9AA34100C4CFBA27F45F250404139085
 
 [Languages]
 EN=English
@@ -225,9 +226,9 @@ Len=2
 [ValueSet]
 Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
 Name=B2_D_VS1
-Value=1;Less than 5 years
-Value=2;5 -10 years
-Value=3;More than 10 years
+Value=1;Less than 5 years||Chini ya miaka 5
+Value=2;5 -10 years||Miaka 5 -10
+Value=3;More than 10 years||Zaidi ya mika 10
 
 [Record]
 Label=C Background|Antecedentes C
@@ -255,9 +256,9 @@ Len=1
 [ValueSet]
 Label=Is there more or less households in the community now than five years ago?
 Name=C2_VS1
-Value=1;More
-Value=2;Less
-Value=3;Same as 5 years ago
+Value=1;More||Zaidi
+Value=2;Less||Pungufu
+Value=3;Same as 5 years ago||Sawa na miaka 5 iliyopita
 
 [Item]
 Label=What are the two most widespread economic activities?|Quais são as duas atividades econômicas mais amplas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
@@ -439,7 +440,7 @@ Len=2
 [ValueSet]
 Label=What is the main reason some households are not connected to the grid?|Qual é a principal razão que algumas famílias não estão conectados à rede?|Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?
 Name=D13_VS1
-Value=1;Household is far from the grid and hence have to pay more to be connected
+Value=1;Household is far from the grid and hence have to pay more to be connected||Kaya ipo mbali sana na grid, kwahiyo ni gharama sana kuunganishwa
 Value=2;Grid is too far from some households/not available|Rede é muito longe de algumas famílias / não disponível|Gridi iko mbali sana kutoka kwa baadhi ya kaya / haipatikani
 Value=3;Cost of initial connection is too expensive|Custo da conexão inicial é muito caro|Gharama ya uhusiano wa awali ni ghali sana
 Value=4;Running fee is too expensive|taxa mensal é muito caro|ada ya kila mwezi ni ghali sana
@@ -460,7 +461,7 @@ Len=1
 [ValueSet]
 Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
 Name=D14_VS1
-Value=0;None|Nenhum
+Value=0;None|Nenhum|Hakuna
 Value=1;All businesses|Pequena parte dos negócios|Biashara zote
 Value=2;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
 Value=3;Most of the businesses|Metade das empresas|Biashara nyingi
@@ -614,9 +615,9 @@ Len=1
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
 Name=D25_VS1
-Value=1;It has gotten easier
-Value=2;About the same
-Value=3;Harder
+Value=1;It has gotten easier||Imekuwa rahisi zaidi
+Value=2;About the same||Karibia sawa
+Value=3;Harder||Ngumu zaidi
 
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has the price of getting access to an electricity connection in your community changed?
