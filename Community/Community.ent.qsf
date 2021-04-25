@@ -1,1250 +1,1572 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.3
-
-[LANGUAGES]
-EN=English
-PT=Portuguese
-SW=Swahili
-
-[QUESTION]
-Field=A6
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Urban/rural\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\Sa160\sl252\slmult1\cf1\fs24\lang103 Localidade\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Mjini/Vijijini\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.A10
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Longitude\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.A5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please enter name of town/village\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Tafadhali, ingiza jina la mji/kijiji\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24 Por favor, insira o nome da cidade / vila\par
-PT=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.A7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Interview language\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.A8
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Community ID\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.A9
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Latitude\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B2_A
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\cf1\fs24 What is the name of this person?\par
-EN=\cf2 Continue list for all persons. After last person press leave blank\par
-EN=
-EN=\pard\cf1\fs19\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green176\blue80;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\cf1\fs24 Qual \'e9 o nome dessa pessoa?\cf2\f1\fs22\par
-PT=Continue lista para todas as pessoas. Depois de \'faltima imprensa de pessoa Continuar\cf0\par
-PT=
-PT=\pard\cf1\f0\fs19\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red64\green0\blue64;\red0\green0\blue255;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\cf1\f0\fs24 Jina la huyu mtu\par
-SW=\cf2\par
-SW=Continue list for all persons. After last person press Continue\cf0\f1\fs22\par
-SW=
-SW=\pard\cf3\f2\fs19\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B2_B
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green176\blue80;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %currName%'s sex?\cf2\f1\fs22\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red64\green0\blue64;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\f0\fs24\lang1033 Nini jinsi ya \cf2\f1\lang1044 %currName%?\cf1\f0\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1044 Qual \'e9 o sexo de \cf2 %currName%\cf1 ?\par
-PT=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B2_C
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %currName%'s knowledge/specification?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, \lang1044 %currName%\lang1033  ni kiongozi au ni mtu mwenye uelewa kuhusu mada husika?\cf2\f1\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1044 Qual \'e9 o conhecimento / especifica\'e7\'e3o de \cf2 %currName%\cf1 ?\par
-PT=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.B2_D
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 For how many years has %currName% lived in this community?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red64\green0\blue64;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, ni miaka mingapi %currName% meishi katika jamii hii?\cf2\f1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.C1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many households are currently living in the entire community?\par
-EN=\cf2 An approximate number.\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24 Quantas fam\'edlias atualmente est\'e3o vivendo em toda a comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, kwa sasa ni kaya ngapi zinaishi katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.C2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is there more or less households in the community now than five years ago?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24Quantas fam\'edlias t\'eam vindo a estabelecer-se na comunidade durante os \'faltimos anos (desde 2014)?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, ni kaya ngapi zimehamia katika jamii hii kwa kipindi cha miaka miwili iliyopita?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.C3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What are the two most widespread economic activities in this community/quarter?\par
-EN=\cf2 Multiple response. Two responses possible\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 Quais s\'e3o as duas atividades econ\'f4micas mais difundidas nesta comunidade / bairro?\par
-PT=\cf2\par
-PT=Primeira\cf1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Taja shughuli ngapi kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii\par
-SW=\par
-SW=Ya kwanza\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What are all the different sources of electricity that are available in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Quais s\'e3o todas as diferentes fontes de eletricidade que est\'e3o dispon\'edveis nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nini vyanzo vya umeme vinavyopatikana katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D10
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How much did the community pay to get the grid connection?\par
-EN=
-EN=\pard\par
-EN=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\lang2057\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Quanto pagou comunidade para liga\'e7\'e3o \'e0 rede?\par
-PT=
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf2 Consulte qualquer custo da comunidade para ter a infraestrutura instalada.\cf1\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?\par
-SW=\par
-SW=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED\cf1\par
-SW=\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is grid service available in the whole community or only in a part of the community?\par
-EN=\cf2 Read aloud options\cf1\lang2057\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 O servi\'e7o de rede est\'e1 dispon\'edvel para toda a comunidade ou apenas para a alguma parte da comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057 Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi tu ya sehemu?\par
-SW=\par
-SW=\cf2 MSOMEE MAJIBU KWA SAUTI\cf1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D12
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How many households are connected to the grid?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang2057  Je, ni kwa kiasi gani kaya za jamii hii zimeunganishwa kwenye gridi?\lang103\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D13
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the main reason some households are not connected to the grid?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Qual \'e9 a principal raz\'e3o que algumas fam\'edlias n\'e3o est\'e3o conectados \'e0 rede?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D14
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 How many businesses are connected to the grid?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Quantas empresas est\'e3o conectados \'e0 rede?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D15
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Are there certain months/seasons every year when the community experiences bad electricity service from the grid?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Existem alguns meses durante todo o ano onde a comunidade tem tido m\lang2070\'e1 experiencia com servi\'e7o de rede el\'e9ctrica?\lang103\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D16
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What are the worst months for service from the grid? \par
-EN=\cf2 Record the months when community has the lowest number of hours of electricity supply. Up to three months are possible.\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D17
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you practice load shedding in this area in the rainy season? \par
-EN=\cf2 Load shedding is the set hours of electricity available from the grid.\cf1\par
-EN=\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 A comunidade publica um cronograma de "restri\'e7\'e3o de carga" (an\'fancio de horas dispon\'edvel na rede eletricidade)?\par
-PT=\par
-PT=\fs19\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? \par
-SW=\par
-SW=\fs19\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D18
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Do you practice load shedding in this area in the dry season? \par
-EN=\cf2 Load shedding is the set hours of electricity available from the grid.\cf1\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24 Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?\par
-SW=\par
-SW=\fs19\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 A comunidade publica uma agenda "de rejei\'e7\'e3o de cargas" (an\'fancio de horas dispon\'edvel na rede eletricidade)?\par
-PT=\par
-PT=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D19
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Does \cf2\lang1044 %elecCompany%\cf1\lang1033  (or the the community) publish a "load-shedding" schedule?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green128\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24 %elecCompany%\par
-SW=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green128\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 %elecCompany%\par
-PT=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 How far is the nearest \cf2 %elecCompany%\cf1  office?\par
-EN=\cf3 Don't know\'8588\par
-EN=99 km or more\'8599\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 %elecCompany%\cf2\lang1033\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green128\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24 %elecCompany%\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What was the total duration of all the outages/blackouts during last week (hours)?\par
-EN=\cf2 If no outages occured, record 0.\cf1\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D21
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D22
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 When was the last time the power went out for more than 24 hours in this community?\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D23
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 How many days did it take to fix the issue and for the community to regain power?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D24
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What are the two most serious problems this community experiences with the grid electricity?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D25
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?\par
-EN=\cf3\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D25
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?\par
-EN=\cf3\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D26
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D27
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%,  has there been less or more black-oust or brown-outs  in your community, or is the frequencie about the same?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D28
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has the price of using electricity become higher or lower, or is the price about the same?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D29
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?\highlight0\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is the community connected to the national grid or a local mini-grid?\par
-EN=\par
-EN=\cf2\fs19 Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?\cf1\fs24\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 A comunidade est\'e1 ligada \'e0 rede nacional ou uma mini rede local?\par
-PT=\cf2 Entrevistador verifique / CAPI: \cf1\par
-PT=\lang1033\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?\lang1033\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red255\green255\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\highlight2\fs24\lang1033 %elecAccess%, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?\highlight0\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D31
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Do any households own a solar home system/solar lighting in this community?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D32
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D33
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Can you buy or lease a solar home systems/solar lighting system in this area?\par
-EN=\cf2 Multiple responses possible\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Voc\'ea pode comprar ou arrendar um sistema dom\'e9stico solar / sistemas de ilumina\'e7\'e3o solar nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, unaweza kununua au kukodi mfumo wa umeme jua kwenye jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D34
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any shared solar/electricity driven irrigation systems used by farmers in this community?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any shared solar/electric water pumps in this community?\par
-EN=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, kuna umeme wa jua wa kuchangia/pampu maji ya umeme katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the main reason why the community is not connected to the grid?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Qual \'e9 a principal raz\'e3o pela qual a comunidade n\'e3o est\'e1 ligado \'e0 rede?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nini sababu kuu ya kijiji hiki kutounganishwa katika gridi ya Taifa au gridi ndogo?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Does the community expect to get grid connection in the next two years?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 A comunidade espera obter liga\'e7\'e3o \'e0 rede nos pr\'f3ximos dois anos?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D6
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Who is running the local mini-grid system in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Quem est\'e1 executando o sistema mini rede local nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, ni nani anasambaza umeme wa gridi ndogo katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24 What is the name of the local mini-grid company?\lang1033\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 Qual \'e9 o nome da empresa mini rede local?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24 Taja jina la kampuni inayosambaza umeme wa gridi ndogo?\lang103\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D8
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many years has the community had this grid connection?\par
-EN=\par
-EN=\cf2 RECORD IN YEARS. IF LESS THAN 1 YEAR RECORD 1\cf1\par
-EN=\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Calibri;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24 A quantos anos a comunidade tem essa liga\'e7\'e3o \'e0 rede?\par
-PT=\cf2\f1\par
-PT=\cf3\f0 Registre em anos. Se menos de 1 ano de registro 1\cf1\par
-PT=\fs19\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057  Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa?.\lang1044\par
-SW=\par
-SW=\cf2 ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1\cf1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.D9
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Did the community have to pay anything to get the grid connection to the community ?\par
-EN=
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\lang2057\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Ser\'e1 que a comunidade paga para obter a liga\'e7\'e3o \'e0 rede electrica?\par
-PT=
-PT=\pard\cf2\fs20 CONSULTE QUALQUER CUSTO COMUNIT\'c1RIO PARA TER A INFRAESTRUTURA INSTALADA.\cf1\fs24\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057\par
-SW=\par
-SW=\cf2 REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.\cf1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green128\blue0;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\f0\fs24\lang1033 Is the community accessible by motor vehicle (car or truck) during \cf1 the dry season\cf0 ?\lang1044\par
-EN=
-EN=\pard\cf2\f1\lang1033\par
-EN=\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Agora n\'f3s gostar\'edamos de saber sobre o acesso \'e0 comunidade e v\'e1rios infra-estrutura de servi\'e7o. \cf2\par
-PT=\par
-PT=Primeiro n\'f3s gostar\'edamos de saber se a comunidade \'e9 acess\'edvel atrav\'e9s de ve\'edculo motorizado (Carro ou Cami\'e3o) durante a esta\'e7\'e3o seca?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, kijiji kinafikika kwa pikipiki (gari)?\par
-SW=\par
-SW=\cf2 ULIZA HALI YA USAFIRI KIPINDI CHA KIANGAZI KAMA KUNA MISIMU\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is the community also accessible by motor vehicle (car or truck) during \cf2 the rainy season\cf1 ?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 A comunidade \'e9 tamb\'e9m acess\'edvel por autom\'f3vel (Carro ou Cami\'e3o) durante a esta\'e7\'e3o chuvosa?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, kijiji kinafikika kwa pikipiki (gari)?\par
-SW=\par
-SW=\cf2 ULIZA HALI YA USAFIRI KIPINDI CHA MASIKA KAMA KUNA MISIMU\par
-SW=\cf1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Is there a bus connection in the community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\Sa160\sl252\slmult1\cf1\fs24\lang103 Existe uma liga\'e7\'e3o de autocarro na comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je, katika jamii hii kuna usafiri wa basi?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest town/city?\par
-EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Calibri;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Se a comunidade estiver na cidade o codigo da distancia deve ser 0 km \par
-PT=\par
-PT=Se n\'e3o for na cidade\cf2 : \par
-PT=\par
-PT=Qual \'e9 a dist\'e2ncia em quil\'f4metros da comunidade para a cidade mais pr\'f3xima?\par
-PT=\par
-PT=\cf1 N\'e3o sabe = 8888\cf2\par
-PT=\cf3\f1\par
-PT=\cf2\f0\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang2057  Kama si mjini/Jiji. Je, kuna umbali gani kutoka kijijini mpaka kwenye mji/jiji wa karibu?\par
-SW=\par
-SW=\cf2\lang1033 Kama jamii ipo mjini/jiji jaza 0 km bila kuuliza\cf1\lang2057\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the district center?\par
-EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km \par
-PT=\par
-PT=Se n\'e3o for no centro do distrito: \cf2\par
-PT=\par
-PT=Qual \'e9 a dist\'e2ncia em quil\'f4metros da comunidade para o centro do distrito?\par
-PT=\par
-PT=\cf1 N\'e3o sabe = 8888\cf2\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 KAMA SI MAKAO MAKUU YA WILAYA. \cf2\par
-SW=\par
-SW=Je, kuna umbali gani  kutoka kijijini mpaka makao makuu ya Wilaya?\par
-SW=\par
-SW=\cf1\lang1033 Kama jamii ipo kati kati ya wilaya jaza\lang103  0 km \lang1033 bila kuuliza\cf2\lang103\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F6
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest bank branch?\par
-EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km \par
-PT=\par
-PT=Se n\'e3o for no centro do distrito: \cf2\par
-PT=\par
-PT=Qual \'e9 a dist\'e2ncia em quil\'f4metros da comunidade para a ag\'eancia banc\'e1ria mais pr\'f3xima?\par
-PT=\par
-PT=\cf1 N\'e3o sabe = 8888\cf2\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 KAMA SI MAKAO MAKUU YA WILAYA. \cf2\par
-SW=\par
-SW=Je, kuna umbali gani kutoka kijijini hadi kwenye tawi la benki la karibu?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 What is the distance in kilometers from the community to the nearest microfinance institution?\par
-EN=\cf2 If community in a district center code distance as 0 km without asking\cf1\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km \par
-PT=\par
-PT=Se n\'e3o for no centro do distrito: \cf2\par
-PT=\par
-PT=Qual \'e9 a dist\'e2ncia em quil\'f4metros da comunidade para a institui\'e7\'e3o de microfinan\'e7as mais pr\'f3ximo? \par
-PT=\par
-PT=\cf1 N\'e3o sabe = 8888\cf2\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 KAMA SI MAKAO MAKUU YA WILAYA.\cf2\par
-SW=\par
-SW=Je, kuna umbali gani kutoka kijijini hadi kwenye taasisi ndogo ya kifedha ya karibu?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F8
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Can a mobile phone get a working signal in the community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Pode um telefone celular obter um sinal de rede na comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\sa160\sl252\slmult1\cf1\fs24\lang103 Je, kuna mitandao ya simu inayopatikana katika jamii hii?\par
-SW=
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf2 SOMA MAJIBU KWA SAUTI\cf1\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F9A
-Occurrences=1:11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 a. Are there any \cf2 %currentElement%\cf1  in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 a. Est\'e1 l\'e1 qualquer \cf2 %currentElement%\cf1  nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 a. Je kuna  %currentElement% yoyote katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F9B
-Occurrences=1:11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 b. What is the distance to the nearest \cf2 %currentElement%\cf1 ?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 b. Qual \'e9 a dist\'e2ncia at\'e9 o mais pr\'f3ximo \cf2 %currentElement%\cf1 ?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 b.  Je, kuna umbali gani kutoka katikati mwa eneo hili (kijiji/mtaa)  hadi kwenye %currentElement% iliyo karibu?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F9C
-Occurrences=1:11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 c. Do at least one of \cf2 %currentElement%\cf1  have access to electricity?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 c. Pelo menos um dos \cf2 %currentElement%\cf1  tem acesso \'e0 eletricidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 c.  Je, kuna huduma ya %currentElement% angalau moja ya aina hii imeunganishiwa umeme katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.F9D
-Occurrences=1:11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 d. Did \cf2 %currentElement%\cf1  exist in the community five years ago?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 d. \cf2 %CurrentElement%\cf1  existe na comunidade h\'e1 cinco anos?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 d.  Je, huduma ya %currentElement%  ilikuwepo kwenye jamii  miaka 5 iliyopita?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.G1A
-Occurrences=1:24
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there any \cf2 %currentElement%\cf1  in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 H\'e1 algum negocios fazendo bens dos seguintes tipos nesta comunidade: \cf2 %currentElement%\cf1  ?\par
-PT=\par
-PT=\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je kuna biashara ya %currentElement% katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.G1B
-Occurrences=1:24
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Was there any \cf2 %currentElement%\cf1  in the community 5 years ago?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 %CurrentElement%\cf2  existe na comunidade h\'e1 cinco anos?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang1033 Je, biashara %currentElement% ilikuwepo kwenye jamii katika kipindi cha miaka 5 iliyopita?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.H1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Has a \cf2 Power lines program: Construction, maintenance or rehabilitation\cf1  been implemented in the community in the last 5 years?\par
-EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf1\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.H2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Has a \cf2 Solar based community mini-grid program\cf1  been implemented in the community in the last 5 years?\par
-EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf1\fs19\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.H3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Has an \cf2 Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator\cf1  been implemented in the community in the last 5 years?\par
-EN=\cf3\fs16 Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.\cf2\fs19\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.H4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green64\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Has any \cf2 Other development program related to power supply\cf1  been implemented in the community in the last 5 years?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.H5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs19 Has a \cf2 Solar irrigation program for farmers\cf1  been implemented in the community in the last 5 years?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 What is the most common type of cookstove people use in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Agora gostar\'edamos de saber que tipo de fog\'f5es s\'e3o usados nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Sasa tungependa kujua ni \lang1033 a\lang103 ina gani ya jiko linatumika sana kwa kupikia na watu wa jamii hii.\par
-SW=Je, ni aina gani ya jiko linatumika zaidi kwa kupikia katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using firewood, dung, twigs, rice husks or leaves?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using charcoal?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I4
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use improved cookstoves using  pellets or briquettes?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Do any of the households in this community use stoves with LPG, biogass, electrical stove or solar cooker?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I6
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Is it possible to buy an improved cookstove in this community?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Where is the closest location to buy an improved cookstove in this community?\par
-EN=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I8
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 Are there programs that distribute improved cookstoves in this community?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\Sa160\sl252\slmult1\cf1\fs24\lang103 Existem programas que distribuem fog\'f5es melhorados nesta comunidade?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 Je kuna mipango ya kugawa majiko yaliyoboreshwa katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.I9
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Are there programs that campaign for the awareness of health risks of cookstoves?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Existem programas que fazem campanha para a conscientiza\'e7\'e3o dos riscos \'e0 sa\'fade dos fog\'f5es?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103  Je, kuna mipango yoyote iliyopo kwa ajili ya kutoa elimu kuhusiana na vihatarishi vya kiafya vitokanavyo na matumizi ya majiko ya kupikia?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.J1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Does your community have any form of community street lights or private outdoor lights?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang103 Agora, gostar\'edamos de saber se existem luzes comunit\'e1rias ou luzes particulares fora de empresas ou casas particulares.\cf2\par
-PT=\par
-PT=Sua comunidade tem alguma forma de ilumina\'e7\'e3o p\'fablica ou luzes externas?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Sasa tungependa kujua kama kuna taa yoyote ya jamii au taa binafsi nje ya biashara au nyumba za watu binafsi.\par
-SW=\par
-SW=Je, kuna taa za barabarani za aina yoyote katika jamii hii?\par
-SW=}
-
-[QUESTION]
-Field=COMMUNITY_DICT.J2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang1033 To what extent is your community covered by street lighting?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-PT=\pard\widctlpar\sa160\sl252\slmult1\cf1\fs24\lang103 At\'e9 que ponto est\'e1 sua comunidade \'e9 coberto pela ilumina\'e7\'e3o p\'fablica?\par
-PT=}
-SW={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-SW={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-SW={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-SW=\pard\cf1\fs24\lang103 Je, ni kwa kiasi gani taa za barabarani zimewekwa katika jamii hii?\par
-SW=\par
-SW=\cf2 MSOMEE MHOJIWA\cf1\par
-SW=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.6
+languages:
+  - name: EN
+    label: English
+  - name: PT
+    label: Portuguese
+  - name: SW
+    label: Swahili
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: A6
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Urban/rural&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Localidade&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Mjini/Vijijini&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A10
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;">Longitude&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A5
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Please enter name of town/village&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Por favor, insira o nome da cidade / vila&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Tafadhali, ingiza jina la mji/kijiji&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A7
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;">Interview language&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A8
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;">Community ID&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A9
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;">Latitude&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B1
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 16px; color: rgb(0, 0, 0);">Who did the village chief talk to to prepare for the interview?</span></p><p><span style="font-size: 16px; color: rgb(0, 0, 0);">If the village chief is knowledgeable within some of the topics, this should also be recorded.&nbsp;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ni nani alizungumza na Mwenyekiti/VEO ili kuandaa mahojiano?</p><p><span class="instruction">Ikiwa mwenyekiti/VEO wa kijiji anajua juu ya mada, hii inapaswa pia kujazwa.</span><p></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B2_A
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the name of this person?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Continue list for all persons. After last person press leave blank&#160;</span></p>
+            <p>&#160;</p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é o nome dessa pessoa?&#160;</span></p>
+            <p><span style="font-size:14px;color:#00b050;font-family:'Calibri', sans-serif;">Continue lista para todas as pessoas. Depois de última imprensa de pessoa Continuar&#160;</span></p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#400040;font-family:'Arial', sans-serif;">Jina kamili</span></p>
+            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Continue list for all persons. After last person press Continue&nbsp;</span></p>
+            <p>&nbsp;</p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B2_B
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is ~~currName~~&apos;s sex?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é o sexo de <span style="color:#0000ff;">~~currName~~</span>?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#400040;font-family:'Arial', sans-serif;">Nini jinsi ya <span style="color:#000000;font-family:'Arial';">~~currName~~?&#160;</span></span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B2_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is ~~currName~~&apos;s knowledge/specification?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é o conhecimento / especificação de <span style="color:#0000ff;">~~currName~~</span>?&#160;</span></p>
+            
+          SW: |
+            <p>Je, ~~currName~~ ni kiongozi au ni mtu mwenye uelewa kuhusu mada husika?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B2_D
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">For how many years has ~~currName~~ lived in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Je, ni miaka mingapi ~~currName~~ umeishi katika jamii hii?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.B_ID
+    conditions:
+      - questionText:
+          SW: |
+            <p>Maswali haya yanapaswa kuulizwa kwa watu wenye uelewa au Watu wanaofanya kazi katika jamii hiyo.</p><p>Utambulisho</p><p><p></p></p>
+  - name: COMMUNITY_DICT.C1
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">How many households are currently living in the entire community?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">An approximate number.&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Quantas famílias atualmente estão vivendo em toda a comunidade?&#160;</span></p>
+            
+          SW: |
+            <p>Kwanza tunaanza na maswali kadhaa juu ya watu wanaoishi katika jamii hii<br></p><p><span style="font-size:16px;color:#000000;">Je, kwa sasa ni kaya ngapi zinaishi katika jamii hii?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.C2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Is there more or less households in the community now than five years ago?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Quantas famílias têm vindo a estabelecer-se na comunidade durante os últimos anos (desde 2014)?&#160;</span></p>
+            
+          SW: |
+            <p>Je, kwa sasa kaya zimeongezeka au zimepungua ukilinganisha na miaka 5 iliyopita?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.C3
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What are the two most widespread economic activities in this community/quarter?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Multiple response. Two responses possible&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Quais são as duas atividades econômicas mais difundidas nesta comunidade / bairro?&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Primeira&#160;</span></p>
+            
+          SW: |
+            <p>Je, ni zipi shughuli kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii ?<br></p>
+            <p><span style="font-size:16px;color:#000000;">Ya kwanza&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D1
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What are all the different sources of electricity that are available in this community?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quais são todas as diferentes fontes de eletricidade que estão disponíveis nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">&nbsp;Je, ni nini vyanzo vya umeme vinavyopatikana katika jamii hii kwa matumizi ya kaya na biashara?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D10
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How much did the community pay to get the grid connection?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.&nbsp;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Quanto pagou comunidade para ligação à rede?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Consulte qualquer custo da comunidade para ter a infraestrutura instalada.&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Je, ni kiasi gani jamii imelipa ili kuunganishwa na umeme wa gridi hii?&nbsp;</span>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED&nbsp;</span></p>
+            <p>&nbsp;</p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D11
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Is grid service available in the whole community or only in a part of the community?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Read aloud options&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">O serviço de rede está disponível para toda a comunidade ou apenas para a alguma parte da comunidade?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi tu ya sehemu?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">MSOMEE MAJIBU KWA SAUTI&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D12
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many households are connected to the grid?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;"> Je, ni kwa kiasi gani kaya katika jamii hii zimeunganishwa kwenye gridi?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D13
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the main reason some households are not connected to the grid?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Qual é a principal razão que algumas famílias não estão conectados à rede?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D14
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many businesses are connected to the grid?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quantas empresas estão conectados à rede?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D15
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Are there certain months/seasons every year when the community experiences bad electricity service from the grid?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Existem alguns meses durante todo o ano onde a comunidade tem tido má experiencia com serviço de rede eléctrica?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D16
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What are the worst months for service from the grid? &#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Record the months when community has the lowest number of hours of electricity supply. Up to three months are possible.&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?</p><p><p><span class="instruction">Weka miezi ambao jamii ilipata huduma ya umeme kwa masaa machache zaidi: Isizidi miezi 3</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D17
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do you practice load shedding in this area in the rainy season? &#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Load shedding is the set hours of electricity available from the grid.&#160;</span></p>
+            <p>&#160;</p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">A comunidade publica um cronograma de &quot;restrição de carga&quot; (anúncio de horas disponível na rede eletricidade)?&#160;</span></p>
+            <p>&#160;</p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p>Je,&nbsp; katika jamii hii huwa inapata mgao wa umeme&nbsp; katika kipindi cha mvua?</p><p><span class="instruction">Mgao wa Umeme (Load Shedding) ni kuhusu masaa ambayo umeme utapatikana kwa wateja fulani.</span><br></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D18
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do you practice load shedding in this area in the dry season? &#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Load shedding is the set hours of electricity available from the grid.&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">A comunidade publica uma agenda &quot;de rejeição de cargas&quot; (anúncio de horas disponível na rede eletricidade)?&#160;</span></p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p>Je,&nbsp; katika jamii hii huwa inapata mgao wa umeme&nbsp; katika kipindi cha kiangazi?</p><p><span class="instruction">Mgao wa Umeme (Load Shedding) ni kuhusu masaa ambayo umeme utapatikana kwa wateja fulani.</span><br></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D19
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Does <span style="color:#008000;">~~elecCompany~~</span> (or the the community) publish a &quot;load-shedding&quot; schedule?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
+            
+          SW: |
+            <p><span class="normal" style="">Je,&nbsp;</span><span style="" class="normal"><span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;</span><span class="normal" style="">&nbsp;au Jamii hii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme?</span></p><p><span class="normal" style=""><span class="instruction">Mgao wa Umeme (Load Shedding) ni kuhusu masaa ambayo umeme utapatikana kwa wateja fulani.</span><br></span><br></p><p><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">How far is the nearest <span style="color:#008000;">~~elecCompany~~</span> office?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Don&apos;t know…88&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">99 km or more…99&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#008000;">~~elecCompany~~&#160;</span></p>
+            
+          SW: |
+            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">99Km or more...99</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D20
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What was the total duration of all the outages/blackouts during last week (hours)?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If no outages occured, record 0.&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ni kwa masaa mangapi kwa ujumla umeme wa gridi ulikatika katika wiki iliyopita?</p><p><p><span class="instruction">Kama umeme haukukatika jaza 0</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D21
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Katika miezi 12 iliyopita, je! umeme wakati wowote ulikatika kwa zaidi ya masaa 24 kwa kaya nyingi katika jamii hii kwa wakati mmoja?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D22
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">When was the last time the power went out for more than 24 hours in this community?&#160;</span></p>
+            <p>&#160;</p>
+            
+          PT: |
+            
+          SW: |
+            Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika jamii hii?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D23
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">How many days did it take to fix the issue and for the community to regain power?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ilichukua siku ngapi kurekebisha na kurejesha huduma ya umeme?</p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D24
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What are the two most serious problems this community experiences with the grid electricity?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ni changamoto&nbsp; gani kubwa ambayo jamii inapata kutokana baada ya kuunganishwa kwenye&nbsp; umeme wa gridi?</p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Jibu zaidi ya moja yanaruhusiwa: Usizishe majibu mawili</span></p><p><p></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D25
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?&#160;</span></p>
+            <p>&#160;</p>
+            
+          PT: |
+            
+          SW: |
+            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na gridi kwa mara ya kwanza], je, imekuwa rahisi au ngumu kwa kaya mpya kuunganishwa na gridi ya taifa, au hali iko vile vile/hakuna mabadiliko?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D26
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, imekuwa rahisi au ghali sana kwa kaya mpya kuunganishwa na gridi ya taifa, au bei iko vile vile/hakuna mabadiliko?</p><p><p><span class="instruction">Kama hakuna malipo ya lazima chagua geresho 1</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D27
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~,  has there been less or more black-oust or brown-outs  in your community, or is the frequencie about the same?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, kumekuwa na kukatika umeme mara chache au mara kwa mara, au&nbsp; hali vile vile/hakuna kukatika kwa umeme?</p><p><p><span class="instruction">Kupungua kwa umeme ni kwa makusudi, au Kushuka or kupanda kwa voltage katika mfumo wa usambazaji wa umeme ni kwa makusudi</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D28
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the price of using electricity become higher or lower, or is the price about the same?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, gharama za matumizi ya umeme zimekuwa juu au chini, au&nbsp; ziko vile vile/hakuna mabadiliko?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D29
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, kumekuwa na umeme kwa masaa mengi au machache wakati wa usiku au masaa ya kupata umeme wakati wa usiku yako vile vile/hakuna mabadiliko?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D3
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is the community connected to the national grid or a local mini-grid?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 18px; color: rgb(0, 0, 255);">Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?&nbsp;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade está ligada à rede nacional ou uma mini rede local?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Entrevistador verifique / CAPI: &#160;</span></p>
+            <p style="margin-bottom:8pt;">&#160;</p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?</span></p><p style="margin-bottom:8pt;"><span style="font-size: 16px;" class="instruction">Angalia kama jamii/kijiji kimeunganishwa kwenye grid ya taifa au gridi ndogo</span><span style="font-size:16px;color:#000000;" class="instruction">.</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D30
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je,&nbsp; huduma ya ukarabati&nbsp; na matengezezo kutoka kwa mtoa huduma imekuwa mbaya au nzuri au iko vile vile/hakuna mabadiliko?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D31
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Do any households own a solar home system/solar lighting in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Je! kuna kaya yoyote katika jamii hii inamiliki mifumo ya umeme/ya taa ya jua unaozalishwa na jua?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D32
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Je! Ni kaya chache au nyingi&nbsp; katika jamii hii zinazotumia mifumo ya umeme/ya taa ya jua unaozalishwa na jua?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D33
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Can you buy or lease a solar home systems/solar lighting system in this area?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#008000;">Multiple responses possible&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Você pode comprar ou arrendar um sistema doméstico solar / sistemas de iluminação solar nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Je! Unaweza kununua au kukodisha mifumo ya umeme wa jua / taa ya jua katika jamii hii?</p><p style="margin-bottom:8pt;"><span class="instruction">Jibu zaidi ya moja linaruhusiwa</span><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D34
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Are there any shared solar/electricity driven irrigation systems used by farmers in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Je! Kuna mifumo ya kushirikiana ya umwagiliaji inayoendeshwa na umeme jua / umeme wa TANESCO inayotumiwa na wakulima katika jamii hii?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D35
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Are there any shared solar/electric water pumps in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je! Kuna mifumo ya kushirikiana ya umwagiliaji inayoendeshwa na umeme jua / umeme wa TANESCO inayotumiwa na wakulima katika jamii hii?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D4
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the main reason why the community is not connected to the grid?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Qual é a principal razão pela qual a comunidade não está ligado à rede?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni nini sababu kuu ya kijiji hiki kutounganishwa katika gridi ya Taifa au gridi ndogo?</span></p><p style="margin-bottom:8pt;"><span class="instruction">(TANESCO/REA)</span><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D5
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Does the community expect to get grid connection in the next two years?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade espera obter ligação à rede nos próximos dois anos?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D6
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Who is running the local mini-grid system in this community?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quem está executando o sistema mini rede local nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Je, ni nani anaendesha mfumo wa gridi ndogo katika jamii hii?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D7
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the name of the local mini-grid company?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é o nome da empresa mini rede local?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Nitajie jina la kampuni inayosambaza umeme wa gridi ndogo?&nbsp;<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D8
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">How many years has the community had this grid connection?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">RECORD IN YEARS. IF LESS THAN 1 YEAR RECORD 1&nbsp;</span></p>
+            <p>&nbsp;</p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">A quantos anos a comunidade tem essa ligação à rede?&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registre em anos. Se menos de 1 ano de registro 1&#160;</span></p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa?.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.D9
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Did the community have to pay anything to get the grid connection to the community ?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Será que a comunidade paga para obter a ligação à rede electrica?&#160;</span></p>
+            <p><span style="font-size:13px;color:#0000ff;">CONSULTE QUALQUER CUSTO COMUNITÁRIO PARA TER A INFRAESTRUTURA INSTALADA.&#160;</span></p>
+            
+          SW: |
+            <p>Je,&nbsp; jamii hii ililipa kiasi chochote cha fedha ili kuunganishwa na gridi?&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED.&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F1
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;font-family:'Arial', sans-serif;">Is the community accessible by motor vehicle (car or truck) during <span style="color:#008000;">the dry season</span>?&#160;</span></p>
+            <p>&#160;</p>
+            <p>&#160;</p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Agora nós gostaríamos de saber sobre o acesso à comunidade e vários infra-estrutura de serviço. &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Primeiro nós gostaríamos de saber se a comunidade é acessível através de veículo motorizado (Carro ou Camião) durante a estação seca?&#160;</span></p>
+            
+          SW: |
+            <p>Je, kijiji kinafikika kwa gari au lori wakati wa kiangazi?<br></p>
+            <p><span style="font-size:16px;color:#0000ff;">ULIZA HALI YA USAFIRI KIPINDI CHA KIANGAZI KAMA KUNA MISIMU&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Is the community also accessible by motor vehicle (car or truck) during <span style="color:#008000;">the rainy season</span>?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">A comunidade é também acessível por automóvel (Carro ou Camião) durante a estação chuvosa?&#160;</span></p>
+            
+          SW: |
+            <p>Je, kijiji kinafikika kwa gari au lori wakati wa mvua?<br></p>
+            <p><span style="font-size:16px;color:#0000ff;">ULIZA HALI YA USAFIRI KIPINDI CHA MASIKA KAMA KUNA MISIMU&nbsp;</span></p>
+            <p>&nbsp;</p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F3
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is there a bus connection in the community?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Existe uma ligação de autocarro na comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Je, kuna upatikanaji wa basi katika jamii hii?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F4
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the distance in kilometers from the community to the nearest town/city?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver na cidade o codigo da distancia deve ser 0 km &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for na cidade<span style="color:#000000;">: &#160;</span></span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a cidade mais próxima?&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            <p>&#160;</p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p>Je, Kuna umbali gani katika kilometa kutoka kwenye jamii hii hadi mji / jiji la karibu?<br></p>
+            <p><span style="font-size:16px;color:#0000ff;">Kama jamii ipo mjini/jiji jaza 0 km bila kuuliza&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F5
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the distance in kilometers from the community to the district center?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para o centro do distrito?&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            
+          SW: |
+            <p>Je, kuna umbali gani katika kilometa kutoka kwenye jamii hii hadi makao makuu ya wilaya?&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Kama jamii ipo kati kati ya wilaya jaza 0 km bila kuuliza&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F6
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the distance in kilometers from the community to the nearest bank branch?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a agência bancária mais próxima?&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA.&nbsp;&nbsp;</span></p>
+            <p>Je, kuna umbali gani katika kilomita kutoka katika jamii hii hadi tawi la karibu la benki?</p><p><span class="instruction">Mdadisi anaweza kukadiria pia katika KM.Kama benki ipo ndani ya jamii husika jaza umbali 0 bila hata kuuliza. Mdadisi atajaza.</span><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F7
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the distance in kilometers from the community to the nearest microfinance institution?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If community in a district center code distance as 0 km without asking&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Se a comunidade estiver no centro do distrito o codigo da distancia deve ser 0 km &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Se não for no centro do distrito: &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Qual é a distância em quilômetros da comunidade para a instituição de microfinanças mais próximo? &#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA.&nbsp;</span></p>
+            <p>Je, kuna umbali gani katika kilomita kutoka kwa jamii hadi taasisi ndogo ya fedha ya karibu?</p><p><span class="instruction">Mdadisi anaweza kukadiria pia katika KM.Kama taasisi ndogo ya fedha ipo ndani ya jamii husika jaza umbali 0 bila hata kuuliza. Mdadisi atajaza.</span><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F8
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Can a mobile phone get a working signal in the community?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Pode um telefone celular obter um sinal de rede na comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Je, unaweza kupata mtandao wa simu unaofanya kazi&nbsp; ndani ya jamii hii?<span style="font-size:16px;color:#000000;">&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">SOMA MAJIBU KWA SAUTI&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F9A
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">a. Are there any <span style="color:#008000;">~~currentElement~~</span> in this community?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">a. Está lá qualquer <span style="color:#0000ff;">~~currentElement~~</span> nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">a. Je kuna  ~~currentElement~~ katika jamii hii?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F9B
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">b. What is the distance to the nearest <span style="color:#008000;">~~currentElement~~</span>?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">b. Qual é a distância até o mais próximo <span style="color:#0000ff;">~~currentElement~~</span>?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">b.  Je, kuna umbali gani kutoka katikati mwa eneo hili (kijiji/mtaa)  hadi kwenye ~~currentElement~~ iliyo karibu?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F9C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">c. Do at least one of <span style="color:#008000;">~~currentElement~~</span> have access to electricity?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">c. Pelo menos um dos <span style="color:#0000ff;">~~currentElement~~</span> tem acesso à eletricidade?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">c.  Je, kuna huduma ya ~~currentElement~~ angalau moja ya aina hii imeunganishiwa umeme katika jamii hii?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.F9D
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">d. Did <span style="color:#008000;">~~currentElement~~</span> exist in the community five years ago?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">d. <span style="color:#0000ff;">~~CurrentElement~~</span> existe na comunidade há cinco anos?&#160;</span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">d.  Je, huduma ya ~~currentElement~~  ilikuwepo kwenye jamii  miaka 5 iliyopita?&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.G1A
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Are there any <span style="color:#008000;">~~currentElement~~</span> in this community?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Há algum negocios fazendo bens dos seguintes tipos nesta comunidade: <span style="color:#0000ff;">~~currentElement~~</span> ?&#160;</span></p>
+            <p>&#160;</p>
+            <p>&#160;</p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Je kuna ~~currentElement~~ katika jamii hii?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.G1B
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Was there any <span style="color:#008000;">~~currentElement~~</span> in the community 5 years ago?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">~~CurrentElement~~<span style="color:#000000;"> existe na comunidade há cinco anos?&#160;</span></span></p>
+            
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Je, kulikuwepo na ~~currentElement~~ katika jamii hii miaka 5 iliyopita?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.H1
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Power lines program: Construction, maintenance or rehabilitation</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
+            <p><span style="font-size: 16px; color: rgb(0, 0, 255);">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je! Kuna programu yoyote katika zifuatazo imetekelezwa katika jamii hii katika kipindi cha miaka 5 iliyopita?</p><p><p>Programu ya laini za umeme: Ujenzi, matengenezo au ukarabati?</p><p><span class="instruction">Vifaa vinavyotumia nguvu ya umeme jua vinaweza kutumiwa hata na kaya za mbali ambazo hazijafikiwa na gridi ya taifa. Vinatumia nguvu ya&nbsp; jua na vinategemea uwezo wa mfumo huo. Vifaa hivi vinaweza kupokea umeme&nbsp; kutoka kwenye chanzo kimoja mfano&nbsp; vifaa kama redio, feni, TV nk.</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.H2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Solar based community mini-grid program</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p><span style="font-size: 16px;">
+            </span><p><span style="font-size: 16px; color: rgb(0, 0, 255);">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Programu ya gridi ndogo&nbsp; ya jua kwa jamii hii?</p><p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Vifaa vinavyotumia nguvu ya umeme jua vinaweza kutumiwa hata na kaya za mbali ambazo hazijafikiwa na gridi ya taifa. Vinatumia nguvu ya&nbsp; jua na vinategemea uwezo wa mfumo huo. Vifaa hivi vinaweza kupokea umeme&nbsp; kutoka kwenye chanzo kimoja mfano&nbsp; vifaa kama redio, feni, TV nk.</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.H3
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has an </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p><span style="font-size: 16px;">
+            </span><p><span style="font-size: 16px; color: rgb(0, 0, 255);">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Programu ya usambazaji wa nishati isiyo ya gridi kwa kaya binafsi, k.m. taa za jua, mifumo ya nyumbani ya jua, jenereta ya umeme?</p><p></p><p><span class="instruction">Vifaa vinavyotumia nguvu ya umeme jua vinaweza kutumiwa hata na kaya za mbali ambazo hazijafikiwa na gridi ya taifa. Vinatumia nguvu ya&nbsp; jua na vinategemea uwezo wa mfumo huo. Vifaa hivi vinaweza kupokea umeme&nbsp; kutoka kwenye chanzo kimoja mfano&nbsp; vifaa kama redio, feni, TV nk.</span></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.H4
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has any </span><span style="color: rgb(0, 64, 0); font-size: 16px;">Other development program related to power supply</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Programu nyingine ya maendeleo inayohusiana na usambazaji wa umeme?<br></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.H5
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Solar irrigation program for farmers</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
+            
+          PT: |
+            
+          SW: |
+            Programu ya umwagiliaji&nbsp; kwa umeme jua kwa wakulima?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I1
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What is the most common type of cookstove people use in this community?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Agora gostaríamos de saber que tipo de fogões são usados nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Sasa tungependa kujua ni aina gani ya majiko ya kupika ambayo hutumiwa katika jamii hii<br></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni aina gani ya jiko linatumika zaidi kwa kupikia katika jamii hii?&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do any of the households in this community use improved cookstoves using firewood, dung, twigs, rice husks or leaves?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Jiko la kupikia lililoboreshwa linaweza kupunguza matumizi ya nishati kwa kiasi kikubwa. Linaweza pia kupunguza moshi. Pia, wakati wa kupikia kwa kila mlo utafupishwa kwa kuwa nguvu ya moto ya jiko hili ni kali kuliko jiko la jadi. Tunataka kujua sasa kama&nbsp; majiko hayo yanatumika katika jamii hii.</p><p></p><p>Je,&nbsp; kuna kaya yoyote katika jamii hii hutumia majiko yaliyoboreshwa yanayotumia kuni, kinyesi cha wanyama, nyasi, tungamo taka?</p><p><span class="instruction">Muoneshe mhojiwa picha za majiko</span><br></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I3
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do any of the households in this community use improved cookstoves using charcoal?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je,&nbsp; kuna kaya yoyote katika jamii hii hutumia majiko yaliyoboreshwa yanayotumia mkaa?</p><p><p><span class="instruction">Muoneshe mhojiwa picha za majiko</span><br></p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I4
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do any of the households in this community use improved cookstoves using  pellets or briquettes?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, kuna kaya yoyote katika jamii hii hutumia majiko yaliyoboreshwa yanayotumia maranda/vumbi la mbao?</p><p></p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Muoneshe mhojiwa picha za majiko</span><br></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I5
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Do any of the households in this community use stoves with LPG, biogass, electrical stove or solar cooker?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, kuna kaya yoyote katika jamii hii hutumia majiko ya LPG, bayogesi, jiko la umeme au jiko la jua?</p><p></p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Muoneshe mhojiwa picha za majiko</span><br></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I6
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Is it possible to buy an improved cookstove in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, inawezekana kununua jiko liloboreshwa&nbsp; katika jamii hii?</p><p></p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Muoneshe mhojiwa picha za majiko</span><br></p><p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I7
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Where is the closest location to buy an improved cookstove in this community?&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            <p>Je, ni wapi eneo la karibu unaloweza kununua jiko liloboreshwa&nbsp; katika jamii hii?</p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I8
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Are there programs that distribute improved cookstoves in this community?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Existem programas que distribuem fogões melhorados nesta comunidade?&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;">Je! Kuna programu za kusambaza majiko yaliyoboreshwa katika jamii hii?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.I9
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Are there programs that campaign for the awareness of health risks of cookstoves?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Existem programas que fazem campanha para a conscientização dos riscos à saúde dos fogões?&#160;</span></p>
+            
+          SW: |
+            <p>Je, kuna programu ambazo zinafanya kampeni ya uhamasishaji wa hatari za kiafya zitokanazo na matumizi majiko?<br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.J1
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Does your community have any form of community street lights or private outdoor lights?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#0000ff;">Agora, gostaríamos de saber se existem luzes comunitárias ou luzes particulares fora de empresas ou casas particulares.&#160;</span></p>
+            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Sua comunidade tem alguma forma de iluminação pública ou luzes externas?&#160;</span></p>
+            
+          SW: |
+            <p>Sasa tungependa kujua kama kuna taa za barabarani za kijiji/mtaa, taa za usalama barabarani au taa za watu kibinafsi nje ya biashara au nyumba zao wanazoishi.<span style="font-size:16px;color:#000000;">&nbsp;</span></p>
+            <p>Je! Jamii yako ina aina yoyote ya taa za barabarani za umma au aina zingine za taa za nje, mfano.. taa za nje/za usalama kwenye makazi ya watu binafsi?</p><p><span class="instruction">Jibu zaidi ya moja linaruhusiwa</span><br></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.J2
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">To what extent is your community covered by street lighting?&#160;</span></p>
+            
+          PT: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Até que ponto está sua comunidade é coberto pela iluminação pública?&#160;</span></p>
+            
+          SW: |
+            <p>Je, ni kwa kiwango gani jamii yako imekuwa na taa za barabarani / taa za usalama?<br></p>
+            <p><span style="font-size:16px;color:#0000ff;">MSOMEE MHOJIWA&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+...
