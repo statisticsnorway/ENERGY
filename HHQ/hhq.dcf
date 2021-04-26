@@ -762,7 +762,7 @@ Name=B10_VS1
 Value=1;Sem sanita / arbusto / campo/no mato|Sem sanita / arbusto / campo/no mato
 Value=2;Poço aberto sem laje/Poço Aberto|Poço aberto sem laje/Poço Aberto
 Value=3;Latrina de poço com laje (não lavável)|Latrina de fossa com laje (não lavável)
-Value=4;Latrina de poço com laje (lavável)|Latrina de fossa com laje (lavável) 
+Value=4;Latrina de poço com laje (lavável)|Latrina de fossa com laje (lavável)
 Value=5;Latrina melhorada do poço ventilada|Latrina melhorada do fossa ventilada
 Value=6;Despeje a sanita de descarga|Despeje a sanita de descarga
 Value=7;Sanita de descarga com cisterna|Sanita de descarga com cisterna
@@ -2840,11 +2840,17 @@ DataType=Alpha
 Label=Text From Clipboard|Which type of stove is this?
 Name=I3_VS1
 Value='101               ';Fogão de três pedras|Fogão de três pedras
+Image=.\Resources\Images\Cookstoves_101.jpg
 Value='102               ';Fogão de lama redonda|Fogão de lama redonda
+Image=.\Resources\Images\Cookstoves_102.jpg
 Value='111               ';Fogão melhorado de cozinha c/ câmara de fogo cerâmico|Fogão melhorado de cozinha c/ câmara de fogo cerâmico
+Image=.\Resources\Images\Cookstoves_111.jpg
 Value='121               ';Fogão de foguete|Fogão de foguete
+Image=.\Resources\Images\Cookstoves_121.jpg
 Value='131               ';Lorena 1 Foguete fogão com alto isolamento|Lorena 1 Foguete fogão com alto isolamento
+Image=.\Resources\Images\Cookstoves_131.jpg
 Value='141               ';Lorena 2 Foguete fogão com chaminé bem selada|Lorena 2 Foguete fogão com chaminé bem selada
+Image=.\Resources\Images\Cookstoves_141.jpg
 
 [Item]
 Label=Have you used any stoves using charcoal during the last 12 months?
@@ -2868,11 +2874,17 @@ DataType=Alpha
 Label=Text From Clipboard|Which type of stove is this?
 Name=I5_VS1
 Value='201               ';Fogão a carvão tradicional - Acesso aberto para o ar|Fogão a carvão tradicional - Acesso aberto para o ar
+Image=.\Resources\Images\Cookstoves_201.jpg
 Value='211               ';Fogão a carvão, Abertura do ICS Antigo para o ar pode ser fechada|Fogão a carvão, Abertura do ICS Antigo para o ar pode ser fechada
+Image=.\Resources\Images\Cookstoves_211.jpg
 Value='221               ';Fogão melhorado de cozinha de carvão forrado em cerâmica|Fogão melhorado de cozinha de carvão forrado em cerâmica
+Image=.\Resources\Images\Cookstoves_221.jpg
 Value='231               ';Fogão melhorado de cozinha de carvão forrado e isolado|Fogão melhorado de cozinha de carvão forrado e isolado
+Image=.\Resources\Images\Cookstoves_231.jpg
 Value='233               ';Fogão de cozinha de querosene (Mchina)|Fogão de cozinha de querosene (Mchina)
+Image=.\Resources\Images\Cookstoves_233.jpg
 Value='241               ';Fogão a carvão eficiente com fluxo de ar controlado|Fogão a carvão eficiente com fluxo de ar controlado
+Image=.\Resources\Images\Cookstoves_241.jpg
 
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
