@@ -1076,7 +1076,7 @@ preproc
 						HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
 						visitStatus(SA7A + SA7B) = "red";
 				endif;
-				vsetStatus = tr(25)+" (☒)";
+				vsetStatus = tr(25)+" (☐)";
 				
 			else			//Already visited. Need to find out if it is finished or not
 				
@@ -1084,7 +1084,7 @@ preproc
 					//Yellow marker should always be set if relevant. 
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
 					visitStatus(SA7A + SA7B) = "yellow";
-					vsetStatus = tr(23)+" (☐)";					
+					vsetStatus = tr(23)+" (☒)";					
 					
 				else	//Finished. Green marker only to be set if no other HH are in this location or all are done
 					if not visitStatus.contains(SA7A + SA7B) 
