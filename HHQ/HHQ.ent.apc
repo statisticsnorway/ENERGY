@@ -1,8 +1,8 @@
 ﻿PROC GLOBAL
 
-	// This is supposed to be set only in the Menu application
-	//String country = sysparm("country");
-    String country = "TZ";
+	// This will be set only in the Menu application as a parameter and will be fetched from there
+    String country ;
+
 	//country = Menu.getproperty("country");
 	//Country specific variables
 	numeric gridPrice = 3700;	//country specific price to connect to the grid
@@ -115,7 +115,13 @@ PROC HHQ_QUEST
 preproc
 	string language = sysparm(language);
 	setLanguage(language);
-
+	
+	// Fetch country parameter from Menu application
+	pff menu;
+	menu.load("../Menu/Menu.pff");
+	country = menu.getProperty("country");
+    //errmsg ("Country: %s",country);
+	
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
