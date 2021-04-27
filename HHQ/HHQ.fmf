@@ -7640,10 +7640,10 @@ Text=GP23
   
 [Field]
 Name=GP24
-Position=451,640,480,660
+Position=451,640,984,660
 Item=GP24,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=25
   
 [Text]

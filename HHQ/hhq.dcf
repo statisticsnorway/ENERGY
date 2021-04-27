@@ -757,16 +757,16 @@ Start=117
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Tipos de casa de banho que a casa usa?
+Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B10_VS1
-Value=1;Sem sanita / arbusto / campo/no mato|Sem sanita / arbusto / campo/no mato
-Value=2;Poço aberto sem laje/Poço Aberto|Poço aberto sem laje/Poço Aberto
-Value=3;Latrina de poço com laje (não lavável)|Latrina de fossa com laje (não lavável)
-Value=4;Latrina de poço com laje (lavável)|Latrina de fossa com laje (lavável)
-Value=5;Latrina melhorada do poço ventilada|Latrina melhorada do fossa ventilada
-Value=6;Despeje a sanita de descarga|Despeje a sanita de descarga
-Value=7;Sanita de descarga com cisterna|Sanita de descarga com cisterna
-Value=8;Sanita de compostagem / latrina ecosan|Sanita de compostagem / latrina ecosan
+Value=1;No toilet / bush / field|Sem sanita / arbusto / campo/no mato
+Value=2;Open pit without slab/Open Pit|Poço aberto sem laje/Poço Aberto
+Value=3;Pit latrine with slab (not washable)|Latrina de fossa com laje (não lavável)
+Value=4;Pit latrine with slab (washable)|Latrina de fossa com laje (lavável)
+Value=5;Ventilated improved pit latrine|Latrina melhorada do fossa ventilada
+Value=6;Pour flush toilet|Despeje a sanita de descarga
+Value=7;Flush toilet with cistern|Sanita de descarga com cisterna
+Value=8;Composting toilet / ecosan latrine|Sanita de compostagem / latrina ecosan
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
@@ -775,19 +775,19 @@ Start=118
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|Principal fonte de água potável do AF
+Label=Source drinking water|Principal fonte de água potável do AF
 Name=B11_VS1
-Value=1;Água transportada por tubos|Água transportada por tubos
-Value=2;Furo/ bomba de água manual|Furo/ bomba de água manual
-Value=3;Bomba de água elétrica|Bomba de água elétrica
-Value=4;Poço protegido/mola|Poço protegido/mola
-Value=5;Poço/mola desprotegido|Poço/mola desprotegido
-Value=6;Rio/nascente|Rio/nascente
-Value=7;Lago/reservatório|Lago/reservatório
-Value=8;Água da chuva|Água da chuva
-Value=9;Camiões-cisterna/camião/fornecedor|Camiões-cisterna/camião/fornecedor
-Value=10;Água de saqueta|Água de saqueta
-Value=11;Água de garrafa|Água de garrafa
+Value=1;Pipe borne water|Água transportada por tubos
+Value=2;Bore hole/ hand pump|Furo/ bomba de água manual
+Value=3;Electric water pump|Bomba de água elétrica
+Value=4;Protected well/spring|Poço protegido/mola
+Value=5;Unprotected well/spring|Poço/mola desprotegido
+Value=6;River/spring|Rio/nascente
+Value=7;Lake/reservoir|Lago/reservatório
+Value=8;Rain water|Água da chuva
+Value=9;Tanker/truck/vendor|Camiões-cisterna/camião/fornecedor
+Value=10;Sachet water|Água de saqueta
+Value=11;Bottle water|Água de garrafa
 
 [Item]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
@@ -796,15 +796,15 @@ Start=120
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|A sua água potável é tratada (tratamento químico)?
+Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
 Name=B12_VS1
-Value=1;Nenhum.|Nenhum.
-Value=2;Ferver|Ferver
-Value=3;Adicionar lixívia/cloreto|Adicionar lixívia/cloreto
-Value=4;Use um filete de água|Use um filete de água
-Value=5;Desinfeção solar|Desinfeção solar
-Value=6;Deixe-o ficar de pé e assentar|Deixe-o ficar de pé e assentar
-Value=7;Outros|Outros
+Value=1;None|Nenhum.
+Value=2;Boil|Ferver
+Value=3;Add bleach/chlorone|Adicionar lixívia/cloreto
+Value=4;Use a water fileter|Use um filete de água
+Value=5;Solar disinfection|Desinfeção solar
+Value=6;Let it stand and settle|Deixe-o ficar de pé e assentar
+Value=7;Other|Outros
 
 [Item]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
@@ -998,11 +998,11 @@ Start=106
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|Is this the national grid or a local grid?
+Label=Is this the national grid or a local grid?|Is this the national grid or a local grid?
 Name=C3_VS1
-Value=1;Rede nacional|Rede nacional
-Value=2;Rede local|Rede local
-Value=88;Não sei|Não sei
+Value=1;National grid|Rede nacional
+Value=2;Local grid|Rede local
+Value=88;Don't know|Não sei
 
 [Item]
 Label=Do you have any devices or power supply using solar power?
@@ -1024,11 +1024,11 @@ Len=3
 DataType=Alpha
 
 [ValueSet]
-Label=Text From Clipboard|What kind of solar power supply do you have?
+Label=What kind of solar power supply do you have?|What kind of solar power supply do you have?
 Name=C5_VS1
-Value='a  ';Sistema solar doméstico (SHS) com uma bateria separada|Sistema solar doméstico (SHS) com uma bateria separada
-Value='b  ';Produto multileve solar|Produto multileve solar
-Value='c  ';Lanterna solar|Lanterna solar
+Value='a  ';Solar home system (SHS) with a separate battery|Sistema solar doméstico (SHS) com uma bateria separada
+Value='b  ';Solar multilight product|Produto multileve solar
+Value='c  ';Solar lantern|Lanterna solar
 
 [Item]
 Label=Do you use an electric generator?
@@ -1085,16 +1085,16 @@ Start=116
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Which of these power sources is your main electrical power source?
+Label=Which of these power sources is your main electrical power source?|Which of these power sources is your main electrical power source?
 Name=C10_VS1
-Value=1;Grelha|Grelha
-Value=3;Sistema Solar doméstico|Sistema Solar doméstico
-Value=4;Gerador elétrico|Gerador elétrico
-Value=5;Pico-Hidro|Pico-Hidro
-Value=6;Bateria recarregável (não ligada a um sistema solar)|Bateria recarregável (não ligada a um sistema solar)
-Value=7;Produto solar multi-luz|Produto solar multi-luz
-Value=8;Lanterna Solar|Lanterna Solar
-Value=9;Bateria de células secas|Bateria de células secas
+Value=1;Grid|Grelha
+Value=3;Solar Home System|Sistema Solar doméstico
+Value=4;Electric generator|Gerador elétrico
+Value=5;Pico-Hydro|Pico-Hidro
+Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)
+Value=7;Solar Multi-Light Product|Produto solar multi-luz
+Value=8;Solar Lantern|Lanterna Solar
+Value=9;Dry-cell battery|Bateria de células secas
 
 [Item]
 Label=Which of these power sources is your main back-up source?
@@ -1103,17 +1103,17 @@ Start=117
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|Which of these power sources is your main back-up source?
+Label=Which of these power sources is your main back-up source?|Which of these power sources is your main back-up source?
 Name=C11_VS1
-Value=1;Rede|Rede
-Value=3;Sistema Solar Home|Sistema Solar Home
-Value=4;Gerador elétrico|Gerador elétrico
-Value=5;Pico-Hidro|Pico-Hidro
-Value=6;Bateria recarregável (não ligada a um sistema solar)|Bateria recarregável (não ligada a um sistema solar)
-Value=7;Produto solar multi-luz|Produto solar multi-luz
-Value=8;Lanterna Solar|Lanterna Solar
-Value=9;Bateria de células secas|Bateria de células secas
-Value=66;Sem eletricidade|Sem eletricidade
+Value=1;Grid|Rede
+Value=3;Solar Home System|Sistema Solar Home
+Value=4;Electric generator|Gerador elétrico
+Value=5;Pico-Hydro|Pico-Hidro
+Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)
+Value=7;Solar Multi-Light Product|Produto solar multi-luz
+Value=8;Solar Lantern|Lanterna Solar
+Value=9;Dry-cell battery|Bateria de células secas
+Value=66;No electricity|Sem eletricidade
 
 [Item]
 Label=Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?
@@ -1122,18 +1122,18 @@ Start=119
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?
+Label=Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?|Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?
 Name=C12_VS1
-Value=1;Ligação  da rede nacional|Ligação  da rede nacional
-Value=2;Ligação de rede local|Ligação de rede local
-Value=3;Sistema Solar doméstico|Sistema Solar doméstico
-Value=4;Gerador elétrico|Gerador elétrico
-Value=5;Pico-Hidro|Pico-Hidro
-Value=6;Bateria recarregável (não ligada a um sistema solar)|Bateria recarregável (não ligada a um sistema solar)
-Value=7;Produto solar multi-luz|Produto solar multi-luz
-Value=8;Lanterna Solar|Lanterna Solar
-Value=8;Bateria de células secas|Bateria de células secas
-Value=66;Sem eletricidade|Sem eletricidade
+Value=1;National Grid Connection|Ligação  da rede nacional
+Value=2;Local grid connection|Ligação de rede local
+Value=3;Solar Home System|Sistema Solar doméstico
+Value=4;Electric generator|Gerador elétrico
+Value=5;Pico-Hydro|Pico-Hidro
+Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)
+Value=7;Solar Multi-Light Product|Produto solar multi-luz
+Value=8;Solar Lantern|Lanterna Solar
+Value=8;Dry-cell battery|Bateria de células secas
+Value=66;No electricity|Sem eletricidade
 
 [Item]
 Label=Main reason not connected to grid|Principal razão pela qual sua casa não está conectada à rede
@@ -1277,11 +1277,11 @@ Start=152
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Casa tem um contador elétrico?
+Label=Electric meter|Casa tem um contador elétrico?
 Name=C23_VS1
-Value=1;Sim, sozinho|Sim, sozinho
-Value=2;Sim, partilhando com outras famílias|Sim, partilhando com outras famílias
-Value=3;Não|Não
+Value=1;Yes, alone|Sim, sozinho
+Value=2;Yes, sharing with other households|Sim, partilhando com outras famílias
+Value=3;No|Não
 
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
@@ -1481,12 +1481,12 @@ Start=214
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Dias para corrigir falha de energia
+Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44_VS1
-Value=1;Nunca pedi|Nunca pedi
-Value=2;Sim, e apareceram num tempo razoável.|Sim, e apareceram num tempo razoável.
-Value=3;Sim, mas demorou algum tempo.|Sim, mas demorou algum tempo.
-Value=4;Eles nunca apareceram|Eles nunca apareceram
+Value=1;Never asked|Nunca pedi
+Value=2;Yes, and they showed up in a reasonable time|Sim, e apareceram num tempo razoável.
+Value=3;Yes, but it took some time|Sim, mas demorou algum tempo.
+Value=4;They nevner showed up|Eles nunca apareceram
 
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
@@ -1601,13 +1601,13 @@ Start=227
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|How were you involved in the tariff setting?
+Label=How were you involved in the tariff setting?|How were you involved in the tariff setting?
 Name=C52_VS1
-Value=1;Reunião comunitária|Reunião comunitária
-Value=2;Contactado pela empresa de rede local|Contactado pela empresa de rede local
-Value=3;Membro da comissão de eletricidade|Membro da comissão de eletricidade
-Value=4;Membro da cooperativa|Membro da cooperativa
-Value=55;Outros|Outros
+Value=1;Community meeting|Reunião comunitária
+Value=2;Contacted by local grid company|Contactado pela empresa de rede local
+Value=3;Member of electricity committee|Membro da comissão de eletricidade
+Value=4;Member of cooperative|Membro da cooperativa
+Value=55;Other|Outros
 
 [Record]
 Label=C Solar home system|sistema de home C Solar
@@ -1729,10 +1729,10 @@ Start=162
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Did you pay full or partial amount for your [DEVICE]
+Label=Did you pay full or partial amount for your [DEVICE]|Did you pay full or partial amount for your [DEVICE]
 Name=C66_VS1
-Value=1;Montante total|Montante total
-Value=2;Montante parcial|Montante parcial
+Value=1;Full amount|Montante total
+Value=2;Partial amount|Montante parcial
 
 [Item]
 Label=What is the term period for the payment?
@@ -1747,11 +1747,11 @@ Start=164
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|What payment system do you use?
+Label=ValueSet|ValueSet
 Name=C68_VS1
-Value=1;Mobile Pay-as-you-go|Mobile Pay-as-you-go
-Value=2;Outros Pay-as-you go (raspadinha, etc.)|Outros Pay-as-you go (raspadinha, etc.)
-Value=3;Taxa fixa|Taxa fixa
+Value=1;Mobile Pay-as-you-go
+Value=2;Other Pay-as-you go (scratch card, etc.)|Outros Pay-as-you go (raspadinha, etc.)
+Value=3;Fixed fee|Taxa fixa
 
 [Item]
 Label=What is the monthly payment for this [DEVICE] (installment/ fee to rent/use)?
@@ -1807,10 +1807,10 @@ Start=185
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
+Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?|Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
 Name=C74_VS1
-Value=1;Sim|Sim
-Value=2;Não|Não
+Value=1;Yes|Sim
+Value=2;No|Não
 
 [Item]
 Label=How many hours did you receive service from this [DEVICE] each day and night, during the last seven days?
@@ -2332,7 +2332,7 @@ Name=C120_VS1
 Value=1;National grid|Rede nacional|Gridi ya Taifa
 Value=2;Local mini grid|Mini-rede locais|Gridi ndogo inayopatikana hapa
 Value=3;Electric generaor|Generaor elétrica|Jenereta ya umeme
-Value=4;Solar|Solar|Umeme jua
+Value=4;Solar||Umeme jua
 Value=55;Other|De outros|Nyingine
 
 [Item]
@@ -2672,16 +2672,16 @@ Start=107
 Len=2
 
 [ValueSet]
-Label=Text From Clipboard|Which of these is the main source of lighting in the household?
+Label=ValueSet|ValueSet
 Name=F3_VS1
-Value=1;Vela|Vela
-Value=2;Lâmpada de pavio aberta/candieiro|Lâmpada de pavio aberta/candieiro
-Value=3;Lâmpada de pavio com cobertura de vidro/candieiro|Lâmpada de pavio com cobertura de vidro/candieiro
-Value=4;Lâmpada de manto pressurizado|Lâmpada de manto pressurizado
-Value=5;Fonte de luz alimentada a energia solar|Fonte de luz alimentada a energia solar
-Value=6;Fonte de luz operada por bateria|Fonte de luz operada por bateria
-Value=7;Nenhum.|Nenhum.
-Value=55;Outros|Outros
+Value=1;Candle|Vela
+Value=2;Open wick lamp|Lâmpada de pavio aberta/candieiro
+Value=3;Wick lamp  with glass cover|Lâmpada de pavio com cobertura de vidro/candieiro
+Value=4;Pressurized mantle lamp|Lâmpada de manto pressurizado
+Value=5;Solar powered light source|Fonte de luz alimentada a energia solar
+Value=6;Battery-operated light source|Fonte de luz operada por bateria
+Value=7;None|Nenhum.
+Value=55;Other|Outros
 
 [Item]
 Label=How many of these lamps does your household have?
@@ -2799,12 +2799,12 @@ Start=137
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard|Percentagem de combustível utilizado para iluminação
+Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
 Name=F15_VS1
-Value=1;Todos|Todos
-Value=2;Mais de metade|Mais de metade
-Value=3;Metade|Metade
-Value=4;Menos de metade|Menos de metade
+Value=1;All|Todos
+Value=2;More than half|Mais de metade
+Value=3;Half|Metade
+Value=4;Less than half|Menos de metade
 
 [Record]
 Label=I Use of cooking sloutions|I_HH Uso de sloutions cozinha
@@ -2837,19 +2837,19 @@ Len=18
 DataType=Alpha
 
 [ValueSet]
-Label=Text From Clipboard|Which type of stove is this?
+Label=Which type of stove is this?|Which type of stove is this?
 Name=I3_VS1
-Value='101               ';Fogão de três pedras|Fogão de três pedras
+Value='101               ';Three-stone stove|Fogão de três pedras
 Image=.\Resources\Images\Cookstoves_101.jpg
-Value='102               ';Fogão de lama redonda|Fogão de lama redonda
+Value='102               ';Round mud stove|Fogão de lama redonda
 Image=.\Resources\Images\Cookstoves_102.jpg
-Value='111               ';Fogão melhorado de cozinha c/ câmara de fogo cerâmico|Fogão melhorado de cozinha c/ câmara de fogo cerâmico
+Value='111               ';ICS w/ ceramic fire chamber|Fogão melhorado de cozinha c/ câmara de fogo cerâmico
 Image=.\Resources\Images\Cookstoves_111.jpg
-Value='121               ';Fogão de foguete|Fogão de foguete
+Value='121               ';Rocket stove|Fogão de foguete
 Image=.\Resources\Images\Cookstoves_121.jpg
-Value='131               ';Lorena 1 Foguete fogão com alto isolamento|Lorena 1 Foguete fogão com alto isolamento
+Value='131               ';Lorena 1 Rocket stove with high insulation|Lorena 1 Foguete fogão com alto isolamento
 Image=.\Resources\Images\Cookstoves_131.jpg
-Value='141               ';Lorena 2 Foguete fogão com chaminé bem selada|Lorena 2 Foguete fogão com chaminé bem selada
+Value='141               ';Lorena 2 Rocket stove with well- sealed chimney|Lorena 2 Foguete fogão com chaminé bem selada
 Image=.\Resources\Images\Cookstoves_141.jpg
 
 [Item]
@@ -2871,19 +2871,19 @@ Len=18
 DataType=Alpha
 
 [ValueSet]
-Label=Text From Clipboard|Which type of stove is this?
+Label=Which type of stove is this?|Which type of stove is this?
 Name=I5_VS1
-Value='201               ';Fogão a carvão tradicional - Acesso aberto para o ar|Fogão a carvão tradicional - Acesso aberto para o ar
+Value='201               ';Traditional charcoal stove - Open access for air|Fogão a carvão tradicional - Acesso aberto para o ar
 Image=.\Resources\Images\Cookstoves_201.jpg
-Value='211               ';Fogão a carvão, Abertura do ICS Antigo para o ar pode ser fechada|Fogão a carvão, Abertura do ICS Antigo para o ar pode ser fechada
+Value='211               ';Charcoal stove, Old ICS Opening for air may be closed|Fogão a carvão, Abertura do ICS Antigo para o ar pode ser fechada
 Image=.\Resources\Images\Cookstoves_211.jpg
-Value='221               ';Fogão melhorado de cozinha de carvão forrado em cerâmica|Fogão melhorado de cozinha de carvão forrado em cerâmica
+Value='221               ';Ceramic lined charcoal ICS|Fogão melhorado de cozinha de carvão forrado em cerâmica
 Image=.\Resources\Images\Cookstoves_221.jpg
-Value='231               ';Fogão melhorado de cozinha de carvão forrado e isolado|Fogão melhorado de cozinha de carvão forrado e isolado
+Value='231               ';Ceramic lined and insulated charcoal ICS|Fogão melhorado de cozinha de carvão forrado e isolado
 Image=.\Resources\Images\Cookstoves_231.jpg
-Value='233               ';Fogão de cozinha de querosene (Mchina)|Fogão de cozinha de querosene (Mchina)
+Value='233               ';Kerosene cooking stove (Mchina)|Fogão de cozinha de querosene (Mchina)
 Image=.\Resources\Images\Cookstoves_233.jpg
-Value='241               ';Fogão a carvão eficiente com fluxo de ar controlado|Fogão a carvão eficiente com fluxo de ar controlado
+Value='241               ';Efficient charcoal stove with controlled airflow|Fogão a carvão eficiente com fluxo de ar controlado
 Image=.\Resources\Images\Cookstoves_241.jpg
 
 [Item]
@@ -2905,10 +2905,10 @@ Len=6
 DataType=Alpha
 
 [ValueSet]
-Label=Text From Clipboard|Which type of stove is this?
+Label=Which type of stove is this?|Which type of stove is this?
 Name=I7_VS1
-Value='331   ';Fogão gasifier|Fogão gasifier
-Value='341   ';Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
+Value='331   ';Gasifier stove|Fogão gasifier
+Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
 
 [Item]
 Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
@@ -2929,12 +2929,12 @@ Len=12
 DataType=Alpha
 
 [ValueSet]
-Label=Text From Clipboard|Which type of stove is this?
+Label=Which type of stove is this?|Which type of stove is this?
 Name=I9_VS1
-Value='451         ';Fogão de biogás|Fogão de biogás
-Value='452         ';Vários fogões GPL|Vários fogões GPL
-Value='461         ';Fogão elétrico|Fogão elétrico
-Value='471         ';Forno solar (não elétrico)|Forno solar (não elétrico)
+Value='451         ';Biogas stove|Fogão de biogás
+Value='452         ';Multiple LPG stove|Vários fogões GPL
+Value='461         ';Electrical stove|Fogão elétrico
+Value='471         ';Solar oven (Non-electric)|Forno solar (não elétrico)
 
 [Item]
 Label=Which one is your main stove?
@@ -3771,9 +3771,9 @@ Label=Do you cultivate any land? IF SO: How large is the area?
 Name=L3_VS1
 Link=345582371
 Value=0;No land|Sem terra|Hakuna shamba
-Value=1;< 0.5 Ha|< 0.5 Ha|Chini ya nusu hekta
-Value=2;0.5 - 1 Ha|0.5 - 1 Ha|Nusu hekta mpaka hekta 1
-Value=3;1 - 2 Ha|1 - 2 Ha|Hekta1 mpaka 2
+Value=1;< 0.5 Ha||Chini ya nusu hekta
+Value=2;0.5 - 1 Ha||Nusu hekta mpaka hekta 1
+Value=3;1 - 2 Ha||Hekta1 mpaka 2
 Value=4;More than 2 Ha|Mais do que 2 Ha|Zaidi ya hekta 2
 
 [Item]
@@ -3837,8 +3837,8 @@ Len=1
 Label=How many chicken, ducks, turkeys, geese?
 Name=L8_VS1
 Value=0;None|Nenhum|Hakuna
-Value=1;1-10|01/10/2021
-Value=2;11-20|01/11/2020
+Value=1;1-10|1-10
+Value=2;11-20|11-20
 Value=3;21 or more|21 ou mais|21 au zaidi
 
 [Record]
@@ -3907,11 +3907,11 @@ ItemType=SubItem
 [ValueSet]
 Label=Activity
 Name=N_ACTIVITY_WOMEN_VS1
-Value=1;Recolha de água|Cartar água
-Value=2;Recolha de lenha|Recolha de lenha
-Value=3;Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf|Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf
-Value=4;Ver televisão, ouvir rádio ou usar o telefone inteligente|Ver televisão, ouvir rádio ou usar o telefone inteligente
-Value=5;Passar tempo em entretenimento e socializar-se fora da casa|Passar tempo em entretenimento e socializar-se fora da casa
+Value=1;Collecting water|Cartar água
+Value=2;Collecting firewood|Recolha de lenha
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf
+Value=4;Watching TV, listening to the radio or using smart phone|Ver televisão, ouvir rádio ou usar o telefone inteligente
+Value=5;Spending time on entertainment and socializing outside the house|Passar tempo em entretenimento e socializar-se fora da casa
 
 [Item]
 Label=How many women 15 years and older have been involved in (ACTIVITY)?
@@ -4081,11 +4081,11 @@ ItemType=SubItem
 [ValueSet]
 Label=Activity
 Name=N_ACTIVITY_MEN_VS1
-Value=1;Recolha de água|Tirar água
-Value=2;Recolha de lenha|Recolha de lenha
-Value=3;Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf|Rendimento gerado de atividades no agregado familiar/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf
-Value=4;Ver televisão, ouvir rádio ou usar o telefone inteligente|Ver televisão, ouvir rádio ou usar o smart phone /telefone inteligente
-Value=5;Passar tempo em entretenimento e socializar-se fora da casa|Passar tempo em entretenimento e socializar-se fora da casa
+Value=1;Collecting water|Tirar água
+Value=2;Collecting firewood|Recolha de lenha
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerado de atividades no agregado familiar/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf
+Value=4;Watching TV, listening to the radio or using smart phone|Ver televisão, ouvir rádio ou usar o smart phone /telefone inteligente
+Value=5;Spending time on entertainment and socializing outside the house|Passar tempo em entretenimento e socializar-se fora da casa
 
 [Item]
 Label=How many men 15 years and older have been involved in (ACTIVITY)?
@@ -4254,14 +4254,14 @@ Occurrences=7
 [ValueSet]
 Label=Consumption (include items purchased, produced/acquired and received as a gift/donation)
 Name=Q2_VS1
-Value='1                        ';Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)|Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)
-Value='2                        ';Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)|Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)
-Value='3                        ';Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)|Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)
-Value='4                        ';Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)|Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)
-Value='5                        ';Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)|Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)
-Value='6                        ';Carne, peixe, aves e ovo|Carne, peixe, aves e ovo
-Value='7                        ';Açúcar e doces|Açúcar e doces
-Value='8                        ';Outros alimentos (por exemplo, pimenta, sal, especiarias, compotas, pão, refeições fora da casa, bebidas, etc.) Incluir todos os alimentos processados não preparados pelo agregado familiar usando ingredientes crus|Outros alimentos (por exemplo, pimenta, sal, especiarias, compotas, pão, refeições fora da casa, bebidas, etc.) Incluir todos os alimentos processados não preparados pelo agregado familiar usando ingredientes crus
+Value='1                        ';Cereal and cereal products (e.g. rice, maize, wheat, flor, millet) and starchy staples (e.g. cassava, plantain, yam, cocoyam)|Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)
+Value='2                        ';Pulses & nuts (e.g.: beans, groundnuts, palm nuts, soy beans)|Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)
+Value='3                        ';Milk & milk products (e.g.: powder, tinned, fresh)|Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)
+Value='4                        ';Edible oil (e.g.: palm oil, groundnut oil, coconut oil)|Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)
+Value='5                        ';Vegetables (e.g.: okra, tomato, onion, carrot, cabbage, garden egg) and Fruits (e.g.: bananas, coconut, pineapple, mango, orange, pawpaw)|Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)
+Value='6                        ';Meat, fish, poultry and egg|Carne, peixe, aves e ovo
+Value='7                        ';Sugar and sweets|Açúcar e doces
+Value='8                        ';Other food items (e,g, pepper, salt, spices, jam, bread, meals outside house, beverages etc.) Include all processed foods not prepared by household using raw ingredients|Outros alimentos (por exemplo, pimenta, sal, especiarias, compotas, pão, refeições fora da casa, bebidas, etc.) Incluir todos os alimentos processados não preparados pelo agregado familiar usando ingredientes crus
 
 [Item]
 Label=Consumption number
@@ -4273,13 +4273,13 @@ ItemType=SubItem
 [ValueSet]
 Label=Consumption number
 Name=Q2_NUM_VS1
-Value=1;Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)|Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)
-Value=2;Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)|Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)
-Value=3;Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)|Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)
-Value=4;Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)|Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)
-Value=5;Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)|Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)
-Value=6;Carne, peixe, aves e ovo|Carne, peixe, aves e ovo
-Value=7;Outros alimentos (por exemplo, açúcar e doces, pimenta, sal, especiarias, compotas, pão, pasta de amendoim, refeições fora da casa, bebidas, etc.) Inclua todos os alimentos processados não preparados pelo agregado familiar.|Outros alimentos (por exemplo, açúcar e doces, pimenta, sal, especiarias, compotas, pão, pasta de amendoim, refeições fora da casa, bebidas, etc.) Inclua todos os alimentos processados não preparados pelo agregado familiar.
+Value=1;Cereal and cereal products (e.g. rice, maize, wheat, flor, millet) and starchy staples (e.g. cassava, plantain, yam, cocoyam)|Cereais e produtos à base de cereais (por exemplo, arroz, milho, trigo, flor, milho) e agrafos amidos (por exemplo, mandioca, plátano, inhame, cacau)
+Value=2;Pulses & nuts (e.g.: beans, groundnuts, palm nuts, soy beans)|Leguminosas e frutos secos (por exemplo: feijão, amendoim, nozes de palma, grãos de soja)
+Value=3;Milk & milk products (e.g.: powder, tinned, fresh)|Leite & produtos lácteos (por exemplo: pó, enlatado, fresco)
+Value=4;Edible oil (e.g.: palm oil, groundnut oil, coconut oil)|Óleo comestível (por exemplo: óleo de palma, óleo de amendoim, óleo de coco)
+Value=5;Vegetables (e.g.: okra, tomato, onion, carrot, cabbage, garden egg) and Fruits (e.g.: bananas, coconut, pineapple, mango, orange, pawpaw)|Legumes (por exemplo: okra, tomate, cebola, cenoura, couve, ovo de jardim) e frutas (por exemplo: bananas, coco, ananás, manga, laranja, pata)
+Value=6;Meat, fish, poultry and egg|Carne, peixe, aves e ovo
+Value=7;Other food items (e,g, sugar and sweets, pepper, salt, spices, jam, bread, groundnut paste, meals outside house, beverages etc.) Include all processed foods not prepared by household.|Outros alimentos (por exemplo, açúcar e doces, pimenta, sal, especiarias, compotas, pão, pasta de amendoim, refeições fora da casa, bebidas, etc.) Inclua todos os alimentos processados não preparados pelo agregado familiar.
 
 [Item]
 Label=A. Purchased
@@ -4459,12 +4459,12 @@ ItemType=SubItem
 [ValueSet]
 Label=Product no
 Name=U2_VS1
-Value=1;Sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, sementes, farelo, etc.|Sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, sementes, farelo, etc.
-Value=2;Sub-produtos pecuários (leite, queijo)|Sub-produtos pecuários (leite, queijo)
-Value=3;Peixe fresco/processado|Peixe fresco/processado
-Value=4;Lenha, carvão caseiro|Lenha, carvão caseiro
-Value=5;Madeiras de construção, postes de madeira ou outro material de construção|Madeiras de construção, postes de madeira ou outro material de construção
-Value=6;Tapetes, tijolos, móveis de bengala, cestos de tecelagem, grama de colmo etc|Tapetes, tijolos, móveis de bengala, cestos de tecelagem, grama de colmo etc
+Value=1;Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc|Sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, sementes, farelo, etc.
+Value=2;Livestock by-products (milk, cheese)|Sub-produtos pecuários (leite, queijo)
+Value=3;Fresh/processed fish|Peixe fresco/processado
+Value=4;Firewood, home-made charcoal|Lenha, carvão caseiro
+Value=5;Construction timber, wood-poles or other construction material|Madeiras de construção, postes de madeira ou outro material de construção
+Value=6;Mats, bricks, cane furniture, weave baskets, thatch grass etc|Tapetes, tijolos, móveis de bengala, cestos de tecelagem, grama de colmo etc
 
 [Item]
 Label=Do you produce or process [PRODUCT] in the household today?
@@ -4507,10 +4507,10 @@ ItemType=SubItem
 [ValueSet]
 Label=Where and how was this sale done?
 Name=U2D_VS1
-Value=1;Aos comerciantes que voltam para casa|Aos comerciantes que voltam para casa
-Value=2;Para comerciantes em outros lugares|Para comerciantes em outros lugares
-Value=3;Através de um negócio de comércio próprio|Através de um negócio de comércio próprio
-Value=4;Aos clientes que voltam para casa|Aos clientes que voltam para casa
+Value=1;To traders coming home|Aos comerciantes que voltam para casa
+Value=2;To traders elsewhere|Para comerciantes em outros lugares
+Value=3;Through own trading business|Através de um negócio de comércio próprio
+Value=4;To customers coming home|Aos clientes que voltam para casa
 
 [Item]
 Label=Was any electricity used for light or machinery for this processing / production?
@@ -4546,9 +4546,9 @@ ItemType=SubItem
 [ValueSet]
 Label=Valueset
 Name=U2G_VS1
-Value=1;Mais dinheiro há 5 anos|Mais dinheiro há 5 anos
-Value=2;Menos dinheiro há 5 anos|Menos dinheiro há 5 anos
-Value=3;O mesmo há 5 anos|O mesmo há 5 anos
+Value=1;More money 5 years ago|Mais dinheiro há 5 anos
+Value=2;Less money 5 years ago|Menos dinheiro há 5 anos
+Value=3;Same 5 years ago|O mesmo há 5 anos
 
 [Item]
 Label=Was any electricity used for this produse/process 5 years ago?
@@ -4580,12 +4580,12 @@ ItemType=SubItem
 [ValueSet]
 Label=Business no
 Name=U3_VS1
-Value=1;oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.|oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.
-Value=2;gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate etc|gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate etc
-Value=3;possuir uma empresa de comércio ou serviços em uma rua ou em um mercado|possuir uma empresa de comércio ou serviços em uma rua ou em um mercado
-Value=4;conduzir um táxi ou pick-up domciliar para fornecer serviços de transporte ou de mudança|conduzir um táxi ou pick-up domciliar para fornecer serviços de transporte ou de mudança
-Value=5;possuir um bar ou restaurante|possuir um bar ou restaurante
-Value=6;possuir qualquer outra empresa não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou em uma rua|possuir qualquer outra empresa não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou em uma rua
+Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.|oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.
+Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate etc
+Value=3;own a trading or service business on a street or in a market|possuir uma empresa de comércio ou serviços em uma rua ou em um mercado
+Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services|conduzir um táxi ou pick-up domciliar para fornecer serviços de transporte ou de mudança
+Value=5;own a bar or restaurant|possuir um bar ou restaurante
+Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street|possuir qualquer outra empresa não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou em uma rua
 
 [Item]
 Label=Does anybody in the household  [BUSINESS] today?
@@ -4628,14 +4628,14 @@ ItemType=SubItem
 [ValueSet]
 Label=Valueset
 Name=U3D_VS1
-Value=1;Casa (dentro de casa)|Casa (dentro de casa)
-Value=2;Casa (fora de casa)|Casa (fora de casa)
-Value=3;Site industrial|Site industrial
-Value=4;Mercado Local tradicional|Mercado Local tradicional
-Value=5;Loja em área comercial|Loja em área comercial
-Value=6;Beira da estrada|Beira da estrada
-Value=7;Outro lugar fixo|Outro lugar fixo
-Value=8;Localização móvel|Localização móvel
+Value=1;Home (inside residence)|Casa (dentro de casa)
+Value=2;Home (outside residence|Casa (fora de casa)
+Value=3;Industrical site|Site industrial
+Value=4;Traditional market place|Mercado Local tradicional
+Value=5;Commercial area shop|Loja em área comercial
+Value=6;Roadside|Beira da estrada
+Value=7;Other fixed place|Outro lugar fixo
+Value=8;Mobile location|Localização móvel
 
 [Item]
 Label=Was any electricity used for light or machinery for this processing / production?
@@ -4671,9 +4671,9 @@ ItemType=SubItem
 [ValueSet]
 Label=Valueset
 Name=U3G_VS1
-Value=1;Há 5 anos|Há 5 anos
-Value=2;Os mesmos anos atrás|Os mesmos anos atrás
-Value=3;Maior há 5 anos|Maior há 5 anos
+Value=1;Smaller 5 yrs ago|Há 5 anos
+Value=2;Same 5 yrs ago|Os mesmos anos atrás
+Value=3;Larger 5 yrs ago|Maior há 5 anos
 
 [Item]
 Label=Was any electricity used for this processing/ production 5 years ago?
@@ -4913,7 +4913,7 @@ Value=4;Not applicable|Não aplicável|Haihusiki
 Label=GP Global Pandemic
 Name=GP_GLOBAL_PANDEMIC
 RecordTypeValue='V'
-RecordLen=315
+RecordLen=351
 
 [Item]
 Label=Has anybody 12 years or above in this household changed their main occupation over the last year during the global pandemic up to today
@@ -4959,12 +4959,12 @@ ItemType=SubItem
 [ValueSet]
 Label=Value Set 0
 Name=GP3_VS1
-Value=1;Agricultor com empregados não familiares|Agricultor com empregados não familiares
-Value=2;Agricultor com apenas membros da família|Agricultor com apenas membros da família
-Value=3;Trabalhador agrícola|Trabalhador agrícola
-Value=4;Negócios não agrícolas com empregados não familiares|Negócios não agrícolas com empregados não familiares
-Value=5;Negócios não agrícolas com apenas empregados da família|Negócios não agrícolas com apenas empregados da família
-Value=6;Assistência não remunerada em empresa familiar/Trabalhador Casual/Day|Assistência não remunerada em empresa familiar/Trabalhador Casual/Day
+Value=1;Farmer with non-family employees|Agricultor com empregados não familiares
+Value=2;Farmer with only family members|Agricultor com apenas membros da família
+Value=3;Farm worker|Trabalhador agrícola
+Value=4;Non-farm business with non-family employees|Negócios não agrícolas com empregados não familiares
+Value=5;Non-farm business with only family employees|Negócios não agrícolas com apenas empregados da família
+Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer|Assistência não remunerada em empresa familiar/Trabalhador Casual/Day
 Value=8;Wage Employee in Private Company (with contract)|Trabalhador assalariado em Empresa Privada (com contrato)
 Value=9;Wage Employee in Private Company (without contract)|Trabalhador assalariado em Empresa Privada (sem contrato)
 Value=10;Wage Employee for Government|Trabalhador salarial do Governo
@@ -4983,26 +4983,26 @@ ItemType=SubItem
 [ValueSet]
 Label=Value Set 0
 Name=GP4_VS1
-Value=11;Agricultura - culturas/silvicultura|Agricultura - culturas/silvicultura
-Value=12;Agricultura - criação animal|Agricultura - criação animal
-Value=13;Pesca|Pesca
-Value=14;Mineração e pedreira|Mineração e pedreira
-Value=15;Fabrico|Fabrico
-Value=16;Fornecimento de electricidade e água|Fornecimento de eléctricidade e água
-Value=17;Edificio o e construção|Edificio o e construção
-Value=18;Comércio|Comércio
-Value=19;Reparação|Reparação
-Value=20;Transporte|Transporte
-Value=21;Alojamento e serviço alimentar|Alojamento e serviço alimentar
-Value=22;Informação e comunicação|Informação e comunicação
-Value=23;Serviço financeiro, profissional, administrativo e de apoio|Serviço financeiro, profissional, administrativo e de apoio
-Value=24;Administração pública e defesa|Administração pública e defesa
-Value=25;Educação|Educação
-Value=26;Saúde humana e trabalho social|Saúde humana e trabalho social
-Value=27;Artes, entretenimento e recreação|Artes, entretenimento e recreação
-Value=28;Atendimento pessoal|Atendimento pessoal
-Value=29;Serviço doméstico|Serviço doméstico
-Value=30;Embaixadas e organizações internacionais|Embaixadas e organizações internacionais
+Value=11;Agriculture - crops/forestry|Agricultura - culturas/silvicultura
+Value=12;Agriculture - animal husbandry|Agricultura - criação animal
+Value=13;Fishing|Pesca
+Value=14;Mining & quarrying|Mineração e pedreira
+Value=15;Manufacturing|Fabrico
+Value=16;Electricity and water supply|Fornecimento de eléctricidade e água
+Value=17;Building and construction|Edificio o e construção
+Value=18;Trade|Comércio
+Value=19;Repair|Reparação
+Value=20;Transportation|Transporte
+Value=21;Accommodation and food service|Alojamento e serviço alimentar
+Value=22;Information and communication|Informação e comunicação
+Value=23;Financial, professional, administrative and support service|Serviço financeiro, profissional, administrativo e de apoio
+Value=24;Public administration and defence|Administração pública e defesa
+Value=25;Education|Educação
+Value=26;Human health and social work|Saúde humana e trabalho social
+Value=27;Arts, entertainment and recreation|Artes, entretenimento e recreação
+Value=28;Personal service|Atendimento pessoal
+Value=29;Domestic service|Serviço doméstico
+Value=30;Embassies and international organizations|Embaixadas e organizações internacionais
 
 [Item]
 Label=Family farming, livestock or fishing
@@ -5178,13 +5178,13 @@ Len=1
 [ValueSet]
 Label=Value Set 0
 Name=GP19_VS1
-Value=1;Lenha, esterco, galhos e folhas|Lenha, esterco, galhos e folhas
-Value=2;Carvão|Carvão
-Value=3;Querosene|Querosene
-Value=4;Cascas de arroz, pellets ou briquetes|Cascas de arroz, pellets ou briquetes
-Value=5;GPL, biogás|GPL, biogás
-Value=6;Eletricidade|Electricidade
-Value=7;Forno solar (não eléctrico)|Forno solar (não eléctrico)
+Value=1;Firewood, dung, twigs and leaves|Lenha, esterco, galhos e folhas
+Value=2;Charcoal|Carvão
+Value=3;Kerosene|Querosene
+Value=4;Rice husks, pellets or briquettes|Cascas de arroz, pellets ou briquetes
+Value=5;LPG, biogas|GPL, biogás
+Value=6;Electricity|Electricidade
+Value=7;Solar oven (non-electric)|Forno solar (não eléctrico)
 
 [Item]
 Label=Have your consumption of fuel for cooking increased, stayed the same or decreased over the last year during the global pandemic up to today?
@@ -5218,34 +5218,34 @@ Len=3
 [ValueSet]
 Label=Valueset
 Name=GP22_VS1
-Value=999;Sem mudança de forno|Sem mudança de forno
-Value=101;Fogão de três pedras|Fogão de três pedras
-Value=102;Fogão de lama redonda|Fogão de lama redonda
-Value=111;Fogão de cozinha melhrorado c/ câmara de fogo cerâmico|Fogão de cozinha melhrorado c/ câmara de fogo cerâmico
-Value=112;Fogão de cozinha melhrorado c/ anel metálico|Fogão de cozinha melhrorado c/ anel metálico
-Value=121;Fogão de foguete|Fogão de foguete
-Value=122;Fogão de lama/argila queimada alta tradicional|Fogão de lama/argila queimada alta tradicional
-Value=131;Lorena 1 Foguete fogão w alto isolamento|Lorena 1 Foguete fogão w alto isolamento
-Value=132;Foguete fogão metálico c/chaminé interna/ Canamakeivuguruye|Foguete fogão metálico c/chaminé interna/ Canamakeivuguruye
-Value=141;Lorena 2 Foguete fogão com chaminé bem selada|Lorena 2 Foguete fogão com chaminé bem selada
-Value=142;Fogão de foguete de metal|Fogão de foguete de metal
-Value=201;Fogão a carvão tradicional - Acesso aberto para o ar|Fogão a carvão tradicional - Acesso aberto para o ar
-Value=202;Fogão a carvão tradicional levantado|Fogão a carvão tradicional levantado
-Value=211;Fogão a carvão, abertura do fogão de cozinha melhrorado antigo para o ar pode ser fechada|Fogão a carvão, abertura do fogão de cozinha melhrorado antigo para o ar pode ser fechada
-Value=221;Fogão de cozinha melhrorado de carvão forrado em cerâmica|Fogão de cozinha melhrorado de carvão forrado em cerâmica
-Value=231;Fogão de cozinha melhrorado de carvão forrado e isolado|Fogão de cozinha melhrorado de carvão forrado e isolado
-Value=233;Fogão de cozinha de querosene (Mchina)|Fogão de cozinha de querosene (Mchina)
-Value=241;Fogão a carvão eficiente com fluxo de ar controlado|Fogão a carvão eficiente com fluxo de ar controlado
-Value=331;Fogão gasifier|Fogão gasifier
-Value=332;Pó de serra, fogão gasifier de casca de risco|Pó de serra, fogão gasifier de casca de risco
-Value=341;Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
-Value=451;Fogão de biogás|Fogão de biogás
-Value=452;Vários  |Vários
-Value=453;Fogão de GPL único|Fogão de GPL único
-Value=461;Fogão elétrico|Fogão elétrico
-Value=462;Placas elétricas sem forno|Placas elétricas sem forno
-Value=463;GPL/ gás e fogão elétrico|GPL/ gás e fogão elétrico
-Value=471;Fogão solar (não elétrico)|Fogão solar (não elétrico)
+Value=999;No change of oven|Sem mudança de forno
+Value=101;Three-stone stove|Fogão de três pedras
+Value=102;Round mud stove|Fogão de lama redonda
+Value=111;ICS w/ ceramic fire chamber|Fogão de cozinha melhrorado c/ câmara de fogo cerâmico
+Value=112;ICS w/ metal ring|Fogão de cozinha melhrorado c/ anel metálico
+Value=121;Rocket stove|Fogão de foguete
+Value=122; High traditional burned mud/clay stove|Fogão de lama/argila queimada alta tradicional
+Value=131;Lorena 1 Rocket stove w high insulation|Lorena 1 Foguete fogão w alto isolamento
+Value=132;Rocket stove metal w/internal chimney/ Canamakeivuguruye|Foguete fogão metálico c/chaminé interna/ Canamakeivuguruye
+Value=141;Lorena 2 Rocket stove with well- sealed chimney|Lorena 2 Foguete fogão com chaminé bem selada
+Value=142;Metal rocket stove|Fogão de foguete de metal
+Value=201;Traditional charcoal stove - Open access for air|Fogão a carvão tradicional - Acesso aberto para o ar
+Value=202;Traditional raised charcoal stove|Fogão a carvão tradicional levantado
+Value=211;Charcoal stove, Old ICS Opening for air may be closed|Fogão a carvão, abertura do fogão de cozinha melhrorado antigo para o ar pode ser fechada
+Value=221;Ceramic lined charcoal ICS|Fogão de cozinha melhrorado de carvão forrado em cerâmica
+Value=231;Ceramic lined and insulated charcoal ICS|Fogão de cozinha melhrorado de carvão forrado e isolado
+Value=233;Kerosene cooking stove (Mchina)|Fogão de cozinha de querosene (Mchina)
+Value=241;Efficient charcoal stove with controlled airflow|Fogão a carvão eficiente com fluxo de ar controlado
+Value=331;Gasifier stove|Fogão gasifier
+Value=332;Saw dust, risk husk gasifier stove|Pó de serra, fogão gasifier de casca de risco
+Value=341;Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
+Value=451;Biogas stove|Fogão de biogás
+Value=452;Multiple LPG stove|Vários
+Value=453;Single LPG stove|Fogão de GPL único
+Value=461;Electrical stove|Fogão elétrico
+Value=462;Electrical plates without oven|Placas elétricas sem forno
+Value=463;LPG/ gas and electrical stove|GPL/ gás e fogão elétrico
+Value=471;Solar cooker (Non-electric)|Fogão solar (não elétrico)
 
 [Item]
 Label=Have you sold any of household items since before the global pandemic started last year?
@@ -5262,35 +5262,36 @@ Link=133482376
 Label=Which type of items did you sell?
 Name=GP24
 Start=285
-Len=2
+Len=38
+DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=GP24_VS1
-Value=1;Cama|Cama
-Value=2;Mesa|Mesa
-Value=3;Bicicleta|Bicicleta
-Value=4;Motocicleta/Motorizada|Motocicleta/Motorizada
-Value=5;Carro|Carro
-Value=6;Rádio usando baterias|Rádio usando baterias
-Value=7;Carregador de telemóvel|Carregador de telemóvel
-Value=8;Rádio elétrica|Rádio elétrica
-Value=9;Fã|Fan
-Value=10;Frigorífico|Frigorífico
-Value=11;Forno micro-ondas|Forno micro-ondas
-Value=12;Congelador|Congelador
-Value=13;Máquina de lavar roupa|Máquina de lavar roupa
-Value=14;Máquina de costura elétrica|Máquina de costura elétrica
-Value=15;Ar Condicionado (AC)|Ar Condicionado (AC)
-Value=16;Computador/ Tablet|Computador/ Tablet
-Value=17;Pote/chaleira de água quente elétrica|Pote/chaleira de água quente elétrica
-Value=18;TV|TV
-Value=19;Bomba de água elétrica|Bomba de água elétrica
+Value='01                                    ';Bed|Cama
+Value='02                                    ';Table|Mesa
+Value='03                                    ';Bicycle|Bicicleta
+Value='04                                    ';Motorcycle|Motocicleta/Motorizada
+Value='05                                    ';Car|Carro
+Value='06                                    ';Radio using batteries|Rádio usando baterias
+Value='07                                    ';Mobile phone charger|Carregador de telemóvel
+Value='08                                    ';Electric radio|Rádio elétrica
+Value='09                                    ';Fan
+Value='10                                    ';Refrigerator|Frigorífico
+Value='11                                    ';Microwave oven|Forno micro-ondas
+Value='12                                    ';Freezer|Congelador
+Value='13                                    ';Washing machine|Máquina de lavar roupa
+Value='14                                    ';Electric sewing machine|Máquina de costura elétrica
+Value='15                                    ';Air Conditioner (AC)|Ar Condicionado (AC)
+Value='16                                    ';Computer/ Tablet|Computador/ Tablet
+Value='17                                    ';Electric hot water pot/kettle|Pote/chaleira de água quente elétrica
+Value='18                                    ';TV
+Value='19                                    ';Electric water pump|Bomba de água elétrica
 
 [Item]
 Label=Have your total consumption increased, stayed the same or decreased over the last year during the global pandemic up to today?
 Name=GP25
-Start=287
+Start=323
 Len=1
 
 [ValueSet]
@@ -5301,25 +5302,25 @@ Link=326777112
 [Item]
 Label=Did you have to close down any household  production over the last year during the global pandemic up to today?
 Name=GP26
-Start=288
+Start=324
 Len=6
 DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=GP26_VS1
-Value='1     ';Sim, sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, semente, farelo|Sim, sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, semente, farelo
-Value='2     ';Sim, sub-produtos de gado (leite, queijo)|Sim, sub-produtos de gado (leite, queijo)
-Value='3     ';Sim, peixe fresco/processado|Sim, peixe fresco/processado
-Value='4     ';Sim, lenha, carvão caseiro.|Sim, lenha, carvão caseiro.
-Value='5     ';Sim, madeira de construção, postes de madeira ou outro material de construção|Sim, madeira de construção, postes de madeira ou outro material de construção
-Value='6     ';Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo|Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo
-Value='7     ';Não|Não
+Value='1     ';Yes, agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran|Sim, sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, semente, farelo
+Value='2     ';Yes, livestock by-products (milk, cheese)|Sim, sub-produtos de gado (leite, queijo)
+Value='3     ';Yes, fresh/processed fish|Sim, peixe fresco/processado
+Value='4     ';Yes, firewood, home-made charcoal|Sim, lenha, carvão caseiro.
+Value='5     ';Yes, construction timber, wood-poles or other construction material|Sim, madeira de construção, postes de madeira ou outro material de construção
+Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass|Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo
+Value='7     ';No|Não
 
 [Item]
 Label=Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
 Name=GP27
-Start=294
+Start=330
 Len=1
 
 [ValueSet]
@@ -5330,7 +5331,7 @@ Link=133482376
 [Item]
 Label=Livestock by-products (milk, cheese)
 Name=GP28
-Start=295
+Start=331
 Len=1
 
 [ValueSet]
@@ -5341,7 +5342,7 @@ Link=133482376
 [Item]
 Label=Fresh/processed fish
 Name=GP29
-Start=296
+Start=332
 Len=1
 
 [ValueSet]
@@ -5352,7 +5353,7 @@ Link=133482376
 [Item]
 Label=Firewood, home-made charcoal
 Name=GP30
-Start=297
+Start=333
 Len=1
 
 [ValueSet]
@@ -5363,7 +5364,7 @@ Link=133482376
 [Item]
 Label=Construction timber, wood-poles or other construction material
 Name=GP31
-Start=298
+Start=334
 Len=1
 
 [ValueSet]
@@ -5374,7 +5375,7 @@ Link=133482376
 [Item]
 Label=Did you have to close down any household business or service over the last year during the global pandemic up to today?
 Name=GP32
-Start=299
+Start=335
 Len=1
 
 [ValueSet]
@@ -5385,25 +5386,25 @@ Link=133482376
 [Item]
 Label=Did you close down any [BUSINESS] or any [SERVICE]?
 Name=GP33
-Start=300
+Start=336
 Len=6
 DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=GP33_VS1
-Value='1     ';Sim, oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.|Sim, oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.
-Value='2     ';Sim, gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate, etc.|Sim, gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate, etc.
-Value='3     ';Sim, possuir um negócio de comércio ou serviços numa rua ou num mercado|Sim, possuir um negócio de comércio ou serviços numa rua ou num mercado
-Value='4     ';Sim, conduzir um táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança|Sim, conduzir um táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança
-Value='5     ';Sim, ter um bar ou restaurante.|Sim, ter um bar ou restaurante.
-Value='6     ';Sim, possuir qualquer outro negócio não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou na rua|Sim, possuir qualquer outro negócio não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou na rua
-Value='7     ';Não|Não
+Value='1     ';Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc|Sim, oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.
+Value='2     ';Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|Sim, gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate, etc.
+Value='3     ';Yes, own a trading or service business on a street or in a market|Sim, possuir um negócio de comércio ou serviços numa rua ou num mercado
+Value='4     ';Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services|Sim, conduzir um táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança
+Value='5     ';Yes, own a bar or restaurant|Sim, ter um bar ou restaurante.
+Value='6     ';Yes, own any other non-agricultural business, even if it is a small business run from home or on a street|Sim, possuir qualquer outro negócio não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou na rua
+Value='7     ';No|Não
 
 [Item]
 Label=offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
 Name=GP34
-Start=306
+Start=342
 Len=1
 
 [ValueSet]
@@ -5414,7 +5415,7 @@ Link=133482376
 [Item]
 Label=run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
 Name=GP35
-Start=307
+Start=343
 Len=1
 
 [ValueSet]
@@ -5425,7 +5426,7 @@ Link=133482376
 [Item]
 Label=own a trading or service business on a street or in a market?
 Name=GP36
-Start=308
+Start=344
 Len=1
 
 [ValueSet]
@@ -5436,7 +5437,7 @@ Link=133482376
 [Item]
 Label=drive a household-owned taxi or pick-up truck to provide transportation or moving services?
 Name=GP37
-Start=309
+Start=345
 Len=1
 
 [ValueSet]
@@ -5447,7 +5448,7 @@ Link=133482376
 [Item]
 Label=own a bar or restaurant?
 Name=GP38
-Start=310
+Start=346
 Len=1
 
 [ValueSet]
@@ -5458,7 +5459,7 @@ Link=133482376
 [Item]
 Label=own any other non-agricultural business, even if it is a small business run from home or on a street?
 Name=GP39
-Start=311
+Start=347
 Len=1
 
 [ValueSet]
@@ -5469,7 +5470,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some piecemeal farm work before the global pandemic started last year
 Name=GP40
-Start=312
+Start=348
 Len=1
 
 [ValueSet]
@@ -5480,7 +5481,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?
 Name=GP41
-Start=313
+Start=349
 Len=1
 
 [ValueSet]
@@ -5491,7 +5492,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some public work (for the government, donors, charities) such as cash-for-work before the global pandemic started last year?
 Name=GP42
-Start=314
+Start=350
 Len=1
 
 [ValueSet]
@@ -5502,7 +5503,7 @@ Link=133482376
 [Item]
 Label=Did anybody in this household go for work outside the community before the global pandemic started last year?
 Name=GP43
-Start=315
+Start=351
 Len=1
 
 [ValueSet]
