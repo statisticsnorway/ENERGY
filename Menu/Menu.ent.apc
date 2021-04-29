@@ -2,9 +2,9 @@
 PROC GLOBAL
         // Parameters to change for a country
 		//NB: Rembember to swap comment away lines for whether to sync to dropbox or cswebserver too 
-		//(there are 2 functions to change: DownloadMap() and syncHQ())
+		//(there are 3 functions to change: DownloadMap() and syncHQ())
         String syncUrl = "http://197.249.5.210:8080/energia/api";
-        String country = "TZ";
+        String country = "MZ";
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -99,17 +99,22 @@ PROC GLOBAL
 		endif;
 	end;
 	
-{	
-	function downloadMap()
+	
+	function downloadMap(string mapFileName)
 		
 		//First deleting the old files in order not to fill up the tablet
 		numeric del = filedelete("../maps/*.mbtiles");
 
 		//if syncconnect(CSWeb, syncUrl) = 1 then
 		if syncconnect(Dropbox) then	//Synching to dropbox for debugging
-			theFileName = country + "_" + edit(
-			numeric syncRes = syncFile(GET, "/ENERGY/Maps/
-}		
+			numeric syncRes = syncFile(GET, "/Energy/Maps/" + mapFileName, "../Maps/mapFileName");
+			if syncRes = 0 then
+				errmsg(tr(27));
+			endif;
+			syncDisconnect();
+		endif;
+	end;
+		
 
 
 
@@ -479,7 +484,7 @@ PROC GLOBAL
 		//Create pff file
 		string pffContent;
 		pffContent = "[Run Information]\n";
-		pffContent = pffContent + "Version=CSPro 7.3\n";
+		pffContent = pffContent + "Version=CSPro 7.6\n";
 		pffContent = pffContent + "AppType=Entry\n";
 		pffContent = pffContent + "Description=" + questDesc + "\n\n";
 
@@ -632,10 +637,13 @@ PROC GLOBAL
 			//only one HH at this spot.. Open it now
 			writePff("Energy survey", "Menu", "", serialNos(1), "I");
 			writePff("Household Questionnaire", "HHQ", acceptOptions(1), serialNos(1), "I");
-		else		
+		else
+			acceptOptions(ctr + 1) = makeText(tr(26));
 			numeric theOne = accept(maketext(tr(19)), acceptOptions);
-			writePff("Energy survey", "Menu", "", serialNos(theOne), "I");
-			writePff("Household Questionnaire", "HHQ", acceptOptions(theOne), serialNos(theOne), "I");
+			if theOne <> ctr + 1 then
+				writePff("Energy survey", "Menu", "", serialNos(theOne), "I");
+				writePff("Household Questionnaire", "HHQ", acceptOptions(theOne), serialNos(theOne), "I");
+			endif;
 		endif;
 	end;
 	
@@ -984,7 +992,7 @@ postproc
 	//Writing the pff file for the menu to avoid having to enter the area values again
 	writePff("Energy survey", "Menu", "", NOTAPPL, "I");
 	
-	errmsg(tr(26));
+	
 	
 	//downloadMap();
 	
@@ -1039,7 +1047,8 @@ preproc
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
-	if visualValue(M_URBAN_RURAL) = 1 then
+	
+{	if visualValue(M_URBAN_RURAL) = 1 then
 		//Urban area
 		HHMap.setBaseMap(Normal);
 		currentBaseMap = "Normal";
@@ -1047,6 +1056,7 @@ preproc
 		HHMap.setBaseMap(Satellite);
 		currentBaseMap = "Satelite";
 	endif;
+}	
 	while loadcase(SAMPLING_DICT) do
 		if tstrip(SLOGIN) = tstrip(M_LOGIN) then
 
@@ -1064,8 +1074,6 @@ preproc
 			AA6 = SA6;
 			AA8 = SA8;
 			AALOGIN = SLOGIN;
-			//errmsg("AA14: %s, ADDr: %s, AA1: %d, AA2: %d, AA3: %d, AA4: %d, AA5: %d, AA6: %d, AA8: %d, Login: %s",
-			//	AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6,AA8, AALOGIN);
 			
 			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
 			if not loaded then
@@ -1113,6 +1121,15 @@ preproc
 		errmsg(tr(7));
 		stop(1);
 	endif;
+	string mapFileName = Country + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
+			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
+			+ ".mbtiles";
+			
+	if not fileExist("../Maps/" + mapFileName) then
+		downloadMap(mapFileName);
+	endif;
+	
+	HHmap.setBaseMap(mapFileName);
 	HHmap.addTextButton("Toggle view", toggleView());
 	HHmap.show();
 	vsetCodes(i) = NOTAPPL;
