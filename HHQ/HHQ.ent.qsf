@@ -5102,6 +5102,7 @@ questions:
           PT: |
             <p>Que tipo de fogão você usava como fogão principal antes do início da pandemia global no ano passado?<br></p><p><p></p>
             </p>
+            
   - name: HHQ_DICT.GP23
     conditions:
       - questionText:
@@ -5111,6 +5112,7 @@ questions:
           PT: |
             <p>Vendeu algum dos artigos domésticos desde antes da pandemia global ter começado no ano passado?</p><p><p></p>
             </p>
+            
   - name: HHQ_DICT.GP24
     conditions:
       - questionText:
@@ -5156,6 +5158,7 @@ questions:
           PT: |
             <p>Usou alguma eléctricidade&nbsp;para a sua produção de subprodutos da pecuária&nbsp;&nbsp;(leite, queijo)?</p><p><p></p>
             </p>
+            
   - name: HHQ_DICT.GP29
     conditions:
       - questionText:
@@ -5291,6 +5294,7 @@ questions:
             
           PT: |
             <p>Alguém deste agregado familiar fez algum outro trabalho fragmentado para uma empresa ou alguém fora do agregado familiar&nbsp;&nbsp;antes do início da pandemia global no ano passado?<br></p>
+            
   - name: HHQ_DICT.GP42
     conditions:
       - questionText:
@@ -5540,7 +5544,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">If less than 1 year, record 0&#160;</span></p>
             
           PT: |
-            <div><font face="Arial, sans-serif">Há quanto tempo usas esta</font><font color="#008000" face="Arial, sans-serif"> ~~mostUsedStove~?&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Número de anos&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></div><p></p>
+            <div><font face="Arial, sans-serif">Há quanto tempo usas esta</font><font color="#008000" face="Arial, sans-serif"> ~~mostUsedStove</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">?&nbsp;</span></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Número de anos&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></div><p></p>
             
           SW: |
             
@@ -7571,7 +7575,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Did <span style="color:#008000;">~~chosenChildName~~</span> experience a problem in the chest or a blocked or runny nose?&#160;</span></p>
             
           PT: |
-            Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~chosenChildName~~</span>&nbsp;teve um problema no peito ou um nariz obstruída ou escorrendo?&nbsp;<p></p>
+            Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">chosenChildName~~</span>&nbsp;teve um problema no peito ou um nariz obstruída ou escorrendo?&nbsp;<p></p>
             
           SW: |
             
@@ -8866,6 +8870,7 @@ questions:
             
           PT: |
             <p>Quanto tempo é que normalmente leva para reunir, recolher ou comprar combustível por pessoa cada vez que o faziam durante os últimos sete dias?</p>
+            
           SW: |
             
         helpText:
