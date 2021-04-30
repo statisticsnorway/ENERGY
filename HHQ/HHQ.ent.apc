@@ -171,6 +171,16 @@ preproc
 					persons12AndAboveNos(k) = maketext("%02d",i);
 					persons12AndAboveNames(k) = AB1(i);
 				endif;
+				if ab3(i) = 1 and ab4(i) = 2 then
+					femaleHeadName = concat(strip(ab1(i)),", ");
+				endif;
+				if ab3(i) = 1 then
+					headName = ab1(i);
+				endif;
+				if ab3(i) = 2 then
+					spouseName = ab1(i);
+				endif;
+				
 				inc(i);
 
 				
@@ -3333,6 +3343,11 @@ postproc
 	if $ = 2 then
 		skip to GP23;
 	endif;	
+PROC GP24
+preproc
+ if GP23 = 2 then
+  skip to GP25;
+ endif; 
 PROC GP27
 preproc
  if pos("1", GP26) = 0 then
