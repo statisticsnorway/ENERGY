@@ -171,13 +171,13 @@ preproc
 					persons12AndAboveNos(k) = maketext("%02d",i);
 					persons12AndAboveNames(k) = AB1(i);
 				endif;
-				if ab3(i) = 1 and ab4(i) = 2 then
-					femaleHeadName = concat(strip(ab1(i)),", ");
-				endif;
 				if ab3(i) = 1 then
 					headName = ab1(i);
 				endif;
-				if ab3(i) = 2 then
+				if ab3(i) = 1 and ab4(i) = 2 then
+					femaleHeadName = strip(ab1(i));
+				endif;
+				if ab3(i) = 2 and ab4(i) = 2 then
 					spouseName = ab1(i);
 				endif;
 				

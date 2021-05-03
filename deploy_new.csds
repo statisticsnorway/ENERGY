@@ -11,30 +11,6 @@
       "path": ".\\HHQ\\HHQ.ent"
     },
     {
-      "path": ".\\Listing\\Listing.ent"
-    },
-    {
-      "path": ".\\Menu\\Menu.ent"
-    },
-    {
-      "path": ".\\Menu\\Menu.pff"
-    },
-    {
-      "path": ".\\LookupFiles\\Regions.csdb"
-    },
-    {
-      "path": ".\\LookupFiles\\users.csdb"
-    },
-    {
-      "path": ".\\Images\\Location-green.png"
-    },
-    {
-      "path": ".\\Images\\Location-red.png"
-    },
-    {
-      "path": ".\\Images\\Location-yellow.png"
-    },
-    {
       "path": ".\\Images\\Cookstoves_101.jpg"
     },
     {
@@ -89,7 +65,13 @@
       "path": ".\\Images\\Cookstoves_471.jpg"
     },
     {
-      "path": ".\\Data\\Listing.csdb"
+      "path": ".\\Images\\Location-green.png"
+    },
+    {
+      "path": ".\\Images\\Location-red.png"
+    },
+    {
+      "path": ".\\Images\\Location-yellow.png"
     },
     {
       "path": ".\\Images\\Toilet_1.jpg"
@@ -114,6 +96,21 @@
     },
     {
       "path": ".\\Images\\Toilet_8.jpg"
+    },
+    {
+      "path": ".\\Listing\\Listing.ent"
+    },
+    {
+      "path": ".\\LookupFiles\\Regions.csdb"
+    },
+    {
+      "path": ".\\LookupFiles\\users.csdb"
+    },
+    {
+      "path": ".\\Menu\\Menu.ent"
+    },
+    {
+      "path": ".\\Menu\\Menu.pff"
     }
   ],
   "dictionaries": [
@@ -123,10 +120,6 @@
     },
     {
       "path": ".\\HHQ\\HHQ.dcf",
-      "uploadForSync": true
-    },
-    {
-      "path": ".\\Sampling\\sample.dcf",
       "uploadForSync": true
     },
     {
@@ -143,6 +136,10 @@
     },
     {
       "path": ".\\Menu\\users.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Sampling\\sample.dcf",
       "uploadForSync": true
     }
   ],
