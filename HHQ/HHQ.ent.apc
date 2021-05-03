@@ -171,13 +171,13 @@ preproc
 					persons12AndAboveNos(k) = maketext("%02d",i);
 					persons12AndAboveNames(k) = AB1(i);
 				endif;
-				if ab3(i) = 1 and ab4(i) = 2 then
-					femaleHeadName = concat(strip(ab1(i)),", ");
-				endif;
 				if ab3(i) = 1 then
 					headName = ab1(i);
 				endif;
-				if ab3(i) = 2 then
+				if ab3(i) = 1 and ab4(i) = 2 then
+					femaleHeadName = strip(ab1(i));
+				endif;
+				if ab3(i) = 2 and ab4(i) = 2 then
 					spouseName = ab1(i);
 				endif;
 				
@@ -461,9 +461,6 @@ postproc
 	if $ = 1 then
 		headName = currMember;
 	endif;
-	if $ = 2 then
-		spouseName = currMember;
-	endif;
 	if curocc() > 1 then
 		skip to AB4;
 	endif;
@@ -472,9 +469,12 @@ postproc
 PROC AB4
 
 	if ab3(curocc()) = 1 and $ = 2 then
-		femaleHeadName = concat(strip(ab1(curocc())),", ");
+		femaleHeadName = strip(ab1(curocc()));
 	endif;
 
+	if ab3(curocc()) = 2 and $ = 2 then
+		spouseName = strip(ab1(curocc()));
+	endif;
 
 PROC AB5
 postproc	
@@ -3408,11 +3408,12 @@ preproc
  if pos("6", GP33) = 0 then
   skip to GP40;
  endif; 
-PROC X_FORM
+PROC X1
+preproc
  if c128 < 1 then
   skip to AA_END_FORM;
  endif; 
-PROC X1
+
 postproc
 	if $ = 2 then
 		skip to AA_END_FORM;

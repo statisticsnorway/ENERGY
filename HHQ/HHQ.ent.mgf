@@ -292,7 +292,7 @@ EN(188) Now we would like to ask you for some information on the households expe
 
 EN(189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  \n\n 1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  \n 2. Within your house you need wires that connect appliances to the meter.  This is the wiring. \n 3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. \n\nI would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
 
-N(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
+EN(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
 
 EN(191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
 
@@ -315,6 +315,6 @@ SW(198) au
 EN(199) who decided to purchase the cookstove
 
 EN(200) Now we would like to ask about security lights in your neighbourhood.
-PT(200) Agora gostar�amos perguntas sobre as luzes de segurança em seu bairro.
+PT(200) Agora gostaríamos perguntas sobre as luzes de segurança em seu bairro.
 SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
 
