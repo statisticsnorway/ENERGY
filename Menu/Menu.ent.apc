@@ -17,6 +17,7 @@ PROC GLOBAL
 	map HHmap;		//for showing the HHs on a map
 	
 	
+	
 
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
 	function string lstrip(string theString)
@@ -495,9 +496,19 @@ PROC GLOBAL
 			numeric spos = pos(";", HH);
 			string head = HH[1:spos-1];
 			string location = HH[spos+1];
-
+			
+			//Strip away extra text from location:
+			spos = pos("(partly", location);
+			if spos <> 0 then
+				location = location[1:spos-1];
+			else
+				spos = pos("(ready", location);
+				if spos <> 0 then
+					location = location[1:spos-1];
+				endif;
+			endif;
 			numeric found = 0;
-
+			
 			forcase HHQ_DICT do
 				if tstrip(AA14) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
 						and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
@@ -508,6 +519,7 @@ PROC GLOBAL
 					break;
 				endif;
 			enddo;
+			
 			if found = 1 then
 				string idString = concat(AA14, ADDRESS_LOCATION, edit("ZZ", AA1), edit("ZZ", AA2), edit("ZZZ", AA3),
 									edit("ZZ", AA4), edit("ZZ", AA5), edit("ZZ", AA6), edit("ZZZ", AA8), AALOGIN);
@@ -515,6 +527,7 @@ PROC GLOBAL
 			else
 				pffContent = pffContent + "StartMode=Add\n";
 			endif;
+
 		elseif questName = "Community" then
 			//Same for Community: Is it partially saved or not?
 			numeric found = 0;
@@ -1128,7 +1141,7 @@ preproc
 
 
   //setMarkerImage
-postproc
+postproc	
 	//errmsg("%s, serial: %d", getLabel($, $), $);
 	if getOS() = 10 then
 		writePff("Energy survey", "Menu", "", $, "I"); //Need this to know where to start up again when returning from a HH questionnaire
