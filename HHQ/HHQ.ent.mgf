@@ -24,7 +24,7 @@ PT(106) sinal de GPS não poderia ser adquirido
 SW(106) Imeshindwa kusoma GPS
 
 EN(107) %s is already registered as Head of Household. Please select again.
-PT(107) %S já está registrado como chefe de família. Por favor, selecione novamente.
+PT(107) %S já está registrado como chefe do Agregado famíliar. Por favor, selecione novamente.
 SW(107) %s ameshaorodheshwa kama Mkuu wa kaya. Tafadhali chagua tena.
 
 EN(108) Please enter 12 or less
@@ -36,23 +36,23 @@ PT(109) Por favor, indique menos de 30
 SW(109) Tafadhali jaza chini ya 30
 
 EN(110) Person not member of the household anymore
-PT(110) Pessoa que não seja mais membro da família.
+PT(110) Pessoa que não seja mais membro do agregado famíliar.
 SW(110) Huyu mtu sio mwanakaya wa kaya tena.
 
 EN(111) Please enter less than or equal to %d or 88 if you don't know
-PT(111) Por favor, indique menos do ou igual que %d ou 88, se você não sabe
+PT(111) Por favor, indique menos do que ou igual que %d ou 88, se não sabe
 SW(111) Tafadhali ingiza chini au sawa na %d au jaza 88 kama hajui.
 
 EN(112) You also said that Home solar system is the main solar device. Change to Solar lightning product (y/n)?
-PT(112) Você também disse que a Home sistema solar é o principal dispositivo solar. Mudar para produtos relâmpago Solar (y / n)?
+PT(112) Você também disse que a sistema solar doméstico é o principal dispositivo solar. Alterar para produtos solar multiluz (s / n)?
 SW(112) Ulisema mfumo wa nishati ya jua ndio kifaa kikuu. Badilisha kuwa mwangaza wa kifaa cha nishati ya jua (y/n)?
 
 EN(113) You also said that Home solar system is the main solar device. Change to Solar lantern (y/n)?
-PT(113) Você também disse que a Sistema Solar Doméstico é o principal dispositivo solar. Alterar a lanterna Solar (y / n)?
+PT(113) Você também disse que o Sistema Solar Doméstico é o principal dispositivo solar. Alterar a lanterna Solar (y / n)?
 SW(113) Pia ulisema, mfumo wa nishati ya jua ndio kifaa kikuu. Badili kuwa nishati ya jua (y/n)?
 
 EN(114) You also said that Solar lightning product is the main solar device. Change to Solar lantern (y/n)?
-PT(114) Você também disse que o produto raio solar é o principal dispositivo solar. Alterar a lanterna Solar (y / n)?
+PT(114) Você também disse que o produto solar multiluz é o principal dispositivo solar. Alterar para lanterna Solar (y / n)?
 SW(114) Ulisema pia, kifaa cha mwangaza wa nishati ya jua ndio kifaa kikuu, Badili kuwa nishati ya jua (y/n)?
 
 EN(115) Solar Home System
@@ -60,7 +60,7 @@ PT(115) Sistema Solar Doméstico
 SW(115) Mfumo wa nishati ya jua ya nyumbani.
 
 EN(116) Solar Lightning Product
-PT(116) Solar Lightning Produto
+PT(116) Produto Solar multiluz
 SW(116) Kifaa cha mwangaza wa nishati ya jua.
 
 EN(117) Solar Lantern
@@ -68,7 +68,7 @@ PT(117) Lanterna Solar
 SW(117) Nishati ya jua.
 
 EN(118) You have chosen "none" in combination with other value. Please reenter
-PT(118) Você escolheu "nenhum" em combinação com outro valor. Por favor reentrar
+PT(118) Você selecionaou "nenhum" em combinação com outro valor. Por favor corrija
 SW(118) Umechagua "hakuna" pamoja na thamani nyengine. Tafadhali jaza tena.
 
 EN(119) %s should be the person answering this section
@@ -88,11 +88,11 @@ PT(122) Por favor, indique 1 para sim ou 0 para não
 SW(122) Tafadhali jaza 1 kwa NDIO au 0 kwa HAPANA.
 
 EN(123) You reported that you have had the grid connection longer than you have lived in this community (%d years). Please reenter
-PT(123) Você relatou que teve a ligação à rede mais tempo do que você viveu nesta comunidade (%d anos). Por favor reentrar
+PT(123) Você declarou que teve a ligação à rede eléctrica mais tempo do que viveu nesta comunidade (%d anos). Por favor corrija
 SW(123) Ulijibu kwamba, uliunganishwa kwenye grid ya taifa zaid ya muda ulioishi katika jamii hii (miaka %d), tafadhali jaza tena.
 
 EN(124) As you already said you use this lamp type, please enter a number > 0
-PT(124) Como você já disse que você usa esse tipo de lâmpada, por favor insira um número> 0
+PT(124) Conforme disse anteriormente você usa esse tipo de lâmpada, por favor insira um número> 0
 SW(124) Kama ulivyosema unatumia aina hii ya taa, tafadhali jaza namba kubwa kuliko 0.
 
 EN(125) Please select maximum 4 months
@@ -100,7 +100,7 @@ PT(125) Por favor seleccione um máximo de 4 meses
 SW(125) Tafadhali chagua miezi isiyozidi 4.
 
 EN(126) You already reported that %s was your main stove. Please reenter
-PT(126) Você já informou que %s foi o seu principal fogão. Por favor reentrar
+PT(126) Você já informou que %s foi o seu principal fogão. Por favor corrija
 SW(126) Ulijibu kwamba %s lilikuwa jiko lako kuu, tafadhali jaza tena.
 
 EN(127) How many hours does your houshold use %s in a typical day?
@@ -116,11 +116,11 @@ PT(129) Para os comerciantes em outros lugares
 SW(129) Kwa wafanyabiashara sehemu nyengine.
 
 EN(130) Through own trading business
-PT(130) Através negócio de comércio própria
+PT(130) Através de um negócio de comércio próprio
 SW(130) Kupitia biashara mwenyewe.
 
 EN(131) To customers coming home
-PT(131) Para os clientes voltando para casa
+PT(131) Aos clientes que voltam para casa
 SW(131) Kwa wateja wanaokuja nyumbani.
 
 EN(132) Home (inside residence)
@@ -132,7 +132,7 @@ PT(133) Casa (fora da residência)
 SW(133) Nyumbani (nje ya makazi)
 
 EN(134) Industrical site
-PT(134) local industrical
+PT(134) local industrial
 SW(134) Eneo la viwanda
 
 EN(135) Traditional market place
@@ -140,7 +140,7 @@ PT(135) Mercado tradicional
 SW(135) Eneo la soko la jadi
 
 EN(136) Commercial area shop
-PT(136) loja de área comercial
+PT(136) área comercial da loja
 SW(136) Eneo la maduka ya biashara.
 
 EN(137) Roadside
@@ -168,7 +168,7 @@ PT(142) Seleccionou "Todo o ano", além de meses específicos. Por favor, esclar
 SW(142) Ulichagua "Mwaka mzima" katika nyongeza ya miezi flani. Tafadhali elezea zaidi.
 
 EN(143) No sample data. Please return to the menu and choose "Create sample data"
-PT(143) Não há dados de amostra. Por favor, retorne ao menu e escolha "Criar dados de amostra"
+PT(143) Não há dados de amostra. Por favor, volte ao menu e escolha "Criar dados de amostra"
 SW(143) Haipo kwenye sampuli. Tafadhali rudi kwenye menu na chagua "Create sample data"
 
 EN(144) Please enter a year between 2000 and %d
@@ -180,19 +180,20 @@ PT(145) Agora queremos perguntar a %s sobre quanto tempo ele/ela usa para vária
 SW(145) Sasa tunataka kuuliza %s kuhusu muda gani yeye anatumia kwa shughuli mbalimbali
 
 EN(146) To learn about the health impact we would like to ask some questions for the same person as for time use (%s)
-PT(146) Para saber mais sobre o impacto na saúde, gostaríamos de fazer algumas perguntas para a mesma pessoa que para o uso do tempo (%s).
+PT(146)	Para conhecer o impacto na saúde, gostaríamos de fazer algumas perguntas a mesma pessoa para uso do tempo (%s)
 SW(146) Ili kujifunza kuhusu athari za afya tunataka kuuliza maswali kwa mtu huyo sawa na matumizi ya muda (%s)
 
 EN(147) Now we would like to know how safe you feel in different situations. We would like to know how safe you feel today and how safe you felt 5 years ago
-PT(147) Agora nós gostaríamos de saber como seguro você sente em situações diferentes. Nós gostaríamos de saber como seguro você sente hoje e como seguro você sentia 5 anos atrás
+PT(147) Agora gostaríamos de saber como se sente seguro em diferentes situações. Gostaríamos de saber como se sente seguro hoje e como se sentiu seguro há 5 anos atrás.
 SW(147) Sasa tungependa kujua unajisikia salama kwa kiasi gani katika mazingira tofauti. Tungependa kujua unajisikia salama kiasi gani leo ukilinganisha na miaka mitano iliyopita.
 
 EN(148) If so: How many all together (in working condition)?
-PT(148) Em caso afirmativo: quantos todos juntos (em condições de trabalho)?
+PT(148) Em caso afirmativo: quantos,todos juntos (em condições de trabalho)?
 SW(148) Ikiwa ndivyo: Ni ngapi wote pamoja (katika hali ya kufanya kazi)?
 
 
 EN(149) Did you have a %s in working condition?
+EN(149) Tinha um %s em condições de funcionamento?
 
 EN(150) Age at beginning of school year must be %s's age (%d) or one year less
 PT(150) A idade no início deste ano letivo deve ser a idade de %s (%d) ou um ano a menos
@@ -227,94 +228,133 @@ PT(157) Não posível a viver nesta comunidade mais tempo que sua idade (%d)
 SW(157) Siwezi kuishi kwa muda mrefu katika jamii kuliko umri wa mtu mzee katika kaya (%d)
 
 EN(158) There must be at least one person in the household
-PT(158) Deve haver uma pessoa pelo menos na casa
+PT(158) Deve haver uma pessoa pelo menos no agregado familiar
 
 EN(159) Time used after dark (%d hours) cannot be more than time used in total (%d hours)
+PT(159) O tempo utilizado após escurecer (%d horas) não pode ser mais do que o tempo utilizado no total (%d horas)
 
 EN(160) Time used after dark (%d hours, %d minutes) cannot be more than time used in total (%d hours, %d minutes)
+PT(160) O tempo utilizado após escurecer (%d horas, %d minutos) não pode ser mais do que o tempo utilizado no total (%d horas, %d minutos)
 
 EN(161) %d is more than the maximum of 24 hours.
+PT(161) %d é superior ao máximo de 24 horas.
 SW(161) %d ni zaidi ya saa 24.
 
 EN(162) %d is more than the maximum of 15 hours of darkness.
+PT(162) %d é mais do que o máximo de 15 horas de escuridão.
 
 EN(163) %d.%d is more than the maximum of 24 hours a day.
+PT(163) %d.%d é superior ao máximo de 24 horas por dia.
 
 EN(164) %d.%d is more than the maximum of 15 hours of darkness.
+PT(164) %d.%d é mais do que o máximo de 15 horas de escuridão.
 
 EN(165) %d is more than the maximum of 59 minutes.
+PT(165) %d é maior que máximo de 59 minutos.
 
 EN(166) %d is more than the number of persons in this group (%d)
+PT(166) %d é maior que número de pessoas neste grupo (%d)
 
 EN(167) Value must be between %d and %d (or unkwown: %d), entered value is %d
+PT(167) O valor deve estar entre %d e %d (ou não sabe: %d), o valor introduzido é %d
 
 EN(168) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. We know that you already have a grid connection, but as you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+PT(168) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distamtes sem acesso à rede eléctrica. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. Sabemos que já tem uma ligação à rede, mas à medida que responde às próximas perguntas, tenha em mente os benefícios de um sistema solar doméstico, bem como o seu orçamento familiar.
 
 EN(169) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+PT(169) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distantes sem acesso à rede eléctrica. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. À medida que responde às próximas perguntas, lembre-se dos benefícios de um sistema solar doméstico, bem como do seu orçamento familiar.
 
 EN(170) You have to choose at least one of the options
+PT(170) Tem de escolher pelo menos uma das opções
 
 EN(171) We would now like to talk about the time used to collect wood.
+PT(171) Agora gostaríamos de falar sobre o tempo usado para recolher madeira.
 
 EN(172) We would now like to know more about how the members of this household spend their time, both today and 5 years ago. We will ask about time use for women and men and children and grown-ups separately.
+PT(172) Gostaríamos agora de saber mais sobre como os membros desta agregado famíliar passam o seu tempo, tanto hoje como há 5 anos atras. Perguntaremos sobre a utilização do tempo para mulheres, homens, crianças e adultos separadamente.
 
 EN(173) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
+PT(173) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distantes sem acesso à rede. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. À medida que responde às próximas perguntas, lembre-se dos benefícios de um sistema solar doméstico, bem como do seu orçamento familiar.
 
 EN(174) We would now like to ask you some questions about your grid connection.
+PT(174) Agora gostaríamos de lhe fazer algumas perguntas sobre a sua ligação à rede eléctrica. 
 
 EN(175) You said that your main source of electricity is dry cell batteries. We would now like to ask you some questions about these batteries
+PT(175) Disse que a sua principal fonte de eletricidade são as baterias de células secas. Agora gostaríamos de lhe fazer algumas perguntas sobre estas baterias.
 
 EN(176) You said that your main source of electrical power is a %s. We would now like to ask you some questions about this device. We would like you to consider only devices in working condition. If you have more than one device, think about the MAIN solar device.
+PT(176) Disse que a sua principal fonte de energia elétrica é a %s. Agora gostaríamos de lhe fazer algumas perguntas sobre este dispositivo. Gostaríamos que considerasse apenas dispositivos em condições de funcionamento. Se tiver mais do que um dispositivo, pense no principal dispositivo solar.
 
 EN(177) We would now like to ask you some questions about your electric generator
 
 EN(178) We would now like to ask you some questions about your externally recharged battery.
+PT(177) Agora gostaríamos de lhe fazer algumas perguntas sobre o seu gerador elétrico
 
 EN(179) Now we would like to know more about your dwelling.
+PT(179) Agora gostaríamos de saber mais sobre a sua habitação/residência.
 
 EN(180) The next questions is about the households use of bank services
+PT(180) As próximas perguntas são sobre o uso dos serviços bancários pelos agregados famíliares 
 
 EN(181) The next questions is about the use and sources of energy in this household. We start with electricity and then move to other energy sources. First we would like to know if you have any electrical power in this household.
+PT(181) As próximas questões são sobre a utilização e fontes de energia neste agregado familiar. Começamos com eletricidade e depois mudamos para outras fontes de energia. Primeiro gostaríamos de saber se tem energia elétrica nesta casa.
 
 EN(182) The next questions are about mobile phones in the household.
+EN(182) As próximas perguntas são sobre telemóveis no agregado familiar.
 
 EN(183) To learn about the health impacts of cooking we would like to ask you some questions about your health.
+PT(183) Para conhecer os impactos da saúde na cozinha, gostaríamos de lhe fazer algumas perguntas sobre a sua saúde.
 
 EN(184) Now we will ask about the time-use for adult women which is 15 years or older
+PT(184) Agora vamos perguntar sobre o uso do tempo para mulheres adultas que é de 15 anos ou mais
 
 EN(185) Now we will ask about the time-use for girls in the age of 5-14 years old
+PT(185) Agora vamos perguntar sobre o uso do tempo para meninas dos 5 aos 14 anos
 
 EN(186) Now we will ask about the time-use for adult men which is 15 years or older
+PT(186) Agora vamos perguntar sobre o uso do tempo para homens adultos que é de 15 anos ou mais
 
 EN(187) Now we will ask about the time-use for boys in the age of 5-14 years old
+PT(187) Agora vamos perguntar sobre o uso do tempo para meninos dos 5 aos 14 anos
 
 EN(188) Now we would like to ask you for some information on the households expenditures for food and for non-food.
+PT(188) Agora gostaríamos de lhe pedir alguma informação sobre as despesas dos agregados famíliares com alimentos e não alimentos.
 
 EN(189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  \n\n 1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  \n 2. Within your house you need wires that connect appliances to the meter.  This is the wiring. \n 3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. \n\nI would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
+PT(189) As próximas questões são sobre a disponibilidade para pagar uma ligação à rede eléctrica. Existem vários passos de ligação à rede eléctrica, cada um com o seu próprio custo: \n\n 1. Para usar eletricidade, primeiro precisa de um fio do poste mais próximo no minimo a um metro em sua casa. Esta é a ligação.  \n 2. Dentro da sua casa precisa de fios que liguem os aparelhos ao contador. Esta é a instalação. \n 3. Finalmente, para continuar a usar energia eléctrica, tem de pagar o seu uso, ou será desligada.Este é o custo do uso mensal. \n\nI agora gostaria de lhe fazer perguntas apenas sobre o primeiro custo de ligação - ligar um fio dos postes de eletricidade para um metro em sua casa.
 
 EN(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
+PT(190) Um fogão melhorado de cozinha pode reduzir significativamente o consumo de combustível. também pode reduzir o fumo. Possivelmente, o seu tempo de cozinhar por refeição será reduzido, uma vez que o poder de fogo deste fogão é mais forte do que o prato de cozinha tradicional. À medida que responde às próximas perguntas, tenha em mente os vários benefícios deste dispositivo, bem como o seu orçamento familiar.
 
 EN(191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
+PT(191) Agora gostaria de saber sua opinião sobre algumas questões relacionadas com a energia, quem seria a pessoa certa para responder a estas perguntas?
 
 EN(192) The next questions is about the households use of lamps/candles and fuel used for lighting. Are you well informed about these issues, or would you like somebody else in the household to answer these questions?
+PT(191) Agora gostaria de pronunciar me sobre algumas questões relacionadas com a energia, quem seria a pessoa certa para responder a estas perguntas?
 
 EN(193) We would also like to ask you about the health of %s
+PT(193) Também gostaríamos de lhe perguntar sobre a saúde de %s
 
 EN(194) Could not find case in sample data. Please contact your system administrator
+PT(194) Não conseguiu encontrar caso nos dados de amostra. Entre em contato com o administrador do seu sistema
 
 EN(195) May I please have a look at your kitchen? \n\nI would like to record the shape and size of the kitchen. \n\n\nEnumerator: Estimate the size of the cooking space by filling the following fields. One pace = 3 feet or 0.75 metres. Approximately one walking step.
+PT(195) Posso dar uma olhada na sua cozinha? \n\nI gostaria de gravar a forma e o tamanho da cozinha. \n\n\nEnumerator: Estimar o tamanho do espaço da cozinha preenchendo os seguintes campos. Um passo = 3 pés ou 0,75 metros. Aproximadamente um passo a pé.
 
 EN(196) In this section we would like to ask you about the kind of stoves you use for cooking and its details.
+PT (196)NESTA secção, gostaríamos de lhe perguntar sobre o tipo de fogões que utiliza para cozinhar e seus detalhes.
 
 EN(197) The next questions are about space and water heating
+PT(197) As próximas questões são sobre o espaço e o aquecimento da água
 
 EN(198) or
 PT(198) ou
 SW(198) au
 
 EN(199) who decided to purchase the cookstove
+PT(199) Quem decidiu a compra do fogão?
 
 EN(200) Now we would like to ask about security lights in your neighbourhood.
-PT(200) Agora gostaríamos perguntas sobre as luzes de segurança em seu bairro.
+PT(200) Agora gostaríamos perguntar sobre as luzes de segurança/iluminação pública em seu bairro.
 SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
 
