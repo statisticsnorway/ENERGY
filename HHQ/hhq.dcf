@@ -2940,9 +2940,13 @@ DataType=Alpha
 Label=Which type of stove is this?|Which type of stove is this?
 Name=I9_VS1
 Value='451         ';Biogas stove|Fogão de biogás
+Image=..\Images\Cookstoves_451.jpg
 Value='452         ';Multiple LPG stove|Vários fogões GPL
+Image=..\Images\Cookstoves_452.jpg
 Value='461         ';Electrical stove|Fogão elétrico
+Image=..\Images\Cookstoves_461.jpg
 Value='471         ';Solar oven (Non-electric)|Forno solar (não elétrico)
+Image=..\Images\Cookstoves_471.jpg
 
 [Item]
 Label=Which one is your main stove?
