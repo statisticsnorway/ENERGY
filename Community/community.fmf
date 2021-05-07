@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Name=COMMUNITY_FF
 Label=community
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -165,6 +165,18 @@ Item=J2
   
 [EndForm]
   
+[Form]
+Name=FORM003
+Label=GP Global Pandemic
+Level=1
+Size=370,197
+  
+Item=GP1
+Item=GP2
+Item=GP3
+  
+[EndForm]
+  
 [Level]
 Name=COMMUNITY_QUEST
 Label=community questionnaire
@@ -174,7 +186,6 @@ Required=Yes
 Name=COMMUNITY_QUEST_FORM
 Label=community questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -458,7 +469,6 @@ Required=Yes
 Name=GROUP_C
 Label=C Background
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -505,7 +515,6 @@ Required=Yes
 Name=GROUP_D
 Label=D Supply of electricity
 Form=3
-LogicControl=No
 Max=1
   
 [Field]
@@ -702,7 +711,7 @@ Text=D15
   
 [Field]
 Name=D16
-Position=109,515,194,535
+Position=109,515,152,535
 Item=D16,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -812,7 +821,7 @@ Form=3
   
 [Field]
 Name=D24
-Position=968,312,1025,332
+Position=968,312,997,332
 Item=D24,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -984,7 +993,6 @@ Required=Yes
 Name=GROUP_H
 Label=H Development project
 Form=4
-LogicControl=No
 Max=1
   
 [Field]
@@ -1058,7 +1066,6 @@ Required=Yes
 Name=GROUP_F
 Label=F Infrastructure
 Form=5
-LogicControl=No
 Max=1
   
 [Field]
@@ -1167,7 +1174,6 @@ Required=Yes
 Name=GROUP_F2
 Label=F Infrastructure (2)
 Form=6
-LogicControl=No
 Max=1
   
 [Grid]
@@ -1346,7 +1352,6 @@ Required=Yes
 Name=GROUP_G
 Label=G Business and sevices
 Form=7
-LogicControl=No
 Max=1
   
 [Grid]
@@ -1555,7 +1560,6 @@ Required=Yes
 Name=GROUP_I
 Label=I Cooking
 Form=8
-LogicControl=No
 Max=1
   
 [Field]
@@ -1681,7 +1685,6 @@ Required=Yes
 Name=GROUP_J
 Label=J Street lighting
 Form=9
-LogicControl=No
 Max=1
   
 [Field]
@@ -1708,6 +1711,50 @@ Form=9
 [Text]
 Position=28,94,42,110
 Text=J2
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=GROUP_GP
+Label=GP Global Pandemic
+Form=10
+Max=1
+  
+[Field]
+Name=GP1
+Position=329,73,344,93
+Item=GP1,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=148,76,174,92
+Text=GP1
+ 
+  
+[Field]
+Name=GP2
+Position=330,109,345,129
+Item=GP2,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=149,112,175,128
+Text=GP2
+ 
+  
+[Field]
+Name=GP3
+Position=329,152,344,172
+Item=GP3,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+Form=10
+  
+[Text]
+Position=148,155,174,171
+Text=GP3
  
 [EndGroup]
   

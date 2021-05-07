@@ -286,7 +286,7 @@ Value='55  ';Other|De outros|Nyingine, Taja
 Label=D Supply of electricity|D fornecimento de energia|D Ugavi wa umeme
 Name=D_SUPPLY_OF_ELECTRICITY
 RecordTypeValue='D'
-RecordLen=173
+RecordLen=168
 
 [Item]
 Label=What are all the different sources of electricity that are available in this community?|fontes elétricos disponíveis|Inapatikana vyanzo umeme
@@ -484,29 +484,29 @@ Value=2;No|Não|Hapana
 Label=Worst month for service from the grid?|Pior mês para o serviço da rede?|Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?
 Name=D16
 Start=133
-Len=6
+Len=3
 DataType=Alpha
 
 [ValueSet]
 Label=Worst month for service from the grid?|Pior mês para o serviço da rede?|Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?
 Name=D16_VS1
-Value='01    ';January|janeiro|Januari
-Value='02    ';February|fevereiro|Februari
-Value='03    ';March|Março|Machi
-Value='04    ';April|abril|Aprili
-Value='05    ';May|Maio|Mei
-Value='06    ';June|Junho|Juni
-Value='07    ';July|Julho|Julai
-Value='08    ';August|agosto|Agosti
-Value='09    ';September|setembro|Septemba
-Value='10    ';October|Outubro|Oktoba
-Value='11    ';November|novembro|Novemba
-Value='12    ';December|dezembro|Desemba
+Value='a  ';January|janeiro|Januari
+Value='b  ';February|fevereiro|Februari
+Value='c  ';March|Março|Machi
+Value='d  ';April|abril|Aprili
+Value='e  ';May|Maio|Mei
+Value='f  ';June|Junho|Juni
+Value='g  ';July|Julho|Julai
+Value='h  ';August|agosto|Agosti
+Value='i  ';September|setembro|Septemba
+Value='j  ';October|Outubro|Oktoba
+Value='k  ';November|novembro|Novemba
+Value='l  ';December|dezembro|Desemba
 
 [Item]
 Label=Do you practice load shedding in this area in the rainy season?|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Pior mês)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mbaya mwezi)
 Name=D17
-Start=139
+Start=136
 Len=1
 
 [ValueSet]
@@ -518,7 +518,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do you practice load shedding in this area in the dry season?|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Mês típico)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mfano mwezi)
 Name=D18
-Start=140
+Start=137
 Len=1
 
 [ValueSet]
@@ -530,7 +530,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Does TANESCO/EDM (or the the community) publish a "load-shedding" schedule?|Quantas horas de eletricidade estão disponíveis todas as noites entre 18:00-22:00? (Pior mês)|Saa ngapi ya umeme zinapatikana kila jioni fomu 18:00-22:00? (Mbaya mwezi)
 Name=D19
-Start=141
+Start=138
 Len=1
 
 [ValueSet]
@@ -542,13 +542,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What was the total duration of all the outages/blackouts during last week?|Em um dia típico, quantas interrupções / desmaios da grade acontecer? (Pior mês)|Katika siku ya kawaida, ni wangapi outages / giza kwa ya gridi kutokea? (Mbaya mwezi)
 Name=D20
-Start=142
+Start=139
 Len=2
 
 [Item]
 Label=In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?|.. se o poder sair por mais de 24 horas?|Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika kaya nyingi kwa wakati mmoja? Year
 Name=D21
-Start=144
+Start=141
 Len=1
 
 [ValueSet]
@@ -559,7 +559,7 @@ Link=10000002
 [Item]
 Label=When was the last time the power went out for more than 24 hours in this community?|... última potência tempo sair para> 24 horas em vários agregados familiares?|How many days did it take to fix the issue and for the community to regain power?
 Name=D22
-Start=145
+Start=142
 Len=2
 
 [ValueSet]
@@ -581,35 +581,35 @@ Value=12;December|dezembro|Desemba
 [Item]
 Label=How many days did it take to fix the issue and for the community to regain power?|Quantos dias demorou para corrigir o problema e para a comunidade para recuperar o poder?|What are the most serious problems this community experiences with the grid electricity?
 Name=D23
-Start=147
+Start=144
 Len=2
 
 [Item]
 Label=What are the two most serious problems this community experiences with the grid electricity?|Quais são os problemas mais graves neste experiências comunitárias com a eletricidade da rede?|ni matatizo makubwa zaidi katika uzoefu huu jumuia ya umeme wa gridi ya taifa ni nini?
 Name=D24
-Start=149
-Len=4
+Start=146
+Len=2
 DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=D24_VS1
-Value='01  ';Supply/shortage/not enough hours of electricity|Fornecimento / escassez / não suficientes horas de eletricidade|Umeme hautoshelezi/umeme unapatikana kwa masaa machache
-Value='02  ';Low/high voltage problems of voltage fluctuations|Problemas de baixa / alta tensão das flutuações de tensão|Kupanda na kushuka kwa nguvu ya umeme
-Value='03  ';Unpredictable interruptions|Interrupções imprevisíveis|Kukatika kusikotabirika
-Value='04  ';Unexpectedly high bills|Notas inesperadamente altas|Ankara kubwa zisizotarajiwa
-Value='05  ';Too expensive|Muito caro|Gharama kubwa ya umeme
-Value='06  ';Do not trust the supplier|Não confie no fornecedo|Hatumwamini mtoa huduma
-Value='07  ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
-Value='08  ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
-Value='09  ';Unpredicactable bille|Bille não impraticável |Ankara zisizotabirika
-Value='55  ';Other, specify|Outro, especifique|Nyinginezo
-Value='66  ';No problems|Sem problemas|Hakuna matatizo
+Value='a ';Supply/shortage/not enough hours of electricity|Fornecimento / escassez / não suficientes horas de eletricidade|Umeme hautoshelezi/umeme unapatikana kwa masaa machache
+Value='b ';Low/high voltage problems of voltage fluctuations|Problemas de baixa / alta tensão das flutuações de tensão|Kupanda na kushuka kwa nguvu ya umeme
+Value='c ';Unpredictable interruptions|Interrupções imprevisíveis|Kukatika kusikotabirika
+Value='d ';Unexpectedly high bills|Notas inesperadamente altas|Ankara kubwa zisizotarajiwa
+Value='e ';Too expensive|Muito caro|Gharama kubwa ya umeme
+Value='f ';Do not trust the supplier|Não confie no fornecedo|Hatumwamini mtoa huduma
+Value='g ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
+Value='h ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
+Value='i ';Unpredicactable bille|Bille não impraticável |Ankara zisizotabirika
+Value='q ';Other, specify|Outro, especifique|Nyinginezo
+Value='x ';No problems|Sem problemas|Hakuna matatizo
 
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
 Name=D25
-Start=153
+Start=148
 Len=1
 
 [ValueSet]
@@ -622,7 +622,7 @@ Value=3;Harder||Ngumu zaidi
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has the price of getting access to an electricity connection in your community changed?
 Name=D26
-Start=154
+Start=149
 Len=1
 
 [ValueSet]
@@ -636,7 +636,7 @@ Value=4;More expensive||Ghali sana
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown out in your community changed? |Últimos 5 anos, o preço do uso de eletricidade da rede em sua comunidade mudou?|Zamani miaka 5, ina bei ya kutumia umeme wa gridi katika jamii yako imebadilika?
 Name=D27
-Start=155
+Start=150
 Len=1
 
 [ValueSet]
@@ -649,7 +649,7 @@ Value=3;More black outs and brown outs||Kukatika umeme zaidi na kupungua kwa ume
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?|Últimos 5 anos, a duração do fornecimento de electricidade à noite mudou?|Zamani miaka 5, ina muda wa ugavi wa umeme wakati wa usiku imebadilika?
 Name=D28
-Start=156
+Start=151
 Len=1
 
 [ValueSet]
@@ -662,7 +662,7 @@ Value=3;Higher||Ziko juu
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?|Zamani miaka 5, alikuwa huduma kutoka umeme wa gridi ya taifa imebadilika?
 Name=D29
-Start=157
+Start=152
 Len=1
 
 [ValueSet]
@@ -676,7 +676,7 @@ Value=3;Better|Melhorou|Nzuri zaidi
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
 Name=D30
-Start=158
+Start=153
 Len=1
 
 [ValueSet]
@@ -687,7 +687,7 @@ Link=12345679
 [Item]
 Label=Do any households own a solar home system/solar lighting system in this community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
 Name=D31
-Start=159
+Start=154
 Len=1
 
 [ValueSet]
@@ -698,7 +698,7 @@ Link=10000002
 [Item]
 Label=Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, unaweza kununua au kukodisha mfumo wa jua nyumbani / nishati ya jua mfumo wa umeme katika jamii hii?
 Name=D32
-Start=160
+Start=155
 Len=2
 
 [ValueSet]
@@ -711,7 +711,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Can you buy or lease a solar home systems/solar lightning systems in this community?|Existem quaisquer sistemas de irrigação compartilhados solares / Electricidade impulsionado utilizados pelos agricultores nesta comunidade?|Je, kuna yeyote pamoja jua / umeme inayotokana umwagiliaji mifumo inayotumiwa na wakulima katika jamii hii?
 Name=D33
-Start=162
+Start=157
 Len=10
 DataType=Alpha
 
@@ -727,7 +727,7 @@ Value='55        ';Other|De outros|Nyingine
 [Item]
 Label=Are there any shared solar/electricity driven irrigation systems used by farmers in this community?|Há algum bombas de água compartilhados solares / eléctricos nesta comunidade?|Je, kuna yeyote pamoja jua / umeme pampu maji katika jamii hii?
 Name=D34
-Start=172
+Start=167
 Len=1
 
 [ValueSet]
@@ -738,7 +738,7 @@ Link=10000002
 [Item]
 Label=Are there any shared solar/electric water pumps in this community for drinking water?
 Name=D35
-Start=173
+Start=168
 Len=1
 
 [ValueSet]
@@ -1196,3 +1196,45 @@ Value=2;Minor Part|Menor Parte |Sehemu ndogo (Minor Parts)
 Value=3;Partially|parcialmente|Sehemu chache (Partially)
 Value=4;Largely|Largamente|Sehemu kubwa
 Value=5;Entirely|Inteiramente|Eneo lote
+
+[Record]
+Label=GP Global pandemic
+Name=GP_GLOBAL_PANDEMIC
+RecordTypeValue='P'
+RecordLen=43
+
+[Item]
+Label=Job opportunities
+Name=GP1
+Start=41
+Len=1
+
+[ValueSet]
+Label=Job opportunities
+Name=GP1_VS1
+Link=343726187
+Value=1;Increased
+Value=2;Remained the same
+Value=3;Decreased
+
+[Item]
+Label=Business Opportunities
+Name=GP2
+Start=42
+Len=1
+
+[ValueSet]
+Label=Business Opportunities
+Name=GP2_VS1
+Link=343726187
+
+[Item]
+Label=Market Access
+Name=GP3
+Start=43
+Len=1
+
+[ValueSet]
+Label=Market Access
+Name=GP3_VS1
+Link=343726187

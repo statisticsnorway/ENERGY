@@ -6,4 +6,5 @@
 *.log
 /Docs/*
 *.bak
+*.backup
 LookupFiles/Regions_old.csdb
