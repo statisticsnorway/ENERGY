@@ -1,5 +1,5 @@
 ﻿[Run Information]
-Version=CSPro 7.3
+Version=CSPro 7.6
 AppType=Entry
 Description=Household Questionnaire
 
@@ -14,7 +14,7 @@ InputData=..\Data\HHQ.csdb
 Paradata=..\Data\HHQ_38afd7a8a8f8.cslog
 
 [ExternalFiles]
-SAMPLING_DICT=..\Data\Sample1.csdb
+SAMPLING_DICT=..\Data\Sample.csdb
 
 [Parameters]
 Language=EN

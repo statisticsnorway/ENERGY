@@ -1,5 +1,9 @@
 ﻿[CSPro Application]
+<<<<<<< Updated upstream
 Version=CSPro 7.6
+=======
+Version=CSPro 7.5
+>>>>>>> Stashed changes
 Label=HHQ
 Name=HHQ
 AppType=DataEntry
@@ -15,6 +19,7 @@ CaseTree=Never
 CreateListing=No
 CreateLog=No
 ParadataCollection=AllEvents
+ParadataRecordInitialPropertyValues=Yes
 ParadataDeviceStateMinutes=5
 [External Dictionaries]
 File=..\Sampling\sample.dcf
