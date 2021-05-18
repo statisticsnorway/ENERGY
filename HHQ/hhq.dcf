@@ -2597,9 +2597,9 @@ DataType=Alpha
 [ValueSet]
 Label=which devices did you power with dry cell batteries|Que dispositivos de alimentação com pilhas secas
 Name=G1_VS1
-Value='01       ';Lanterns|Lanternas|Kandili
-Value='02       ';Flashlights|Lanternas "flash"|Kurunzi
-Value='03       ';Task lights|Luzes de tarefa|Taa ya kuongeza mwanga
+Value='01      ';Lanterns|Lanternas|Kandili
+Value='02      ';Flashlights|Lanternas "flash"|Kurunzi
+Value='03      ';Task lights|Luzes de tarefa|Taa ya kuongeza mwanga
 Value='55      ';Other devices|De outros|Nyingine
 Value='66      ';None|Nenhum|Hakuna
 
