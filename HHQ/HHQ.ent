@@ -1,9 +1,5 @@
 ﻿[CSPro Application]
-<<<<<<< Updated upstream
 Version=CSPro 7.6
-=======
-Version=CSPro 7.5
->>>>>>> Stashed changes
 Label=HHQ
 Name=HHQ
 AppType=DataEntry
