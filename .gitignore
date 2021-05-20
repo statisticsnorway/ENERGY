@@ -8,3 +8,4 @@
 *.bak
 *.backup
 LookupFiles/Regions_old.csdb
+*.orig
