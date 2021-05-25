@@ -11,6 +11,7 @@ CaseTree=Never
 CreateListing=No
 CreateLog=No
 ParadataCollection=AllEvents
+ParadataRecordInitialPropertyValues=Yes
 ParadataDeviceStateMinutes=5
 [External Dictionaries]
 File=..\Sampling\sample.dcf
