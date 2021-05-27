@@ -193,7 +193,7 @@ SW(148) Ikiwa ndivyo: Ni ngapi wote pamoja (katika hali ya kufanya kazi)?
 
 
 EN(149) Did you have a %s in working condition?
-EN(149) Tinha um %s em condições de funcionamento?
+PT(149) Tinha um %s em condições de funcionamento?
 
 EN(150) Age at beginning of school year must be %s's age (%d) or one year less
 PT(150) A idade no início deste ano letivo deve ser a idade de %s (%d) ou um ano a menos
@@ -300,22 +300,22 @@ EN(181) The next questions is about the use and sources of energy in this househ
 PT(181) As próximas questões são sobre a utilização e fontes de energia neste agregado familiar. Começamos com eletricidade e depois mudamos para outras fontes de energia. Primeiro gostaríamos de saber se tem energia elétrica nesta casa.
 
 EN(182) The next questions are about mobile phones in the household.
-EN(182) As próximas perguntas são sobre telemóveis no agregado familiar.
+PT(182) As próximas perguntas são sobre telemóveis no agregado familiar.
 
-EN(183) To learn about the health impacts of cooking we would like to ask you some questions about your health.
-PT(183) Para conhecer os impactos da saúde na cozinha, gostaríamos de lhe fazer algumas perguntas sobre a sua saúde.
+EN(183) To learn about the health impacts of cooking we would like to ask you some questions about your health (%s).
+PT(183) Para conhecer os impactos da saúde na cozinha, gostaríamos de lhe fazer algumas perguntas sobre a sua saúde (%s).
 
-EN(184) Now we will ask about the time-use for adult women which is 15 years or older
-PT(184) Agora vamos perguntar sobre o uso do tempo para mulheres adultas que é de 15 anos ou mais
+EN(184) Now we will ask about the time-use for adult women which is 16 years or older
+PT(184) Agora vamos perguntar sobre o uso do tempo para mulheres adultas que é de 16 anos ou mais
 
-EN(185) Now we will ask about the time-use for girls in the age of 5-14 years old
-PT(185) Agora vamos perguntar sobre o uso do tempo para meninas dos 5 aos 14 anos
+EN(185) Now we will ask about the time-use for girls in the age of 5-15 years old
+PT(185) Agora vamos perguntar sobre o uso do tempo para meninas dos 5 aos 15 anos
 
-EN(186) Now we will ask about the time-use for adult men which is 15 years or older
-PT(186) Agora vamos perguntar sobre o uso do tempo para homens adultos que é de 15 anos ou mais
+EN(186) Now we will ask about the time-use for adult men which is 16 years or older
+PT(186) Agora vamos perguntar sobre o uso do tempo para homens adultos que é de 16 anos ou mais
 
-EN(187) Now we will ask about the time-use for boys in the age of 5-14 years old
-PT(187) Agora vamos perguntar sobre o uso do tempo para meninos dos 5 aos 14 anos
+EN(187) Now we will ask about the time-use for boys in the age of 5-15 years old
+PT(187) Agora vamos perguntar sobre o uso do tempo para meninos dos 5 aos 15 anos
 
 EN(188) Now we would like to ask you for some information on the households expenditures for food and for non-food.
 PT(188) Agora gostaríamos de lhe pedir alguma informação sobre as despesas dos agregados famíliares com alimentos e não alimentos.
@@ -357,4 +357,6 @@ PT(199) Quem decidiu a compra do fogão?
 EN(200) Now we would like to ask about security lights in your neighbourhood.
 PT(200) Agora gostaríamos perguntar sobre as luzes de segurança/iluminação pública em seu bairro.
 SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
+
+EN(201) No of the women in the household are available for interview
 

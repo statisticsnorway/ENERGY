@@ -320,7 +320,7 @@ Item=E3
 [Form]
 Name=FORM014
 Label=G - Dry-cell batteries
-QuestionTextHeight=96
+QuestionTextHeight=210
 Level=1
 Size=301,475
   
@@ -334,7 +334,7 @@ Item=G_DRY_CELL000
 [Form]
 Name=FORM006
 Label=F- Kerosene/fuel-based/candle lighting
-QuestionTextHeight=79
+QuestionTextHeight=174
 Level=1
 Size=291,551
   
@@ -538,7 +538,7 @@ Item=Q2000
 [Form]
 Name=FORM026
 Label=S - attitudes
-QuestionTextHeight=79
+QuestionTextHeight=138
 Level=1
 Size=152,419
   
