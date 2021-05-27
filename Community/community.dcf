@@ -146,7 +146,7 @@ DataType=Alpha
 Label=Valueset
 Name=B1_VS1
 Value='01                    ';Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
-Value='02                    ';Electricity / energy |Electricidade / energia
+Value='02                    ';Electricity / energy |Electricidade / energia|Umeme/Nishati
 Value='03                    ';Village committee|Comitê da vila|Kamati ya kijiji
 Value='04                    ';Elderly|Idoso|Wazee
 Value='05                    ';School|Escola|Shule
@@ -154,8 +154,8 @@ Value='06                    ';Agriculture|Agricultura|Kilimo
 Value='07                    ';Health|Saúde|Afya
 Value='08                    ';Business|O negócio|Biashara
 Value='09                    ';Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
-Value='10                    ';Young adult
-Value='11                    ';Adult woman/man
+Value='10                    ';Young adult||Kijana mtu mzima
+Value='11                    ';Adult woman/man||Mwanamke/Mwanamme mtu mzima
 Value='66                    ';None of these|Nenhum desses|Hakuna kati hizi
 
 [Record]
@@ -205,7 +205,7 @@ Len=2
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
 Name=B2_C_VS1
 Value=1;Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
-Value=2;Electricity / energy |Electricidade / energia|Umeme/Nishati 
+Value=2;Electricity / energy |Electricidade / energia|Umeme/Nishati
 Value=3;Village committee|Comitê da vila|Kamati ya kijiji
 Value=4;Elderly|Idoso|Wazee
 Value=5;School|Escola|Shule
@@ -1212,10 +1212,10 @@ Len=1
 [ValueSet]
 Label=Job opportunities
 Name=GP1_VS1
-Link=343726187
-Value=1;Increased
-Value=2;Remained the same
-Value=3;Decreased
+Link=111638752
+Value=1;Increased||Zimeongezeka/Umeongezeka
+Value=2;Remained the same||Hakuna Mabadiliko
+Value=3;Decreased||Zimepungua/Umepungua
 
 [Item]
 Label=Business Opportunities
@@ -1226,7 +1226,7 @@ Len=1
 [ValueSet]
 Label=Business Opportunities
 Name=GP2_VS1
-Link=343726187
+Link=111638752
 
 [Item]
 Label=Market Access
@@ -1237,4 +1237,4 @@ Len=1
 [ValueSet]
 Label=Market Access
 Name=GP3_VS1
-Link=343726187
+Link=111638752
