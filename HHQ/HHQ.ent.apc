@@ -576,7 +576,7 @@ postproc
 
 
 	//make a valueset for adult hh members as this too used frequently
-	//NB: Checking in the Name field/AB3 field (When quitting filling in family members) if 
+	//NB: Checking in the Name field/AB3 field (When quitting filling in family members) if
 	// there are any adults at all. If not: adding everybody aged 12+ there..
 	if  $ >= 16 then	//Found an adult
 		adultMembers.add(AB1,curocc());
@@ -777,7 +777,7 @@ PROC B1
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(179);
+		errmsg(tr(179));
 	endif;
 
 postproc
@@ -819,7 +819,7 @@ PROC B15
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(180);
+		errmsg(tr(180));
 	endif;
 
 postproc
@@ -857,7 +857,7 @@ PROC C2
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(181);
+		errmsg(tr(181));
 	endif;
 	energySources = 0;
 
@@ -1067,7 +1067,7 @@ preproc
 postproc
 
 	if $ = c10 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
 
@@ -1101,7 +1101,7 @@ PROC C16
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(174);
+		errmsg(tr(174));
 	endif;
 
 
@@ -1140,7 +1140,7 @@ postproc
 			rangeUnknown = 888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1154,7 +1154,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1287,7 +1287,7 @@ preproc
 		skip to C89;
 	endif;
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(176,strip(solarDeviceType));
+		errmsg(tr(176),strip(solarDeviceType));
 	endif;
 
 
@@ -1307,7 +1307,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1321,7 +1321,7 @@ postproc
 			rangeUnknown = 888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1341,7 +1341,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1355,7 +1355,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1378,7 +1378,7 @@ postproc
 			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1461,7 +1461,7 @@ preproc
 		skip to C4_FORM;
 	endif;
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(177);
+		errmsg(tr(177));
 	endif;
 
 postproc
@@ -1576,7 +1576,7 @@ preproc
 		skip to C5_FORM;
 	endif;
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(178);
+		errmsg(tr(178));
 	endif;
 
 
@@ -1605,7 +1605,7 @@ PROC C116
 			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1641,7 +1641,7 @@ postproc
 			rangeUnknown = 888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1655,7 +1655,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1669,7 +1669,7 @@ postproc
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1687,7 +1687,7 @@ PROC C128
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(182);
+		errmsg(tr(182));
 	endif;
 
 postproc
@@ -1730,7 +1730,7 @@ preproc
 		skip to E_FORM;
 	endif;
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(189);
+		errmsg(tr(189));
 	endif;
 
 onfocus
@@ -1825,7 +1825,7 @@ PROC G1
 preproc
 
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(175);
+		errmsg(tr(175));
 	endif;
 
 postproc
@@ -1939,7 +1939,7 @@ PROC F9
 postproc
 
 	if $ = F8 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
 
@@ -1995,7 +1995,7 @@ PROC I2
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(196);
+		errmsg(tr(196));
 	endif;
 
 postproc
@@ -2008,7 +2008,7 @@ postproc
 PROC I3
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2023,7 +2023,7 @@ PROC I4
 PROC I5
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2038,7 +2038,7 @@ PROC I6
 PROC I7
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2053,7 +2053,7 @@ PROC I8
 PROC I9
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2194,7 +2194,7 @@ PROC I26
 postproc
 
 	if $ = i25 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
 	If $ in 13, 18, 66, 55 then
@@ -2242,7 +2242,7 @@ preproc
 		skip to i46;
 	endif;
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(171);
+		errmsg(tr(171));
 	endif;
 
 postproc
@@ -2272,7 +2272,7 @@ preproc
 	endif;
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(195);
+		errmsg(tr(195));
 	endif;
 
 postproc
@@ -2320,7 +2320,7 @@ PROC O1
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(183, familyMembers.Labels(PersonCooksMostOften));
+		errmsg(tr(183), familyMembers.Labels(PersonCooksMostOften));
 	endif;
 
 onfocus
@@ -2380,7 +2380,7 @@ PROC O8
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(193,chosenChildName);
+		errmsg(tr(193),chosenChildName);
 	endif;
 
 
@@ -2407,7 +2407,7 @@ PROC K1
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(190);
+		errmsg(tr(190));
 	endif;
 
 	string woodOrCharcoal;
@@ -2457,7 +2457,7 @@ PROC J1
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(197);
+		errmsg(tr(197));
 	endif;
 
 postproc
@@ -2586,7 +2586,7 @@ PROC M1
 preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(200);
+		errmsg(tr(200));
 	endif;
 
 postproc
@@ -2607,12 +2607,12 @@ preproc
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 
 	If curocc() = 1 and (((ispartial() and visualValue($) = NOTAPPL) or !ispartial())) then
-		errmsg(184);
+		errmsg(tr(184));
 	endif;
 
 	$ = curocc();
@@ -2624,7 +2624,7 @@ PROC N_A
 postproc
 
 	if $ > hhDemographics(1) then
-		errmsg(166,$,hhDemographics(1));
+		errmsg(tr(166),$,hhDemographics(1));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2702,11 +2702,11 @@ preproc
 	endif;
 
 	If curocc() = 1 and hhDemographics(1) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(185);
+		errmsg(tr(185));
 	endif;
 	$ = curocc();
 	noinput;
@@ -2724,7 +2724,7 @@ preproc
 postproc
 
 	if $ > hhDemographics(2) then
-		errmsg(166,$,hhDemographics(2));
+		errmsg(tr(166),$,hhDemographics(2));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2801,11 +2801,11 @@ preproc
 		skip to N_ACTIVITY_BOYS;
 	endif;
 	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(186);
+		errmsg(tr(186));
 	endif;
 	$ = curocc();
 	noinput;
@@ -2816,7 +2816,7 @@ PROC N_K
 postproc
 
 	if $ > hhDemographics(3) then
-		errmsg(166,$,hhDemographics(3));
+		errmsg(tr(166),$,hhDemographics(3));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2893,11 +2893,11 @@ preproc
 		skip to Q_FORM;
 	endif;
 	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(187);
+		errmsg(tr(187));
 	endif;
 	$ = curocc();
 	noinput;
@@ -2916,7 +2916,7 @@ preproc
 postproc
 
 	if $ > hhDemographics(4) then
-		errmsg(166,$,hhDemographics(4));
+		errmsg(tr(166),$,hhDemographics(4));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2995,7 +2995,7 @@ onfocus
 postproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(188);
+		errmsg(tr(188));
 	endif;
 
 
