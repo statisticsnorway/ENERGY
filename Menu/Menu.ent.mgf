@@ -88,3 +88,9 @@ PT(30) Satelite Google
 
 EN(27) Failed to download map file!
 PT(27) Falha ao baixar o ficheiro do mapa!
+
+EN(28) Interview is completed for this household
+EN(29) Go back to map
+EN(30) Open it anyway
+
+EN(31) Make sure to choose "advance to end" from the menu when finishing revisiting this Household. Otherwise it will be saved as partially finished

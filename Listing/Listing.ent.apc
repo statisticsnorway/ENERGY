@@ -4,6 +4,8 @@ PROC GLOBAL
 	string currNorth, currEast;
 	string region, district, subdistrict, locality, village, ea, serial, urbRur;
 	numeric gpsN, gpsE;
+	string country;	//Need to know the country to find the right map..
+	map eaMap;	//To display the ea borders
 	
 	
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
@@ -37,6 +39,7 @@ PROC GLOBAL
 		saveSetting("ScurrNorth", edit("ZZZ.ZZZZZZ", visualValue(LL7A)));
 		saveSetting("ScurrEast", edit("ZZZ.ZZZZZZ", visualValue(LL7B)));
 		saveSetting("SurbanRural", edit("Z", visualValue(LLUR)));
+		saveSetting("Country", country);
 	end;
 
 
@@ -44,15 +47,24 @@ PROC GLOBAL
 		saveSettings();
 		stop(1);
 	end;
-
+	
+	function showEA()
+		string mapFileName = "../Maps/" + country + "_" + edit("99", toNumber(region))
+				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
+				+ edit("99", toNumber(locality)) + edit("99", toNumber(village))
+				+ edit("999", toNumber(ea)) + ".mbtiles";
+		eaMap.setBaseMap(mapFileName);
+		eaMap.show();
+	end;
+	
 		
 		
 PROC LISTING_FF
 preproc
 	userbar(clear);
 	userbar(add button, makeText(tr(102)), stopApp());
+	userbar(add button, makeText(tr(110)), showEA());
 	userbar(show);
-
 
 
 PROC LISTING_QUEST_FORM
@@ -66,6 +78,12 @@ preproc
 	ea = loadSetting("Sea");
 	serial = loadSetting("Sserial");
 	urbRur = loadSetting("SurbanRural");
+	country = loadSetting("Country");
+	
+	//This is just while testing as I don't want to change EA due to lack of map files
+	if country = "" then
+		country = "MZ";
+	endif;
 	
 	//errmsg("%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s",
 	//		LLogin, sysparm("LOGIN"), region, sysparm("REGION"), district, sysparm("DISTRICT"),
@@ -106,6 +124,7 @@ preproc
 		serial = sysparm("SERIAL");
 		LL8 = toNumber(serial);
 		urbRur = sysparm("URBANRURAL");
+		country = sysparm("country");
 	endif;
 
 	LL1 = toNumber(region);
