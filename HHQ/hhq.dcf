@@ -297,7 +297,7 @@ Name=AB6_VS1
 Value=1;Never married|Nunca se casou|Hajawahi kuoa/Kuolewa
 Value=2;Monogamous married|Casado/a|Ameoa/Ameolewa
 Value=3;Polygamous married|Casado/a|Ameoa/Ameolewa
-Value=4;Living together|União marital/vivem juntos
+Value=4;Living together|União marital/vivem juntos|Wanaishi pamoja
 Value=5;Widow(er)|Viúva/o|Mjane/Mgane
 Value=6;Separated|Separado/a|Wametengana
 Value=7;Divorced|Divorciado/a|Wameachana
@@ -711,7 +711,7 @@ Value=14;Chip wood|Madeira Chip|Mabanzi
 Value=15;Corrogated iron sheet|Chapas de ferro ondulado|Mabati ya kuezekea
 Value=16;Asbestos|Amianto|Vigae
 Value=17;Reed/bamboo/canico| Caniço/bambu|Mianzi
-Value=18;Mud only|Apenas lama
+Value=18;Mud only|Apenas lama|Matope pekee
 
 [Item]
 Label=Material roof|material principal do tecto da casa
@@ -794,7 +794,7 @@ Value=6;River/spring|Rio/nascente|Maji ya mto/bwawa/lambo
 Value=7;Lake/reservoir|Lago/reservatório|Maji ya ziwa
 Value=8;Rain water|Água da chuva|Maji ya mvua
 Value=9;Tanker/truck/vendor|Camiões-cisterna/camião/fornecedor|Maji ya kwenye magari yanauza maji (Tanker/truck/vendor)
-Value=10;Sachet water|Água de saqueta
+Value=10;Sachet water|Água de saqueta|Maji ya chupa ya dukani
 Value=11;Bottle water|Água de garrafa|Maji ya chupa - ya dukani
 
 [Item]
@@ -2063,7 +2063,7 @@ Value='i            ';September|Setembro
 Value='j            ';October|Outubro
 Value='k            ';November|Novembro
 Value='l            ';December|Dezembro
-Value='q            ';All year|Todo o ano
+Value='q            ';All year|Todo o ano|Mwaka mzima
 
 [Item]
 Label=Days per month used generator|Dias por mês em usau gerador
@@ -2289,7 +2289,7 @@ Name=C114_VS1
 Value='a    ';Lighting|Iluminação|Kwa ajili ya mwangaza
 Value='b    ';Appliances|Eletrodomésticos|Kwa ajili ya vifaa vya umeme
 Value='c    ';Home-based income activity|Atividade de renda baseado em casa|Kwa ajili ya shughuli za kipato cha nyumbani
-Value='d    ';Outside torch|Tocha externa/no quintal
+Value='d    ';Outside torch|Tocha externa/no quintal|Tochi
 Value='q    ';Other|De outros|Nyingine, taja
 
 [Item]
@@ -2384,14 +2384,14 @@ Len=2
 Label=What is the most serious problems you experience with the rechargeable batteries?
 Name=C126_VS1
 Link=234234444
-Value=1;Supply shortage/not enough hours of electricity|Escassez de abastecimento/não horas suficientes de eletricidade
-Value=2;Too expensive|Muito caro
-Value=3;Cannot power large appliances|Não é possível alimentar aparelhos grandes
-Value=4;Recharging is not convenient|Recarregar não é conveniente
-Value=5;Maintenance & repair is difficult|Manutenção e reparação é difícil
-Value=6;Cannot recharge battery to full capacity|Não é possível recarregar a bateria até à capacidade total
-Value=55;Other|Outros
-Value=66;No problems|Sem problemas
+Value=1;Supply shortage/not enough hours of electricity|Escassez de abastecimento/não horas suficientes de eletricidade|Nishati kidogo inatolewa
+Value=2;Too expensive|Muito caro|Ni ghali sana
+Value=3;Cannot power large appliances|Não é possível alimentar aparelhos grandes|Haiwezi kuendesha vifaa vikubwa vya umeme
+Value=4;Recharging is not convenient|Recarregar não é conveniente|Siyo rahisi kuchaji
+Value=5;Maintenance & repair is difficult|Manutenção e reparação é difícil|Ni vigumu kufanya matengenezo
+Value=6;Cannot recharge battery to full capacity|Não é possível recarregar a bateria até à capacidade total|Betri haijai kikamilifu
+Value=55;Other|Outros|Nyingine
+Value=66;No problems|Sem problemas|Hakuna tatizo
 
 [Item]
 Label=other problems|outros problemas
@@ -2778,7 +2778,7 @@ Value=2;Kerosene/Paraffin|Querosene|Mafuta ya taa
 Value=3;Diesel||Diseli
 Value=4;Gasoline|Gasolina|Petroli
 Value=5;Biogas|Biogás|Bayogesi
-Value=6;Paraffin|Parafina
+Value=6;Paraffin|Parafina|Mafuta ya taa
 Value=7;None|Nenhum|Hakuna
 
 [Item]
@@ -2917,7 +2917,7 @@ Label=Which type of stove is this?|Which type of stove is this?
 Name=I7_VS1
 Value='331   ';Gasifier stove|Fogão gasifier|Jiko la gesi la kawaida
 Image=..\Images\Cookstoves_331.jpg
-Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
+Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Jiko Safi Gasifier jiko w / hewa ya kulazimishwa & bomba la kutolea moshi
 Image=..\Images\Cookstoves_341.jpg
 
 [Item]
@@ -3068,12 +3068,12 @@ Len=1
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I22_VS1
 Link=133482344
-Value=1;In dwelling, NOT in sleeping area|Na habitação, não na área de dormir
-Value=2;In dwelling, in a sleeping area|Na habitação, em uma área de dormir
-Value=3;In a separate kitchen|Em uma cozinha separada
-Value=4;In a veranda (roofed platform with at least two open sides)|Em uma varanda (plataforma com telhado com pelo menos dois
-Value=5;In a separate open kitchenhouse|Em uma cozinha separada e aberta
-Value=6;Open air|Ar livre
+Value=1;In dwelling, NOT in sleeping area|Na habitação, não na área de dormir|Katika makazi, Sio eneo la kulala
+Value=2;In dwelling, in a sleeping area|Na habitação, em uma área de dormir|Katika makazi, Kwenye eneo la kulala
+Value=3;In a separate kitchen|Em uma cozinha separada|Katika jiko tofauti
+Value=4;In a veranda (roofed platform with at least two open sides)|Em uma varanda (plataforma com telhado com pelo menos dois|Kibarazani (roofed platform with at least two open sides)
+Value=5;In a separate open kitchenhouse|Em uma cozinha separada e aberta|Katika jiko la nje lililo wazi juu
+Value=6;Open air|Ar livre|Nje ya nyumba kwenye uwazi
 
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
@@ -3107,26 +3107,26 @@ Len=2
 Label=Valueset
 Name=I25_VS1
 Link=138883072
-Value=1;LPG/cooking gas|Gás GPL/gás de cozinha
-Value=2;Wood purchased|Madeira comprada
-Value=3;Wood collected|Madeira recolhida/colectada
-Value=4;Charcoal|Carvão
-Value=5;Kerosene/paraffin|Querosene/parafina
-Value=6;Piped Natural Gas|Gás Natural Canalizado
-Value=7;Coal/lignite|Carvão/linhite
-Value=8;Animal Waste/Dung|Resíduos animais/Estrume
-Value=9;Crop Residue/Plant Biomass|Resíduos de culturas/Biomassa vegetal
-Value=10;Saw Dust|Pó de Serra
-Value=11;Coal Briquette|Briquette de carvão
-Value=12;Biomass Briquette|Briquete de Biomassa
-Value=13;Electric|Eléctrico
-Value=14;Processed biomass (pellets)/ woodchips|Biomassa processada (pellets)/ lascas de madeira(serradura de madeira)
-Value=15;Biogas|Biogás
-Value=16;Ethanol|Etanol
-Value=17;Garbage/plastic|Lixo/plástico
-Value=18;Solar
-Value=55;Other|Outros
-Value=99;Not applicable|Não aplicável
+Value=1;LPG/cooking gas|Gás GPL/gás de cozinha|LPG/Gesi ya mtungi
+Value=2;Wood purchased|Madeira comprada|Kuni za kununua
+Value=3;Wood collected|Madeira recolhida/colectada|Kuni za kuokota
+Value=4;Charcoal|Carvão|Mkaa
+Value=5;Kerosene/paraffin|Querosene/parafina|Mafuta ya taa/paraffin
+Value=6;Piped Natural Gas|Gás Natural Canalizado|Gesi asili kwenye mabomba
+Value=7;Coal/lignite|Carvão/linhite|Makaa ya mawe/lignite
+Value=8;Animal Waste/Dung|Resíduos animais/Estrume|Kinyesi cha wanyama
+Value=9;Crop Residue/Plant Biomass|Resíduos de culturas/Biomassa vegetal|Tungamotaka (mabaki ya mazao)
+Value=10;Saw Dust|Pó de Serra|Maranda
+Value=11;Coal Briquette|Briquette de carvão|Mkaa utokanao na vumbi la makaa ya mawe
+Value=12;Biomass Briquette|Briquete de Biomassa|Bayomasi/ Briquette
+Value=13;Electric|Eléctrico|Umeme
+Value=14;Processed biomass (pellets)/ woodchips|Biomassa processada (pellets)/ lascas de madeira(serradura de madeira)|Mkaa mbadala utokanao na vumbi la mbao
+Value=15;Biogas|Biogás|Bayogesi
+Value=16;Ethanol|Etanol|Ethano
+Value=17;Garbage/plastic|Lixo/plástico|Takataka/plastiki
+Value=18;Solar||Nishati ya jua
+Value=55;Other|Outros|Nyingine
+Value=99;Not applicable|Não aplicável|Haihusiki
 
 [Item]
 Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
@@ -3149,10 +3149,10 @@ Len=1
 Label=Valueset
 Name=I27_VS1
 Link=123456789
-Value=1;Always available|Sempre disponível
-Value=2;Available  10-11  months|Disponível 10-11 meses
-Value=3;Available 9 months or less|Disponível 9 meses ou menos
-Value=4;Rarely available|Raramente disponível
+Value=1;Always available|Sempre disponível|Inapatikana kila wakati
+Value=2;Available  10-11  months|Disponível 10-11 meses|Inapatikana miezi 10-11
+Value=3;Available 9 months or less|Disponível 9 meses ou menos|Inapatikana miezi 9 au chini ya hapo
+Value=4;Rarely available|Raramente disponível|Inapatikana mara chache
 
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
@@ -3713,9 +3713,9 @@ Value=2;Table|Mesa|Meza
 Value=3;Bicycle|Bicicleta|Baiskeli
 Value=4;Motorcycle|Motocicleta|Pikipiki
 Value=5;Car|Veículo (carro, caminhão, etc)|Gari
-Value=6;Radio using batteries|Rádio usando baterias
+Value=6;Radio using batteries|Rádio usando baterias|Radio inayotumia betri
 Value=7;Mobile phone charger|carregador regular telemóvel|Chaja ya Simu
-Value=8;Electric radio|Rádio eléctrica
+Value=8;Electric radio|Rádio eléctrica|Radio inayotumia umeme
 Value=9;Fan|Ventilador|Feni
 Value=10;Refrigerator||Jokofu (Friji)
 Value=11;Microwave oven|Forno de micro-ondas|Mashine ya kupashia chakula
@@ -4008,12 +4008,12 @@ ItemType=SubItem
 Label=Activity girls 5-14 years
 Name=N_ACTIVITY_GIRLS_VS1
 Link=22334455
-Value=1;Collecting water|Cartar água
-Value=2;Collecting firewood|Recolha de lenha
-Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerado em atividades dentro do agregado familiar/complexo
-Value=4;Watching TV, listening to the radio or using smart phone|Ver televisão, ouvir rádio ou usar o Smart fone/telefone inteligente
-Value=5;Spending time on entertainment and socializing outside the house|Passar tempo em entretenimento e socializar-se fora da casa
-Value=6;Doing own homework|Fazendo o próprio dever de casa
+Value=1;Collecting water|Cartar água|Kuchota maji
+Value=2;Collecting firewood|Recolha de lenha|Kukusanya/Kuokota kuni
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerado em atividades dentro do agregado familiar/complexo|Shughuli za kuzalisha kipato ndani ya kiwanja cha nyumba / makazi (sio shambani) Kutunza na kuandaa lishe ya wanyama, kuhifadhi mahindi, kusafisha mbegu, usindikaji wa chakula, kutengeneza mikeka, vikapu,  kusuka, ushonaji nk kwa kuuza.
+Value=4;Watching TV, listening to the radio or using smart phone|Ver televisão, ouvir rádio ou usar o Smart fone/telefone inteligente|Kuangalia TV, kusikiliza redio au kutumia simu janja
+Value=5;Spending time on entertainment and socializing outside the house|Passar tempo em entretenimento e socializar-se fora da casa|Kutumia wakati kwenye burudani na kujumuika nje ya nyumba
+Value=6;Doing own homework|Fazendo o próprio dever de casa|Kutumia wakati kwenye burudani na kujumuika nje ya kaya
 
 [Item]
 Label=How many girls 5-14 years have been involved in (ACTIVITY)?
@@ -4826,9 +4826,9 @@ Len=1
 Label=decisions about healthcare|decisões sobre saúde
 Name=T2_VS1
 Link=11223344
-Value=1;You|Você
-Value=2;Your husband/partner|O seu marido/parceiro
-Value=3;You and your husband/partner|Você e o seu marido/parceiro
+Value=1;You|Você|Mhojiwa
+Value=2;Your husband/partner|O seu marido/parceiro|Mume/Mwenza
+Value=3;You and your husband/partner|Você e o seu marido/parceiro|Mhojiwa na mumewe/mwenza wake
 Value=4;Someone else|Alguém|Mtu mwingine
 
 [Item]
@@ -4973,19 +4973,23 @@ ItemType=SubItem
 [ValueSet]
 Label=Value Set 0
 Name=GP3_VS1
-Value=1;Farmer with non-family employees|Agricultor com empregados não familiares
-Value=2;Farmer with only family members|Agricultor com apenas membros da família
-Value=3;Farm worker|Trabalhador agrícola
-Value=4;Non-farm business with non-family employees|Negócios não agrícolas com empregados não familiares
-Value=5;Non-farm business with only family employees|Negócios não agrícolas com apenas empregados da família
-Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer|Assistência não remunerada em empresa familiar/Trabalhador Casual/Day
-Value=8;Wage Employee in Private Company (with contract)|Trabalhador assalariado em Empresa Privada (com contrato)
-Value=9;Wage Employee in Private Company (without contract)|Trabalhador assalariado em Empresa Privada (sem contrato)
-Value=10;Wage Employee for Government|Trabalhador salarial do Governo
-Value=11;Wage Employee in Parastatal (government owned company)|Trabalhador salarial em Parastatal (empresa pública)
-Value=15;Was not working, but was looking for work and has worked previously|Não estava a trabalhar, mas estava à procura de trabalho e já trabalhou anteriormente.
-Value=16;Was not working, but was looking for work. Had never worked before|Não estava a trabalhar, mas estava à procura de trabalho. Nunca tinha trabalhado antes.
-Value=17;Was not working, and was not looking for work (student, retired, disabled etc)|Não estava a trabalhar, e não estava à procura de trabalho (estudante, reformado, deficiente, etc)
+Value=1;Farmer with non-family employees|Agricultor com empregados não familiares|Mkulima aliyeajiri wafanyakazi wasiokuwa wanakaya
+Value=2;Farmer with only family members|Agricultor com apenas membros da família|Mkulima mwenye wanakaya tu
+Value=3;Farm worker|Trabalhador agrícola|Mfanyakazi wa shamba bila malipo [mwanakaya]
+Value=4;Non-farm business with non-family employees|Negócios não agrícolas com empregados não familiares|Mwajiri asiye mkulima aliyeajiri wafanyakazi wasio wanakaya
+Value=5;Non-farm business with only family employees|Negócios não agrícolas com apenas empregados da família|Mwajiri asiye mkulima aliyeajiri wanakaya tu
+Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer|Assistência não remunerada em empresa familiar/Trabalhador Casual/Day|Msaidizi katika biashara ya kaya asiyelipwa
+Value=7;Wage Employee in Private Company (with contract)|Trabalhador assalariado em Empresa Privada (com contrato)|Mtaalamu aliyejiajiri (mkandarasi, fundi mchundo, n.k. )
+Value=8;Wage Employee in Private Company (without contract)|Trabalhador assalariado em Empresa Privada (sem contrato)|Mwajiriwa katika kampuni binafsi (kwa mkataba)
+Value=9;Mwajiriwa katika kampuni binafsi (bila mkataba)||Mwajiriwa katika kampuni binafsi (bila mkataba)
+Value=10;Wage Employee for Government|Trabalhador salarial do Governo|Mwajiriwa wa Serikali 
+Value=11;Wage Employee in Parastatal (government owned company)|Trabalhador salarial em Parastatal (empresa pública)|Mwajiriwa katika Shirika la Umma
+Value=12;Mfanyakazi wa muda/kibarua
+Value=13;Mfanyakazi aliye kwenye mafunzo/anayejitolea
+Value=14;Mfanyakazi wa nyumbani||Mfanyakazi wa nyumbani
+Value=15;Was not working, but was looking for work and has worked previously|Não estava a trabalhar, mas estava à procura de trabalho e já trabalhou anteriormente.|Kwa sasa hafanyi kazi, lakini anatafuta kazi na hapo awali alikuwa anafanya kazi
+Value=16;Was not working, but was looking for work. Had never worked before|Não estava a trabalhar, mas estava à procura de trabalho. Nunca tinha trabalhado antes.|Kwa sasa hafanyi kazi, lakini anatafuta kazi na hajawahi kufanya kazi
+Value=17;Was not working, and was not looking for work (student, retired, disabled etc)|Não estava a trabalhar, e não estava à procura de trabalho (estudante, reformado, deficiente, etc)|Kwa sasa hafanyi kazi, na hatafuti kazi (Mwanafunzi, Mstaafu,Mlemavu, Mgonjwa kwa muda mrefu
 
 [Item]
 Label=What was the main activity at [NAME]’s place of work before the global pandemic started last year?
@@ -4997,26 +5001,26 @@ ItemType=SubItem
 [ValueSet]
 Label=Value Set 0
 Name=GP4_VS1
-Value=11;Agriculture - crops/forestry|Agricultura - culturas/silvicultura
-Value=12;Agriculture - animal husbandry|Agricultura - criação animal
-Value=13;Fishing|Pesca
-Value=14;Mining & quarrying|Mineração e pedreira
-Value=15;Manufacturing|Fabrico
-Value=16;Electricity and water supply|Fornecimento de eléctricidade e água
-Value=17;Building and construction|Edificio o e construção
-Value=18;Trade|Comércio
-Value=19;Repair|Reparação
-Value=20;Transportation|Transporte
-Value=21;Accommodation and food service|Alojamento e serviço alimentar
-Value=22;Information and communication|Informação e comunicação
-Value=23;Financial, professional, administrative and support service|Serviço financeiro, profissional, administrativo e de apoio
-Value=24;Public administration and defence|Administração pública e defesa
-Value=25;Education|Educação
-Value=26;Human health and social work|Saúde humana e trabalho social
-Value=27;Arts, entertainment and recreation|Artes, entretenimento e recreação
-Value=28;Personal service|Atendimento pessoal
-Value=29;Domestic service|Serviço doméstico
-Value=30;Embassies and international organizations|Embaixadas e organizações internacionais
+Value=11;Agriculture - crops/forestry|Agricultura - culturas/silvicultura|Kilimo - mazao/misitu
+Value=12;Agriculture - animal husbandry|Agricultura - criação animal|Kilimo– mifugo
+Value=13;Fishing|Pesca|Uvuvi
+Value=14;Mining & quarrying|Mineração e pedreira|Uchimbaji wa Madini/kokoto/mchanga
+Value=15;Manufacturing|Fabrico|Uzalishaji Viwandani
+Value=16;Electricity and water supply|Fornecimento de eléctricidade e água|Umeme na usambazaji wa maji
+Value=17;Building and construction|Edificio o e construção|Ujenzi
+Value=18;Trade|Comércio|Biashara
+Value=19;Repair|Reparação|Ukarabati
+Value=20;Transportation|Transporte|Usafirishaji/Uchukuzi
+Value=21;Accommodation and food service|Alojamento e serviço alimentar|Huduma za malazi na chakula
+Value=22;Information and communication|Informação e comunicação| Huduma za habari na mawasiliano
+Value=23;Financial, professional, administrative and support service|Serviço financeiro, profissional, administrativo e de apoio|Huduma za kifedha, kitaalamu na utawala
+Value=24;Public administration and defence|Administração pública e defesa|Utawala wa Umma na ulinzi
+Value=25;Education|Educação|Elimu
+Value=26;Human health and social work|Saúde humana e trabalho social|Afya na ustawi wa jamii
+Value=27;Arts, entertainment and recreation|Artes, entretenimento e recreação|Sanaa na burudani
+Value=28;Personal service|Atendimento pessoal|Huduma binafsi
+Value=29;Domestic service|Serviço doméstico|Kazi za nyumbani 
+Value=30;Embassies and international organizations|Embaixadas e organizações internacionais|Ubalozi na na Mashirika ya kimataifa
 
 [Item]
 Label=Family farming, livestock or fishing
@@ -5028,10 +5032,10 @@ Len=1
 Label=Value Set 0
 Name=GP5_VS1
 Link=837371282
-Value=1;Increased|Aumentou
-Value=2;Stayed the same|Manteve-se o mesmo
-Value=3;Decreased|Diminuiu
-Value=4;No such income, not applicable|Não existem tais rendimentos, não aplicável
+Value=1;Increased|Aumentou|Yameongezeka
+Value=2;Stayed the same|Manteve-se o mesmo|Yamebaki Vile Vile
+Value=3;Decreased|Diminuiu|Yamepungua
+Value=4;No such income, not applicable|Não existem tais rendimentos, não aplicável|Hakuna Mapato kama hayo, Haihusiki
 
 [Item]
 Label=Non-agricultural family businesses, including family businesses
@@ -5153,9 +5157,9 @@ Len=1
 Label=Value Set 0
 Name=GP16_VS1
 Link=326777112
-Value=1;Increased|Aumentou
-Value=2;Stayed the same|Manteve-se o mesmo
-Value=3;Decreased|Diminuiu
+Value=1;Increased|Aumentou|Yameongezeka
+Value=2;Stayed the same|Manteve-se o mesmo|Yamebaki Vile Vile
+Value=3;Decreased|Diminuiu|Yamepungua
 
 [Item]
 Label=Have your use of electrical power increased, stayed the same or decreased over the last year during the global pandemic up to today?
@@ -5166,10 +5170,10 @@ Len=1
 [ValueSet]
 Label=Value Set 0
 Name=GP17_VS1
-Value=1;Increased|Aumentou
-Value=2;Stayed the same|Manteve-se o mesmo
-Value=3;Decreased|Diminuiu
-Value=4;We have no electricity, not applicable|Não existem tais rendimentos, não aplicável
+Value=1;Increased|Aumentou|Yameongezeka
+Value=2;Stayed the same|Manteve-se o mesmo|Yamebaki vile vile
+Value=3;Decreased|Diminuiu|Yamepungua
+Value=4;We have no electricity, not applicable|Não existem tais rendimentos, não aplicável|Kaya haina Umeme, Haihusiki
 
 [Item]
 Label=Have you changed the type of fuel you have been using over the last year during the global pandemic up to today?
@@ -5180,8 +5184,8 @@ Len=1
 [ValueSet]
 Label=Value Set 0
 Name=GP18_VS1
-Value=1;No, continued with the same fuel|Não, continuou com o mesmo combustível.
-Value=2;Yes, switched fuel|Sim, combustível comutado.
+Value=1;No, continued with the same fuel|Não, continuou com o mesmo combustível.|Hapana, natumia nishati ile ile
+Value=2;Yes, switched fuel|Sim, combustível comutado.|Ndiyo, nimebadili nishati
 
 [Item]
 Label=What type of fuel did you use before the global pandemic started last year for your main stove?
@@ -5192,13 +5196,13 @@ Len=1
 [ValueSet]
 Label=Value Set 0
 Name=GP19_VS1
-Value=1;Firewood, dung, twigs and leaves|Lenha, esterco, galhos e folhas
-Value=2;Charcoal|Carvão
-Value=3;Kerosene|Querosene
-Value=4;Rice husks, pellets or briquettes|Cascas de arroz, pellets ou briquetes
-Value=5;LPG, biogas|GPL, biogás
-Value=6;Electricity|Electricidade
-Value=7;Solar oven (non-electric)|Forno solar (não eléctrico)
+Value=1;Firewood, dung, twigs and leaves|Lenha, esterco, galhos e folhas|Kuni, kinyesi, matawi na majani
+Value=2;Charcoal|Carvão|Mkaa
+Value=3;Kerosene|Querosene|Mafuta ya taa
+Value=4;Rice husks, pellets or briquettes|Cascas de arroz, pellets ou briquetes|Maganda ya mchele, vipande vidogo vya mbao au maranda
+Value=5;LPG, biogas|GPL, biogás|LPG, bayogesi
+Value=6;Electricity|Electricidade|Umeme
+Value=7;Solar oven (non-electric)|Forno solar (não eléctrico)|Oveni ya Jua (isiyo ya umeme)
 
 [Item]
 Label=Have your consumption of fuel for cooking increased, stayed the same or decreased over the last year during the global pandemic up to today?
@@ -5220,8 +5224,8 @@ Len=1
 [ValueSet]
 Label=Valueset
 Name=GP21_VS1
-Value=1;No, continued with the same stove|Não, continuou com o mesmo fogão.
-Value=2;Yes, have changed to another main stove|Sim, mudaram para outro fogão principal.
+Value=1;No, continued with the same stove|Não, continuou com o mesmo fogão.|Hapana, nimeendelea  na jiko lile lile
+Value=2;Yes, have changed to another main stove|Sim, mudaram para outro fogão principal.|Ndiyo, nimebadili natumia jiko lingine kuu
 
 [Item]
 Label=Which type of stove did you use as your main stove before the global pandemic started last year?
@@ -5232,34 +5236,34 @@ Len=3
 [ValueSet]
 Label=Valueset
 Name=GP22_VS1
-Value=999;No change of oven|Sem mudança de forno
-Value=101;Three-stone stove|Fogão de três pedras
-Value=102;Round mud stove|Fogão de lama redonda
-Value=111;ICS w/ ceramic fire chamber|Fogão de cozinha melhrorado c/ câmara de fogo cerâmico
-Value=112;ICS w/ metal ring|Fogão de cozinha melhrorado c/ anel metálico
-Value=121;Rocket stove|Fogão de foguete
-Value=122; High traditional burned mud/clay stove|Fogão de lama/argila queimada alta tradicional
-Value=131;Lorena 1 Rocket stove w high insulation|Lorena 1 Foguete fogão w alto isolamento
-Value=132;Rocket stove metal w/internal chimney/ Canamakeivuguruye|Foguete fogão metálico c/chaminé interna/ Canamakeivuguruye
-Value=141;Lorena 2 Rocket stove with well- sealed chimney|Lorena 2 Foguete fogão com chaminé bem selada
-Value=142;Metal rocket stove|Fogão de foguete de metal
-Value=201;Traditional charcoal stove - Open access for air|Fogão a carvão tradicional - Acesso aberto para o ar
-Value=202;Traditional raised charcoal stove|Fogão a carvão tradicional levantado
-Value=211;Charcoal stove, Old ICS Opening for air may be closed|Fogão a carvão, abertura do fogão de cozinha melhrorado antigo para o ar pode ser fechada
-Value=221;Ceramic lined charcoal ICS|Fogão de cozinha melhrorado de carvão forrado em cerâmica
-Value=231;Ceramic lined and insulated charcoal ICS|Fogão de cozinha melhrorado de carvão forrado e isolado
-Value=233;Kerosene cooking stove (Mchina)|Fogão de cozinha de querosene (Mchina)
-Value=241;Efficient charcoal stove with controlled airflow|Fogão a carvão eficiente com fluxo de ar controlado
-Value=331;Gasifier stove|Fogão gasifier
-Value=332;Saw dust, risk husk gasifier stove|Pó de serra, fogão gasifier de casca de risco
-Value=341;Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé
-Value=451;Biogas stove|Fogão de biogás
-Value=452;Multiple LPG stove|Vários
-Value=453;Single LPG stove|Fogão de GPL único
-Value=461;Electrical stove|Fogão elétrico
-Value=462;Electrical plates without oven|Placas elétricas sem forno
-Value=463;LPG/ gas and electrical stove|GPL/ gás e fogão elétrico
-Value=471;Solar cooker (Non-electric)|Fogão solar (não elétrico)
+Value=999;No change of oven|Sem mudança de forno|Hakuna mabadiliko ya oveni
+Value=101;Three-stone stove|Fogão de três pedras|Jiko la mawe/Mafiga matatu
+Value=102;Round mud stove|Fogão de lama redonda|Jiko la tope la mviringo
+Value=111;ICS w/ ceramic fire chamber|Fogão de cozinha melhrorado c/ câmara de fogo cerâmico|ICS w / chumba cha moto cha kauri (Ceramic Chamber)
+Value=112;ICS w/ metal ring|Fogão de cozinha melhrorado c/ anel metálico|ICS w / Jiko la chuma la Nusu duara
+Value=121;Rocket stove|Fogão de foguete|Jiko la roketi la kawaida
+Value=122; High traditional burned mud/clay stove|Fogão de lama/argila queimada alta tradicional|Jiko la juu la jadi la udongo wa kuchoma / Jiko la tope
+Value=131;Lorena 1 Rocket stove w high insulation|Lorena 1 Foguete fogão w alto isolamento|Lorena 1 Jiko la roketi lililofunikwa (Insulated)
+Value=132;Rocket stove metal w/internal chimney/ Canamakeivuguruye|Foguete fogão metálico c/chaminé interna/ Canamakeivuguruye|Jiko la Roketi  la chuma  / lenye bomba la ndani
+Value=141;Lorena 2 Rocket stove with well- sealed chimney|Lorena 2 Foguete fogão com chaminé bem selada|Lorena 2 Jiko la roketi lenye bomba lililozibwa (sealed chimney)
+Value=142;Metal rocket stove|Fogão de foguete de metal|Jiko la roketi la chuma/asili
+Value=201;Traditional charcoal stove - Open access for air|Fogão a carvão tradicional - Acesso aberto para o ar|Jiko la mkaa lenye uwazi wa kupitisha hewa
+Value=202;Traditional raised charcoal stove|Fogão a carvão tradicional levantado|Jiko la mkaa la jadi lililoinuka
+Value=211;Charcoal stove, Old ICS Opening for air may be closed|Fogão a carvão, abertura do fogão de cozinha melhrorado antigo para o ar pode ser fechada|Jiko la Mkaa , old ICS lenye vilango vya kupitishia hewa vinavyoweza kufungwa
+Value=221;Ceramic lined charcoal ICS|Fogão de cozinha melhrorado de carvão forrado em cerâmica|Jiko la Mkaa la kauri (Ceramic) ICS
+Value=231;Ceramic lined and insulated charcoal ICS|Fogão de cozinha melhrorado de carvão forrado e isolado|Jiko la Kauri lililofunikwa kwa  makaa  ICS
+Value=233;Kerosene cooking stove (Mchina)|Fogão de cozinha de querosene (Mchina)|Jiko la mafuta ya taa (Mchina)
+Value=241;Efficient charcoal stove with controlled airflow|Fogão a carvão eficiente com fluxo de ar controlado|Jiko la mkaa lenye uwezo wa kudhibiti hewa
+Value=331;Gasifier stove|Fogão gasifier|Jiko la gesi la kawaida
+Value=332;Saw dust, risk husk gasifier stove|Pó de serra, fogão gasifier de casca de risco|Jiko la Maranda
+Value=341;Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Jiko Safi Gasifier jiko w / hewa ya kulazimishwa & bomba la kutolea moshi
+Value=451;Biogas stove|Fogão de biogás|Jiko la Bayogesi
+Value=452;Multiple LPG stove|Vários|Jiko la LPG lenye njia zaidi ya moja(Sehemu zaidi ya moja za kuinjika)
+Value=453;Single LPG stove|Fogão de GPL único|Jiko la LPG lenye njia moja(Sehemu moja ya kuinjika)
+Value=461;Electrical stove|Fogão elétrico|Jiko la umeme
+Value=462;Electrical plates without oven|Placas elétricas sem forno|Jiko la Umeme lisilokuwa na Oveni
+Value=463;LPG/ gas and electrical stove|GPL/ gás e fogão elétrico|LPG / gesi na jiko la umeme
+Value=471;Solar cooker (Non-electric)|Fogão solar (não elétrico)|Jiko la jua  (Sio la umeme)
 
 [Item]
 Label=Have you sold any of household items since before the global pandemic started last year?
@@ -5282,25 +5286,25 @@ DataType=Alpha
 [ValueSet]
 Label=Valueset
 Name=GP24_VS1
-Value='01                                    ';Bed|Cama
-Value='02                                    ';Table|Mesa
-Value='03                                    ';Bicycle|Bicicleta
-Value='04                                    ';Motorcycle|Motocicleta/Motorizada
-Value='05                                    ';Car|Carro
-Value='06                                    ';Radio using batteries|Rádio usando baterias
-Value='07                                    ';Mobile phone charger|Carregador de telemóvel
-Value='08                                    ';Electric radio|Rádio elétrica
-Value='09                                    ';Fan
-Value='10                                    ';Refrigerator|Frigorífico
-Value='11                                    ';Microwave oven|Forno micro-ondas
-Value='12                                    ';Freezer|Congelador
-Value='13                                    ';Washing machine|Máquina de lavar roupa
-Value='14                                    ';Electric sewing machine|Máquina de costura elétrica
-Value='15                                    ';Air Conditioner (AC)|Ar Condicionado (AC)
-Value='16                                    ';Computer/ Tablet|Computador/ Tablet
-Value='17                                    ';Electric hot water pot/kettle|Pote/chaleira de água quente elétrica
-Value='18                                    ';TV
-Value='19                                    ';Electric water pump|Bomba de água elétrica
+Value='01                                    ';Bed|Cama|Kitanda
+Value='02                                    ';Table|Mesa|Meza
+Value='03                                    ';Bicycle|Bicicleta|Baiskeli
+Value='04                                    ';Motorcycle|Motocicleta/Motorizada|Pikipiki
+Value='05                                    ';Car|Carro|Gari
+Value='06                                    ';Radio using batteries|Rádio usando baterias|Redio inayotumia betri
+Value='07                                    ';Mobile phone charger|Carregador de telemóvel|Chaja ya simu
+Value='08                                    ';Electric radio|Rádio elétrica|Redio inayotumia umeme
+Value='09                                    ';Fan||Feni
+Value='10                                    ';Refrigerator|Frigorífico|Friji/Jokofu
+Value='11                                    ';Microwave oven|Forno micro-ondas|Oveni ya Kupashia vyakula(Microwave)
+Value='12                                    ';Freezer|Congelador|Friza
+Value='13                                    ';Washing machine|Máquina de lavar roupa|Mashine ya kufulia
+Value='14                                    ';Electric sewing machine|Máquina de costura elétrica|Mashine ya kushona ya umeme
+Value='15                                    ';Air Conditioner (AC)|Ar Condicionado (AC)|AC
+Value='16                                    ';Computer/ Tablet|Computador/ Tablet|Kompyuta/ Kishkwambi
+Value='17                                    ';Electric hot water pot/kettle|Pote/chaleira de água quente elétrica|Birika la umeme la kuchemshia maji
+Value='18                                    ';TV||TV/Runinga
+Value='19                                    ';Electric water pump|Bomba de água elétrica|Pampu ya maji inayotumia Umeme
 
 [Item]
 Label=Have your total consumption increased, stayed the same or decreased over the last year during the global pandemic up to today?
@@ -5323,12 +5327,12 @@ DataType=Alpha
 [ValueSet]
 Label=Valueset
 Name=GP26_VS1
-Value='1     ';Yes, agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran|Sim, sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, semente, farelo
-Value='2     ';Yes, livestock by-products (milk, cheese)|Sim, sub-produtos de gado (leite, queijo)
-Value='3     ';Yes, fresh/processed fish|Sim, peixe fresco/processado
-Value='4     ';Yes, firewood, home-made charcoal|Sim, lenha, carvão caseiro.
-Value='5     ';Yes, construction timber, wood-poles or other construction material|Sim, madeira de construção, postes de madeira ou outro material de construção
-Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass|Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo
+Value='1     ';Yes, agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran|Sim, sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, semente, farelo|Ndiyo, mazao ya kilimo, pamoja na unga, wanga, juisi, bia, jam, mafuta, mbegu, makapi
+Value='2     ';Yes, livestock by-products (milk, cheese)|Sim, sub-produtos de gado (leite, queijo)|Ndiyo, mazao yatokanayo na mifugo (maziwa, jibini)
+Value='3     ';Yes, fresh/processed fish|Sim, peixe fresco/processado|Ndiyo, samaki wabichi/ waliosindikwa
+Value='4     ';Yes, firewood, home-made charcoal|Sim, lenha, carvão caseiro.|Ndiyo, kuni, mikaa iyotengenezwa nyumbani
+Value='5     ';Yes, construction timber, wood-poles or other construction material|Sim, madeira de construção, postes de madeira ou outro material de construção|Ndiyo, mbao za ujenzi, miti ya kuni au vifaa vingine vya ujenzi 
+Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass|Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo|Ndiyo, mikeka, matofali, fanicha , vikapu vya kufuma, nyasi za kuezekea
 Value='7     ';No|Não
 
 [Item]
@@ -5407,13 +5411,13 @@ DataType=Alpha
 [ValueSet]
 Label=Valueset
 Name=GP33_VS1
-Value='1     ';Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc|Sim, oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.
-Value='2     ';Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|Sim, gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate, etc.
-Value='3     ';Yes, own a trading or service business on a street or in a market|Sim, possuir um negócio de comércio ou serviços numa rua ou num mercado
-Value='4     ';Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services|Sim, conduzir um táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança
-Value='5     ';Yes, own a bar or restaurant|Sim, ter um bar ou restaurante.
-Value='6     ';Yes, own any other non-agricultural business, even if it is a small business run from home or on a street|Sim, possuir qualquer outro negócio não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou na rua
-Value='7     ';No|Não
+Value='1     ';Yes, offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc|Sim, oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.|Ndiyo, kutoa huduma za kitaalam kama daktari, mhasibu, wakili, mtafsiri, mkufunzi binafsi, mkunga, mwashi, n.k
+Value='2     ';Yes, run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|Sim, gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate, etc.|Ndiyo, kuendesha duka linalomilikiwa na kaya au kutoa huduma  nyumbani kama vile uoshaji wa magari, fundi chuma, fundi m , seremala, kinyozi, fundi cherehani nk
+Value='3     ';Yes, own a trading or service business on a street or in a market|Sim, possuir um negócio de comércio ou serviços numa rua ou num mercado|Ndiyo, kumiliki biashara  au huduma mitaani au sokoni
+Value='4     ';Yes, drive a household-owned taxi or pick-up truck to provide transportation or moving services|Sim, conduzir um táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança|Ndiyo, Kuendesha teksi inayomilikiwa na kaya au pikapu  inayotoa huduma ya usafirishaji au ya huduma za kutembeza/umachinga
+Value='5     ';Yes, own a bar or restaurant|Sim, ter um bar ou restaurante.|Ndiyo, kumiliki baa au mgahawa
+Value='6     ';Yes, own any other non-agricultural business, even if it is a small business run from home or on a street|Sim, possuir qualquer outro negócio não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou na rua|Ndiyo, kumiliki biashara nyingine yoyote isiyo ya kilimo, hata ikiwa ni biashara ndogo inayoendeshwa  nyumbani au barabarani
+Value='7     ';No|Não|Hapana
 
 [Item]
 Label=offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
