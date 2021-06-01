@@ -4982,7 +4982,7 @@ Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer|Assistência n
 Value=7;Wage Employee in Private Company (with contract)|Trabalhador assalariado em Empresa Privada (com contrato)|Mtaalamu aliyejiajiri (mkandarasi, fundi mchundo, n.k. )
 Value=8;Wage Employee in Private Company (without contract)|Trabalhador assalariado em Empresa Privada (sem contrato)|Mwajiriwa katika kampuni binafsi (kwa mkataba)
 Value=9;Mwajiriwa katika kampuni binafsi (bila mkataba)||Mwajiriwa katika kampuni binafsi (bila mkataba)
-Value=10;Wage Employee for Government|Trabalhador salarial do Governo|Mwajiriwa wa Serikali 
+Value=10;Wage Employee for Government|Trabalhador salarial do Governo|Mwajiriwa wa Serikali
 Value=11;Wage Employee in Parastatal (government owned company)|Trabalhador salarial em Parastatal (empresa pública)|Mwajiriwa katika Shirika la Umma
 Value=12;Mfanyakazi wa muda/kibarua
 Value=13;Mfanyakazi aliye kwenye mafunzo/anayejitolea
@@ -5019,7 +5019,7 @@ Value=25;Education|Educação|Elimu
 Value=26;Human health and social work|Saúde humana e trabalho social|Afya na ustawi wa jamii
 Value=27;Arts, entertainment and recreation|Artes, entretenimento e recreação|Sanaa na burudani
 Value=28;Personal service|Atendimento pessoal|Huduma binafsi
-Value=29;Domestic service|Serviço doméstico|Kazi za nyumbani 
+Value=29;Domestic service|Serviço doméstico|Kazi za nyumbani
 Value=30;Embassies and international organizations|Embaixadas e organizações internacionais|Ubalozi na na Mashirika ya kimataifa
 
 [Item]
@@ -5331,9 +5331,9 @@ Value='1     ';Yes, agricultural by-products, including flour, starch, juice, be
 Value='2     ';Yes, livestock by-products (milk, cheese)|Sim, sub-produtos de gado (leite, queijo)|Ndiyo, mazao yatokanayo na mifugo (maziwa, jibini)
 Value='3     ';Yes, fresh/processed fish|Sim, peixe fresco/processado|Ndiyo, samaki wabichi/ waliosindikwa
 Value='4     ';Yes, firewood, home-made charcoal|Sim, lenha, carvão caseiro.|Ndiyo, kuni, mikaa iyotengenezwa nyumbani
-Value='5     ';Yes, construction timber, wood-poles or other construction material|Sim, madeira de construção, postes de madeira ou outro material de construção|Ndiyo, mbao za ujenzi, miti ya kuni au vifaa vingine vya ujenzi 
+Value='5     ';Yes, construction timber, wood-poles or other construction material|Sim, madeira de construção, postes de madeira ou outro material de construção|Ndiyo, mbao za ujenzi, miti ya kuni au vifaa vingine vya ujenzi
 Value='6     ';Yes, mats, bricks, cane furniture, weave baskets, thatch grass|Sim, tapetes, tijolos, móveis de bengala, cestos de tecelagem, erva de colmo|Ndiyo, mikeka, matofali, fanicha , vikapu vya kufuma, nyasi za kuezekea
-Value='7     ';No|Não
+Value='7     ';No|Não|Hapana
 
 [Item]
 Label=Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
