@@ -1218,11 +1218,25 @@ Name=C18
 Start=129
 Len=9
 
+[ValueSet]
+Label=Valueset
+Name=C18_VS1
+Link=9
+Value=0:888888887
+Value=888888888;Don't know|Não sabe|Hajui
+Value=888888889;The dwelling was already connected when household moved in
+Value=999999999;Not applicable|Não aplicável|Haihusiki
+
 [Item]
-Label=How much pay internal wiering fee|Quanto seu agregado pagou pela taxa de instalação interna?
+Label=Valueset
 Name=C19
 Start=138
 Len=9
+
+[ValueSet]
+Label=Valueset
+Name=C19_VS1
+Link=9
 
 [Item]
 Label=Days from applied to household connected|Quantos dias o seu agregado familiar se conectou?
@@ -1303,11 +1317,25 @@ Name=C25
 Start=155
 Len=3
 
+[ValueSet]
+Label=Valueset
+Name=C25_VS1
+Link=3
+Value=0:887
+Value=888;Don't know|Não sabe|Hajui
+
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
 Start=158
 Len=5
+
+[ValueSet]
+Label=Valueset
+Name=C26_VS1
+Link=5
+Value=0:88887
+Value=88888;Don't know|Não sabe|Hajui
 
 [Item]
 Label=Pre-paid meter|Pré-pago metros
@@ -1362,11 +1390,25 @@ Name=C30
 Start=167
 Len=8
 
+[ValueSet]
+Label=Valueset
+Name=C30_VS1
+Link=8
+Value=0:88888887
+Value=88888888;Don't know|Não sabe|Hajui
+
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C31
 Start=175
 Len=6
+
+[ValueSet]
+Label=Valueset
+Name=C31_VS1
+Link=6
+Value=0:888887
+Value=888888;Don't know|Não sabe|Hajui
 
 [Item]
 Label=How many weeks did the bill cover?
@@ -1424,11 +1466,23 @@ Name=C38
 Start=202
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C38_VS1
+Link=2
+Value=0:87
+Value=88;Don't know|Não sabe|Hajui
+
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C39
 Start=204
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C39_VS1
+Link=2
 
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
@@ -1436,11 +1490,23 @@ Name=C40
 Start=206
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C40_VS1
+Value=1:65
+Value=66;No outages/blackouts
+Value=88;Don't know|Não sabe|Hajui
+
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C41
 Start=208
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C41_VS1
+Link=2
 
 [Item]
 Label=Main back-up source lighting|Principal relâmpago fonte de back-up
@@ -1654,17 +1720,32 @@ Name=C56
 Start=138
 Len=3
 
+[ValueSet]
+Label=Valueset
+Name=C56_VS1
+Link=3
+
 [Item]
 Label=Capacity battery|capacidade de bateria
 Name=C57
 Start=141
 Len=3
 
+[ValueSet]
+Label=Valueset
+Name=C57_VS1
+Link=3
+
 [Item]
 Label=What is the voltage (V) of the rechargeable batteries?
 Name=C58
 Start=144
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C58_VS1
+Link=2
 
 [Item]
 Label=What is the watt hours  (Wh) stated on the batteries?
@@ -1689,6 +1770,13 @@ Label=What is the capacity of the inverter?|Carregador de celular
 Name=C61
 Start=152
 Len=4
+
+[ValueSet]
+Label=Valueset
+Name=C61_VS1
+Link=4
+Value=0:8887
+Value=8888;Don't know|Não sabe|Hajui
 
 [Item]
 Label=Number of years had device|Número de anos em que teve o dispositivo
@@ -1999,7 +2087,7 @@ Value='q      ';Other|De outros|Nyingine
 Label=C Electric generator set|C grupo gerador eléctrico
 Name=C_ELECTRIC_GENERATOR_SET
 RecordTypeValue='3'
-RecordLen=168
+RecordLen=174
 
 [Item]
 Label=Share generator other households|Compartilhar gerados com outras famílias
@@ -2019,11 +2107,21 @@ Name=C90
 Start=104
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C90_VS1
+Link=2
+
 [Item]
 Label=Generator capacity|capacidade do gerador
 Name=C91
 Start=106
 Len=5
+
+[ValueSet]
+Label=Valueset
+Name=C91_VS1
+Link=5
 
 [Item]
 Label=What used generator for|O gerador usado para
@@ -2035,8 +2133,8 @@ DataType=Alpha
 [ValueSet]
 Label=What used generator for|O gerador usado para
 Name=C92_VS1
-Value='a   ';a|Iluminação|Kwa ajili ya mwangaza
-Value='b   ';b|Eletrodomésticos|Kwa ajili ya vifaa vya umeme
+Value='a   ';Lighting|Iluminação|Kwa ajili ya mwangaza
+Value='b   ';Appliances|Eletrodomésticos|Kwa ajili ya vifaa vya umeme
 Value='c   ';Home-based income activity|Atividade de renda baseado em casa|Kwa ajili ya shughuli za kipato cha nyumbani
 Value='q   ';Other|De outros|Nyingine, taja
 
@@ -2071,11 +2169,21 @@ Name=C94
 Start=128
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C94_VS1
+Link=2
+
 [Item]
 Label=Years used generator|Anos de uso do gerador
 Name=C95
 Start=130
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C95_VS1
+Link=2
 
 [Item]
 Label=Own or rent generator|gerador próprio ou alugado
@@ -2094,12 +2202,17 @@ Value=3;Use the generator for free|Usa o gerador de graça|Hutumia jenereta bure
 Label=Amount paid to use generator per month|Valor pago por mês para usar o gerador
 Name=C97
 Start=133
-Len=5
+Len=8
+
+[ValueSet]
+Label=Valueset
+Name=C97_VS1
+Link=8
 
 [Item]
 Label=In the last 12 months, did you spend anything on repairs/parts/ maintenance of the generator?
 Name=C98
-Start=138
+Start=141
 Len=1
 
 [ValueSet]
@@ -2110,13 +2223,18 @@ Link=133482376
 [Item]
 Label=Amount repair generator|Montante pago para reparacção
 Name=C99
-Start=139
-Len=5
+Start=142
+Len=8
+
+[ValueSet]
+Label=Valueset
+Name=C99_VS1
+Link=8
 
 [Item]
 Label=Fuel generator|gerador de combustível
 Name=C100
-Start=144
+Start=150
 Len=2
 
 [ValueSet]
@@ -2130,13 +2248,18 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=Quantity of fuel generator 30 days|Quantidade de combustível
 Name=C101
-Start=146
+Start=152
 Len=3
+
+[ValueSet]
+Label=Valueset
+Name=C101_VS1
+Link=3
 
 [Item]
 Label=Pay for fuel generator|Paga combustível para o gerador
 Name=C102
-Start=149
+Start=155
 Len=1
 
 [ValueSet]
@@ -2148,13 +2271,18 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Amount spent on fuel last 30 days|Montante gasto em combustível últimos 30 dias
 Name=C103
-Start=150
+Start=156
 Len=5
+
+[ValueSet]
+Label=Valueset
+Name=C103_VS1
+Link=5
 
 [Item]
 Label=Certain months fuel less available|Alguns meses combustível menos disponíveis
 Name=C104
-Start=155
+Start=161
 Len=1
 
 [ValueSet]
@@ -2166,19 +2294,29 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Hours of generator available|Horas disponíveis do gerador
 Name=C105
-Start=156
+Start=162
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C105_VS1
+Link=2
 
 [Item]
 Label=Hours of generator available evening|Horas disponíveis de noite para o gerador
 Name=C106
-Start=158
+Start=164
 Len=2
+
+[ValueSet]
+Label=Valueset
+Name=C106_VS1
+Link=2
 
 [Item]
 Label=Appliances damaged generator|aparelhos danificados pelo Gerador
 Name=C107
-Start=160
+Start=166
 Len=2
 
 [ValueSet]
@@ -2191,7 +2329,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Most serious problems generator|problemas mais grave do gerador
 Name=C108
-Start=162
+Start=168
 Len=2
 
 [ValueSet]
@@ -2210,7 +2348,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=More problems generator|Mais problemas
 Name=C109
-Start=164
+Start=170
 Len=2
 
 [ValueSet]
@@ -2229,7 +2367,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Household members die or injury 12 months - generator|os membros da família morrem ou lesão
 Name=C110
-Start=166
+Start=172
 Len=1
 
 [ValueSet]
@@ -2241,7 +2379,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury - generator|Motivo da lesão
 Name=C111
-Start=167
+Start=173
 Len=2
 
 [ValueSet]
@@ -2322,11 +2460,21 @@ Name=C118
 Start=130
 Len=8
 
+[ValueSet]
+Label=Valueset
+Name=C118_VS1
+Link=8
+
 [Item]
 Label=How much spend on rechargable batteries per month|Quanto gasta em baterias recarregáveis por mês
 Name=C119
 Start=138
 Len=8
+
+[ValueSet]
+Label=Valueset
+Name=C119_VS1
+Link=8
 
 [Item]
 Label=el source for rechargning|principal fonte que usa para recarregar
@@ -2349,6 +2497,11 @@ Name=C121
 Start=148
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C121_VS1
+Link=2
+
 [Item]
 Label=how many hours ech evening|quantas horas por noite usa baterias recarregar
 Name=C122
@@ -2368,11 +2521,21 @@ Name=C124
 Start=159
 Len=2
 
+[ValueSet]
+Label=Valueset
+Name=C124_VS1
+Link=2
+
 [Item]
 Label=What is the watt hours  (Wh) stated on the battery?
 Name=C125
 Start=161
 Len=4
+
+[ValueSet]
+Label=Valueset
+Name=C125_VS1
+Link=4
 
 [Item]
 Label=most serious problems|a maioria dos problemas graves
@@ -4302,6 +4465,11 @@ Start=106
 Len=8
 ItemType=SubItem
 
+[ValueSet]
+Label=Valueset
+Name=Q2A_VS1
+Link=8
+
 [Item]
 Label=B. Produced/Acquired
 Name=Q2B
@@ -4309,12 +4477,22 @@ Start=114
 Len=8
 ItemType=SubItem
 
+[ValueSet]
+Label=Valueset
+Name=Q2B_VS1
+Link=8
+
 [Item]
 Label=C. Received as a gift/Donation
 Name=Q2C
 Start=122
 Len=8
 ItemType=SubItem
+
+[ValueSet]
+Label=Valueset
+Name=Q2C_VS1
+Link=8
 
 [Item]
 Label=Spendings on firewood and charcoal

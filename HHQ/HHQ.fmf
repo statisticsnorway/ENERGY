@@ -1920,6 +1920,7 @@ Name=C18
 Position=101,488,228,508
 Item=C18,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -1932,6 +1933,7 @@ Name=C19
 Position=101,518,228,538
 Item=C19,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2006,6 +2008,7 @@ Name=C25
 Position=189,747,232,767
 Item=C25,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2018,6 +2021,7 @@ Name=C26
 Position=172,778,243,798
 Item=C26,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2069,6 +2073,7 @@ Name=C30
 Position=63,909,176,929
 Item=C30,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2081,6 +2086,7 @@ Name=C31
 Position=154,942,239,962
 Item=C31,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2166,6 +2172,7 @@ Name=C38
 Position=77,1132,106,1152
 Item=C38,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2178,6 +2185,7 @@ Name=C39
 Position=77,1162,106,1182
 Item=C39,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2190,7 +2198,7 @@ Name=C40
 Position=99,1191,128,1211
 Item=C40,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2203,7 +2211,7 @@ Name=C41
 Position=99,1221,128,1241
 Item=C41,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -2405,6 +2413,7 @@ Name=C56
 Position=148,111,191,131
 Item=C56,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=5
   
 [Text]
@@ -2417,6 +2426,7 @@ Name=C57
 Position=148,141,191,161
 Item=C57,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=5
   
 [Text]
@@ -2429,6 +2439,7 @@ Name=C58
 Position=263,171,292,191
 Item=C58,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=5
   
 [Text]
@@ -2441,6 +2452,7 @@ Name=C59
 Position=246,195,317,215
 Item=C59,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=5
   
 [Text]
@@ -2466,7 +2478,7 @@ Name=C61
 Position=146,251,203,271
 Item=C61,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=ComboBox
 Form=5
   
 [Text]
@@ -2843,6 +2855,7 @@ Name=C90
 Position=138,110,167,130
 Item=C90,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2855,6 +2868,7 @@ Name=C91
 Position=138,140,209,160
 Item=C91,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2893,6 +2907,7 @@ Name=C94
 Position=138,226,167,246
 Item=C94,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2905,6 +2920,7 @@ Name=C95
 Position=132,256,161,276
 Item=C95,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2927,9 +2943,10 @@ Text=C96
   
 [Field]
 Name=C97
-Position=132,316,203,336
+Position=132,316,245,336
 Item=C97,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2952,9 +2969,10 @@ Text=C98
   
 [Field]
 Name=C99
-Position=131,371,202,391
+Position=131,371,244,391
 Item=C99,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -2980,6 +2998,7 @@ Name=C101
 Position=138,440,181,460
 Item=C101,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -3005,6 +3024,7 @@ Name=C103
 Position=138,500,209,520
 Item=C103,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -3030,6 +3050,7 @@ Name=C105
 Position=138,560,167,580
 Item=C105,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -3042,6 +3063,7 @@ Name=C106
 Position=138,590,167,610
 Item=C106,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=6
   
 [Text]
@@ -3202,6 +3224,7 @@ Name=C118
 Position=98,239,211,259
 Item=C118,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -3214,6 +3237,7 @@ Name=C119
 Position=98,269,211,289
 Item=C119,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -3239,6 +3263,7 @@ Name=C121
 Position=98,329,127,349
 Item=C121,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -3263,6 +3288,7 @@ Name=C123
 Position=98,449,211,469
 Item=C123,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -3275,6 +3301,7 @@ Name=C124
 Position=98,479,127,499
 Item=C124,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -3287,6 +3314,7 @@ Name=C125
 Position=192,508,249,528
 Item=C125,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=7
   
 [Text]
@@ -6178,8 +6206,10 @@ Name=Q2A
 Position=0,0,113,20
 Item=Q2A,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
   
 [Text]
+Position=0,0,34,20
 Text=Q2A
  
 [EndColumn]
@@ -6196,8 +6226,10 @@ Name=Q2B
 Position=0,0,113,20
 Item=Q2B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
   
 [Text]
+Position=0,0,34,20
 Text=Q2B
  
 [EndColumn]
@@ -6214,8 +6246,10 @@ Name=Q2C
 Position=0,0,113,20
 Item=Q2C,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
   
 [Text]
+Position=0,0,34,20
 Text=Q2C
  
 [EndColumn]
