@@ -775,7 +775,6 @@ postproc
 PROC B1
 
 preproc
-
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(179));
 	endif;
@@ -951,7 +950,7 @@ preproc
 	endif;
 
 	if c4 = 1 then
-		if pos("1", c5) > 0 then
+		if pos("a", c5) > 0 then
 			inc(i);
 			code = 3;
 			powerSources(i) = 3;
@@ -959,7 +958,7 @@ preproc
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
 
-		if pos("2", c5) > 0 then
+		if pos("b", c5) > 0 then
 			inc(i);
 			code = 7;
 			powerSources(i) = 7;
@@ -967,7 +966,7 @@ preproc
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
 
-		if pos("3", c5) > 0 then
+		if pos("c", c5) > 0 then
 			inc(i);
 			code = 8;
 			powerSources(i) = 8;
@@ -1150,8 +1149,8 @@ PROC C26
 postproc
 
 	numeric	rangeStart = 1000,
-			rangeEnd = 99999,
-			rangeUnknown = 88;
+			rangeEnd = 88887,
+			rangeUnknown = 88888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
 		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
@@ -1231,7 +1230,7 @@ PROC C39
 
 PROC C40
 
-	if $ in 0,88 then
+	if $ in 0,66,88 then
 		skip to C45;
 	endif;
 
@@ -1303,8 +1302,8 @@ PROC C56
 postproc
 
 	numeric rangeStart = 20,
-			rangeEnd = 600,
-			rangeUnknown = 88;
+			rangeEnd = 887,
+			rangeUnknown = 888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
 		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
@@ -1317,7 +1316,7 @@ PROC C57
 postproc
 
 	numeric	rangeStart = 20,
-			rangeEnd = 900,
+			rangeEnd = 887,
 			rangeUnknown = 888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
@@ -1330,7 +1329,7 @@ PROC C58
 
 preproc
 
-	if C56 in 20:600 and C57 in 20:887,889:900 then
+	if C56 in 20:887 and C57 in 20:887,889:900 then
 		skip to C59;
 	endif;
 
@@ -1496,6 +1495,11 @@ PROC C94
 	endif;
 
 
+PROC C96
+postproc
+	if $ = 3 then
+		skip to C98;
+	endif;
 PROC C98
 
 	if $ = 2 then
@@ -1665,8 +1669,8 @@ PROC C125
 postproc
 
 	numeric rangeStart = 200,
-			rangeEnd = 600,
-			rangeUnknown = 88;
+			rangeEnd = 6000,
+			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
 		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
@@ -2197,7 +2201,7 @@ postproc
 		errmsg(tr(151));
 		reenter;
 	endif;
-	If $ in 13, 18, 66, 55 then
+	If $ in 13, 18, 99, 55 then
 		skip to I29 ;
 	endif;
 
