@@ -1493,7 +1493,7 @@ Len=2
 [ValueSet]
 Label=Valueset
 Name=C40_VS1
-Value=1:65
+Value=0:65
 Value=66;No outages/blackouts
 Value=88;Don't know|Não sabe|Hajui
 
