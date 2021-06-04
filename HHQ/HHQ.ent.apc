@@ -711,7 +711,7 @@ preproc
 
 	elseif getlanguage() = "SW" and country= "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "PT" and country= "MZ" then
+	elseif getlanguage() = "EN" and country= "MZ" then
 		setvalueset($,EDUC_EN_MZ);
 	elseif getlanguage() = "PT" and country= "MZ" then
 		setvalueset($,EDUC_MZ);
