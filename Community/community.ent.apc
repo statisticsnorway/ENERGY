@@ -114,11 +114,11 @@ preproc
 	endif;
 
 postproc
-	if  pos("9", $) > 0 and length(strip($)) > 1 then
+	if  (pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0) and length(strip($)) > 2 then
 		errmsg(tr(8));
 		reenter;
     endif;
-	if  pos("9", $) > 0 then
+	if  pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0 then
 	  skip to D4;
 	endif;
 

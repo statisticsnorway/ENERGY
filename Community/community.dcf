@@ -304,7 +304,11 @@ Value='03              ';Diesel/gasoline generator|Gerador|Jenereta
 Value='04              ';Solar home system|Sistema Solar caseiro|Mfumo wa jua nyumbani
 Value='05              ';Solar lantern / lighting system|Sistema de lanterna / iluminação Solar|Umeme Taa za umeme wa jua/Mfumo wa mwangaza
 Value='06              ';Rechargeable battery|Bateria recarregável|Betri inayoweza kuchajiwa
-Value='66              ';No electric power|Sem energia elétrica|Hakuna umeme
+Value='07              ';Wind power
+Value='08              ';No electric power in community, but grid in neighbour community
+Value='09              ';No electric power in community, but can charge batteries and mobiles in neighbour community
+Value='10              ';No electric power in this or the neighbour community, but can charge mobiles further away within walking distance
+Value='66              ';No electric power in this or neighbour communities within walking distance
 
 [Item]
 Label=How far is the nearest [TANESCO/EDM]-office?
