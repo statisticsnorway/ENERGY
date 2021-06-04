@@ -3,8 +3,8 @@ PROC GLOBAL
         // Parameters to change for a country
 		//NB: Rembember to swap comment away lines for whether to sync to dropbox or cswebserver too 
 		//(there are 3 functions to change: DownloadMdownloadMapap() and syncHQ())
-        String syncUrl = "http://197.249.5.210:8080/energia/api";
-        String country = "MZ";
+        String syncUrl;// = "http://197.249.5.210:8080/energia/api";
+        String country;
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -692,7 +692,36 @@ PROC GLOBAL
 	end;
 	
 
+	//Functions for user bar
+	
+	function setCountry()
+		numeric optionNo = accept(tr(33), "Mozambique - Portugueze", 
+		   								 "Tanzania - KiSwahili", 
+										 "Mozambique - English", 
+										 "Tanzania - English");
+		if optionNo = 1 then
+			country = "MZ";
+			setlanguage("PT");
+		elseif optionNo = 2 then
+			country = "TZ";
+			setlanguage("SW");
+		elseif optionNo = 3 then
+			country = "MZ";
+			setLanguage("EN");
+		else
+			country = "TZ";
+			setLanguage("EN");
+		endif;
+		saveSetting("Country", country);
+	end;
+
+
 PROC MENU_FF
+preproc
+	userbar(clear);
+	userbar(add button, makeText(tr(32)), setCountry());
+	userbar(show);
+
 postproc
 	//Writing the pff file to start up correctly next time
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -700,7 +729,13 @@ postproc
 
 
 PROC MENU_QUEST_FORM
-
+preproc
+	country = loadsetting("Country");
+	if country = "" then
+		setCountry();
+	endif;
+	errmsg("Country: %s", country);
+		
 postproc
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");	
 	
