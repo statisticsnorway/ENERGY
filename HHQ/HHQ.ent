@@ -15,6 +15,7 @@ ParadataRecordInitialPropertyValues=Yes
 ParadataDeviceStateMinutes=5
 [External Dictionaries]
 File=..\Sampling\sample.dcf
+File=..\Menu\CountryVariables.dcf
 [AppCode]
 File=.\HHQ.ent.apc
 [Message]
@@ -26,3 +27,4 @@ File=.\HHQ.fmf
 [Dictionary Types]
 Dict-Type=.\HHQ.dcf,Input,.\HHQ.fmf
 Dict-Type=..\Sampling\sample.dcf,External
+Dict-Type=..\Menu\CountryVariables.dcf,External

@@ -37,7 +37,7 @@ DataType=Alpha
 
 [Item]
 Label=Gridprice
-Name=GRIDPRICE
+Name=GPRICE
 Start=78
 Len=7
 
