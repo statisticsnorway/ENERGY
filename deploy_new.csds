@@ -101,6 +101,9 @@
       "path": ".\\Listing\\Listing.ent"
     },
     {
+      "path": ".\\LookupFiles\\countryVariables.csdb"
+    },
+    {
       "path": ".\\LookupFiles\\Regions.csdb"
     },
     {
@@ -127,8 +130,10 @@
       "uploadForSync": true
     },
     {
-      "path": ".\\Menu\\Menu.dcf",
-      "uploadForSync": true
+      "path": ".\\Menu\\CountryVariables.dcf"
+    },
+    {
+      "path": ".\\Menu\\Menu.dcf"
     },
     {
       "path": ".\\Menu\\Regions.dcf",
