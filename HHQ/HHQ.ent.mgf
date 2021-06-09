@@ -286,6 +286,7 @@ EN(176) You said that your main source of electrical power is a %s. We would now
 PT(176) Disse que a sua principal fonte de energia elétrica é a %s. Agora gostaríamos de lhe fazer algumas perguntas sobre este dispositivo. Gostaríamos que considerasse apenas dispositivos em condições de funcionamento. Se tiver mais do que um dispositivo, pense no principal dispositivo solar.
 
 EN(177) We would now like to ask you some questions about your electric generator
+PT(177) Agora gostaríamos de fazer algumas perguntas sobre o seu gerador elétrico
 
 EN(178) We would now like to ask you some questions about your externally recharged battery.
 PT(177) Agora gostaríamos de lhe fazer algumas perguntas sobre o seu gerador elétrico
@@ -342,7 +343,7 @@ EN(195) May I please have a look at your kitchen? \n\nI would like to record the
 PT(195) Posso dar uma olhada na sua cozinha? \n\nI gostaria de gravar a forma e o tamanho da cozinha. \n\n\nEnumerator: Estimar o tamanho do espaço da cozinha preenchendo os seguintes campos. Um passo = 3 pés ou 0,75 metros. Aproximadamente um passo a pé.
 
 EN(196) In this section we would like to ask you about the kind of stoves you use for cooking and its details.
-PT (196)NESTA secção, gostaríamos de lhe perguntar sobre o tipo de fogões que utiliza para cozinhar e seus detalhes.
+PT(196) Nesta secção, gostaríamos de lhe perguntar sobre o tipo de fogões que utiliza para cozinhar e seus detalhes.
 
 EN(197) The next questions are about space and water heating
 PT(197) As próximas questões são sobre o espaço e o aquecimento da água
@@ -359,4 +360,5 @@ PT(200) Agora gostaríamos perguntar sobre as luzes de segurança/iluminação p
 SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
 
 EN(201) No of the women in the household are available for interview
+PT(201) Nenhuma das mulheres do agregado familiar está disponível para entrevista
 

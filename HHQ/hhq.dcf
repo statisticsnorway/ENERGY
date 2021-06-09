@@ -21,7 +21,7 @@ Name=HHQ_QUEST
 [IdItems]
 
 [Item]
-Label=Head of household|Chefe de família
+Label=Head of household|Chefe do agregado familiar
 Name=AA14
 Start=2
 Len=30
@@ -35,7 +35,7 @@ Len=30
 DataType=Alpha
 
 [Item]
-Label=Region Code|código do estado
+Label=Region Code|código da provincia
 Name=AA1
 Start=62
 Len=2
@@ -53,13 +53,13 @@ Start=66
 Len=3
 
 [Item]
-Label=Locality Code
+Label=Locality Code|Código de localidade
 Name=AA4
 Start=69
 Len=2
 
 [Item]
-Label=Village code
+Label=Village code|código vila/cidade
 Name=AA5
 Start=71
 Len=2
@@ -204,19 +204,19 @@ Value=3;Yes, but only in kind|Sim, mas apenas em espécie|Ndio, vitu tu
 Value=4;No|Não|Hapana
 
 [Item]
-Label=Household head main respondent|Mesma pessoa?
+Label=Household head main respondent|O chefe do AF é o principal respondente?
 Name=AA17
 Start=172
 Len=1
 
 [ValueSet]
-Label=Household head main respondent|Mesma pessoa?
+Label=Household head main respondent|O chefe do AF é o principal respondente?
 Name=AA17_VS1
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Item]
-Label=Name of main respondent|Nome do entrevistado?
+Label=Name of main respondent|Nome do principal respondente?
 Name=AA18
 Start=173
 Len=30

@@ -123,7 +123,7 @@ Value=3;Seasonal away|sazonalmente fora|Kaya haipo kwa kipindi kirefu
 Value=4;Vacated|desocupado|Kaya imehama
 
 [Item]
-Label=Name of head of household|Nome do chefe da família
+Label=Name of head of household|Nome do chefe do agregado familiar
 Name=LL10
 Start=67
 Len=30
