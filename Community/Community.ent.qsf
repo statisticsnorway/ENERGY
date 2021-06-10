@@ -656,8 +656,8 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?&#160;</span></p>
-            <p>&#160;</p>
+            <p>~~elecAccess~~, has it gotten easier or harder for new households to connect to the grid, or is the situation about the same?<br></p><div><br></div>
+            <p>&nbsp;</p>
             
           PT: |
             <p>A ~~elecAccess~~, tem facitado ou dificultado a ligação à rede eléctrica aos novos agregados familiares ou a situação está na mesma?&nbsp;</p><p></p>
@@ -676,7 +676,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?&#160;</span></p>
+            <p>~~elecAccess~~, has it gotten cheaper or more expensive to connect to the grid, or is the price about the same?<br></p><div><br></div>
             
           PT: |
             <p>~~elecAccess~~, tem tornado o preço mais barrato ou mais caro a ligação à rede eléctrica ou a situação está na mesma?&nbsp;</p><p><br></p><p></p><p></p>
@@ -695,7 +695,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~,  has there been less or more black-oust or brown-outs  in your community, or is the frequencie about the same?&#160;</span></p>
+            <p>~~elecAccess~~, has there been less or more black-outs or brown-outs in your community, or is the frequencie about the same?<br></p><div><br></div>
             
           PT: |
             ~~elecAccess~~, tem havido mais ou menos cortes de energia/apagão,na sua comunidade ou a situação está na mesma?&nbsp;<p></p>
@@ -714,7 +714,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the price of using electricity become higher or lower, or is the price about the same?&#160;</span></p>
+            <p>~~elecAccess~~, has the price of using electricity become higher or lower, or is the price about the same?<br></p><div><br></div>
             
           PT: |
             ~~elecAccess~~, o preço de uso de energia tornou-se mais elevado ou ou mais baixo, ou asituação está na mema?&nbsp;<p></p>
@@ -733,7 +733,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?&#160;</span></p>
+            <p>~~elecAccess~~, is there electricity available for more or less hours at night, or is the hours of electricity supply at night about the same?<br></p><div><br></div>
             
           PT: |
             <span style="background-color: rgb(0, 0, 255);"></span>~~~elecAccess~~, a electricidade está disponível para mais ou menos horas&nbsp; à noite&nbsp; ou as horas de disponibilidade de energia à noite está na mesma?<br><p></p>
@@ -774,7 +774,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;background-color:blue;">~~elecAccess~~, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?&#160;</span></p>
+            <p>~~elecAccess~~, has the repair and maintenance service from the provider gotten worse or better, or has it stayed the same?</p>
             
           PT: |
             ~~elecAccess~~, os serviços de reparação ou de manutenção do fornrecedor melhoram ou pioraram, ou a situação está na mesma?&nbsp;<p></p>
@@ -1322,6 +1322,7 @@ questions:
             
           SW: |
             <p>Sehemu hii ya mwisho ina maswali machache yanayohusiana na janga lililoupata ulimwengu (COVID-19) na kipindi ambacho shule zilizofungwa, Machi 2020.</p><p>Sehemu zingine za dodoso hili la jamii ni pamoja na maswali kadhaa juu ya maisha na hali ya uchumi na hali ya maisha leo na miaka 5 iliyopita. Hii itatuwezesha kukadiria mabadiliko katika miaka hii kwa jamii zilizoweza kupata umeme kwa muda mrefu ikilinganishwa na jamii zilizopata umeme muda mfupi tu au ambazo bado hazijapata umeme hadi leo. Tungependa kukuuliza ikiwa hali ya watu katika jamii hii imebadilika zaidi ya mwaka jana kutoka Machi 2020 hadi leo.</p><p>Je, nafasi za kazi katika jamii hii zimeongezeka, zimebaki zile zile au zimepungua kwa mwaka jana kutoka Machi 2020 hadi leo?<br></p><p></p>
+            
   - name: COMMUNITY_DICT.GP2
     conditions:
       - questionText:
@@ -1333,6 +1334,7 @@ questions:
             
           SW: |
             Je,&nbsp; fursa za biashara katika jamii hii zimeongezeka, zimebaki zile zile au zimepungua kwa mwaka jana kutoka Machi 2020 hadi leo?<p></p>
+            
   - name: COMMUNITY_DICT.GP3
     conditions:
       - questionText:
@@ -1344,15 +1346,16 @@ questions:
             
           SW: |
             Je,&nbsp; upatikanaji wa masoko katika jamii hii umeongezeka, umebaki vile vile au umepungua kwa mwaka jana kutoka Machi 2020 hadi leo?<p></p>
+            
   - name: COMMUNITY_DICT.H1
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size: 12px;">Has a <span style="color: rgb(0, 128, 0);">Power lines program: Con</span>structi<span style="color: rgb(0, 128, 0);">on, maintenance or rehabilitation</span> been implemented in the community in the last 5 years?&nbsp;</span></p>
-            <p><span style="font-size: 10px;"><font color="#0000ff">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</font></span></p>
+            <p><span style="font-size: 12px;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Power lines program: Con</span><span style="font-size: 16px;">structi</span><span style="color: rgb(0, 128, 0); font-size: 16px;">on, maintenance or rehabilitation</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
+            <p><span style="font-size: 16px;"><font color="#0000ff">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</font></span></p>
             
           PT: |
-            <p><span class="VIiyi" jsaction="mouseup:BR6jm" jsname="jqKxS" lang="pt" style="-webkit-tap-highlight-color: transparent; display: inline; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="3" jsdata="uqLsIf;_;$71" style="-webkit-tap-highlight-color: transparent; cursor: pointer; font-size: 12px;">Existe algum programa de ligaçaão eletrica: construção, manutenção ou reabilitação implementado na comunidade nos últimos 5 anos?</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span></p><p><span style="background-color: rgb(245, 245, 245);"><br></span><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="0" jsdata="uqLsIf;_;$68" style="-webkit-tap-highlight-color: transparent; cursor: pointer; background-color: rgb(210, 227, 252); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap;"><span jsaction="click:qtZ4nf,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:qtZ4nf,c2aHje" jsname="W297wb" style="-webkit-tap-highlight-color: transparent; font-size: 14px;">Dispositivos que usam energia solar podem ser usados mesmo por residências remotas sem acesso à rede.</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;">Ele usa energia solar e dependendo da capacidade do sistema pode alimentar tudo, desde uma única luz até aparelhos como rádio, ventilador, TV etc.</span></p><p><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;"><br></span></p><p></p><p></p><p></p>
+            <p><span class="VIiyi" jsaction="mouseup:BR6jm" jsname="jqKxS" lang="pt" style="-webkit-tap-highlight-color: transparent; display: inline; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="3" jsdata="uqLsIf;_;$71" style="-webkit-tap-highlight-color: transparent; cursor: pointer; font-size: 16px;">Existe algum programa de ligaçaão eletrica: construção, manutenção ou reabilitação implementado na comunidade nos últimos 5 anos?</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 16px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span></p><p><span style="background-color: rgb(245, 245, 245);"><br></span><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" class="JLqJ4b ChMk0b" data-language-for-alternatives="pt" data-language-to-translate-into="en" data-phrase-index="0" jsdata="uqLsIf;_;$68" style="-webkit-tap-highlight-color: transparent; cursor: pointer; background-color: rgb(210, 227, 252); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 18px; white-space: pre-wrap;"><span jsaction="click:qtZ4nf,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:qtZ4nf,c2aHje" jsname="W297wb" style="-webkit-tap-highlight-color: transparent; font-size: 14px;">Dispositivos que usam energia solar podem ser usados mesmo por residências remotas sem acesso à rede.</span></span><span style="font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(245, 245, 245);"> </span><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;">Ele usa energia solar e dependendo da capacidade do sistema pode alimentar tudo, desde uma única luz até aparelhos como rádio, ventilador, TV etc.</span></p><p><span style="font-size: 14px; background-color: rgb(245, 245, 245); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; white-space: pre-wrap;"><br></span></p><p></p><p></p><p></p>
             
           SW: |
             <p>Je! Kuna programu yoyote katika zifuatazo imetekelezwa katika jamii hii katika kipindi cha miaka 5 iliyopita?</p><p><p>Programu ya laini za umeme: Ujenzi, matengenezo au ukarabati?</p><p><span class="instruction">Vifaa vinavyotumia nguvu ya umeme jua vinaweza kutumiwa hata na kaya za mbali ambazo hazijafikiwa na gridi ya taifa. Vinatumia nguvu ya&nbsp; jua na vinategemea uwezo wa mfumo huo. Vifaa hivi vinaweza kupokea umeme&nbsp; kutoka kwenye chanzo kimoja mfano&nbsp; vifaa kama redio, feni, TV nk.</span><br></p></p>
@@ -1368,11 +1371,11 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:12px;color:#000000;">Has a <span style="color:#008000;">Solar based community mini-grid program</span> been implemented in the community in the last 5 years?&#160;</span></p>
-            <p><span style="font-size:10px;color:#0000ff;">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&#160;</span></p>
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Solar based community mini-grid program</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p><span style="font-size: 16px;">
+            </span><p><span style="font-size: 16px; color: rgb(0, 0, 255);">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</span></p>
             
           PT: |
-            <p>Na comunidade foi implementado um programa comunitário solar de mini-redes nos últimos 5 anos?&nbsp;</p><p><font color="#0000ff"><span style="font-size: 10px;">Os dispositivos que utilizam energia solar podem ser utilizados mesmo por famílias remotas(distantes) sem acesso à rede eléctrica. Utiliza energia solar e depende da capacidade do sistema, pode alimentar tudo, desde uma única luz até aparelhos como um rádio, ventuinha, TV, etc.&nbsp;</span></font><p></p></p>
+            <p><span style="font-size: 16px;">Na comunidade foi implementado um programa comunitário solar de mini-redes nos últimos 5 anos?&nbsp;</span></p><p><font color="#0000ff"><span style="font-size: 16px;">Os dispositivos que utilizam energia solar podem ser utilizados mesmo por famílias remotas(distantes) sem acesso à rede eléctrica. Utiliza energia solar e depende da capacidade do sistema, pode alimentar tudo, desde uma única luz até aparelhos como um rádio, ventuinha, TV, etc.&nbsp;</span></font></p><p></p><p></p>
             
           SW: |
             <p>Programu ya gridi ndogo&nbsp; ya jua kwa jamii hii?</p><p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Vifaa vinavyotumia nguvu ya umeme jua vinaweza kutumiwa hata na kaya za mbali ambazo hazijafikiwa na gridi ya taifa. Vinatumia nguvu ya&nbsp; jua na vinategemea uwezo wa mfumo huo. Vifaa hivi vinaweza kupokea umeme&nbsp; kutoka kwenye chanzo kimoja mfano&nbsp; vifaa kama redio, feni, TV nk.</span><br></p></p>
@@ -1388,8 +1391,8 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:12px;color:#000000;">Has an <span style="color:#008000;">Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator</span> been implemented in the community in the last 5 years?&#160;</span></p>
-            <p><span style="font-size:10px;color:#0000ff;">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&#160;</span></p>
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has an </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p><span style="font-size: 16px;">
+            </span><p><span style="font-size: 16px; color: rgb(0, 0, 255);">Devices using solar power can be used even by remote households with no access to the grid. It uses solar power and dependent on the capacity of the system it can power everything from a single light up to appliances like a radio, fan, TV etc.&nbsp;</span></p>
             
           PT: |
             <p>Tem um programa de distribuição de energia off-grid para agregados famíliares individuais, (por exemplo lanternas solares, sistemas solares domésticos, gerador elétrico) que foi implementado na comunidade nos últimos 5 anos?&nbsp;</p><p><font color="#0000ff">Os dispositivos que utilizam energia solar podem ser utilizados mesmo por agregados famíliares remotas(distantes) sem acesso à rede. Utiliza energia solar e depende da capacidade do sistema, pode alimentar tudo, desde uma única luz até aparelhos como um rádio, ventoinha, TV, etc.&nbsp;</font></p><p></p>
@@ -1408,7 +1411,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:12px;color:#000000;">Has any <span style="color:#004000;">Other development program related to power supply</span> been implemented in the community in the last 5 years?&#160;</span></p>
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has any </span><span style="color: rgb(0, 64, 0); font-size: 16px;">Other development program related to power supply</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
             
           PT: |
             Algum outro programa de desenvolvimento relacionado com o fornecimento de energia foi implementado na comunidade nos últimos 5 anos?&nbsp;<p></p>
@@ -1427,7 +1430,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:12px;color:#000000;">Has a <span style="color:#008000;">Solar irrigation program for farmers</span> been implemented in the community in the last 5 years?&#160;</span></p>
+            <p><span style="font-size:12px;color:#000000;"><span style="font-size: 16px;">Has a </span><span style="color: rgb(0, 128, 0); font-size: 16px;">Solar irrigation program for farmers</span><span style="font-size: 16px;"> been implemented in the community in the last 5 years?&nbsp;</span></span></p>
             
           PT: |
             Tem sido implementado um programa de irrigação solar para agricultores na comunidade nos últimos 5 anos?&nbsp;<p></p>

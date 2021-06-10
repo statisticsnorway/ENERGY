@@ -1726,6 +1726,7 @@ Name=GP1
 Position=329,73,344,93
 Item=GP1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=10
   
 [Text]
@@ -1738,6 +1739,7 @@ Name=GP2
 Position=330,109,345,129
 Item=GP2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=10
   
 [Text]
@@ -1750,6 +1752,7 @@ Name=GP3
 Position=329,152,344,172
 Item=GP3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=10
   
 [Text]
