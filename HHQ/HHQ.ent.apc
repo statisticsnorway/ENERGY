@@ -1,25 +1,17 @@
 ﻿PROC GLOBAL
 
 	// This will be set only in the Menu application as a parameter and will be fetched from there
-	String country;
+	String theCountry;
 
-	//Country specific variables
-	numeric gridPrice = 3700;	//country specific price to connect to the grid
-	numeric  highDevicePrice = 5000;//Country specific prices for solar devices
+	//Country specific variables. Content will be fetched from ../lookupFiles/countryVariables.csdb
+	numeric gridPrice;	//country specific price to connect to the grid
+	numeric  highDevicePrice;//Country specific prices for solar devices
 
-	//NB: When filling the following array with country specific cookstoves
-	//Please notice that the order is important: The two first elements should be wood stoves, the to last charcoal!
-	array String cookstove(4) = "COUNTRY SPECIFIC Aspirational wood ICS",
-								"LOCALLY AVAILABLE, popular affordable wood ICS",
-								"COUNTRY SPECIFIC Aspirational charcoal ICS",
-								"LOCALLY AVAILABLE, popular affordable charcoal ICS";
-	array cookStovePrices(4) = 2100,700,2100,700;	//Reference prices for the above defined cookStoves
+	
+	array String cookstove(4); //country specific cookstoves
+	array cookStovePrices(4);	//Reference prices for the above defined cookStoves
 
-	//Uncomment the line according to countiry
-	String ElectricityCompany = "Tanzania: TANESCO/REA, Mozambique: EDM";	//English version. Both
-	//String ElectricityCompany = "TANESCO/REA";	//Tanzania
-	//String ElectricityCompany = "EDM";			//Mozambique
-
+	String ElectricityCompany; //Name of electricity company
 
 
 	//Variables reused in multiple questions/fields or needed for CAPI questions. Need to be globally declared
@@ -97,7 +89,28 @@ preproc
 	// Fetch country parameter from Menu application
 	pff menu;
 	menu.load("../Menu/Menu.pff");
-	country = menu.getProperty("country");
+	theCountry = menu.getProperty("country");
+	
+	//Get country specific variables
+	COUNTRY = theCountry;
+	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
+		gridPrice = GPRICE;
+		highDevicePrice = DEVICEPRICE;
+		cookstove(1) = COOKSTOVE1;
+		cookstove(2) = COOKSTOVE2;
+		cookstove(3) = COOKSTOVE3;
+		cookstove(4) = COOKSTOVE4;
+		cookStovePrices(1) = COOKSTOVEPRICE1;
+		cookStovePrices(2) = COOKSTOVEPRICE2;
+		cookStovePrices(3) = COOKSTOVEPRICE3;
+		cookStovePrices(4) = COOKSTOVEPRICE4;
+		ElectricityCompany = ELCOMPANY;
+	else
+		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
+	endif;
+	errmsg("%s", cookStove(4));
+
+
 
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
@@ -602,13 +615,13 @@ preproc
 		skip to next;
 	endif;
 
-	if getlanguage() = "EN" and country = "TZ" then
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,READ_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,READ_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,READ_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,READ_MZ);
 	endif;
 
@@ -633,13 +646,13 @@ PROC AC4
 
 preproc
 
-	if getlanguage() = "EN" and country = "TZ" then
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -684,13 +697,13 @@ PROC AC8
 
 preproc
 
-	if getlanguage() = "EN" and country = "TZ" then
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -706,14 +719,14 @@ PROC AC9
 
 preproc
 
-	if getlanguage() = "EN" and country= "TZ" then
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
 
-	elseif getlanguage() = "SW" and country= "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN" and country= "MZ" then
+	elseif getlanguage() = "EN" and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT" and country= "MZ" then
+	elseif getlanguage() = "PT" and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 

@@ -1,0 +1,14 @@
+﻿Excel=.\users.xlsx
+InputDict=..\Menu\users.dcf
+OutputData=.\Users.csdb
+StartingRow=2
+CaseManagement=CreateNewFile
+RunOnlyIfNewer=No
+
+Mapping=USERS_REC;@1;Sheet1
+Mapping=USERS_REC.LOGIN;@1
+Mapping=TEAMNUMBER;@2
+Mapping=COUNTERSTART;@3
+Mapping=ROLE;@4
+Mapping=USERNAME;@5
+Mapping=PASSWORD;@6

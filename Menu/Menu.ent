@@ -24,6 +24,7 @@ File=..\Sampling\sample.dcf
 File=..\Community\community.dcf
 File=.\Regions.dcf
 File=.\users.dcf
+File=.\CountryVariables.dcf
 [AppCode]
 File=.\Menu.ent.apc
 [Message]
@@ -40,3 +41,4 @@ Dict-Type=..\Sampling\sample.dcf,External
 Dict-Type=..\Community\community.dcf,External
 Dict-Type=.\Regions.dcf,External
 Dict-Type=.\users.dcf,External
+Dict-Type=.\CountryVariables.dcf,External

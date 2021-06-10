@@ -3,8 +3,8 @@ PROC GLOBAL
         // Parameters to change for a country
 		//NB: Rembember to swap comment away lines for whether to sync to dropbox or cswebserver too 
 		//(there are 3 functions to change: DownloadMdownloadMapap() and syncHQ())
-        String syncUrl = "http://197.249.5.210:8080/energia/api";
-        String country = "MZ";
+        String syncUrl;// = "http://197.249.5.210:8080/energia/api";
+        String theCountry;
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -599,7 +599,8 @@ PROC GLOBAL
 
 		if questName = "HHQ" then
 			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
+			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
 		endif;
 
 		if questName = "Menu" then
@@ -610,6 +611,8 @@ PROC GLOBAL
 			pffContent = pffContent + "REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB\n";
 			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
 			pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
+
 		endif;
 
 		pffContent = pffContent + "[Parameters]\n";
@@ -623,7 +626,7 @@ PROC GLOBAL
 		pffContent = pffContent + "URBANRURAL=" + edit("Z", visualvalue(M_URBAN_RURAL)) + "\n";
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
-		pffContent = pffContent + "country=" + country + "\n";
+		pffContent = pffContent + "country=" + theCountry + "\n";
 
 		if questName <> "Menu" then
 			pffContent = pffContent + "OnExit=../Menu/Menu.pff\n";
@@ -692,7 +695,36 @@ PROC GLOBAL
 	end;
 	
 
+	//Functions for user bar
+	
+	function setCountry()
+		numeric optionNo = accept(tr(33), "Mozambique - Portugueze", 
+		   								 "Tanzania - KiSwahili", 
+										 "Mozambique - English", 
+										 "Tanzania - English");
+		if optionNo = 1 then
+			theCountry = "MZ";
+			setlanguage("PT");
+		elseif optionNo = 2 then
+			theCountry = "TZ";
+			setlanguage("SW");
+		elseif optionNo = 3 then
+			theCountry = "MZ";
+			setLanguage("EN");
+		else
+			theCountry = "TZ";
+			setLanguage("EN");
+		endif;
+		saveSetting("Country", theCountry);
+	end;
+
+
 PROC MENU_FF
+preproc
+	userbar(clear);
+	userbar(add button, makeText(tr(32)), setCountry());
+	userbar(show);
+
 postproc
 	//Writing the pff file to start up correctly next time
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -700,7 +732,22 @@ postproc
 
 
 PROC MENU_QUEST_FORM
-
+preproc
+	//Getting the right country and server name
+	theCountry = loadsetting("Country");
+	if theCountry = "" then
+		setCountry();
+	endif;
+	COUNTRY = theCountry;
+	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
+		syncUrl = SERVER;
+	else
+		errmsg(tr(2));
+		stop();
+	endif;
+	
+	
+		
 postproc
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");	
 	
@@ -1163,7 +1210,7 @@ onfocus
 		errmsg(tr(7));
 		stop(1);
 	endif;
-	string mapFileName = Country + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
+	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
 			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
 			+ ".mbtiles";
 		
