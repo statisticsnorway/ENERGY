@@ -3,8 +3,8 @@ PROC GLOBAL
         // Parameters to change for a country
 		//NB: Rembember to swap comment away lines for whether to sync to dropbox or cswebserver too 
 		//(there are 3 functions to change: DownloadMdownloadMapap() and syncHQ())
-        String syncUrl = "http://197.249.5.210:8080/energia/api";
-        String country = "MZ";
+        String syncUrl;// = "http://197.249.5.210:8080/energia/api";
+        String theCountry;
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -103,7 +103,7 @@ PROC GLOBAL
 	function downloadMap(string mapFileName)
 		
 		//First deleting the old files in order not to fill up the tablet
-		numeric del = filedelete("../maps/*.mbtiles");
+		numeric del = filedelete("../Maps/*.mbtiles");
 
 		//if syncconnect(CSWeb, syncUrl) = 1 then
 		if syncconnect(Dropbox) then	//Synching to dropbox for debugging
@@ -126,13 +126,11 @@ PROC GLOBAL
 
 			string pfileName = "HHQ_" + M_LOGIN +  ".cslog";
 			if fileexist("/ENERGY/Data/" + pFileName) then
-				errmsg("writing HHQ");
 				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
 			endif;
 			
 			pfileName = "Listing_" + M_LOGIN +  ".cslog";
 			if fileexist("/ENERGY/Data/" + pFileName) then
-				errmsg("Writing listing");
 				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
 			endif;
 		
@@ -148,7 +146,7 @@ PROC GLOBAL
 	function toggleView(string theFileName)
 		numeric reply = accept(tr(27), tr(28), tr(29), tr(30));
 		if reply = 1 then
-			HHmap.setBaseMap(theFileName);
+			HHmap.setBaseMap("../Maps/" + theFileName);
 		elseif reply = 2 then
 			HHmap.setBaseMap(Normal);
 		else
@@ -465,7 +463,7 @@ PROC GLOBAL
 	//Starting up the app with the right questionnaire
 	function launchQuest(string questDesc, string questName)
 		string questfileName = "../" + questName + "/" + questName + ".pff";
-	
+		
 		// Start HQQ, listing or community questionnaire
 		if execpff(questfileName, stop) = notappl then
 			errmsg(tr(2));
@@ -480,57 +478,87 @@ PROC GLOBAL
 	//	questName: Same as name of the application (HHQ, Listing, Community or Menu)
 	//	HH: Semicolon separated string containing Household Head and description of location (Only for HHQ. emtpy string otherwise)
 	//	serialNo: Serial number of household (Only for HHQ, NOTAPPL otherwise)
-	//	loggedIn: S (Logged in as Supervisor), I = Logged in as Interviewer, N = Not logged in
+	//	loggedIn: S (Logged in as Supervisor), I = Logged in as Interviewer, N = Not logged in	
 	function writePff(string questDesc, string questName, string HH, numeric serialNo, String theRole)
 		//Create pff file
 		string pffContent;
+		//errmsg("desc: %s, name: %s, HH: %s, serial: %d, theRole: %s",
+		//	questDesc, questName, HH, serialNo, theRole);
 		pffContent = "[Run Information]\n";
 		pffContent = pffContent + "Version=CSPro 7.6\n";
 		pffContent = pffContent + "AppType=Entry\n";
 		pffContent = pffContent + "Description=" + questDesc + "\n\n";
+		
+		if questName = "Menu" then
+			pffContent = pffContent + "ShowInApplicationListing=Always\n\n";
+		else
+			pffContent = pffContent + "ShowInApplicationListing=Never\n\n";
+		endif;
+
 
 		pffContent = pffContent + "[DataEntryInit]\n";
 		pffContent = pffContent + "Interactive=Ask\n";
 		if questName = "HHQ" then
-			//Need to decide whether it is partially saved or not
-			numeric spos = pos(";", HH);
-			string head = HH[1:spos-1];
-			string location = HH[spos+1];
-			
-			//Strip away extra text from location:
-			spos = pos("(partly", location);
+			//Need to decide whether it is partially saved, finished or not started
+			numeric spos = pos(maketext(tr(23)), HH);	//partly saved
+			numeric cpos = pos(makeText(tr(24)), HH);	//finished
+			numeric thePos;
 			if spos <> 0 then
-				location = location[1:spos-1];
-			else
-				spos = pos("(ready", location);
-				if spos <> 0 then
-					location = location[1:spos-1];
-				endif;
+				thePos = spos;
+			elseif cpos <> 0 then
+				thepos = cpos;
 			endif;
-			numeric found = 0;
 			
-			forcase HHQ_DICT do
-				if tstrip(AA14) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
-						and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
-						and AA3 = visualValue(M_SUBDISTRICT) and AA4 = visualValue(M_LOCALITY) and AA5 = visualValue(M_VILLAGE)
-						and AA6 = visualvalue(M_EA) and AA8 = serialNo
-						and tstrip(AALOGIN) = tstrip(M_LOGIN) then
-					found = 1;
-					break;
+			if thePos <> 0 then	//partly saved or completed
+				HH = HH[1:thepos-1];
+				thepos = pos(";", HH);
+				string head = HH[1:thepos-1];
+				string location = HH[thepos+1];
+				
+				string theKey = "";
+				forcase HHQ_DICT do
+				
+					if tstrip(AA14) = tstrip(head) and tstrip(ADDRESS_LOCATION) = tstrip(location)
+							and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
+							and AA3 = visualValue(M_SUBDISTRICT) and AA4 = visualValue(M_LOCALITY) and AA5 = visualValue(M_VILLAGE)
+							and AA6 = visualvalue(M_EA) and AA8 = serialNo
+							and tstrip(AALOGIN) = tstrip(M_LOGIN) then
+						
+						theKey = key(HHQ_DICT);
+						//errmsg("Searching for this (found: %d): %s=%s?, %s=%s?, %d=%d?,  %d=%d?, %d=%d?, %d=%d?, %d=%d?, %d=%d?, %d=%d?, %s=%s",
+						//	found, tstrip(AA14), tstrip(head), tstrip(ADDRESS_LOCATION), tstrip(location),
+						//	AA1, visualValue(M_REGION), AA2, visualValue(M_DISTRICT), AA3, visualValue(M_SUBDISTRICT),
+						//	AA4, visualValue(M_LOCALITY), AA5, visualValue(M_VILLAGE), AA6, visualvalue(M_EA), AA8, serialNo,
+						//	tstrip(AALOGIN), tstrip(M_LOGIN));
+			
+						break;
+					endif;
+				enddo;
+			
+				if theKey <> "" then
+					if ispartial(HHQ_DICT) then
+						pffContent = pffContent + "StartMode=Modify\n";
+					else
+						numeric acc = accept(tr(28), tr(29), tr(30));
+						if acc = 1 then
+							reenter M_HOUSEHOLD;
+						else
+							errmsg(tr(31));
+							pffContent = pffContent + "StartMode=Verify\n";
+						endif;
+					endif;
+					pffContent = pffContent + "Key=" + theKey + "\n";
+				else
+					errmsg(tr(7));
+					//pffContent = pffContent + "StartMode=Add\n";
 				endif;
-			enddo;
-			
-			if found = 1 then
-				string idString = concat(AA14, ADDRESS_LOCATION, edit("ZZ", AA1), edit("ZZ", AA2), edit("ZZZ", AA3),
-									edit("ZZ", AA4), edit("ZZ", AA5), edit("ZZ", AA6), edit("ZZZ", AA8), AALOGIN);
-				pffContent = pffContent + "StartMode=Modify;" + idString + "\n";
-			else
+			else	//Not partial or completed.
 				pffContent = pffContent + "StartMode=Add\n";
 			endif;
 
 		elseif questName = "Community" then
 			//Same for Community: Is it partially saved or not?
-			numeric found = 0;
+			string theKey = "";
 			forcase COMMUNITY_DICT do
 				if tstrip(C_LOGIN) = tstrip(M_LOGIN)
 						and C_A1 = visualValue(M_REGION)
@@ -539,53 +567,52 @@ PROC GLOBAL
 						and C_A4 = visualValue(M_LOCALITY)
 						and C_A5 = visualValue(M_VILLAGE)
 						and C_A6 = visualvalue(M_EA) then
-					found = 1;
+					theKey = key(COMMUNITY_DICT);
 					break;
 				endif;
 			enddo;
-			if found = 1 then
-				string idString = concat(C_LOGIN, edit("ZZ", C_A1), edit("ZZ", C_A2), edit("ZZZ", C_A3),
-									edit("ZZ", C_A4), edit("ZZ", C_A5), edit("ZZZ", C_A6));
-				pffContent = pffContent + "StartMode=Modify;" + idString + "\n";
+			if theKey <> "" then
+				pffContent = pffContent + "StartMode=Modify\n";
+				pffContent = pffContent + "Key=" + theKey + "\n";
 			else
 				pffContent = pffContent + "StartMode=Add\n";
 			endif;
-		else
+		else	//Menu  or listingpff
 			pffContent = pffContent + "StartMode=Add\n";
 		endif;
+		
 		if questName = "Listing" then
 			pffContent = pffContent + "AutoAdd=Yes\n";
 		else
 			pffContent = pffContent + "AutoAdd=No\n";			//AutoAdd only works for windows, according to the manual
 
 		endif;
+
 		pffContent = pffContent + "FullScreen=Yes\n";	//experimental..
 		//pffContent = pffContent + "Lock=CaseListing\n";	//Also experimental
 
-		if questName = "Menu" then
-			pffContent = pffContent + "ShowInApplicationListing=Always\n\n";
-		else
-			pffContent = pffContent + "ShowInApplicationListing=Never\n\n";
-		endif;
-
+		
 		pffContent = pffContent + "[Files]\n";
 		pffContent = pffContent + "Application=./" + questName + ".ent\n";
 		pffContent = pffContent + "InputData=../Data/" + questName + ".csdb|CSPRODB\n";
-		pffContent = pffContent + "Paradata=../Data/" + questName + "_" + getDeviceId() +  ".cslog\n\n";
+		//pffContent = pffContent + "Paradata=../Data/" + questName + "_" + getDeviceId() +  ".cslog\n\n";
 
 		if questName = "HHQ" then
 			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
+			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
 		endif;
 
 		if questName = "Menu" then
 			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "COMMUNITY_DICT=..\Data\Community.csdb|CSPRODB\n";
-			pffContent = pffContent + "HHQ_DICT=..\Data\HHQ.csdb|CSPRODB\n";
-			pffContent = pffContent + "LISTING_DICT=..\Data\Listing.csdb|CSPRODB\n";
-			pffContent = pffContent + "REGIONS_DICT=..\LookupFiles\Regions.csdb|CSPRODB\n";
-			pffContent = pffContent + "SAMPLING_DICT=..\Data\Sample.csdb|CSPRODB\n";
-			pffContent = pffContent + "USERS_DICT=..\LookupFiles\Users.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "COMMUNITY_DICT=../Data/Community.csdb|CSPRODB\n";
+			pffContent = pffContent + "HHQ_DICT=../Data/HHQ.csdb|CSPRODB\n";
+			pffContent = pffContent + "LISTING_DICT=../Data/Listing.csdb|CSPRODB\n";
+			pffContent = pffContent + "REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB\n";
+			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
+			pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
+			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
+
 		endif;
 
 		pffContent = pffContent + "[Parameters]\n";
@@ -599,10 +626,10 @@ PROC GLOBAL
 		pffContent = pffContent + "URBANRURAL=" + edit("Z", visualvalue(M_URBAN_RURAL)) + "\n";
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
-		pffContent = pffContent + "country=" + country + "\n";
+		pffContent = pffContent + "country=" + theCountry + "\n";
 
 		if questName <> "Menu" then
-			pffContent = pffContent + "OnExit=..\Menu\Menu.pff\n";
+			pffContent = pffContent + "OnExit=../Menu/Menu.pff\n";
 		else
 			pffContent = pffContent + "LOGGEDIN=" + theRole + "\n";
 		endif;
@@ -637,31 +664,67 @@ PROC GLOBAL
 	function showHHs(gpsN, gpsW, hashmap string status)
 		//loop through to see if there's more than one HH at this location
 		numeric  ctr = 0;
-		array string acceptOptions(20);
-		array serialNos(20);
+		array string acceptOptions(14);
+		array string respondent(14);
+		array serialNos(14);
 		
 		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and SLOGIN = M_LOGIN do
+			//errmsg("showHHs. Checking this: %d=%d?, %d=%d, %s=%s?", SA7A, gpsN, SA7B, gpsW, SLOGIN, M_LOGIN);
+		
 			inc(ctr);
-			acceptOptions(ctr) = strip(SA10) + ";  " + strip(SA11) + " Status: " + status(SA10);
+			acceptOptions(ctr) = strip(SA10) + "; " + strip(SA11) + " " + status(SA10);
+			respondent(ctr)  = strip(SA10) + ";" + strip(SA11);
 			serialNos(ctr) = SA8;
 		endfor;
 		
 		if ctr = 1 then
 			//only one HH at this spot.. Open it now
 			writePff("Energy survey", "Menu", "", serialNos(1), "I");
+			//errmsg("about to start with resp: %s and number: %d", acceptoptions(1), serialNos(1));
+			//writePff("Household Questionnaire", "HHQ", respondent(1), serialNos(1), "I");
 			writePff("Household Questionnaire", "HHQ", acceptOptions(1), serialNos(1), "I");
 		else
 			acceptOptions(ctr + 1) = makeText(tr(26));
 			numeric theOne = accept(maketext(tr(19)), acceptOptions);
 			if theOne <> ctr + 1 then
 				writePff("Energy survey", "Menu", "", serialNos(theOne), "I");
+				//writePff("Household Questionnaire", "HHQ", respondent(theOne), serialNos(theOne), "I");
 				writePff("Household Questionnaire", "HHQ", acceptOptions(theOne), serialNos(theOne), "I");
 			endif;
 		endif;
 	end;
 	
 
+	//Functions for user bar
+	
+	function setCountry()
+		numeric optionNo = accept(tr(33), "Mozambique - Portugueze", 
+		   								 "Tanzania - KiSwahili", 
+										 "Mozambique - English", 
+										 "Tanzania - English");
+		if optionNo = 1 then
+			theCountry = "MZ";
+			setlanguage("PT");
+		elseif optionNo = 2 then
+			theCountry = "TZ";
+			setlanguage("SW");
+		elseif optionNo = 3 then
+			theCountry = "MZ";
+			setLanguage("EN");
+		else
+			theCountry = "TZ";
+			setLanguage("EN");
+		endif;
+		saveSetting("Country", theCountry);
+	end;
+
+
 PROC MENU_FF
+preproc
+	userbar(clear);
+	userbar(add button, makeText(tr(32)), setCountry());
+	userbar(show);
+
 postproc
 	//Writing the pff file to start up correctly next time
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -669,7 +732,22 @@ postproc
 
 
 PROC MENU_QUEST_FORM
-
+preproc
+	//Getting the right country and server name
+	theCountry = loadsetting("Country");
+	if theCountry = "" then
+		setCountry();
+	endif;
+	COUNTRY = theCountry;
+	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
+		syncUrl = SERVER;
+	else
+		errmsg(tr(2));
+		stop();
+	endif;
+	
+	
+		
 postproc
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");	
 	
@@ -714,7 +792,9 @@ preproc
 	
 postproc
 	loggedIn = "N";	//Just in case it's missing or something
-	LOGIN = toLower($);
+	$ = toLower($);
+	LOGIN = $;
+	
 	string pw = prompt(tr(10), password);
 	numeric load = loadcase(USERS_DICT, LOGIN);
 	if toLower(tStrip(pw)) = toLower(tStrip(PASSWORD)) then
@@ -1047,7 +1127,7 @@ postproc
 	
 		
 PROC M_HOUSEHOLD
-preproc
+onfocus
 	
 	//create value set (Despite using map to navigate from here, I need the value set for debugging: Maps doesn't work for windows
 	array vsetCodes(vsetMax);
@@ -1057,6 +1137,9 @@ preproc
 	hashmap string statusByPerson; //To mark HoH with partial/finished/not started
 	hashmap string visitStatus;		//To make sure GPS location has flag green or yellow if two or more HH
 									//have the same location and one of them is finished
+	
+	HHmap.clearMarkers();
+	
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
 	set first(SAMPLING_DICT);
@@ -1079,7 +1162,8 @@ preproc
 			AA8 = SA8;
 			AALOGIN = SLOGIN;
 			
-			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);
+			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);			
+			
 			if not loaded then
 				//Haven't been her yet for this HH but need to check in case another HH has same coordinates
 				//Red flag to be set if there are any not-started HHs
@@ -1111,7 +1195,7 @@ preproc
 
 			vsetCodes(i) = SA8;
 			vsetLabels(i) = strip(SA10) + ";  " + strip(SA11) + " " + strip(vsetStatus);	//Separating with semicolon to make it easy to find the name part
-			statusByPerson(SA10) = vsetStatus;
+			statusByPerson(SA10) = vsetStatus;			
 			
 
 			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
@@ -1120,29 +1204,30 @@ preproc
 			inc(i);
 		endif;
 	enddo;
-
+	
+	
 	if i = 0 then
 		errmsg(tr(7));
 		stop(1);
 	endif;
-	string mapFileName = Country + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
+	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
 			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
 			+ ".mbtiles";
-			
+		
 	if not fileExist("../Maps/" + mapFileName) then
 		downloadMap(mapFileName);
 	endif;
 	
-	HHmap.setBaseMap(mapFileName);
-	HHmap.addTextButton("Toggle view", toggleView(mapFileName));
+	//HHmap.setBaseMap("../Maps/" + mapFileName);
+	HHmap.setBaseMap(Satellite);
+	HHmap.addTextButton("Toggle view", toggleView("../Maps/" + mapFileName));
 	HHmap.show();
 	vsetCodes(i) = NOTAPPL;
 	setValueset(M_HOUSEHOLD, vsetCodes, vsetLabels);
+	
 
-
-  //setMarkerImage
+  
 postproc	
-	//errmsg("%s, serial: %d", getLabel($, $), $);
 	if getOS() = 10 then
 		writePff("Energy survey", "Menu", "", $, "I"); //Need this to know where to start up again when returning from a HH questionnaire
 		writepff("Household Questionnaire", "HHQ", getLabel($, $), $, "I");

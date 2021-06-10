@@ -1,87 +1,51 @@
 ﻿PROC GLOBAL
 
 	// This will be set only in the Menu application as a parameter and will be fetched from there
-    String country ;
+	String theCountry;
 
-	//country = Menu.getproperty("country");
-	//Country specific variables
-	numeric gridPrice = 3700;	//country specific price to connect to the grid
-	numeric highDevicePrice = 5000;//Country specific prices for solar devices
+	//Country specific variables. Content will be fetched from ../lookupFiles/countryVariables.csdb
+	numeric gridPrice;	//country specific price to connect to the grid
+	numeric  highDevicePrice;//Country specific prices for solar devices
 
-	//NB: When filling the following array with country specific cookstoves
-	//Please notice that the order is important: The two first elements should be wood stoves, the to last charcoal!
-	array String cookstove(4) = "COUNTRY SPECIFIC Aspirational wood ICS",
-								"LOCALLY AVAILABLE, popular affordable wood ICS",
-								"COUNTRY SPECIFIC Aspirational charcoal ICS",
-								"LOCALLY AVAILABLE, popular affordable charcoal ICS";
-	array cookStovePrices(4) = 2100,700,2100,700;	//Reference prices for the above defined cookStoves
+	
+	array String cookstove(4); //country specific cookstoves
+	array cookStovePrices(4);	//Reference prices for the above defined cookStoves
+
+	String ElectricityCompany; //Name of electricity company
 
 
-	//Variables to use in the CAPI question. Has to be globally declared
-	string currMember;
-	string Member12AndAbove; // Membername person 12 years and above
+	//Variables reused in multiple questions/fields or needed for CAPI questions. Need to be globally declared
+	string currMember;	//Main respondent throughout the questionnaire.
 	string solarDeviceType; // Type of solar home system, used in second C section
-	string mainElSource;
 	string lampType;
 	numeric CF;
-	string fuelType;
 	string cookType;
-	string hhItem;
 	string hhItemExtra;
-	string hhChore;
-	string hhChoreGroup;
-	string livelyhood;
-	string socAndSec;
-	string healthQuestion;
-	string consumeItem;
-	string productName;
-	string businessName;
-	numeric years;
-	string activity;
 	numeric energySources; // number of energy sources, used in first C section
-	numeric rangeStart; // Start of a range, to be used in common error message for ranges
-	numeric rangeEnd; // End of a range, to be used in common error message for ranges
-	numeric rangeUnknown; // Unknown range, to be used in common error message for ranges
-	numeric personCooksMostOften = 0; // To be calculated in A8 and used in I section
-	string  namepersonCooksMostOften ; // To be calculated in A8 and used in I section
+	//numeric rangeStart; // Start of a range, to be used in common error message for ranges
+	//numeric rangeEnd; // End of a range, to be used in common error message for ranges
+	//numeric rangeUnknown; // Unknown range, to be used in common error message for ranges
+	numeric personCooksMostOften; // To be calculated and used in I, K and O sections
 	string  personDecideToBuyStove ; // To be  calculated in I12 and used in heading in K section
 	string  headName;
 	string  femaleHeadName;
-	string  spouseName;
-	string  mostUsedStove;
-	string  fueltype1;
-	string  fueltype2;
-	string  UnitFuel;
-	numeric mostoften = 9;
+	string  femalespouseName;
 	string  chosenChildName; // Name of chosen child for O section (health)
 	numeric schoolBoys = 0;
 	numeric schoolGirls = 0;
-	string electricityCompany;
 
-	Array numeric memberNumbers(20);	//Keeping the HH member codelists all through the system as they are used frquently
-	Array String memberNames(20);
-	//Setting the person to answer
-	array aCode(20); // Keeping the list of adults, max 20
-	array String aLabel(20);
-	numeric adultCount = 0; //adult counter
+	valueset familyMembers;	//Keeping the valueset global as it is used often
+	valueset adultMembers;	//Also used frequently. Family members >= 15 years of age
 
 	array hhDemographics(7) = 0,0,0,0,0,0,0;	//splitting household in age and gender groups. To facilitate skipping
-											//element 1 = #women, 2 = #girls, 3 = #men, 4 = #boys, 5 = #children under 5, 6 = adults (15 years and above)
-											// 7 = children 0-15 years
-	Array numeric childrenNos(20);
-	Array String childrenNames(20);
-	numeric childCount = 0; // child counter
-
-	Array string persons12AndAboveNos(20);
-	Array String persons12AndAboveNames(20);
-	numeric persons12AndAboveCount = 0; // Persons 12 year and above, counter
-
-
+											//element 1 = #women (15+ years), 2 = #girls (5-15 years), 3 = #men (15+ years),
+											//4 = #boys (5 - 15 years), 5 = #children under 5,
+											// 6 = adults (15 years and above), 7 = children 0-15 years
 	array numeric powerSources(9);
 	array string powerSourcesLabels(9);
 
 
-	//function to strip leading spaces (the original strip function only strips trailing spaces)
+//function to strip leading spaces (the original strip function only strips trailing spaces)
 
 
 function string lstrip(string theString)
@@ -95,13 +59,18 @@ function string lstrip(string theString)
 end;
 
 
+
 function onStop()
 	string currField = getSymbol();
 	if currField = "AB1" then
 		reenter AA10;
 	else
-		savepartial();	
-		stop(1);
+		if AA20 <> "" then	//Questionnaire is finished
+			skip to AA20;
+		else
+			savepartial();
+			stop(1);
+		endif;		
 	endif;
 end;
 
@@ -113,116 +82,153 @@ PROC HHQ_FF
 PROC HHQ_QUEST
 
 preproc
+
 	string language = sysparm(language);
 	setLanguage(language);
 	
 	// Fetch country parameter from Menu application
 	pff menu;
 	menu.load("../Menu/Menu.pff");
-	country = menu.getProperty("country");
-    //errmsg ("Country: %s",country);
+	theCountry = menu.getProperty("country");
 	
+	//Get country specific variables
+	COUNTRY = theCountry;
+	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
+		gridPrice = GPRICE;
+		highDevicePrice = DEVICEPRICE;
+		cookstove(1) = COOKSTOVE1;
+		cookstove(2) = COOKSTOVE2;
+		cookstove(3) = COOKSTOVE3;
+		cookstove(4) = COOKSTOVE4;
+		cookStovePrices(1) = COOKSTOVEPRICE1;
+		cookStovePrices(2) = COOKSTOVEPRICE2;
+		cookStovePrices(3) = COOKSTOVEPRICE3;
+		cookStovePrices(4) = COOKSTOVEPRICE4;
+		ElectricityCompany = ELCOMPANY;
+	else
+		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
+	endif;
+	errmsg("%s", cookStove(4));
+
+
+
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
 		if getSymbol(savePartial) = "AA13" then
 			advance to AA15;
 		else
-		
+			//Main respondent as answered last time
+			if AA18 <> "" then
+				currMember = AA18;	//Not head of household
+			else
+				currMember = AA14;	//Head of household
+			endif;
+
 			numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC);
-
 			numeric i = 1;
-			numeric j = 0;
-			numeric k = 0;
-			while i <= memNum do
-				memberNumbers(i) = i;
-				memberNames(i) = AB1(i);
 
-				//adding to relevant hhdemographic group
-				if AB4(i) = 2 then
-					if AB5(i) > 14 then	//woman
+			familyMembers.clear();
+			while i <= memNum do
+				familyMembers.add(AB1(i), i);
+
+				//adding to relevant hhdemographic group and building value set for grownups
+				if visualValue(AB4(i)) = 2 then
+					if visualValue(AB5(i)) >= 15 then	//woman
 						inc(hhDemographics(1));
 						inc(hhDemographics(6));
-					elseif AB5(i) <=4 then	//little child
+						adultMembers.add(AB1(i),i);
+					elseif visualValue(AB5(i)) <=4 then	//little child
 						inc(hhDemographics(5));
-					else	//girl
+					else						//girl
 						inc(hhDemographics(2));
 					endif
 				else
-					if AB5(i) > 14 then	//man
+					if visualValue(AB5(i)) >= 15 then	//man
 						inc(hhDemographics(3));
 						inc(hhDemographics(6));
-					elseif AB5(i) <= 4 then	//little child
+						adultMembers.add(AB1(i),i);
+					elseif visualValue(AB5(i)) <= 4 then	//little child
 						inc(hhDemographics(5));
-					else		//boy
+					else						//boy
 						inc(hhDemographics(4));
 					endif;
 				endif;
-				if AB5(i) >= 0 and AB5(i) < 16 then
-					inc(j);
+				if visualValue(AB5(i)) >= 0 and visualValue(AB5(i)) < 15 then	//Child, 0-15
 					inc(hhDemographics(7));
-					childrenNos(j) = i;
-					childrenNames(j) = AB1(i);
 				endif;
 
-				// Persons 12 years and above
-				if AB5(i) >= 12 then
-					inc(k);
-					persons12AndAboveNos(k) = maketext("%02d",i);
-					persons12AndAboveNames(k) = AB1(i);
-				endif;
-				if ab3(i) = 1 then
-					headName = ab1(i);
-				endif;
-				if ab3(i) = 1 and ab4(i) = 2 then
-					femaleHeadName = strip(ab1(i));
-				endif;
-				if ab3(i) = 2 and ab4(i) = 2 then
-					spouseName = ab1(i);
-				endif;
-				
 				inc(i);
-
-				
 			enddo;
-	
-			memberNumbers(i) = NOTAPPL;
 			
-		//Loop through household members to find adults
-			i = 1;
-			j = 0;
-			while i <= 20 do
-				if AB1(i) = "" then
-				//finished.
-					break;
-				else
-					if  AB5(i) > 14 then	//Found an adult
-						acode(j) = i;
-						aLabel(j) = AB1(i);
-						inc(j);
+			//If no members of the household are of age 15+: Add everybody aged 12+
+			if adultMembers.length() = 0 then
+				i = 1;
+				while i <= 20 do
+					if AB1(i) = "" then
+						break;	//finished
+					endif;
+					if AB5(i) >= 12 then
+						adultMembers.add(AB1(i), i);
 					endif;
 					inc(i);
-				endif;
-			enddo;
-
-			acode(j) = NOTAPPL;
-
-
-			//Need to find the name of the current respondent if we're still registering hh members
-			string currField = getSymbol(savepartial);
-			if currField[1:2] = "AB" or currField[1:2] = "AC"
-				or currField in "A2","A3","A4","A5","A6","A7","A8" then
-				numeric currNo;
-				numeric curr = curocc();
-				numeric posX = pos("(", currField);
-				numeric posY = pos(")", currField);
-				currNo = toNumber(currField[posX+1:posY-posX]);
-				
-				currMember = AB1(currNo);
+				enddo;
 			endif;
-			advance to getsymbol(savePartial);
+	
+			//If there are none of age 12+: Adding the whole of the household
+			if adultMembers.length() = 0 then
+				i = 1;
+				while i <= 20 do
+					if AB1(i) = "" then
+						break;	//finished
+					endif;
+					adultMembers.add(AB1(i), i);
+					inc(i);
+				enddo;
+			endif;
+
+
+			//Name of child for questions in O-form. Only need them if the partialsaved has come that far
+			if hhDemographics(7) > 0 and visualValue(O7) <> NOTAPPL then
+				//chosenChildName = memberNames(visualValue(O7));
+				chosenChildName = familyMembers.labels(visualValue(O7));
+
+			endif;
+
+			//Person number of person cooking most often (or is selected to be his/her representative
+			if  visualValue(I1) <> NOTAPPL then
+				PersonCooksMostOften = visualValue(I1);
+			else
+				//Haven't asked the question yet..
+			endif;
+
+			//Person answering female related questions
+			if HHDemographics(1)> 0 and visualValue(T1) <> NOTAPPL then
+				//femalespouseName = memberNames(visualValue(T1));
+				femalespouseName = familyMembers.labels(visualValue(T1));
+			else
+				//Haven't asked the question yet..
+			endif;
+
+			//lamptype for G form is handled further down. In that case, we have not reached form F yet, so that's ok
+			if visualValue(F3) <> NOTAPPL then
+				lampType = getvaluelabel(F3);
+			endif;
+
+
+			//SolarDeviceType
+			if visualValue(C10) in 3, 7, 8 then
+				solarDeviceType = getvaluelabel(C10);
+			endif;
+
 		endif;
+		//NB: Need to move through the ID variables to avoid error messages about them not being filled out
+		//when isSavePartial().
+		//The skip to the getsymbol(savePartial) happens in the postproc of the last ID item
+		//is filled - the ADDRESS_LOCATION field
 	endif;
+
+
 
 postproc
 
@@ -317,30 +323,83 @@ preproc
 	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
 	SLOGIN = AALOGIN;
 	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
-		$ = SA10;
+	$ = SA10;
 
 	//Might as well set the other fields from the sample file too..
 	ADDRESS_LOCATION = SA11;
 	AA7A = SA7A;
 	AA7B = SA7B;
 	noInput;
-	//skip to AA9;
-	
+
 
 PROC ADDRESS_LOCATION
+
 preproc
+
 	noinput;
+
+postproc
+
+	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
+	if isPartial() then
+
+		//Need to find the name of the current respondent if we're still in the personal section.
+		//Starting from scratch with he current person. Need to find the number of him/her
+		string currentField = getSymbol(savepartial);
+		if currentField <> "AB1" and (currentField[1:2] = "AB"
+			or currentField[1:2] = "AC" or currentField in "A2","A3","A4","A5","A6","A7","A8") then
+			numeric j = 20;
+			while j >=1 do
+				if visualValue(AB3(j)) <> NOTAPPL then
+					break;
+				endif;
+				j = j - 1;
+			enddo;
+			skip to AB3(j + 1);
+		endif;
+
+		//other "Special" skips
+		if currentField in "K1", "K2", "K3", "K4" then
+			skip to K1;
+		elseif currentField in "D1", "D2", "D3", "D4" then
+			skip to D1;
+		elseif currentField in "E1", "E2", "E3" then
+			skip to E1;
+		elseif currentField in "G2B", "G2C" then
+			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
+			numeric ptr = 4;
+			while ptr >= 1 do
+				if visualValue(G2B(ptr)) <> NOTAPPL then
+					break;
+				endif;
+				ptr = ptr - 1;
+			enddo;
+			skip to G2A(ptr);
+
+		else	//general skip!
+			skip to getsymbol(savePartial);
+		endif;
+	endif;
+
+
 PROC AA7A
+
 preproc
+
 	noinput;
+
+
 PROC AA7B
+
 preproc
+
 	noinput;
+
+
 PROC AA9
 
 preproc
 
-	//errmsg("Checking coordinate just in case: %d", visualValue(AA7A));
 	$ = edit("99-99-99",sysdate("YYDDMM"));
 	noinput;
 
@@ -351,7 +410,8 @@ PROC AA10
 
 preproc
 
-	currMember = AA14;
+	currMember = AA14;	//Might be changed in AA15 or AA18..
+
 
 postproc
 
@@ -375,6 +435,7 @@ PROC AA10A
 PROC AA13
 
 postproc
+
 	if !ispartial() then
 		savepartial();
 		stop(1);
@@ -400,6 +461,7 @@ postproc
 PROC AA17
 
 	if $ = 1 then
+		currMember = AA14;
 		skip to HHNAMES;
 	endif;
 
@@ -407,10 +469,13 @@ PROC AA17
 
 PROC AA18
 
+	currMember = $;		//main respondent
+
 
 PROC AB1
 
 preproc
+
 	//Might as well fill in HoH and Main respondent
 	if curocc() = 1 then
 		$ = AA14;
@@ -427,30 +492,54 @@ postproc
 	endif;
 
 	if $ = "" then	//finished
-		memberNumbers(curocc()) = NOTAPPL; //this is to indicate the end of the valueset
 		skip to AB_AC_FORM;
 	endif;
 
-	//make a valueset for hh members as this question is asked frequently
-	memberNumbers(curocc()) = curocc();
-	memberNames(curocc()) = $;
+	//make a valueset for hh members as this used frequently
+	familyMembers.add($, curocc());
 
-	
+
+
 PROC AB3
 
 onfocus
 
-	currMember = AB1(curocc());
-	if currMember = "" then
-		skip to B_FORM;	//Finished with all family members
+	if AB1(curocc()) = "" then //Finished with all family members
+		//If there are no adults in the HH: adding everyone aged 12+
+		if adultMembers.length() = 0 then
+			numeric i = 1;
+			while i <= 20 do
+				if AB1(i) = "" then
+					break;	//finished
+				endif;
+				if AB5(i) >= 12 then
+					adultMembers.add(AB1(i), i);
+				endif;
+				inc(i);
+			enddo;
+		endif;
+	
+		//Just for the fun of it: If there are none of age 12+: Adding the whole of the household
+		if adultMembers.length() = 0 then
+			numeric i = 1;
+			while i <= 20 do
+				if AB1(i) = "" then
+					break;	//finished
+				endif;
+				adultMembers.add(AB1(i), i);
+				inc(i);
+			enddo;
+		endif;
+		skip to B_FORM;	
 	endif;
 
 	//Setting HoH as I already know that
 	if curocc() = 1 then
 		$ = 1;
-		 headName = currMember;
+		 headName = AB1(curocc());
 		skip to AB3B;	//Should we tell that we already recorded the HoH?
 	endif;
+
 
 postproc
 
@@ -459,37 +548,31 @@ postproc
 		reenter;
 	endif;
 	if $ = 1 then
-		headName = currMember;
+		headName = AB1(curocc());
 	endif;
 	if curocc() > 1 then
 		skip to AB4;
 	endif;
 
 
-PROC AB4
 
-	if ab3(curocc()) = 1 and $ = 2 then
-		femaleHeadName = strip(ab1(curocc()));
-	endif;
-
-	if ab3(curocc()) = 2 and $ = 2 then
-		spouseName = strip(ab1(curocc()));
-	endif;
 
 PROC AB5
-postproc	
+
+postproc
+
 	//adding to relevant hhdemographic group
 	if AB4 = 2 then
-		if $ > 14 then	//woman
+		if $ >= 15 then	//woman
 			inc(hhDemographics(1));
 			inc(hhDemographics(6));
-		elseif $ <=4 then	//little child
+		elseif $ <= 4 then	//little child
 			inc(hhDemographics(5));
-		else	//girl
+		else	//girl 5-15
 			inc(hhDemographics(2));
 		endif
 	else
-		if $ > 14 then	//man
+		if $ >= 16 then	//man
 			inc(hhDemographics(3));
 			inc(hhDemographics(6));
 		elseif $ <= 4 then	//little child
@@ -499,36 +582,25 @@ postproc
 		endif;
 	endif;
 
-// Children
+	// Children
 	if $ >= 0 and $ < 16 then
-		inc(childCount);
 		inc(hhDemographics(7));
-		childrenNos(childCount) = curocc($);
-		childrenNames(childCount) = AB1;
-//		errmsg("childrenNos: %d, childrenNames: %S",childrenNos(childCount),childrenNames(childCount))
 	endif;
 
-// Persons 12 years and above
-	if $ >= 12 then
-		inc(persons12AndAboveCount);
-		persons12AndAboveNos(persons12AndAboveCount) = maketext("%02d",curocc($));
-		persons12AndAboveNames(persons12AndAboveCount) = AB1;
-//		errmsg("persons12AndAboveNos: %d, persons12AndAboveNames: %S",persons12AndAboveNos(persons12AndAboveCount),persons12AndAboveNames(persons12AndAboveCount))
+
+	//make a valueset for adult hh members as this too used frequently
+	//NB: Checking in the Name field/AB3 field (When quitting filling in family members) if
+	// there are any adults at all. If not: adding everybody aged 12+ there..
+	if  $ >= 16 then	//Found an adult
+		adultMembers.add(AB1,curocc());
 	endif;
 
-	//make a valueset for adult hh members as this question is asked frequently
-	if  $ > 14 then	//Found an adult
-		inc(adultCount);
-		aCode(adultCount) = curocc($);
-		aLabel(adultCount) = AB1;
-//		errmsg("Adult: %d, Name: %S",aCode(adultCount),aLabel(adultCount))
-	endif;
-	
+
 PROC AB6
 
 preproc
 
-	if AB5 < 15 then
+	if AB5 < 15 then	//Keeping this limit for question about civil status despite grownups are 16+
 		$ = 8;
 		skip to AC1;
 	endif;
@@ -542,16 +614,17 @@ preproc
 	if AB5 < 6 then //Only ask those 6  years and above for the rest of the section
 		skip to next;
 	endif;
-	
-	if getlanguage() = "EN" and country = "TZ" then
+
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,READ_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,READ_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,READ_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,READ_MZ);
 	endif;
+
 
 PROC AC2
 
@@ -570,34 +643,31 @@ PROC AC3
 
 
 PROC AC4
+
 preproc
-	if getlanguage() = "EN" and country = "TZ" then
+
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
+
+
 PROC AC5
 
-	if $ > AB5 or $ < AB5 -1 then
-		errmsg(tr(150),strip(lstrip(currMember)),AB5);
+	if $ > AB5 or $ < AB5 - 1 then
+		string theName = AB1(curocc());
+		errmsg(tr(150),strip(lstrip(theName)),AB5);
 		reenter;
 	endif;
 
 
 PROC AC6
-
-preproc
-
-//	if AB5(curocc()) > 17 then	//more than 17 years
-//		skip to A8;
-//	endif;
-
-postproc
 
 	if $ = 1 then
 		if AB4 = 2 then
@@ -607,15 +677,16 @@ postproc
 		endif
 	endif;
 	skip to A2;
-	//	errmsg("Girls: %d, Boys: %d, School kids: %d",schoolGirls,schoolBoys,hhdemographics(7));
 
 
 PROC AC7
 
 preproc
+
 	numeric currYear = sysdate("YYYY");
 
 postproc
+
 	if $ = 2 then
 		skip to AC9;
 	endif;
@@ -623,14 +694,16 @@ postproc
 
 
 PROC AC8
+
 preproc
-	if getlanguage() = "EN" and country = "TZ" then
+
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and country = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and country = "MZ" then
+	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT"  and country = "MZ" then
+	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -643,14 +716,17 @@ postproc
 
 
 PROC AC9
+
 preproc
-	if getlanguage() = "EN" and country= "TZ" then
+
+	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and country= "TZ" then
+
+	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "PT" and country= "MZ" then
+	elseif getlanguage() = "EN" and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT" and country= "MZ" then
+	elseif getlanguage() = "PT" and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
 
@@ -709,60 +785,32 @@ postproc
 	endif;
 
 
-PROC A8
-
-postproc
-
-	// Find the person who cooks most often = the first of those with lowest values for A8;
-	if $ < mostoften then
-		mostoften = $;
-		personCooksMostOften = curocc();
-		namePersonCooksMostOften = memberNames(curocc());
-		//  errmsg("I test Person,%d %s, value, %d, curocc, %d, mostoften %d",personCooksMostOften,namePersonCooksMostOften,$,curocc(),mostoften);
-	endif;
-	//if $ = 2 and personCooksMostOften < $ then
-
-
 PROC B1
 
 preproc
-//	if !ispartial() then
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(179);
+		errmsg(tr(179));
 	endif;
-	// Delete 0-codes from adult household members array. Also find member number of oldest person in household
-	numeric k = 1;
-	numeric highestAge = 0;
-	numeric oldestMember = 0;
-	while k <= 20 do
-		if ab5(k) > highestAge then
-			highestAge = ab5(k);
-			oldestMember=memberNumbers(k);
-		endif;
-		if aCode(k) = 0 then
-			aCode(k) = NOTAPPL;
-			aLabel(k) = "";
-		endif;
-		inc(k);
-	enddo;
-//	k = 1;
-//	while k <= 5 do
-//		errmsg("Adult: %d, Name: %S, HighestAge: %d, Oldest: %d",aCode(k),aLabel(k), highestAge,oldestMember);
-//		inc(k);
-//	enddo;
+
 postproc
 
 	// can't live in community longer than age of the oldest person
+	numeric k = 1;
+	numeric highestAge = 0;
+	while k <= 20 do
+		if visualValue(ab5(k)) > highestAge then
+			highestAge = visualValue(ab5(k));
+		endif;
+		inc(k);
+	enddo;
+
 	if $ > highestAge then
 		errmsg(tr(157),highestAge);
 		reenter;
 	endif;
-//	skip to N_FORM;
 
 
 PROC B2
-
-//	skip to GP_FORM;
 
 	if $ in 1,3,6 then
 		skip to B4;
@@ -781,11 +829,11 @@ PROC B4
 PROC B15
 
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(180);
+		errmsg(tr(180));
 	endif;
-	
+
 postproc
 
 	if $ = 2 then
@@ -810,39 +858,23 @@ PROC B20
 
 
 PROC C1
+
 onfocus
 
-//	setValueset(C1, memberNumbers, memberNames);
-	setValueset($, acode, aLabel);
-
-//postproc
-	//Need to add an item to the household menbers array to cover for person not in household anymore
-	//This is needed for all C sections. To be removed
-//	numeric i = 0;
-//	while i < 20 do
-//		if memberNumbers(i) = NOTAPPL then
-//			//here is where I need to insert the etra "member" if I haven't done it already
-//			if MemberNames(i-1) <> maketext(tr(110)) then
-//				memberNumbers(i) = i;
-//				memberNames(i) = maketext(tr(110));
-//				memberNumbers(i+1) = NOTAPPL;
-//				break;
-//			endif;
-//		endif;
-//		inc(i);
-//	enddo;
-
+	setValueset($, adultMembers);
 
 
 PROC C2
+
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(181);
+		errmsg(tr(181));
 	endif;
 	energySources = 0;
 
 postproc
+
 	if $ = 2 then
 		skip to C4;
 	endif;
@@ -904,13 +936,15 @@ postproc
 PROC C10
 
 preproc
+
 	if energySources = 0 then
 		skip to C12;
 	endif;
-	
+
 	numeric i = 1;
 	numeric code;
 	string text;
+
 	do while i < 9 ;
 		if powerSources(i) = 0 then
 			powerSources(i) = NOTAPPL;
@@ -929,7 +963,7 @@ preproc
 	endif;
 
 	if c4 = 1 then
-		if pos("1", c5) > 0 then
+		if pos("a", c5) > 0 then
 			inc(i);
 			code = 3;
 			powerSources(i) = 3;
@@ -937,7 +971,7 @@ preproc
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
 
-		if pos("2", c5) > 0 then
+		if pos("b", c5) > 0 then
 			inc(i);
 			code = 7;
 			powerSources(i) = 7;
@@ -945,7 +979,7 @@ preproc
 			//	  errmsg("%d, %d, %d, %s",i,$,powerSources(i),powerSourcesLabels(i));
 		endif;
 
-		if pos("3", c5) > 0 then
+		if pos("c", c5) > 0 then
 			inc(i);
 			code = 8;
 			powerSources(i) = 8;
@@ -997,7 +1031,7 @@ preproc
 		endif;
 		skip to c12;
 	endif;
-	
+
 	//Final value in the powerSources array should be notappl
 	powerSources(i+1) = NOTAPPL;
 	setValueset($, powerSources, powerSourcesLabels);
@@ -1040,12 +1074,12 @@ preproc
 
 	setValueset($, powerSources, powerSourcesLabels);
 
-	
+
 
 postproc
 
 	if $ = c10 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
 
@@ -1077,23 +1111,15 @@ postproc
 PROC C16
 
 preproc
-//	if !ispartial() then
-	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(174);
-	endif;
-onfocus;
 
-	if getlanguage() = "EN" then
-		electricityCompany = "Tanzania: TANESCO/REA, Mozambique: EDM";
-	elseif getlanguage() = "SW" then
-		electricityCompany = "TANESCO/REA";
-	elseif getlanguage() = "PT" then
-		electricityCompany = "EDM";
+	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
+		errmsg(tr(174));
 	endif;
-//	errmsg("Electricity: %s, language: %s", electricityCompany,getlanguage());
+
+
 PROC C17
 
-	if $ > B1 then
+	if $ > visualValue(B1) then
 		errmsg(tr(123),B1);
 		reenter;
 	endif;
@@ -1107,10 +1133,8 @@ PROC C17
 
 
 
-
-
-
 PROC C23
+
 	if $ = 1 then
 		skip to C25;
 	endif;
@@ -1121,32 +1145,28 @@ PROC C23
 
 PROC C25
 
-preproc
-
-	rangeStart = 5;
-	rangeEnd = 150;
-	rangeUnknown = 888;
-
 postproc
 
+	numeric	rangeStart = 5,
+			rangeEnd = 150,
+			rangeUnknown = 888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
 
 PROC C26
 
-preproc
-
-	rangeStart = 1000;
-	rangeEnd = 99999;
-	rangeUnknown = 88;
-
 postproc
 
+	numeric	rangeStart = 1000,
+			rangeEnd = 88887,
+			rangeUnknown = 88888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1179,12 +1199,18 @@ preproc
 
 
 PROC C30
+
 preproc
+
 	if C27 = 1 then
 		skip to C33;
 	endif;
+
+
 PROC C33
+
 preproc
+
 	if C27 <> 1 then
 		skip to C36;
 	endif;
@@ -1207,7 +1233,6 @@ PROC C39
 	if $ <> 88 and $ > 4 then
 		errmsg(tr(111),4);
 		reenter;
-
 	endif;
 
 	if $ > C38 then
@@ -1217,7 +1242,8 @@ PROC C39
 
 
 PROC C40
-	if $ in 0,88 then
+
+	if $ in 0,66,88 then
 		skip to C45;
 	endif;
 
@@ -1268,12 +1294,13 @@ preproc
 PROC C53
 
 preproc
-	If not(C10 in 3, 7, 8) then
+
+	If not(visualValue(C10) in 3, 7, 8) then
 		skip to C89;
 	endif;
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(176,strip(solarDeviceType));
-	endif;	
+		errmsg(tr(176),strip(solarDeviceType));
+	endif;
 
 
 PROC C54
@@ -1284,30 +1311,29 @@ PROC C54
 
 
 PROC C56
-preproc
-	rangeStart = 20;
-	rangeEnd = 600;
-	rangeUnknown = 888;
 
 postproc
+
+	numeric rangeStart = 20,
+			rangeEnd = 887,
+			rangeUnknown = 888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
 
 PROC C57
 
-preproc
-
-	rangeStart = 20;
-	rangeEnd = 900;
-	rangeUnknown = 888;
-
 postproc
 
+	numeric	rangeStart = 20,
+			rangeEnd = 887,
+			rangeUnknown = 888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1315,33 +1341,33 @@ postproc
 PROC C58
 
 preproc
-	if C56 in 20:600 and C57 in 20:887,889:900 then
+
+	if C56 in 20:887 and C57 in 20:887,889:900 then
 		skip to C59;
 	endif;
-	rangeStart = 6;
-	rangeEnd = 24;
-	rangeUnknown = 88;
 
 postproc
 
+	numeric	rangeStart = 6,
+			rangeEnd = 24,
+			rangeUnknown = 88;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
 
 PROC C59
 
-preproc
-
-	rangeStart = 200;
-	rangeEnd = 10000;
-	rangeUnknown = 88;
-
 postproc
 
+	numeric rangeStart = 200,
+			rangeEnd = 10000,
+			rangeUnknown = 88;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1357,16 +1383,14 @@ postproc
 
 PROC C61
 
-preproc
-
-	rangeStart = 5;
-	rangeEnd = 1500;
-	rangeUnknown = 8888;
-
 postproc
 
+	numeric rangeStart = 5,
+			rangeEnd = 1500,
+			rangeUnknown = 8888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1375,22 +1399,8 @@ PROC C63
 
 onfocus
 
-	//Value set with extra person.
-	numeric i = 0;
-	while i < 20 do
-		if memberNumbers(i) = NOTAPPL then
-			//here is where I need to insert the extra "member" if I haven't done it already
-			if MemberNames(i-1) <> maketext(tr(110)) then
-				memberNumbers(i) = i;
-				memberNames(i) = maketext(tr(110));
-				memberNumbers(i+1) = NOTAPPL;
-				break;
-			endif;
-		endif;
-		inc(i);
-	enddo;	
-	setValueset($, memberNumbers, memberNames);
-
+	familyMembers.add(makeText(tr(110)), familyMembers.length() + 1);
+	setValueset($, familyMembers);
 
 
 PROC C64
@@ -1403,8 +1413,6 @@ PROC C64
 
 
 PROC C65
-
-postproc
 
 	skip to C73;
 
@@ -1460,15 +1468,15 @@ PROC C83
 PROC C89
 
 preproc
+
 	if C10 <> 4 then
 		skip to C4_FORM;
 	endif;
-//	if !ispartial() then
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(177);
+		errmsg(tr(177));
 	endif;
 
-onfocus
+postproc
 
 	if $ = 2 then
 		skip to C91;
@@ -1477,10 +1485,10 @@ onfocus
 
 
 PROC C90
+
 	if C89 = 2 then
 		skip to C91;
 	endif;
-PROC C92
 
 
 
@@ -1500,6 +1508,11 @@ PROC C94
 	endif;
 
 
+PROC C96
+postproc
+	if $ = 3 then
+		skip to C98;
+	endif;
 PROC C98
 
 	if $ = 2 then
@@ -1579,12 +1592,9 @@ preproc
 	if C10 <> 6 then
 		skip to C5_FORM;
 	endif;
-//	if !ispartial() then
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(178);
+		errmsg(tr(178));
 	endif;
-
-
 
 
 
@@ -1607,16 +1617,12 @@ PROC C115
 
 PROC C116
 
-preproc
-
-	rangeStart = 5;
-	rangeEnd = 1500;
-	rangeUnknown = 8888;
-
-postproc
+	numeric rangeStart = 5,
+			rangeEnd = 1500,
+			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1645,48 +1651,42 @@ PROC C122
 
 PROC C123
 
-preproc
-
-	rangeStart = 20;
-	rangeEnd = 500;
-	rangeUnknown = 888;
-
 postproc
 
+	numeric rangeStart = 20,
+			rangeEnd = 500,
+			rangeUnknown = 888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
 
 PROC C124
 
-preproc
-
-	rangeStart = 6;
-	rangeEnd = 24;
-	rangeUnknown = 88;
-
 postproc
 
+	numeric rangeStart = 6,
+			rangeEnd = 24,
+			rangeUnknown = 88;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
 
 PROC C125
 
-preproc
-
-	rangeStart = 200;
-	rangeEnd = 600;
-	rangeUnknown = 88;
-
 postproc
 
+	numeric rangeStart = 200,
+			rangeEnd = 6000,
+			rangeUnknown = 8888;
+
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
-		errmsg(167,rangeStart,rangeEnd,rangeUnknown,$);
+		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
 		reenter;
 	endif;
 
@@ -1702,9 +1702,9 @@ PROC C127
 PROC C128
 
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(182);
+		errmsg(tr(182));
 	endif;
 
 postproc
@@ -1743,12 +1743,11 @@ PROC D1
 
 preproc
 
-	If (C10 = 1 or C11 = 1) then
+	If (visualValue(C10) = 1 or visualValue(C11) = 1) then
 		skip to E_FORM;
 	endif;
-//	if !ispartial() then
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(189);
+		errmsg(tr(189));
 	endif;
 
 onfocus
@@ -1788,15 +1787,16 @@ preproc
 	if C10 = 3 or C11 = 3  then
 		skip to G_FORM;
 	endif;
-	
+
 	skip to E1;
 
 
 PROC E1
+
 preproc
-//	If !isPartial() and (C11 = 1 or C10 = 1) then
+
 	if (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		If (C11 = 1 or C10 = 1)  then
+		If (visualValue(C11) = 1 or visualValue(C10) = 1)  then
 			errmsg(168);
 		else
 			errmsg(169);
@@ -1804,6 +1804,7 @@ preproc
 	endif;
 
 onfocus
+
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
@@ -1818,7 +1819,6 @@ postproc
 
 
 
-
 PROC E2
 
 	if $ = 1 then
@@ -1828,24 +1828,25 @@ PROC E2
 
 
 
-
 PROC G_FORM
 
 preproc
 
-	if C10 <> 9 then
+	if visualValue(C10) <> 9 then
 		skip to F_FORM;
 	endif;
 
 
 PROC G1
+
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(175);
+		errmsg(tr(175));
 	endif;
 
 postproc
+
 	if pos("66", $) > 0 and length(strip($)) > 2 then
 		errmsg(tr(118));
 		reenter;
@@ -1855,6 +1856,7 @@ postproc
 		//"none" is chosen
 		skip to F_FORM;
 	endif;
+
 
 
 PROC G2A
@@ -1883,7 +1885,7 @@ postproc
 		reenter;
 	endif;
 
-// Don't ask g2b and g2c for other devices
+	// Don't ask g2b and g2c for other devices
 	if curocc() = 4 and pos("55", G1) > 0 then
 		skip to G3;
 	endif;
@@ -1906,41 +1908,26 @@ onfocus
 	elseif not(schoolGirls > 0 or schoolBoys > 0) and C10 in 1,3,4 then
 		skip to I_FORM;
 	else
-//	if !ispartial() then
-//		If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-//			errmsg(tr(192));
-//		endif;
-		setValueset($, acode, aLabel);
+		setValueset($, adultMembers);
 	endif;
 
-	//	setValueset($, memberNumbers, memberNames);
 
 
 PROC F2
 
 onfocus
 
-	//Loop through HH to find if there are children attending school
-	//	numeric i = 1;
-	//	while AB5(i) <> NOTAPPL do
-	//		if AB5(i) > 5 and AB5(i) < 18 and AC6(i) = 1 then
-	//			schoolkids = 1;
-	//			break;
-	//		endif;
-	//		inc(i);
-	//	enddo;
-
-	// School attendance set in AC6
 	if not(schoolGirls > 0 or schoolBoys > 0) then
 		skip to F3;
 	endif;
+
 
 
 PROC F3
 
 preproc
 
-	if C10 in 1,3,4 then
+	if visualValue(C10) in 1,3,4 then
 		skip to I_FORM;
 	endif;
 
@@ -1969,7 +1956,7 @@ PROC F9
 postproc
 
 	if $ = F8 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
 
@@ -1983,18 +1970,10 @@ preproc
 	endif;
 
 postproc
+
 	if $ = 7 then
 		skip to I_FORM;
 	endif;
-    fuelType = getValueLabel($);
-
-
-
-
-
-PROC F12
-
-
 
 
 
@@ -2002,30 +1981,42 @@ PROC I1
 
 preproc
 
+	//Find the person who cooks most often. That's the one with the lowest value of A8 (see valueset for reason why)..
+	numeric idx = 2;
+	PersonCooksMostOften = 1;
+	while idx <= 20 do
+		if visualValue(A8(idx)) <> NOTAPPL and visualValue(A8(idx)) < visualValue(A8(PersonCooksMostOften)) then
+			PersonCooksMostOften = idx;
+		endif;
+		inc(idx);
+	enddo;
+
 	$ = PersonCooksMostOften;
-	//errmsg("Person, %s, %d",namePersonCooksMostOften,personCooksMostOften);
+
 
 onfocus
-	numeric i = 0;
-	while i < 20 do
-		if memberNames(i) = maketext(tr(110)) then
-			memberNumbers(i) = NOTAPPL;
-			memberNames(i) = "";
-			break;
-			endif;
-		inc(i);
-	enddo;
-	setValueset($, memberNumbers, memberNames);
 
+	//Strip away the extra "family member" added earlier
+	if familyMembers.labels(familyMembers.length()) = MakeText(tr(110)) then
+		familyMembers.remove(familyMembers.length());
+	endif;
+	setValueset($, familyMembers);
+
+postproc
+
+	personCooksMostOften = $;
 
 
 PROC I2
+
 preproc
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(196);
+		errmsg(tr(196));
 	endif;
 
 postproc
+
 	if $ = 2 then
 		skip to i4;
 	endif;
@@ -2034,7 +2025,7 @@ postproc
 PROC I3
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2049,7 +2040,7 @@ PROC I4
 PROC I5
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2064,7 +2055,7 @@ PROC I6
 PROC I7
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2079,7 +2070,7 @@ PROC I8
 PROC I9
 
 	if $ = "" then
-		errmsg(170);
+		errmsg(tr(170));
 		reenter;
 	endif;
 
@@ -2155,28 +2146,6 @@ preproc
 	enddo;
 	setValueset($, cookstoves, cookstovesLabels, cookstovesImages);
 
-	//     valueset string I2I_VS;
-	//     valueset numeric i2i_valueset ;
-	//	 string y;
-	//	 numeric zn;
-	//	 string zs;
-	//	 numeric x;
-
-	//	 i = 0;
-	//     do while cookstoves(i) <> NOTAPPL;
-	//	     inc(i);
-	//		 y = cookstovesLabels(i);
-	//		 zn = cookstoves(i);
-	//		 zs = cookstovesImages(j);
-	//		 errmsg("%s, %s, %d",y,zs,zn);
-	//         i2i_valueset.add(y, zs,zn);
-	//     enddo;
-
-	//	setValueset($, i2i_valueset);
-
-postproc
-
-	mostUsedStove = getvaluelabel($);
 
 
 PROC I11
@@ -2199,11 +2168,15 @@ postproc
 
 
 PROC I12
+
 onfocus
-	setValueset($, memberNumbers, memberNames);
+
+	setValueset($, familyMembers);
+
 postproc
+
 	if $ <> PersonCooksMostOften then
-		personDecideToBuyStove = concat(", ",tr(198)," ",strip(memberNames($))," (",tr(199),")");
+		personDecideToBuyStove = concat(", ",tr(198)," ",familyMembers.Labels($)," (",tr(199),")");
 	else
 		personDecideToBuyStove = "";
 	endif;
@@ -2225,7 +2198,6 @@ PROC I23
 
 PROC I25
 
-	fueltype1 = getvaluelabel($);
 	If $ in 18, 99, 55 then
 		skip to I29 ;
 	endif;
@@ -2239,11 +2211,10 @@ PROC I26
 postproc
 
 	if $ = i25 then
-		errmsg(151);
+		errmsg(tr(151));
 		reenter;
 	endif;
-	fueltype2 = getvaluelabel($);
-	If $ in 13, 18, 66, 55 then
+	If $ in 13, 18, 99, 55 then
 		skip to I29 ;
 	endif;
 
@@ -2258,16 +2229,19 @@ preproc
 
 
 PROC I29
+
 preproc
+
 	If I25 in 3,8,17 then
 		skip to I34;
 	endif;
+
+
 PROC I30
 
 
 postproc
 
-	UnitFuel = getvaluelabel($);
 
 
 PROC I41
@@ -2284,9 +2258,8 @@ preproc
 	if not(I25 in 2,3 or I26 in 2,3) then
 		skip to i46;
 	endif;
-//	if !ispartial() then
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(171);
+		errmsg(tr(171));
 	endif;
 
 postproc
@@ -2297,19 +2270,26 @@ postproc
 
 
 PROC I45_MM
+
 	if $ > 59 then
 		errmsg(tr(165), $);
 		reenter;
 	endif;
+
+
+
 PROC I46
 
 preproc
 
-	if not((I25 in 2,3,4,7,8,9,10,11,12,14,17 or I26 in 2,3,4,7,8,9,10,11,12,14,17) AND (I22 in 1,2,3 or I23 in 1,2,3)) then
+	if not((visualValue(I25) in 2,3,4,7,8,9,10,11,12,14,17
+		or visualValue(I26) in 2,3,4,7,8,9,10,11,12,14,17)
+		AND (visualValue(I22) in 1,2,3 or visualValue(I23) in 1,2,3)) then
 		skip to O_FORM;
 	endif;
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(195);
+		errmsg(tr(195));
 	endif;
 
 postproc
@@ -2326,23 +2306,17 @@ postproc
 
 PROC I47
 
-postproc
-
 	skip to I52;
 
 
 
 PROC I49
 
-postproc
-
 	skip to I52;
 
 
 
 PROC I50
-
-postproc
 
 	skip to I52;
 
@@ -2357,47 +2331,62 @@ PROC I52
 
 PROC O_FORM
 
+
 PROC O1
+
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(183);
+		errmsg(tr(183), familyMembers.Labels(PersonCooksMostOften));
 	endif;
 
 onfocus
 
-	//	errmsg(tr(146),strip(namePersonCooksMostOften));
-		$ = I1;
-		currMember = memberNames(PersonCooksMostOften);
-		noinput;
+	if I1 <> notappl then
+		$ = visualValue(I1);
+	else
+		$ = personCooksMostOften;
+	endif;
+
+	noinput;
 
 
-PROC O2
-
-	// if $ = 2 then
-	// 	skip to Q_FORM;
-	// endif;
 
 
 PROC O6
+
 preproc
+
 	if O2 = 2 and O3 = 2 and O4 = 2 and O5 = 2 then
 		skip to O7;
-	endif;	
+	endif;
+
+
+
 PROC O7
 
 preproc
 
 	if hhDemographics(7) > 0 then
 		seed(systime());
-		numeric child;
-		child = random(1, hhDemographics(7));
-		setValueset($, childrenNos, childrenNames);
-		chosenChildName = getlabel($,childrenNos(child));
-//			errmsg("Chosen child: %d, Child number %d, Child name %s, hhDemographics(7): %d",child,childrenNos(child),chosenChildName,hhDemographics(7));
-			$ = childrenNos(child);
-			noinput;
-			skip to O8;
+		numeric x, i = 1, curr = 1;
+		x = random(1, hhDemographics(7));
+
+		//Loop through family arrays to find child number x
+		while i < 20 do
+			if visualValue(AB5(i))	 <= 15 then	//child
+				if curr = x then	//right child
+					chosenChildName = ab1(i);
+					$ = i;
+					exit;
+				else
+					inc(curr);
+				endif;
+			endif;
+			inc(i);
+		enddo;
+
+		skip to O8;
 	else
 		skip to K_FORM;
 	endif;
@@ -2406,29 +2395,36 @@ preproc
 PROC O8
 
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(193,chosenChildName);
+		errmsg(tr(193),chosenChildName);
 	endif;
 
 
 PROC O12
+
 preproc
+
 	if O8 = 2 and O9 = 2 and O10 = 2 and O11 = 2 then
 		skip to K_FORM;
-	endif;	
+	endif;
+
+
 PROC K_FORM
+
 preproc
-	if not(I10 in 101,102,201) then
+
+	if not(visualValue(I10) in 101,102,201) then
 		skip to J_FORM;
 	endif;
 
 
 PROC K1
+
 preproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(190);
+		errmsg(tr(190));
 	endif;
 
 	string woodOrCharcoal;
@@ -2436,10 +2432,10 @@ preproc
 	seed(systime());
 
 	//Finding out how to skip and setting variables
-	if I10 in 101,102  then
+	if visualValue(I10) in 101,102  then
 		woodOrCharcoal = "wood";
 		tmp = random(1,2);	//The two first elements of the cookStove array are wood..
-	elseif I10 = 201 then
+	elseif visualValue(I10) = 201 then
 		woodOrCharcoal = "charcoal";
 		tmp = random(3,4);
 	endif;
@@ -2447,16 +2443,14 @@ preproc
 	cookType = cookStove(tmp);
 	CF = round(random(1,3) * cookStovePrices(tmp)/3);	//this gives 0.33, 0.66 or 1 of the price of the randomly chosen cookstove
 
-//	errmsg("woodOrCharcoal: %s, cooktype: %s, I10: %d", woodOrCharcoal, cookType, I10);
+
 onfocus
+
 	if woodOrCharcoal = "" then
 		skip to J_FORM;
 	endif;
 
-//	Adult person
-	setValueset($, acode, aLabel);
-
-//	currMember = memberNames(I1);
+	setValueset($, adultMembers);
 
 
 
@@ -2469,24 +2463,25 @@ PROC K2
 
 
 PROC K3
+
 	if $ = 1 then
 		skip to J_FORM;
 	endif;
+
+
 PROC J1
+
 preproc
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(197);
+		errmsg(tr(197));
 	endif;
+
 postproc
-	//skip to W_FORM;
+
 	if $ = 2 then
 		skip to J3;
 	endif;
-
-
-
-
-PROC J2
 
 
 
@@ -2509,8 +2504,8 @@ PROC J4
 PROC L1
 
 onfocus
-//	setValueset($, memberNumbers, memberNames);
-	setValueset($, acode, aLabel);
+
+	setValueset($, adultMembers);
 
 
 
@@ -2523,23 +2518,20 @@ preproc
 		skip to next;
 	endif;
 	// categories 7-9 only for households with electricity as main or back-up source
-	if not(C10 in 1,3,4,5,7 or C11 in 1,3,4,5,7) and curocc() in 7:9 then
+	if not(visualValue(C10) in 1,3,4,5,7 or visualValue(C11) in 1,3,4,5,7) and curocc() in 7:9 then
 		skip to next;
 	endif;
 
 	// categories 10-19 only for households with electricity as main or back-up source
-	if not(C10 in 1,3,4,5 or C11 in 1,3,4,5) and curocc() in 10:19 then
+	if not(visualValue(C10) in 1,3,4,5 or visualValue(C11) in 1,3,4,5) and curocc() in 10:19 then
 		skip to next;
 	endif;
 
 	// categories 20-22 only for households with electricity as main or back-up source
-	if not(C10 in 1,3,4,5,7 or C11 in 1,3,4,5,7) and curocc() in 20:22 then
+	if not(visualValue(C10) in 1,3,4,5,7 or visualValue(C11) in 1,3,4,5,7) and curocc() in 20:22 then
 		skip to next;
 	endif;
 
-onfocus
-
-	hhitem = getLabel($, curocc());
 	$ = curocc();
 	skip to L2A;
 
@@ -2549,9 +2541,6 @@ onfocus
 PROC L2A
 
 onfocus
-
-	//Setting the CAPI text
-	//hhItem = strip(L_DESC);
 
 	if curocc() in 20:22 then
 		hhItemExtra = makeText(tr(148));
@@ -2585,20 +2574,19 @@ PROC L2C
 preproc
 
 	// 7c-9c only for those that had grid electricity 5 years ago C12 in (1,2,3,4,5,7)
-	if not(C12 in 1,2,3,4,5,7) and curocc() in 7:9 then
+	if not(visualValue(C12) in 1,2,3,4,5,7) and curocc() in 7:9 then
 		skip to next;
 	endif;
 
 	// categories 10-19 only for households with electricity as main or back-up source
-	if not(C10 in 1,3,4,5 or C11 in 1,3,4,5) and curocc() in 10:19 then
+	if not(visualValue(C10) in 1,3,4,5 or visualValue(C11) in 1,3,4,5) and curocc() in 10:19 then
 		skip to next;
 	endif;
 
 	// categories 20-22 only for households with electricity as main or back-up source
-	if not(C10 in 1,3,4,5,7 or C11 in 1,3,4,5,7) and curocc() in 20:22 then
+	if not(visualValue(C10) in 1,3,4,5,7 or visualValue(C11) in 1,3,4,5,7) and curocc() in 20:22 then
 		skip to next;
 	endif;
-
 
 
 
@@ -2611,11 +2599,15 @@ PROC L5
 
 
 PROC M1
+
 preproc
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(200);
+		errmsg(tr(200));
 	endif;
-postproc	
+
+postproc
+
 	if $ = 2 then
 		skip to M3;
 	endif
@@ -2623,91 +2615,25 @@ postproc
 
 
 
-
-	//PROC N1000
-	//onfocus
-	//	//First need to draw random group of family to ask question to.
-	//	//Looping until I find one..
-	//	numeric gr;
-	//	while 1 do
-	//		seed(systime());
-	//		gr = random(1,4);
-	//		if hhDemographics(gr) > 0 then
-	//			break;
-	//		endif;
-	//	enddo;
-	//
-	//	//And now I want a random person in that group
-	//	numeric personNo = random(1, hhDemographics(gr));
-	//
-	//	//Getting the name of the person
-	//	numeric gender, minAge;
-	//	if gr = 1 then	//Woman
-	//		gender = 2;
-	//		minAge = 15;
-	//	elseif gr = 2 then	//girl
-	//		gender = 2;
-	//		minAge = 5;
-	//	elseif gr = 3 then	//man
-	//		gender = 1;
-	//		minAge = 15;
-	//	else	//boy
-	//		gender = 1;
-	//		minAge = 5;
-	//	endif;
-	//
-	//	numeric i = 1, currPersonNo = 1;
-	//	while i <= 20 do //Max 20 persons in a household
-	//		if AB4(i) <> gender then
-	//			inc(i);
-	//			next;
-	//		else	//Right gender
-	//			if minAge = 5 and (AB5(i) >= 5 and AB5(i) < 15) then
-	//				if currPersonNo = personNo then
-	//					//Found the right person: The i-th family member
-	//					break;
-	//				else
-	//					inc(currPersonNo);
-	//				endif;
-	//			elseif minAge = 15 and AB5(i) >= 15 then
-	//				if currPersonNo = PersonNo then
-	//					//Again found the person
-	//					break
-	//				else
-	//					inc(currPersonNo);
-	//				endif;
-	//			endif;
-	//			inc(i);
-	//		endif;
-	//	enddo;
-	//
-	//	currMember = AB1(i);
-	//
-
-
-PROC N_FORM
-
 PROC N_ACTIVITY_WOMEN
 
 preproc
-//	if !ispartial() then
+
 	if hhDemographics(1) < 1 then
 		skip to N_ACTIVITY_GIRLS;
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 
-//	if !ispartial() and curocc() = 1 then
 	If curocc() = 1 and (((ispartial() and visualValue($) = NOTAPPL) or !ispartial())) then
-		errmsg(184);
+		errmsg(tr(184));
 	endif;
+
 	$ = curocc();
-	activity = getLabel($, curocc());
 	noinput;
-	skip to N_A;
 
 
 PROC N_A
@@ -2715,7 +2641,7 @@ PROC N_A
 postproc
 
 	if $ > hhDemographics(1) then
-		errmsg(166,$,hhDemographics(1));
+		errmsg(tr(166),$,hhDemographics(1));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2793,19 +2719,14 @@ preproc
 	endif;
 
 	If curocc() = 1 and hhDemographics(1) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
-
-//	if !ispartial() and curocc() = 1 then
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(185);
+		errmsg(tr(185));
 	endif;
 	$ = curocc();
-	activity = getLabel($, curocc());
 	noinput;
-	// errmsg("%s",activity);
-	skip to N_F;
 
 
 PROC N_F
@@ -2820,7 +2741,7 @@ preproc
 postproc
 
 	if $ > hhDemographics(2) then
-		errmsg(166,$,hhDemographics(2));
+		errmsg(tr(166),$,hhDemographics(2));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2896,18 +2817,15 @@ preproc
 	if hhDemographics(3) < 1 then
 		skip to N_ACTIVITY_BOYS;
 	endif;
-//	if !ispartial() and curocc() = 1 then
 	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(186);
+		errmsg(tr(186));
 	endif;
 	$ = curocc();
-	activity = getLabel($, curocc());
 	noinput;
-	skip to N_K;
 
 
 PROC N_K
@@ -2915,7 +2833,7 @@ PROC N_K
 postproc
 
 	if $ > hhDemographics(3) then
-		errmsg(166,$,hhDemographics(3));
+		errmsg(tr(166),$,hhDemographics(3));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -2991,16 +2909,14 @@ preproc
 	if hhDemographics(4) < 1 then
 		skip to Q_FORM;
 	endif;
-//	if !ispartial() and curocc() = 1 then
 	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(172);
+		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(187);
+		errmsg(tr(187));
 	endif;
 	$ = curocc();
-	activity = getLabel($, curocc());
 	noinput;
 	skip to N_P;
 
@@ -3017,7 +2933,7 @@ preproc
 postproc
 
 	if $ > hhDemographics(4) then
-		errmsg(166,$,hhDemographics(4));
+		errmsg(tr(166),$,hhDemographics(4));
 		reenter;
 	endif;
 	if $ > 0 then
@@ -3086,26 +3002,25 @@ PROC N_S_MM
 	endif;
 
 
-PROC Q_FORM
-
 PROC Q1
+
 onfocus
+
 	$ = 1;
-//	setValueset($, membernumbers, memberNames);
-	setValueset($, aCode, aLabel);
+	setValueset($, adultMembers);
 
 postproc
-//	if !ispartial() then
+
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(188);
+		errmsg(tr(188));
 	endif;
+
 
 PROC Q2_NUM
 
 onfocus
 
 	$ = curocc();
-	consumeItem = getLabel($, curocc());
 	skip to Q2A;
 
 
@@ -3122,37 +3037,30 @@ PROC S_FORM
 
 
 PROC S1
-preproc
-//	if !ispartial() then
-//	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-//		errmsg(191);
-//	endif;
 
 onfocus
 
-//	setValueset($, memberNumbers, memberNames);
-
-//	Adult person
-	setValueset($, acode, aLabel);
+	//	Adult person
+		setValueset($, adultMembers);
 
 
 PROC S2
 
 preproc
 
-	If not(C2 = 1 or C4 = 1 or C6 = 1 or C7 = 1 or C8 = 1 or C9 = 1) then
+	If not(visualValue(C2) = 1 or visualValue(C4) = 1 or visualValue(C6) = 1 or
+		visualValue(C7) = 1 or visualValue(C8) = 1 or visualValue(C9) = 1) then
 		skip to S3;
 	endif;
-	mainElSource = getvaluelabel(C10);
 
 
 PROC U1
 
 onfocus
-//	Adult person
-	setValueset($, acode, aLabel);
 
-//	setValueset($, memberNumbers, memberNames);
+	//	Adult person
+		setValueset($, adultMembers);
+
 
 
 PROC U2
@@ -3160,7 +3068,6 @@ PROC U2
 onfocus
 
 	$ = curocc();
-	productName = getLabel($, curocc());
 	skip to U2A;
 
 
@@ -3174,28 +3081,22 @@ postproc
 
 
 PROC U2B
+
 postproc
+
 	skip to next;
 
 
 
 PROC U2C
+
 onfocus
+
 	//Value set with extra adult person.
-	numeric i = 0;
-	while i < 20 do
-		if aCode(i) = NOTAPPL then
-			//here is where I need to insert the extra "member" if I haven't done it already
-			if aLabel(i-1) <> maketext(tr(110)) then
-				aCode(i) = i;
-				aLabel(i) = maketext(tr(110));
-				aCode(i+1) = NOTAPPL;
-				break;
-			endif;
-		endif;
-		inc(i);
-	enddo;	
-	setValueset($, aCode, aLabel);
+	if adultMembers.Labels(adultMembers.length()) <> makeText(tr(110)) then
+		adultmembers.add(makeText(tr(110)), adultMembers.length() + 1);
+	endif;
+	setValueset($, adultMembers);
 
 
 PROC U3
@@ -3203,7 +3104,6 @@ PROC U3
 onfocus
 
 	$ = curocc();
-	businessName = getLabel($, curocc());
 	skip to U3A;
 
 
@@ -3217,47 +3117,69 @@ postproc
 
 
 PROC U3B
-postproc
-	skip to next;
-PROC U3C
-onfocus
-	setValueset($, aCode, aLabel);
-//	setValueset($, memberNumbers, memberNames);
 
+postproc
+
+	skip to next;
+
+
+PROC U3C
+
+onfocus
+
+	setValueset($, adultMembers);
 
 
 
 PROC T1
 
-onfocus
+preproc
 
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
 		skip to W_FORM;
 	else
-		array wCode(10); //Max 10 women in HH
-		array String wLabel(10);
-
-		//Loop through household memebers to find women
-		numeric i = 1, j = 0;
+		//Setting varible for suggestion on who to interview
+		numeric i = 1;
 		while i <= 20 do
-			if AB1(i) = "" then
-				//finished.
-				break;
-			else
-				if  AB4(i) = 2 and AB5(i) > 14 then	//Found a woman
-					wcode(j) = i;
-					wLabel(j) = AB1(i);
-					inc(j);
-				endif;
-				inc(i);
+			if	visualValue(ab3(i)) = 1 and visualValue(ab4(i)) = 2 then
+				femaleHeadName = strip(ab1(i));
 			endif;
+
+			if visualValue(ab3(i)) = 2 and visualValue(ab4(i)) = 2 then
+				femaleSpouseName = strip(ab1(i));
+			endif;
+			inc(i);
 		enddo;
-
-		wcode(j) = NOTAPPL;
-
-		setValueset($, wcode, wLabel);
 	endif;
 
+onfocus
+
+	valueSet womenVSet;
+
+	//Loop through household memebers to find women
+	numeric i = 1;
+	while i <= 20 do
+		if AB1(i) = "" then
+			//finished.
+			break;
+		else
+			if  visualValue(AB4(i)) = 2 and visualValue(AB5(i)) >= 16 then	//Found a woman
+				womenVSet.add(AB1(i), i);
+			endif;
+			inc(i);
+		endif;
+	enddo;
+
+	//Adding option that no women currently are available
+	womenVSet.add(makeText(tr(201)), i);
+	setValueset($, womenVSet);
+
+
+postproc
+
+	if $ = womenVSet.length() then
+		skip to W_FORM;
+	endif;
 
 
 PROC W1
@@ -3265,36 +3187,13 @@ PROC W1
 onfocus
 
 	if hhDemographics(1) < 1 or hhDemographics(1) in NOTAPPL, DEFAULT then //No women in household
-		skip to AA_END_FORM;
+		skip to GP_FORM;
 	else
-//	if !ispartial() then
 		If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 			errmsg(tr(147));
 		endif;
-	$ = T1;
-	skip to W2_NO;
-//		array wCode(10); //Max 10 women in HH
-//		array String wLabel(10);
-
-		//Loop through household memebers to find women
-//		numeric i = 1, j = 0;
-//		while i <= 20 do
-//			if AB1(i) = "" then
-//				//finished.
-//				break;
-//			else
-//				if  AB4(i) = 2 and AB5(i) > 14 then	//Found a woman
-//					wcode(j) = i;
-//					wLabel(j) = AB1(i);
-//					inc(j);
-//				endif;
-//				inc(i);
-//			endif;
-//		enddo;
-
-//		wcode(j) = NOTAPPL;
-
-//		setValueset($, wcode, wLabel);
+		$ = T1;
+		skip to W2_NO;
 	endif;
 
 
@@ -3303,125 +3202,206 @@ PROC W2_NO
 
 preproc
 
-	//onfocus
-		$ = curocc();
-		socAndSec = getLabel($, curocc());
-	//	errmsg("W2a: %s ", lstrip(socAndSec));
-		skip to W2A;
+	$ = curocc();
+	skip to W2A;
 
 
 
 PROC GP1
+
 postproc
 
 	if $ = 2 then
 		skip to GP5;
-	endif;	
+	endif;
+
+
 PROC GP_MEM
+
 preproc
+
+	// Applicable for persons 12 years and above
+	array string Persons12AndAboveNos(20);	//Multiple choice. Needs to be string
+	array String Persons12AndAboveNames(20);
+	numeric i = 1, k = 0;
+	while i <= 20 do
+		if visualValue(AB5(i)) >= 12 then
+			persons12AndAboveNos(k) = maketext("%02d",i);
+			persons12AndAboveNames(k) = AB1(i);
+			inc(k);
+		endif;
+		inc(i);
+	enddo;
 	setValueset($, persons12AndAboveNos, persons12AndAboveNames);
+
+
 PROC GP2
+
 preproc
-    $ = GP_MEM[(curocc()*2)-1:2];
-	Member12AndAbove = getlabel(GP_MEM,$);
+
+	$ = GP_MEM[(curocc()*2)-1:2];
 	if $ <> "" then
-	 skip;
+		skip;
 	else
-     skip to next;
+		skip to next;
 	endif;
 
 
 PROC GP18
+
 postproc
 
 	if $ = 1 then
 		skip to GP20;
-	endif;	
+	endif;
+
+
 PROC GP20
+
 postproc
 
 	if $ = 2 then
 		skip to GP23;
-	endif;	
+	endif;
+
+
 PROC GP24
+
 preproc
- if GP23 = 2 then
-  skip to GP25;
- endif; 
+
+	if GP23 = 2 then
+		skip to GP25;
+	endif;
+
+
 PROC GP27
+
 preproc
- if pos("1", GP26) = 0 then
-  skip to GP28;
- endif; 
+
+	if pos("1", GP26) = 0 then
+		skip to GP28;
+	endif;
+
+
 PROC GP28
+
 preproc
- if pos("2", GP26) = 0 then
-  skip to GP29;
- endif; 
+
+	if pos("2", GP26) = 0 then
+		skip to GP29;
+	endif;
+
+
 PROC GP29
+
 preproc
- if pos("3", GP26) = 0 then
-  skip to GP30;
- endif; 
+
+	if pos("3", GP26) = 0 then
+		skip to GP30;
+	endif;
+
+
 PROC GP30
+
 preproc
- if pos("4", GP26) = 0 then
-  skip to GP31;
- endif; 
+
+	if pos("4", GP26) = 0 then
+		skip to GP31;
+	endif;
+
+
 PROC GP31
+
 preproc
- if pos("5", GP26) = 0 then
-  skip to GP32;
- endif; 
+
+	if pos("5", GP26) = 0 then
+		skip to GP32;
+	endif;
+
+
 PROC GP32
+
 preproc
- if pos("6", GP26) = 0 then
-  skip to GP33;
- endif; 
+
+	if pos("6", GP26) = 0 then
+		skip to GP33;
+	endif;
+
+
 PROC GP34
+
 preproc
- if pos("1", GP33) = 0 then
-  skip to GP35;
- endif; 
+
+	if pos("1", GP33) = 0 then
+		skip to GP35;
+	endif;
+
+
 PROC GP35
+
 preproc
- if pos("2", GP33) = 0 then
-  skip to GP36;
- endif; 
+
+	if pos("2", GP33) = 0 then
+		skip to GP36;
+	endif;
+
+
 PROC GP36
+
 preproc
- if pos("3", GP33) = 0 then
-  skip to GP37;
- endif; 
+
+	if pos("3", GP33) = 0 then
+		skip to GP37;
+	endif;
+
+
 PROC GP37
+
 preproc
- if pos("4", GP33) = 0 then
-  skip to GP38;
- endif; 
+
+	if pos("4", GP33) = 0 then
+		skip to GP38;
+	endif;
+
+
 PROC GP38
+
 preproc
- if pos("5", GP33) = 0 then
-  skip to GP39;
- endif; 
+
+	if pos("5", GP33) = 0 then
+		skip to GP39;
+	endif;
+
+
 PROC GP39
+
 preproc
- if pos("6", GP33) = 0 then
-  skip to GP40;
- endif; 
+
+	if pos("6", GP33) = 0 then
+		skip to GP40;
+	endif;
+
+
 PROC X1
+
 preproc
- if c128 < 1 then
-  skip to AA_END_FORM;
- endif; 
+
+	if visualValue(c128) < 1 then
+		skip to AA_END_FORM;
+	endif;
 
 postproc
+
 	if $ = 2 then
 		skip to AA_END_FORM;
-	endif;	
+	endif;
+
+
 PROC AA20
 
 preproc
 
 	$ = AALOGIN;
 	noinput;
+
 

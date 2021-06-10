@@ -15,9 +15,15 @@ EN(105) Could not register GPS coordinates. Try again?
 PT(105) Não foi possível registrar coordenadas de GPS. Tente novamente?
 
 EN(106) Name of Head of household can't be missing if presence of household is "present" or "Temporary away". Please choose
+PT(106) O nome do chefe do agregado famíliar não pode faltar se estiver presente no AF é "presente" ou "ausente temporariamente". Por favor, selecione.
 
 EN(107) reenter name of head of household
+PT(107) Escrever novamnete o nome do chefe do agregado famíliar
 
 EN(108) change presence status of HH
+PT(108) Alterar o estado da presença no AF
 
 EN(109) Please enter address/description of location
+PT(109) Por favor introduza endereço/descrição da localização
+
+EN(110) Show map of EA

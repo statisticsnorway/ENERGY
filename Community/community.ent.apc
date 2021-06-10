@@ -37,9 +37,9 @@ PROC C_A3
 preproc
  	$ = toNumber(sysparm("SUBDISTRICT"));
  	noinput;
- 
 
-PROC C_A4 
+
+PROC C_A4
 preproc
  	$ = toNumber(sysparm("LOCALITY"));
  	noinput;
@@ -81,7 +81,7 @@ preproc
 PROC B2_A
 preproc
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(200);
+		errmsg(tr(200));
 	endif;
 
 postproc
@@ -100,7 +100,7 @@ PROC B2_C
 PROC C1
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(201);
+		errmsg(tr(201));
 	endif;
 PROC C2
 
@@ -110,15 +110,15 @@ PROC C3
 PROC D1
 preproc
 	If (ispartial() and $ = "") or !ispartial() then
-		errmsg(202);
+		errmsg(tr(202));
 	endif;
 
 postproc
-	if  pos("9", $) > 0 and length(strip($)) > 1 then
+	if  (pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0) and length(strip($)) > 2 then
 		errmsg(tr(8));
 		reenter;
     endif;
-	if  pos("9", $) > 0 then
+	if  pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0 then
 	  skip to D4;
 	endif;
 
@@ -126,7 +126,7 @@ postproc
 PROC D2
 preproc
 	elecCompany = tr(301);
-  
+
 PROC D3
 preproc
 
@@ -195,11 +195,11 @@ PROC D18
 
 PROC D19
 preproc
-	if getlanguage() = 'EN' then 
+	if getlanguage() = 'EN' then
 		elecCompany = "Tan: TANESCO/REA, Moz: EDM";
-	elseif getlanguage() = 'SW' then 
+	elseif getlanguage() = 'SW' then
 		elecCompany = "TANESCO/REA";
-	elseif getlanguage() = 'PT' then 
+	elseif getlanguage() = 'PT' then
 		elecCompany = "EDM";
 	endif;
 PROC D21
@@ -229,7 +229,7 @@ PROC D27
 preproc
 	if not (pos("1", D1) > 0 or pos("2", D1) > 0) then
 	 skip to D31;
-	endif; 
+	endif;
 PROC D31
 postproc
 	if $ = 2 then
@@ -246,12 +246,12 @@ preproc
 PROC H1
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(203);
+		errmsg(tr(203));
 	endif;
 PROC F1
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(204);
+		errmsg(tr(204));
 	endif;
 PROC F2
  if $ = 1 and F1 IN 2,3 then
@@ -278,7 +278,7 @@ PROC F9A
 preproc
 	currentElement = getLabel(F9_NO, curocc());
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(205);
+		errmsg(tr(205));
 	endif;
 
 postproc
@@ -296,33 +296,33 @@ onfocus
 PROC G1A
 preproc
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
-		errmsg(206);
+		errmsg(tr(206));
 	endif;
 
 	currentElement = getLabel(G1_NO, curocc());
 PROC I1
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(207);
+		errmsg(tr(207));
 	endif;
 PROC I2
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(208);
+		errmsg(tr(208));
 	endif;
 PROC I6
  if $ in 2,88 then
   skip to I8;
- endif; 
+ endif;
 PROC J1
 preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(209);
+		errmsg(tr(209));
 	endif;
 
 postproc
 	if $ = 2 then
 		endlevel;
 	endif;
-  
+
 
