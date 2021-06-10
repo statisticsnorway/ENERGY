@@ -2552,7 +2552,7 @@ Text=C66
   
 [Field]
 Name=C67
-Position=261,414,276,434
+Position=261,414,290,434
 Item=C67,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=5

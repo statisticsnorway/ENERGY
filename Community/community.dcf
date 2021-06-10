@@ -672,10 +672,9 @@ Len=1
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?
 Name=D29_VS1
-Link=12345679
-Value=1;It has gotten worse|Ficou pior|Mbaya zaidi
+Value=1;Less hours
 Value=2;Stayed the same|Ficou o mesmo|Hakuna mabadiliko
-Value=3;Better|Melhorou|Nzuri zaidi
+Value=3;More hours
 
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
@@ -686,7 +685,9 @@ Len=1
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
 Name=D30_VS1
-Link=12345679
+Value=1;It has gotten worse|Ficou pior|Mbaya zaidi
+Value=2;Stayed the same|Ficou o mesmo|Hakuna mabadiliko
+Value=3;Better|Melhorou|Nzuri zaidi
 
 [Item]
 Label=Do any households own a solar home system/solar lighting system in this community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
