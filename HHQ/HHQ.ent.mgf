@@ -194,6 +194,7 @@ SW(148) Ikiwa ndivyo: Ni ngapi wote pamoja (katika hali ya kufanya kazi)?
 
 EN(149) Did you have a %s in working condition?
 PT(149) Tinha um %s em condições de funcionamento?
+SW(149) Je, ulikuwa na %s katika hali nzuri (inafanya kazi)?
 
 EN(150) Age at beginning of school year must be %s's age (%d) or one year less
 PT(150) A idade no início deste ano letivo deve ser a idade de %s (%d) ou um ano a menos
@@ -229,12 +230,15 @@ SW(157) Siwezi kuishi kwa muda mrefu katika jamii kuliko umri wa mtu mzee katika
 
 EN(158) There must be at least one person in the household
 PT(158) Deve haver uma pessoa pelo menos no agregado familiar
+SW(158) lazima angalau kuwe na mtu mmoja katika kaya
 
 EN(159) Time used after dark (%d hours) cannot be more than time used in total (%d hours)
 PT(159) O tempo utilizado após escurecer (%d horas) não pode ser mais do que o tempo utilizado no total (%d horas)
+SW(159) Muda uliotumika usiku (masaa %d) hauwezi kuzidi jumla ya muda uliotumika (masaa %d)
 
 EN(160) Time used after dark (%d hours, %d minutes) cannot be more than time used in total (%d hours, %d minutes)
 PT(160) O tempo utilizado após escurecer (%d horas, %d minutos) não pode ser mais do que o tempo utilizado no total (%d horas, %d minutos)
+SW(160) Muda uliotumika wakati wa usiku (masaa %d, dakika %d) haiwezi kuwa zaidi ya jumla ya muda uliotumika (masaa %d, dakika %d)
 
 EN(161) %d is more than the maximum of 24 hours.
 PT(161) %d é superior ao máximo de 24 horas.
@@ -242,110 +246,146 @@ SW(161) %d ni zaidi ya saa 24.
 
 EN(162) %d is more than the maximum of 15 hours of darkness.
 PT(162) %d é mais do que o máximo de 15 horas de escuridão.
+SW(162) Masaa %d ni zaidi ya masaa 15 ya usiku.
 
 EN(163) %d.%d is more than the maximum of 24 hours a day.
 PT(163) %d.%d é superior ao máximo de 24 horas por dia.
+SW(163) Masaa %d.%d ni zaidi ya masaa 24 ya siku nzima.
 
 EN(164) %d.%d is more than the maximum of 15 hours of darkness.
 PT(164) %d.%d é mais do que o máximo de 15 horas de escuridão.
+SW(164) Masaa %d.%d ni zaidi ya masaa 15 ya usiku.
 
 EN(165) %d is more than the maximum of 59 minutes.
 PT(165) %d é maior que máximo de 59 minutos.
+SW(165) Dakika %d ni zaidi ya dakika 59.
 
 EN(166) %d is more than the number of persons in this group (%d)
 PT(166) %d é maior que número de pessoas neste grupo (%d)
+SW(166) Idadi %d ni zaidi ya idadi ya watu katika grupu hili (%d)
 
 EN(167) Value must be between %d and %d (or unkwown: %d), entered value is %d
 PT(167) O valor deve estar entre %d e %d (ou não sabe: %d), o valor introduzido é %d
+SW(167) Kiasi lazima kiwe kati ya %d na %d (au haijulikani: %d), kiasi kilichoingizwa ni %d
 
 EN(168) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. We know that you already have a grid connection, but as you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 PT(168) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distamtes sem acesso à rede eléctrica. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. Sabemos que já tem uma ligação à rede, mas à medida que responde às próximas perguntas, tenha em mente os benefícios de um sistema solar doméstico, bem como o seu orçamento familiar.
+SW(168) Sasa tutakuuliza maswali kuhusu utayari wako kulipia mfumo nishati jua wa nyumbani. Mfumo wa nishati jua wa nyumbani unaweza kuunganishwa hata kwenye kaya ambazo zipo ndani ndani ambako umeme wa grid haujafika. Unatumia nguvu ya jua na unaweza kutoa umeme kuwashia taa na kutumika katika vifaa vingine kama radio, feni, runinga n.k. Bei kamili ya mfumo wa nyumbani wa umeme jua kuununua na kuunganisha, halafu hakuna gharama ya umeme. Tunajua tayari umeunganishwa na umeme wa grid, lakini kwa majibu yako katika maswali yanayofuata, weka akilini faida za umeme jua, pamoja na bajeti yako ya kaya.
 
 EN(169) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 PT(169) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distantes sem acesso à rede eléctrica. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. À medida que responde às próximas perguntas, lembre-se dos benefícios de um sistema solar doméstico, bem como do seu orçamento familiar.
+SW(169) Sasa tutakuuliza maswali kuhusu utayari wako kulipia mfumo nishati jua wa nyumbani. Mfumo wa nishati jua wa nyumbani unaweza kuunganishwa hata kwenye kaya ambazo zipo ndani ndani ambako umeme wa grid haujafika. Unatumia nguvu ya jua na unaweza kutoa umeme kuwashia taa na kutumika katika vifaa vingine kama radio, feni, runinga n.k. Bei kamili ya mfumo wa nyumbani wa umeme jua kuununua na kuunganisha, halafu hakuna gharama ya umeme. Tunajua tayari umeunganishwa na umeme wa grid, lakini kwa majibu yako katika maswali yanayofuata, weka akilini faida za umeme jua, pamoja na bajeti yako ya kaya.
 
 EN(170) You have to choose at least one of the options
 PT(170) Tem de escolher pelo menos uma das opções
+SW(170) Unatakiwa kuchagua angalau jibu moja katika majibu yote.
 
 EN(171) We would now like to talk about the time used to collect wood.
 PT(171) Agora gostaríamos de falar sobre o tempo usado para recolher madeira.
+SW(171) Tunapenga kuongelea kuhusu muda unaotumika kukata/kukusanya kuni.
 
 EN(172) We would now like to know more about how the members of this household spend their time, both today and 5 years ago. We will ask about time use for women and men and children and grown-ups separately.
 PT(172) Gostaríamos agora de saber mais sobre como os membros desta agregado famíliar passam o seu tempo, tanto hoje como há 5 anos atras. Perguntaremos sobre a utilização do tempo para mulheres, homens, crianças e adultos separadamente.
+SW(172) Sasa tunapenda kujua zaidi kuhusu jinsi wanakaya wa kaya hii wanavyotumia muda wao, leo na miaka 5 iliyopita. Tutaulizia kuhusu matumizi ya muda kwa wanawake na wanaume na watoto na wote rika balehe tofauti tofauti.
 
 EN(173) We will now ask you questions about your willingness to pay for a solar home system. A solar home system can be installed even in remote households with no access to the grid. It uses solar power and can provide power to lights and appliances like a radio, fan, TV etc. The full price of the solar home system is buying and installing the system, then there is no cost of using electricity. As you answer the next few questions, keep in mind the benefits of a solar home system, as well as your household budget.
 PT(173) Agora iremos fazer-lhe perguntas sobre a sua vontade de pagar por um sistema solar doméstico. Um sistema solar doméstico pode ser instalado mesmo em casas distantes sem acesso à rede. Ao utilizar energia solar pode alimentar a luzes e aparelhos como rádio, ventilador, TV, etc. No total o preço do sistema solar é(inclue) comprar e instalar o sistema, então não há custo de utilização de eletricidade. À medida que responde às próximas perguntas, lembre-se dos benefícios de um sistema solar doméstico, bem como do seu orçamento familiar.
+SW(173) Sasa tutakuuliza maswali kuhusu utayari wako kulipia mfumo nishati jua wa nyumbani. Mfumo wa nishati jua wa nyumbani unaweza kuunganishwa hata kwenye kaya ambazo zipo ndani ndani ambako umeme wa grid haujafika. Unatumia nguvu ya jua na unaweza kutoa umeme kuwashia taa na kutumika katika vifaa vingine kama radio, feni, runinga n.k. Bei kamili ya mfumo wa nyumbani wa umeme jua kuununua na kuunganisha, halafu hakuna gharama ya umeme. Tunajua tayari umeunganishwa na umeme wa grid, lakini kwa majibu yako katika maswali yanayofuata, weka akilini faida za umeme jua, pamoja na bajeti yako ya kaya.
 
 EN(174) We would now like to ask you some questions about your grid connection.
-PT(174) Agora gostaríamos de lhe fazer algumas perguntas sobre a sua ligação à rede eléctrica. 
+PT(174) Agora gostaríamos de lhe fazer algumas perguntas sobre a sua ligação à rede eléctrica.
+SW(174) Sasa tunapenda kukuuliza baadhi ya maswali kuhusu umeme wa grid katika kaya yako.
 
 EN(175) You said that your main source of electricity is dry cell batteries. We would now like to ask you some questions about these batteries
 PT(175) Disse que a sua principal fonte de eletricidade são as baterias de células secas. Agora gostaríamos de lhe fazer algumas perguntas sobre estas baterias.
+SW(175) Ulisema chanzo chako kikuu cha umeme ni betri kavu. Sasa tunapenda kukuuliza baadhi ya maswali kuhusu hizo betri.
 
 EN(176) You said that your main source of electrical power is a %s. We would now like to ask you some questions about this device. We would like you to consider only devices in working condition. If you have more than one device, think about the MAIN solar device.
 PT(176) Disse que a sua principal fonte de energia elétrica é a %s. Agora gostaríamos de lhe fazer algumas perguntas sobre este dispositivo. Gostaríamos que considerasse apenas dispositivos em condições de funcionamento. Se tiver mais do que um dispositivo, pense no principal dispositivo solar.
+SW(176) Ulisema chanzo chako kikuu cha umeme ni %s. Sasa tunapenda kukuuliza baadhi ya maswali kuhusu kifaa hichi. Tunapenda tuongelee hivi vifaa vikiwa vizima na vinafanya kazi.Kama una kifaa zaidi ya kimoja, tutaulizia kile kifaa kikuu cha umeme jua.
 
 EN(177) We would now like to ask you some questions about your electric generator
+SW(177) Sasa tunapenda kukuuliza baadhi ya maswali kuhusu umeme wa jenereta.
 
 EN(178) We would now like to ask you some questions about your externally recharged battery.
-PT(177) Agora gostaríamos de lhe fazer algumas perguntas sobre o seu gerador elétrico
+PT(178) Agora gostaríamos de lhe fazer algumas perguntas sobre o seu gerador elétrico
+SW(178) Sasa tunapenda kukuuliza baadhi ya maswali kuhusu betri za kuchaji.
 
 EN(179) Now we would like to know more about your dwelling.
 PT(179) Agora gostaríamos de saber mais sobre a sua habitação/residência.
+SW(179) Sasa tunapenda kujua zaidi kuhusu nyumba au jengo unaloishi.
 
 EN(180) The next questions is about the households use of bank services
-PT(180) As próximas perguntas são sobre o uso dos serviços bancários pelos agregados famíliares 
+PT(180) As próximas perguntas são sobre o uso dos serviços bancários pelos agregados famíliares
+SW(180) Maswali yafuatayo ni kuhusu matumizi ya huduma za kibenki katika kaya yako.
 
 EN(181) The next questions is about the use and sources of energy in this household. We start with electricity and then move to other energy sources. First we would like to know if you have any electrical power in this household.
 PT(181) As próximas questões são sobre a utilização e fontes de energia neste agregado familiar. Começamos com eletricidade e depois mudamos para outras fontes de energia. Primeiro gostaríamos de saber se tem energia elétrica nesta casa.
+SW(181) Maswali yafuatayo ni kuhusu matumizi ya vyanzo vya nishati katika kaya hii. Tunaanza na umeme halafu tutaendelea na vyanzo vingine vya nishati. Kwanza tunapenda kujua kama kuna umeme katika kaya hii.
 
 EN(182) The next questions are about mobile phones in the household.
 PT(182) As próximas perguntas são sobre telemóveis no agregado familiar.
+SW(182) Maswali yafuatayo ni kuhusu simu za mkononi katika kaya hii.
 
 EN(183) To learn about the health impacts of cooking we would like to ask you some questions about your health (%s).
 PT(183) Para conhecer os impactos da saúde na cozinha, gostaríamos de lhe fazer algumas perguntas sobre a sua saúde (%s).
+SW(183) Kujifunza kuhusu changamoto za afya kwenye kupika tunapenda kukuuliza baadhi ya maswali kuhusu afya (%d).
 
 EN(184) Now we will ask about the time-use for adult women which is 16 years or older
 PT(184) Agora vamos perguntar sobre o uso do tempo para mulheres adultas que é de 16 anos ou mais
+SW(184) Sasa tutakuuliza kuhusu matumizi ya muda kwa wanawake wenye umri wa miaka 16 au zaidi.
 
 EN(185) Now we will ask about the time-use for girls in the age of 5-15 years old
 PT(185) Agora vamos perguntar sobre o uso do tempo para meninas dos 5 aos 15 anos
+SW(185) Sasa tutakuuliza kuhusu matumizi ya muda kwa wasichana wenye umri kati ya miaka 5-15.
 
 EN(186) Now we will ask about the time-use for adult men which is 16 years or older
 PT(186) Agora vamos perguntar sobre o uso do tempo para homens adultos que é de 16 anos ou mais
+SW(186) Sasa tutakuuliza kuhusu matumizi ya muda kwa wanaume wenye umri wa miaka 16 au zaidi.
 
 EN(187) Now we will ask about the time-use for boys in the age of 5-15 years old
 PT(187) Agora vamos perguntar sobre o uso do tempo para meninos dos 5 aos 15 anos
+SW(187) Sasa tutakuuliza kuhusu matumizi ya muda kwa wavulana wenye umri kati ya miaka 5-15.
 
 EN(188) Now we would like to ask you for some information on the households expenditures for food and for non-food.
 PT(188) Agora gostaríamos de lhe pedir alguma informação sobre as despesas dos agregados famíliares com alimentos e não alimentos.
+SW(188) Sasa tunapenda kukuuliza baadhi taarifa kuhusu matumizi ya kaya kwa chakula na vitu vingine tofauti na vyakula.
 
 EN(189) The next questions are about willingness to pay for a grid connection. There are several steps of getting connected to the grid, each with their own cost:  \n\n 1. To use electricity you first need a wire from to the nearest pole to a meter in your house. That is the connection.  \n 2. Within your house you need wires that connect appliances to the meter.  This is the wiring. \n 3. Finally, to keep using electricity you must pay for the electricity that you use, or it will be turned off. This is the cost of monthly use. \n\nI would now like to ask you questions ONLY about the first cost of connecting - getting a wire from the electricity poles to a meter in your house.
 PT(189) As próximas questões são sobre a disponibilidade para pagar uma ligação à rede eléctrica. Existem vários passos de ligação à rede eléctrica, cada um com o seu próprio custo: \n\n 1. Para usar eletricidade, primeiro precisa de um fio do poste mais próximo no minimo a um metro em sua casa. Esta é a ligação.  \n 2. Dentro da sua casa precisa de fios que liguem os aparelhos ao contador. Esta é a instalação. \n 3. Finalmente, para continuar a usar energia eléctrica, tem de pagar o seu uso, ou será desligada.Este é o custo do uso mensal. \n\nI agora gostaria de lhe fazer perguntas apenas sobre o primeiro custo de ligação - ligar um fio dos postes de eletricidade para um metro em sua casa.
+SW(189) Maswali yafuatayo ni kuhusu utayari wako kulipia umeme wa grid. Kuna hatua kadhaa ili uunganishwe na grid, kila hatua ina gharama zake: \n\n 1. Kutumia umeme kwanza unahitaji waya kutoka kwenye nguzo ya karibu mpaka kwenye mita nyumbani kwako. Hiyo ndio kuunganishwa na grid. \n 2. Ndani ya nyumba yako unahitaji nyaya kuunganisha vifaa kwenye mita. Hii ni Wiring. \n 3. Mwisho, ili kuendelea kutumia umeme lazima ulipie matumizi hayo, au utakatiwa umeme. Hizi ni gharama za matumizi ya mwezi. \n\n Napenda kukuuliza maswali kuhusu gharama za mwanzo tu za kuunganishwa - yani waya kutoka kwenye nguzo mpaka kwenye mita ndani ya nyumba yako.
 
 EN(190) An improved cooking stove can reduce the fuel consumption significantly. it can also reduce the smoke. Possibly, your cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. As you answer the next few questions, keep in mind the various benefits from this device as well as your household budget.
 PT(190) Um fogão melhorado de cozinha pode reduzir significativamente o consumo de combustível. também pode reduzir o fumo. Possivelmente, o seu tempo de cozinhar por refeição será reduzido, uma vez que o poder de fogo deste fogão é mais forte do que o prato de cozinha tradicional. À medida que responde às próximas perguntas, tenha em mente os vários benefícios deste dispositivo, bem como o seu orçamento familiar.
+SW(190) Kimsingi majiko yaliyoboreshwa ya kisasa yanaweza kupunguza gharama ya nishati. Inaweza pia kupunguza moshi. Na inawezakana hata kupunguza  muda wa kupika chakula, kwavile moto wa haya majiko ni mkali na una nguvu zaidi ya majiko ya asili. Utakapokuwa unajibu maswali machache yafuatayo, weka akilini faida mbali mbali kutokana na majiko haya pamoja na bajeti yako ya kaya.
 
 EN(191) Now I would like to ask your opinion on some energy related questions, who would be the right person to answer these questions?
 PT(191) Agora gostaria de saber sua opinião sobre algumas questões relacionadas com a energia, quem seria a pessoa certa para responder a estas perguntas?
+SW(191) Sasa napenda kukuuliza maoni yako kuhusu mambo ya nishati, nani ni mtu sahihi wa kujibu mswali haya?
 
 EN(192) The next questions is about the households use of lamps/candles and fuel used for lighting. Are you well informed about these issues, or would you like somebody else in the household to answer these questions?
-PT(191) Agora gostaria de pronunciar me sobre algumas questões relacionadas com a energia, quem seria a pessoa certa para responder a estas perguntas?
+PT(192) Agora gostaria de pronunciar me sobre algumas questões relacionadas com a energia, quem seria a pessoa certa para responder a estas perguntas?
+SW(192) Msawali yafuatayo ni kuhusu matumizi ya kaya ya taa/mishumaa na mafuta kwa ajili ya mwanga. Je unataarifa kamili kuhusu hilo, au ungependa mtu mwingine katika kaya kujibu haya maswali?
 
 EN(193) We would also like to ask you about the health of %s
 PT(193) Também gostaríamos de lhe perguntar sobre a saúde de %s
+SW(193) Tungependa pia kukuuliza kuhusu afya ya %s.
 
 EN(194) Could not find case in sample data. Please contact your system administrator
 PT(194) Não conseguiu encontrar caso nos dados de amostra. Entre em contato com o administrador do seu sistema
+SW(194) Imeshindwa kuupata utambulisho kutoka kwenye taarifa za sampuli. Tafadhali wasiliana na msimamizi wa mifumo.
 
 EN(195) May I please have a look at your kitchen? \n\nI would like to record the shape and size of the kitchen. \n\n\nEnumerator: Estimate the size of the cooking space by filling the following fields. One pace = 3 feet or 0.75 metres. Approximately one walking step.
 PT(195) Posso dar uma olhada na sua cozinha? \n\nI gostaria de gravar a forma e o tamanho da cozinha. \n\n\nEnumerator: Estimar o tamanho do espaço da cozinha preenchendo os seguintes campos. Um passo = 3 pés ou 0,75 metros. Aproximadamente um passo a pé.
+SW(195) Samahani, naweza kuangalia/kutazama sehemu ya kupikia/jiko? \n\n ingependa kunakili umbo na ukubwa wa sehemu ya kupikia/jiko. \n\nMdadisi: Kadiria ukubwa wa eneo la kupikia kwa kujaza viboksi vifuatavyo.Pace 1 = futi 3 au mita 0.75. kadiria hatua moja ya kutembea.
 
 EN(196) In this section we would like to ask you about the kind of stoves you use for cooking and its details.
 PT (196)NESTA secção, gostaríamos de lhe perguntar sobre o tipo de fogões que utiliza para cozinhar e seus detalhes.
+SW(196) Katika sehemu hii, tunapenda kukuuliza kuhusu aina ya majiko unayotumia kupikia na maelezo yake.
 
 EN(197) The next questions are about space and water heating
 PT(197) As próximas questões são sobre o espaço e o aquecimento da água
+SW(197) Maswali yanayofuata yanahusu eneo na kupasha maji moto.
 
 EN(198) or
 PT(198) ou
@@ -353,10 +393,12 @@ SW(198) au
 
 EN(199) who decided to purchase the cookstove
 PT(199) Quem decidiu a compra do fogão?
+SW(199) Nani aliyefanya maamuzi ya kununua jiko?
 
 EN(200) Now we would like to ask about security lights in your neighbourhood.
 PT(200) Agora gostaríamos perguntar sobre as luzes de segurança/iluminação pública em seu bairro.
 SW(200) Sasa ningependa kukuuliza kuhusu taa za usalama katika maeneo yenu.
 
 EN(201) No of the women in the household are available for interview
+SW(201) Idadi ya wanawake katika kaya kwa ajili ya mahojiano.
 
