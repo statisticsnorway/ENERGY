@@ -663,7 +663,7 @@ questions:
             <p>A ~~elecAccess~~, tem facitado ou dificultado a ligação à rede eléctrica aos novos agregados familiares ou a situação está na mesma?&nbsp;</p><p></p>
             
           SW: |
-            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na gridi kwa mara ya kwanza], je, imekuwa rahisi au ngumu kwa kaya mpya kuunganishwa na gridi ya taifa, au hali iko vile vile/hakuna mabadiliko?<p></p>
+            ~~elecAccess~~ , je, imekuwa rahisi au ngumu kwa kaya mpya kuunganishwa na gridi ya taifa, au hali iko vile vile/hakuna mabadiliko?<p></p>
             
         helpText:
           EN: |
@@ -682,7 +682,7 @@ questions:
             <p>~~elecAccess~~, tem tornado o preço mais barrato ou mais caro a ligação à rede eléctrica ou a situação está na mesma?&nbsp;</p><p><br></p><p></p><p></p>
             
           SW: |
-            <p>Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, imekuwa rahisi au ghali sana kwa kaya mpya kuunganishwa na gridi ya taifa, au bei iko vile vile/hakuna mabadiliko?</p><p><p><span class="instruction">Kama hakuna malipo ya lazima chagua geresho 1</span><br></p></p>
+            <p>~~elecAccess~~ , je, imekuwa rahisi au ghali sana kwa kaya mpya kuunganishwa na gridi ya taifa, au bei iko vile vile/hakuna mabadiliko?</p><p></p><p><span class="instruction">Kama hakuna malipo ya lazima chagua geresho 1</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -701,7 +701,7 @@ questions:
             ~~elecAccess~~, tem havido mais ou menos cortes de energia/apagão,na sua comunidade ou a situação está na mesma?&nbsp;<p></p>
             
           SW: |
-            <p>Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, kumekuwa na kukatika umeme mara chache au mara kwa mara, au&nbsp; hali vile vile/hakuna kukatika kwa umeme?</p><p><p><span class="instruction">Kupungua kwa umeme ni kwa makusudi, au Kushuka or kupanda kwa voltage katika mfumo wa usambazaji wa umeme ni kwa makusudi</span><br></p></p>
+            <p>~~elecAccess~~ , je, kumekuwa na kukatika umeme mara chache au mara kwa mara, au&nbsp; hali vile vile/hakuna kukatika kwa umeme?</p><p></p><p><span class="instruction">Kupungua kwa umeme ni kwa makusudi, au Kushuka or kupanda kwa voltage katika mfumo wa usambazaji wa umeme ni kwa makusudi</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -720,7 +720,7 @@ questions:
             ~~elecAccess~~, o preço de uso de energia tornou-se mais elevado ou ou mais baixo, ou asituação está na mema?&nbsp;<p></p>
             
           SW: |
-            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, gharama za matumizi ya umeme zimekuwa juu au chini, au&nbsp; ziko vile vile/hakuna mabadiliko?<p></p>
+            ~~elecAccess~~ , je, gharama za matumizi ya umeme zimekuwa juu au chini, au&nbsp; ziko vile vile/hakuna mabadiliko?<p></p>
             
         helpText:
           EN: |
@@ -739,7 +739,7 @@ questions:
             <span style="background-color: rgb(0, 0, 255);"></span>~~~elecAccess~~, a electricidade está disponível para mais ou menos horas&nbsp; à noite&nbsp; ou as horas de disponibilidade de energia à noite está na mesma?<br><p></p>
             
           SW: |
-            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je, kumekuwa na umeme kwa masaa mengi au machache wakati wa usiku au masaa ya kupata umeme wakati wa usiku yako vile vile/hakuna mabadiliko?<p></p>
+            ~~elecAccess~~ , je, kumekuwa na umeme kwa masaa mengi au machache wakati wa usiku au masaa ya kupata umeme wakati wa usiku yako vile vile/hakuna mabadiliko?<p></p>
             
         helpText:
           EN: |
@@ -780,7 +780,7 @@ questions:
             ~~elecAccess~~, os serviços de reparação ou de manutenção do fornrecedor melhoram ou pioraram, ou a situação está na mesma?&nbsp;<p></p>
             
           SW: |
-            Kwa miaka 5 iliyopita / Tangu jamii hii iunganishwe na umeme wa gridi kwa mara ya kwanza], je,&nbsp; huduma ya ukarabati&nbsp; na matengezezo kutoka kwa mtoa huduma imekuwa mbaya au nzuri au iko vile vile/hakuna mabadiliko?<p></p>
+            ~~elecAccess~~ , je,&nbsp; huduma ya ukarabati&nbsp; na matengezezo kutoka kwa mtoa huduma imekuwa mbaya au nzuri au iko vile vile/hakuna mabadiliko?<p></p>
             
         helpText:
           EN: |
