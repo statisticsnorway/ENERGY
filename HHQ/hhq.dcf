@@ -41,13 +41,13 @@ Start=62
 Len=2
 
 [Item]
-Label=district code|código do município
+Label=district code|Código do distrito
 Name=AA2
 Start=64
 Len=2
 
 [Item]
-Label=subdistrict code|código subcounty
+Label=subdistrict code|Código do posto administrativo
 Name=AA3
 Start=66
 Len=3
