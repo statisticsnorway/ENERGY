@@ -1687,7 +1687,7 @@ Value=55;Other|Outros|Nyingine
 Label=C Solar home system|sistema de home C Solar
 Name=C_SOLAR_HOME_SYSTEM
 RecordTypeValue='2'
-RecordLen=232
+RecordLen=233
 
 [Item]
 Label=Manufacture name and type|Fabricação nome e tipo
@@ -1834,12 +1834,12 @@ Value=2;Partial amount|Montante parcial|Fedha kiasi
 Label=What is the term period for the payment?
 Name=C67
 Start=163
-Len=1
+Len=2
 
 [Item]
 Label=What payment system do you use?
 Name=C68
-Start=164
+Start=165
 Len=1
 
 [ValueSet]
@@ -1852,13 +1852,13 @@ Value=3;Fixed fee|Taxa fixa|Ada zisizohamishika
 [Item]
 Label=What is the monthly payment for this [DEVICE] (installment/ fee to rent/use)?
 Name=C69
-Start=165
+Start=166
 Len=8
 
 [Item]
 Label=Did/do you borrow money to make your payment for [DEVICE]?
 Name=C70
-Start=173
+Start=174
 Len=1
 
 [ValueSet]
@@ -1869,13 +1869,13 @@ Link=133482376
 [Item]
 Label=Amount paid for device upfront|Valor inicial pago para o dispositivo
 Name=C71
-Start=174
+Start=175
 Len=9
 
 [Item]
 Label=Device warranty|garantia do dispositivo
 Name=C72
-Start=183
+Start=184
 Len=1
 
 [ValueSet]
@@ -1887,7 +1887,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information warranty and training|recebeu informações sobre a garantia e treinamento
 Name=C73
-Start=184
+Start=185
 Len=1
 
 [ValueSet]
@@ -1899,7 +1899,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
 Name=C74
-Start=185
+Start=186
 Len=1
 
 [ValueSet]
@@ -1911,19 +1911,19 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How many hours did you receive service from this [DEVICE] each day and night, during the last seven days?
 Name=C75
-Start=186
+Start=187
 Len=2
 
 [Item]
 Label=How many hours was service available from this [DEVICE] each evening, from 6:00 pm to 10:00 pm, during last seven days?
 Name=C76
-Start=188
+Start=189
 Len=2
 
 [Item]
 Label=Most serious problems device| problemas mais grave no dispositivo
 Name=C77
-Start=190
+Start=191
 Len=2
 
 [ValueSet]
@@ -1943,7 +1943,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Service to repair or raplace device|serviço para reparar ou substituir facilmente
 Name=C78
-Start=192
+Start=193
 Len=1
 
 [ValueSet]
@@ -1955,7 +1955,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Device mobile charger|dispositivo carregador móvel
 Name=C79
-Start=193
+Start=194
 Len=1
 
 [ValueSet]
@@ -1967,7 +1967,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Device radio|dispositivo de rádio
 Name=C80
-Start=194
+Start=195
 Len=1
 
 [ValueSet]
@@ -1979,13 +1979,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Number light bulbs| número de lâmpadas
 Name=C81
-Start=195
+Start=196
 Len=2
 
 [Item]
 Label=Appliances used with solar device|Aparelhos utilizados com o dispositivo de energia solar
 Name=C82
-Start=197
+Start=198
 Len=14
 DataType=Alpha
 
@@ -2003,7 +2003,7 @@ Value='x             ';No appliances|Não aplicavel|Hakuna vifaa vya umeme
 [Item]
 Label=Appliances would like|Aparelhos que gostaria de ter
 Name=C83
-Start=211
+Start=212
 Len=2
 
 [ValueSet]
@@ -2016,7 +2016,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=Type of appliance|Tipo de aparelho
 Name=C84
-Start=213
+Start=214
 Len=6
 DataType=Alpha
 
@@ -2035,7 +2035,7 @@ Value='66    ';No appliances|Não aplicavel|Hakuna vifaa vya umeme
 [Item]
 Label=Satisfaction main solar device|Satisfação pelo dispositivo principal de energia solar
 Name=C85
-Start=219
+Start=220
 Len=1
 
 [ValueSet]
@@ -2048,13 +2048,13 @@ Value=4;Unsatisfied|Insatisfeito|Haturidhiki sana
 [Item]
 Label=Year get solar device|Ano que obteve o dispositivo de energia solar
 Name=C86
-Start=220
+Start=221
 Len=4
 
 [Item]
 Label=Use more or less solar lighting|Usa mais ou menos iluminação solar
 Name=C87
-Start=224
+Start=225
 Len=2
 
 [ValueSet]
@@ -2068,7 +2068,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Appliances not used before|Aparelhos não utilizado anteriorimente
 Name=C88
-Start=226
+Start=227
 Len=7
 DataType=Alpha
 

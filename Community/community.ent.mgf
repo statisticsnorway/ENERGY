@@ -15,7 +15,6 @@ EN (4) No of households (%s) is higher than number of persons (%s).
 PT (4) Nenhum agregado familiar (%s) é superior ao número de pessoas (%s).
 SW (4) Idadi ya kaya (%s) ni kubwa kuliko idadi ya watu (%s).
 
-
 EN (5) No of new households (%s) is higher than number of households (%s).
 PT (5) Nenhum dos novos agregados familiares (%s) é superior ao número de agregados familiares (%s).
 SW (5) Idadi ya kawa mpya (%s) ni kubwa kuliko idadi ya kaya (%s).
@@ -35,7 +34,6 @@ SW (8) Haiwezekani "Usiwe na umeme" wakati huohuo "Uwe na umeme".
 EN (9) %s is more than the maximum of 24 hours.
 PT (9) %s é superior ao máximo de 24 horas.
 SW (9) %s ni zaidi ya saa 24.
-
 
 EN (10) %s is more than maximum of 4 hours.
 PT (10) %s é superior a 4 horas.
@@ -64,21 +62,25 @@ EN (16) CAPI: Ask respondent first about the worst months and then about a typic
 SW (16) CAPI: Muulize mhojiwa kuhusu mwezi mbaya zaidi halafu mwezi wa kawaida kwa maswali D15-D20. Kama hakuna mabadililo katika msimu, uliza tu kuhusu mwezi wa kawaida, Uliza maswali kwa kufuata ro.
 PT (16) CAPI: Pergunte ao entrevistado primeiro sobre os piores meses e, em seguida, sobre um mês típico para o D15-D20. Se não houver mudanças sazonais, pergunte apenas sobre o mês típico. Faça perguntas por linha..
 
-
 EN (17) Now we would like to know the prices for various energy sources in this community.
 SW (17) Sasa tungependa kujua bei za vyanzo mbalimbali vya umeme katika jamii hii.
 PT (17) Agora nós gostaríamos de conhecer os preços por várias fontes de energia nesta comunidade.
 
 EN(103) Yes
-EN(104) No
-EN(105) Could not register GPS coordinates. Try again?
 PT(103) Sim
-PT(104) Não
 SW(103) Ndio
+
+EN(104) No
+PT(104) Não
 SW(104) Hapana
+
+EN(105) Could not register GPS coordinates. Try again?
+PT(105) Não conseguiu registar as coordenadas de GPS. Tentar novamente?
+SW(105) Imeshindwa kusoma Vipimo vya GPS. Jaribu tena?
 
 EN(200) These questions should be asked to Knowledgable or Persons working at that particular community
 PT(200) Estas questões devem ser colocadas a pessoas com conhecimento ou às pessoas que trabalham nessa comunidade em particular
+SW(200) Haya maswali yaulizwe kwa mtu mwenye ufahamu au watu wanaofanya kazi katika jamii husika
 
 EN(201) Thank you for participating in this Impact of Access to Sustainable Energy Survey. As well as interviewing some of the households in this community, we would like the participants in this group to answer some questions about the community as a whole. We would like you to have an open discussion about the questions and agree on an answer. \n\nFirst we would like to know a little bit about the participants in this group.
 PT(201) Obrigado por participar neste INQUÉRITO. Além de entrevistar algumas dos Agregaddos famíliares desta comunidade, gostaríamos que os participantes deste grupo respondessem a algumas perguntas sobre a comunidade como um todo. Gostaríamos que tivesse uma discussão aberta sobre as perguntas e que concordasse com uma resposta. \n\ Primeiro gostaríamos de saber um pouco sobre os participantes neste grupo.
@@ -99,7 +101,7 @@ EN(206) We would now like to know about the presence of different types of busin
 PT(206) Gostaríamos agora de conhecer a presença de diferentes tipos de negócios e serviços nesta comunidade. \n\ Gostaríamos de saber tanto sobre a situação de hoje como há 5 anos.
 
 EN(207) Now we would like to know what kind of cookstoves that are used in this community.
-Pt(207) Agora gostaríamos de saber que tipo de fogões são usados nesta comunidade.
+PT(207) Agora gostaríamos de saber que tipo de fogões são usados nesta comunidade.
 
 EN(208) An improved cooking stove can reduce the fuel consumption significantly. It can also reduce the smoke. Possibly, the cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. \n\nWe would now like to know if such ovens are being used in this community.
 PT(208) Um fogão de cozinha melhorado pode reduzir significativamente o consumo de combustível. Também pode reduzir o fumo. Possivelmente, o tempo de cozedura por refeição será encurtado, uma vez que o poder de fogo deste cozido é mais forte do que o prato tradicional. Gostaríamos agora de saber se esses fornos estão a ser utilizados nesta comunidade.
@@ -107,16 +109,55 @@ PT(208) Um fogão de cozinha melhorado pode reduzir significativamente o consumo
 EN(209) Now we would like to know whether there are any community street lights, security lights or private lights outside businesses or private homes.
 PT(209) Agora gostaríamos de saber se existem luzes de rua comunitárias, luzes de segurança ou luzes privadas fora de empresas ou casas particulares.
 
+EN(201) Thank you for participating in this Impact of Access to Sustainable Energy Survey. As well as interviewing some of the households in this community, we would like the participants in this group to answer some questions about the community as a whole. We would like you to have an open discussion about the questions and agree on an answer. \n\nFirst we would like to know a little bit about the participants in this group.
+PT(201) Obrigado por participar neste Inquerito sobre Acesso da Energia Sustentavel. Além de entrevistar algumas dos AF desta comunidade, gostaríamos que os participantes deste grupo respondessem a algumas perguntas sobre a comunidade como um todo. Gostaríamos que tivesse uma discussão aberta sobre as perguntas e que concordasse com uma resposta. \n\nPrimeiro gostaríamos de saber um pouco sobre os participantes neste grupo.
+SW(201) Asante kwa kushiriki katika utafiti huu. Vile vile kwa kuwahoji badhi ya wanakaya katika jamii hii, tungependa washiriki katika grupu hili kujibu baadhi ya maswali kuhusu jamii kwa ujumla. Tungependa tuwe na majadiliano ya wazi kuhusu haya maswali na makubaliano juu ya majibu. Kwanza tungependa kujua kidogo kuhusu washiriki katika grupu.
+
+EN(202) Now we continue with the main topic for this survey, which is electricity.
+PT(202) Agora continuamos com o tema principal para este levantamento, que é a eletricidade.
+SW(202) Sasa tunaendelea na mada kuu ya utafiti huu, ambayo ni umeme.
+
+EN(203) Has any of the following programs been implemented in the community in the last 5 years?
+PT(203) Algum dos seguintes programas foi implementado na comunidade nos últimos 5 anos?
+SW(203) Je, kuna program yoyote kati ya program zifuatazo zimeanzishwa katika jamii hii katika miaka 5 iliyopita?
+
+EN(204) Now we would like to know more about the access to the community and to various service infrastructures that are available in this community.
+PT(204) Agora gostaríamos de saber mais sobre o acesso à comunidade e para várias infraestruturas de serviços que estão disponíveis nesta comunidade.
+SW(204) Sasa tunapenda kujua zaidi kuhusu ufikaji wa kwenye jamii hii na miundombinu ya huduma mbalimbali ambazo zinapatikana katika jamii hii.
+
+EN(205) We would now like to know about the presence of  markets, educational institutions and health services in this community.
+PT(205) Gostaríamos agora de conhecer a presença de mercados, instituições de ensino e serviços de saúde nesta comunidade.
+SW(205) Sasa tunapenda kujua kuhusu uwepo wa masoko, taasis za kielimu na huduma za afya katika jamii hii.
+
+EN(206) We would now like to know about the presence of different types of businesses and services in this community. \n\nWe would like to know both about the situation today and 5 years ago.
+PT(206) Gostaríamos agora de conhecer a presença de diferentes tipos de negócios e serviços nesta comunidade. \n\nGostaríamos de saber tanto sobre a situação de hoje como há 5 anos.
+SW(206) Tunapenda kujua kuhusu uwepo wa aina mbali mbali za biashara na huduma katika jamii hii. Tungependa kujua hali halisi leo na miaka 5 iliyopita.
+
+EN(207) Now we would like to know what kind of cookstoves that are used in this community.
+PT(207) Agora gostaríamos de saber que tipo de fogões são usados nesta comunidade.
+SW(207) Sasa tungependa kujua aina gani ya majiko ambayo yanatumika katika jamii hii?
+
+EN(208) An improved cooking stove can reduce the fuel consumption significantly. It can also reduce the smoke. Possibly, the cooking time per meal will be shortened since firepower of this cookstove is stronger than the traditional cookstove. \n\nWe would now like to know if such ovens are being used in this community.
+PT(208) Um fogão de cozinha melhorado pode reduzir significativamente o consumo de combustível. Também pode reduzir o fumo. Possivelmente, o tempo de cozer por refeição será encurtado, uma vez que o poder de fogo deste cozido é mais forte do que o prato tradicional. \n\nGostaríamos agora de saber se esses fornos estão a ser utilizados nesta comunidade.
+SW(208) Majiko yaliyoboreshwa, ya kisasa yanaweza kupunguza matumizi ya nishati kwa kiasi kikubwa. Pia inaweza kupunguza moshi. Na inaweza kupunguza muda wa kupika chakula kwavile moto wa majiko haya ni mkali zaidi ukilinganisha na majiko ya asili. Tungependa kufaham aina hiyo ya majiko ya kisasa yaliyoboreshwa kama yanatumika katika jamii hii.
+
+EN(209) Now we would like to know whether there are any community street lights, security lights or private lights outside businesses or private homes.
+PT(209) Agora gostaríamos de saber se existem luzes de rua comunitárias/iluminação pública, luzes de segurança ou luzes privadas fora de empresas ou casas particulares.
+SW(209) Sasa tungependa kujua kama kuna taa za mtaani zinazoangaza mtaa, taa za usalama au taa nje ya biashara au nyumba.
+
 EN(301) Tan: TANESCO/REA, Moz: EDM
 PT(301) EDM
 SW(301) TANESCO/REA
 
 EN(302) Over the past 5 years
 PT(302) Nos últimos 5 anos
+SW(302) Zaidi ya miaka 5 iliyopita.
 
 EN(303) Since the community first got access to the grid
 PT(303) Desde que a comunidade teve acesso pela primeira vez à rede
+SW(303) Tangia jamii ilipounganishwa na Grid ya taifa
 
 EN(401) This last section presents a few questions related to the global pandemic and period of closed schools from March 2020.\n\nThe other sections of this community questionnaire include a number of questions on livelihood and economic situation as well as living conditions today and 5 years ago. This would allow us to estimate the change during these years for communities with long term access to energy versus only short term access or still no access to energy.\n\nWe would like to ask you whether the situation for people in this community has changed over the last year from March 2020  up to today.\n\n
 PT(401) Eeta última secção apresenta algumas questões relacionadas com a pandemia global e o período das escolas fechadas a partir de março de 2020. \n\n As outras secções deste questionário comunitário incluem uma série de questões sobre a subsistência e a situação económica, bem como as condições de vida de hoje e há 5 anos. Isto permitir-nos-ia estimar a mudança durante estes anos para as comunidades com acesso a energia a longo prazo versus apenas acesso a curto prazo ou ainda sem acesso à energia. \n\ Gostaríamos de lhe perguntar se a situação das pessoas nesta comunidade mudou ao longo do último ano, de março de 2020 até hoje.\n\n
+SW(401) Sehemu hii ya mwisho ina maswali yanayohusu janga la Corona na kipindi shule zilifungwa kuanzia Mwezi Machi 2020. Sehemu zingine za dodoso hili la jamii lina maswali ya maisha na hali ya kiuchumi pamoja hali ya maisha leo na miaka 5 iliyopita. Hii itatusaidia kukadiria mabadiliko kipindi cha hii miaka kwa jamii zilizounganishwa kwenye nishati kwa kipindi kirefu dhidi ya zile zilizounganishwa kwa kipindi kifupi au zile ambazo hazijaunganishwa kabisa. Tungependa kujua kama hali kwa watu katika jamii hii imebadilika kuanzia mwaka jana mwezi Machi 2020 hadi leo.
 
