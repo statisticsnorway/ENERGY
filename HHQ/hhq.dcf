@@ -4500,11 +4500,21 @@ Name=Q3
 Start=280
 Len=8
 
+[ValueSet]
+Label=Valueset
+Name=Q3_VS1
+Link=8
+
 [Item]
 Label=How much did you spend on water, electricity, mobile phone top-ups, internet and other communication and transportation during the last 30 days?
 Name=Q4
 Start=288
 Len=8
+
+[ValueSet]
+Label=Valueset
+Name=Q4_VS1
+Link=8
 
 [Item]
 Label=How much did you spend on clothes and shoes the last 30 days?
@@ -4512,11 +4522,21 @@ Name=Q5
 Start=296
 Len=8
 
+[ValueSet]
+Label=Valueset
+Name=Q5_VS1
+Link=8
+
 [Item]
 Label=How much did you spend on household items, such as soap, cleaning supplies, drugs, batteries etc during the last 30 days?
 Name=Q6
 Start=304
 Len=8
+
+[ValueSet]
+Label=Valueset
+Name=Q6_VS1
+Link=8
 
 [Item]
 Label=How much did you spend on education related expenses (school fees, uniforms, supplies) during the last year?
@@ -4524,11 +4544,24 @@ Name=Q7
 Start=312
 Len=8
 
+[ValueSet]
+Label=Valueset
+Name=Q7_VS1
+Link=8
+
 [Item]
 Label=How much did you spend on other needs during the last year?
 Name=Q8
 Start=320
 Len=10
+
+[ValueSet]
+Label=Valueset
+Name=Q8_VS1
+Link=10
+Value=0:8888888887
+Value=8888888888;Don't know|Não sabe|Hajui
+Value=9999999999;Not applicable|Não aplicável|Haihusiki
 
 [Record]
 Label=S Attitudes|Atitudes S
