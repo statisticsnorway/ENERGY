@@ -84,18 +84,28 @@ PROC GLOBAL
 
 
 	function syncHQ()
-		//if syncconnect(CSWeb, syncUrl) = 1 then
-		if syncconnect(Dropbox) then	//Synching to dropbox for debugging
-			syncdata(PUT, COMMUNITY_DICT);
-			syncdata(PUT, HHQ_DICT);
-			syncdata(PUT, LISTING_DICT);
-			syncdata(PUT, SAMPLING_DICT);
+		if theCountry = "NO" then 
+			if syncconnect(Dropbox) then	//Synching to dropbox for debugging		
+				syncdata(PUT, COMMUNITY_DICT);
+				syncdata(PUT, HHQ_DICT);
+				syncdata(PUT, LISTING_DICT);
+				syncdata(PUT, SAMPLING_DICT);
 			
-			//Syncing of pen and pff files are now done using the "update" functionality
-			//on the tablet - not here..
-			syncdisconnect();
+				syncdisconnect();
+			else
+				errmsg(tr(1));
+			endif;
 		else
-			errmsg(tr(1));
+			if syncconnect(CSWeb, syncUrl) = 1 then
+				syncdata(PUT, COMMUNITY_DICT);
+				syncdata(PUT, HHQ_DICT);
+				syncdata(PUT, LISTING_DICT);
+				syncdata(PUT, SAMPLING_DICT);
+			
+				syncdisconnect();
+			else
+				errmsg(tr(1));
+			endif;
 		endif;
 	end;
 	
@@ -105,40 +115,20 @@ PROC GLOBAL
 		//First deleting the old files in order not to fill up the tablet
 		numeric del = filedelete("../Maps/*.mbtiles");
 
-		//if syncconnect(CSWeb, syncUrl) = 1 then
-		if syncconnect(Dropbox) then	//Synching to dropbox for debugging
-			numeric syncRes = syncFile(GET, "/Energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
-			if syncRes = 0 then
-				errmsg(tr(27));
-			endif;
-			syncDisconnect();
-		endif;
-	end;
-		
-
-
-
-	//upload (put) the paradata files to the server
-	//This function is currently not in use. Keeping it in case we decide to use it after all
-	function syncTheParadata()
-		if syncconnect(CSWeb, "http://197.249.5.210:8080/energia/api") = 1 then
-		//if syncconnect(Dropbox) then	//Synching to dropbox for debugging
-
-			string pfileName = "HHQ_" + M_LOGIN +  ".cslog";
-			if fileexist("/ENERGY/Data/" + pFileName) then
-				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
-			endif;
-			
-			pfileName = "Listing_" + M_LOGIN +  ".cslog";
-			if fileexist("/ENERGY/Data/" + pFileName) then
-				syncFile(PUT, "/ENERGY/Data/" + pFileName, "ENERGY/Paradata/" + pFileName);
-			endif;
-		
-			syncdisconnect();
+		if theCountry = "NO" then
+			errmsg("Ingen kart for Norge. Bruk google maps!");
 		else
-			errmsg(tr(1));
+			if syncconnect(CSWeb, syncUrl) = 1 then
+			numeric syncRes = syncFile(GET, "/Energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
+				if syncRes = 0 then
+					errmsg(tr(27));
+				endif;
+				syncDisconnect();
+			endif;
 		endif;
 	end;
+		
+
 
 
 
