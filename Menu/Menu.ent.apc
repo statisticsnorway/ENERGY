@@ -578,7 +578,8 @@ PROC GLOBAL
 
 		endif;
 
-		pffContent = pffContent + "FullScreen=Yes\n";	//experimental..
+		//pffContent = pffContent + "FullScreen=Yes\n";	//experimental..
+		pffContent = pffContent + "FullScreen=NoMenus\n";	//experimental..
 		//pffContent = pffContent + "Lock=CaseListing\n";	//Also experimental
 
 		
