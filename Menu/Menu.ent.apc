@@ -688,10 +688,7 @@ PROC GLOBAL
 	//Functions for user bar
 	
 	function setCountry()
-		numeric optionNo = accept(tr(33), "Mozambique - Portugueze", 
-		   								 "Tanzania - KiSwahili", 
-										 "Mozambique - English", 
-										 "Tanzania - English");
+		numeric optionNo = accept(tr(33), tr(34), tr(35), tr(36), tr(37), tr(38));
 		if optionNo = 1 then
 			theCountry = "MZ";
 			setlanguage("PT");
@@ -701,8 +698,11 @@ PROC GLOBAL
 		elseif optionNo = 3 then
 			theCountry = "MZ";
 			setLanguage("EN");
-		else
+		elseif optionNo = 4 then
 			theCountry = "TZ";
+			setLanguage("EN");
+		else
+			theCountrY = "NO";
 			setLanguage("EN");
 		endif;
 		saveSetting("Country", theCountry);
