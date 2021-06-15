@@ -1946,6 +1946,7 @@ Name=C20
 Position=101,548,130,568
 Item=C20,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -1958,6 +1959,7 @@ Name=C21
 Position=101,578,130,598
 Item=C21,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
