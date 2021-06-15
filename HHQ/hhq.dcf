@@ -3892,7 +3892,7 @@ Value=18;Television|Televisor|Runinga (TV)
 Value=19;Electric water pump|Bomba de água eléctrico|Pampu ya maji inayotumia umeme
 Value=20;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Nuru za Mwanga
 Value=21;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongoza balbu za mwanga
-Value=22;Light bulbs or tubes or other types|lâmpada ou fluorescente(Lâmpadas de tubo) ou outro tipo|balbu za mwanga au zilizopo au aina nyingine
+Value=22;Energy saving bulbs or tubes|lâmpada ou fluorescente(Lâmpadas de tubo) ou outro tipo|balbu za mwanga au zilizopo au aina nyingine
 
 [Item]
 Label=Do you have/Number of items|Número de ítens
@@ -4148,9 +4148,10 @@ ItemType=SubItem
 [ValueSet]
 Label=Do women 15 years and older spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_E_VS1
+Link=2816361
 Value=1;More time|mais tempo|Muda zaidi
-Value=2;Less time|menos tempo|Muda mchache
-Value=3;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
+Value=2;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
+Value=3;Less time|menos tempo|Muda mchache
 
 [Item]
 Label=Time use girls 5-14 years
@@ -4236,9 +4237,7 @@ ItemType=SubItem
 [ValueSet]
 Label=Do girls 5-14 years spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_J_VS1
-Value=1;More time|mais tempo|Muda zaidi
-Value=2;Less time|menos tempo|Muda mchache
-Value=3;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
+Link=2816361
 
 [Item]
 Label=Time use men 15 years and older
@@ -4322,9 +4321,7 @@ ItemType=SubItem
 [ValueSet]
 Label=Do men 15 years and older spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_O_VS1
-Value=1;More time|mais tempo|Muda zaidi
-Value=2;Less time|menos tempo|Muda mchache
-Value=3;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
+Link=2816361
 
 [Item]
 Label=Time use boys 5-14 years
@@ -4404,9 +4401,7 @@ ItemType=SubItem
 [ValueSet]
 Label=Do boys 5-14 years spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_T_VS1
-Value=1;More time|mais tempo|Muda zaidi
-Value=2;Less time|menos tempo|Muda mchache
-Value=3;The same amount of time|O mesmo tempo que agora|Sawa sawa na sasa
+Link=2816361
 
 [Record]
 Label=Q1 Consumption/expenditure|Q1 Consumo / despesas
@@ -5243,10 +5238,10 @@ Len=1
 Label=Value Set 0
 Name=GP5_VS1
 Link=837371282
-Value=1;Increased|Aumentou|Yameongezeka
-Value=2;Stayed the same|Manteve-se o mesmo|Yamebaki Vile Vile
-Value=3;Decreased|Diminuiu|Yamepungua
-Value=4;No such income, not applicable|Não existem tais rendimentos, não aplicável|Hakuna Mapato kama hayo, Haihusiki
+Value=1;No such income, not applicable|Não existem tais rendimentos, não aplicável|Hakuna Mapato kama hayo, Haihusiki
+Value=2;Increased|Aumentou|Yameongezeka
+Value=3;Stayed the same|Manteve-se o mesmo|Yamebaki Vile Vile
+Value=4;Decreased|Diminuiu|Yamepungua
 
 [Item]
 Label=Non-agricultural family businesses, including family businesses

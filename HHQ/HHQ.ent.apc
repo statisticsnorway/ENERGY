@@ -108,7 +108,7 @@ preproc
 	else
 		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
 	endif;
-	errmsg("%s", cookStove(4));
+//	errmsg("%s", cookStove(4));
 
 
 
@@ -793,7 +793,6 @@ preproc
 	endif;
 
 postproc
-
 	// can't live in community longer than age of the oldest person
 	numeric k = 1;
 	numeric highestAge = 0;
@@ -2366,7 +2365,6 @@ preproc
 PROC O7
 
 preproc
-
 	if hhDemographics(7) > 0 then
 		seed(systime());
 		numeric x, i = 1, curr = 1;
@@ -2378,19 +2376,17 @@ preproc
 				if curr = x then	//right child
 					chosenChildName = ab1(i);
 					$ = i;
-					exit;
+					break;
 				else
 					inc(curr);
 				endif;
 			endif;
 			inc(i);
 		enddo;
-
 		skip to O8;
 	else
 		skip to K_FORM;
 	endif;
-
 
 PROC O8
 

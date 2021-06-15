@@ -5975,14 +5975,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How long does a <span style="color:#008000;">~~getvaluelabel(I29)~~</span> of<span style="color:#008000;"> ~~getValueLabel(I25)~~</span> typically last? &#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">NUMBER OF DAYS&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How long does a <span style="color:#008000;">~~getvaluelabel(I30)~~</span> of<span style="color:#008000;"> ~~getValueLabel(I25)~~</span> typically last? &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">NUMBER OF DAYS&nbsp;</span></p>
             
           PT: |
-            <p>Quanto tempo&nbsp; normalmente um ~~getvaluelabel(I29)~~ de ~~getValueLabel(I25)~~ dura&nbsp;?&nbsp;&nbsp;</p><p><span style="font-size: 16px;"><font color="#0000ff">NÚMERO DE DIAS&nbsp;</font></span></p><p></p>
+            <p>Quanto tempo&nbsp; normalmente um ~~getvaluelabel(I30)~~ de ~~getValueLabel(I25)~~ dura&nbsp;?&nbsp;&nbsp;</p><p><span style="font-size: 16px;"><font color="#0000ff">NÚMERO DE DIAS&nbsp;</font></span></p><p></p>
             
           SW: |
-            <p>Kwa kawaida&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I29)~~</span>&nbsp;ya/cha&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getValueLabel(I25)~~</span>&nbsp;huwa Kinadumu kwa muda gani ?</p><p><span class="instruction">IDADI YA SIKU</span></p><p></p>
+            <p>Kwa kawaida&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I30)~~</span>&nbsp;ya/cha&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getValueLabel(I25)~~</span>&nbsp;huwa Kinadumu kwa muda gani ?</p><p><span class="instruction">IDADI YA SIKU</span></p><p></p>
             
         helpText:
           EN: |
@@ -7195,9 +7195,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><br></div><p></p>
             <p></p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div>Masaa<br></div><p><p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7234,9 +7236,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7333,9 +7337,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7373,9 +7379,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7473,9 +7481,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7529,9 +7539,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7628,9 +7640,11 @@ questions:
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
             </p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7666,9 +7680,11 @@ questions:
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;"><br></span><p></p></p>
+            
           SW: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><br></p><p>Masaa<p></p>
             </p>
+            
         helpText:
           EN: |
             
