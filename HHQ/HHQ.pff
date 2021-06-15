@@ -14,6 +14,7 @@ InputData=..\Data\HHQ.csdb
 Paradata=..\Data\HHQ_38afd7a8a8f8.cslog
 
 [ExternalFiles]
+COUNTRYVARIABLES_DICT=..\LookupFiles\countryVariables.csdb
 SAMPLING_DICT=..\Data\Sample.csdb
 
 [Parameters]
