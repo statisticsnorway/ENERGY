@@ -7190,14 +7190,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><br></div><p></p>
+            <p></p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div>Masaa<br></div><p><p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7228,15 +7228,15 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
-            <p>&#160;</p>
+            <p><font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7328,14 +7328,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7366,16 +7366,16 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-family: Arial, sans-serif;"><br></span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7468,14 +7468,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these men use on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7523,15 +7523,15 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
-            <p>&#160;</p>
+            <p><font face="Arial, sans-serif">How much of this time was spent after dark&nbsp;on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7623,14 +7623,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, howmuch time did each of these boys use on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
+            </p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             
@@ -7661,14 +7661,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&#160;</span></p>
-            <p>&#160;</p>
+            <p><font face="Arial, sans-serif">How much of this time was spent after dark&nbsp;on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p>&nbsp;</p>
             
           PT: |
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;"><br></span><p></p></p>
           SW: |
-            Masaa<p></p>
-            
+            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><br></p><p>Masaa<p></p>
+            </p>
         helpText:
           EN: |
             

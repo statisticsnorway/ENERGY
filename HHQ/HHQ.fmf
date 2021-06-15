@@ -6262,6 +6262,7 @@ Name=Q3
 Position=197,384,310,404
 Item=Q3,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
@@ -6274,6 +6275,7 @@ Name=Q4
 Position=195,415,308,435
 Item=Q4,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
@@ -6286,6 +6288,7 @@ Name=Q5
 Position=195,445,308,465
 Item=Q5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
@@ -6298,6 +6301,7 @@ Name=Q6
 Position=192,478,305,498
 Item=Q6,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
@@ -6310,6 +6314,7 @@ Name=Q7
 Position=196,509,309,529
 Item=Q7,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
@@ -6322,6 +6327,7 @@ Name=Q8
 Position=196,536,337,556
 Item=Q8,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=20
   
 [Text]
