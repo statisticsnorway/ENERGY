@@ -108,7 +108,7 @@ preproc
 	else
 		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
 	endif;
-	errmsg("%s", cookStove(4));
+//	errmsg("%s", cookStove(4));
 
 
 
@@ -793,7 +793,6 @@ preproc
 	endif;
 
 postproc
-	skip to O_form;
 	// can't live in community longer than age of the oldest person
 	numeric k = 1;
 	numeric highestAge = 0;
