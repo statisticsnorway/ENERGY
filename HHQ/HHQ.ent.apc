@@ -108,7 +108,7 @@ preproc
 	else
 		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
 	endif;
-	errmsg("%s", cookStove(4));
+	//errmsg("%s", cookStove(4));
 
 
 
@@ -2378,7 +2378,7 @@ preproc
 				if curr = x then	//right child
 					chosenChildName = ab1(i);
 					$ = i;
-					exit;
+					break;
 				else
 					inc(curr);
 				endif;
