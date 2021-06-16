@@ -110,8 +110,6 @@ preproc
 	endif;
 	//errmsg("%s", cookStove(4));
 
-
-
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
@@ -793,7 +791,6 @@ preproc
 	endif;
 
 postproc
-
 	// can't live in community longer than age of the oldest person
 	numeric k = 1;
 	numeric highestAge = 0;

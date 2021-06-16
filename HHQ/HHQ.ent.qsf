@@ -7094,7 +7094,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Lastly, we would like to know about the the time-use of boys in the age og 5-14 years old&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Lastly, we would like to know about the the time-use of boys in the age of 5-14 years old&nbsp;</span></p>
             
           PT: |
             Por último, gostaríamos de saber sobre o tempo usado pelos meninos&nbsp; de 5-14 anos&nbsp;idade&nbsp;<p></p>
@@ -7292,10 +7292,10 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many girls 5-14 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span> the last 7 days?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many girls 5-14 years have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span> the last 7 days?&nbsp;</span></p>
             
           PT: |
-            Quantas raparigas de 5 a 14 anos ou mais estiveram envolvidas em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
+            Quantas raparigas de 5 a 14 anos estiveram envolvidas em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
             
           SW: |
             Ni wasichana wangapi wa miaka 5-14 wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;katika siku 7 zilizopita?<p></p>
@@ -7595,7 +7595,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many boys 5-14 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span> the last 7 days?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many boys 5-14 years have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span> the last 7 days?&nbsp;</span></p>
             
           PT: |
             Quantos rapazes de 5 a 14 anos estiveram envolvidos em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
