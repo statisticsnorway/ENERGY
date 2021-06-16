@@ -83,8 +83,8 @@ Len=1
 [ValueSet]
 Label=Urban/rural
 Name=M_URBAN_RURAL_VS1
-Value=1;Urban
-Value=2;Rural
+Value=1;Urban|Urbano
+Value=2;Rural|Rural
 
 [Item]
 Label=Menu
@@ -98,7 +98,7 @@ Name=M_MENU_INT
 Value=1;Listing form|Formulário de listagem
 Value=2;Household questionnaire|Questionário do Agregado Familiar
 Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central
-Value=5;Sync with SV: Receive sample file
+Value=5;Sync with SV: Receive sample file|Receber ficheiro da amosta
 Value=9;Quit|Sair
 
 [Item]
@@ -110,11 +110,11 @@ Len=1
 [ValueSet]
 Label=Supervisor menu
 Name=M_SUPERMENU_VS1
-Value=1;Start bluetooth server|Sincronizar com servidor central
-Value=2;Generate sample
-Value=3;Synchronise data with HQ
+Value=1;Start bluetooth server|Iniciar sincronização com Bluethoot
+Value=2;Generate sample|Gerar amosta
+Value=3;Synchronise data with HQ|Sincronizar os dados com HQ
 Value=4;Community questionnaire|Questionário Comunitario
-Value=9;Quit
+Value=9;Quit|Sair
 
 [Item]
 Label=Select household
