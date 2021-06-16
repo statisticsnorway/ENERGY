@@ -60,6 +60,9 @@ EN(20) This will delete the current sample file. Are you sure
 PT(20) Esta acção irá eliminar ficheiro de amostra atual. Tens a certeza?
 
 EN(21) Yes
+PT(21) Sim
+
+EN(22) No
 PT(22) Não
 
 EN(23) (partly completed)
@@ -86,13 +89,6 @@ PT(29) Mapa do Google
 EN(30) Google satelite
 PT(30) Satelite Google
 
-EN(27) Failed to download map file!
-PT(27) Falha ao baixar o ficheiro do mapa!
-
-EN(28) Interview is completed for this household
-EN(29) Go back to map
-EN(30) Open it anyway
-
 EN(31) Make sure to choose "advance to end" from the menu when finishing revisiting this Household. Otherwise it will be saved as partially finished
 
 EN(32) Set country
@@ -104,3 +100,11 @@ EN(35) Tanzania - KiSwahili
 EN(36) Mozambique - English 
 EN(37) Tanzania - English
 EN(38) Norway - English
+
+
+EN(39) Failed to download map file!
+PT(39) Falha ao baixar o ficheiro do mapa!
+
+EN(40) Interview is completed for this household
+EN(41) Go back to map
+EN(42) Open it anyway
