@@ -3892,7 +3892,7 @@ Value=18;Television|Televisor|Runinga (TV)
 Value=19;Electric water pump|Bomba de água eléctrico|Pampu ya maji inayotumia umeme
 Value=20;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Nuru za Mwanga
 Value=21;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongoza balbu za mwanga
-Value=22;Energy saving bulbs or tubes|lâmpada ou fluorescente(Lâmpadas de tubo) ou outro tipo|balbu za mwanga au zilizopo au aina nyingine
+Value=22;Energy saving bulbs or tubes|Lâmpadas de baixo consumo|balbu za mwanga au zilizopo au aina nyingine
 
 [Item]
 Label=Do you have/Number of items|Número de ítens
