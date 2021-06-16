@@ -48,6 +48,7 @@ PROC GLOBAL
 		stop(1);
 	end;
 	
+	//For the user bar: Displays the map of the ea
 	function showEA()
 		string mapFileName = "../Maps/" + country + "_" + edit("99", toNumber(region))
 				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
@@ -79,11 +80,6 @@ preproc
 	serial = loadSetting("Sserial");
 	urbRur = loadSetting("SurbanRural");
 	country = loadSetting("Country");
-	
-	//This is just while testing as I don't want to change EA due to lack of map files
-	if country = "" then
-		country = "MZ";
-	endif;
 	
 	//errmsg("%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s",
 	//		LLogin, sysparm("LOGIN"), region, sysparm("REGION"), district, sysparm("DISTRICT"),
