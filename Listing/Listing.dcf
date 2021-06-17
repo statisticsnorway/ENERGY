@@ -145,6 +145,6 @@ Len=1
 [ValueSet]
 Label=source of power|fonte de energia
 Name=LL12_VS1
-Value=1;Power grid
+Value=1;Power grid|Conectado à rede elétrica
 Value=2;No grid, but solar cells with battery or solar home system|fornecimento de energia solar / dispositivo|Umeme jua/Kifaa cha umeme jua
 Value=3;None of the above|Nenhuma das 2 acima|Hakuna jibu

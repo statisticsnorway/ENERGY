@@ -8,6 +8,11 @@ Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
 
+[Languages]
+EN=English
+PT=Portuguese
+SW=Kiswahili
+
 [Level]
 Label=Listing questionnaire
 Name=SAMPLING_QUEST
@@ -91,8 +96,8 @@ Len=1
 [ValueSet]
 Label=Import or record GPS coordinates
 Name=SA7_VS1
-Value=1;Gravar coodenadas GPS
-Value=2;Importar GPS do questionário anterior
+Value=1;Record GPS coordinates|Gravar coodenadas GPS|Soma vipimo vya GPS
+Value=2;Import GPS from previous questionnaire|Importar GPS do questionário anterior|Chukua vipimo vya GPS kutoka dodoso lililotangulia
 
 [Item]
 Label=North coordinate (Latitude)
@@ -119,10 +124,10 @@ Len=1
 [ValueSet]
 Label=Presence of household
 Name=SA9_VS1
-Value=1;Presente
-Value=2;Temporariamente ausente
-Value=3;Fora, sazonal
-Value=4;Desocupado
+Value=1;Present|Presente|Kaya ipo kwa sasa
+Value=2;Temporary away|Temporariamente ausente|Kaya haipo kwa muda
+Value=3;Seasonal away|Fora, sazonal|Kaya haipo kwa kipindi kirefu
+Value=4;Vacated|Desocupado|Kaya imehama
 
 [Item]
 Label=Name of head of household
@@ -147,6 +152,6 @@ Len=1
 [ValueSet]
 Label=source of power
 Name=SA12_VS1
-Value=1;Conectado à rede elétrica
-Value=2;Fornecimento de energia solar ou eólica / dispositivo
-Value=3;Nenhum dos dois
+Value=1;Power grid|Conectado à rede elétrica
+Value=2;No grid, but solar cells with battery or solar home system|Fornecimento de energia solar ou eólica / dispositivo|Umeme jua/Kifaa cha umeme jua
+Value=3;None of the above|Nenhum dos dois|Hakuna jibu

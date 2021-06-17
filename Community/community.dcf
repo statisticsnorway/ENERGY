@@ -86,7 +86,7 @@ Len=1
 Label=Urban/Rural|Urbano Rural|Mjini / Vijijini
 Name=A6_VS1
 Value=1;Urban|Urbano|Mjini
-Value=2;Rural||Vijijini
+Value=2;Rural|Rural|Vijijini
 Value=3;Peri-Urban|Peri-urbana|Kandokando mwa miji
 
 [Item]
@@ -99,9 +99,9 @@ DataType=Alpha
 [ValueSet]
 Label=Interview language
 Name=A7_VS1
-Value='EN';English
-Value='PT';Portugues
-Value='SW';Swahili
+Value='EN';English|Inglês
+Value='PT';Portugues|Português
+Value='SW';Swahili|Swahili
 
 [Item]
 Label=Community ID
@@ -1185,7 +1185,7 @@ Label=Does your community have any form of street lightning?|A sua comunidade te
 Name=J1_VS1
 Value=1;Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
 Value=2;Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
-Value=3;No||Hapana
+Value=3;No|Não|Hapana
 
 [Item]
 Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
