@@ -301,7 +301,7 @@ Value=4;Living together|União marital/vivem juntos|Wanaishi pamoja
 Value=5;Widow(er)|Viúva/o|Mjane/Mgane
 Value=6;Separated|Separado/a|Wametengana
 Value=7;Divorced|Divorciado/a|Wameachana
-Value=8;Not applicable (less than 15 yrs)|Não aplicável (menos de 15 anos)|Haihusiki
+Value=8;Not applicable (less than 15 years)|Não aplicável (menos de 15 anos)|Haihusiki
 
 [Item]
 Label=Literacy read and write|Pode ler e escrever uma frase
@@ -4767,8 +4767,8 @@ ItemType=SubItem
 Label=Valueset
 Name=U2G_VS1
 Value=1;More money 5 years ago|Mais dinheiro há 5 anos|Kubwa zaidi ya miaka 5 iliyopita
-Value=2;Less money 5 years ago|Menos dinheiro há 5 anos|Ndogo miaka 5 iliyopita
-Value=3;Same 5 years ago|O mesmo há 5 anos|Sawa miaka 5 iliyopita
+Value=2;Same amount of money 5 years ago|O mesmo há 5 anos|Sawa miaka 5 iliyopita
+Value=3;Less money 5 years ago|Menos dinheiro há 5 anos|Ndogo miaka 5 iliyopita
 
 [Item]
 Label=Was any electricity used for this produse/process 5 years ago?
@@ -4891,9 +4891,9 @@ ItemType=SubItem
 [ValueSet]
 Label=Valueset
 Name=U3G_VS1
-Value=1;Smaller 5 yrs ago|Há 5 anos|Ndogo miaka 5 iliyopita
-Value=2;Same 5 yrs ago|Os mesmos anos atrás|Sawa miaka 5 iliyopita
-Value=3;Larger 5 yrs ago|Maior há 5 anos|Kubwa zaidi ya miaka 5 iliyopita
+Value=1;Smaller 5 years ago|Há 5 anos|Ndogo miaka 5 iliyopita
+Value=2;Same 5 years ago|Os mesmos anos atrás|Sawa miaka 5 iliyopita
+Value=3;Larger 5 years ago|Maior há 5 anos|Kubwa zaidi ya miaka 5 iliyopita
 
 [Item]
 Label=Was any electricity used for this processing/ production 5 years ago?
