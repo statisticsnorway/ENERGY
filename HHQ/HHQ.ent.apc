@@ -3079,10 +3079,12 @@ postproc
 PROC U2B
 
 postproc
-
-	skip to next;
-
-
+	if $ = 1 then
+		skip to U2H;
+	endif;
+	if $ = 2 then
+		skip to next;
+	endif;
 
 PROC U2C
 
@@ -3095,6 +3097,11 @@ onfocus
 	setValueset($, adultMembers);
 
 
+PROC U2F
+postproc
+	if $ = 2 then
+		skip to next;
+	endif;
 PROC U3
 
 onfocus
@@ -3115,8 +3122,12 @@ postproc
 PROC U3B
 
 postproc
-
-	skip to next;
+	if $ = 1 then
+		skip to U3H;
+	endif;
+	if $ = 2 then
+		skip to next;
+	endif;
 
 
 PROC U3C
@@ -3127,6 +3138,11 @@ onfocus
 
 
 
+PROC U3F
+postproc
+	if $ = 2 then
+		skip to next;
+	endif;
 PROC T1
 
 preproc
