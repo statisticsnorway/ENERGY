@@ -15,7 +15,7 @@ EN(5) Have you moved to a new EA (1= yes, 2 = no)?
 PT(5) Você terá mudado para nova AE (1 = sim, 2 = não)?
 
 EN(6) Warning: This functionality takes a lot of time and data capacity. Please only use this once after the survey has been finished. Continue (1= yes, 2 = no)?
-PT(6) Aviso: Esta funcionalidade requer muito tempo e capacidade de dados. Por favor, use esta acção apenas uma vez depois de terminar a pesquisa. Continuar (1= sim, 2 = não)?
+PT(6) Aviso: Esta funcionalidade requer muito tempo e capacidade de dados. Por favor, use esta acção apenas uma vez depois de terminar o inquérito. Continuar (1= sim, 2 = não)?
 
 EN(7) Problems with Sample data. Please contact your system administrator
 pt(7) Problemas com dados de amostra. Entre em contato com o administrador do sistema
@@ -48,7 +48,7 @@ EN(16) Server name: %s
 PT(16) Nome do servidor: %s
 
 EN(17) Wrong password or user name. Please try again
-PT(17) Senha errada ou nome de utilizador. Por favor, novamente.
+PT(17) Senha ou nome de utilizador está errada. Por favor, tente novamente.
 
 EN(18) Need to set the locality first
 PT(18) É Necessario definir a localidade primeiro
@@ -87,24 +87,40 @@ EN(29) Google map
 PT(29) Mapa do Google
 
 EN(30) Google satelite
-PT(30) Satelite Google
+PT(30) Satelite do Google
 
 EN(31) Make sure to choose "advance to end" from the menu when finishing revisiting this Household. Otherwise it will be saved as partially finished
+PT(31) Certifique-se de escolher "avançar para o fim" no menu ao terminar de revisitar este agregado familiar. Caso contrário, será salvo como parcialmente concluído
 
 EN(32) Set country
+PT(32) Definir país
 
 EN(33) Select Country and language
+PT(33) Selecione o país e o idioma
 
 EN(34) Mozambique - Portugueze
-EN(35) Tanzania - KiSwahili
-EN(36) Mozambique - English 
-EN(37) Tanzania - English
-EN(38) Norway - English
+PT(34) Moçambique - Português
 
+EN(35) Tanzania - KiSwahili
+PT(35) Tanzania - Swahili
+
+EN(36) Mozambique - English 
+PT(36) Moçambique - Inglês
+
+EN(37) Tanzania - English
+PT(37) Tanzania - Inglês
+
+EN(38) Noruega - English
+PT(38) Noruega - Inglês
 
 EN(39) Failed to download map file!
 PT(39) Falha ao baixar o ficheiro do mapa!
 
 EN(40) Interview is completed for this household
+EN(40) Entrevista está concluída para este agregado familiar
+
 EN(41) Go back to map
+PT(41) Voltar ao mapa
+
 EN(42) Open it anyway
+PT(42) Abra-o de qualquer forma
