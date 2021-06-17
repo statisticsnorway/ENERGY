@@ -1,72 +1,169 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.3
-
-[LANGUAGES]
-EN=English
-PT=Portugues
-SW=Swahili
-
-[QUESTION]
-Field=MENU_DICT.M_DISTRICT
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please choose district\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_EA
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 please choose enumeration area\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_LOCALITY
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 please choose locality\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please select what to do\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_REGION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please choose region\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_ROLE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please select\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_SUBDISTRICT
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 please choose sub district\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.M_VILLAGE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 please choose village\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.6
+languages:
+  - name: EN
+    label: English
+  - name: PT
+    label: Portugues
+  - name: SW
+    label: Swahili
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: MENU_DICT.M_DISTRICT
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Please choose district&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua Wilaya<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_EA
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">please choose enumeration area&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua eneo la kuhesabia<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_LOCALITY
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">please choose locality&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua ni mjini au vijiji?<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Please select what to do&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Tafadhali chagua unafanya nini<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_REGION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Please choose region&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua Mkoa<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_ROLE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Please select&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_SUBDISTRICT
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">please choose sub district&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua sehemu ya wilaya<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: MENU_DICT.M_VILLAGE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">please choose village&#160;</span></p>
+            
+          PT: |
+            
+          SW: |
+            Chagua Kijiji/Mtaa<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+...
