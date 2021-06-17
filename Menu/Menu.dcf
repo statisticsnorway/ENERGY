@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Label=Menu
 Name=MENU_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=25A467935B94FBFED8DAAECC603536BC4DF25E48BCA7DB388B81F5D2D8353AF3
 
 [Languages]
 EN=English
@@ -83,8 +84,8 @@ Len=1
 [ValueSet]
 Label=Urban/rural
 Name=M_URBAN_RURAL_VS1
-Value=1;Urban|Urbano
-Value=2;Rural|Rural
+Value=1;Urban|Urbano|Mjini
+Value=2;Rural|Rural|Kijijini
 
 [Item]
 Label=Menu
@@ -95,11 +96,11 @@ Len=1
 [ValueSet]
 Label=Menu
 Name=M_MENU_INT
-Value=1;Listing form|Formulário de listagem
-Value=2;Household questionnaire|Questionário do Agregado Familiar
-Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central
-Value=5;Sync with SV: Receive sample file|Receber ficheiro da amosta
-Value=9;Quit|Sair
+Value=1;Listing form|Formulário de listagem|Fomu ya kuorodheshea
+Value=2;Household questionnaire|Questionário do Agregado Familiar|Dodoso la kaya
+Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central|Tuma taarifa kwa msimamizi
+Value=5;Sync with SV: Receive sample file|Receber ficheiro da amosta|Pokea taarifa za sampuli
+Value=9;Quit|Sair|Funga/Ondoka
 
 [Item]
 Label=Supervisor menu
@@ -110,11 +111,11 @@ Len=1
 [ValueSet]
 Label=Supervisor menu
 Name=M_SUPERMENU_VS1
-Value=1;Start bluetooth server|Iniciar sincronização com Bluethoot
-Value=2;Generate sample|Gerar amosta
-Value=3;Synchronise data with HQ|Sincronizar os dados com HQ
-Value=4;Community questionnaire|Questionário Comunitario
-Value=9;Quit|Sair
+Value=1;Start bluetooth server|Iniciar sincronização com Bluetooth|Fungua Server ya Bluetooth
+Value=2;Generate sample|Gerar amosta|Tengeneza Sampuli
+Value=3;Synchronise data with HQ|Sincronizar os dados com HQ|Tuma Taarifa HQ
+Value=4;Community questionnaire|Questionário Comunitario|Dodoso la Jamii
+Value=9;Quit|Sair|Funga/Ondoka
 
 [Item]
 Label=Select household
