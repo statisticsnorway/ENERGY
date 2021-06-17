@@ -99,7 +99,7 @@ Len=1
 Label=Urban/Rural|Urbano Rural
 Name=AA7_VS1
 Value=1;Urban|urbano|Mjini
-Value=2;Rural||Vijijini
+Value=2;Rural|Rural|Vijijini
 
 [Item]
 Label=North coordinate|A Sul coordenadas
@@ -2240,7 +2240,7 @@ Len=2
 [ValueSet]
 Label=Fuel generator|gerador de combustível
 Name=C100_VS1
-Value=1;Diesel||Dizeli
+Value=1;Diesel|Diesel|Dizeli
 Value=2;Gasoline|Gasolina|Petroli
 Value=55;Other|De outros|Nyingine
 Value=88;Don't know|Não sabe|Sijui
@@ -2488,7 +2488,7 @@ Name=C120_VS1
 Value=1;National grid|Rede nacional|Gridi ya Taifa
 Value=2;Local mini grid|Mini-rede locais|Gridi ndogo inayopatikana hapa
 Value=3;Electric generaor|Generaor elétrica|Jenereta ya umeme
-Value=4;Solar||Umeme jua
+Value=4;Solar|Solar|Umeme jua
 Value=55;Other|De outros|Nyingine
 
 [Item]
@@ -2938,7 +2938,7 @@ Len=1
 Label=Which fuel use|Qual usa como combustível?
 Name=F11_VS1
 Value=2;Kerosene/Paraffin|Querosene|Mafuta ya taa
-Value=3;Diesel||Diseli
+Value=3;Diesel|Diesel|Diseli
 Value=4;Gasoline|Gasolina|Petroli
 Value=5;Biogas|Biogás|Bayogesi
 Value=6;Paraffin|Parafina|Mafuta ya taa
@@ -3287,7 +3287,7 @@ Value=14;Processed biomass (pellets)/ woodchips|Biomassa processada (pellets)/ l
 Value=15;Biogas|Biogás|Bayogesi
 Value=16;Ethanol|Etanol|Ethano
 Value=17;Garbage/plastic|Lixo/plástico|Takataka/plastiki
-Value=18;Solar||Nishati ya jua
+Value=18;Solar|Solar|Nishati ya jua
 Value=55;Other|Outros|Nyingine
 Value=99;Not applicable|Não aplicável|Haihusiki
 
@@ -3824,7 +3824,7 @@ Value=1;LPG/cooking gas|LPG / gás de cozinha|LPG/Gesi ya mtungi
 Value=2;Wood purchased|Madeira comprada|Kuni za kununua
 Value=3;Wood collected|Madeira recolhidas|Kuni za kuokota
 Value=4;Charcoal|Carvão|Mkaa
-Value=5;Solar||Nishati ya Jua
+Value=5;Solar|Solar|Nishati ya Jua
 Value=6;Kerosene|Querosene|Mafuta ya taa
 Value=7;Piped Natural Gas|Gás Natural Canalizado|Gesi asili kwenye mabomba
 Value=8;Coal/lignite|Carvão / lenhite|Makaa ya mawe
@@ -3880,7 +3880,7 @@ Value=6;Radio using batteries|Rádio usando baterias|Radio inayotumia betri
 Value=7;Mobile phone charger|carregador regular telemóvel|Chaja ya Simu
 Value=8;Electric radio|Rádio eléctrica|Radio inayotumia umeme
 Value=9;Fan|Ventilador|Feni
-Value=10;Refrigerator||Jokofu (Friji)
+Value=10;Refrigerator|Refrigerator|Jokofu (Friji)
 Value=11;Microwave oven|Forno de micro-ondas|Mashine ya kupashia chakula
 Value=12;Freezer|Congelador|Friza
 Value=13;Washing machine|Máquina de lavar|Mashine ya kufulia
@@ -3986,8 +3986,8 @@ Len=1
 Label=How many cattle?
 Name=L6_VS1
 Value=0;None|Nenhum|Hakuna
-Value=1;1-2||Ng'ombe 1-2
-Value=2;3-5||Ng'ombe 3-5
+Value=1;1-2|1-2|Ng'ombe 1-2
+Value=2;3-5|3-5|Ng'ombe 3-5
 Value=3;6 or more|6 ou mais|Ng'ombe 6 au zaidi
 
 [Item]
@@ -4000,8 +4000,8 @@ Len=1
 Label=How many sheep, goat or pigs?
 Name=L7_VS1
 Value=0;None|Nenhum|Hakuna
-Value=1;1-5||Kondoo 1-5
-Value=2;6-10||Kondoo 6-10
+Value=1;1-5|1-5|Kondoo 1-5
+Value=2;6-10|6-10|Kondoo 6-10
 Value=3;11 or more|11 ou mais|Kondoo 11 au zaidi
 
 [Item]
@@ -4014,8 +4014,8 @@ Len=1
 Label=How many chicken, ducks, turkeys, geese?
 Name=L8_VS1
 Value=0;None|Nenhum|Hakuna
-Value=1;1-10|1-10
-Value=2;11-20|11-20
+Value=1;1-10|1-10|1-10
+Value=2;11-20|11-20|11-20
 Value=3;21 or more|21 ou mais|21 au zaidi
 
 [Record]
