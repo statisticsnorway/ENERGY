@@ -2475,7 +2475,7 @@ questions:
           EN: |
             <p><span style="font-size:16px;color:#000000;">How much did your household pay for the internal wiring?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">Do not include the connection fee from earlier question here&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">If dwelling was already connected to the grid when the household moved in, enter 888888888 for "Don't know".  For those that rent the dweling, choose 999999999&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If dwelling was already connected to the grid when the household moved in, enter 888888888 for "Don't know".  For those that rent the dwelling, choose 999999999&nbsp;</span></p>
             
           PT: |
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Quanto é que o seu agregado pagou pela instalação interna?&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Não inclua a taxa de ligação de perguntas anteriores aqui.</span></font></p><p><font face="Arial, sans-serif" color="#0000ff">Se a habitação já estava ligada à rede eléctrica quando o seu agregado familiar se mudou,&nbsp;</font><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">selecione/</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">digite "8888888888" para "Não sei".</span></p><p><font face="Arial, sans-serif" color="#0000ff">Para aqueles que alugam a habitação, selecione/digite 9999999999&nbsp;</font></p><p><br></p>
@@ -5034,7 +5034,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p>Thank you for all this detailed information! </p><p>What about the total household income, &nbsp;&nbsp;&nbsp;&nbsp; stayed the same or decreased</p><p></p><p></p>
+            <p>Thank you for all this detailed information! </p><p>What about the total household income, has that increased, stayed the same or decreased</p><p></p><p></p>
             
           PT: |
             <p>Obrigado por toda esta informação detalhada!</p><p>E o rendimento total dos agregados famíliares, aumentou, permaneceu o mesmo ou diminuiu</p><p></p>
@@ -6881,7 +6881,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">Did your household have <span style="font-size:20px;color:#008000;font-family:'Arial', sans-serif;">~~getLabel(L2, curocc())~~ <span style="font-size:16px;color:#000000;font-family:'Arial';">in working condition 5 years ago?&nbsp;</span></span></span></p>
+            <p><span style="font-size:16px;color:#000000;">Did your household have <span style="font-size:20px;color:#008000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">~~getLabel(L2, curocc())~~</span> <span style="font-size:16px;color:#000000;font-family:'Arial';">in working condition 5 years ago?&nbsp;</span></span></span></p>
             
           PT: |
             <p><font face="Arial, sans-serif">A sua casa tinha&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(L2, curocc())~~</span><font face="Arial, sans-serif">&nbsp;em condições de funcionamnto há 5 anos atrás?&nbsp;</font><br></p>

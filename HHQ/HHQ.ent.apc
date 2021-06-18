@@ -3188,9 +3188,8 @@ onfocus
 
 
 postproc
-
-	if $ = womenVSet.length() then
-		skip to W_FORM;
+	if $ = familyMembers.length() +1 then
+		skip to GP_FORM;
 	endif;
 
 
@@ -3409,6 +3408,16 @@ postproc
 	endif;
 
 
+PROC X2_2
+preproc
+	if visualValue(c128) < 2 then
+		skip to AA_END_FORM;
+	endif;
+PROC X2_3
+preproc
+	if visualValue(c128) < 3 then
+		skip to AA_END_FORM;
+	endif;
 PROC AA20
 
 preproc

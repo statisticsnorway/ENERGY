@@ -1228,13 +1228,13 @@ Value=888888889;The dwelling was already connected when household moved in
 Value=999999999;Not applicable|Não aplicável|Haihusiki
 
 [Item]
-Label=Valueset
+Label=How much did your household pay for the internal wiring
 Name=C19
 Start=138
 Len=9
 
 [ValueSet]
-Label=Valueset
+Label=How much did your household pay for the internal wiring
 Name=C19_VS1
 Link=9
 
