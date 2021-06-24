@@ -110,6 +110,9 @@
       "path": ".\\LookupFiles\\users.csdb"
     },
     {
+      "path": ".\\Maps\\dummyfile.txt"
+    },
+    {
       "path": ".\\Menu\\Menu.ent"
     },
     {
