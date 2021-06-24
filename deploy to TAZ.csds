@@ -1,0 +1,156 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.6",
+  "name": "ENERGY",
+  "description": "",
+  "files": [
+    {
+      "path": ".\\Community\\community.ent"
+    },
+    {
+      "path": ".\\HHQ\\HHQ.ent"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_101.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_102.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_111.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_121.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_131.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_141.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_201.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_211.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_221.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_231.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_233.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_241.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_331.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_341.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_451.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_452.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_461.jpg"
+    },
+    {
+      "path": ".\\Images\\Cookstoves_471.jpg"
+    },
+    {
+      "path": ".\\Images\\Location-green.png"
+    },
+    {
+      "path": ".\\Images\\Location-red.png"
+    },
+    {
+      "path": ".\\Images\\Location-yellow.png"
+    },
+    {
+      "path": ".\\Images\\Toilet_1.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_2.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_3.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_4.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_5.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_6.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_7.jpg"
+    },
+    {
+      "path": ".\\Images\\Toilet_8.jpg"
+    },
+    {
+      "path": ".\\Listing\\Listing.ent"
+    },
+    {
+      "path": ".\\LookupFiles\\countryVariables.csdb"
+    },
+    {
+      "path": ".\\LookupFiles\\Regions.csdb"
+    },
+    {
+      "path": ".\\LookupFiles\\users.csdb"
+    },
+    {
+      "path": ".\\Menu\\Menu.ent"
+    },
+    {
+      "path": ".\\Menu\\Menu.pff"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\Community\\community.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\HHQ\\HHQ.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Listing\\Listing.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Menu\\CountryVariables.dcf"
+    },
+    {
+      "path": ".\\Menu\\Menu.dcf"
+    },
+    {
+      "path": ".\\Menu\\Regions.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Menu\\users.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Sampling\\sample.dcf",
+      "uploadForSync": true
+    }
+  ],
+  "deployment": {
+    "type": "CSWeb",
+    "cswebUrl": "http:\/\/196.192.78.160:81\/energy\/api",
+    "ftpUrl": "ftp:\/\/"
+  }
+}
