@@ -1127,7 +1127,9 @@ postproc
 	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
 			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
 			+ ".mbtiles";
-	downloadMap(mapFileName);
+	if not fileexist(mapfileName) then
+		downloadMap(mapFileName);
+	endif;
 	
 	if loggedIn = "S" then	//supervisor. Back to Supermenu
 		reenter M_SUPERMENU;
