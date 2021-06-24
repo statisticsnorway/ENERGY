@@ -619,7 +619,7 @@ Value=6;Never|Nunca|Hajawahi
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
 RecordTypeValue='B'
-RecordLen=158
+RecordLen=159
 
 [Item]
 Label=Years in community|A quantos anos vive nesta comunidade?
@@ -735,7 +735,7 @@ Value=8;Plastic/canvas|Plastic / canvas|Plastiki/Turubai
 Label=Material floor|Principal material do chão da casa
 Name=B9
 Start=116
-Len=1
+Len=2
 
 [ValueSet]
 Label=Material floor|Principal material do chão da casa
@@ -749,11 +749,12 @@ Value=6;Plastic tiles|Telhas de plástico|Marumaru za plastiki
 Value=7;Cement tiles|Telhas de cimento|Marumaru za saruji
 Value=8;Brick tiles|Telhas tijolo|Marumaru za tofali
 Value=9;Ceramic/marble tiles|Telhas de cerâmica / mármore|Marumaru za kawaida
+Value=10;Steel/other metal
 
 [Item]
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B10
-Start=117
+Start=118
 Len=1
 
 [ValueSet]
@@ -779,7 +780,7 @@ Image=..\Images\Toilet_8.jpg
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
 Name=B11
-Start=118
+Start=119
 Len=2
 
 [ValueSet]
@@ -800,7 +801,7 @@ Value=11;Bottle water|Água de garrafa|Maji ya chupa - ya dukani
 [Item]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
 Name=B12
-Start=120
+Start=121
 Len=2
 
 [ValueSet]
@@ -817,7 +818,7 @@ Value=7;Other|Outros|Nyingine
 [Item]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13
-Start=122
+Start=123
 Len=1
 
 [ValueSet]
@@ -835,7 +836,7 @@ Value=8;Candles|Velas|Mishumaa
 [Item]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14
-Start=123
+Start=124
 Len=1
 
 [ValueSet]
@@ -854,7 +855,7 @@ Value=9;Animal waste|Os resíduos animais|Vinyesi vya wanyama
 [Item]
 Label=Account or savings in bank etc|Tem uma conta ou poupança em um banco
 Name=B15
-Start=124
+Start=125
 Len=1
 
 [ValueSet]
@@ -866,7 +867,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16
-Start=125
+Start=126
 Len=2
 
 [ValueSet]
@@ -880,7 +881,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Rotating saving scheme or informal saving institution|Participa num esquema de poupança rotativo
 Name=B17
-Start=127
+Start=128
 Len=1
 
 [ValueSet]
@@ -892,7 +893,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18
-Start=128
+Start=129
 Len=3
 DataType=Alpha
 
@@ -906,7 +907,7 @@ Value='q  ';Other|De outros|Nyingine
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
 Name=B19
-Start=131
+Start=132
 Len=13
 DataType=Alpha
 
@@ -930,7 +931,7 @@ Value='m            ';Cannot get a loan/credit|Não é possível obter um empré
 [Item]
 Label=Mobile money to pay for mobile phone|O dinheiro móvel para pagar por telefone celular
 Name=B20
-Start=144
+Start=145
 Len=1
 
 [ValueSet]
@@ -942,7 +943,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Used the account last 90 days|Usou a conta nos últimos 90 dias?
 Name=B21
-Start=145
+Start=146
 Len=1
 
 [ValueSet]
@@ -954,7 +955,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B22
-Start=146
+Start=147
 Len=13
 DataType=Alpha
 
@@ -979,7 +980,7 @@ Value='q            ';Other|De outros|Nyingine
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
 RecordTypeValue='1'
-RecordLen=228
+RecordLen=229
 
 [Item]
 Label=Record HH or MN this section|Registro HH ou MN nesta secção(pessoa com maior conhecimento)
@@ -1254,48 +1255,52 @@ Len=2
 Label=What kind of tarriff do you have?
 Name=C22
 Start=151
-Len=1
+Len=2
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_TZ
-Value=1;D1
-Value=2;T1
-Value=3;T2
-Value=4;T3
-Value=5;T5
+Value=1;Standard tariff (D1)
+Value=2;High household tariff (T1T1
+Value=3;Household and business tariff (T2T2
+Value=4;Business tariff (T3)
+Value=5;High business tariff (T5)
+Value=55;Do not know
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_TZ
-Value=1;D1
-Value=2;T1
-Value=3;T2
-Value=4;T3
-Value=5;T5
+Value=1;Standard tariff (D1)
+Value=2;High household tariff (T1T1
+Value=3;Household and business tariff (T2T2
+Value=4;Business tariff (T3)
+Value=5;High business tariff (T5)
+Value=55;Do not know
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_MZ
-Value=1;D1
-Value=2;T1
-Value=3;T2
-Value=4;T3
-Value=5;T5
+Value=1;Standard tariff (D1)
+Value=2;High household tariff (T1T1
+Value=3;Household and business tariff (T2T2
+Value=4;Business tariff (T3)
+Value=5;High business tariff (T5)
+Value=55;Do not know
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_MZ
-Value=1;D1
-Value=2;T1
-Value=3;T2
-Value=4;T3
-Value=5;T5
+Value=1;Standard tariff (D1)
+Value=2;High household tariff (T1T1
+Value=3;Household and business tariff (T2T2
+Value=4;Business tariff (T3)
+Value=5;High business tariff (T5)
+Value=55;Do not know
 
 [Item]
 Label=Electric meter|Casa tem um contador elétrico?
 Name=C23
-Start=152
+Start=153
 Len=1
 
 [ValueSet]
@@ -1308,13 +1313,13 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
 Name=C24
-Start=153
+Start=154
 Len=2
 
 [Item]
 Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
 Name=C25
-Start=155
+Start=156
 Len=3
 
 [ValueSet]
@@ -1327,7 +1332,7 @@ Value=888;Don't know|Não sabe|Hajui
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
-Start=158
+Start=159
 Len=5
 
 [ValueSet]
@@ -1340,7 +1345,7 @@ Value=88888;Don't know|Não sabe|Hajui
 [Item]
 Label=Pre-paid meter|Pré-pago metros
 Name=C27
-Start=163
+Start=164
 Len=1
 
 [ValueSet]
@@ -1352,7 +1357,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
-Start=164
+Start=165
 Len=2
 
 [ValueSet]
@@ -1374,7 +1379,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Electricity bill provided|factura de electricidade fornecida
 Name=C29
-Start=166
+Start=167
 Len=1
 
 [ValueSet]
@@ -1387,7 +1392,7 @@ Value=3;Respondent does not have an energy bill|Reclamado não tem um contrato d
 [Item]
 Label=Amount last month electricity bill|Valor da conta de energia elétrica no mês passado
 Name=C30
-Start=167
+Start=168
 Len=8
 
 [ValueSet]
@@ -1400,7 +1405,7 @@ Value=88888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C31
-Start=175
+Start=176
 Len=6
 
 [ValueSet]
@@ -1413,31 +1418,31 @@ Value=888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many weeks did the bill cover?
 Name=C32
-Start=181
+Start=182
 Len=2
 
 [Item]
 Label=How much did you spend the last time you bought electricity?
 Name=C33
-Start=183
+Start=184
 Len=8
 
 [Item]
 Label=How long does this amount last?
 Name=C34
-Start=191
+Start=192
 Len=3
 
 [Item]
 Label=How many KWh did you pay for
 Name=C35
-Start=194
+Start=195
 Len=6
 
 [Item]
 Label=Quality electricity same all year|energia elétrica de qualidade mesmo durante todo o ano
 Name=C36
-Start=200
+Start=201
 Len=1
 
 [ValueSet]
@@ -1449,7 +1454,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information load shedding schedule|Receba informações da agenda derramamento de carga
 Name=C37
-Start=201
+Start=202
 Len=1
 
 [ValueSet]
@@ -1463,7 +1468,7 @@ Value=4;No load-shedding in this area|Sem restrição de corrente nesta área|Us
 [Item]
 Label=Hours of electricity day and night typical month|Horas de dia eletricidade e noite mês típico
 Name=C38
-Start=202
+Start=203
 Len=2
 
 [ValueSet]
@@ -1476,7 +1481,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C39
-Start=204
+Start=205
 Len=2
 
 [ValueSet]
@@ -1487,7 +1492,7 @@ Link=2
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
 Name=C40
-Start=206
+Start=207
 Len=2
 
 [ValueSet]
@@ -1500,7 +1505,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C41
-Start=208
+Start=209
 Len=2
 
 [ValueSet]
@@ -1511,7 +1516,7 @@ Link=2
 [Item]
 Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C42
-Start=210
+Start=211
 Len=2
 
 [ValueSet]
@@ -1533,7 +1538,7 @@ Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 [Item]
 Label=Main back-up source appliances|Principais aparelhos fonte de back-up
 Name=C43
-Start=212
+Start=213
 Len=2
 
 [ValueSet]
@@ -1551,7 +1556,7 @@ Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 [Item]
 Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44
-Start=214
+Start=215
 Len=1
 
 [ValueSet]
@@ -1565,7 +1570,7 @@ Value=4;They nevner showed up|Eles nunca apareceram|Hawakutokea
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
 Name=C45
-Start=215
+Start=216
 Len=2
 
 [ValueSet]
@@ -1578,7 +1583,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Problems with grid electricity 1|Problemas com eletricidade da rede 1
 Name=C46
-Start=217
+Start=218
 Len=2
 
 [ValueSet]
@@ -1599,7 +1604,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Problems with grid electricity 2|Problemas com eletricidade da rede 2
 Name=C47
-Start=219
+Start=220
 Len=2
 
 [ValueSet]
@@ -1620,7 +1625,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Any household members die or limb damage|Quaisquer membros do agregado familiar morrer ou danos limb
 Name=C48
-Start=221
+Start=222
 Len=1
 
 [ValueSet]
@@ -1632,7 +1637,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury|Motivo da lesão
 Name=C49
-Start=222
+Start=223
 Len=2
 
 [ValueSet]
@@ -1646,7 +1651,7 @@ Value=55;Other|De outros|Nyinginezo
 [Item]
 Label=Is there a limit for the load and/or appliances you are allowed to power from this local grid?
 Name=C50
-Start=224
+Start=225
 Len=2
 
 [ValueSet]
@@ -1659,7 +1664,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Were you involved in setting the tariff for the local grid?
 Name=C51
-Start=226
+Start=227
 Len=1
 
 [ValueSet]
@@ -1671,7 +1676,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How were you involved in the tariff setting?
 Name=C52
-Start=227
+Start=228
 Len=2
 
 [ValueSet]
@@ -2394,7 +2399,7 @@ Value=55;Other|De outrosr|Nyingine
 Label=C Externally recharged battery|C Externamente bateria recarregada
 Name=C_EXTERNALLY_RECHARGED_BATTERY
 RecordTypeValue='4'
-RecordLen=168
+RecordLen=165
 
 [Item]
 Label=How many years have you had this battery?
@@ -2512,13 +2517,13 @@ Len=2
 Label=Capacity|Capacidade
 Name=C123
 Start=152
-Len=7
+Len=4
 Decimal=2
 
 [Item]
 Label=voltage|Voltagem
 Name=C124
-Start=159
+Start=156
 Len=2
 
 [ValueSet]
@@ -2529,7 +2534,7 @@ Link=2
 [Item]
 Label=What is the watt hours  (Wh) stated on the battery?
 Name=C125
-Start=161
+Start=158
 Len=4
 
 [ValueSet]
@@ -2540,7 +2545,7 @@ Link=4
 [Item]
 Label=most serious problems|a maioria dos problemas graves
 Name=C126
-Start=165
+Start=162
 Len=2
 
 [ValueSet]
@@ -2559,7 +2564,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=other problems|outros problemas
 Name=C127
-Start=167
+Start=164
 Len=2
 
 [ValueSet]
@@ -3130,8 +3135,9 @@ Label=How did you obtain this [STOVE]?
 Name=I11_VS1
 Value=1;Purchased, upfront|Adquirido, antecipadamente|Nilinunua kwa kulipiakwa mkupuo
 Value=2;Purchased, in installment|Comprado, em parcela|Nilinunua kwa kulipia kidogo kidogo
-Value=3;Recieve for free|Receber gratuitamente|Nilipata bure
+Value=3;Receive for free|Receber gratuitamente|Nilipata bure
 Value=4;Built ourselves||Nimetengeneza Mwenyewe
+Value=5;Followed the house when we moved in
 
 [Item]
 Label=Who decided to purchase this [STOVE]?

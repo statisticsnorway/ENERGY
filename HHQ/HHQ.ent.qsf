@@ -817,7 +817,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Did&nbsp;</span>~~AB1(curocc())~~<span style="font-size:16px;color:#000000;">&nbsp;start school this year?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Did&nbsp;</span>~~AB1(curocc())~~<span style="font-size:16px;color:#000000;">&nbsp;attend school this school year?&nbsp;</span></p>
             <p>&nbsp;</p>
             
           PT: |
@@ -1112,8 +1112,8 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">At which formal institution does this household have an account or savings?&#160;</span></p>
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Read options aloud&#160;</span></p>
+            <p style="margin-bottom:8pt;">Which is the most commonly used formal institution for an account or saving for this household?<span style="font-size:16px;color:#000000;">&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Read options aloud&nbsp;</span></p>
             
           PT: |
             <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Em que instituição formal esse agregado familiar tem conta ou poupança?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Leia a opçoes em voz alta&nbsp;</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
@@ -1998,14 +1998,14 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Capacity: ampere-hours (Ah).&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">Read the information plate of the battery if available.&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">If multiple batteries, sum up the Ah of all the batteries.&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Range: 20-500&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Unknown=888&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Range: 20-1000&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Unknown=8888&nbsp;</span></p>
             
           PT: |
-            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">O que é que o Amp-hours (Ah) indica na bateria?&nbsp;</span></font></p><p><font color="#0000ff"><span style="font-family: Arial, sans-serif;">Capacidade: ampere-hora (Ah).&nbsp;</span><br></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Se forem várias pilhas, resumir o Ah de todas as pilhas.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Gama: 20-500&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Não sabe=888&nbsp;</span></font></p><p></p>
+            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">O que é que o Amp-hours (Ah) indica na bateria?&nbsp;</span></font></p><p><font color="#0000ff"><span style="font-family: Arial, sans-serif;">Capacidade: ampere-hora (Ah).&nbsp;</span><br></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Se forem várias pilhas, resumir o Ah de todas as pilhas.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Gama: 20-1000&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Não sabe=8888&nbsp;</span></font></p><p></p>
             
           SW: |
-            <p>Je, betri ya kuchaji ina uwezo gani (Kama ilivyoonekana kwenye betri ya kuchaji)?</p><p></p><p><span class="instruction">Uwezo: Ah</span></p><p></p><p><span class="instruction">Soma maelezo kwenye betri kama yapo.</span></p><p><span class="instruction">Kama haijulikani=888</span></p><p><span class="instruction">Kama betri zaidi ya moja, jumlisha Ah za betri zote</span></p>
+            <p>Je, betri ya kuchaji ina uwezo gani (Kama ilivyoonekana kwenye betri ya kuchaji)?</p><p></p><p><span class="instruction">Uwezo: Ah</span></p><p></p><p><span class="instruction">Soma maelezo kwenye betri kama yapo.</span></p><p><span class="instruction">Kama haijulikani=8888</span></p><p><span class="instruction">Kama betri zaidi ya moja, jumlisha Ah za betri zote</span></p>
             
         helpText:
           EN: |
@@ -2018,14 +2018,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">What is the voltage (V) of the rechargeable batteries?&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">If multiple batteries, record voltage for the most used battery. Volts (V).&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Read the information plate of the battery if available.&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Range: 6-24&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Unknown=88&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">What is the voltage (V) of the rechargeable batteries?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">If multiple batteries, record voltage for the most used battery. Volts (V).&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Read the information plate of the battery if available.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Range: 2-48&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Unknown=88&nbsp;</span></p>
             
           PT: |
-            <p>Qual é a voltagem (V) das pilhas recarregáveis?&nbsp;</p><p><font color="#0000ff">Se forem várias pilhas, regeste a tensão para a bateria mais utilizada. Volts (V).&nbsp;</font></p><p><font color="#0000ff">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</font></p><p><font color="#0000ff">Alcance: 6-24&nbsp;</font></p><p><font color="#0000ff">Não sabe=88&nbsp;</font></p><p></p>
+            <p>Qual é a voltagem (V) das pilhas recarregáveis?&nbsp;</p><p><font color="#0000ff">Se forem várias pilhas, regeste a tensão para a bateria mais utilizada. Volts (V).&nbsp;</font></p><p><font color="#0000ff">Leia a placa de informação da bateria, se tiver disponível.&nbsp;</font></p><p><font color="#0000ff">Alcance:&nbsp;</font><span style="color: rgb(0, 0, 255);">2-48</span><font color="#0000ff">&nbsp;</font></p><p><font color="#0000ff">Não sabe=88&nbsp;</font></p><p></p>
             
           SW: |
             <p>Je, betri ya kuchaji ina voti ngapi?</p><p><p><span class="instruction">Kama kuna betri zaidi ya moja ulizia taarifa za betri anayotumia mara kwa mara.</span></p></p><p><span class="instruction">Soma maelezo ya betri kama yapo.</span></p><p><span class="instruction">Kama haijulikani, jaza 88</span></p>
@@ -3699,7 +3699,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">Does this <span style="color:#008000;">~~solarDeviceType~~ </span>have a warranty ?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Did this <span style="color:#008000;">~~solarDeviceType~~ </span>have a warranty ?&#160;</span></p>
             <p>&#160;</p>
             <p><span style="font-size:16px;color:#0000ff;">I.e.to exchange or repair if the device does not work.&#160;</span></p>
             
@@ -4445,7 +4445,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">Would you be willing to pay <span style="color:#008000;">~~CF~~</span> upfront for this solar device?&#160;</span></p>
+            <p>Would you be willing to pay&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;upfront for a medium solar system which may be able to run a TV?<br></p>
             
           PT: |
             <p><font face="Arial, sans-serif"><span style="font-size: 20px;">Estaria disposto a pagar&nbsp;</span></font>~~CF~~&nbsp;<span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;</span><span style="font-size: 20px; font-family: Arial, sans-serif;">adiantado por este dispositivo solar?&nbsp;</span></p>
@@ -7190,7 +7190,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><br></div><p></p>
@@ -7332,7 +7332,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use per day on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
@@ -7476,7 +7476,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these men use on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these men use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
@@ -7635,7 +7635,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, howmuch time did each of these boys use on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><font face="Arial, sans-serif">In the last 7 days, howmuch time did each of these boys use per day on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas</span><p></p>
