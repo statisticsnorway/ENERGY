@@ -9,3 +9,6 @@
 *.backup
 LookupFiles/Regions_old.csdb
 *.orig
+
+!deploy\ to\ TAZ.pff
+!deploy\ to\ MOZ.pff
