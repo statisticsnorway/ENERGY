@@ -578,10 +578,12 @@ PROC GLOBAL
 
 		endif;
 
-		//pffContent = pffContent + "FullScreen=Yes\n";	//experimental..
-		pffContent = pffContent + "FullScreen=NoMenus\n";	//experimental..
-		//pffContent = pffContent + "Lock=CaseListing\n";	//Also experimental
-
+		//The following is rather experimental..
+		if getOS() = 10 then	//windows
+			pffContent = pffContent + "FullScreen=Yes\n";	
+		else
+			pffContent = pffContent + "FullScreen=NoMenus\n"
+		endif;
 		
 		pffContent = pffContent + "[Files]\n";
 		pffContent = pffContent + "Application=./" + questName + ".ent\n";
@@ -724,6 +726,7 @@ preproc
 	userbar(add button, makeText(tr(32)), setCountry());
 	userbar(show);
 
+
 postproc
 	//Writing the pff file to start up correctly next time
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -731,12 +734,13 @@ postproc
 
 
 PROC MENU_QUEST_FORM
-preproc
+onfocus
 	//Getting the right country and server name
 	theCountry = loadsetting("Country");
 	if theCountry = "" then
 		setCountry();
 	endif;
+	
 	COUNTRY = theCountry;
 	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
 		syncUrl = SERVER;
@@ -745,7 +749,23 @@ preproc
 		stop();
 	endif;
 	
-	
+//Just for checking if all map files are available.NB: Only to be used from PC - not tablets. Comment away when not in use
+{
+	list string missingFiles;
+	numeric ctr = 0;
+	forcase REGIONS_DICT do
+		string filnavn = "../Maps/TZ_" + edit("99", REGION_CODE) + edit("99", DISTRICT_CODE) + edit("999", SUBDISTRICT_CODE) 
+					+ edit("99", LOCALITY_CODE) + edit("99", VILLAGE_CODE) + edit("999", EA_CODE) + ".mbtiles";
+		if not fileexist(filnavn) then
+			missingFiles.add(filnavn);
+		endif;
+		if ctr = 0 then
+			errmsg("%s", filnavn);
+		endif;
+		inc(ctr);
+	enddo;
+	errmsg("Number of missing files: %d", missingFiles.length());
+}
 		
 postproc
 	writepff("Energy survey", "Menu", "", NOTAPPL, "N");	
@@ -829,7 +849,18 @@ postproc
 	//at M_EA field..
 	
 	if $ = 1 then	//Listing form
-		if visualValue(M_REGION) = DEFAULT or visualValue(M_REGION) = NOTAPPL then
+		if visualValue(M_REGION) = DEFAULT 
+					or visualValue(M_REGION) = NOTAPPL 
+					or visualValue(M_DISTRICT) = DEFAULT
+					or visualValue(M_DISTRICT) = NOTAPPL 
+					or visualValue(M_SUBDISTRICT) = DEFAULT
+					or visualValue(M_SUBDISTRICT) = NOTAPPL 
+					or visualValue(M_LOCALITY) = DEFAULT
+					or visualValue(M_LOCALITY) = NOTAPPL 
+					or visualValue(M_VILLAGE) = DEFAULT
+					or visualValue(M_VILLAGE) = NOTAPPL 
+					or visualValue(M_EA) = DEFAULT
+					or visualValue(M_EA) = NOTAPPL then
 			newEA = "1";
 		else
 			newEA = prompt(maketext(tr(5)),numeric);
@@ -1113,7 +1144,23 @@ postproc
 					endif;
 				endfor;
 			else	//New EA
-				currSerial = serialStart;
+				LL8 = currSerial;
+				//double checking that the currSerial is correct - in case the interviewer has been messing around in a messy pattern I didn't expect
+				numeric lc = loadcase(LISTING_DICT, M_LOGIN, M_REGION, M_DISTRICT, M_SUBDISTRICT, M_LOCALITY, M_VILLAGE, M_EA, LL8);
+				if lc <> 0 then
+					//Case exists, the ea is not quite new after all.. :)
+					forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and
+							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
+							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
+							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
+						if LL8 > currSerial then
+							currSerial = LL8;
+						endif;
+					endfor;
+				else
+					currSerial = serialStart;
+				endif;	
+				
 			endif;
 				
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");

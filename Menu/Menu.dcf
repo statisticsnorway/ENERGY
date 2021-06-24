@@ -30,55 +30,55 @@ Len=1
 Label=Menu record
 Name=MENU_REC
 RecordTypeValue='1'
-RecordLen=37
+RecordLen=47
 
 [Item]
 Label=Login
 Name=M_LOGIN
 Start=3
-Len=15
+Len=25
 DataType=Alpha
 
 [Item]
 Label=Region|Province
 Name=M_REGION
-Start=18
+Start=28
 Len=2
 
 [Item]
 Label=District
 Name=M_DISTRICT
-Start=20
+Start=30
 Len=2
 
 [Item]
 Label=Subdistrict
 Name=M_SUBDISTRICT
-Start=22
+Start=32
 Len=3
 
 [Item]
 Label=Locality
 Name=M_LOCALITY
-Start=25
+Start=35
 Len=2
 
 [Item]
 Label=Village
 Name=M_VILLAGE
-Start=27
+Start=37
 Len=2
 
 [Item]
 Label=Enumeration Area
 Name=M_EA
-Start=29
+Start=39
 Len=3
 
 [Item]
 Label=Urban/rural
 Name=M_URBAN_RURAL
-Start=32
+Start=42
 Len=1
 
 [ValueSet]
@@ -90,7 +90,7 @@ Value=2;Rural|Rural|Kijijini
 [Item]
 Label=Menu
 Name=M_MENU
-Start=33
+Start=43
 Len=1
 
 [ValueSet]
@@ -105,7 +105,7 @@ Value=9;Quit|Sair|Funga/Ondoka
 [Item]
 Label=Supervisor menu
 Name=M_SUPERMENU
-Start=34
+Start=44
 Len=1
 
 [ValueSet]
@@ -120,5 +120,5 @@ Value=9;Quit|Sair|Funga/Ondoka
 [Item]
 Label=Select household
 Name=M_HOUSEHOLD
-Start=35
+Start=45
 Len=3
