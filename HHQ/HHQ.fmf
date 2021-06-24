@@ -1507,7 +1507,7 @@ Text=B8
   
 [Field]
 Name=B9
-Position=208,308,223,328
+Position=208,308,237,328
 Item=B9,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -3287,7 +3287,7 @@ Text=C122
   
 [Field]
 Name=C123
-Position=98,449,211,469
+Position=98,449,169,469
 Item=C123,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox

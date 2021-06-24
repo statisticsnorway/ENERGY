@@ -1113,6 +1113,10 @@ preproc
 		errmsg(tr(174));
 	endif;
 
+postproc
+	if $ in 4,8 then
+		skip to C22;
+	endif;
 
 PROC C17
 
@@ -1383,7 +1387,7 @@ PROC C61
 postproc
 
 	numeric rangeStart = 5,
-			rangeEnd = 1500,
+			rangeEnd = 8000,
 			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
@@ -1615,7 +1619,7 @@ PROC C115
 PROC C116
 
 	numeric rangeStart = 5,
-			rangeEnd = 1500,
+			rangeEnd = 8000,
 			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
@@ -1651,8 +1655,8 @@ PROC C123
 postproc
 
 	numeric rangeStart = 20,
-			rangeEnd = 500,
-			rangeUnknown = 888;
+			rangeEnd = 1000,
+			rangeUnknown = 8888;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
 		errmsg(tr(167),rangeStart,rangeEnd,rangeUnknown,$);
@@ -1664,8 +1668,8 @@ PROC C124
 
 postproc
 
-	numeric rangeStart = 6,
-			rangeEnd = 24,
+	numeric rangeStart = 2,
+			rangeEnd = 48,
 			rangeUnknown = 88;
 
 	if not($ in rangeStart:rangeEnd or $ = rangeUnknown) then
