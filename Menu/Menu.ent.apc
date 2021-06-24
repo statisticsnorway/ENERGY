@@ -1124,31 +1124,34 @@ postproc
 	writePff("Energy survey", "Menu", "", NOTAPPL, "I");
 	
 	
-	
-	//downloadMap();
+	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
+			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
+			+ ".mbtiles";
+	downloadMap(mapFileName);
 	
 	if loggedIn = "S" then	//supervisor. Back to Supermenu
 		reenter M_SUPERMENU;
 	else
 		if M_MENU = 1 then 	//Listing
 
-			numeric currSerial = 0;
+			numeric currSerial = serialStart;
 			if newEA = "2" then
 				//Not  NEW EA. Need to find biggest HH number until now
 				forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and
 							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
 							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
-					if LL8 > currSerial then
+					if LL8 > currSerial and LL8 <> NOTAPPL then
 						currSerial = LL8;
 					endif;
 				endfor;
 			else	//New EA
-				LL8 = currSerial;
+			
 				//double checking that the currSerial is correct - in case the interviewer has been messing around in a messy pattern I didn't expect
+				LL8 = currSerial;				
 				numeric lc = loadcase(LISTING_DICT, M_LOGIN, M_REGION, M_DISTRICT, M_SUBDISTRICT, M_LOCALITY, M_VILLAGE, M_EA, LL8);
 				if lc <> 0 then
-					//Case exists, the ea is not quite new after all.. :)
+					//Case exists, the ea is not quite new after all.. :) Find biggest HH number
 					forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and
 							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
 							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -1157,8 +1160,6 @@ postproc
 							currSerial = LL8;
 						endif;
 					endfor;
-				else
-					currSerial = serialStart;
 				endif;	
 				
 			endif;
