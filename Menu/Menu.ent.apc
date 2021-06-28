@@ -813,7 +813,6 @@ postproc
 	loggedIn = "N";	//Just in case it's missing or something	
 	LOGIN = $;
 	
-	string pw = prompt(tr(10), password);
 	numeric load = loadcase(USERS_DICT, LOGIN);
 	if load = 0 then	//unsuccessful. Trying with lower case string instead
 		LOGIN = toLower($);
@@ -824,18 +823,12 @@ postproc
 		endif;
 	endif;
 	
-	if toLower(tStrip(pw)) = toLower(tStrip(PASSWORD)) then
-		//ok. Right password
-		if  tolower(tstrip(ROLE)) = "supervisor" then
-			loggedIn = "S";					
-			skip to M_SUPERMENU;
-		else
-			serialStart = COUNTERSTART;
-			loggedIn = "I";					
-		endif;
+	if  tolower(tstrip(ROLE)) = "supervisor" then
+		loggedIn = "S";					
+		skip to M_SUPERMENU;
 	else
-		errmsg(tr(17));
-		reenter;
+		serialStart = COUNTERSTART;
+		loggedIn = "I";					
 	endif;
 	
 	

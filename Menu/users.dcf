@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.6
 Label=Users Dictionary
 Name=USERS_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=083368F53AE2E9847DD9A41038DA78FB8AAF1F5B57982C4E306E64820D1E9D1E
 
 [Level]
 Label=Users Level
@@ -25,7 +26,7 @@ DataType=Alpha
 Label=Users Record
 Name=USERS_REC
 RecordTypeValue=''
-RecordLen=65
+RecordLen=55
 
 [Item]
 Label=Teamnumber
@@ -53,11 +54,4 @@ Label=Username
 Name=USERNAME
 Start=26
 Len=30
-DataType=Alpha
-
-[Item]
-Label=Password
-Name=PASSWORD
-Start=56
-Len=10
 DataType=Alpha
