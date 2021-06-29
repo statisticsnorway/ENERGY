@@ -1,181 +1,234 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.3
-
-[LANGUAGES]
-EN=English
-SW=Swahili
-PT=Portuguese
-
-[QUESTION]
-Field=LISTING_DICT.LL10
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the name of the head of the household?\par
-EN=\cf2 (This is dwelling number %serial%)\cf1\par
-EN=}
-
-[QUESTION]
-Field=LISTING_DICT.LL10
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the name of the head of the household?\par
-EN=\cf2 (This is dwelling number %serial%)\cf1\par
-EN=}
-
-[QUESTION]
-Field=LISTING_DICT.LL11
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the address/location?\par
-EN=\cf2 (keep in mind that this description is important to find your way back to do the main interview)\cf1\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=LISTING_DICT.LL11TMP
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Are there people present here?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 H\'e1 pessoas presentes aqui?\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL12
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the main source of power in this household?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Qual \'e9 a principal fonte de energia nesta casa?\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL2
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Country code\lang1044\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 C\'f3digo do pa\'eds\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL3
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 District code\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24 C\'f3digo distrital\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Village\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Localidade\lang1044\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL5
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Enumeration area\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033\'c1rea de enumera\'e7\'e3o\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Record GPS coordinate or copy from previous listing?\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Gravar coordenadas de GPS ou copiar da listagem anterior?\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL7A
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 North coordinate (latitude)\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Coordenada Norte (latitude)\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL7B
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 East coordinate (longitude)\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Coordenada leste (longitude)\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL8
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24\lang1033 Serial Number\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 N\'famero de s\'e9rie\par
-PT=}
-
-[QUESTION]
-Field=LISTING_DICT.LL9
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-EN=\pard\cf1\fs24 Presence of household?\lang1033\par
-EN=}
-PT={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1044{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-PT={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-PT={\*\generator Riched20 10.0.17763}\viewkind4\uc1
-PT=\pard\cf1\fs24\lang1033 Qual \'e9 o endere\'e7o / localiza\'e7\'e3o?\par
-PT=\cf2 (tenha em mente que esta descri\'e7\'e3o \'e9 importante para encontrar o caminho de volta para fazer a entrevista principal)\cf1\par
-PT=\fs19\lang1044\par
-PT=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.6
+languages:
+  - name: EN
+    label: English
+  - name: SW
+    label: Swahili
+  - name: PT
+    label: Portuguese
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: LISTING_DICT.LL10
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the name of the head of the household?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">(This is dwelling number ~~serial~~)&#160;</span></p>
+            
+          PT: |
+            <p>Qual é o nome do chefe da família?</p><p><font color="#0000ff">(Este é o número residencial&nbsp;~~serial~~)&nbsp;</font><br></p><p></p><p></p><p></p>
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL11
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the address/location?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">(keep in mind that this description is important to find your way back to do the main interview)&#160;</span></p>
+            <p>&#160;</p>
+            
+          PT: |
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL12
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">What is the main source of power in this household?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é a principal fonte de energia nesta casa?&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL2
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Country code&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Código do país&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL3
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">District code&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Código distrital&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL5
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Enumeration area&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Área de enumeração&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL7
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Record GPS coordinate or copy from previous listing?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Gravar coordenadas de GPS ou copiar da listagem anterior?&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL7A
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">North coordinate (latitude)&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Coordenada Norte (latitude)&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL7B
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">East coordinate (longitude)&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Coordenada leste (longitude)&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL8
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Serial Number&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Número de série&#160;</span></p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: LISTING_DICT.LL9
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Presence of household?&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Qual é o endereço / localização?&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">(tenha em mente que esta descrição é importante para encontrar o caminho de volta para fazer a entrevista principal)&#160;</span></p>
+            <p>&#160;</p>
+            
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+...

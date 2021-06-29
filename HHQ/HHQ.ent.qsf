@@ -35,24 +35,6 @@ styles:
       font-family: Arial;font-size: 18px;
       
 questions:
-  - name: HHQ_DICT.A1
-    conditions:
-      - questionText:
-          EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How frequently does ~~AB1(curocc())~~ cook food for the household?&#160;</span></p>
-            
-          PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Com que frequência ~~AB1(curocc())~~ cozinha alimentos para a casa?&#160;</span></p>
-            
-          SW: |
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.A2
     conditions:
       - questionText:
@@ -194,30 +176,11 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.AA09
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Do you want to record GPS coordinates or import them from Sample file?&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Você quer gravar coordenadas de GPS ou importá-las do arquivo de amostra?&#160;</span></p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Unataka kurekodi vipimo vya GPS au kuviingiza kutoka kwenye sample?&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.AA1
     conditions:
       - questionText:
           EN: |
-            
+            Region<p></p>
           PT: |
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Provincia&#160;</span></p>
             
@@ -340,9 +303,9 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Would you like to know the Name of the Head of the Household?&#160;</span></p>
-            <p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Who is the head of the family, should be decided by the family members at the beginning of the interview. Must be 15 years or older. Only one person per household.&#160;</span></p>
-            <p style="margin-top:5pt;margin-bottom:5pt;">&#160;</p>
+            <p style="margin-top:5pt;margin-bottom:5pt;"><font face="Arial, sans-serif"><span style="font-size: 20px;">Who is the head of this household?</span></font><br></p>
+            <p style="margin-top:5pt;margin-bottom:5pt;"><span style="color: rgb(0, 0, 255);">The head of the household should be decided by the household members at the start of the interview. Should be 15 years old or more. Only one head per household.</span><br></p>
+            <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
             
           PT: |
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Gostaria de saber o Nome do Chefe do Agregado familia?&nbsp;</span></p>
@@ -441,7 +404,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            
+            District<p></p>
           PT: |
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Distrito&#160;</span></p>
             
@@ -480,7 +443,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            
+            Sub-district<p></p>
           PT: |
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Posto administrativo&#160;</span></p>
             
@@ -493,11 +456,16 @@ questions:
             
           SW: |
             
+  - name: HHQ_DICT.AA4
+    conditions:
+      - questionText:
+          EN: |
+            Locality<p></p>
   - name: HHQ_DICT.AA5
     conditions:
       - questionText:
           EN: |
-            
+            Village<p></p>
           PT: |
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Localidade/Bairro/Municipio/Cidade&#160;</span></p>
             
@@ -532,6 +500,11 @@ questions:
             
           SW: |
             
+  - name: HHQ_DICT.AA7
+    conditions:
+      - questionText:
+          EN: |
+            Urban/Rural<p></p>
   - name: HHQ_DICT.AA7A
     conditions:
       - questionText:
@@ -616,6 +589,11 @@ questions:
             
           SW: |
             
+  - name: HHQ_DICT.AALOGIN
+    conditions:
+      - questionText:
+          EN: |
+            Login<p></p>
   - name: HHQ_DICT.AB1
     conditions:
       - questionText:
@@ -633,26 +611,6 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Tafadhali, naomba unitajie majina ya wanakaya ambao kwa kawaida wanaishi hapa tukianzia na mkuu wa kaya. Ningependa pia kuwaorodhesha wanakaya ambao kwa kawaida wanaishi hapa ila hawapo  kwa muda huu , bila kuhusisha wageni waliokaa hapa chini ya miezi sita<span style="font-size:13px;font-family:'Times New Roman';">.&#160;</span></span></p>
             <p>&#160;</p>
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Ukimaliza kuorodhesha mwanakaya wa mwisho, acha wazi na bonyeza ENTER kwenye keyboard&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.AB2
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:12px;color:#0000ff;">Currently interviewing/talking about ~~AB1(curocc())~~&#160;</span></p>
-            <p><span style="font-size:12px;color:#000000;">Is ~~AB1(curocc())~~ the main respondent in the household?&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:12px;color:#0000ff;">Este é o principal entrevistado na casa?&#160;</span></p>
-            <p><span style="font-size:12px;color:#000000;">Is ~~AB1(curocc())~~ the main respondent in the household?&#160;</span></p>
-            
-          SW: |
             
         helpText:
           EN: |
@@ -2274,104 +2232,6 @@ questions:
             
           SW: |
             Je, unamatarajio ya kuunganishwa kwenye gridi?<p></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.C142
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">How many hours do you actually use rechargeable batteries for electricity supply each day?&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Max 24 hours&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Don&apos;t know = 88&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
-            
-          PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantas horas você realmente usa baterias recarregáveis para o fornecimento de electricidade todos os dias?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Maximo 24 horas&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Não sabe = 88&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kwa kawaida ni saa ngapi mnatumia betri ya kuchaji kama chanzo cha umeme kila siku?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Masaa yasizidi kwenye swali la C140&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Hajui = 88&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.C143
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">How many hours do you actually use rechargeable batteries for electricity supply each evening, from 6:00 pm to 10:00 pm?&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Max 4 hours&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Don&apos;t know = 88&#160;</span></p>
-            <p>&#160;</p>
-            
-          PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quantas horas você realmente usa baterias recarregáveis para o fornecimento de electricidade todas as noites, das 18:00 às 22:00?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Maximo 4 horas&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Não sabe = 88&#160;</span></p>
-            <p>&#160;</p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kwa kawaida, ni kwa saa ngapi mnatumia betri ya kuchaji kama chanzo cha umeme kuanzia saa 12:00 jioni hadi saa 4:00 usiku?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Masaa yasizidi kwenye swali la C141&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Hajui = 88&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.C147
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">In the last 12 months, did any household members die or have permanent limb (bodily injury) damage because of the rechargeable batteries?&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Nos últimos 12 meses, algum membro da família morreu ou teve lesão permanentes nos membros por causa das baterias recarregáveis?&#160;</span></p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Katika kipindi cha miezi 12 iliyopita kuna mwanakaya yeyote aliyekufa au kupata ulemavu wa kudumu (majeraha ya mwili) kutokana na umeme wa betri ya kuchaji?&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.C148
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">What was the reasons for this injury?&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quais foram as razões para essa lesão?&#160;</span></p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, nini ilikuwa sababu ya kifo au kujeruhiwa?&#160;</span></p>
             
         helpText:
           EN: |
@@ -4346,26 +4206,6 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.D10
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Think about the amount you would need to spend each month for electricity, not the connection fee. How much would you need to spend each month for electricity?&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Pense no valor que você precisaria gastar mensalmente em eletricidade, não na taxa de conexão. &#160;</span></p>
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Quanto você precisaria gastar por mês em electricidade?&#160;</span></p>
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Fikiria kuhusu kiasi cha fedha ambacho ungehitaji kutumia kila mwezi kulipia umeme, tofauti na gharama za kuunganisha. Je, ni kiasi gani ungehitaji kutumia kila mwezi kwa umeme?&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.D2
     conditions:
       - questionText:
@@ -4415,24 +4255,6 @@ questions:
             
           SW: |
             <p>Kwa nini isiwe hivyo?<br></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.D5
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Would you be willing to pay ${CF} for an electricity connection, if you were given 6 months to make the payment? &#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:16px;color:#000000;">Você estaria disposto a pagar $ CF por uma conexão de eletricidade, se você tivesse 6 meses para fazer o pagamento?&#160;</span></p>
-            
-          SW: |
             
         helpText:
           EN: |
@@ -6816,23 +6638,6 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.L24
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Did you cultivate any land 5 years ago? IF SO: How large was the area?&#160;</span></p>
-            
-          PT: |
-            
-          SW: |
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.L2A
     conditions:
       - questionText:
@@ -7504,23 +7309,6 @@ questions:
             
           SW: |
             Dakika<p></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.N_NO
-    conditions:
-      - questionText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Shughuli&#160;</span></p>
             
         helpText:
           EN: |

@@ -35,7 +35,7 @@ styles:
       font-family: Arial;font-size: 18px;
       
 questions:
-  - name: A6
+  - name: COMMUNITY_DICT.A6
     conditions:
       - questionText:
           EN: |
