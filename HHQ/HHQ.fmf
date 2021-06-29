@@ -891,7 +891,7 @@ Name=AA11
 Position=543,265,558,285
 Item=AA11,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=DropDown
+DataCaptureType=RadioButton
 Form=1
   
 [Text]
@@ -1969,7 +1969,7 @@ Text=C21
   
 [Field]
 Name=C22
-Position=223,614,238,634
+Position=223,614,252,634
 Item=C22,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
