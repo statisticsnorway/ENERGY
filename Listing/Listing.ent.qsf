@@ -13,22 +13,27 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
+      
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
+      
   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
+      
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
+      
   - name: Heading 3
     className: heading3
     css: |
       font-family: Arial;font-size: 18px;
+      
 questions:
   - name: LISTING_DICT.LL10
     conditions:
@@ -38,7 +43,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">(This is dwelling number ~~serial~~)&#160;</span></p>
             
           PT: |
-            <p>Qual é o nome do chefe da família?</p><p><font color="#0000ff">(Este é o número residencial&nbsp;~~serial~~)&nbsp;</font><br></p><p></p><p></p><p></p>
+            <p>Qual é o nome do chefe do agragdo famíliar?</p><p><font color="#0000ff">(Este é o número residencial&nbsp;~~serial~~)&nbsp;</font><br></p><p></p><p></p><p></p>
+            
           SW: |
             
         helpText:
@@ -57,7 +63,7 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            
+            <p>Qual é o endereço/localização?&nbsp;</p><p><font color="#0000ff">(lembre-se que esta descrição é importante para encontrar o caminho de volta para fazer a entrevista principal)&nbsp;</font></p><div><br></div><p></p>
           SW: |
             
         helpText:

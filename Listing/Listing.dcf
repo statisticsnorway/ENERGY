@@ -20,38 +20,38 @@ Name=LISTING_QUEST
 [IdItems]
 
 [Item]
-Label=Login|ID de dispositivo
+Label=Login|Iniciar sessão
 Name=LLOGIN
 Start=1
 Len=25
 DataType=Alpha
 
 [Item]
-Label=Region|Código provincia
+Label=Region|Provincia
 Name=LL1
 Start=26
 Len=2
 
 [Item]
-Label=District|Código do distrito
+Label=District|Distrito
 Name=LL2
 Start=28
 Len=2
 
 [Item]
-Label=Subdistrict|Código do posto administrativo
+Label=Subdistrict|Posto administrativo
 Name=LL3
 Start=30
 Len=3
 
 [Item]
-Label=Locality
+Label=Locality|Localidade
 Name=LL4
 Start=33
 Len=2
 
 [Item]
-Label=Village|Código da Localidade
+Label=Village|Aldeia/povoação
 Name=LL5
 Start=35
 Len=2
@@ -75,7 +75,7 @@ RecordTypeValue=''
 RecordLen=127
 
 [Item]
-Label=Urban/rural
+Label=Urban/rural|Urbano/Rural
 Name=LLUR
 Start=43
 Len=1

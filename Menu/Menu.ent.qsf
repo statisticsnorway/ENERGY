@@ -13,22 +13,27 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
+      
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
+      
   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
+      
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
+      
   - name: Heading 3
     className: heading3
     css: |
       font-family: Arial;font-size: 18px;
+      
 questions:
   - name: MENU_DICT.M_DISTRICT
     conditions:
@@ -37,9 +42,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Please choose district&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione o Distrito.<p></p>
           SW: |
             Chagua Wilaya<p></p>
+            
         helpText:
           EN: |
             
@@ -54,9 +60,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">please choose enumeration area&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione Area de Enumeração<p></p>
           SW: |
             Chagua eneo la kuhesabia<p></p>
+            
         helpText:
           EN: |
             
@@ -71,15 +78,21 @@ questions:
             <p><span style="font-size:16px;color:#000000;">please choose locality&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione a Localidade<p></p>
           SW: |
             Chagua ni mjini au vijiji?<p></p>
+            
         helpText:
           EN: |
             
           PT: |
             
           SW: |
+            
+  - name: MENU_DICT.M_LOGIN
+    conditions:
+      - questionText:
+          PT: |
             
   - name: MENU_DICT.M_MENU
     conditions:
@@ -88,9 +101,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Please select what to do&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione o que fazer<p></p>
           SW: |
             Tafadhali chagua unafanya nini<p></p>
+            
         helpText:
           EN: |
             
@@ -105,9 +119,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Please choose region&#160;</span></p>
             
           PT: |
-            
+            Por favor selecione a Provincia<p></p>
           SW: |
             Chagua Mkoa<p></p>
+            
         helpText:
           EN: |
             
@@ -139,9 +154,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">please choose sub district&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione o Posto administrativo&nbsp;<p></p>
           SW: |
             Chagua sehemu ya wilaya<p></p>
+            
         helpText:
           EN: |
             
@@ -156,9 +172,10 @@ questions:
             <p><span style="font-size:16px;color:#000000;">please choose village&#160;</span></p>
             
           PT: |
-            
+            Por favor, selecione<p></p>
           SW: |
             Chagua Kijiji/Mtaa<p></p>
+            
         helpText:
           EN: |
             

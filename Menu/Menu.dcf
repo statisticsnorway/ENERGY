@@ -33,56 +33,56 @@ RecordTypeValue='1'
 RecordLen=47
 
 [Item]
-Label=Login
+Label=Login|Iniciar sessão
 Name=M_LOGIN
 Start=3
 Len=25
 DataType=Alpha
 
 [Item]
-Label=Region|Province
+Label=Region|Provincia
 Name=M_REGION
 Start=28
 Len=2
 
 [Item]
-Label=District
+Label=District|Distrito
 Name=M_DISTRICT
 Start=30
 Len=2
 
 [Item]
-Label=Subdistrict
+Label=Subdistrict|Posto administrativo
 Name=M_SUBDISTRICT
 Start=32
 Len=3
 
 [Item]
-Label=Locality
+Label=Locality|Localidade
 Name=M_LOCALITY
 Start=35
 Len=2
 
 [Item]
-Label=Village
+Label=Village|Aldeia/povoação
 Name=M_VILLAGE
 Start=37
 Len=2
 
 [Item]
-Label=Enumeration Area
+Label=Enumeration Area|Area de Enumeração
 Name=M_EA
 Start=39
 Len=3
 
 [Item]
-Label=Urban/rural
+Label=Urban/rural|Urbano/Rural
 Name=M_URBAN_RURAL
 Start=42
 Len=1
 
 [ValueSet]
-Label=Urban/rural
+Label=Urban/rural|Urbano/Rural
 Name=M_URBAN_RURAL_VS1
 Value=1;Urban|Urbano|Mjini
 Value=2;Rural|Rural|Kijijini
