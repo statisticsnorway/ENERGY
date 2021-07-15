@@ -6886,7 +6886,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many women 15 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span> the last 7 days?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many women 15 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span> the last 7 days?&nbsp;</span></p>
             
           PT: |
             Quantas mulheres com 15 anos ou mais estiveram envolvidas em&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
@@ -8654,7 +8654,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Has anybody in the household done some<span style="color:#0000ff;"> <span style="color:#008000;">other piecemeal work </span></span>for a business or somebody outside the household during the <span style="color:#008000;">last 12 months</span>?&#160;</span></p>
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Has anybody in the household done some</span><span style="color:#0000ff;"><span style="font-size: 16px;"> </span><span style="color: rgb(0, 128, 0); font-size: 16px;">other piecemeal work </span></span><span style="font-size: 16px;">for a business or somebody outside the household during the </span><span style="color: rgb(0, 128, 0); font-size: 16px;">last 12 months</span><span style="font-size: 16px;">?&nbsp;</span></span></p>
             
           PT: |
             <p><font face="Arial, sans-serif">Alguém no seu agregado familiar fez algum outro trabalho fragmentado para uma empresa ou alguém fora&nbsp;</font><span style="font-family: Arial, sans-serif;">do agregado familiar&nbsp;</span><font face="Arial, sans-serif">durante os últimos 12 meses?</font><br></p>
@@ -8692,7 +8692,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Has anybody in the household done some<span style="color:#0000ff;"> <span style="color:#008000;">public work (for the government, donors, charities)</span> </span>such as cash-for-work during the <span style="color:#008000;">last 12 months</span>?&#160;</span></p>
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Has anybody in the household done some</span><span style="color:#0000ff;"><span style="font-size: 16px;"> </span><span style="color: rgb(0, 128, 0); font-size: 16px;">public work (for the government, donors, charities)</span><span style="font-size: 16px;"> </span></span><span style="font-size: 16px;">such as cash-for-work during the </span><span style="color: rgb(0, 128, 0); font-size: 16px;">last 12 months</span><span style="font-size: 16px;">?&nbsp;</span></span></p>
             
           PT: |
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Alguém n</span><span style="font-family: Arial, sans-serif; font-size: 16px;">o agregado familiar</span><span style="font-family: Arial, sans-serif; font-size: 16px;">&nbsp;fez algum trabalho público (para o governo, doadores, instituições de caridade) tal como dinheiro por trabalho durante os últimos 12 meses?&nbsp;</span></p>

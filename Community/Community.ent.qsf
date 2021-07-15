@@ -35,25 +35,6 @@ styles:
       font-family: Arial;font-size: 18px;
       
 questions:
-  - name: COMMUNITY_DICT.A6
-    conditions:
-      - questionText:
-          EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Urban/rural&#160;</span></p>
-            
-          PT: |
-            <p><span style="font-size:16px;color:#000000;">Localidade&#160;</span></p>
-            
-          SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Mjini/Vijijini&#160;</span></p>
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: COMMUNITY_DICT.A10
     conditions:
       - questionText:
@@ -82,6 +63,25 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Tafadhali, ingiza jina la mji/kijiji&#160;</span></p>
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: COMMUNITY_DICT.A6
+    conditions:
+      - questionText:
+          EN: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Urban/rural&#160;</span></p>
+            
+          PT: |
+            <p><span style="font-size:16px;color:#000000;">Localidade&#160;</span></p>
+            
+          SW: |
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Mjini/Vijijini&#160;</span></p>
             
         helpText:
           EN: |
@@ -1060,7 +1060,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is there a bus connection in the community?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is there a bus or mini-bus connection in the community?&nbsp;</span></p>
             
           PT: |
             <p><span style="font-size:16px;color:#000000;">Existe uma ligação de autocarro na comunidade?&#160;</span></p>
