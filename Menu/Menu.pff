@@ -22,18 +22,3 @@ SAMPLING_DICT=../Data/Sample.csdb|CSPRODB
 USERS_DICT=../LookupFiles/Users.csdb|CSPRODB
 
 COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB
-
-[Parameters]
-LOGIN=donald         
-REGION= 9
-DISTRICT= 1
-SUBDISTRICT=  4
-LOCALITY=99
-VILLAGE= 2
-EA=  9
-URBANRURAL=1
-SERIAL=NOT
-Language=SW
-country=TZ
-LOGGEDIN=N
-
