@@ -941,6 +941,11 @@ postproc
 				serialStart = COUNTERSTART;
 			endif;
 			
+			//adding reminder to download maps 
+			if (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then
+				errmsg(tr(48));
+			endif;
+			
 			//Also set all region variables to NOTAPPL in case they try to download maps too early
 			M_REGION = NOTAPPL;
 			M_DISTRICT = NOTAPPL;
@@ -948,7 +953,6 @@ postproc
 			M_LOCALITY = NOTAPPL;
 			M_VILLAGE = NOTAPPL;
 			M_EA = NOTAPPL;
-
 			skip to M_REGION;
 		endif;
 		
@@ -1083,7 +1087,12 @@ preproc
 	vsetCodes(idx) = NOTAPPL;
 	setValueset(M_DISTRICT, vsetCodes, vsetLabels);
 	
-		
+postproc
+	numeric dmaps = accept(makeText(tr(49)), makeText(tr(21)), makeText(tr(22)));
+	if dmaps = 1 then
+		downloadMaps();
+	endif;
+	
 PROC M_SUBDISTRICT
 preproc
 	array vsetCodes(vsetMax);
