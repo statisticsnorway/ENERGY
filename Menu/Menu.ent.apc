@@ -107,7 +107,7 @@ PROC GLOBAL
 		endif;
 	end;
 	
-	
+	{
 	function downloadMap(string mapFileName)
 		
 		//First deleting the old files in order not to fill up the tablet
@@ -117,7 +117,7 @@ PROC GLOBAL
 			errmsg("Ingen kart for Norge. Bruk google maps!");
 		else
 			if syncconnect(CSWeb, syncUrl) = 1 then
-				numeric syncRes = syncFile(GET, "/Energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
+				numeric syncRes = syncFile(GET, "/energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
 				if syncRes = 0 then
 					errmsg(tr(39));
 				endif;
@@ -127,9 +127,7 @@ PROC GLOBAL
 			endif;
 		endif;
 	end;
-		
-
-
+	}	
 
 
 	//Toggle between satelite and normal view on maps
@@ -739,6 +737,48 @@ PROC GLOBAL
 		endif;
 		M_LOGIN = LOGIN;
 	end;	
+
+
+	function downloadMaps()
+		//Delete the ld files first?
+		numeric delfiles = accept(maketext(tr(45)), makeText(tr(21)), maketext(tr(22)));
+		if delfiles = 1 then
+			numeric del = filedelete("../Maps/*.mbtiles");
+		endif;
+		if theCountry = "NO" then
+			errmsg("Ingen kart for Norge. Bruk google maps!");
+		else			
+			if visualValue(M_REGION) = NOTAPPL or visualValue(M_REGION) = DEFAULT or visualValue(M_DISTRICT) = NOTAPPL or visualValue(M_DISTRICT) = DEFAULT then
+				errmsg(tr(46));
+				exit;
+			endif;
+			
+			numeric ctr = 0;
+			
+			if syncconnect(CSWeb, syncUrl) = 1 then
+				//Need to onstruct all the filenames and collect files 
+				forcase REGIONS_DICT where REGION_CODE = M_REGION and DISTRICT_CODE = M_DISTRICT do
+							string mapFileName = theCountry + "_" + edit("99", REGION_CODE) + edit("99", DISTRICT_CODE)
+								+ edit("999", SUBDISTRICT_CODE) + edit("99", LOCALITY_CODE) + edit("99", VILLAGE_CODE) + edit("999", EA_CODE)
+								+ ".mbtiles";
+					numeric syncRes = syncFile(GET, "/energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
+					if syncRes = 0 then
+						errmsg(tr(39));
+					else
+						inc(ctr);
+					endif;
+				enddo;
+				syncDisconnect();
+			else
+				errmsg(tr(47));
+			endif;
+			if ctr = 0 then
+				errmsg(tr(39));				
+			endif;
+			
+		endif;
+	end;
+
 	
 
 
@@ -747,6 +787,7 @@ preproc
 	userbar(clear);
 	userbar(add button, makeText(tr(32)), setCountry());
 	userbar(add button, makeText(tr(43)), changeLogin());
+	userbar(add button, makeText(tr(44)), downloadMaps());
 	userbar(show);
 
 
@@ -839,16 +880,10 @@ preproc
 	
 	
 postproc
-	string tmp;
-	forcase USERS_DICT do
-		tmp = tmp + ", "+ LOGIN;
-	enddo;
 	
-	errmsg("hele greia. %s", tmp);
 	
 	loggedIn = "N";	//Just in case it's missing or something	
 	LOGIN = $;
-	errmsg("LOgin: %s", LOGIN);
 	numeric load = loadcase(USERS_DICT, LOGIN);
 	if load = 0 then	//unsuccessful. Trying with lower case string instead
 		LOGIN = toLower($);
@@ -905,6 +940,19 @@ postproc
 				loadCase(USERS_DICT, LOGIN);
 				serialStart = COUNTERSTART;
 			endif;
+			
+			//adding reminder to download maps 
+			if (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then
+				errmsg(tr(48));
+			endif;
+			
+			//Also set all region variables to NOTAPPL in case they try to download maps too early
+			M_REGION = NOTAPPL;
+			M_DISTRICT = NOTAPPL;
+			M_SUBDISTRICT  = NOTAPPL;
+			M_LOCALITY = NOTAPPL;
+			M_VILLAGE = NOTAPPL;
+			M_EA = NOTAPPL;
 			skip to M_REGION;
 		endif;
 		
@@ -940,15 +988,6 @@ postproc
 		$ = NOTAPPL;
 		reenter;
 
-		
-{	elseif $ = 8 then 		//Upload paradata
-		string para = prompt(maketext(tr(6)), numeric);
-		if para = "1" then
-			syncTheParadata();
-		endif;
-		$ = NOTAPPL;
-		reenter;
-}
 	else	//$ = 9. quit
 		//First need to reset pff file so that we don't start at M_HOUSEHOLD field when starting up again
 		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -964,6 +1003,14 @@ preproc
 	else
 		newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
 		if newEA = "1" then
+			//resetting region variables in case the user wants to download maps
+			M_REGION = NOTAPPL;
+			M_DISTRICT = NOTAPPL;
+			M_SUBDISTRICT  = NOTAPPL;
+			M_LOCALITY = NOTAPPL;
+			M_VILLAGE = NOTAPPL;
+			M_EA = NOTAPPL;
+
 			skip to M_REGION;
 		endif;
 	endif;
@@ -1040,7 +1087,12 @@ preproc
 	vsetCodes(idx) = NOTAPPL;
 	setValueset(M_DISTRICT, vsetCodes, vsetLabels);
 	
-		
+postproc
+	numeric dmaps = accept(makeText(tr(49)), makeText(tr(21)), makeText(tr(22)));
+	if dmaps = 1 then
+		downloadMaps();
+	endif;
+	
 PROC M_SUBDISTRICT
 preproc
 	array vsetCodes(vsetMax);
@@ -1152,13 +1204,13 @@ postproc
 	//Writing the pff file for the menu to avoid having to enter the area values again
 	writePff("Energy survey", "Menu", "", NOTAPPL, "I");
 	
-	
-	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
+	//The following is done in a menu now
+	{string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
 			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
 			+ ".mbtiles";
 	if not fileexist(mapfileName) then
 		downloadMap(mapFileName);
-	endif;
+	endif;}
 	
 	if loggedIn = "S" then	//supervisor. Back to Supermenu
 		reenter M_SUPERMENU;
@@ -1299,10 +1351,11 @@ onfocus
 	string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
 			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
 			+ ".mbtiles";
-		
-	if not fileExist("../Maps/" + mapFileName) then
+	
+	//Moved getting the maps to a button 	
+	{if not fileExist("../Maps/" + mapFileName) then
 		downloadMap(mapFileName);
-	endif;
+	endif;}
 	
 	//HHmap.setBaseMap("../Maps/" + mapFileName);
 	HHmap.setBaseMap(Satellite);

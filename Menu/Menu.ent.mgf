@@ -165,3 +165,27 @@ SW(42) Fungua tu
 EN(43) Change login
 PT(43) Mudar usuário
 SW(43) Badilisha mtumiaji
+
+EN(44) Download maps
+PT(44) Baixar mapas
+SW(44) Pakua ramani
+
+EN(45) Delete old map files?
+PT (45) Remover os antigos ficheiros de mapa?
+SW(45) Futa mafaili ya zamani ya ramani?
+
+EN(46) Please choose region and district first
+PT (46) Escolha primeiro a Província e o distrito
+SW(46) Tafadhali Chagua Mkoa na Wilaya kwanza
+
+EN(47) Failed to connect to server
+PT (47) Falha ao conectar ao servidor
+SW(47) Imeshindikana kukuunganisha na Seva(Server)
+
+EN(48) Rememeber to download map files while online if it has not been done already
+PT (48) Caso ainda não tenha sido feito , Lembre-se de descarregar arquivos de mapas enquanto tiver Internet ligada.
+SW(48) Kumbuka kupakua Ramani wakati umeunganishwa na mtandao kama bado hujafanya hivvyo
+
+EN(49) Download maps?
+SW(49) Kupakua ramani?
+PT(49) Baixar mapas?
