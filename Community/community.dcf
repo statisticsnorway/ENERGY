@@ -467,8 +467,8 @@ Label=How many businesses are connected to the grid?|Quantas empresas estão con
 Name=D14_VS1
 Value=0;None|Nenhum|Hakuna
 Value=1;All businesses|Pequena parte dos negócios|Biashara zote
-Value=2;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
-Value=3;Most of the businesses|Metade das empresas|Biashara nyingi
+Value=2;Most of the businesses|Metade das empresas|Biashara nyingi
+Value=3;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
 Value=4;Small part of the businesses|todas as empresas|Biashara chache
 
 [Item]
@@ -606,7 +606,7 @@ Value='e ';Too expensive|Muito caro|Gharama kubwa ya umeme
 Value='f ';Do not trust the supplier|Não confie no fornecedo|Hatumwamini mtoa huduma
 Value='g ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
 Value='h ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
-Value='i ';Unpredicactable bille|Bille não impraticável |Ankara zisizotabirika
+Value='i ';Unpredicactable bills|Notas não impraticável |Ankara zisizotabirika
 Value='q ';Other, specify|Outro, especifique|Nyinginezo
 Value='x ';No problems|Sem problemas|Hakuna matatizo
 
@@ -1027,7 +1027,7 @@ Value=18;Doctor, lawyer, accountant, or other professional services|Médico, adv
 Value=19;business Selling or giving service to Solar Home Systems or Solar Lighting Systems|venda ou prestação de serviços a Sistemas Solares Domésticos ou Sistemas de Iluminação Solar|Biashara ya kuuza  au kutoa huduma ya Mifumo ya Umeme jua wa nyumbani
 Value=20;business providing Construction work|negócio que fornece trabalhos de construção|Biashara ya huduma za Ujenzi
 Value=21;Grain or oil mill|Grão ou moinho de óleo|Kusaga nafaka/kukamua mafuta
-Value=22;Internet or TV caf�|Internet café ou TV |Huduma za Mtandao (Intaneti/TV)
+Value=22;Internet or TV café|Internet café ou TV |Huduma za Mtandao (Intaneti/TV)
 Value=23;Restaurant, tea or coffee shop|Restaurante, chá ou café |Migahawa/chai au sehemu/migahawa maalumu za kunywa kahawa
 Value=24;Mobile phone charging or repairing service|Serviço de carregamento ou reparação de telemóveis|Sehemu za kuchajia simu/ sehemu za matengenezo
 
