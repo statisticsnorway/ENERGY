@@ -102,6 +102,7 @@ preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(201));
 	endif;
+
 PROC C2
 
 PROC C3
@@ -311,8 +312,14 @@ preproc
 		errmsg(tr(208));
 	endif;
 PROC I6
- if $ in 2,88 then
+ if $ in 1,88 then
   skip to I8;
+ endif;
+PROC I7
+preproc
+ if I6 = 1 then
+  I7 = 1;
+  noinput;
  endif;
 PROC J1
 preproc
