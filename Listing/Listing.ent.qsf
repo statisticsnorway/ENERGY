@@ -46,7 +46,7 @@ questions:
             <p>Qual é o nome do chefe do agragdo famíliar?</p><p><font color="#0000ff">(Este é o número residencial&nbsp;~~serial~~)&nbsp;</font><br></p><p></p><p></p><p></p>
             
           SW: |
-            
+            Je, Mkuu wa Kaya anaitwa nani?&nbsp;<br>(Nitajie jina la mkuu wa kaya.)<p></p>
         helpText:
           EN: |
             
@@ -64,8 +64,9 @@ questions:
             
           PT: |
             <p>Qual é o endereço/localização?&nbsp;</p><p><font color="#0000ff">(lembre-se que esta descrição é importante para encontrar o caminho de volta para fazer a entrevista principal)&nbsp;</font></p><div><br></div><p></p>
-          SW: |
             
+          SW: |
+            Nitajie Anuani/Mahali..<br><span class="instruction" style="font-size: 18px;">(Kumbuka maelezo ni muhimu kwa ajili ya kuipata kaya wakati wa utafiti mkuu)</span><p></p>
         helpText:
           EN: |
             
@@ -83,7 +84,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Qual é a principal fonte de energia nesta casa?&#160;</span></p>
             
           SW: |
-            
+            Je, nini chanzo kikuu cha umeme katika kaya hii?<p></p>
         helpText:
           EN: |
             
@@ -101,7 +102,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Código do país&#160;</span></p>
             
           SW: |
-            
+            Geresho la Mkoa<p></p>
         helpText:
           EN: |
             
@@ -119,7 +120,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Código distrital&#160;</span></p>
             
           SW: |
-            
+            Geresho la Wilaya<p></p>
         helpText:
           EN: |
             
@@ -137,7 +138,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Área de enumeração&#160;</span></p>
             
           SW: |
-            
+            Eneo la Kuhesabia<p></p>
         helpText:
           EN: |
             
@@ -155,7 +156,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Gravar coordenadas de GPS ou copiar da listagem anterior?&#160;</span></p>
             
           SW: |
-            
+            Rekodi Majira Nukta au Kutoka Orodha iliyopita<p></p>
         helpText:
           EN: |
             
@@ -173,7 +174,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Coordenada Norte (latitude)&#160;</span></p>
             
           SW: |
-            
+            Majira nukta ya Kaskazini (longitudo)<p></p>
         helpText:
           EN: |
             
@@ -191,7 +192,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Coordenada leste (longitude)&#160;</span></p>
             
           SW: |
-            
+            Majira nukta ya Mashariki (Longitudo)<p></p>
         helpText:
           EN: |
             
@@ -209,7 +210,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Número de série&#160;</span></p>
             
           SW: |
-            
+            Number<p></p>
         helpText:
           EN: |
             
@@ -229,7 +230,7 @@ questions:
             <p>&#160;</p>
             
           SW: |
-            
+            Uwepo wa Kaya<p></p>
         helpText:
           EN: |
             
