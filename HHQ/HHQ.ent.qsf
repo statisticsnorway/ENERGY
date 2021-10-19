@@ -6679,7 +6679,7 @@ questions:
             <p><font face="Arial, sans-serif">Quantas horas a sua casa usou&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(L2, curocc())~~</span><font face="Arial, sans-serif">&nbsp;ontem?&nbsp;</font><br></p><p></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Tanto dia como noite&nbsp;</span></font></p>
             
           SW: |
-            <p>Je! Kaya yako ilikitumia kifaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~getLabel(L2, curocc())~~</span>&nbsp;kwa saa ngapi kwa jana? </p><p><span class="instruction">Mchana na usiku</span><br></p>
+            <p>Je! Kaya yako ilikitumia&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~getLabel(L2, curocc())~~</span>&nbsp;kwa saa ngapi kwa jana? </p><p><span class="instruction">Mchana na usiku</span><br></p>
             
         helpText:
           EN: |
