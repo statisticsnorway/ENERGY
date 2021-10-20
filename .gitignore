@@ -10,6 +10,7 @@
 LookupFiles/Regions_old.csdb
 LookupFiles/Regions.csdb
 *.orig
+*.err
 
 !deploy\ to\ TAZ.pff
 !deploy\ to\ MOZ.pff

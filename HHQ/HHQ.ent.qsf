@@ -108,7 +108,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Quantos dias por mês o/a </span><span style="color: rgb(0, 0, 255); font-size: 16px;">~~AB1(curocc())~~</span><span style="font-size: 16px;"> trabalha nesta atividade?&nbsp;</span></span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Máximo 30</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Ni Siku ngapi katika mwezi ~~AB1(curocc())~~ hufanya shughuli hii?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">Si zaidi ya Siku 12</span><span style="font-size:16px;color:#000000;"><br></span></p>
+            <p><span style="font-size:16px;color:#000000;">Ni Siku ngapi katika mwezi ~~AB1(curocc())~~ hufanya shughuli hii?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">Si zaidi ya Siku 30</span><span style="font-size:16px;color:#000000;"><br></span></p>
             
         helpText:
           EN: |
@@ -866,7 +866,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">O/A </span><span style="color: rgb(0, 0, 255); font-size: 16px;">~~AB1(curocc())~~</span><span style="font-size: 16px;"> frequentou a escola em algum momento durante o último ano lectivo(2020)?&nbsp;</span></span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je ~~AB1(curocc())~~ alihudhuria shule wakati wowote  kwa mwaka uliopita  yaani (2018)?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je ~~AB1(curocc())~~ alihudhuria shule wakati wowote  kwa mwaka uliopita  yaani (2020)?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -5357,7 +5357,7 @@ questions:
             Como você obteve o&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getvaluelabel(I10)~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
             
           SW: |
-            <p>Sasa Ningependa kukuuliza maswali zaidi kuhusu jiko lako kuu .</p><p><p>Je, ulipataje&nbsp; [JIKO] hili? ~~getvaluelabel(I10)~~<br></p></p>
+            <p>Sasa Ningependa kukuuliza maswali zaidi kuhusu jiko lako kuu .</p><p></p><p>Je, ulipataje&nbsp; ~~getvaluelabel(I10)~~&nbsp;hili?&nbsp;<br></p><p></p>
             
         helpText:
           EN: |
@@ -5849,7 +5849,7 @@ questions:
             <p>Quanto tempo os membros do agregado familiar passam a preparar o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;e combustível para cada refeição, em média?&nbsp;</p><p><font color="#0000ff">Minutos&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani kuandaa [JIKO] na nishati kwa kila mlo?</p><p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p></p>
+            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani kuandaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;na nishati kwa kila mlo?</p><p></p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -7234,7 +7234,7 @@ questions:
             <p>As raparigas de 5 a 14 anos passam mais ou menos tempo nesta atividade do que há 5 anos atrás?</p><p><p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">(~~getLabel(N_ACTIVITY_GIRLS, curocc())~~)</span><br></p><p><br></p></p>
             
           SW: |
-            Je! Wasichana wenye umri wa miaka 5 - 14&nbsp; hutumia muda zaidi au kidogo katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;kuliko miaka 5 iliyopita?<p></p>
+            Je! Wasichana wenye umri wa miaka 5 - 14&nbsp; hutumia muda zaidi au kidogo katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;kuliko miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -7253,7 +7253,7 @@ questions:
             Quantos homens com 15 anos ou mais estiveram envolvidos em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
             
           SW: |
-            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_MEN, curocc())~~&nbsp;</span>katika siku 7 zilizopita?<p></p>
+            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_MEN, curocc())~~&nbsp;</span>katika siku 7 zilizopita?<p></p>
             
         helpText:
           EN: |
@@ -7576,7 +7576,7 @@ questions:
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;teve uma irritação nos olhos ou problemas oculares nos últimos 14 dias?&nbsp;<p></p>
             
           SW: |
-            Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~chosenChildName~~</span>&nbsp;alikuwa na muwasho machoni au alipata shida ya macho katika siku 14 zilizopita?<p></p>
+            Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">chosenChildName~~</span>&nbsp;alikuwa na muwasho machoni au alipata shida ya macho katika siku 14 zilizopita?<p></p>
             
         helpText:
           EN: |

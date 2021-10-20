@@ -80,10 +80,9 @@ preproc
 
 PROC B2_A
 preproc
-	If (ispartial() and $ = "") or !ispartial() then
+	If ((ispartial() and $ = "") or !ispartial()) and curocc() = 1 then
 		errmsg(tr(200));
 	endif;
-
 postproc
  if $ = "" and curocc() > 1 then	//finished
   	B_ID = NOTAPPL;
@@ -115,10 +114,6 @@ preproc
 	endif;
 
 postproc
-	if  (pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0) and length(strip($)) > 2 then
-		errmsg(tr(8));
-		reenter;
-    endif;
 	if  pos("08", $) > 0 or pos("09", $) > 0 or pos("10", $) > 0 or pos("66", $) > 0 then
 	  skip to D4;
 	endif;
