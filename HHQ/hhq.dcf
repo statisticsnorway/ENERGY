@@ -1260,11 +1260,11 @@ Len=2
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_TZ
-Value=1;Standard tariff (D1)
-Value=2;High household tariff (T1T1
-Value=3;Household and business tariff (T2T2
-Value=4;Business tariff (T3)
-Value=5;High business tariff (T5)
+Value=1;Domestic Use (D1)
+Value=2;General Use (T1)
+Value=3;Low Voltage Supply (T2)
+Value=4;Medium Voltage Supply (T3)
+Value=5;High Voltage Supply (T5)
 Value=55;Do not know
 
 [ValueSet]
