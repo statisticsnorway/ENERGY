@@ -85,7 +85,7 @@ preproc
 	//		LLogin, sysparm("LOGIN"), region, sysparm("REGION"), district, sysparm("DISTRICT"),
 	// 		subdistrict, sysparm("SUBDISTRICT"), locality, sysparm("LOCALITY"), village,
 	//		sysparm("VILLAGE"), ea, sysparm("EA"), urbRur, sysparm("URBANRURAL"));
-		
+	//errmsg("Anne is testing: sysparm: %s, setting: %s, after: %d", lstrip(sysparm("SERIAL")), serial, visualValue(LL8));	
 	
 	if lstrip(LLOGIN) = lstrip(sysparm("LOGIN")) and
 				lstrip(region) = lstrip(sysparm("REGION")) and	
@@ -96,7 +96,7 @@ preproc
 				lstrip(ea) = lstrip(sysparm("EA")) and
 				lstrip(urbRUr) = lstrip(sysparm("URBANRURAL")) then
 		
-		//Still in the same ea. For some reason it doesn't quite work, so choosing highest serial to avoid duplicates
+		//Still in the same ea. For some reason it doesn't quite work, so choosing highest serial to avoid duplicates		
 		if lstrip(sysparm("SERIAL")) <> "NOT" then
 			if toNumber(lstrip(sysparm("SERIAL"))) > toNumber(serial) then
 				LL8 = toNumber(lstrip(sysparm("SERIAL"))) + 1;
@@ -106,6 +106,7 @@ preproc
 		else
 			LL8 = toNumber(serial) + 1;
 		endif;
+		
 		
 	else
 		//new ea
@@ -118,7 +119,7 @@ preproc
 		village = sysparm("VILLAGE");
 		ea = sysparm("EA");
 		serial = sysparm("SERIAL");
-		LL8 = toNumber(serial);
+		LL8 = toNumber(serial) + 1;
 		urbRur = sysparm("URBANRURAL");
 		country = sysparm("country");
 	endif;
@@ -141,19 +142,21 @@ postproc
 PROC LL7
 
 	if $ = 1 then
-		gps(open); // on Android
-		//gps(open,3,4800); // on a laptop or Windows tablet; COM3, 4800baud
+		if getOS() = 20 then //Only do it on androids
+			gps(open); // on Android
+			//gps(open,3,4800); // on a laptop or Windows tablet; COM3, 4800baud
 
-		if gps(read,60) then // a successful attempt at a read, for up to 60 seconds
-		    //errmsg("Latitude is %f, longitude is %f",gps(latitude),gps(longitude));
-		    gpsN = gps(latitude);
-		    gpsE = gps(longitude);		    
-		else
-		    errmsg(maketext(tr(105)))
-		    	select(maketext(tr(103)), LL7, makeText(tr(104)), LL9);
-			reenter;
+			if gps(read,60) then // a successful attempt at a read, for up to 60 seconds
+				//errmsg("Latitude is %f, longitude is %f",gps(latitude),gps(longitude));
+				gpsN = gps(latitude);
+				gpsE = gps(longitude);		    
+			else
+				errmsg(maketext(tr(105)))
+					select(maketext(tr(103)), LL7, makeText(tr(104)), LL9);
+				reenter;
+			endif;
+			gps(close);
 		endif;
-		gps(close);
 
 	else //Get from previous
 		numeric gpsOk = 1;
