@@ -1007,7 +1007,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">O que faz para tornar a sua água mais segura para beber?</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, maji ya kunywa katika kaya hii huwekwa dawa (kekemikali za kusafishia maji)?&#160;</span></p>
+            <p>Je, kaya hii inachukua hatua zipi&nbsp; ili kuhakikisha usalama wa maji ya kunywa ?<span style="font-size:16px;color:#000000;">&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -2453,7 +2453,7 @@ questions:
             A seu agregado familiar tem um contador elétrico em conjunto com outros residências ou apenas é seu próprio?<p></p>
             
           SW: |
-            Je, kaya yako ina mita ya umeme ya mnayotumia pamoja na wanakaya wengine&nbsp; au ni kwa matumizi yako pekee?<p></p>
+            Je, kaya yako ina mita ya umeme mnayotumia pamoja na wanakaya wengine&nbsp; au ni kwa matumizi yako pekee?<p></p>
             
         helpText:
           EN: |
@@ -7001,15 +7001,15 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Hours&nbsp;</span><br></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><br></div><p></p>
             <p></p>
             
           SW: |
-            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><div>Masaa<br></div><p><p></p>
-            </p>
+            <p>Masaa<br></p><p></p><p></p>
+            <p></p>
             
         helpText:
           EN: |
@@ -7041,7 +7041,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Hours&nbsp;</span><br></p>
             <p>&nbsp;</p>
             
           PT: |
@@ -7049,8 +7049,8 @@ questions:
             </p>
             
           SW: |
-            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><br></p><p>Masaa<p></p>
-            </p>
+            <p>Masaa<br></p><p></p>
+            <p></p>
             
         helpText:
           EN: |
@@ -7143,15 +7143,15 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use per day on </font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;"><br></span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Hours&nbsp;</span><br></p>
             
           PT: |
             <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;"><br></span></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Horas&nbsp;</span><p></p>
             </p>
             
           SW: |
-            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
-            </p>
+            <p>Masaa<br></p><p></p>
+            <p></p>
             
         helpText:
           EN: |
@@ -7183,7 +7183,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span></p><p><span style="font-family: Arial, sans-serif;"><br></span><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Hours&nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Hours&nbsp;</span><br></p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             
@@ -7192,8 +7192,8 @@ questions:
             </p>
             
           SW: |
-            <p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><br></p><p>Masaa<p></p>
-            </p>
+            <p>Masaa<br></p><p></p>
+            <p></p>
             
         helpText:
           EN: |
@@ -7848,7 +7848,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">How much did you spend buying firewood and charcoal and other fuel during the last 30 days?&#160;</span></p>
+            <p>Cereal and cereal products (e.g. rice, maize, wheat, flor, millet) and starchy staples (e.g. cassava, plantain, yam, cocoyam)</p>
             
           PT: |
             Quanto gastou a comprar lenha, carvão e outros combustíveis nos últimos 30 dias?<p></p>
@@ -8860,4 +8860,32 @@ questions:
           SW: |
             Asante. Tunaweza kuwasiliana nawe kwa namba&nbsp; gani nyingine ya simu?&nbsp;<p></p>
             
+  - name: N_C
+    conditions:
+      - questionText:
+          EN: |
+            <font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+          SW: |
+            Katika siku 7 zilizopita, je! Kila mmoja wa wanawake hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>?<p></p>
+  - name: N_D
+    conditions:
+      - questionText:
+          EN: |
+            <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+          SW: |
+            Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~ ?</span><p></p>
+  - name: N_H
+    conditions:
+      - questionText:
+          EN: |
+            <font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+          SW: |
+            Katika siku 7 zilizopita, je! Kila mmoja wa wasichana hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
+  - name: N_I
+    conditions:
+      - questionText:
+          EN: |
+            <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+          SW: |
+            Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
 ...
