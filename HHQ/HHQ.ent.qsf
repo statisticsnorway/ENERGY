@@ -8865,27 +8865,69 @@ questions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
+          PT: |
+            
           SW: |
             Katika siku 7 zilizopita, je! Kila mmoja wa wanawake hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>?<p></p>
+            
   - name: N_D
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~ ?</span><p></p>
+            
   - name: N_H
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Katika siku 7 zilizopita, je! Kila mmoja wa wasichana hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
+            
   - name: N_I
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
+            
+  - name: N_M
+    conditions:
+      - questionText:
+          EN: |
+            <p class="MsoNormal" style="margin-bottom:8.0pt"><span style="font-size: 12pt; font-family: Arial, sans-serif;">In the last 7 days, how much time
+            did each of these men use per day on&nbsp;</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif; font-size: 12pt;">?</span></p><p class="MsoNormal" style="margin-bottom:8.0pt"><o:p></o:p></p><p></p>
+          SW: |
+            <span style="font-size: 12pt; font-family: Arial, sans-serif;">Katika
+            siku 7 zilizopita, je! kila mmoja wa wanaume hawa alitumia muda gani</span><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())?</span><p></p>
+  - name: N_N
+    conditions:
+      - questionText:
+          EN: |
+            <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+          SW: |
+            Kati ya Muda wote ni muda gani uliotumika baada ya giza<font face="Arial, sans-serif">&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+  - name: N_R
+    conditions:
+      - questionText:
+          EN: |
+            <span style="font-size: 12pt; font-family: Arial, sans-serif;">In
+            the last 7 days, how much time did each of these boys use per day on&nbsp;</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~?</span><p></p>
+          SW: |
+            <span style="font-size: 12pt; font-family: Arial, sans-serif;">Katika
+            siku 7 zilizopita, je! Kila mmoja wa vijana hawa alitumia muda gani</span><span style="color: rgb(255, 255, 255); font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;color:#0070C0;
+            mso-ansi-language:NO-BOK;mso-fareast-language:NO-BOK;mso-bidi-language:AR-SA">?&nbsp;</span><p></p>
+  - name: N_S
+    conditions:
+      - questionText:
+          SW: |
+            Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><p></p>
 ...
