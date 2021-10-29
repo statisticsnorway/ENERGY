@@ -1094,16 +1094,16 @@ Start=116
 Len=1
 
 [ValueSet]
-Label=Which of these power sources is your main electrical power source?|Which of these power sources is your main electrical power source?
+Label=Text From Clipboard||Which of these power sources is your main electrical power source?
 Name=C10_VS1
-Value=1;Grid|Grelha|Gridi
-Value=3;Solar Home System|Sistema Solar doméstico|Mfumo wa nyumbani wa jua
-Value=4;Electric generator|Gerador elétrico|Jenerata la umeme
-Value=5;Pico-Hydro|Pico-Hidro|Umeme wa maji wa Pico
-Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)|Betri ya kuchaji (isiyo na uhusiano na umeme wa jua)
-Value=7;Solar Multi-Light Product|Produto solar multi-luz|Bidhaa za mwangaza wa jua
-Value=8;Solar Lantern|Lanterna Solar|Taa ya jua
-Value=9;Dry-cell battery|Bateria de células secas|Betri kavu
+Value=1;Grid||Gridi
+Value=2;Solar Home System||Mfumo wa nyumbani wa jua
+Value=3;Electric generator||Jenerata la umeme
+Value=4;Pico-Hydro||Umeme wa maji wa Pico
+Value=5;Rechargeable Battery (Not linked to a solar system)||Betri ya kuchaji (isiyo na uhusiano na umeme wa jua)
+Value=6;Solar Multi-Light Product||Bidhaa za mwangaza wa jua
+Value=7;Solar Lantern||Taa ya jua
+Value=8;Dry-cell battery||Betri kavu
 
 [Item]
 Label=Which of these power sources is your main back-up source?
@@ -1260,42 +1260,42 @@ Len=2
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_TZ
-Value=1;Standard tariff (D1)
-Value=2;High household tariff (T1T1
-Value=3;Household and business tariff (T2T2
-Value=4;Business tariff (T3)
-Value=5;High business tariff (T5)
-Value=55;Do not know
+Value=1;Domestic Use (D1)||Matumizi Madogo ya Nyumbani D1
+Value=2;General Use (T1)||Matumizi ya Kawaida - T1
+Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
+Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
+Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
+Value=55;Do not know||Hajui
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_TZ
-Value=1;Standard tariff (D1)
-Value=2;High household tariff (T1T1
-Value=3;Household and business tariff (T2T2
-Value=4;Business tariff (T3)
-Value=5;High business tariff (T5)
-Value=55;Do not know
+Value=1;Standard tariff (D1)||Matumizi Madogo ya Nyumbani - D1
+Value=2;General Use (T1)||Matumizi ya Kawaida - T1
+Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
+Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
+Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
+Value=55;Do not know||Hajui
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_MZ
-Value=1;Standard tariff (D1)
-Value=2;High household tariff (T1T1
-Value=3;Household and business tariff (T2T2
-Value=4;Business tariff (T3)
-Value=5;High business tariff (T5)
-Value=55;Do not know
+Value=1;Standard tariff (D1)||Matumizi Madogo ya Nyumbani - D1
+Value=2;General Use (T1)||Matumizi ya Kawaida - T1
+Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
+Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
+Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
+Value=55;Do not know||Hajui
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_MZ
-Value=1;Standard tariff (D1)
-Value=2;High household tariff (T1T1
-Value=3;Household and business tariff (T2T2
-Value=4;Business tariff (T3)
-Value=5;High business tariff (T5)
-Value=55;Do not know
+Value=1;Standard tariff (D1)||Matumizi Madogo ya Nyumbani - D1
+Value=2;General Use (T1)||Matumizi ya Kawaida - T1
+Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
+Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
+Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
+Value=55;Do not know||Hajui
 
 [Item]
 Label=Electric meter|Casa tem um contador elétrico?
@@ -3896,8 +3896,8 @@ Value=16;Computer / Tablet|Computador / Tablet|Kinakilishi(Kompyuta) / kibao mpa
 Value=17;Electric hot water pot/kettle|Panela de água quente elétrica / chaleira|Birika la umeme
 Value=18;Television|Televisor|Runinga (TV)
 Value=19;Electric water pump|Bomba de água eléctrico|Pampu ya maji inayotumia umeme
-Value=20;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Nuru za Mwanga
-Value=21;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongoza balbu za mwanga
+Value=20;Traditional Light Bulbs|lâmpada incandescente?|Nuru za Mwanga
+Value=21;LED Light Bulbs|lâmpada LED? Se sim, quantas no total?|aliongeza balbu za mwanga
 Value=22;Energy saving bulbs or tubes|Lâmpadas de baixo consumo|balbu za mwanga au zilizopo au aina nyingine
 
 [Item]
