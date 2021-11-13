@@ -34,7 +34,33 @@ PROC GLOBAL
 		tstrip = strip(lstrip(theString));
 	end;
 
-
+	
+	
+	//Function to verify setting variables
+	function string verifyVariables()
+		//First need to look up names of geography variables
+		REGION_CODE = visualValue(M_REGION);
+		DISTRICT_CODE = visualValue(M_DISTRICT);
+		SUBDISTRICT_CODE = visualValue(M_SUBDISTRICT);
+		LOCALITY_CODE = visualValue(M_LOCALITY);
+		VILLAGE_CODE = visualValue(M_VILLAGE);
+		EA_CODE = visualValue(M_EA);
+		numeric ok = loadCase(REGIONS_DICT, REGION_CODE, DISTRICT_CODE, SUBDISTRICT_CODE,
+					LOCALITY_CODE, VILLAGE_CODE, EA_CODE);
+		string verifyString = concat(tr(57), "\n",
+									tr(50), ": ", login, "\n",
+									tr(51), ": ", REGION_NAME, "\n",
+									tr(52), ": ", DISTRICT_NAME, "\n",
+									tr(53), ": ", SUBDISTRICT_NAME, "\n",
+									tr(54), ": ", LOCALITY_NAME, "\n",
+									tr(55), ": ", VILLAGE_NAME, "\n",
+									tr(56), ": ", EA_NAME, "\n\n",
+									"(1 = ", tr(21), " 2 = ", tr(58), "=");
+		String i  = prompt(verifyString,numeric);
+		//numeric i = accept(verifyString, tr(21), tr(58));
+		//errmsg(verifyString);
+	end;
+								
 
 	//Get or send data to/from interviewer. Supervisor always acts as the server
 	function bluetoothServer()
@@ -932,28 +958,35 @@ postproc
 		
 		if newEA = "2" and (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then	//Not new EA
 			//Not a new EA
-			skip to M_EA;
-		else
-			//Need to set the serialstart if it hasn't been done
-			if serialStart = 0 then
-				LOGIN = M_LOGIN;
-				loadCase(USERS_DICT, LOGIN);
-				serialStart = COUNTERSTART;
+			string OKVar = verifyVariables();
+			if OkVar = "1" then
+				skip to M_EA;
 			endif;
-			
-			//Also set all region variables to NOTAPPL in case they try to download maps too early
-			M_REGION = NOTAPPL;
-			M_DISTRICT = NOTAPPL;
-			M_SUBDISTRICT  = NOTAPPL;
-			M_LOCALITY = NOTAPPL;
-			M_VILLAGE = NOTAPPL;
-			M_EA = NOTAPPL;
-			skip to M_REGION;
 		endif;
+		//New EA - or missing/wrong variables.
+		//need to set the serialstart if it hasn't been done
+		if serialStart = 0 then
+			LOGIN = M_LOGIN;
+			loadCase(USERS_DICT, LOGIN);
+			serialStart = COUNTERSTART;
+		endif;
+			
+		//Also set all region variables to NOTAPPL in case they try to download maps too early
+		M_REGION = NOTAPPL;
+		M_DISTRICT = NOTAPPL;
+		M_SUBDISTRICT  = NOTAPPL;
+		M_LOCALITY = NOTAPPL;
+		M_VILLAGE = NOTAPPL;
+		M_EA = NOTAPPL;
+		skip to M_REGION;
 		
 	elseif $ = 2 then	////HHQ questionnaire.
-		if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT) = NOTAPPL or visualvalue(M_SUBDISTRICT) = NOTAPPL
-				or visualValue(M_LOCALITY) = NOTAPPL or visualValue(M_VILLAGE) = NOTAPPL or visualvalue(M_EA) = NOTAPPL then
+		String okVar = verifyVariables();
+		if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT) = NOTAPPL 
+				or visualvalue(M_SUBDISTRICT) = NOTAPPL 
+				or visualValue(M_LOCALITY) = NOTAPPL 
+				or visualValue(M_VILLAGE) = NOTAPPL or visualvalue(M_EA) = NOTAPPL 
+				or okVar = "2" then
 			errmsg(tr(18));
 			skip to M_REGION;
 		else
@@ -961,15 +994,21 @@ postproc
 		endif;
 		
 	elseif $ = 4 then 		//Sync listingdata.
-		numeric ok = syncSendListing();
-		if ok = 1 then
-			errmsg(tr(11));
+		errmsg(tr(60));
+		String okVar = verifyVariables();
+		
+		if okVar = "1" then	//ok
+			numeric ok = syncSendListing();
+			if ok = 1 then
+				errmsg(tr(11));
+			else
+				errmsg(tr(12));
+			endif;
+			$ = NOTAPPL;
+			reenter;
 		else
-			errmsg(tr(12));
+			skip to M_REGION;
 		endif;
-		$ = NOTAPPL;
-		reenter;
-
 	elseif $ = 5 then 		//get Sample/Households to interview
 		numeric answer = accept(makeText(tr(20)), makeText(tr(21)), makeText(tr(22)));
 		if answer = 1 then	//sure. Go ahead.. :)			
@@ -995,7 +1034,7 @@ PROC M_SUPERMENU
 preproc	
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
-	else
+	else		
 		newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
 		if newEA = "1" then
 			//resetting region variables in case the user wants to download maps
@@ -1012,11 +1051,18 @@ preproc
 	$ = NOTAPPL;
 	
 
-postproc	
+postproc
+		
 	if $ = 1 then	//Sync with interviewer
-		bluetoothServer();
-		$ = NOTAPPL;
-		reenter;
+		errmsg(tr(60));
+		string OkVar = verifyVariables();
+		if OkVar = "2" then //not OK
+			skip to M_REGION;
+		else
+			bluetoothServer();
+			$ = NOTAPPL;
+			reenter;
+		endif;
 	elseif $ = 2 then
 		//Generate sample.
 		//Probably shpould have warnings that all gadget must be synced first
@@ -1028,9 +1074,14 @@ postproc
 		syncHQ();
 		$ = NOTAPPL;
 		reenter;
-	elseif $ = 4 then
-		writepff("Energy survey", "Menu", "", NOTAPPL, "S");
-		writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
+	elseif $ = 4 then  //community questionnaire
+		string okVar = verifyVariables();
+		if OkVar = "2" then
+			skip to M_REGION;
+		else
+			writepff("Energy survey", "Menu", "", NOTAPPL, "S");
+			writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
+		endif;
 	else	//$ = 9. Quit
 		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);
