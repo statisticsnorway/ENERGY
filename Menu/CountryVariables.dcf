@@ -5,7 +5,7 @@ Name=COUNTRYVARIABLES_DICT
 RecordTypeStart=0
 RecordTypeLen=0
 Positions=Relative
-ZeroFill=No
+ZeroFill=Yes
 DecimalChar=Yes
 SecurityOptions=5485E6C95D23D6CFEF6FD6BBEADCD498A26EDB43AF3D2183550E9B7EA65FF694
 
@@ -26,82 +26,67 @@ DataType=Alpha
 Label=Countryvariables Record
 Name=COUNTRYVARIABLES_REC
 RecordTypeValue=''
-RecordLen=422
+RecordLen=252
 
 [Item]
 Label=Server
 Name=SERVER
 Start=3
-Len=75
+Len=50
 DataType=Alpha
 
 [Item]
-Label=Gridprice
-Name=GPRICE
-Start=78
-Len=7
+Label=Gridpriceurb
+Name=GRIDPRICEURB
+Start=53
+Len=10
+ZeroFill=Yes
+
+[Item]
+Label=Gridpricerur
+Name=GRIDPRICERUR
+Start=63
+Len=10
+ZeroFill=Yes
 
 [Item]
 Label=Deviceprice
 Name=DEVICEPRICE
-Start=85
-Len=7
+Start=73
+Len=10
+ZeroFill=Yes
 
 [Item]
 Label=Cookstove1
 Name=COOKSTOVE1
-Start=92
-Len=75
+Start=83
+Len=50
 DataType=Alpha
 
 [Item]
 Label=Cookstoveprice1
 Name=COOKSTOVEPRICE1
-Start=167
-Len=7
-
-[Item]
-Label=Cookstove2
-Name=COOKSTOVE2
-Start=174
-Len=75
-DataType=Alpha
-
-[Item]
-Label=Cookstoveprice2
-Name=COOKSTOVEPRICE2
-Start=249
-Len=7
+Start=133
+Len=10
+ZeroFill=Yes
 
 [Item]
 Label=Cookstove3
 Name=COOKSTOVE3
-Start=256
-Len=75
+Start=143
+Len=50
 DataType=Alpha
 
 [Item]
 Label=Cookstoveprice3
 Name=COOKSTOVEPRICE3
-Start=331
-Len=7
-
-[Item]
-Label=Cookstove4
-Name=COOKSTOVE4
-Start=338
-Len=75
-DataType=Alpha
-
-[Item]
-Label=Cookstoveprice4
-Name=COOKSTOVEPRICE4
-Start=413
-Len=7
+Start=193
+Len=10
+ZeroFill=Yes
 
 [Item]
 Label=Elcompany
 Name=ELCOMPANY
-Start=420
-Len=3
+Start=203
+Len=50
 DataType=Alpha
