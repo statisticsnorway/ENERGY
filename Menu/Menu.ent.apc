@@ -1014,7 +1014,15 @@ postproc
 		if answer = 1 then	//sure. Go ahead.. :)			
 			numeric ok = syncGetSample();
 			if ok = 1 then
-				errmsg(tr(13));
+				numeric numCases = countCases(SAMPLING_DICT where SLOGIN = M_LOGIN
+							and SA1 = visualValue(M_REGION) 
+							and SA2 = visualValue(M_DISTRICT)
+							and SA3 = visualValue(M_SUBDISTRICT)
+							and SA4 = visualValue(M_LOCALITY)
+							and SA5 = visualvalue(M_VILLAGE)
+							and SA6 = visualValue(M_EA));
+				
+				errmsg(tr(13), numCases);
 			else
 				errmsg(tr(14));
 			endif;

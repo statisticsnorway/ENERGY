@@ -47,9 +47,9 @@ EN(12) Listing data not synced!
 PT(12) Dados de listagem não sincronizados!
 SW(12) Taarifa za kuorodhesha kaya hazijafanikiwa kutumwa.
 
-EN(13) Sample data received
-PT(13) Dados da amostra recebidos
-SW(13) Taarifa za sampuli zimefanikiwa kupokelewa
+EN(13) Sample data received. Number of HH to interview: %d
+PT(13) Dados da amostra recebidos. Número de famílias a entrevistar: %d
+SW(13) Taarifa za sampuli zimefanikiwa kupokelewa. Idadi ya kaya za kuhojiwa: %d
 
 EN(14) Sample data not received!
 PT(14) Dados da amostra não recebidos!
