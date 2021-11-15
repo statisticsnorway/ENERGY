@@ -21,7 +21,7 @@ Name=MENU_QUEST
 [IdItems]
 
 [Item]
-Label=Menu identification
+Label=Menu identification|Identificação do menu
 Name=MENU_ID
 Start=2
 Len=1
@@ -98,18 +98,18 @@ Label=Menu
 Name=M_MENU_INT
 Value=1;Listing form|Formulário de listagem|Fomu ya kuorodheshea
 Value=2;Household questionnaire|Questionário do Agregado Familiar|Dodoso la kaya
-Value=4;Sync with SV: Send data to supervisor|Sincronizar com servidor central|Tuma taarifa kwa msimamizi
+Value=4;Sync with SV: Send data to supervisor|Sincronizar dados com o Controlador|Tuma taarifa kwa msimamizi
 Value=5;Sync with SV: Receive sample file|Receber ficheiro da amosta|Pokea taarifa za sampuli
 Value=9;Quit|Sair|Funga/Ondoka
 
 [Item]
-Label=Supervisor menu
+Label=Supervisor menu|menu Controlador
 Name=M_SUPERMENU
 Start=44
 Len=1
 
 [ValueSet]
-Label=Supervisor menu
+Label=Supervisor menu|menu Controlador
 Name=M_SUPERMENU_VS1
 Value=1;Start bluetooth server|Iniciar sincronização com Bluetooth|Fungua Server ya Bluetooth
 Value=2;Generate sample|Gerar amosta|Tengeneza Sampuli
@@ -118,7 +118,7 @@ Value=4;Community questionnaire|Questionário Comunitario|Dodoso la Jamii
 Value=9;Quit|Sair|Funga/Ondoka
 
 [Item]
-Label=Select household
+Label=Select household|Selecione o agregado
 Name=M_HOUSEHOLD
 Start=45
 Len=3

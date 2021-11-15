@@ -740,7 +740,7 @@ Len=2
 [ValueSet]
 Label=Material floor|Principal material do chão da casa
 Name=B9_VS1
-Value=1;Mud/dung|Mud / esterco|Matope/Kinyesi cha wanyama
+Value=1;Mud/dung|Lama / esterco|Matope/Kinyesi cha wanyama
 Value=2;Reed/bamboo|Reed / bambu|Mianzi
 Value=3;Wood planks|Placas de madeira|Mbao za kawaida
 Value=4;Parquet or polished wood|Parquet ou madeira polida|Mbao zilizonakshiwa
