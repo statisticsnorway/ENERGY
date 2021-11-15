@@ -114,6 +114,7 @@ PROC GLOBAL
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
 				syncdata(PUT, SAMPLING_DICT);
+				
 			
 				syncdisconnect();
 			else
@@ -125,6 +126,8 @@ PROC GLOBAL
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
 				syncdata(PUT, SAMPLING_DICT);
+				syncdata(PUT, REGIONS_DICT);
+				syncdata(PUT, USERS_DICT);
 			
 				syncdisconnect();
 			else
