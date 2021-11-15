@@ -3,6 +3,8 @@ PROC GLOBAL
     // Country dependent parameters.
 	String syncUrl;
     String theCountry;
+	
+	numeric TemporaryHackFixThis;
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -55,10 +57,10 @@ PROC GLOBAL
 									tr(54), ": ", LOCALITY_NAME, "\n",
 									tr(55), ": ", VILLAGE_NAME, "\n",
 									tr(56), ": ", EA_NAME, "\n\n",
-									"(1 = ", tr(21), " 2 = ", tr(58), "=");
+									"(1 = ", tr(21), " 2 = ", tr(58), ")");
 		String i  = prompt(verifyString,numeric);
-		//numeric i = accept(verifyString, tr(21), tr(58));
-		//errmsg(verifyString);
+		verifyVariables = i;
+		
 	end;
 								
 
@@ -935,6 +937,7 @@ postproc
 PROC M_MENU
 preproc
 	$ = NOTAPPL;
+	TemporaryHackFixThis = 0;
 	
 	
 postproc
@@ -964,7 +967,10 @@ postproc
 			string OKVar = verifyVariables();
 			if OkVar = "1" then
 				skip to M_EA;
+			else
+				TemporaryHackFixThis = 1;
 			endif;
+			
 		endif;
 		//New EA - or missing/wrong variables.
 		//need to set the serialstart if it hasn't been done
@@ -991,6 +997,9 @@ postproc
 				or visualValue(M_VILLAGE) = NOTAPPL or visualvalue(M_EA) = NOTAPPL 
 				or okVar = "2" then
 			errmsg(tr(18));
+			if okVar = "2" then				
+				TemporaryHackFixThis = 1;
+			endif;
 			skip to M_REGION;
 		else
 			skip to M_HOUSEHOLD;
@@ -999,7 +1008,7 @@ postproc
 	elseif $ = 4 then 		//Sync listingdata.
 		errmsg(tr(60));
 		String okVar = verifyVariables();
-		
+		//errmsg("In menu: %s", okVar);
 		if okVar = "1" then	//ok
 			numeric ok = syncSendListing();
 			if ok = 1 then
@@ -1009,7 +1018,8 @@ postproc
 			endif;
 			$ = NOTAPPL;
 			reenter;
-		else
+		else			
+			TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		endif;
 	elseif $ = 5 then 		//get Sample/Households to interview
@@ -1043,6 +1053,7 @@ postproc
 	
 PROC M_SUPERMENU
 preproc	
+	TemporaryHackFixThis = 0;
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else		
@@ -1068,6 +1079,7 @@ postproc
 		errmsg(tr(60));
 		string OkVar = verifyVariables();
 		if OkVar = "2" then //not OK
+			TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		else
 			bluetoothServer();
@@ -1088,6 +1100,7 @@ postproc
 	elseif $ = 4 then  //community questionnaire
 		string okVar = verifyVariables();
 		if OkVar = "2" then
+			TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		else
 			writepff("Energy survey", "Menu", "", NOTAPPL, "S");
@@ -1310,8 +1323,8 @@ postproc
 			//Select household first
 			skip to M_HOUSEHOLD;
 
-		elseif M_MENU = 4 then	//Moved to M_SUPER_MENY
-			//writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
+		elseif M_MENU = 4 or M_MENU = 5 then //The region variables have been reset
+			reenter M_MENU;
 		endif;
 	
 	endif;
