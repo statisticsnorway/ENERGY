@@ -1024,7 +1024,12 @@ postproc
 		endif;
 	elseif $ = 5 then 		//get Sample/Households to interview
 		numeric answer = accept(makeText(tr(20)), makeText(tr(21)), makeText(tr(22)));
-		if answer = 1 then	//sure. Go ahead.. :)			
+		if answer = 1 then	//sure. Go ahead.. :)	
+			String okVar = verifyVariables();
+			if okVar = "2" then
+				TemporaryHackFixThis = 1;
+				skip to M_REGION;
+			endif;
 			numeric ok = syncGetSample();
 			if ok = 1 then
 				numeric numCases = countCases(SAMPLING_DICT where SLOGIN = M_LOGIN
