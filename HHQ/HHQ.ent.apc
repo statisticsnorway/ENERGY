@@ -16,7 +16,7 @@
 
 	//Variables reused in multiple questions/fields or needed for CAPI questions. Need to be globally declared
 	string currMember;	//Main respondent throughout the questionnaire.
-	string solarDeviceType; // Type of solar home system, used in second C section
+	string solarDeviceType; // Type of solar home system, used in section C 
 	string lampType;
 	numeric CF;
 	string cookType;
@@ -3343,6 +3343,11 @@ preproc
 	endif;
 
 
+PROC GP33
+	If Length(strip($)) > 1 & IsChecked("7",$) then 
+		errmsg(202);
+		reenter;
+	Endif;
 PROC GP34
 
 preproc

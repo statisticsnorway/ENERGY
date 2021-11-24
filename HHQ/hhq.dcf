@@ -247,7 +247,7 @@ Len=1
 Label=Relationship to head|Relação de parentesco com o chefe?
 Name=AB3_VS1
 Value=1;Head (only one head pr household)|Chefe (apenas um chefe por Agregado)|Mkuu wa kaya
-Value=2;Spouse (of head)|Cônjuge (de cabeça)|Mke wa mkuu wakaya
+Value=2;Spouse (of head)|Cônjuge (de cabeça)|Mume/Mke wa mkuu wakaya
 Value=3;Daughter/Son (of head/spouse)|Filha / Filho (da cabeça / cônjuge)|Mtoto wa mkuu wa kaya
 Value=4;Grand child (of head/spouse)|Grande criança (de cabeça / cônjuge)|Mjukuu wa mkuu wa kaya
 Value=5;Parent (of head/spouse)|Parent (da cabeça / cônjuge)|Mzazi wa mkuu wa kaya
@@ -333,8 +333,8 @@ Name=READ_EN_TZ
 Value=1;Kiswahili
 Value=2;English
 Value=3;Kiswahili & English
-Value=4;Any other language
-Value=5;No
+Value=4;Any other language||Lugha nyingine yoyote
+Value=5;No||Hapana
 
 [ValueSet]
 Label=Literacy read and write
@@ -342,8 +342,8 @@ Name=READ_TZ
 Value=1;Kiswahili
 Value=2;English
 Value=3;Kiswahili & English
-Value=4;Any other language
-Value=5;No
+Value=4;Any other language||Lugha nyingine yoyote
+Value=5;No||Hapana
 
 [Item]
 Label=Ever attended school|Frenquetou escola?
@@ -619,13 +619,18 @@ Value=6;Never|Nunca|Hajawahi
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
 RecordTypeValue='B'
-RecordLen=159
+RecordLen=161
 
 [Item]
 Label=Years in community|A quantos anos vive nesta comunidade?
 Name=B1
 Start=103
 Len=2
+
+[ValueSet]
+Label=Years in community|A quantos anos vive nesta comunidade?
+Name=B1_VS1
+Value=1:99
 
 [Item]
 Label=Type of dwelling|Tipo de habitação
@@ -649,6 +654,11 @@ Label=Number of households share building|Número de famílias que compartilham
 Name=B3
 Start=107
 Len=2
+
+[ValueSet]
+Label=Number of households share building|Número de famílias que compartilham
+Name=B3_VS1
+Value=1:99
 
 [Item]
 Label=Own dwelling|habitação própria
@@ -776,6 +786,7 @@ Value=7;Flush toilet with cistern|Sanita de descarga com cisterna|Choo cha kuvut
 Image=..\Images\Toilet_7.jpg
 Value=8;Composting toilet / ecosan latrine|Sanita de compostagem / latrina ecosan|Choo cha ecosan
 Image=..\Images\Toilet_8.jpg
+Value=9;Other, Specify||Nyingine; Taja
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
@@ -819,25 +830,28 @@ Value=7;Other|Outros|Nyingine
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13
 Start=123
-Len=1
+Len=2
 
 [ValueSet]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13_VS1
-Value=1;Collected firewood|Lenha colectada|Kuni za kuokota
-Value=2;Purchased firewood|Lenha comprada|Kuni za kununua
-Value=3;Grass|Grama|Nyasi/Mabua
-Value=4;Paraffin|Parafina|Mafuta ya taa (Parafini)
-Value=5;Electricity|Eletricidade|Umeme
-Value=6;Gas|Gás|Gesi
-Value=7;Battery/dry cell torach|Bateria / torach pilha seca|Betri/Tochi
-Value=8;Candles|Velas|Mishumaa
+Value=1;Collected firewood|Lenha colectada|Umeme TANESCO
+Value=2;Solar||Umeme wa Jua
+Value=3;Generator/private source||Generator/chanzo binafsi
+Value=4;Gas(industrial)||LPG
+Value=5;Gas(biogas)||Bayogesi
+Value=6;Electricity (wind)||Umeme wa Upepo
+Value=7;Acetylene lamp||Taa ya Aceteline
+Value=8;Kerosene(lantern/chimney)||Taa ya Mafuta ya Taa - Kioo wazi
+Value=9;Kerosene(Wick lmap)|Lenha comprada|Taa ya Chemli
+Value=10;Candles||Mishumaa
+Value=11;Firewood|Grama|Kuni
 
 [Item]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14
-Start=124
-Len=1
+Start=125
+Len=2
 
 [ValueSet]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
@@ -851,11 +865,12 @@ Value=6;Charcoal|Carvão|Mkaa
 Value=7;Crop residue|Resíduo da colheita|Mabaki ya mimea/Mabua
 Value=8;Saw dust|Pó de serra|Maranda
 Value=9;Animal waste|Os resíduos animais|Vinyesi vya wanyama
+Value=99;Not Applicable||Haihusiki
 
 [Item]
 Label=Account or savings in bank etc|Tem uma conta ou poupança em um banco
 Name=B15
-Start=125
+Start=127
 Len=1
 
 [ValueSet]
@@ -867,7 +882,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16
-Start=126
+Start=128
 Len=2
 
 [ValueSet]
@@ -881,7 +896,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Rotating saving scheme or informal saving institution|Participa num esquema de poupança rotativo
 Name=B17
-Start=128
+Start=130
 Len=1
 
 [ValueSet]
@@ -893,7 +908,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18
-Start=129
+Start=131
 Len=3
 DataType=Alpha
 
@@ -907,7 +922,7 @@ Value='q  ';Other|De outros|Nyingine
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
 Name=B19
-Start=132
+Start=134
 Len=13
 DataType=Alpha
 
@@ -931,7 +946,7 @@ Value='m            ';Cannot get a loan/credit|Não é possível obter um empré
 [Item]
 Label=Mobile money to pay for mobile phone|O dinheiro móvel para pagar por telefone celular
 Name=B20
-Start=145
+Start=147
 Len=1
 
 [ValueSet]
@@ -943,7 +958,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Used the account last 90 days|Usou a conta nos últimos 90 dias?
 Name=B21
-Start=146
+Start=148
 Len=1
 
 [ValueSet]
@@ -955,7 +970,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B22
-Start=147
+Start=149
 Len=13
 DataType=Alpha
 
@@ -1094,7 +1109,7 @@ Start=116
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard||Which of these power sources is your main electrical power source?
+Label=Which of these power sources is your main electrical power source?
 Name=C10_VS1
 Value=1;Grid||Gridi
 Value=2;Solar Home System||Mfumo wa nyumbani wa jua
@@ -1201,7 +1216,7 @@ Len=1
 [ValueSet]
 Label=Connected to national grid|O fornecedor de energia electrica conectou a sua casa a rede ou conectou pessoalmente?
 Name=C16_VS1
-Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|EDM
+Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|Kampuni za Umeme (TANESCO/REA or EDM)
 Value=2;By the household|pela casa|Kaya
 Value=3;By others|por outros|Wengine
 Value=4;Was connected when they moved in|Não conectado de alguma forma|Haijaunganishwa
@@ -2838,7 +2853,7 @@ Value=5;Kerosene lamp|Lâmpada de querosene|Taa ya chemli/kibatari
 Value=6;Candles|velas|Mishumaa
 Value=7;Open wick lamp|lâmpadas de biogás|Taa za bayogesi
 Value=8;Fireplace|Lareira|Kukoka moto
-Value=55;Other|De outros|Nyingine, taja
+Value=55;Other|De outros|Nyingine
 Value=66;Studying and homework only during daylight hours|Estudar e lição de casa apenas durante o dia|Wanafunzi wanasoma na kufanya kazi zao za shule wakati wa mchana tu
 
 [Item]
@@ -3786,9 +3801,9 @@ Value=2;Electric kettle/coil|Chaleira elétrica / bobina|Birika la umeme
 Value=3;Electric stove|Fogão elétrico|Jiko la umeme
 Value=4;Gas heater|Aquecedor a Gas|Hita ya gesi
 Value=5;Gas stove|Fogão a gás|Jiko la gesi
-Value=7;Solar thermal system|Sistema solar térmico|Mfumo wa maji moto wa umeme jua
-Value=8;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Baadhi ya majiko yanayotumia nishati yabisi
-Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Majiko maalum yanayotumia nishati yabisi
+Value=7;Solar thermal system|Sistema solar térmico|Mfumo wa jua
+Value=8;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Ndio Jiko lilelile linalotumika kupikia
+Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Jiko tofauti la  mafuta
 
 [Item]
 Label=Do you heat your house?|Você aquecer a sua casa?

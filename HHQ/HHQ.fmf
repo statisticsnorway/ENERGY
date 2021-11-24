@@ -1559,7 +1559,7 @@ Text=B12
   
 [Field]
 Name=B13
-Position=208,428,223,448
+Position=208,428,237,448
 Item=B13,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -1572,7 +1572,7 @@ Text=B13
   
 [Field]
 Name=B14
-Position=208,458,223,478
+Position=208,458,237,478
 Item=B14,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -7967,6 +7967,7 @@ Position=168,89,337,109
 Item=X2_1,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]
@@ -7980,6 +7981,7 @@ Position=169,119,338,139
 Item=X2_2,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]
@@ -7993,6 +7995,7 @@ Position=168,152,337,172
 Item=X2_3,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]

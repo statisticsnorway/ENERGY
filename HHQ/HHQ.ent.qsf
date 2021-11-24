@@ -3356,7 +3356,7 @@ questions:
             A quantos anos tem este&nbsp;<span style="color: rgb(0, 128, 0);">~~solarDeviceType~~</span>?<p></p>
             
           SW: |
-            <p>Ni miaka mingapi ulikuwa na hiki&nbsp;<span style="color: rgb(0, 128, 0);">~~solarDeviceType~~</span>?</p><p><p><span class="instruction">Andika kwa miaka, kama chini ya mwaka 1 andika 1</span><br></p></p>
+            <p>Ni miaka mingapi ulikuwa na&nbsp;<span style="color: rgb(0, 128, 0);">~~solarDeviceType~~</span>?</p><p></p><p><span class="instruction">Andika kwa miaka, kama chini ya mwaka 1 andika 1</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -5304,7 +5304,7 @@ questions:
             Quais membros do agregado familiar mudaram a sua principal ocupação ao longo do último ano durante a pandemia global até hoje?<p></p>
             
           SW: |
-            
+            Je, Kuna mtu yeyote mwenye umri wa miaka 12 au zaidi katika kaya hii amebadilisha kazi yake kuu kwa mwaka jana kutoka Machi 2020 hadi leo?<p></p>
   - name: HHQ_DICT.I1
     conditions:
       - questionText:
@@ -5514,7 +5514,7 @@ questions:
             <p>Quantos anos espera continuar a usar este&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;</p><p><font color="#0000ff">Número de anos&nbsp;</font></p><p><font color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Unatarajia kuendelea kutumia miaka ngapi&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?</p><p><p><span class="instruction">Kama ni chini ya mwaka mmoja, jaza 0</span><br></p></p>
+            <p>Unatarajia kuendelea kutumia&nbsp;&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span><span style="font-family: Arial, sans-serif;"> </span><span style="font-family: Arial, sans-serif;">kwa</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">&nbsp;</span>miaka ngapi?</p><p></p><p><span class="instruction">Kama ni chini ya mwaka mmoja, jaza 0</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -5849,7 +5849,7 @@ questions:
             <p>Quanto tempo os membros do agregado familiar passam a preparar o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;e combustível para cada refeição, em média?&nbsp;</p><p><font color="#0000ff">Minutos&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani kuandaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;na nishati kwa kila mlo?</p><p></p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p><p></p>
+            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani (dakika) kuandaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;na nishati kwa kila mlo?</p><p></p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -6962,7 +6962,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">We start with adult women which is 15 years or older.&#160;</span></p>
+            <p><font face="Arial, sans-serif">We would now like to know more about how the members of this household spend their time, both today and 5 years ago. We will ask about time use for women and men and children and grown-ups separately.</font></p><p><font face="Arial, sans-serif">We start with adult women which is 15 years or older.&nbsp;</font></p>
             
           PT: |
             <font color="#0000ff">Começamos com mulheres adultas que têm 15 anos ou mais.</font><p></p>
@@ -8865,27 +8865,35 @@ questions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, how much time did each of these women use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Katika siku 7 zilizopita, je! Kila mmoja wa wanawake hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>?<p></p>
+            
   - name: N_D
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~ ?</span><p></p>
+            
   - name: N_H
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, how much time did each of these girls use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Katika siku 7 zilizopita, je! Kila mmoja wa wasichana hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
+            
   - name: N_I
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
             Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>?<p></p>
+            
 ...
