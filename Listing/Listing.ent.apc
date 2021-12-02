@@ -54,7 +54,11 @@ PROC GLOBAL
 				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
 				+ edit("99", toNumber(locality)) + edit("99", toNumber(village))
 				+ edit("999", toNumber(ea)) + ".mbtiles";
-		eaMap.setBaseMap(mapFileName);
+		if fileexist(mapFileName) then
+			eaMap.setBaseMap(mapFileName);
+		else
+			eaMap.setBaseMap(satellite);
+		endif;
 		eaMap.show();
 	end;
 	
