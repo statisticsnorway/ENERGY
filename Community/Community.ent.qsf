@@ -273,7 +273,7 @@ questions:
             <p>Há mais ou menos agregados famíliares na comunidade agora do que há cinco anos atrá?<br></p><div><br></div>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni kaya ngapi zimehamia katika jamii hii kwa kipindi cha miaka miwili iliyopita?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kwasasa kaya zimeongezeka au zimepungua ukilinganisha na miaka mitano iliyopita?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -294,9 +294,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Multiplas respostas. Duas respostas possiveis&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Taja shughuli ngapi kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#000000;">Ya kwanza&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, ni zipi shughuli kuu mbili za kiuchumi zinazofanywa zaidi katika jamii hii?&nbsp;</span></p>
+            <p><font color="#0000ff">Majibu hata mawili yanaruhusiwa</font></p>
             
         helpText:
           EN: |
@@ -546,7 +545,7 @@ questions:
             <p><span style="font-size:16px;color:#008000;">A que distância fica o posto mais próximo~~elecCompany~~ ?</span></p><p><span style="color: rgb(0, 0, 255);">Não sabe…88&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">99 km ou mais…99&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);"><br></span></p>
             
           SW: |
-            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">99Km or more...99</span></p>
+            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
             
         helpText:
           EN: |
@@ -752,8 +751,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is the community connected to the national grid or a local mini-grid?&nbsp;</span></p>
-            <p style="margin-bottom:8pt;">&nbsp;</p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Is the community connected to the national grid or a local mini-grid?&nbsp;</span>&nbsp;</p>
             <p style="margin-bottom:8pt;"><span style="font-size:12px;color:#0000ff;">Interviewer/CAPI check:&nbsp;</span></p>
             
           PT: |
@@ -761,7 +759,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Entrevistador verifique / CAPI:&nbsp;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kijiji hiki kimeunganishwa katika gridi ya taifa au gridi ndogo inayopatikana hapa?&#160;</span></p>
+            <p><span style="" class="normal">Je, Kijiji/Mtaa hiki kimeunganishwa katika gridi ya Taifa (Tanesco/REA) au gridi ndogo inayopatikana hapa?<br></span></p><p><span style="" class="normal instruction">Mdadisi angalia/hakiki</span></p>
             
         helpText:
           EN: |
@@ -876,7 +874,7 @@ questions:
             Existe uma pomba de água solar/eléctrica partilhada&nbsp; nesta comunidade?<p></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kuna umeme wa jua wa kuchangia/pampu maji ya umeme katika jamii hii?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kuna pampu za maji za kushirikiana zinazoendeshwa na umeme jua au umeme wa TANESCO zinazotumiwa na wakulima katika jamii hii?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -952,7 +950,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Qual é o nome da empresa responsável pela mini-rede local?&nbsp;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Taja jina la kampuni inayosambaza umeme wa gridi ndogo?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, nini jina la kampuni inayosambaza umeme wa gridi ndogo?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1025,7 +1023,7 @@ questions:
             <p>A comunidade é acessível por veículo a motor (carro ou caminhão) durante a estação seca?&nbsp;<br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kijiji kinafikika kwa pikipiki (gari)?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kijiji kinafikika kwa gari au lori wakati wa kiangazi?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">ULIZA HALI YA USAFIRI KIPINDI CHA KIANGAZI KAMA KUNA MISIMU&nbsp;</span></p>
             
         helpText:
@@ -1045,7 +1043,7 @@ questions:
             <p>A comunidade também é acessível por veículo a motor (carro ou caminhão) durante a estação chuvosa?&nbsp;<br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kijiji kinafikika kwa pikipiki (gari)?&nbsp;</span></p>
+            <p>Je, kijiji kinafikika kwa gari au lori wakati wa mvua?<br></p>
             <p><span style="font-size:16px;color:#0000ff;">ULIZA HALI YA USAFIRI KIPINDI CHA MASIKA KAMA KUNA MISIMU&nbsp;</span></p>
             <p>&nbsp;</p>
             
@@ -1141,8 +1139,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA.&nbsp;&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#000000;">Je, kuna umbali gani kutoka kijijini hadi kwenye tawi la benki la karibu?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Mdadisi anaweza kukadiria pia katika KM. Kama benki ipo ndani ya jamii husika jaza umbali 0 bila hata kuuliza. </span></p><p><span style="font-size:16px;color:#0000ff;">Mdadisi atajaza&nbsp;&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kuna umbali gani katika kilometa kutoka katika jamii hii hadi tawi la karibu la benki?&nbsp;</span></p><p><span style="font-size:16px;color:#000000;"><br></span></p>
             
         helpText:
           EN: |
@@ -1165,8 +1163,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Não sabe = 8888&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#0000ff;">KAMA SI MAKAO MAKUU YA WILAYA.&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#000000;">Je, kuna umbali gani kutoka kijijini hadi kwenye taasisi ndogo ya kifedha ya karibu?&nbsp;</span></p>
+            <p><span style="color: rgb(0, 0, 255);">Mdadisi anaweza kukadiria pia katika KM. Kama taasisi ipo ndani ya jamii husika jaza umbali 0 bila hata kuuliza.</span></p><p><span style="color: rgb(0, 0, 255);">Mdadisi atajaza&nbsp;&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kuna umbali&nbsp;</span>gani katika kilometa&nbsp; kutoka kwa jamii hadi taasisi ndogo ya kifedha ya karibu?&nbsp;</p>
             
         helpText:
           EN: |
@@ -1185,8 +1183,8 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Pode um telefone celular obter um sinal de rede na comunidade?&#160;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, kuna mitandao ya simu inayopatikana katika jamii hii?&#160;</span></p>
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">SOMA MAJIBU KWA SAUTI&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, unaweza kupata mtandao wa simu unafanya kazi ndani ya jamii hii?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">SOMA MAJIBU KWA SAUTI&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1205,7 +1203,7 @@ questions:
             <p>a. Existe alguma&nbsp;<span style="color: rgb(0, 0, 255);">~~currentElement~~</span>&nbsp;nesta comunidade?<br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">a. Je kuna  ~~currentElement~~ yoyote katika jamii hii?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">a. Je kuna  ~~currentElement~~ katika jamii hii?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1273,7 +1271,8 @@ questions:
             
   - name: COMMUNITY_DICT.G1A
     conditions:
-      - questionText:
+      - logic: curocc() = 1
+        questionText:
           EN: |
             <p><span style="font-size:16px;color:#000000;">Are there any <span style="color:#008000;">~~currentElement~~</span> in this community?&#160;</span></p>
             
@@ -1283,7 +1282,7 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je kuna biashara ya ~~currentElement~~ katika jamii hii?&#160;</span></p>
+            <p>Tungependa kufahamu uwepo wa biashara mbalimbali na huduma za uzalishaji katika jamii hii. Tungependa pia kujua kwa pamoja hali ilivyo leo na ilivyokuwa miaka 5 iliyopita.</p><p><span style="font-size:16px;color:#000000;">Je kuna biashara ya ~~currentElement~~ katika jamii hii?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1291,6 +1290,14 @@ questions:
           PT: |
             
           SW: |
+            
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            Are there any&nbsp;<span style="color: rgb(0, 128, 0);">~~currentElement~~</span>&nbsp;in this community?&nbsp;<p></p>
+            
+          SW: |
+            <p>Je kuna biashara ya ~~currentElement~~ katika jamii hii?&nbsp;<br></p><p></p>
             
   - name: COMMUNITY_DICT.G1B
     conditions:

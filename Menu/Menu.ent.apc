@@ -7,6 +7,7 @@ PROC GLOBAL
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
 	numeric vsetMax = 100;		//Maximum number of items in dropdown lists
+	numeric numEA;
 	string newEA = "2";			//To keep track if we moved to a new EA. 2 = No
 	array string tabletCount(4,2); //To keep track of number of households assigned to each interviewer/tablet
 									// first dimension: Id of tablet, second: number of HH assigned to tablet
@@ -927,13 +928,15 @@ postproc
 					or visualValue(M_EA) = NOTAPPL then
 			newEA = "1";
 		else
-			newEA = prompt(maketext(tr(5)),numeric);
+			//newEA = prompt(maketext(tr(5)),numeric);
+			numEA = accept(maketext(tr(5)),maketext(tr(21)),maketext(tr(22)));
+			newEA = edit("9",numEA);
 		endif;
 		
 		if newEA = "2" and (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then	//Not new EA
 			//Not a new EA
 			skip to M_EA;
-		else
+		elseif newEA = "1" then
 			//Need to set the serialstart if it hasn't been done
 			if serialStart = 0 then
 				LOGIN = M_LOGIN;
@@ -996,7 +999,9 @@ preproc
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else
-		newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
+		//newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
+		numEA = accept(maketext(tr(5)),maketext(tr(21)),maketext(tr(22)));
+		newEA = edit("9",numEA);
 		if newEA = "1" then
 			//resetting region variables in case the user wants to download maps
 			M_REGION = NOTAPPL;

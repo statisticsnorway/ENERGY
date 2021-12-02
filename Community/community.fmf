@@ -498,7 +498,7 @@ Text=C2
   
 [Field]
 Name=C3
-Position=149,148,206,168
+Position=149,148,178,168
 Item=C3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
@@ -519,7 +519,7 @@ Max=1
   
 [Field]
 Name=D1
-Position=112,50,337,70
+Position=112,50,253,70
 Item=D1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox

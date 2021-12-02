@@ -936,7 +936,8 @@ questions:
             
   - name: HHQ_DICT.B1
     conditions:
-      - questionText:
+      - logic: curocc() = 1
+        questionText:
           EN: |
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many years have you been living in this community?&#160;</span></p>
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Record 1 if less than 1&#160;</span></p>
@@ -948,7 +949,7 @@ questions:
             <p style="margin-bottom:8pt;">&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, umeishi kwa miaka mingapi katika jamii hii?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kaya hii imeishi kwa miaka mingapi katika jamii hii?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">Jaza 1 kama chini ya 1&nbsp;</span></p>
             
         helpText:
@@ -957,6 +958,14 @@ questions:
           PT: |
             
           SW: |
+            
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            <p style="margin-bottom: 8pt;">How many years have you been living in this community?&nbsp;</p><p style="margin-bottom: 8pt;"><span style="color: rgb(0, 0, 255);">Record 1 if less than 1&nbsp;</span></p><p></p>
+            
+          SW: |
+            <p>Je, kaya hii imeishi kwa miaka mingapi katika jamii hii?&nbsp;<br></p><p><span style="color: rgb(0, 0, 255);">Jaza 1 kama chini ya 1&nbsp;</span></p><p></p>
             
   - name: HHQ_DICT.B10
     conditions:
@@ -1165,7 +1174,7 @@ questions:
             <p>&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni aina gani ya makazi ya kaya hii?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kaya hii inaishi katika makazi ya aina gani?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">(MDADISI, CHUNGUZA KWA MAKINI)&nbsp;</span></p>
             
         helpText:
@@ -1185,7 +1194,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Você usa conta móvel para fazer pagamentos por celular?&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, unatumia huduma za kifedha za mitandao ya simu kutuma fedha kwa ndugu/marafiki kufanya malipo kwa kutumia simu ya mkononi?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, wewe au mwanakaya yeyote katika kaya anatumia huduma za kifedha za mitandao ya simu kutuma fedha kwa ndugu/marafiki kufanya malipo kwa kutumia simu ya mkononi?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1264,7 +1273,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Essa moradia/</span><font face="Arial, sans-serif"><span style="font-size: 20px;">habitação</span></font><span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;é própria?&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kaya inamiliki makazi haya?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kaya unamiliki/mnamiliki makazi haya?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1533,11 +1542,11 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Não sabe = 88&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kama mngetaka, ni kwa saa ngapi kwa siku mngeweza kutumia jenereta hii kila usiku na mchana?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">Isizidi masaa 24&#160;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Hajui = 88&#160;</span></p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, kama mngetaka, ni kwa saa ngapi kwa siku mngeweza kutumia jenereta hii kila siku?&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">Isizidi masaa 24&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Hajui = 88&nbsp;</span></p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -1654,7 +1663,7 @@ questions:
             <p>Qual destas fontes de energia é a sua principal fonte de&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">back-up/alternativo</span>?&nbsp;</p><p><span style="color: rgb(0, 0, 255);">Leia a opçoes em voz alta&nbsp;</span>,<font color="#0000ff"> se necessário.&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Kati ya vyanzo hivyo vya nishati, ipi ni chanzo kikuu cha kuhifadhi nishati?</p><p><span class="instruction">Soma chaguo kwa sauti, kama ikihitajika.&nbsp;</span></p><p></p>
+            <p>Kati ya vyanzo hivyo vya nishati, ipi ni chanzo mbadala cha kuhifadhi nishati?</p><p><span class="instruction">Soma chaguo kwa sauti, kama ikihitajika.&nbsp;</span></p><p></p>
             
         helpText:
           EN: |
@@ -1775,7 +1784,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">A sua casa tem um inversor que lhe permite usar aparelhos de AC(corrente alternada)?&nbsp;</span></font><br></p>
             
           SW: |
-            <p><span style="font-size: 14px;">Je, kaya yenu ina inveta inayowezesha kutumia vifaa vya mkondogeu (AC)?</span><br></p>
+            <p><span style="font-size: 14px;">Je, kaya yenu ina kifaa kinachobadili umeme (inveta) inayowezesha kutumia vifaa vya mkondogeu (AC)?</span><br></p>
             
         helpText:
           EN: |
@@ -1796,7 +1805,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Qual é a capacidade do inversor?&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Dado em Watt (W).&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação do inversor, se disponível.&nbsp;</span></font></p>
             
           SW: |
-            <p>Je, inveta hiyo ina uwezo kiasi gani?</p><p><span class="instruction">Uwezo wa Inveta unatolewa kwenye "Watt (W)".</span></p><p><span class="instruction">Soma maelezo ya inveta kama yapo.</span></p>
+            <p>Je, kifaa hicho cha kubadili umeme (inveta) kina uwezo kiasi gani?</p><p><span class="instruction">Uwezo wa Inveta unatolewa kwenye "Watt (W)".</span></p><p><span class="instruction">Soma maelezo ya inveta kama yapo.</span></p>
             
         helpText:
           EN: |
@@ -2283,7 +2292,7 @@ questions:
             <p>Será que a&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 16px;">~~electricityCompany~~</span>&nbsp;conectou a sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><font color="#0000ff">Inquiridor pode responder por observação.</font></p><p></p>
             
           SW: |
-            <p>Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~electricityCompany~~</span>&nbsp;imekuunganisha na umeme kwenye gridi, Je uliunganisha pekeyako, Je mtu mwingine alifanya au nyumba iliunganishwa kipindi ambapo kaya yako ilipohamia kwenye nyumba hii?</p><p></p><p><span class="instruction">UNAWEZA UKAJIBU KWA KWA KUTAZAMA (KUCHUNGUZA)&nbsp;</span><br></p><p></p>
+            <p>Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~electricityCompany~~</span>&nbsp;imekuunganisha na umeme kwenye gridi, Je uliunganisha pekeyako, Je mtu mwingine alifanya au nyumba iliunganishwa kipindi ambapo kaya yako ilipohamia kwenye nyumba hii?</p><p></p><p><span class="instruction">UNAWEZA UKAJIBU KWA KUTAZAMA (KUCHUNGUZA)&nbsp;</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -2434,7 +2443,7 @@ questions:
             <p>Agora gostaríamos de saber mais sobre a capacidade da sua ligação a rede eléctrica. Isso é limitado pela tarifa, pelo fusível ou pelo contador. </p><p>Primeiro, gostaríamos de saber que tipo de tarrifa tem?&nbsp;<p></p></p>
             
           SW: |
-            Sasa tunatamani kujua zaidi uwezo wa jinsi ulivyounganishwa. Ukomo wa ushuru, fuzi au mita. Kwanza tunatamani kujua ni aina gani ya ushuru unaolipa?<p></p>
+            Sasa tunatamani kujua zaidi uwezo wa jinsi ulivyounganishwa. Ukomo wa ushuru (tarif), fuzi au mita. Kwanza tunatamani kujua ni aina gani ya ushuru (tarif) unaolipa?<p></p>
             
         helpText:
           EN: |
@@ -2495,7 +2504,7 @@ questions:
             <p>Gostaríamos agora de saber a capacidade do fusível principal. Qual é o Ampere (A) indicado?&nbsp;</p><p><br></p><p><font color="#0000ff">O respondente pode saber disso. Caso contrário, verifique o fusível principal. Selecione o maior número de Ampere (A).&nbsp;&nbsp;</font></p><p><font color="#0000ff">A capacidade está em Ampere (A). A está sempre abaixo dos 150.&nbsp;</font></p><p><font color="#0000ff">A Voltagem é sempre de 220 V (0,23 kV), não grave isto.&nbsp;</font></p><p><br></p><p></p>
             
           SW: |
-            <p>Tungependa kufanham uwezo wa fyuzi kubwa. Inaonesha Ampia (A) ngapi?</p><p><p><span class="instruction">Mhojiwa anaweza kufaham hili. Kama sivyo, angalia fyuzi kubwa. Chagua Ampia (A) yenye namba kubwa.</span></p></p><p><span class="instruction">Uwezo upo kwenye Ampia (A). A huwa ni chini ya 150.&nbsp;</span></p><p><span class="instruction">Volteji huwa ni 220V (0.23kV), usiandike hiyo</span></p>
+            <p>Tungependa kufahamu uwezo wa fyuzi kubwa. Inaonesha Ampia (A) ngapi?</p><p></p><p><span class="instruction">Mhojiwa anaweza kufaham hili. Kama sivyo, angalia fyuzi kubwa. Chagua Ampia (A) yenye namba kubwa.</span></p><p></p><p><span class="instruction">Uwezo upo kwenye Ampia (A). A huwa ni chini ya 150.&nbsp;</span></p><p><span class="instruction">Volteji huwa ni 220V (0.23kV), usiandike hiyo</span></p>
             
         helpText:
           EN: |
@@ -2517,7 +2526,7 @@ questions:
             <p>Gostaríamos agora de saber a capacidade do contador. Quais são os watts (W) indicados?&nbsp;</p><p><br></p><p><font color="#0000ff">O respondente pode saber disso. Caso contrário, verifique a caixa do contador ou a conta.&nbsp;&nbsp;</font></p><p><font color="#0000ff">A capacidade está em Watt (W). Sempre mais de 1000. 1kW=1000 W.&nbsp;&nbsp;</font></p><p><font color="#0000ff">A Voltagem é sempre de 220 V (0,23 kV), não grave isto.&nbsp;</font></p><p><br></p><p></p>
             
           SW: |
-            <p>Tungependa sasa kufahamu uwezo wa mita. Inaonesha Wati (W) ngapi?</p><p></p><p><span class="instruction">Mhojiwa anaweza kufaham hili. Kama sivyo, angalia boxi la mita au malipo ya bili.Uwezo upo kwenye AmpWati (W).</span></p><p><span class="instruction"> Marazote huwa ni zaidi ya 1,000.&nbsp;</span></p><p></p><p><span class="instruction">1kW=1,000W.</span></p><p><span class="instruction">Volteji huwa ni 220V (0.23kV), usiandike hiyo</span></p>
+            <p>Tungependa sasa kufahamu uwezo wa mita. Inaonesha Wati (W) ngapi?</p><p></p><p><span class="instruction">Mhojiwa anaweza kufaham hili. Kama sivyo, angalia boxi la mita au malipo ya bili.Uwezo upo kwenye AmpWati (W).</span></p><p><span class="instruction"> Marazote huwa ni zaidi ya 1,000.&nbsp;</span></p><p></p><p><span class="instruction">1kW=1,000W.</span></p><p><span class="instruction">Volteji huwa ni 220V (0.23kV), hakikisha jibu linakuwa katika Watts</span></p>
             
         helpText:
           EN: |
@@ -2536,7 +2545,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Esse é um Contador pré-pago?&nbsp;</span></p>
             
           SW: |
-            <p>Je, mita hii ni ya&nbsp; malipo kwanza (LUKU)?<br></p>
+            <p>Je, mita hii ni ya&nbsp; malipo kabla (LUKU)?<br></p>
             
         helpText:
           EN: |
@@ -2580,7 +2589,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, unayo ankara ya matumizi ya umeme ya mwezi uliopita?&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Uliza kuiona&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Kama mhojiwa analipa kwa kampuni ya nishati au ana kumbukumbu za malipo ya umeme, omba kuona bill ya umeme/ankara na tumia kujaza SW30 na SW31.&nbsp;</span></p>
             <p>&nbsp;</p>
             
         helpText:
@@ -2664,7 +2673,7 @@ questions:
             <p>Quantas semanas a conta cobre/dourou ?&nbsp;</p><p><br></p><p></p>
             
           SW: |
-            Je, ni wiki ngapi bili imetumia?<p></p>
+            Je, ni wiki ngapi bili ilitumia?<p></p>
             
         helpText:
           EN: |
@@ -2766,8 +2775,8 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p>Je, huwa unapokea taarifa juu ya ratiba za uwezo wa umeme?<br></p>
-            <p><span style="font-size:16px;color:#0000ff;">(load shedding is the set hours of electricity NOT available from the grid)?&nbsp;</span></p>
+            <p>Je, huwa unapokea taarifa juu ya ratiba za kukatika kwa umeme?<br></p>
+            <p><span style="font-size:16px;color:#0000ff;">(kukatika kwa umeme ni kipindi ambacho hakuna umeme kwa mtumiaji/watumiaji kutoka kwenye gridi wa eneo husika)?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -2788,7 +2797,7 @@ questions:
             <p>Nos últimos sete dias, durante quantas horas todos os dias e noites havia eletricidade da rede elétrica disponível?&nbsp;</p><p><font color="#0000ff">Máximo 24 horas. Em média&nbsp;</font></p><p><br></p><p></p>
             
           SW: |
-            <p>Je, ni masaa mangapi huwa umeme unakuwepo kwa siku na usiku kutoka kwenye gridi, katika kipindi cha siku saba zilizopita?<br></p>
+            <p>Je, ni masaa mangapi huwa umeme unakuwepo kwa siku kutoka kwenye gridi, katika kipindi cha siku saba zilizopita?<br></p>
             <p><span style="font-size:16px;color:#0000ff;">Maksimam masaa 24, Hajui = 88&nbsp;</span></p>
             
         helpText:
@@ -2959,7 +2968,7 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p>Katika kipindi cha mizezi 12 iliyopita, Je kuna kifaa chako chochote cha umeme kilipata hitilafu umeme ulipokatika kutokana na volteji ilikuwa juu au chini au kulikuwa nakupanda na kushuka kwa umeme wa gridi?</p><p><span class="instruction">Ishara ya kawaida ya hii ni taa inavyoangaza</span><br></p>
+            <p>Katika kipindi cha mizezi 12 iliyopita, Je kuna kifaa chako chochote cha umeme kilipata hitilafu kutokana na volteji ilikuwa juu au chini?</p><p><span class="instruction">Ishara ya kawaida ya hii ni taa inavyoangaza</span><br></p>
             
         helpText:
           EN: |
@@ -3004,7 +3013,7 @@ questions:
             <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;Qual é o segundo problema<span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">&nbsp;<span style="font-size: 16px;">mais sério</span></span><span style="font-family: Arial, sans-serif;">/grave</span><span style="font-size: 20px; font-family: Arial, sans-serif;"><span style="font-size: 16px;">&nbsp;</span></span><span style="font-family: Arial, sans-serif;">que você enfrenta com a rede&nbsp;</span><span style="font-family: Arial, sans-serif;">eléctrica</span><span style="font-size: 20px; font-family: Arial, sans-serif;"><span style="font-size: 16px;">&nbsp;</span></span></p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;"><br></span></span></p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Grave até 2 respostas. b. Segundo&nbsp;</span></p>
             
           SW: |
-            <p>Je, ni tatizo gani KUU ya pili (kwa umuhimu) umepata kwenye umeme wako wa gridi?<br></p>
+            <p>Je, ni tatizo gani KUU la pili (kwa ukubwa) umepata kwenye umeme wako wa gridi?<br></p>
             
         helpText:
           EN: |
@@ -3086,7 +3095,7 @@ questions:
             <p>Existe um limite para a carga e/ou aparelhos que você pode alimentar a partir desta rede local?&nbsp;</p><p></p>
             
           SW: |
-            Je, kuna ukomo wa mzigo wa vifaa vya umeme inaruhusiwa kutumika kwenye gridi ya kawaida?<p></p>
+            Je, kuna ukomo wa matumizi wa vifaa vya umeme inaruhusiwa kutumika kwenye gridi ndogo?<p></p>
             
         helpText:
           EN: |
@@ -3105,7 +3114,7 @@ questions:
             <p>Esteve envolvido na fixação da tarifa para a rede local?&nbsp;</p><p></p>
             
           SW: |
-            Je, ulishawahi kuwa miongoni mwa waliopanga kiwango cha ushuru wa umeme wa kawaida?<p></p>
+            Je, wewe au mwanakaya yeyote katika kaya hii amehusishwa kuwa miongoni mwa waliopanga kiwango cha bei ya umeme wa gridi ndogo?<p></p>
             
         helpText:
           EN: |
@@ -3124,7 +3133,7 @@ questions:
             <p>Como esteve envolvido na fixação de tarifas?&nbsp;</p><p><br></p><p></p>
             
           SW: |
-            Uliusishwaje kwenye uwekaji wa viwango vya ushuru?<p></p>
+            Je, wewe au mwanakaya yeyote katika kaya hii, amehusishwaje kwenye upangaji wa bei za umeme?&nbsp;<p></p>
             
         helpText:
           EN: |
@@ -3165,7 +3174,7 @@ questions:
             <p>Partilha este sistema solar com outros agredados familiares?&nbsp;</p><p><br></p><p></p>
             
           SW: |
-            Je, unatumia pamoja na wanakaya wengine kifaa cha nyumbani cha jua?<p></p>
+            Je, unatumia pamoja na wanakaya wengine kifaa cha umeme jua majumbani?<p></p>
             
         helpText:
           EN: |
@@ -3184,7 +3193,7 @@ questions:
             <p>Quantas agregados famíliares partilham este sistema solar?&nbsp;</p><p></p>
             
           SW: |
-            Ni wanakaya wangapi wanatumia kwa pamoja kifaa cha nyumbani cha jua?<p></p>
+            Ni wanakaya wangapi wanatumia kwa pamoja kifaa cha umeme jua majumbani?<p></p>
             
         helpText:
           EN: |
@@ -3210,7 +3219,7 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p>Nguvu ya paneli za jua ina jumla ya kiwango gani (Watt)?</p>
+            <p>Nguvu ya paneli za jua ina jumla ya uwezo gani (Watt)?</p>
             <p><font color="#0000ff">Soma taarifa ya nembo ya kifaa cha jua ikiwa kama ipo.</font></p><p><font color="#0000ff">Haijulikani = 88&nbsp;</font></p>
             
         helpText:
@@ -3232,7 +3241,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Qual é o total de Amper-houra (Ah) indicado nas baterias do painel solar?&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação das pilhas, se disponível. Soma a Ah para todas as baterias. Alcance: 20-900.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">(Amp-hours ( Ah).&nbsp;</span></font></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Não sabe=888</span><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;"><br></span></font></p>
             
           SW: |
-            <p>Je, ni masaa gani ya Amp-Ah (Ah) yaliyotajwa kwenye betri?&nbsp;</p>
+            <p>Je, nini ya masaa ya Ampia (Ah) yaliyotajwa kwenye betri?&nbsp;</p>
             <p><span style="font-size:16px;color:#0000ff;">Mdadisi: Kama mhojiwa hajui muombe usome lebo ya betri&nbsp;</span></p><p><font color="#0000ff">Haijulikani = 88</font><br></p>
             
         helpText:
@@ -3255,7 +3264,7 @@ questions:
             <p>Qual é a voltagem (V) das pilhas recarregáveis?&nbsp;</p><p><font color="#0000ff">Se várias pilhas, normalmente têm a mesma voltagem. Registe a voltagem da bateria mais utilizada. Volts (V).&nbsp;</font></p><p><font color="#0000ff">Leia a placa de informação da bateria, se disponível.&nbsp;</font></p><p><font color="#0000ff">Não sabe=88&nbsp;&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je, ni kiasi gani cha volteji (V) kwenye betri yakuchajiwa?</p><p></p><p><font color="#0000ff"><span style="font-size: 14px;">Ikiwa betri ni nyingi, kawaida zina volta sejiawa. Nakili volteji za betri inayotumika zaidi. Volti (V).</span></font></p><p><font color="#0000ff"><span style="font-size: 14px;">Soma taarifa ya nembo ya betri ikiwa inasomeka.</span></font></p><p><font color="#0000ff"><span style="font-size: 14px;">Haijulikani = 88&nbsp;</span></font></p>
+            <p>Je, betri hiyo ya kuchajiwa ina volteji (V) kiasi gani?</p><p></p><p><font color="#0000ff"><span style="font-size: 14px;">Ikiwa betri ni nyingi, kawaida zina volta sejiawa. Nakili volteji za betri inayotumika zaidi. Volti (V).</span></font></p><p><font color="#0000ff"><span style="font-size: 14px;">Soma taarifa ya nembo ya betri ikiwa inasomeka.</span></font></p><p><font color="#0000ff"><span style="font-size: 14px;">Haijulikani = 88&nbsp;</span></font></p>
             
         helpText:
           EN: |
@@ -3314,7 +3323,7 @@ questions:
             Você tem um inversor?<p></p>
             
           SW: |
-            Je, unayo inverta?<p></p>
+            Je, una kifaa kinachobadili umeme (inverta)?<p></p>
             
         helpText:
           EN: |
@@ -3337,7 +3346,7 @@ questions:
             <p>Qual é a capacidade do inversor?&nbsp;</p><p><font color="#0000ff">Dado em Watt (W).&nbsp;</font></p><p><font color="#0000ff">Leia a placa de informação do inversor, se disponível.&nbsp;</font></p><p><font color="#0000ff">Não sabe=8888&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je, uwezo wa inverta upoje?</p><p><p><span class="instruction">Inatambuliwa kwa Watt (W).</span></p></p><p><span class="instruction">Soma nembo ya inverta ikiwa kama ipo.</span></p><p><br></p><p>Haijulikani = 88&nbsp;</p>
+            <p>Je, kifaa hicho kinachobadili umeme (inverta) kina uwezo gani?</p><p></p><p><span class="instruction">Inatambuliwa kwa Watt (W).</span></p><p></p><p><span class="instruction">Soma nembo ya inverta ikiwa kama ipo.</span></p><p><br></p><p>Haijulikani = 88&nbsp;</p>
             
         helpText:
           EN: |
@@ -3456,7 +3465,7 @@ questions:
             <p>Qual é o prazo para o pagamento?&nbsp;<span style="color: rgb(0, 0, 255);">~~solarDeviceType~~&nbsp;</span></p><p><font color="#0000ff">(meses)&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je, huwa ni kipindi gani cha malipo?</p><p><p><span style="color: rgb(0, 0, 255);">~~solarDeviceType~~&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">(miezi)<br></span><br></p></p>
+            <p>Je, ilikuchukua muda gani kukamilisha malipo hayo?</p><p></p><p><span style="color: rgb(0, 0, 255);">~~solarDeviceType~~&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">(miezi)<br></span><br></p><p></p>
             
         helpText:
           EN: |
@@ -3631,7 +3640,7 @@ questions:
             <font color="#008000">D</font>urante os últimos sete dias, todos os dias e noites, quantas horas recebeu o serviço deste&nbsp;<span style="color: rgb(0, 128, 0);">~~solarDeviceType~~ </span>?<p></p>
             
           SW: |
-            <p>Je, ni masaa mangapi huwa unapata huduma kutoka kwenye [KIFAA] hiki kila siku na usiku, kipindi cha siku saba zilizopita?</p><p><p><span class="instruction">Si zaidi ya masaa 24</span><br></p></p>
+            <p>Je, ni masaa mangapi huwa unapata huduma kutoka kwenye [KIFAA] hiki kila siku, kipindi cha siku saba zilizopita?</p><p></p><p><span class="instruction">Si zaidi ya masaa 24</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -4407,7 +4416,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kwa kawaida ni kiasi gani cha </span>~~getValueLabel(F11)~~<span style="font-size:16px;color:#000000;"> huwa mnanunua?&nbsp;&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Lita za mafuta/Idadi ya mishumaa&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Lita/kilo za mafuta/nishati&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -4471,7 +4480,7 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p>Je, ni kiasi gani cha ~~getValueLabel(F11)~~&nbsp;unatumia kwa ajili ya kuangazia?<br></p>
+            <p>Je, ni kiasi gani cha ~~getValueLabel(F11)~~&nbsp;unatumia kwa ajili ya kuangazia?</p><p><span style="color: rgb(0, 0, 255);">Lita/kilo za mafuta/nishati&nbsp;</span><br></p>
             
         helpText:
           EN: |
@@ -4491,7 +4500,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Em primeiro lugar, gostaríamos de saber qual é a principal fonte de iluminação das crianças que estão atualmente matriculadas na escola, normalmente para estudar/fazer os trabalhos de casa?&nbsp;</span></font><br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Sasa tungependa kujua kuhusu aina mbali mbali za taa zinazotumika katika kaya hii. &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Sasa tungependa kujua kuhusu aina mbalimbali za taa zinazotumika katika kaya hii. &nbsp;</span></p>
             <p><span style="font-size:16px;color:#000000;">Kwanza tungependa kufahamu, n</span>i nini chanzo kikuu cha mwanga ambacho wanafunzi katika kaya hii hutumia kujisomea na kufanya kazi zao za shule wakati wa usiku?&nbsp;</p>
             
         helpText:
@@ -4659,7 +4668,7 @@ questions:
             <p><span style="color: rgb(0, 0, 255);">Multiplas m</span><span style="color: rgb(0, 0, 255);">espostas</span><span style="font-size:16px;color:#0000ff;font-family:'Arial';">.</span><font color="#0000ff">&nbsp;Leia as opções em voz alta.&nbsp;</font></p>
             
           SW: |
-            <p>Umesema kuwa chanzo chako kikuu cha umeme ni betri kavu za seli. Tungependa sasa kukuuliza maswali kadhaa juu ya betri hizi.<br></p><p>Je, Ni vifaa vipi vifuatavyo ulitumia betri kavu za seli kuwasha&nbsp; umeme?<br></p>
+            <p>Umesema kuwa chanzo chako kikuu cha umeme ni betri kavu. Tungependa sasa kukuuliza maswali kadhaa juu ya betri hizi.<br></p><p>Je, Ni vifaa vipi vifuatavyo ulitumia betri kavu kuwasha&nbsp; umeme?<br></p>
             <p><span style="font-size:16px;color:#0000ff;">Jibu zaidi ya moja, linawezekana, soma kwa sauti&nbsp;</span></p>
             
         helpText:
@@ -4703,7 +4712,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Se pagau em prestações, insira o valor total dos pagamentos. </span></p><p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Se houver mais de um dispositivo, insira a média.&nbsp;</span></p>
             
           SW: |
-            <p>Kwa wastani ulilipa kiasi gani kwa kila ~~lamptype~~?</p>
+            <p>Kwa wastani ulitumia kiasi gani kununua kila ~~lamptype~~?</p>
             <p><span style="font-size:16px;color:#0000ff;">Kama inalipwa kwa wamu, ingiza jumla ya malipo yote, kama ni zaidi ya kifaa 1, ingiza wastani.   &nbsp;</span></p>
             
         helpText:
@@ -4746,7 +4755,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Quantas baterias de células secas compras todos os meses?&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">NÚMERO DE PILHAS PARA TODOS OS DISPOSITIVOS&nbsp;</span></font></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kwa wastani ni betri kavu ngapi kaya hii hununua kila mwezi?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kwa wastani ni betri kavu ngapi kaya hii hununua kila mwezi?&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">IDADI YA BETRI KWA VIFAA VYOTE</span></p>
             
         helpText:
           EN: |
@@ -5002,7 +5011,7 @@ questions:
             <p>A secção final é sobre o sustento do seu agregado familiar.</p><p>Teve que encerrar qualquer produção doméstica ao longo do último ano durante a pandemia global até hoje?&nbsp;</p><p><font color="#0000ff">[RESPONDA SIM, MESMO SE VOCÊ AINDA TIVER DEIXADO ALGUNS]</font><br></p><p></p>
             
           SW: |
-            <p>Sehemu hii ya mwisho inahusu maisha ya kaya yako.</p><p>Je! Ulilazimika kufunga uzalishaji wowote wa kaya kwa mwaka jana kutoka Machi 2020 hadi leo?</p><p><font color="#0000ff">[JIBU NDIYO, KAMA BADO UNA AKIBA YA ULICHOZALISHA]</font></p><p></p>
+            <p>Sehemu hii ya mwisho inahusu maisha ya kaya yako.</p><p>Je! Ulilazimika kusitisha uzalishaji wowote wa kaya kwa mwaka jana kutoka Machi 2020 hadi leo?</p><p><font color="#0000ff">[JIBU NDIYO, KAMA BADO UNA AKIBA YA ULICHOZALISHA]</font></p><p></p>
             
   - name: HHQ_DICT.GP27
     conditions:
@@ -5099,7 +5108,7 @@ questions:
             <p>Teve que fechar algum negócio ou serviço doméstico ao longo do último ano durante a pandemia global até hoje?&nbsp;</p><p><font color="#0000ff"><span style="font-size: 16px;">[RESPONDA SIM, MESMO QUE AINDA TENHA ALGUM RESTANTE]</span></font></p><p></p>
             
           SW: |
-            <p>Je! Ulilazimika kufunga biashara au huduma yoyote ya kaya kwa mwaka jana kutoka Machi 2020 hadi leo?</p><p><font color="#0000ff">[JIBU NDIYO, KAMA BADO UNA AKIBA YA ULICHOZALISHA]</font></p><p></p>
+            <p>Je! Ulilazimika kusitisha biashara au huduma yoyote ya kaya kwa mwaka jana kutoka Machi 2020 hadi leo?</p><p><font color="#0000ff">[JIBU NDIYO, KAMA BADO UNA AKIBA YA ULICHOZALISHA]</font></p><p></p>
             
   - name: HHQ_DICT.GP34
     conditions:
@@ -5112,7 +5121,7 @@ questions:
             Você usou alguma eléctricidade para os seus serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.?<p></p>
             
           SW: |
-            <p>Je! Ulifunga [BIASHARA/HUDUMA] yoyote?</p><p><p>Kutoa huduma za kitaalam kama daktari, mhasibu, wakili, mtafsiri, mkufunzi binafsi, mkunga, mwashi, n.k.?<br></p></p>
+            <p>Je! ulisitisha BIASHARA/HUDUMA yoyote kati ya hizi zifuatazo;</p><p></p><p>Kutoa huduma za kitaalam kama daktari, mhasibu, wakili, mtafsiri, mkufunzi binafsi, mkunga, mwashi, n.k.?<br></p><p></p>
             
   - name: HHQ_DICT.GP35
     conditions:
@@ -5305,6 +5314,7 @@ questions:
             
           SW: |
             Je, Kuna mtu yeyote mwenye umri wa miaka 12 au zaidi katika kaya hii amebadilisha kazi yake kuu kwa mwaka jana kutoka Machi 2020 hadi leo?<p></p>
+            
   - name: HHQ_DICT.I1
     conditions:
       - questionText:
@@ -5492,7 +5502,7 @@ questions:
             <div><font face="Arial, sans-serif">Há quanto tempo usas esta</font><font color="#008000" face="Arial, sans-serif"> ~~getvaluelabel(I10)~~</font>?&nbsp;</div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Número de anos&nbsp;</font></div><div><font face="Arial, sans-serif" color="#0000ff"><br></font></div><div><font face="Arial, sans-serif" color="#0000ff">Se for menos de 1 ano, registe 0&nbsp;</font></div><p></p>
             
           SW: |
-            <p>Je, ni kwa muda gani sasa umekuwa ukilitumia&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;</p><p><p><span class="instruction">Kama ni chini ya mwaka mmoja, jaza 0</span><br></p></p>
+            <p>Je, ni kwa muda gani sasa umekuwa ukilitumia&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;</p><p></p><p><span class="instruction">Kama ni chini ya mwaka mmoja, jaza 0; Kama ni zaidi ya miaka 50, jaza 99; Kama hajui, jaza 88</span></p><p><br></p><p></p>
             
         helpText:
           EN: |
@@ -5649,7 +5659,7 @@ questions:
             <p>Nos últimos 12 meses, quais são os combustíveis que mais usou em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;</p><p><span style="color: rgb(0, 0, 255);">A&nbsp;</span><span style="color: rgb(0, 0, 255);">&nbsp;</span><span style="color: rgb(0, 0, 255);">Mais usada. Uma&nbsp;</span><span style="color: rgb(0, 0, 255);">única&nbsp;</span><span style="color: rgb(0, 0, 255);">resposta&nbsp;</span></p><p></p>
             
           SW: |
-            <p>Katika miezi 12 iliyopita, ni nishati gani uliyotumia zaidi kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?</p><p><p><span class="instruction">Jibu moja tu kwa Kwa nishati kuu, yaani ile inayotumika zaidi</span><br></p></p>
+            <p>Katika miezi 12 iliyopita, ni nishati gani uliyotumia zaidi kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?</p><p></p><p><span class="instruction">A&nbsp; Jibu moja tu kwa Kwa nishati kuu, yaani ile inayotumika zaidi</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -5670,7 +5680,7 @@ questions:
             <p>Nos últimos 12 meses, qual é o segundo combustível mais usado que usou em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;</p><p><font color="#0000ff">B Segundo mais usado. Uma resposta única.&nbsp;</font></p><p><font color="#0000ff">Se for utilizado apenas um tipo de combustível, escolha "Não aplicável"&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Katika miezi 12 iliyopita, ni nishati gani pili uliyotumia zaidi kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?</p><p><p><span class="instruction">B&nbsp; &nbsp; Second most Used&nbsp; &nbsp;Single response.</span></p></p><p><span class="instruction">If only one type of fuel is used, choose "Not applicalble...66"</span></p>
+            <p>Katika miezi 12 iliyopita, ni nishati gani pili uliyotumia zaidi kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?</p><p></p><p><span class="instruction">B&nbsp; &nbsp;Nishati ya pili kwa umuhimu.</span></p><p></p><p><span class="instruction">Kama ni aina moja tu ya nishati, jaza haihusiki...99"</span></p>
             
         helpText:
           EN: |
@@ -6046,7 +6056,7 @@ questions:
             Durante os últimos sete dias, quantas vezes o agregado familiar&nbsp;reuniu, recolheu ou comprou combustível?&nbsp;&nbsp;<p></p>
             
           SW: |
-            <p>Sasa tungependa kuzungumza juu ya muda uliotumika kukusanya kuni.</p><p><p>Je, katika kipindi cha siku 7 zilizopita ni mara ngapi kaya ilikusanya, kukusanya au kununua mafuta?&nbsp;<br></p></p>
+            <p>Sasa tungependa kuzungumza juu ya muda uliotumika kukusanya kuni.</p><p></p><p>Je, katika kipindi cha siku 7 zilizopita ni mara ngapi kaya ilikusanya, kukusanya na kununua nishati?&nbsp;<br></p><p></p>
             
         helpText:
           EN: |
@@ -6395,7 +6405,7 @@ questions:
             Já utilizou fogões com GPL, biogás, eletricidade (rede eléctrica ou solar), forno solar (não elétrico)?&nbsp;<p></p>
             
           SW: |
-            <p>Je,umewahi kutumia jiko lolote kwa kutumia LPG, bayogesi, umeme&nbsp; (TANESCO/REA au Jua), Oveni ya Jua (isiyo na umeme)?</p>
+            <p>Je,umewahi kutumia jiko lolote kwa kutumia gesi ya mtungi (LPG), bayogesi, umeme wa gridi, Oveni ya Jua (isiyo ya umeme)?</p>
             
         helpText:
           EN: |
@@ -6433,7 +6443,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Você aquece a água para lavar (seja para lavar pratos e roupas ou para tomar banho)?&nbsp;</span></p>
             
           SW: |
-            <p><font color="#400040">Maswali yafuatayo ni juu ya Uchemshaji wa Maji na Nafasi.</font><br></p><p><font color="#400040">Je! Unachemsha maji ya kutumia (iwe kuosha vyombo na kufua nguo au kwa kuoga)?</font><br></p>
+            <p><font color="#400040">Maswali yafuatayo ni juu ya upashaji joto wa chumba na Uchemshaji wa Maji.</font><br></p><p><font color="#400040">Je! Unachemsha maji ya kutumia (iwe kuosha vyombo na kufua nguo au kwa kuoga)?</font><br></p>
             
         helpText:
           EN: |
@@ -6531,7 +6541,7 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            Jiko la kupikia lililoboreshwa lina uwezo wa kupunguza matumizi ya mafuta kwa kiasi kikubwa. Linaweza pia kupunguza moshi. Inawezekana, muda wa kupika kwa kila mlo ukafupishwa kwa kuwa nguvu ya moto ya jiko hili ina nguvu kuliko jiko la jadi. Unapojibu maswali kadhaa yafuatayo, kumbuka faida kadhaa za jiko hili na ukidhingatia na bajeti yako ya kaya.<br>
+            Jiko la kupikia lililoboreshwa lina uwezo wa kupunguza matumizi ya nishati kwa kiasi kikubwa. Linaweza pia kupunguza moshi. Inawezekana, muda wa kupika kwa kila mlo ukafupishwa kwa kuwa nguvu ya moto ya jiko hili ina nguvu kuliko jiko la jadi. Unapojibu maswali kadhaa yafuatayo, kumbuka faida kadhaa za jiko hili na ukizingatia na bajeti yako ya kaya.<br>
             
         helpText:
           EN: |
@@ -6717,7 +6727,7 @@ questions:
             <p><span style="font-family: Arial, sans-serif;">Cultiva alguma terra/machamba? </span><font color="#0000ff" style="font-family: Arial, sans-serif; font-size: 20px;"><span style="font-size: 16px;">Se sim</span></font><span style="font-family: Arial, sans-serif;">: Qual é o tamanho da área? ?&nbsp;</span><br></p>
             
           SW: |
-            <p>Sasa tungependa kukuuliza maswali kadhaa juu ya shughuli za kilimo na ufugaji wa wanyama/wanyama wa nyumbani.</p><p>Je! Unalima ardhi yoyote? </p><p>IKIWA HIVYO: eneo hilo ni kubwa kiasi gani?<br></p>
+            <p>Sasa tungependa kukuuliza maswali kadhaa juu ya shughuli za kilimo na ufugaji.&nbsp;</p><p>Je! Unalima ardhi yoyote? </p><p>IKIWA HIVYO: eneo hilo ni kubwa kiasi gani?<br></p>
             
         helpText:
           EN: |
@@ -6755,7 +6765,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Você tem animais domésticos?&nbsp;</span></p>
             
           SW: |
-            Je! Unafuga wanyama wowote wa nyumbani?<p></p>
+            Je! Kaya hii inatunza mifugo yoyote?<p></p>
             
         helpText:
           EN: |
@@ -7614,7 +7624,7 @@ questions:
             ~~familyMembers.Labels(O1)~~, Teve tosse persistente ou uma doença com tosse nos últimos 14 dias?&nbsp;<p></p>
             
           SW: |
-            ~~familyMembers.Labels(O1)~~, Je! Ulikuwa na kikohozi cha kudumu au ugonjwa na kikohozi wakati wowote katika siku 14 zilizopita?<p></p>
+            Je, ~~familyMembers.Labels(O1)~~ ulikuwa na kikohozi cha kudumu au ugonjwa na kikohozi wakati wowote katika siku 14 zilizopita?<p></p>
             
         helpText:
           EN: |
@@ -7633,7 +7643,7 @@ questions:
             <p><span style="font-family: Arial, sans-serif; font-size: 20px;">O/A&nbsp;</span><span style="font-size:20px;color:#0000ff;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">~~familyMembers.Labels(O1)~~</span><span style="color: rgb(0, 0, 0); font-size: 16px;"> respirou mais rápido que o normal com respirações rápidas e curtas ou teve dificuldade para respirar?&nbsp;</span></span></p>
             
           SW: |
-            <p>~~familyMembers.Labels(O1)~~, Je! Umeawahi kupumua kwa haraka kuliko kawaida, pumzi kali, au ulikuwa na ugumu wa kupumua?<br></p>
+            <p>&nbsp;Je, ~~familyMembers.Labels(O1)~~ umeawahi kupumua kwa haraka kuliko kawaida, pumzi kali, au ulikuwa na ugumu wa kupumua?<br></p>
             
         helpText:
           EN: |
@@ -7652,7 +7662,7 @@ questions:
             <p><span style="font-family: Arial, sans-serif;">O/A&nbsp;</span><span style="font-family: Arial, sans-serif; color: rgb(0, 0, 255);">~~familyMembers.Labels(O1)~~ t</span><font face="Arial, sans-serif">eve algum problema no peito ou um nariz obstruída/</font><span style="font-family: Arial, sans-serif;">entupido</span><span style="font-family: Arial, sans-serif;">&nbsp;ou escorrendo/</span><span style="font-family: Arial, sans-serif;">corrimento nasal</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><br></p>
             
           SW: |
-            <p>~~familyMembers.Labels(O1)~~, Je! Pia ulipata shida kwenye kifua au pua kuziba au kutokwa na damu puani?<br></p>
+            <p>Je, ~~familyMembers.Labels(O1)~~ pia ulipata shida kwenye kifua au pua kuziba au kutokwa na damu puani?<br></p>
             
         helpText:
           EN: |
@@ -7671,7 +7681,7 @@ questions:
             <p><span style="font-size: 20px; font-family: Arial, sans-serif;"><span style="font-size: 16px;">O/A<font color="#0000ff"> ~~familyMembers.Labels(O1)~~</font></span><span style="color: rgb(0, 0, 0); font-size: 16px;"> teve uma irritação nos olhos ou problemas oculares nos últimos 14 dias?&nbsp;</span></span></p>
             
           SW: |
-            <p>~~familyMembers.Labels(O1)~~, Je! Umepata shida ya kuwashwa macho au shida nyingine yoyote ya macho katika siku 14 zilizopita?<br></p>
+            <p>Je, ~~familyMembers.Labels(O1)~~ umepata shida ya kuwashwa macho au shida nyingine yoyote ya macho katika siku 14 zilizopita?<br></p>
             
         helpText:
           EN: |
@@ -7690,7 +7700,7 @@ questions:
             <p><span class="normal">﻿~~familyMembers.Labels(O1)~~, Foi a um médico/clínica por causa da doença?&nbsp;</span></p>
             
           SW: |
-            ~~familyMembers.Labels(O1)~~, Je! Ulienda kuonana na daktari / kliniki kwa shida/ugonjwa ulioupata?<p></p>
+            Je, ~~familyMembers.Labels(O1)~~ ulienda kuonana na daktari / kliniki kwa shida/ugonjwa ulioupata?<p></p>
             
         helpText:
           EN: |
@@ -7709,7 +7719,7 @@ questions:
             Criança<p></p>
             
           SW: |
-            Je!&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~chosenChildName~~</span>&nbsp;alikuwa na kikohozi cha muda mrefu au ugonjwa mwingine na kikohozi kwaa wakati wowote katika siku 14 zilizopita?<p></p>
+            Je!&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~chosenChildName~~</span>&nbsp;alikuwa na kikohozi cha muda mrefu au ugonjwa mwingine na kikohozi kwa wakati wowote katika siku 14 zilizopita?<p></p>
             
         helpText:
           EN: |
@@ -7790,7 +7800,7 @@ questions:
             <p>A. Quanto gastou para comprar ~~getLabel(Q2_NUM, curocc())~~&nbsp;nos últimos 7 dias todos juntos?&nbsp;</p><p><font color="#0000ff">Em moeda local&nbsp;</font></p><p><font color="#0000ff">88888888=Não sabe&nbsp;</font></p><p></p>
             
           SW: |
-            <p><span class="normal">Sasa naomba kukuuliza kuhusu taarifa zinazohusu Matumizi ya kaya kwenye bidhaa za chakula na bidhaa zisizo za chakula kwa kipindi cha siku 7 zilizopita.&nbsp;</span>Matumizi (ni pamoja na bidhaa zilizonunuliwa, zinalizalishwa / zilizopatikana na kupokelewa kama zawadi / mchango)&nbsp;</p><p>A. Ulitumia kiasi gani kununua&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>?</p><p><span class="instruction">Mdadidisi kadiria kupata kiwango sahihi</span></p><p><span class="instruction"><span style="font-size: 16px;">88888888=sijui</span><br></span></p><p><span class="normal"><br></span></p><p></p><p></p>
+            <p><span class="normal">Sasa naomba kukuuliza kuhusu taarifa zinazohusu Matumizi ya kaya kwenye bidhaa za chakula na bidhaa zisizo za chakula kwa kipindi cha siku 7 zilizopita.&nbsp;</span>Matumizi (ni pamoja na bidhaa zilizonunuliwa, zinalizalishwa / zilizopatikana na kupokelewa kama zawadi / mchango)&nbsp;</p><p>A. Kaya yako ilitumia kiasi gani kununua&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>?</p><p><span class="instruction">Mdadidisi kadiria kupata kiwango sahihi</span></p><p><span class="instruction"><span style="font-size: 16px;">88888888=sijui</span><br></span></p><p><span class="normal"><br></span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -7971,7 +7981,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Sasa ningependa  kupata maoni yako juu ya maswali yanayohusiana na nishati&nbsp;</span></p>
-            <p>&nbsp;Je, ni mwanakaya yupi atakuwa sahihi kuhojiwa ju ya maswali haya?&nbsp;</p>
+            <p>&nbsp;Je, ni mwanakaya yupi atakuwa sahihi kuhojiwa juu ya maswali haya?&nbsp;</p>
             <p><span style="font-size:16px;color:#0000ff;">Andika namba ya mhojiwa (Mwanakaya) anayejibu sehemu hii&nbsp;</span></p>
             
         helpText:
@@ -8016,7 +8026,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Pode haver uma série de razões pelas quais as pessoas mantêm um fogão tradicional. Concorda ou discorda que as seguintes declarações são argumentos importantes para manter o fogão tradicional?&nbsp;&nbsp;</span></font></p><p><font face="Arial, sans-serif"><span style="font-size: 16px;">O fumo dofumança do fogão tradicional é bom para caçar insectos.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia em voz alta as opções, se for necessário.&nbsp;</span></font></p>
             
           SW: |
-            <p>Kunaweza kuwa na sababu kadhaa kwa nini watu huweka jiko la jadi. </p><p>Je, Unakubali au haukubali kwamba taarifa zifuatazo ni hoja muhimu za kuweka jiko la jadi?&nbsp;<br></p><p><span style="font-size:16px;color:#000000;">Moshi unaotoka kwenye majiko ya asili unasaidia kufukuza wadudu.&nbsp;</span></p><p><span class="instruction">Msomee mhojiwa majibu yaliyopo</span><br></p>
+            <p>Kunaweza kuwa na sababu kadhaa kwa nini watu huweka jiko la jadi. </p><p>Je, Unakubali au haukubali kwamba taarifa zifuatazo ni hoja muhimu za kuweka jiko la jadi?&nbsp;<br></p><p><span style="font-size:16px;color:#000000;">Moshi kutoka kwenye jiko la asili unasaidia ni nzuri kwa kufukuza wadudu.&nbsp;</span></p><p><span class="instruction">Msomee mhojiwa majibu yaliyopo</span><br></p>
             
         helpText:
           EN: |
@@ -8036,7 +8046,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Certos alimentos sabem melhor quando são cozinhados num fogão tradicional.&nbsp;</span></font></p><p><font face="Arial, sans-serif"><span style="font-size: 16px;"><font color="#0000ff">Leia em voz alta as opções, se for necessário.&nbsp;</font>&nbsp;</span></font></p><p><br></p>
             
           SW: |
-            <p>Chakula fulani huwa na ladha nzuri kikipikwa kwenye jiko la jadi.</p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Msomee mhojiwa majibu yaliyopo</span><br></p>
+            <p>Baadhi ya vyakula huwa na ladha nzuri vikipikwa kwenye jiko la asili.</p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Msomee mhojiwa majibu yaliyopo</span><br></p>
             
         helpText:
           EN: |
@@ -8056,7 +8066,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">O fogão tradicional é bom para iluminar a casa à durante noite&nbsp;</span></p>
             
           SW: |
-            <p>Jiko la jadi ni nzuri kwa kuwasha jioni</p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Msomee mhojiwa majibu yaliyopo</span><br></p>
+            <p>Jiko la asili ni nzuri kwa kuwasha jioni</p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">Msomee mhojiwa majibu yaliyopo</span><br></p>
             
         helpText:
           EN: |
@@ -8116,7 +8126,7 @@ questions:
             <p>Agora vou fazer-lhe algumas perguntas sobre a tomada de decisões no seu agregado familiar. Gostaríamos agora de falar com a ~~femaleHeadName~~ ~~femalespouseName~~&nbsp;ou outra mulher adulta na casa.&nbsp;</p><p><font color="#0000ff">Por favor, registe o respondente para esta secção&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Sasa nitakuuliza maswali yanayohusu kufanya maamuzi ndani ya kaya hii.Napenda sasa kuzungumza na ~~femaleHeadName~~, ~~femalespouseName~~&nbsp;au mwanamke mwingine mtu mzima katika kaya.</p><p></p><p><span class="instruction">Mhojiwa kulingana na vipaumbele vifuatavyo: Mkuu wa kaya mwanamke , Mwenzi&nbsp; wa Mkuu&nbsp; wa kaya, Mwanamke mtu mzima wa umri miaka&nbsp; &nbsp;15 au zaidi.</span><br></p><p></p>
+            <p>Sasa nitakuuliza maswali yanayohusu kufanya maamuzi ndani ya kaya hii. Napenda sasa kuzungumza na ~~femaleHeadName~~, ~~femalespouseName~~&nbsp;au mwanamke mwingine mtu mzima katika kaya.</p><p></p><p><span class="instruction">Mhojiwa kulingana na vipaumbele vifuatavyo: Mkuu wa kaya mwanamke, Mwenzi wa Mkuu wa kaya, Mwanamke mtu mzima wa umri miaka 15 au zaidi.</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -8302,7 +8312,7 @@ questions:
             <p>Produziu ou processou&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;no agregado familiar há 5 anos atrás?&nbsp;</p><p><font color="#0000ff">(Descrever eventos há 5 anos - SECA, INUNDAÇÃO, PRESIDENTE ETC.)&nbsp;</font></p><p><br></p><p></p>
             
           SW: |
-            B. Je, ulizalisha au kusindika&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika kaya miaka 5 iliyopita?<p></p>
+            B. Je, ulizalisha au kusindika&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika kaya kwa kipindi cha miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -8362,7 +8372,7 @@ questions:
             <p>Foi utilizada alguma eletricidade para a ilumicação ou maquinaria para esta produção/processamento?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><div><br></div><p></p>
             
           SW: |
-            <p>E.&nbsp;Je, Umeme ulitumika kwa taa au mashine kwa usindikaji / uzalishaji huu?</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span></p><p><p></p></p>
+            <p>E.&nbsp;Je, Umeme ulitumika kwa ajili ya taa au kuendeshea mashine kwa usindikaji / uzalishaji huu?</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span></p><p></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8404,7 +8414,7 @@ questions:
             <p>Há 5 anos atrás, esta atividade fez mais dinheiro, menos dinheiro ou o mesmo?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            <p>G.&nbsp;Je, Shughuli hii ilipata pesa kidogo miaka 5 iliyopita, pesa sawa au pesa zaidi?</p><p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)</span><br></p></p>
+            <p>G.&nbsp;Je, Shughuli hii ilizalisha pesa kidogo miaka 5 iliyopita, pesa sawa au pesa zaidi kutokana na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~&nbsp; ?</span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8444,7 +8454,7 @@ questions:
             <span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span><p></p>
             
           SW: |
-            <p>&nbsp;Sasa tungependa kujua ikiwa mtu yeyote katika kaya anamiliki biashara au anatoa huduma. Biashara zisizohusika na kilimo / huduma za kilimo</p><p><span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span><br></p>
+            <p>&nbsp;Je kuna mtu yeyote katika kaya hii&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~ </span>leo?</p>
             
         helpText:
           EN: |
@@ -8483,7 +8493,7 @@ questions:
             <p>Alguém<span style="color: rgb(0, 128, 0);">&nbsp;</span>no agregado familiar fez&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span>há 5 anos atrás?&nbsp;</p><p><font color="#0000ff">(Descrever eventos há 5 anos - SECA, INUNDAÇÃO, PRESIDENTE ETC.)&nbsp;</font></p><p></p>
             
           SW: |
-            B.&nbsp;&nbsp;Je, Kuna mtu yeyote katika kaya alijihusisha na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;miaka 5 iliyopita?<p></p>
+            B.&nbsp;&nbsp;Je, Kuna mtu yeyote katika kaya hii anajishughulisha na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -8698,7 +8708,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Alguém n</span><span style="font-family: Arial, sans-serif; font-size: 16px;">o agregado familiar</span><span style="font-family: Arial, sans-serif; font-size: 16px;">&nbsp;fez algum trabalho público (para o governo, doadores, instituições de caridade) tal como dinheiro por trabalho durante os últimos 12 meses?&nbsp;</span></p>
             
           SW: |
-            <p>Je, Kuna mtu yeyote katika kaya hii amefanya kazi ya umma (kwa serikali, wafadhili, misaada) kama vile pesa-kwa-kazi katika miezi 12 iliyopita?</p>
+            <p>Je, Kuna mtu yeyote katika kaya hii amefanya kazi ya umma (kwa serikali, wafadhili, misaada) kama vile malipo katika miezi 12 iliyopita?</p>
             <p>&nbsp;</p>
             
         helpText:
@@ -8860,6 +8870,13 @@ questions:
           SW: |
             Asante. Tunaweza kuwasiliana nawe kwa namba&nbsp; gani nyingine ya simu?&nbsp;<p></p>
             
+  - name: I45
+    conditions:
+      - questionText:
+          EN: |
+            How much time did it typical take to gether, collect or purchase fuel per person each time they did so during the last seven days?<p></p>
+          SW: |
+            Ilikuchukua muda gani kukusanya au kununua mafuta kwa kila mtu kila walipofanya hivyo katika siku saba zilizopita?<p></p>
   - name: N_C
     conditions:
       - questionText:

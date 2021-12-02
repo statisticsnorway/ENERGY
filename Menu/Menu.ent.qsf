@@ -43,6 +43,7 @@ questions:
             
           PT: |
             Por favor, selecione o Distrito.<p></p>
+            
           SW: |
             Chagua Wilaya<p></p>
             
@@ -61,6 +62,7 @@ questions:
             
           PT: |
             Por favor, selecione Area de Enumeração<p></p>
+            
           SW: |
             Chagua eneo la kuhesabia<p></p>
             
@@ -79,6 +81,7 @@ questions:
             
           PT: |
             Por favor, selecione a Localidade<p></p>
+            
           SW: |
             Chagua ni mjini au vijiji?<p></p>
             
@@ -102,6 +105,7 @@ questions:
             
           PT: |
             Por favor, selecione o que fazer<p></p>
+            
           SW: |
             Tafadhali chagua unafanya nini<p></p>
             
@@ -120,6 +124,7 @@ questions:
             
           PT: |
             Por favor selecione a Provincia<p></p>
+            
           SW: |
             Chagua Mkoa<p></p>
             
@@ -155,8 +160,9 @@ questions:
             
           PT: |
             Por favor, selecione o Posto administrativo&nbsp;<p></p>
+            
           SW: |
-            Chagua sehemu ya wilaya<p></p>
+            Chagua Kata<p></p>
             
         helpText:
           EN: |
@@ -173,6 +179,7 @@ questions:
             
           PT: |
             Por favor, selecione<p></p>
+            
           SW: |
             Chagua Kijiji/Mtaa<p></p>
             

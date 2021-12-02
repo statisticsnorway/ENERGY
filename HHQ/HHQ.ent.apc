@@ -667,10 +667,10 @@ PROC AC5
 
 PROC AC6
 
-	if $ = 1 then
-		if AB4 = 2 then
+	if $ = 1 then //Currently attending school
+		if AB4 = 2 then //female
 			inc(schoolGirls);
-		elseif AB4 = 1 then
+		elseif AB4 = 1 then //male
 			inc(schoolBoys);
 		endif
 	endif;
@@ -1972,7 +1972,7 @@ preproc
 
 postproc
 
-	if $ = 7 then
+	if $ in 5,7 then
 		skip to I_FORM;
 	endif;
 
@@ -2190,6 +2190,12 @@ postproc
 	skip to i15;
 
 
+PROC I18
+Postproc
+	If not $ in 0:50,88,99 then
+		errmsg(203);
+		reenter;
+	endif;
 PROC I23
 
 	If not((I22 in 1,2,3 or $ in 1,2,3) and (I2=1 or I4=1 or I6=1)) then
@@ -2211,7 +2217,7 @@ PROC I26
 
 postproc
 
-	if $ = i25 then
+	if $ = I25 then
 		errmsg(tr(151));
 		reenter;
 	endif;
