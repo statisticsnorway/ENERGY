@@ -4,19 +4,19 @@
 	String theCountry;
 
 	//Country specific variables. Content will be fetched from ../lookupFiles/countryVariables.csdb
-	numeric gridPriceU, gridPriceR;	//country specific price to connect to the grid
+	numeric gridPrice;	//country specific price to connect to the grid
 	numeric  highDevicePrice;//Country specific prices for solar devices
 
 	
-	array String cookstove(2); //country specific cookstoves
-	array cookStovePrices(2);	//Reference prices for the above defined cookStoves
+	array String cookstove(4); //country specific cookstoves
+	array cookStovePrices(4);	//Reference prices for the above defined cookStoves
 
 	String ElectricityCompany; //Name of electricity company
 
 
 	//Variables reused in multiple questions/fields or needed for CAPI questions. Need to be globally declared
 	string currMember;	//Main respondent throughout the questionnaire.
-	string solarDeviceType; // Type of solar home system, used in second C section
+	string solarDeviceType; // Type of solar home system, used in section C 
 	string lampType;
 	numeric CF;
 	string cookType;
@@ -94,13 +94,16 @@ preproc
 	//Get country specific variables
 	COUNTRY = theCountry;
 	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
-		gridPriceU = GRIDPRICEURB;
-		gridPriceR = GRIDPRICERUR;
+		gridPrice = GPRICE;
 		highDevicePrice = DEVICEPRICE;
 		cookstove(1) = COOKSTOVE1;
-		cookstove(2) = COOKSTOVE3;
+		cookstove(2) = COOKSTOVE2;
+		cookstove(3) = COOKSTOVE3;
+		cookstove(4) = COOKSTOVE4;
 		cookStovePrices(1) = COOKSTOVEPRICE1;
-		cookStovePrices(2) = COOKSTOVEPRICE3;
+		cookStovePrices(2) = COOKSTOVEPRICE2;
+		cookStovePrices(3) = COOKSTOVEPRICE3;
+		cookStovePrices(4) = COOKSTOVEPRICE4;
 		ElectricityCompany = ELCOMPANY;
 	else
 		errmsg(tr(101), "..lookupFiles/countryVariables.csdb");
@@ -406,7 +409,7 @@ PROC AA10
 preproc
 
 	currMember = AA14;	//Might be changed in AA15 or AA18..
-	
+
 
 postproc
 
@@ -664,10 +667,10 @@ PROC AC5
 
 PROC AC6
 
-	if $ = 1 then
-		if AB4 = 2 then
+	if $ = 1 then //Currently attending school
+		if AB4 = 2 then //female
 			inc(schoolGirls);
-		elseif AB4 = 1 then
+		elseif AB4 = 1 then //male
 			inc(schoolBoys);
 		endif
 	endif;
@@ -1753,11 +1756,8 @@ onfocus
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
-	if AA7 = 1 then
-		CF = round(thePercentages(random(1,2)) * gridPriceU);
-	else
-		CF = round(thePercentages(random(1,2)) * gridPriceR);
-	endif;
+	CF = round(thePercentages(random(1,2)) * gridPrice);
+
 postproc
 
 	if $ = 1 then
@@ -1972,7 +1972,7 @@ preproc
 
 postproc
 
-	if $ = 7 then
+	if $ in 5,7 then
 		skip to I_FORM;
 	endif;
 
@@ -2190,6 +2190,12 @@ postproc
 	skip to i15;
 
 
+PROC I18
+Postproc
+	If not $ in 0:50,88,99 then
+		errmsg(203);
+		reenter;
+	endif;
 PROC I23
 
 	If not((I22 in 1,2,3 or $ in 1,2,3) and (I2=1 or I4=1 or I6=1)) then
@@ -2211,7 +2217,7 @@ PROC I26
 
 postproc
 
-	if $ = i25 then
+	if $ = I25 then
 		errmsg(tr(151));
 		reenter;
 	endif;
@@ -2428,21 +2434,20 @@ preproc
 	endif;
 
 	string woodOrCharcoal;
-	seed(systime());
 	numeric tmp;
+	seed(systime());
 
 	//Finding out how to skip and setting variables
-	if visualValue(I10) in 101,102, 111, 112  then
+	if visualValue(I10) in 101,102  then
 		woodOrCharcoal = "wood";
-		cookType = cookStove(1);
-		tmp = 1;
-	elseif visualValue(I10) in 201, 202, 211 then
+		tmp = random(1,2);	//The two first elements of the cookStove array are wood..
+	elseif visualValue(I10) = 201 then
 		woodOrCharcoal = "charcoal";
-		cookType = cookStove(2);
-		tmp = 2;
+		tmp = random(3,4);
 	endif;
 
-	CF = round(random(1,2) * cookStovePrices(tmp)/2);	//this gives 0.5 or 1 of the price of the randomly chosen cookstove
+	cookType = cookStove(tmp);
+	CF = round(random(1,3) * cookStovePrices(tmp)/3);	//this gives 0.33, 0.66 or 1 of the price of the randomly chosen cookstove
 
 
 onfocus
@@ -3344,6 +3349,11 @@ preproc
 	endif;
 
 
+PROC GP33
+	If Length(strip($)) > 1 & IsChecked("7",$) then 
+		errmsg(202);
+		reenter;
+	Endif;
 PROC GP34
 
 preproc

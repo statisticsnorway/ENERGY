@@ -136,7 +136,7 @@ Name=AA10_VS1
 Value=1;Yes, accepted for start now|Sim, aceito para começar agora|Ndio, amekubali kuanza mahojiano sasa
 Value=2;Yes, accepted but return later|Sim, aceito, mas voltar mais tarde|Ndio, amekubali ila nitakaporudi baadae
 Value=3;No, refused|Não, se recusou|Hapana, amekataa
-Value=4;No, house is vacant|Não, casa está vazia|Hapana, kaya haipo kwa muda mrefu
+Value=4;No, house is vacant|Não, casa está vazia|Hapana, Nyumba Haina Mtu kwa Muda Mrefu
 
 [Item]
 Label=Why refuse to participate|Porque recusa a participar?
@@ -247,12 +247,12 @@ Len=1
 Label=Relationship to head|Relação de parentesco com o chefe?
 Name=AB3_VS1
 Value=1;Head (only one head pr household)|Chefe (apenas um chefe por Agregado)|Mkuu wa kaya
-Value=2;Spouse (of head)|Cônjuge (de cabeça)|Mke wa mkuu wakaya
+Value=2;Spouse (of head)|Cônjuge (de cabeça)|Mwenza wa Mkuu wa Kaya
 Value=3;Daughter/Son (of head/spouse)|Filha / Filho (da cabeça / cônjuge)|Mtoto wa mkuu wa kaya
 Value=4;Grand child (of head/spouse)|Grande criança (de cabeça / cônjuge)|Mjukuu wa mkuu wa kaya
 Value=5;Parent (of head/spouse)|Parent (da cabeça / cônjuge)|Mzazi wa mkuu wa kaya
 Value=6;Other relative (of head/spouse)|Outro parente (da cabeça / cônjuge)|Ndugu wengine
-Value=7;Non relative (of head/spouse)|Não relativa (da cabeça / cônjuge)|Sio ndugu kabisa
+Value=7;Non relative (of head/spouse)|Não relativa (da cabeça / cônjuge)|Hakuna uhusiano
 
 [Item]
 Label=Was [NAME] the head of household 5 years ago?
@@ -295,8 +295,8 @@ Len=1
 Label=Marital status|Estado civil
 Name=AB6_VS1
 Value=1;Never married|Nunca se casou|Hajawahi kuoa/Kuolewa
-Value=2;Monogamous married|Casado/a|Ameoa/Ameolewa
-Value=3;Polygamous married|Casado/a|Ameoa/Ameolewa
+Value=2;Monogamous married|Casado/a|Ameoa/Ameolewa (mke mmoja)
+Value=3;Polygamous married|Casado/a|Ameoa/Ameolewa (wake wengi)
 Value=4;Living together|União marital/vivem juntos|Wanaishi pamoja
 Value=5;Widow(er)|Viúva/o|Mjane/Mgane
 Value=6;Separated|Separado/a|Wametengana
@@ -333,8 +333,8 @@ Name=READ_EN_TZ
 Value=1;Kiswahili
 Value=2;English
 Value=3;Kiswahili & English
-Value=4;Any other language
-Value=5;No
+Value=4;Any other language||Lugha nyingine yoyote
+Value=5;No||Hapana
 
 [ValueSet]
 Label=Literacy read and write
@@ -342,8 +342,8 @@ Name=READ_TZ
 Value=1;Kiswahili
 Value=2;English
 Value=3;Kiswahili & English
-Value=4;Any other language
-Value=5;No
+Value=4;Any other language||Lugha nyingine yoyote
+Value=5;No||Hapana
 
 [Item]
 Label=Ever attended school|Frenquetou escola?
@@ -378,32 +378,32 @@ Len=2
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_EN_TZ
-Value=1;Pre-premary||PP
-Value=2;Adult education||ADULT
-Value=11;D1
-Value=12;D2
-Value=13;D3
-Value=14;D4
-Value=15;D5
-Value=16;D6
-Value=17;D7
-Value=18;D8
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
 Value=19;OSC
 Value=20;MS+COURSE
-Value=21;F1
-Value=22;F2
-Value=23;F3
-Value=24;F4
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
 Value=25;O+COURSE
-Value=31;F5
-Value=32;F6
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
 Value=33;A+COURSE
 Value=34;DIPLOMA
-Value=41;U1
-Value=42;U2
-Value=43;U3
-Value=44;U4
-Value=45;U5&+
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+Value=45;U5&+||Chuo Mwaka wa Tano au Zaidi
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
@@ -421,32 +421,32 @@ Value=9;University
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_TZ
-Value=1;Pre-premary||PP
-Value=2;Adult education||ADULT
-Value=11;D1
-Value=12;D2
-Value=13;D3
-Value=14;D4
-Value=15;D5
-Value=16;D6
-Value=17;D7
-Value=18;D8
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
 Value=19;OSC
 Value=20;MS+COURSE
-Value=21;F1
-Value=22;F2
-Value=23;F3
-Value=24;F4
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
 Value=25;O+COURSE
-Value=31;F5
-Value=32;F6
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
 Value=33;A+COURSE
 Value=34;DIPLOMA
-Value=41;U1
-Value=42;U2
-Value=43;U3
-Value=44;U4
-Value=45;U5&+
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+Value=45;U5&+||Chuo Mwaka wa Tano au Zaidi
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
@@ -497,11 +497,177 @@ Name=AC8
 Start=149
 Len=2
 
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?|Grade last school year
+Name=AC8_VS1
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
+Value=19;OSC
+Value=20;MS+COURSE
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
+Value=25;O+COURSE
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
+Value=33;A+COURSE
+Value=34;DIPLOMA
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC8_VS2
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;EP1
+Value=4;EP2
+Value=5;Secondary, basic
+Value=6;Secondary, medium
+Value=7;Technician, basic
+Value=8;Technician, medium
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC8_VS3
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
+Value=19;OSC
+Value=20;MS+COURSE
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
+Value=25;O+COURSE
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
+Value=33;A+COURSE
+Value=34;DIPLOMA
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC8_VS4
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;EP1
+Value=4;EP2
+Value=5;Secondary, basic
+Value=6;Secondary, medium
+Value=7;Technician, basic
+Value=8;Technician, medium
+Value=9;University
+
 [Item]
 Label=Highest education completed|Qual é o grau mais alto
 Name=AC9
 Start=151
 Len=2
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?|Highest education completed
+Name=AC9_VS1
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
+Value=19;OSC
+Value=20;MS+COURSE
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
+Value=25;O+COURSE
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
+Value=33;A+COURSE
+Value=34;DIPLOMA
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC9_VS2
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;EP1
+Value=4;EP2
+Value=5;Secondary, basic
+Value=6;Secondary, medium
+Value=7;Technician, basic
+Value=8;Technician, medium
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC9_VS3
+Value=1;Pre-premary||Shule ya Awali
+Value=2;Adult education||Elimu ya Watu Wazima
+Value=11;D1||Darasa la Kwanza
+Value=12;D2||Darasa la Pili
+Value=13;D3||Darasa la Tatu
+Value=14;D4||Darasa la Nne
+Value=15;D5||Darasa la Tano
+Value=16;D6||Darasa la Sita
+Value=17;D7||Darasa la Saba
+Value=18;D8||Darasa la Nane
+Value=19;OSC
+Value=20;MS+COURSE
+Value=21;F1||Kidato cha Kwanza
+Value=22;F2||Kidato cha Pili
+Value=23;F3||Kidato cha Tatu
+Value=24;F4||Kidato cha Nne
+Value=25;O+COURSE
+Value=31;F5||Kidato cha Tano
+Value=32;F6||Kidato cha Sita
+Value=33;A+COURSE
+Value=34;DIPLOMA
+Value=41;U1||Chuo Mwaka wa Kwanza
+Value=42;U2||Chuo Mwaka wa Pili
+Value=43;U3||Chuo Mwaka wa Tatu
+Value=44;U4||Chuo Mwaka wa Nne
+
+[ValueSet]
+Label=Grade this school year|Classe se matriculou?
+Name=AC9_VS4
+Value=1;Pre-primary
+Value=2;Adult education
+Value=3;EP1
+Value=4;EP2
+Value=5;Secondary, basic
+Value=6;Secondary, medium
+Value=7;Technician, basic
+Value=8;Technician, medium
+Value=9;University
 
 [Item]
 Label=Main occupation|Ocupação principal
@@ -619,13 +785,18 @@ Value=6;Never|Nunca|Hajawahi
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
 RecordTypeValue='B'
-RecordLen=159
+RecordLen=163
 
 [Item]
 Label=Years in community|A quantos anos vive nesta comunidade?
 Name=B1
 Start=103
 Len=2
+
+[ValueSet]
+Label=Years in community|A quantos anos vive nesta comunidade?
+Name=B1_VS1
+Value=1:99
 
 [Item]
 Label=Type of dwelling|Tipo de habitação
@@ -649,6 +820,11 @@ Label=Number of households share building|Número de famílias que compartilham
 Name=B3
 Start=107
 Len=2
+
+[ValueSet]
+Label=Number of households share building|Número de famílias que compartilham
+Name=B3_VS1
+Value=1:99
 
 [Item]
 Label=Own dwelling|habitação própria
@@ -740,7 +916,7 @@ Len=2
 [ValueSet]
 Label=Material floor|Principal material do chão da casa
 Name=B9_VS1
-Value=1;Mud/dung|Lama / esterco|Matope/Kinyesi cha wanyama
+Value=1;Mud/dung|Mud / esterco|Matope/Kinyesi cha wanyama
 Value=2;Reed/bamboo|Reed / bambu|Mianzi
 Value=3;Wood planks|Placas de madeira|Mbao za kawaida
 Value=4;Parquet or polished wood|Parquet ou madeira polida|Mbao zilizonakshiwa
@@ -776,6 +952,7 @@ Value=7;Flush toilet with cistern|Sanita de descarga com cisterna|Choo cha kuvut
 Image=..\Images\Toilet_7.jpg
 Value=8;Composting toilet / ecosan latrine|Sanita de compostagem / latrina ecosan|Choo cha ecosan
 Image=..\Images\Toilet_8.jpg
+Value=9;Other, Specify||Nyingine; Taja
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
@@ -819,43 +996,49 @@ Value=7;Other|Outros|Nyingine
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13
 Start=123
-Len=1
+Len=2
 
 [ValueSet]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13_VS1
-Value=1;Collected firewood|Lenha colectada|Kuni za kuokota
-Value=2;Purchased firewood|Lenha comprada|Kuni za kununua
-Value=3;Grass|Grama|Nyasi/Mabua
-Value=4;Paraffin|Parafina|Mafuta ya taa (Parafini)
-Value=5;Electricity|Eletricidade|Umeme
-Value=6;Gas|Gás|Gesi
-Value=7;Battery/dry cell torach|Bateria / torach pilha seca|Betri/Tochi
-Value=8;Candles|Velas|Mishumaa
+Value=1;Electricity (TANESCO)|Lenha colectada|Umeme TANESCO
+Value=2;Solar||Umeme wa Jua
+Value=3;Generator/private source||Generator/chanzo binafsi
+Value=4;Gas(industrial)||LPG (Gesi ya Mitungi)
+Value=5;Gas(biogas)||Bayogesi
+Value=6;Electricity (wind)||Umeme wa Upepo
+Value=7;Acetylene lamp||Taa ya Aceteline
+Value=8;Kerosene(lantern/chimney)||Taa ya Mafuta ya Taa - Kioo wazi
+Value=9;Kerosene(Wick lmap)|Lenha comprada|Taa ya Chemli
+Value=10;Candles||Mishumaa
+Value=11;Firewood|Grama|Kuni
 
 [Item]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14
-Start=124
-Len=1
+Start=125
+Len=2
 
 [ValueSet]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14_VS1
-Value=1;Collected firewood|Lenha colectada|Kuni za kuokota
-Value=2;Purchased firewood|Lenha comprada|Kuni za kununua
-Value=3;Paraffin|Parafina|Mafuta ya taa (Parafini)
-Value=4;Electricity|Eletricidade|Umeme
-Value=5;Gas|Gás|Gesi
-Value=6;Charcoal|Carvão|Mkaa
-Value=7;Crop residue|Resíduo da colheita|Mabaki ya mimea/Mabua
-Value=8;Saw dust|Pó de serra|Maranda
-Value=9;Animal waste|Os resíduos animais|Vinyesi vya wanyama
+Value=1;Electricity (TANESCO)|Lenha colectada|Umeme (TANESCO)
+Value=2;Solar|Lenha comprada|Jua
+Value=3;Generator/Private Source|Parafina|Jenereta/Chanzo binafsi
+Value=4;Cooking Gas|Eletricidade|LPG (Gesi ya Mitungi)
+Value=5;Gas (Biogas)|Gás|Bayogesi
+Value=6;Electricity (Wind)|Carvão|Umeme wa upepo
+Value=7;Paraffin|Resíduo da colheita|Parafini (Mafuta ya taa)
+Value=8;Coal|Pó de serra|Makaa ya mawe
+Value=9;Charcoal||Mkaa
+Value=10;Firewood/Wood/Residuals|Os resíduos animais|Mabaki ya mimea/Mabua
+Value=11;Animal residuals||Vinyesi vya wanyama
+Value=99;Not Applicable||Haihusiki
 
 [Item]
 Label=Account or savings in bank etc|Tem uma conta ou poupança em um banco
 Name=B15
-Start=125
+Start=127
 Len=1
 
 [ValueSet]
@@ -867,21 +1050,23 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16
-Start=126
-Len=2
+Start=128
+Len=4
+DataType=Alpha
 
 [ValueSet]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16_VS1
-Value=1;Commercial bank|Banco Comercial|Benki ya biashara
-Value=2;Cooperative credit union|Cooperativa de crédito cooperativa|Chama cha ushirika cha akiba na mikopo
-Value=3;Microfinance institution|Instituição de microfinanças|Taasisi ndogo za kifedha
-Value=55;Other|De outros|Nyingine
+Value='A   ';Commercial bank|Banco Comercial|Benki ya biashara
+Value='B   ';Cooperative credit union|Cooperativa de crédito cooperativa|Chama cha ushirika cha akiba na mikopo
+Value='C   ';Microfinance institution|Instituição de microfinanças|Taasisi ndogo za kifedha
+Value='D   ';Other|De outros|Huduma za kibenki kwa mitandao ya simu (TigoPesa, M Pesa, Airtel Money nk)
+Value='Q   ';Nyingine||Nyingine
 
 [Item]
 Label=Rotating saving scheme or informal saving institution|Participa num esquema de poupança rotativo
 Name=B17
-Start=128
+Start=132
 Len=1
 
 [ValueSet]
@@ -893,7 +1078,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18
-Start=129
+Start=133
 Len=3
 DataType=Alpha
 
@@ -907,7 +1092,7 @@ Value='q  ';Other|De outros|Nyingine
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
 Name=B19
-Start=132
+Start=136
 Len=13
 DataType=Alpha
 
@@ -931,7 +1116,7 @@ Value='m            ';Cannot get a loan/credit|Não é possível obter um empré
 [Item]
 Label=Mobile money to pay for mobile phone|O dinheiro móvel para pagar por telefone celular
 Name=B20
-Start=145
+Start=149
 Len=1
 
 [ValueSet]
@@ -943,7 +1128,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Used the account last 90 days|Usou a conta nos últimos 90 dias?
 Name=B21
-Start=146
+Start=150
 Len=1
 
 [ValueSet]
@@ -955,7 +1140,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B22
-Start=147
+Start=151
 Len=13
 DataType=Alpha
 
@@ -980,7 +1165,7 @@ Value='q            ';Other|De outros|Nyingine
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
 RecordTypeValue='1'
-RecordLen=229
+RecordLen=230
 
 [Item]
 Label=Record HH or MN this section|Registro HH ou MN nesta secção(pessoa com maior conhecimento)
@@ -1094,7 +1279,7 @@ Start=116
 Len=1
 
 [ValueSet]
-Label=Text From Clipboard||Which of these power sources is your main electrical power source?
+Label=Which of these power sources is your main electrical power source?
 Name=C10_VS1
 Value=1;Grid||Gridi
 Value=2;Solar Home System||Mfumo wa nyumbani wa jua
@@ -1134,7 +1319,7 @@ Len=2
 Label=Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?|Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?
 Name=C12_VS1
 Value=1;National Grid Connection|Ligação  da rede nacional|Unganisho la Gridi ya Taifa
-Value=2;Local grid connection|Ligação de rede local|Unganisho la Gridi ya Kawaida
+Value=2;Local grid connection|Ligação de rede local|Unganisho la Gridi Ndogo
 Value=3;Solar Home System|Sistema Solar doméstico|Mfumo wa nyumbani wa jua
 Value=4;Electric generator|Gerador elétrico|Jenerata la umeme
 Value=5;Pico-Hydro|Pico-Hidro|Umeme wa maji wa Pico
@@ -1157,7 +1342,7 @@ Value=0;Grid is not availiable in the community|Rede elétrica não disponivel n
 Value=1;Grid is too far from household/not available|A rede esta muito longe do agregado familiar / não disponível|Gridi ipo mbali zaidi na kaya
 Value=2;Cost of initial connection is too expensive|Custo da conexão inicial é muito caro|Gharama za awali za kuunganisha ni kubwa sana
 Value=3;Monthly fee is too expensive|Taxa mensal é muito caro|Ada ya kila mwezi ni kubwa sana
-Value=4;Satisfied with current energy solution|Satisfeito com a solução atual de energia|Ninaridhika na nishati tunayotumia sasa
+Value=4;Satisfied with current energy solution|Satisfeito com a solução atual de energia|Inajitosheleza na nishati iliyonayo kwa sasa
 Value=5;Renting, landlord decision|Alugar, decisão do senhorio??|Nimepanga, Maamuzi ni ya mwenye nyumba
 Value=6;Service unreliable|Serviço não confiável|Huduma si ya kuridhisha
 Value=7;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|Taratibu za kiutawala ni ngumu sana
@@ -1196,27 +1381,27 @@ Value=4;More than 2 years|Mais de 2 anos|Zaidi ya miaka 2
 Label=Connected to national grid|O fornecedor de energia electrica conectou a sua casa a rede ou conectou pessoalmente?
 Name=C16
 Start=126
-Len=1
+Len=2
 
 [ValueSet]
 Label=Connected to national grid|O fornecedor de energia electrica conectou a sua casa a rede ou conectou pessoalmente?
 Name=C16_VS1
-Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|EDM
-Value=2;By the household|pela casa|Kaya
-Value=3;By others|por outros|Wengine
-Value=4;Was connected when they moved in|Não conectado de alguma forma|Haijaunganishwa
-Value=8;Don't know|Não sabe|Hajui
+Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|Kampuni za Umeme 
+Value=2;By the household|pela casa|Mwanakaya mwenyewe
+Value=3;By others|por outros|Mtu mwengine
+Value=4;Was connected when they moved in|Não conectado de alguma forma|Iliunganishwa walipohamia ndani ya nyumba
+Value=88;Don't know|Não sabe|Hajui
 
 [Item]
 Label=Years grid connection|Há quantos anos você teve conexão de rede?
 Name=C17
-Start=127
+Start=128
 Len=2
 
 [Item]
 Label=How much pay grid connecton fee|Quanto seu agregado pagou pela taxa de conexão da rede?
 Name=C18
-Start=129
+Start=130
 Len=9
 
 [ValueSet]
@@ -1231,7 +1416,7 @@ Value=999999999;Not applicable|Não aplicável|Haihusiki
 [Item]
 Label=How much did your household pay for the internal wiring
 Name=C19
-Start=138
+Start=139
 Len=9
 
 [ValueSet]
@@ -1242,40 +1427,32 @@ Link=9
 [Item]
 Label=Days from applied to household connected|Quantos dias o seu agregado familiar se conectou?
 Name=C20
-Start=147
+Start=148
 Len=2
 
 [Item]
 Label=Weeks to to use electricity after connected|Semanas para utilizar electricidade depois ligado
 Name=C21
-Start=149
+Start=150
 Len=2
 
 [Item]
 Label=What kind of tarriff do you have?
 Name=C22
-Start=151
+Start=152
 Len=2
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_EN_TZ
-Value=1;Domestic Use (D1)||Matumizi Madogo ya Nyumbani D1
-Value=2;General Use (T1)||Matumizi ya Kawaida - T1
-Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
-Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
-Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
-Value=55;Do not know||Hajui
+Value=1;Domestic Use (D1)||D1 [Matumizi chini ya Unit 75 kwa mwezi (TZS 100 kwa Unit)]
+Value=2;General Use (T1)||T1 [Matumizi zaidi ya Unit 75 kwa mwezi (TZS 200 kwa Unit)]
 
 [ValueSet]
 Label=What kind of tariff do you have?
 Name=TARIFF_TZ
-Value=1;Standard tariff (D1)||Matumizi Madogo ya Nyumbani - D1
-Value=2;General Use (T1)||Matumizi ya Kawaida - T1
-Value=3;Low Voltage Supply (T2)||Matumizi ya Juu ya Msongo wa 0.4kV - T2
-Value=4;Medium Voltage Supply (T3)||Matumizi ya Juu Msongo wa Kati - T3 MV
-Value=5;High Voltage Supply (T5)||Matumizi ya Juu Msongo Mkubwa - T3 HV
-Value=55;Do not know||Hajui
+Value=1;Domestic Use (D1)||D1 [Matumizi chini ya Unit 75 kwa mwezi (TZS 100 kwa Unit)]
+Value=2;General Use (T1)||T1 [Matumizi zaidi ya Unit 75 kwa mwezi (TZS 200 kwa Unit)]
 
 [ValueSet]
 Label=What kind of tariff do you have?
@@ -1300,7 +1477,7 @@ Value=55;Do not know||Hajui
 [Item]
 Label=Electric meter|Casa tem um contador elétrico?
 Name=C23
-Start=153
+Start=154
 Len=1
 
 [ValueSet]
@@ -1313,13 +1490,13 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
 Name=C24
-Start=154
+Start=155
 Len=2
 
 [Item]
 Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
 Name=C25
-Start=156
+Start=157
 Len=3
 
 [ValueSet]
@@ -1332,7 +1509,7 @@ Value=888;Don't know|Não sabe|Hajui
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
-Start=159
+Start=160
 Len=5
 
 [ValueSet]
@@ -1345,7 +1522,7 @@ Value=88888;Don't know|Não sabe|Hajui
 [Item]
 Label=Pre-paid meter|Pré-pago metros
 Name=C27
-Start=164
+Start=165
 Len=1
 
 [ValueSet]
@@ -1357,20 +1534,20 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
-Start=165
+Start=166
 Len=2
 
 [ValueSet]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28_VS1
-Value=1;Energy company|Empresa de energia|Kampuni ya umeme
-Value=2;Pre-paid meter card seller|Vendedor de recarga pré-pago|Muuzaji wa LUKU
+Value=1;Energy company|Empresa de energia|Kampuni ya nishati (binafsi)
+Value=2;Pre-paid meter card seller|Vendedor de recarga pré-pago|Wauza kadi kwa malipo ya kabla (Malipo kwa njia ya simu)
 Value=3;Community/village/municipality|Comunidade / vila / município|Jamii/kijiji/manispaa
-Value=4;Relative|Parente (familiar)|Jamaa
+Value=4;Relative|Parente (familiar)|Ndugu
 Value=5;Neighbor|Vizinho|Jirani
-Value=6;Landlord|Senhorio|Mwenye nyumba
-Value=7;Local store|Loja local|Duka
-Value=8;Utility office|Escritório "Utility"|Ofisi ya ugavi
+Value=6;Landlord|Senhorio|Mmiliki wa nyumba
+Value=7;Local store|Loja local|Dukani
+Value=8;Utility office|Escritório "Utility"|TANESCO
 Value=9;Bank|Banco|Benki
 Value=10;Post office|Agência dos Correios|Ofisi ya posta
 Value=66;No one|Ninguém|Hakuna
@@ -1379,7 +1556,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Electricity bill provided|factura de electricidade fornecida
 Name=C29
-Start=167
+Start=168
 Len=1
 
 [ValueSet]
@@ -1392,7 +1569,7 @@ Value=3;Respondent does not have an energy bill|Reclamado não tem um contrato d
 [Item]
 Label=Amount last month electricity bill|Valor da conta de energia elétrica no mês passado
 Name=C30
-Start=168
+Start=169
 Len=8
 
 [ValueSet]
@@ -1405,7 +1582,7 @@ Value=88888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C31
-Start=176
+Start=177
 Len=6
 
 [ValueSet]
@@ -1418,31 +1595,31 @@ Value=888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many weeks did the bill cover?
 Name=C32
-Start=182
+Start=183
 Len=2
 
 [Item]
 Label=How much did you spend the last time you bought electricity?
 Name=C33
-Start=184
+Start=185
 Len=8
 
 [Item]
 Label=How long does this amount last?
 Name=C34
-Start=192
+Start=193
 Len=3
 
 [Item]
 Label=How many KWh did you pay for
 Name=C35
-Start=195
+Start=196
 Len=6
 
 [Item]
 Label=Quality electricity same all year|energia elétrica de qualidade mesmo durante todo o ano
 Name=C36
-Start=201
+Start=202
 Len=1
 
 [ValueSet]
@@ -1454,7 +1631,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information load shedding schedule|Receba informações da agenda derramamento de carga
 Name=C37
-Start=202
+Start=203
 Len=1
 
 [ValueSet]
@@ -1463,12 +1640,12 @@ Name=C37_VS1
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 Value=3;Sometimes|Às vezes|Mara chache
-Value=4;No load-shedding in this area|Sem restrição de corrente nesta área|Usijaze eneo hili
+Value=4;No load-shedding in this area|Sem restrição de corrente nesta área|Hakuna katizo katika eneo hili
 
 [Item]
 Label=Hours of electricity day and night typical month|Horas de dia eletricidade e noite mês típico
 Name=C38
-Start=203
+Start=204
 Len=2
 
 [ValueSet]
@@ -1481,7 +1658,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C39
-Start=205
+Start=206
 Len=2
 
 [ValueSet]
@@ -1492,7 +1669,7 @@ Link=2
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
 Name=C40
-Start=207
+Start=208
 Len=2
 
 [ValueSet]
@@ -1505,7 +1682,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C41
-Start=209
+Start=210
 Len=2
 
 [ValueSet]
@@ -1516,7 +1693,7 @@ Link=2
 [Item]
 Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C42
-Start=211
+Start=212
 Len=2
 
 [ValueSet]
@@ -1538,7 +1715,7 @@ Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 [Item]
 Label=Main back-up source appliances|Principais aparelhos fonte de back-up
 Name=C43
-Start=213
+Start=214
 Len=2
 
 [ValueSet]
@@ -1556,13 +1733,13 @@ Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 [Item]
 Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44
-Start=215
+Start=216
 Len=1
 
 [ValueSet]
 Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44_VS1
-Value=1;Never asked|Nunca pedi|Hakuuliza
+Value=1;Never asked|Nunca pedi|Hapana
 Value=2;Yes, and they showed up in a reasonable time|Sim, e apareceram num tempo razoável.|Ndio, na walifika kwa muda muafaka
 Value=3;Yes, but it took some time|Sim, mas demorou algum tempo.|Ndio, lakini ilichukua muda
 Value=4;They nevner showed up|Eles nunca apareceram|Hawakutokea
@@ -1570,7 +1747,7 @@ Value=4;They nevner showed up|Eles nunca apareceram|Hawakutokea
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
 Name=C45
-Start=216
+Start=217
 Len=2
 
 [ValueSet]
@@ -1583,7 +1760,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Problems with grid electricity 1|Problemas com eletricidade da rede 1
 Name=C46
-Start=218
+Start=219
 Len=2
 
 [ValueSet]
@@ -1604,7 +1781,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Problems with grid electricity 2|Problemas com eletricidade da rede 2
 Name=C47
-Start=220
+Start=221
 Len=2
 
 [ValueSet]
@@ -1625,7 +1802,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Any household members die or limb damage|Quaisquer membros do agregado familiar morrer ou danos limb
 Name=C48
-Start=222
+Start=223
 Len=1
 
 [ValueSet]
@@ -1637,7 +1814,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury|Motivo da lesão
 Name=C49
-Start=223
+Start=224
 Len=2
 
 [ValueSet]
@@ -1651,7 +1828,7 @@ Value=55;Other|De outros|Nyinginezo
 [Item]
 Label=Is there a limit for the load and/or appliances you are allowed to power from this local grid?
 Name=C50
-Start=225
+Start=226
 Len=2
 
 [ValueSet]
@@ -1664,7 +1841,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Were you involved in setting the tariff for the local grid?
 Name=C51
-Start=227
+Start=228
 Len=1
 
 [ValueSet]
@@ -1676,7 +1853,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How were you involved in the tariff setting?
 Name=C52
-Start=228
+Start=229
 Len=2
 
 [ValueSet]
@@ -2765,11 +2942,11 @@ DataType=Alpha
 [ValueSet]
 Label=which devices did you power with dry cell batteries|Que dispositivos de alimentação com pilhas secas
 Name=G1_VS1
-Value='01      ';Lanterns|Lanternas|Kandili
-Value='02      ';Flashlights|Lanternas "flash"|Kurunzi
-Value='03      ';Task lights|Luzes de tarefa|Taa ya kuongeza mwanga
-Value='55      ';Other devices|De outros|Nyingine
-Value='66      ';None|Nenhum|Hakuna
+Value='A       ';Lanterns|Lanternas|Kandili
+Value='B       ';Flashlights|Lanternas "flash"|Kurunzi/tochi
+Value='C       ';Task lights|Luzes de tarefa|Taa ya kuongeza mwanga
+Value='Q       ';Other devices|De outros|Nyingine
+Value='X       ';None|Nenhum|Hakuna
 
 [Item]
 Label=number of dry cell batteries purchased each month|número de pilhas secas comprados a cada mês
@@ -2838,7 +3015,7 @@ Value=5;Kerosene lamp|Lâmpada de querosene|Taa ya chemli/kibatari
 Value=6;Candles|velas|Mishumaa
 Value=7;Open wick lamp|lâmpadas de biogás|Taa za bayogesi
 Value=8;Fireplace|Lareira|Kukoka moto
-Value=55;Other|De outros|Nyingine, taja
+Value=55;Other|De outros|Nyingine
 Value=66;Studying and homework only during daylight hours|Estudar e lição de casa apenas durante o dia|Wanafunzi wanasoma na kufanya kazi zao za shule wakati wa mchana tu
 
 [Item]
@@ -2854,8 +3031,8 @@ Value=1;Candle|Vela|Mshumaa
 Value=2;Open wick lamp|Lâmpada de pavio aberta/candieiro|Kibatari
 Value=3;Wick lamp  with glass cover|Lâmpada de pavio com cobertura de vidro/candieiro|Taa ya chemli
 Value=4;Pressurized mantle lamp|Lâmpada de manto pressurizado|Karabai
-Value=5;Solar powered light source|Fonte de luz alimentada a energia solar|Taa za kutumia umeme jua
-Value=6;Battery-operated light source|Fonte de luz operada por bateria|Taa za kutumia betri
+Value=5;Solar powered light source|Fonte de luz alimentada a energia solar|Umeme jua
+Value=6;Battery-operated light source|Fonte de luz operada por bateria|Taa ya betri
 Value=7;None|Nenhum.|Hakuna
 Value=55;Other|Outros|Nyingine
 
@@ -2946,7 +3123,7 @@ Value=2;Kerosene/Paraffin|Querosene|Mafuta ya taa
 Value=3;Diesel|Diesel|Diseli
 Value=4;Gasoline|Gasolina|Petroli
 Value=5;Biogas|Biogás|Bayogesi
-Value=6;Paraffin|Parafina|Mafuta ya taa
+Value=6;Paraffin|Parafina|Paraffin
 Value=7;None|Nenhum|Hakuna
 
 [Item]
@@ -3083,9 +3260,9 @@ DataType=Alpha
 [ValueSet]
 Label=Which type of stove is this?|Which type of stove is this?
 Name=I7_VS1
-Value='331   ';Gasifier stove|Fogão gasifier|Jiko la gesi la kawaida
+Value='331   ';Gasifier stove|Fogão gasifier|Jiko la gesifaya la kawaida
 Image=..\Images\Cookstoves_331.jpg
-Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Jiko Safi Gasifier jiko w / hewa ya kulazimishwa & bomba la kutolea moshi
+Value='341   ';Jiko Safi Gasifier stove w/forced air & chimney|Fogão Jiko Safi Gasifier c/ar forçado & chaminé|Jiko la Gesifaya lililoboreshwa lenye bomba la kutolea moshi nje
 Image=..\Images\Cookstoves_341.jpg
 
 [Item]
@@ -3196,6 +3373,13 @@ Name=I18
 Start=220
 Len=2
 
+[ValueSet]
+Label=How long have you been using this [STOVE]?
+Name=I18_VS1
+Value=0:50
+Value=99;Zaidi ya 50||Zaidi ya 50
+Value=88;Hajui||Hajui
+
 [Item]
 Label=How many years do you expect to continue using this [STOVE]?
 Name=I19
@@ -3237,8 +3421,8 @@ Len=1
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I22_VS1
 Link=133482344
-Value=1;In dwelling, NOT in sleeping area|Na habitação, não na área de dormir|Katika makazi, Sio eneo la kulala
-Value=2;In dwelling, in a sleeping area|Na habitação, em uma área de dormir|Katika makazi, Kwenye eneo la kulala
+Value=1;In dwelling, NOT in sleeping area|Na habitação, não na área de dormir|Katika makazi, sio chumba cha kulala
+Value=2;In dwelling, in a sleeping area|Na habitação, em uma área de dormir|Katika makazi, Kwenye chumba cha kulala
 Value=3;In a separate kitchen|Em uma cozinha separada|Katika jiko tofauti
 Value=4;In a veranda (roofed platform with at least two open sides)|Em uma varanda (plataforma com telhado com pelo menos dois|Kibarazani (roofed platform with at least two open sides)
 Value=5;In a separate open kitchenhouse|Em uma cozinha separada e aberta|Katika jiko la nje lililo wazi juu
@@ -3786,9 +3970,9 @@ Value=2;Electric kettle/coil|Chaleira elétrica / bobina|Birika la umeme
 Value=3;Electric stove|Fogão elétrico|Jiko la umeme
 Value=4;Gas heater|Aquecedor a Gas|Hita ya gesi
 Value=5;Gas stove|Fogão a gás|Jiko la gesi
-Value=7;Solar thermal system|Sistema solar térmico|Mfumo wa maji moto wa umeme jua
-Value=8;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Baadhi ya majiko yanayotumia nishati yabisi
-Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Majiko maalum yanayotumia nishati yabisi
+Value=7;Solar thermal system|Sistema solar térmico|Mfumo wa jua
+Value=8;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Jiko lilelile linalotumika kupikia
+Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Jiko tofauti la  mafuta
 
 [Item]
 Label=Do you heat your house?|Você aquecer a sua casa?
@@ -3813,7 +3997,7 @@ Label=Main source of heating water|Principal fonte de aquecimento de água
 Name=J4_VS1
 Value=1;Electric heater/boiler|Aquecedor elétrico / caldeira|Hita ya umeme
 Value=2;Gas heater|Aquecedor a Gas|Hita ya gesi
-Value=3;Solar thermal system|Sistema solar térmico|Mfumo wa maji moto wa umeme jua
+Value=3;Solar thermal system|Sistema solar térmico|Huduma ya upashaji joto majumbani (kutoka serikalini)
 Value=4;Same solid fuel stove used for cooking|Fogão de combustível sólido mesmo usado para cozinhar|Baadhi ya majiko yanayotumia nishati yabisi
 Value=5;Separate solid fuel stove|Fogão de combustível sólido separado|Majiko maalum yanayotumia nishati yabisi
 
@@ -3826,7 +4010,7 @@ Len=2
 [ValueSet]
 Label=What are the fuels you used on stove? second most used|Quais são os combustíveis que você usou no fogão? mais usado|Main fuel used in this stove
 Name=J5_VS1
-Value=1;LPG/cooking gas|LPG / gás de cozinha|LPG/Gesi ya mtungi
+Value=1;LPG/cooking gas|LPG / gás de cozinha|LPG (Gesi ya mtungi)
 Value=2;Wood purchased|Madeira comprada|Kuni za kununua
 Value=3;Wood collected|Madeira recolhidas|Kuni za kuokota
 Value=4;Charcoal|Carvão|Mkaa
@@ -3953,11 +4137,11 @@ Len=1
 Label=Do you cultivate any land? IF SO: How large is the area?
 Name=L3_VS1
 Link=345582371
-Value=0;No land|Sem terra|Hakuna shamba
-Value=1;< 0.5 Ha||Chini ya nusu hekta
-Value=2;0.5 - 1 Ha||Nusu hekta mpaka hekta 1
-Value=3;1 - 2 Ha||Hekta1 mpaka 2
-Value=4;More than 2 Ha|Mais do que 2 Ha|Zaidi ya hekta 2
+Value=0;No land|Sem terra|Hakuna ardhi
+Value=1;< 0.5 Ha||>0 mpaka 0.5 Hekta
+Value=2;0.5 - 1 Ha||>0.5 mpaka <1 Hekta
+Value=3;1 - 2 Ha||>1 mpaka <2 Hekta
+Value=4;More than 2 Ha|Mais do que 2 Ha|> 2 Hekta
 
 [Item]
 Label=Did you cultivate any land 5 years ago? IF SO: How large was the area?
@@ -4092,7 +4276,7 @@ Label=Activity
 Name=N_ACTIVITY_WOMEN_VS1
 Value=1;Collecting water|Cartar água|Kuchota maji
 Value=2;Collecting firewood|Recolha de lenha|Kukusanya/kuokota kuni
-Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf|Shughuli za kuzalisha kipato ndani ya kiwanja cha nyumba / makazi (sio shambani) Kutunza na kuandaa lishe ya wanyama, kuhifadhi mahindi, kusafisha mbegu, usindikaji wa chakula, kutengeneza mikeka, vikapu,  kusuka, ushonaji nk kwa kuuza.
+Value=3;Income generating activities inside the house/ housing compound (not in the field) Caring for and preparing fodder for animals, shelling maize, cleaning seeds, food processing, making mats, baskets, knitting weaving, tailoring etc for sale|Rendimento gerador de atividades no interior da casa/complexo habitacional (não no campo) Cuidar e preparar forragens para animais, descasque de milho, limpeza de sementes, processamento de alimentos, fabricação de tapetes, cestos, tecelagem de malha, alf|Shughuli za kuzalisha kipato ndani ya makazi (sio uwandani/shambani) Kutunza na kuandaa lishe ya wanyama, kuhifadhi mahindi, kusafisha mbegu, usindikaji wa chakula, kutengeneza mikeka, vikapu,  kusuka, ushonaji nk kwa kuuza.
 Value=4;Watching TV, listening to the radio or using smart phone|Ver televisão, ouvir rádio ou usar o telefone inteligente|Kuangalia TV, kusikiliza redio au kutumia simu janja
 Value=5;Spending time on entertainment and socializing outside the house|Passar tempo em entretenimento e socializar-se fora da casa|Kutumia wakati kwenye burudani na kujumuika nje ya nyumba
 
@@ -4585,7 +4769,7 @@ Len=1
 [ValueSet]
 Label=How satisfied are you with service from ...|Quão satisfeito você está com um serviço de ...
 Name=S2_VS1
-Value=1;Satisfied|Satisfeito|Naridhishwa
+Value=1;Satisfied|Satisfeito|Ninaridhika
 Value=2;Neutral|Neutro|Kawaida
 Value=3;Unsatisfied|Insatisfeito|Siridhishwi
 
@@ -4806,12 +4990,12 @@ ItemType=SubItem
 [ValueSet]
 Label=Business no
 Name=U3_VS1
-Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.|oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.|Anatoa huduma za kitaalam   kama daktari, mhasibu, mwanasheria, mtafsiri, mwalimu binafsi, mkunga, n.k.?
-Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate etc|Alimiliki biashara isiyo ya kilimo au kutoa huduma isiyo ya kilimo ndani ya kaya au duka linalomilikiwa na kaya, kama vile mmiliki wa  sehemu za kuoshea magari, mfuaji wa vyuma, fundi makenika, fundi seremala, fundi nguo, kinyozi, n.k.?
-Value=3;own a trading or service business on a street or in a market|possuir uma empresa de comércio ou serviços em uma rua ou em um mercado|Alimiki biashara au kutoa huduma katika mtaa au soko?
-Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services|conduzir um táxi ou pick-up domciliar para fornecer serviços de transporte ou de mudança|Aliendesha teksi inayomilikiwa na kaya au lori kwa ajili ya kutoa huduma za usafirishaji?
-Value=5;own a bar or restaurant|possuir um bar ou restaurante|Alimiliki na bar au mgahawa?
-Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street|possuir qualquer outra empresa não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou em uma rua|Alimiliki biashara nyingine yoyote isiyo ya kilimo, hata kama ni biashara ndogo inayoendeshwa hapo hapo nyumbani au mtaani?
+Value=1;offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.|oferecer serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.|Anatoa/alitoa huduma za kitaalam   kama daktari, mhasibu, mwanasheria, mtafsiri, mwalimu binafsi, mkunga, n.k.?
+Value=2;run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc|gerir uma loja do agregado familiar ou prestar um serviço a partir de casa, como uma lavagem automática, metalúrgico, mecânico, carpinteiro, barbeiro, alfaiate etc|Alimiliki/anamiliki biashara isiyo ya kilimo au kutoa huduma isiyo ya kilimo ndani ya kaya au duka linalomilikiwa na kaya, kama vile mmiliki wa  sehemu za kuoshea magari, mfuaji wa vyuma, fundi makenika, fundi seremala, fundi nguo, kinyozi, n.k.?
+Value=3;own a trading or service business on a street or in a market|possuir uma empresa de comércio ou serviços em uma rua ou em um mercado|Alimiki/anamiliki biashara au kutoa huduma katika mtaa au soko?
+Value=4;drive a household-owned taxi or pick-up truck to provide transportation or moving services|conduzir um táxi ou pick-up domciliar para fornecer serviços de transporte ou de mudança|Aliendesha/anaendesha teksi inayomilikiwa na kaya au lori kwa ajili ya kutoa huduma za usafirishaji?
+Value=5;own a bar or restaurant|possuir um bar ou restaurante|Alimiliki/anamiliki na bar au mgahawa?
+Value=6;own any other non-agricultural business, even if it is a small business run from home or on a street|possuir qualquer outra empresa não agrícola, mesmo que seja uma pequena empresa gerida a partir de casa ou em uma rua|Alimiliki/anamiliki biashara nyingine yoyote isiyo ya kilimo, hata kama ni biashara ndogo inayoendeshwa hapo hapo nyumbani au mtaani?
 
 [Item]
 Label=Does anybody in the household  [BUSINESS] today?
@@ -5196,7 +5380,7 @@ Value=8;Wage Employee in Private Company (without contract)|Trabalhador assalari
 Value=9;Wage Employee in Private Company (without contract)|Trabalhador assalariado em Empresa Privada (sem contrato)|Mwajiriwa katika kampuni binafsi (bila mkataba)
 Value=10;Wage Employee for Government|Trabalhador salarial do Governo|Mwajiriwa wa Serikali
 Value=11;Wage Employee in Parastatal (government owned company)|Trabalhador salarial em Parastatal (empresa pública)|Mwajiriwa katika Shirika la Umma
-Value=15;Was not working, but was looking for work and has worked previously|Não estava a trabalhar, mas estava à procura de trabalho e já trabalhou anteriormente.|Kwa sasa hafanyi kazi, lakini anatafuta kazi na hapo awali alikuwa anafanya kazi
+Value=15;Was not working, but was looking for work and has worked previously|Não estava a trabalhar, mas estava à procura de trabalho e já trabalhou anteriormente.|Hakufanya kazi, lakini alikuwa akitafuta kazi na alikuwa akifanya kazi hapo awali
 Value=16;Was not working, but was looking for work. Had never worked before|Não estava a trabalhar, mas estava à procura de trabalho. Nunca tinha trabalhado antes.|Kwa sasa hafanyi kazi, lakini anatafuta kazi na hajawahi kufanya kazi
 Value=17;Was not working, and was not looking for work (student, retired, disabled etc)|Não estava a trabalhar, e não estava à procura de trabalho (estudante, reformado, deficiente, etc)|Kwa sasa hafanyi kazi, na hatafuti kazi (Mwanafunzi, Mstaafu,Mlemavu, Mgonjwa kwa muda mrefu
 

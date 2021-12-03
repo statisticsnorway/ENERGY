@@ -47,9 +47,9 @@ EN(12) Listing data not synced!
 PT(12) Dados de listagem não sincronizados!
 SW(12) Taarifa za kuorodhesha kaya hazijafanikiwa kutumwa.
 
-EN(13) Sample data received. Number of HH to interview: %d
-PT(13) Dados da amostra recebidos. Número de famílias a entrevistar: %d
-SW(13) Taarifa za sampuli zimefanikiwa kupokelewa. Idadi ya kaya za kuhojiwa: %d
+EN(13) Sample data received
+PT(13) Dados da amostra recebidos
+SW(13) Taarifa za sampuli zimefanikiwa kupokelewa
 
 EN(14) Sample data not received!
 PT(14) Dados da amostra não recebidos!
@@ -163,7 +163,7 @@ PT(42) Abra-o de qualquer forma
 SW(42) Fungua tu
 
 EN(43) Change login
-PT(43) Mudar a inicialização
+PT(43) Mudar usuário
 SW(43) Badilisha mtumiaji
 
 EN(44) Download maps
@@ -171,24 +171,25 @@ PT(44) Baixar mapas
 SW(44) Pakua ramani
 
 EN(45) Delete old map files?
-PT(45) Remover os antigos ficheiros de mapa?
+PT (45) Remover os antigos ficheiros de mapa?
 SW(45) Futa mafaili ya zamani ya ramani?
 
 EN(46) Please choose region and district first
-PT(46) Escolha primeiro a Província e o distrito
+PT (46) Escolha primeiro a Província e o distrito
 SW(46) Tafadhali Chagua Mkoa na Wilaya kwanza
 
 EN(47) Failed to connect to server
-PT(47) Falha ao conectar ao servidor
+PT (47) Falha ao conectar ao servidor
 SW(47) Imeshindikana kukuunganisha na Seva(Server)
 
 EN(48) Rememeber to download map files while online if it has not been done already
-PT(48) Caso ainda não tenha sido feito , Lembre-se de descarregar arquivos de mapas enquanto tiver Internet ligada.
+PT (48) Caso ainda não tenha sido feito , Lembre-se de descarregar arquivos de mapas enquanto tiver Internet ligada.
 SW(48) Kumbuka kupakua Ramani wakati umeunganishwa na mtandao kama bado hujafanya hivvyo
 
 EN(49) Download maps?
 SW(49) Kupakua ramani?
 PT(49) Baixar mapas?
+
 
 EN(50) Login
 SW(50) Ingia
@@ -222,9 +223,9 @@ EN(57) Please verify that these settings are correct
 SW(57) Tafadhali hakiki kama taarifa hizi ziko sahihi
 PT(57) Por favor, verifique se estas definições estão corretas
 
-EN(58) Correct settings
-SW(58) Taarifa sahihi
-PT(58) Definições corretas
+EN(58) No, Correct settings
+SW(58) Hapana, Taarifa sahihi
+PT(58) não, Definições corretas
 
 EN(59) Please compare settings with your supervisor too
 SW(59) Tafadhali linganisha mipangilio na msimamizi wako pia
@@ -233,3 +234,4 @@ PT(59) Por favor, compare as definições com o seu Controlador também
 EN(60) Please compare settings with the enumerators
 SW(60) Tafadhali linganisha mipangilio na wahesabu
 PT(60) Por favor, compare as definições com os Inquiridores
+

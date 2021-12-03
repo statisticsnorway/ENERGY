@@ -8,7 +8,7 @@ PROC GLOBAL
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
-	numeric vsetMax = 100;		//Maximum number of items in dropdown lists
+	numeric vsetMax = 100;		//Maximum number of items in dropdown lists	
 	string newEA = "2";			//To keep track if we moved to a new EA. 2 = No
 	array string tabletCount(4,2); //To keep track of number of households assigned to each interviewer/tablet
 									// first dimension: Id of tablet, second: number of HH assigned to tablet
@@ -36,9 +36,8 @@ PROC GLOBAL
 		tstrip = strip(lstrip(theString));
 	end;
 
-	
-	
-	//Function to verify setting variables
+
+//Function to verify setting variables
 	function string verifyVariables()
 		//First need to look up names of geography variables
 		REGION_CODE = visualValue(M_REGION);
@@ -62,7 +61,8 @@ PROC GLOBAL
 		verifyVariables = i;
 		
 	end;
-								
+	
+
 
 	//Get or send data to/from interviewer. Supervisor always acts as the server
 	function bluetoothServer()
@@ -116,7 +116,6 @@ PROC GLOBAL
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
 				syncdata(PUT, SAMPLING_DICT);
-				
 			
 				syncdisconnect();
 			else
@@ -128,8 +127,6 @@ PROC GLOBAL
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
 				syncdata(PUT, SAMPLING_DICT);
-				syncdata(PUT, REGIONS_DICT);
-				syncdata(PUT, USERS_DICT);
 			
 				syncdisconnect();
 			else
@@ -958,20 +955,21 @@ postproc
 					or visualValue(M_EA) = DEFAULT
 					or visualValue(M_EA) = NOTAPPL then
 			newEA = "1";
-		else
-			newEA = prompt(maketext(tr(5)),numeric);
+		else			
+			numeric numEA = accept(maketext(tr(5)),maketext(tr(21)),maketext(tr(22)));
+			newEA = edit("9",numEA);
 		endif;
 		
 		if newEA = "2" and (visualValue(M_REGION) <> DEFAULT and visualValue(M_REGION) <> NOTAPPL) then	//Not new EA
-			//Not a new EA
+					//Not a new EA
 			string OKVar = verifyVariables();
 			if OkVar = "1" then
 				skip to M_EA;
 			else
 				TemporaryHackFixThis = 1;
 			endif;
-			
 		endif;
+	
 		//New EA - or missing/wrong variables.
 		//need to set the serialstart if it hasn't been done
 		if serialStart = 0 then
@@ -979,7 +977,7 @@ postproc
 			loadCase(USERS_DICT, LOGIN);
 			serialStart = COUNTERSTART;
 		endif;
-			
+		
 		//Also set all region variables to NOTAPPL in case they try to download maps too early
 		M_REGION = NOTAPPL;
 		M_DISTRICT = NOTAPPL;
@@ -1004,7 +1002,7 @@ postproc
 		else
 			skip to M_HOUSEHOLD;
 		endif;
-		
+
 	elseif $ = 4 then 		//Sync listingdata.
 		errmsg(tr(60));
 		String okVar = verifyVariables();
@@ -1022,6 +1020,7 @@ postproc
 			TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		endif;
+
 	elseif $ = 5 then 		//get Sample/Households to interview
 		numeric answer = accept(makeText(tr(20)), makeText(tr(21)), makeText(tr(22)));
 		if answer = 1 then	//sure. Go ahead.. :)	
@@ -1048,6 +1047,7 @@ postproc
 		$ = NOTAPPL;
 		reenter;
 
+
 	else	//$ = 9. quit
 		//First need to reset pff file so that we don't start at M_HOUSEHOLD field when starting up again
 		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
@@ -1062,7 +1062,8 @@ preproc
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else		
-		newEA = prompt(maketext(tr(5)),numeric);	//Moved to new EA? (1 = y)
+		numeric numEA = accept(maketext(tr(5)),maketext(tr(21)),maketext(tr(22)));
+		newEA = edit("9",numEA);
 		if newEA = "1" then
 			//resetting region variables in case the user wants to download maps
 			M_REGION = NOTAPPL;
@@ -1078,8 +1079,8 @@ preproc
 	$ = NOTAPPL;
 	
 
-postproc
-		
+postproc	
+			
 	if $ = 1 then	//Sync with interviewer
 		errmsg(tr(60));
 		string OkVar = verifyVariables();
@@ -1116,7 +1117,7 @@ postproc
 		stop(1);
 	endif;
 	
-	
+
 		
 		
 		
@@ -1328,8 +1329,9 @@ postproc
 			//Select household first
 			skip to M_HOUSEHOLD;
 
-		elseif M_MENU = 4 or M_MENU = 5 then //The region variables have been reset
+		elseif M_MENU = 4 or M_MENU = 5 then	//The region variables have been reset
 			reenter M_MENU;
+			//writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
 		endif;
 	
 	endif;

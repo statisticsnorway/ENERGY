@@ -759,20 +759,20 @@ Text=AA6
   
 [Field]
 Name=AA7
-Position=139,230,154,250
+Position=171,231,186,251
 Item=AA7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=71,233,96,249
+Position=13,232,38,248
 Text=AA7
  
   
 [Field]
 Name=AA8
-Position=168,259,211,279
+Position=170,259,213,279
 Item=AA8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -785,7 +785,7 @@ Text=AA8
   
 [Field]
 Name=AALOGIN
-Position=563,186,773,206
+Position=569,184,779,204
 Item=AALOGIN,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
@@ -824,156 +824,156 @@ Text=ADDRESS_LOCATION
   
 [Field]
 Name=AA7A
-Position=179,326,320,346
+Position=169,326,310,346
 Item=AA7A,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=111,329,145,345
+Position=101,329,135,345
 Text=AA7A
  
   
 [Field]
 Name=AA7B
-Position=179,356,320,376
+Position=169,356,310,376
 Item=AA7B,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=111,359,145,375
+Position=101,359,135,375
 Text=AA7B
  
   
 [Field]
 Name=AA9
-Position=179,386,292,406
+Position=169,386,282,406
 Item=AA9,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
   
 [Text]
-Position=111,389,136,405
+Position=101,389,126,405
 Text=AA9
  
   
 [Field]
 Name=AA10
-Position=179,416,194,436
+Position=169,416,184,436
 Item=AA10,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=111,419,143,435
+Position=101,419,133,435
 Text=AA10
  
   
 [Field]
 Name=AA10A
-Position=179,446,194,466
+Position=169,446,184,466
 Item=AA10A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=111,449,152,465
+Position=101,449,142,465
 Text=AA10A
  
   
 [Field]
 Name=AA11
-Position=543,265,558,285
+Position=567,265,582,285
 Item=AA11,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=475,268,507,284
+Position=490,268,522,284
 Text=AA11
  
   
 [Field]
 Name=AA12
-Position=543,295,593,315
+Position=567,295,617,315
 Item=AA12,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=475,298,507,314
+Position=490,298,522,314
 Text=AA12
  
   
 [Field]
 Name=AA13
-Position=543,325,793,345
+Position=567,325,817,345
 Item=AA13,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=475,328,507,344
+Position=490,328,522,344
 Text=AA13
  
   
 [Field]
 Name=AA15
-Position=544,355,559,375
+Position=568,355,583,375
 Item=AA15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=475,358,507,374
+Position=490,358,522,374
 Text=AA15
  
   
 [Field]
 Name=AA16
-Position=543,385,558,405
+Position=567,385,582,405
 Item=AA16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=475,388,507,404
+Position=490,388,522,404
 Text=AA16
  
   
 [Field]
 Name=AA17
-Position=543,415,558,435
+Position=567,415,582,435
 Item=AA17,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=475,418,507,434
+Position=490,418,522,434
 Text=AA17
  
   
 [Field]
 Name=AA18
-Position=543,445,793,465
+Position=567,445,817,465
 Item=AA18,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 Form=1
   
 [Text]
-Position=475,448,507,464
+Position=490,448,522,464
 Text=AA18
  
   
@@ -1559,7 +1559,7 @@ Text=B12
   
 [Field]
 Name=B13
-Position=208,428,223,448
+Position=208,428,237,448
 Item=B13,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -1572,7 +1572,7 @@ Text=B13
   
 [Field]
 Name=B14
-Position=208,458,223,478
+Position=208,458,237,478
 Item=B14,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -1598,7 +1598,7 @@ Text=B15
   
 [Field]
 Name=B16
-Position=208,518,237,538
+Position=208,518,265,538
 Item=B16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -4121,6 +4121,7 @@ Name=I18
 Position=205,531,234,551
 Item=I18,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=13
   
 [Text]
@@ -7967,6 +7968,7 @@ Position=168,89,337,109
 Item=X2_1,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]
@@ -7980,6 +7982,7 @@ Position=169,119,338,139
 Item=X2_2,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]
@@ -7993,6 +7996,7 @@ Position=168,152,337,172
 Item=X2_3,HHQ_DICT
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=26
   
 [Text]
