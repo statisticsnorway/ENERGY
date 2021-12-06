@@ -952,7 +952,7 @@ Value=7;Flush toilet with cistern|Sanita de descarga com cisterna|Choo cha kuvut
 Image=..\Images\Toilet_7.jpg
 Value=8;Composting toilet / ecosan latrine|Sanita de compostagem / latrina ecosan|Choo cha ecosan
 Image=..\Images\Toilet_8.jpg
-Value=9;Other, Specify||Nyingine; Taja
+Value=9;Other||Nyingine
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
@@ -1386,7 +1386,7 @@ Len=2
 [ValueSet]
 Label=Connected to national grid|O fornecedor de energia electrica conectou a sua casa a rede ou conectou pessoalmente?
 Name=C16_VS1
-Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|Kampuni za Umeme 
+Value=1;Electricity supplier (TANESCO/REA or EDM)|TANESCO/REA|Kampuni za Umeme
 Value=2;By the household|pela casa|Mwanakaya mwenyewe
 Value=3;By others|por outros|Mtu mwengine
 Value=4;Was connected when they moved in|Não conectado de alguma forma|Iliunganishwa walipohamia ndani ya nyumba
