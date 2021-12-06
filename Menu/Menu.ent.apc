@@ -815,7 +815,7 @@ preproc
 	userbar(clear);
 	userbar(add button, makeText(tr(32)), setCountry());
 	userbar(add button, makeText(tr(43)), changeLogin());
-	userbar(add button, makeText(tr(44)), downloadMaps());
+	//userbar(add button, makeText(tr(44)), downloadMaps());
 	userbar(show);
 
 
