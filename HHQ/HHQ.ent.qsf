@@ -1389,7 +1389,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Please select most knowledgeable person of the household to answer questions about electricity.&nbsp;</span></p>
             
           PT: |
-            <p style="margin-top:5pt;margin-bottom:5pt;">O respondente&nbsp; desta secçao deve ser o que tem mais conhecimentos sobre electricidade do agregado familiar. Está bem informado nessa materia ou gostaria de ter mais alguem do seu agregado para responder essas perguntas?&nbsp;&nbsp;</p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;"><br></span></p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;">Por favor, selecione a pessoa com maior conhecimento do agregado familiar para responder a perguntas sobre a electricidade.&nbsp;</span></p>
+            <p style="margin-top:5pt;margin-bottom:5pt;"><font color="#0000ff">O respondente&nbsp; desta secçao deve ser o que tem mais conhecimentos sobre electricidade do agregado familiar.</font> </p><p style="margin-top:5pt;margin-bottom:5pt;">Está bem informado nessa materia ou gostaria de ter mais alguem do seu agregado para responder essas perguntas?&nbsp;&nbsp;</p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;"><br></span></p><p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;">Por favor, selecione a pessoa com maior conhecimento do agregado familiar para responder a perguntas sobre a electricidade.&nbsp;</span></p>
             <p>&nbsp;</p>
             
           SW: |
@@ -5559,7 +5559,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">In the last 12 months, during which part of the year did you use this <span style="color:#008000;">~~getvaluelabel(I10)~~</span>?&#160;</span></p>
             
           PT: |
-            Nos últimos 12 meses, durante qual parte do ano você usou esta&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getvaluelabel(I10)~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
+            Nos últimos 12 meses, durante qual parte do ano você usou este&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getvaluelabel(I10)~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
             
           SW: |
             Katika kipindi cha miezi 12 iliyopita, ni kipindi kipi katika mwaka ulitumia&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;<p></p>
@@ -6285,7 +6285,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Record the type of roof covering the cooking space&#160;</span></p>
             
           PT: |
-            <p><span style="font-size:16px;color:#0000ff;">Registe o tipo de telhado que cobre o espaço de cozedura&#160;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Registe o tipo de telhado que cobre o espaço para cozinhar</span></p>
             
           SW: |
             <p><span style="font-size: 16px;" class="instruction normal">Andika aina ya paa lililofunika sehemu ya kupikia</span></p>
@@ -7819,7 +7819,7 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p>B. Qual é o valor de&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>&nbsp;que produziu a si mesmo, se teve que comprá-lo no mercado?&nbsp;</p><p></p><p><font color="#0000ff">Em moeda local&nbsp;</font></p><p><font color="#0000ff">88888888=Não sabe</font></p><p><br></p><p></p>
+            <p>B. Qual é o valor de&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>&nbsp;que produziu para si mesmo, se tevesse que comprá-lo no mercado?&nbsp;</p><p></p><p><font color="#0000ff">Em moeda local&nbsp;</font></p><p><font color="#0000ff">88888888=Não sabe</font></p><p><br></p><p></p>
             
           SW: |
             <p>B. Je! Ni nini thamani ya <span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>&nbsp;uliyotengeneza mwenyewe, na kutumia katika siku 7 zilizopita, kama ungekinunua sokoni?&nbsp;</p><p><span class="instruction">Mdadisi akadirie thamani kulingana na bei za kawaida za soko</span></p><p><span class="instruction"><span style="font-size: 16px;">88888888=sijui</span><br></span></p><p></p>
@@ -8023,7 +8023,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">Read aloud options if needed.&nbsp;</span></p>
             
           PT: |
-            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Pode haver uma série de razões pelas quais as pessoas mantêm um fogão tradicional. Concorda ou discorda que as seguintes declarações são argumentos importantes para manter o fogão tradicional?&nbsp;&nbsp;</span></font></p><p><font face="Arial, sans-serif"><span style="font-size: 16px;">O fumo dofumança do fogão tradicional é bom para caçar insectos.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia em voz alta as opções, se for necessário.&nbsp;</span></font></p>
+            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Pode haver uma série de razões pelas quais as pessoas mantêm um fogão tradicional. </span></font></p><p><font face="Arial, sans-serif"><span style="font-size: 16px;">Concorda ou discorda que as seguintes declarações são argumentos importantes para manter o fogão tradicional?&nbsp;&nbsp;</span></font></p><p><font face="Arial, sans-serif"><span style="font-size: 16px;">O fumo da fumança do fogão tradicional é bom para caçar insectos.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia em voz alta as opções, se for necessário.&nbsp;</span></font></p>
             
           SW: |
             <p>Kunaweza kuwa na sababu kadhaa kwa nini watu huweka jiko la jadi. </p><p>Je, Unakubali au haukubali kwamba taarifa zifuatazo ni hoja muhimu za kuweka jiko la jadi?&nbsp;<br></p><p><span style="font-size:16px;color:#000000;">Moshi kutoka kwenye jiko la asili unasaidia ni nzuri kwa kufukuza wadudu.&nbsp;</span></p><p><span class="instruction">Msomee mhojiwa majibu yaliyopo</span><br></p>
@@ -8328,7 +8328,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">You said that your household produce/process <span style="color:#008000;">~~getLabel(U2, curocc())~~</span>. Who is the manager for this production? &#160;</span></p>
             
           PT: |
-            <p>Disse que a seu gregado familiar produz/processa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>. Quem é o gerente/rresponsavel desta produção?&nbsp;&nbsp;</p><p><br></p><p></p>
+            <p>Disse que a seu gregado familiar produz/processa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>. Quem é o gerente/responsavel desta produção?&nbsp;&nbsp;</p><p><br></p><p></p>
             
           SW: |
             C. Umesema kuwa kaya yako inazalisha / inachakata&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>. Je, nani ni (meneja) mhusika mkuu katika uzalishaji huu?<p></p>
@@ -8875,8 +8875,10 @@ questions:
       - questionText:
           EN: |
             How much time did it typical take to gether, collect or purchase fuel per person each time they did so during the last seven days?<p></p>
+            
           SW: |
             Ilikuchukua muda gani kukusanya au kununua mafuta kwa kila mtu kila walipofanya hivyo katika siku saba zilizopita?<p></p>
+            
   - name: N_C
     conditions:
       - questionText:
