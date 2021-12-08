@@ -606,7 +606,7 @@ PROC AC1
 
 preproc
 
-	if AB5 < 6 then //Only ask those 6  years and above for the rest of the section
+	if AB5 < 5 then //Only ask those 5 years and above for the rest of the section
 		skip to next;
 	endif;
 
@@ -1117,11 +1117,10 @@ postproc
 
 PROC C17
 
-	if $ > visualValue(B1) then
-		errmsg(tr(123),B1);
-		reenter;
-	endif;
-
+	// if $ > visualValue(B1) then
+		// errmsg(tr(123),B1);
+		// reenter;
+	// endif;
 
 	if C16 = 1 then
 		skip to C18;
@@ -1508,7 +1507,7 @@ PROC C94
 
 PROC C96
 postproc
-	if $ = 3 then
+	if $ in 1,3 then
 		skip to C98;
 	endif;
 PROC C98
@@ -1975,7 +1974,7 @@ preproc
 
 postproc
 
-	if $ = 7 then	
+	if $ in 5,7 then	
 		skip to I_FORM;
 	endif;
 
@@ -3034,15 +3033,11 @@ onfocus
 	skip to Q2A;
 
 
-PROC Q7
-
+PROC Q15
 preproc
-
 	if not(schoolGirls > 0 or schoolBoys > 0) then
-		skip to Q8;
+		skip to Q16;
 	endif;
-
-
 PROC S_FORM
 
 

@@ -522,15 +522,15 @@ Name=FORM024
 Label=Q - consumption/expendityre
 QuestionTextHeight=102
 Level=1
-Size=521,581
+Size=571,668
   
 Item=Q1
-Item=Q3
-Item=Q4
-Item=Q5
-Item=Q6
-Item=Q7
-Item=Q8
+Item=Q11
+Item=Q12
+Item=Q13
+Item=Q14
+Item=Q15
+Item=Q16
 Item=Q2000
   
 [EndForm]
@@ -1892,7 +1892,7 @@ Text=C15
   
 [Field]
 Name=C16
-Position=234,434,249,454
+Position=234,434,263,454
 Item=C16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -4325,6 +4325,7 @@ Name=I34
 Position=575,356,618,376
 Item=I34,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=NumberPad
 Form=13
   
 [Text]
@@ -5573,6 +5574,7 @@ FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
   
 [Text]
+Position=0,0,28,16
 Text=N_G
  
 [EndColumn]
@@ -6261,81 +6263,81 @@ Text=Q2C
  
   
 [Field]
-Name=Q3
-Position=197,384,310,404
-Item=Q3,HHQ_DICT
+Name=Q11
+Position=102,334,215,354
+Item=Q11,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=71,387,88,403
-Text=Q3
+Position=66,337,90,353
+Text=Q11
  
   
 [Field]
-Name=Q4
-Position=195,415,308,435
-Item=Q4,HHQ_DICT
+Name=Q12
+Position=102,365,215,385
+Item=Q12,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=69,418,86,434
-Text=Q4
+Position=66,368,90,384
+Text=Q12
  
   
 [Field]
-Name=Q5
-Position=195,445,308,465
-Item=Q5,HHQ_DICT
+Name=Q13
+Position=102,395,215,415
+Item=Q13,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=69,448,86,464
-Text=Q5
+Position=66,398,90,414
+Text=Q13
  
   
 [Field]
-Name=Q6
-Position=192,478,305,498
-Item=Q6,HHQ_DICT
+Name=Q14
+Position=102,428,215,448
+Item=Q14,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=66,481,83,497
-Text=Q6
+Position=66,431,90,447
+Text=Q14
  
   
 [Field]
-Name=Q7
-Position=196,509,309,529
-Item=Q7,HHQ_DICT
+Name=Q15
+Position=102,459,215,479
+Item=Q15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=70,512,87,528
-Text=Q7
+Position=66,462,90,478
+Text=Q15
  
   
 [Field]
-Name=Q8
-Position=196,536,337,556
-Item=Q8,HHQ_DICT
+Name=Q16
+Position=102,486,243,506
+Item=Q16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=20
   
 [Text]
-Position=70,539,87,555
-Text=Q8
+Position=66,489,90,505
+Text=Q16
  
 [EndGroup]
   
