@@ -7260,7 +7260,7 @@ questions:
             Quantos homens com 15 anos ou mais estiveram envolvidos em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
             
           SW: |
-            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_MEN, curocc())~~&nbsp;</span>katika siku 7 zilizopita?<p></p>
+            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">&nbsp;</span>katika siku 7 zilizopita?<p></p>
             
         helpText:
           EN: |

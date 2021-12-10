@@ -507,6 +507,7 @@ Item=M3
 [Form]
 Name=FORM007
 Label=N - Time use
+QuestionTextHeight=202
 Level=1
 Size=573,837
   
