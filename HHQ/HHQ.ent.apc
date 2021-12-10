@@ -597,6 +597,7 @@ preproc
 
 	if AB5 < 15 then	//Keeping this limit for question about civil status despite grownups are 16+
 		$ = 8;
+		noinput;
 		skip to AC1;
 	endif;
 
@@ -2157,6 +2158,7 @@ preproc
 
 	if lstrip(strip(i3)) = "101" then
 		$ = 4;
+		noinput;
 		skip to I18;
 	endif;
 
@@ -2198,6 +2200,9 @@ Postproc
 		errmsg(203);
 		reenter;
 	endif;
+
+
+
 PROC I23
 
 	If not((I22 in 1,2,3 or $ in 1,2,3) and (I2=1 or I4=1 or I6=1)) then
@@ -2394,6 +2399,7 @@ preproc
 			endif;
 			inc(i);
 		enddo;
+		noinput;
 		skip to O8;
 	else
 		skip to K_FORM;
@@ -2542,6 +2548,7 @@ preproc
 	endif;
 
 	$ = curocc();
+	noinput;
 	skip to L2A;
 
 
@@ -3030,6 +3037,7 @@ PROC Q2_NUM
 onfocus
 
 	$ = curocc();
+	noinput;
 	skip to Q2A;
 
 
@@ -3038,6 +3046,8 @@ preproc
 	if not(schoolGirls > 0 or schoolBoys > 0) then
 		skip to Q16;
 	endif;
+	
+	
 PROC S_FORM
 
 
@@ -3073,6 +3083,7 @@ PROC U2
 onfocus
 
 	$ = curocc();
+	noinput;
 	skip to U2A;
 
 
@@ -3152,6 +3163,8 @@ postproc
 	if $ = 2 then
 		skip to next;
 	endif;
+
+
 PROC T1
 
 preproc
@@ -3213,6 +3226,7 @@ onfocus
 			errmsg(tr(147));
 		endif;
 		$ = T1;
+		noinput;
 		skip to W2_NO;
 	endif;
 
@@ -3223,6 +3237,7 @@ PROC W2_NO
 preproc
 
 	$ = curocc();
+	noinput;
 	skip to W2A;
 
 
@@ -3261,8 +3276,10 @@ preproc
 
 	$ = GP_MEM[(curocc()*2)-1:2];
 	if $ <> "" then
+		noinput;
 		skip;
 	else
+		noinput;
 		skip to next;
 	endif;
 
@@ -3353,6 +3370,8 @@ PROC GP33
 		errmsg(202);
 		reenter;
 	Endif;
+
+
 PROC GP34
 
 preproc
@@ -3427,11 +3446,16 @@ preproc
 	if visualValue(c128) < 2 then
 		skip to AA_END_FORM;
 	endif;
+
+
+
 PROC X2_3
 preproc
 	if visualValue(c128) < 3 then
 		skip to AA_END_FORM;
 	endif;
+
+
 PROC AA20
 
 preproc
