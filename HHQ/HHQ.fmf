@@ -3754,7 +3754,7 @@ Text=F4
   
 [Field]
 Name=F5
-Position=219,176,234,196
+Position=219,176,332,196
 Item=F5,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=12
