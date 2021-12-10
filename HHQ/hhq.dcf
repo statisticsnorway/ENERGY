@@ -2990,7 +2990,7 @@ Len=2
 Label=F_HH Kerosene/Fuel-based/Candle lighting|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
 RecordTypeValue='F'
-RecordLen=137
+RecordLen=144
 
 [Item]
 Label=Household member|membro do agregado familiar
@@ -3046,24 +3046,24 @@ Len=2
 Label=How much did you pay for each [LAMP]?
 Name=F5
 Start=111
-Len=1
+Len=8
 
 [Item]
 Label=In the last 30 days, how many days did you use [LAMP/CANDLE]?
 Name=F6
-Start=112
+Start=119
 Len=2
 
 [Item]
 Label=How many hours do you use [LAMP/ CANDLE] each day?
 Name=F7
-Start=114
+Start=121
 Len=2
 
 [Item]
 Label=What are the most important problem when using the [LAMP/ CANDLE]?
 Name=F8
-Start=116
+Start=123
 Len=2
 
 [ValueSet]
@@ -3082,7 +3082,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=What are the second most important problem when using the [LAMP/ CANDLE]?
 Name=F9
-Start=118
+Start=125
 Len=2
 
 [ValueSet]
@@ -3101,7 +3101,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
 Name=F10
-Start=120
+Start=127
 Len=1
 
 [ValueSet]
@@ -3113,7 +3113,7 @@ Value=2;No|Nao|Hapana
 [Item]
 Label=Which fuel use|Qual usa como combustível?
 Name=F11
-Start=121
+Start=128
 Len=1
 
 [ValueSet]
@@ -3129,26 +3129,26 @@ Value=7;None|Nenhum|Hakuna
 [Item]
 Label=Total quantity of purchase at a typical time?|quantidade total de compra em um momento típico?
 Name=F12
-Start=122
+Start=129
 Len=4
 Decimal=1
 
 [Item]
 Label=How long does this quantity typically last?|Quanto tempo esta quantidade geralmente duram?
 Name=F13
-Start=126
+Start=133
 Len=3
 
 [Item]
 Label=How much do you pay for the typical purchase?|Quanto você paga para a compra típico?
 Name=F14
-Start=129
+Start=136
 Len=8
 
 [Item]
 Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
 Name=F15
-Start=137
+Start=144
 Len=1
 
 [ValueSet]
