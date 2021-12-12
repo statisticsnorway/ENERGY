@@ -701,7 +701,10 @@ questions:
             <p>&#160;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Quantos anos tinha&nbsp;</span></span>~~AB1(curocc())~~<span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">&nbsp;no último aniversário?&nbsp;</span></span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Quantos anos completos tem o/a&nbsp;</span></span>~~AB1(curocc())~~<span style="font-size: 20px; font-family: Arial, sans-serif;"><span style="font-size: 16px;">&nbsp;?</span></span></p><p style="margin-bottom:8pt;"><span lang="PT" style="font-size:9.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+            minor-latin;mso-ansi-language:PT;mso-fareast-language:EN-US;mso-bidi-language:
+            AR-SA"><span style="color: rgb(0, 0, 255); font-family: Arial; font-size: 16px;">Escreva 00 se for menos que 1 ano&nbsp;</span><br></span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;"><br></span></span></p>
             <p>&nbsp;</p>
             
           SW: |
@@ -784,7 +787,7 @@ questions:
             <p>&nbsp;</p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">O/A&nbsp;</span></span>~~AB1(curocc())~~<span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">&nbsp;começou a escola este ano lectivo?&nbsp;</span></span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">O/A&nbsp;</span></span>~~AB1(curocc())~~<span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">&nbsp;frequentou a escola este ano lectivo?&nbsp;</span></span></p>
             <p>&nbsp;</p>
             
           SW: |
@@ -1068,7 +1071,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Does anybody in this household have an account or savings in a bank, credit union, or in micro-finance bank?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Alguém neste agregado familiar tem uma conta ou poupança em um banco, cooperativa de crédito, banco de microfinanças ou banco movel como m-pesa, m-cash ou e-mola?</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Alguém neste agregado familiar tem uma conta ou poupança em um banco comercial, cooperativa de crédito, banco de microfinanças ou banco movel como m-pesa, m-cash ou e-mola?</span></p><p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kuna mtu yoyote katika kaya hii anamiliki akaunti ya benki au akiba ya fedha benki, vyama vya ushirika au taasisi ndogo za fedha? &#160;</span></p>
@@ -1268,7 +1271,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Do you own this dwelling?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Essa moradia/</span><font face="Arial, sans-serif"><span style="font-size: 20px;">habitação</span></font><span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;é própria?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-family: Arial, sans-serif; font-size: 20px;">A quem pertence a habitação onde viveo agregado familiar?</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kaya unamiliki/mnamiliki makazi haya?&nbsp;</span></p>
@@ -1306,7 +1309,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">How many rooms (excluding the kitchen, toilet, and bathroom) does the household occupy?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Quantos quartos (excluindo a cozinha, e banheiro) o agregado familiar ocupa?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Quantos divisões da casa usam para dormir (excluindo a cozinha, e banheiro)?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Ni jumla ya vyumba vingapi (ukiondoa jiko,choo na bafu) vinatumiwa na kaya hii?&#160;</span></p>
@@ -1326,7 +1329,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o</span><span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif;">principal&nbsp;</span><span style="font-family: Arial, sans-serif;">material das paredes da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o</span><span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif;">material&nbsp;</span><span style="font-family: Arial, sans-serif;">principal&nbsp;</span><span style="font-family: Arial, sans-serif;">das paredes da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor: Confirma por observação</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, kuta za jengo kuu la kaya hii zimejengwa kwa kutumia nini?&#160;</span></p>
@@ -1346,7 +1349,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o material principal do tecto da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o principal&nbsp;</span><span style="font-family: Arial, sans-serif;">material</span><span style="font-family: Arial, sans-serif;">&nbsp;usado na cobertura/</span><span style="font-family: Arial, sans-serif;">telhado da casa?&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor: Confirma observando</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, jengo kuu la kaya hii limeezekwa kwa kutumia nini?&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">CHUNGUZA KWA MAKINI&nbsp;</span><span style="font-size:16px;color:#000000;"><br></span></p>
@@ -1366,7 +1369,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Enumerator: Check with observation&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o&nbsp;</span><span style="font-family: Arial, sans-serif;">material</span><span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif;">principal&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;"><span style="font-size: 16px;">do chão da casa?</span>&nbsp;</span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor confirma por observar</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o&nbsp;</span><span style="font-family: Arial, sans-serif;">principal&nbsp;</span><span style="font-family: Arial, sans-serif;">material</span><span style="font-family: Arial, sans-serif;">&nbsp;na costrução do piso da&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 20px;"><span style="font-size: 16px;">casa?</span></span></p><p style="margin-bottom:8pt;">&nbsp;<span style="color: rgb(0, 0, 255);">Inquiridor: Confirma observando</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je,  jengo kuu la kaya hii limesakafiwa kwa kutumia nini?&nbsp;</span></p>
@@ -1413,7 +1416,7 @@ questions:
             <p><span style="font-size:20px;color:#0000ff;font-family:'Arial', sans-serif;">Main source: Leave this to the respondent. If they ask, say that we are after the source providing most energy. &nbsp;</span></p>
             
           PT: |
-            <p>Qual destas fontes de energia é a sua principal fonte de energia eléctrica?&nbsp;</p><p><font color="#0000ff">Leia as opções em voz alta, se necessário. Se apenas uma fonte, marque a fonte e continue.&nbsp;</font></p><p><font color="#0000ff">Fonte principal: Deixe isto para o respondente. Se perguntarem, diga que estamos atrás da fonte que fornece mais energia.&nbsp;&nbsp;</font></p><p></p>
+            <p>Qual destas fontes de energia é a sua principal fonte de energia eléctrica?&nbsp;</p><p><font color="#0000ff">Leia as opções em voz alta, se necessário: Se for apenas uma fonte, marque a fonte e continue.&nbsp;</font></p><p><font color="#0000ff">Fonte principal: Deixe isto para o respondente. Se perguntarem, diga que estamos atrás da fonte que fornece mais energia.&nbsp;&nbsp;</font></p><p></p>
             
           SW: |
             <p>Kati ya vyanzo hivi vya nishati, ipi ni chanzo kikuu cha nishati ya umeme?</p><p><p><span class="instruction">Soma chaguo kwa sauti, kama ikihitajika. Kama chanzo ni kimoja, weka alama na endelea. Chanzo kikuu: acha mhusika aeleze. Kama watauliza, eleza uwepo wako kuhitaji kufahamu juu ya chanzo kile kinachotoa nishati zaidi.</span></p></p>
@@ -2084,7 +2087,7 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;">If none, input &quot;0&quot;&#160;</span></p>
             
           PT: |
-            <p><font face="Arial, sans-serif">Quantos telemóveis tem ao todo o agregado familiar?</font><br></p>
+            <p><font face="Arial, sans-serif">Quantos telemóveis&nbsp;</font><span style="font-family: Arial, sans-serif;">os membros do agregado familiar</span><span style="font-family: Arial, sans-serif;">&nbsp;tem ao todo ?</span></p>
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Se nenhum, insira "0"&nbsp;</span></p>
             
           SW: |
@@ -2287,7 +2290,7 @@ questions:
             <p style="margin-bottom:8pt;">&#160;</p>
             
           PT: |
-            <p>Será que a&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 16px;">~~electricityCompany~~</span>&nbsp;conectou a sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><font color="#0000ff">Inquiridor pode responder por observação.</font></p><p></p>
+            <p>Será que a&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 16px;">~~electricityCompany~~</span>&nbsp;conectou a sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><font color="#0000ff">Inquiridor: Pode responder observando.</font></p><p></p>
             
           SW: |
             <p>Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~electricityCompany~~</span>&nbsp;imekuunganisha na umeme kwenye gridi, Je uliunganisha pekeyako, Je mtu mwingine alifanya au nyumba iliunganishwa kipindi ambapo kaya yako ilipohamia kwenye nyumba hii?</p><p></p><p><span class="instruction">UNAWEZA UKAJIBU KWA KUTAZAMA (KUCHUNGUZA)&nbsp;</span><br></p><p></p>
@@ -2457,7 +2460,7 @@ questions:
             <p><span style="font-size:16px;color:#000000;">Does your household have an electric meter jointly with other households or by your own?&#160;</span></p>
             
           PT: |
-            A seu agregado familiar tem um contador elétrico em conjunto com outros residências ou apenas é seu próprio?<p></p>
+            O seu agregado familiar tem um contador eléctrico que partilha com outros residências ou apenas é seu próprio?<p></p>
             
           SW: |
             Je, kaya yako ina mita ya umeme mnayotumia pamoja na kaya nyingine au ni kwa matumizi yako pekee?<p></p>
@@ -3299,7 +3302,7 @@ questions:
             <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Do you use an electric generator?</span>&nbsp;</span></p>
             
           PT: |
-            Este agregado familiar ê usa um gerador eléctrico?<p></p>
+            Este agregado familiar usa um gerador eléctrico?<p></p>
             
           SW: |
             Je, unatumia jenereta la umeme?<p></p>
@@ -3730,7 +3733,7 @@ questions:
             <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><span style="font-size: 16px;">Do you use rechargeable batteries (not linked to a solar device)?</span>&nbsp;</span></p>
             
           PT: |
-            O seu O seu agregado familiar usa pilhas recarregáveis (não ligadas a um dispositivo solar)?<p></p>
+            O seu agregado familiar usa pilhas recarregáveis (não ligadas a um dispositivo solar)?<p></p>
             
           SW: |
             Je, unatumia berti za kuchaji (zisizo na uhusiano wa kutumia kifaa cha jua)?<p></p>
@@ -3955,7 +3958,7 @@ questions:
             <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Do you use dry cell batteries?&nbsp;</span></p>
             
           PT: |
-            seu O seu agregado familiar&nbsp;usa pilhas de células secas?<p></p>
+            O seu agregado familiar&nbsp;usa pilhas de células secas?<p></p>
             
           SW: |
             Je, unatumia betri kavu?<p></p>
@@ -4282,7 +4285,7 @@ questions:
             <p>Would you be willing to pay&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;upfront for a medium solar system which may be able to run a TV?<br></p>
             
           PT: |
-            <p><font face="Arial, sans-serif"><span style="font-size: 20px;">Estaria disposto a pagar&nbsp;</span></font>~~CF~~&nbsp;<span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;</span><span style="font-size: 20px; font-family: Arial, sans-serif;">adiantado por este dispositivo solar?&nbsp;</span></p>
+            <p><font face="Arial, sans-serif">Estaria disposto a pagar&nbsp;</font><font face="Arial, sans-serif">&nbsp;</font>~~CF~~&nbsp;&nbsp;<span style="font-family: Arial, sans-serif;">antecipadamente por um sistema solar médio que pode ser capaz de ligar uma TV?</span></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Nitakuuliza maswali kuhusu mfumo  wa umeme jua wa nyumbani. Mdadisi: ONESHA PICHA NA TOA MAELEZO YA NINI MFUMO WA UMEME JUA WA NYUMBANI UNAWEZA KUFANYA/HAUWEZI NA FAIDA ZAKE.[WEKA MAELEZO YA KIFAA CHA UMEME JUA]   &nbsp;</span></p>

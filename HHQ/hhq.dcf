@@ -296,12 +296,12 @@ Label=Marital status|Estado civil
 Name=AB6_VS1
 Value=1;Never married|Nunca se casou|Hajawahi kuoa/Kuolewa
 Value=2;Monogamous married|Casado/a|Ameoa/Ameolewa (mke mmoja)
-Value=3;Polygamous married|Casado/a|Ameoa/Ameolewa (wake wengi)
-Value=4;Living together|União marital/vivem juntos|Wanaishi pamoja
-Value=5;Widow(er)|Viúva/o|Mjane/Mgane
-Value=6;Separated|Separado/a|Wametengana
-Value=7;Divorced|Divorciado/a|Wameachana
-Value=8;Not applicable (less than 15 years)|Não aplicável (menos de 15 anos)|Haihusiki
+Value=3;Living together|União marital/vivem juntos|Wanaishi pamoja
+Value=4;Widow(er)|Viúva/o|Mjane/Mgane
+Value=5;Separated|Separado/a|Wametengana
+Value=6;Divorced|Divorciado/a|Wameachana
+Value=7;Not applicable (less than 15 years)|Não aplicável (menos de 15 anos)|Haihusiki
+Value=8;Nunca se casou|Nunca se casou
 
 [Item]
 Label=Literacy read and write|Pode ler e escrever uma frase
@@ -408,15 +408,22 @@ Value=45;U5&+||Chuo Mwaka wa Tano au Zaidi
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_EN_MZ
-Value=1;Pre-primary|Pré-primário
-Value=2;Adult education|Educação para adultos
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic|Secundário, básico
-Value=6;Secondary, medium|Secundário, médio
-Value=7;Technician, basic|Técnico, básico
-Value=8;Technician, medium|Técnico, médio
-Value=9;University|Universidade
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
@@ -451,15 +458,22 @@ Value=45;U5&+||Chuo Mwaka wa Tano au Zaidi
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=EDUC_MZ
-Value=1;Pre-primary|Pré-primário
-Value=2;Adult education|Educação para adultos
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic|Secundário, básico
-Value=6;Secondary, medium|Secundário, médio
-Value=7;Technician, basic|Técnico, básico
-Value=8;Technician, medium|Técnico, médio
-Value=9;University|Universidade
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [Item]
 Label=Age at beginning this school year|Quantos anos tinha?
@@ -529,14 +543,22 @@ Value=44;U4||Chuo Mwaka wa Nne
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=AC8_VS2
-Value=1;Pre-primary
-Value=2;Adult education
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic
-Value=6;Secondary, medium
-Value=7;Technician, basic
-Value=8;Technician, medium
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
@@ -570,15 +592,22 @@ Value=44;U4||Chuo Mwaka wa Nne
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=AC8_VS4
-Value=1;Pre-primary
-Value=2;Adult education
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic
-Value=6;Secondary, medium
-Value=7;Technician, basic
-Value=8;Technician, medium
-Value=9;University
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [Item]
 Label=Highest education completed|Qual é o grau mais alto
@@ -618,14 +647,22 @@ Value=44;U4||Chuo Mwaka wa Nne
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=AC9_VS2
-Value=1;Pre-primary|Pré-primário
-Value=2;Adult education|Educação para adultos
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic|Secundário, básico
-Value=6;Secondary, medium|Secundário, médio
-Value=7;Technician, basic|Técnico, básico
-Value=8;Technician, medium|Técnico, médio
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
@@ -659,15 +696,22 @@ Value=44;U4||Chuo Mwaka wa Nne
 [ValueSet]
 Label=Grade this school year|Classe se matriculou?
 Name=AC9_VS4
-Value=1;Pre-primary|Pré-primário
-Value=2;Adult education|Educação para adultos
-Value=3;EP1
-Value=4;EP2
-Value=5;Secondary, basic|Secundário, básico
-Value=6;Secondary, medium|Secundário, médio
-Value=7;Technician, basic|Técnico, básico
-Value=8;Technician, medium|Técnico, médio
-Value=9;University|Universidade
+Value=0;NENHUM|NENHUM
+Value=1;Pre-primary|PRÉ-ESCOLAR
+Value=2;Adult education|ALFABETIZAÇÃO
+Value=3;EP1|PRIMÁRIO EP1
+Value=4;EP2|PRIMÁRIO EP2
+Value=5;Secondary, basic|SECUNDÁRIO ESG1
+Value=6;Secondary, medium|SECUNDÁRIO ESG2
+Value=7;TÉCNICO ELEMENTAR|TÉCNICO ELEMENTAR
+Value=8;Technician, basic|TÉCNICO BÁSICO
+Value=9;Technician, medium|TÉCNICO MÉDIO
+Value=10;University|FOR. DE PROFESSORES PRIMÁRIOS
+Value=11;BACHARELATO|BACHARELATO
+Value=12;LICENCIATURA|LICENCIATURA
+Value=13;MESTRADO|MESTRADO
+Value=14;DOUTORAMENTO/PHD|DOUTORAMENTO/PHD
+Value=15;NÃO SABE|NÃO SABE
 
 [Item]
 Label=Main occupation|Ocupação principal
@@ -807,12 +851,12 @@ Len=2
 [ValueSet]
 Label=Type of dwelling|Tipo de habitação
 Name=B2_VS1
-Value=1;A single house occupied by one household dwelling|Uma única casa ocupada por uma habitação familiar|Jengo moja tu linalotumiwa na Kaya
-Value=2;A house occupied by multiple households|Uma casa ocupada por várias famílias|Jengo moja linalotumiwa na kaya zaidi ya moja
-Value=3;Multi-storied building with one household|Edifício de vários andares com um agregado familiar|Jengo la ghorofa linalotumiwa na kaya moja
-Value=4;Multi-storied building with multiple households|Edifício de vários andares com mais famílias|Jengo la ghorofa linalotumiwa na kaya zaidi ya moja
-Value=5;Group of enclosed dwellings: multiple households|Grupo de habitações fechado: várias famílias|Makazi ya kaya nyingi pamoja
-Value=6;Group of enclosed dwellings occupied by a single household|Grupo de habitações fechados ocupados por uma única casa|Makazi mengi yanayokaliwa na kaya moja
+Value=1;A single house occupied by one household dwelling|Uma única casa ocupada por um agregado familiar|Jengo moja tu linalotumiwa na Kaya
+Value=2;A house occupied by multiple households|Uma casa ocupada por vários agregados famíliares|Jengo moja linalotumiwa na kaya zaidi ya moja
+Value=3;Multi-storied building with one household|Edifício de vários andares ocupado com um agregado familiar|Jengo la ghorofa linalotumiwa na kaya moja
+Value=4;Multi-storied building with multiple households|Edifício de vários andares ocupado por vários agregados famíliares|Jengo la ghorofa linalotumiwa na kaya zaidi ya moja
+Value=5;Group of enclosed dwellings: multiple households|Um condomínio fechado com vários agregados familiares|Makazi ya kaya nyingi pamoja
+Value=6;Group of enclosed dwellings occupied by a single household|Um condomínio fechado com um agregado familiar|Makazi mengi yanayokaliwa na kaya moja
 Value=7;Other|Outro|Nyingine
 
 [Item]
@@ -883,7 +927,7 @@ Value=10;Mud brics (traditional)|Tijolos de barro (tradicional)|Matofali yasiyoc
 Value=11;Steel|Aço|Chuma
 Value=12;Cargo container|Contêiner de carga/Contetor|Kontena
 Value=13;Parquet or polished wood|Parquet ou madeira polida|Miti iliyonakshiwa
-Value=14;Chip wood|Madeira Chip|Mabanzi
+Value=14;Chip wood|Madeira de lasca|Mabanzi
 Value=15;Corrogated iron sheet|Chapas de ferro ondulado|Mabati ya kuezekea
 Value=16;Asbestos|Amianto|Vigae
 Value=17;Reed/bamboo/canico| Caniço/bambu|Mianzi
@@ -916,8 +960,8 @@ Len=2
 [ValueSet]
 Label=Material floor|Principal material do chão da casa
 Name=B9_VS1
-Value=1;Mud/dung|Mud / esterco|Matope/Kinyesi cha wanyama
-Value=2;Reed/bamboo|Reed / bambu|Mianzi
+Value=1;Mud/dung|Lama / esterco|Matope/Kinyesi cha wanyama
+Value=2;Reed/bamboo|Caniço / bambu|Mianzi
 Value=3;Wood planks|Placas de madeira|Mbao za kawaida
 Value=4;Parquet or polished wood|Parquet ou madeira polida|Mbao zilizonakshiwa
 Value=5;Cement screed|Pavimento de cimento|Saruji
@@ -925,7 +969,7 @@ Value=6;Plastic tiles|Telhas de plástico|Marumaru za plastiki
 Value=7;Cement tiles|Telhas de cimento|Marumaru za saruji
 Value=8;Brick tiles|Telhas tijolo|Marumaru za tofali
 Value=9;Ceramic/marble tiles|Telhas de cerâmica / mármore|Marumaru za kawaida
-Value=10;Steel/other metal
+Value=10;Steel/other metal|Aço/outros metais
 
 [Item]
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
@@ -1060,7 +1104,7 @@ Name=B16_VS1
 Value='A   ';Commercial bank|Banco Comercial|Benki ya biashara
 Value='B   ';Cooperative credit union|Cooperativa de crédito cooperativa|Chama cha ushirika cha akiba na mikopo
 Value='C   ';Microfinance institution|Instituição de microfinanças|Taasisi ndogo za kifedha
-Value='D   ';Other|De outros|Huduma za kibenki kwa mitandao ya simu (TigoPesa, M Pesa, Airtel Money nk)
+Value='D   ';Other|Outros (mpesa, mkesh, e-mola, ponto 24, izi, quiq-mola)|Huduma za kibenki kwa mitandao ya simu (TigoPesa, M Pesa, Airtel Money nk)
 Value='Q   ';Nyingine||Nyingine
 
 [Item]
@@ -1085,9 +1129,9 @@ DataType=Alpha
 [ValueSet]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18_VS1
-Value='a  ';Group savings (rotational)|Poupança em grupo (rotacional)|Vikundi vya kukopeshana (kwa mzunguko)
+Value='a  ';Group savings (rotational)|Poupança em grupo rotacional (Xitique)|Vikundi vya kukopeshana (kwa mzunguko)
 Value='b  ';Group savings (one-time disbursement)|Poupança em grupo (desembolso de uma unica vez)|Vikundi vya kukopeshana (mgao wa mara moja)
-Value='q  ';Other|De outros|Nyingine
+Value='q  ';Other|Outro|Nyingine
 
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
@@ -1283,8 +1327,8 @@ Label=Which of these power sources is your main electrical power source?
 Name=C10_VS1
 Value=1;Grid|Rede|Gridi
 Value=3;Solar Home System|Sistema Solar domestico|Mfumo wa nyumbani wa jua
-Value=4;Electric generator|Gerador elétrico|Jenerata la umeme
-Value=5;Pico-Hydro|Pico-Hidro|Umeme wa maji wa Pico
+Value=4;Electric generator|Gerador eléctrico|Jenerata la umeme
+Value=5;Pico-Hydro|Pico-Hidrico|Umeme wa maji wa Pico
 Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)|Betri ya kuchaji (isiyo na uhusiano na umeme wa jua)
 Value=7;Solar Multi-Light Product|Produto solar multi-luz|Bidhaa za mwangaza wa jua
 Value=8;Solar Lantern|Lanterna Solar|Taa ya jua
@@ -1302,7 +1346,7 @@ Name=C11_VS1
 Value=1;Grid|Rede|Gridi
 Value=3;Solar Home System|Sistema Solar domestico|Mfumo wa nyumbani wa jua
 Value=4;Electric generator|Gerador eléctrico|Jenereta la umeme
-Value=5;Pico-Hydro|Pico-Hidro|Umeme wa maji wa Pico
+Value=5;Pico-Hydro|Pico-Hidrico|Umeme wa maji wa Pico
 Value=6;Rechargeable Battery (Not linked to a solar system)|Bateria recarregável (não ligada a um sistema solar)|Betri ya kuchaji (isiyo na uhusiano na umeme wa jua)
 Value=7;Solar Multi-Light Product|Produto solar multi-luz|Bidhaa ya mwangaza wa jua
 Value=8;Solar Lantern|Lanterna Solar|Taa ya jua
@@ -1483,7 +1527,7 @@ Len=1
 [ValueSet]
 Label=Electric meter|Casa tem um contador elétrico?
 Name=C23_VS1
-Value=1;Yes, alone|Sim, sozinho|Ndio, ni kwa matumizi yangu pekee
+Value=1;Yes, alone|Sim, uso sozinho|Ndio, ni kwa matumizi yangu pekee
 Value=2;Yes, sharing with other households|Sim, partilhando com outras famílias|Ndio, ninatumia pamoja na kaya zingin
 Value=3;No|Não|Hapana
 
