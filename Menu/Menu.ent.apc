@@ -265,6 +265,9 @@ PROC GLOBAL
 					endif;
 					inc(j);
 				enddo;
+				if j = 5 then
+					j = 4;
+				endif;
 				
 				numeric currHHNum = toNumber(tabletCount(j,2));
 				if currHHNum = DEFAULT then
