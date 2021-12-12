@@ -388,16 +388,16 @@ Value=15;D5||Darasa la Tano
 Value=16;D6||Darasa la Sita
 Value=17;D7||Darasa la Saba
 Value=18;D8||Darasa la Nane
-Value=19;OSC
-Value=20;MS+COURSE
+Value=19;OSC||Mafunzo kabla ya Elimu ya Sekondari (Pre-Form One)
+Value=20;MS+COURSE||Mafunzo rasmi baada ya Elimu ya msingi (mf. Mafunzo ya vyuo vya ufundi n.k)
 Value=21;F1||Kidato cha Kwanza
 Value=22;F2||Kidato cha Pili
 Value=23;F3||Kidato cha Tatu
 Value=24;F4||Kidato cha Nne
-Value=25;O+COURSE
+Value=25;O+COURSE||Mafunzo baada ya kumaliza kidato cha nne
 Value=31;F5||Kidato cha Tano
 Value=32;F6||Kidato cha Sita
-Value=33;A+COURSE
+Value=33;A+COURSE||Amemaliza kidato cha 6 na kufanya kozi
 Value=34;DIPLOMA
 Value=41;U1||Chuo Mwaka wa Kwanza
 Value=42;U2||Chuo Mwaka wa Pili
@@ -431,16 +431,16 @@ Value=15;D5||Darasa la Tano
 Value=16;D6||Darasa la Sita
 Value=17;D7||Darasa la Saba
 Value=18;D8||Darasa la Nane
-Value=19;OSC
-Value=20;MS+COURSE
+Value=19;OSC||Mafunzo kabla ya Elimu ya Sekondari (Pre-Form One)
+Value=20;MS+COURSE||Mafunzo rasmi baada ya Elimu ya msingi (mf. Mafunzo ya vyuo vya ufundi n.k)
 Value=21;F1||Kidato cha Kwanza
 Value=22;F2||Kidato cha Pili
 Value=23;F3||Kidato cha Tatu
 Value=24;F4||Kidato cha Nne
-Value=25;O+COURSE
+Value=25;O+COURSE||Mafunzo baada ya kumaliza kidato cha nne
 Value=31;F5||Kidato cha Tano
 Value=32;F6||Kidato cha Sita
-Value=33;A+COURSE
+Value=33;A+COURSE||Amemaliza kidato cha 6 na kufanya kozi
 Value=34;DIPLOMA
 Value=41;U1||Chuo Mwaka wa Kwanza
 Value=42;U2||Chuo Mwaka wa Pili
@@ -599,16 +599,16 @@ Value=15;D5||Darasa la Tano
 Value=16;D6||Darasa la Sita
 Value=17;D7||Darasa la Saba
 Value=18;D8||Darasa la Nane
-Value=19;OSC
-Value=20;MS+COURSE
+Value=19;OSC||Mafunzo kabla ya elimu ya sekondari (Pre-form One)
+Value=20;MS+COURSE||Mafunzo rasmi baada ya elimu ya msingi (Mf. Mafunzo ya vyuo vya ufundi n.k.)
 Value=21;F1||Kidato cha Kwanza
 Value=22;F2||Kidato cha Pili
 Value=23;F3||Kidato cha Tatu
 Value=24;F4||Kidato cha Nne
-Value=25;O+COURSE
+Value=25;O+COURSE||Mafunzo baada ya kumaliza kidato 4
 Value=31;F5||Kidato cha Tano
 Value=32;F6||Kidato cha Sita
-Value=33;A+COURSE
+Value=33;A+COURSE||Amemaliza kidato cha 6 na kufanya kozi
 Value=34;DIPLOMA
 Value=41;U1||Chuo Mwaka wa Kwanza
 Value=42;U2||Chuo Mwaka wa Pili
@@ -640,8 +640,8 @@ Value=15;D5||Darasa la Tano
 Value=16;D6||Darasa la Sita
 Value=17;D7||Darasa la Saba
 Value=18;D8||Darasa la Nane
-Value=19;OSC
-Value=20;MS+COURSE
+Value=19;OSC||Mafunzo kabla ya elimu ya sekondari (Pre-form One)
+Value=20;MS+COURSE||Mafunzo rasmi baada ya elimu ya msingi (Mf. Mafunzo ya vyuo vya ufundi n.k.)
 Value=21;F1||Kidato cha Kwanza
 Value=22;F2||Kidato cha Pili
 Value=23;F3||Kidato cha Tatu
@@ -649,7 +649,7 @@ Value=24;F4||Kidato cha Nne
 Value=25;O+COURSE
 Value=31;F5||Kidato cha Tano
 Value=32;F6||Kidato cha Sita
-Value=33;A+COURSE
+Value=33;A+COURSE||Amemaliza kidato cha 6 na kufanya kozi
 Value=34;DIPLOMA
 Value=41;U1||Chuo Mwaka wa Kwanza
 Value=42;U2||Chuo Mwaka wa Pili
@@ -682,8 +682,8 @@ Link=98711222
 Value=1;Farmer with non-family employees|Agricultor com empregados não familiares|Mkulima aliyeajiri wafanyakazi wasiokuwa wanakaya
 Value=2;Farmer with only family members|Agricultor com apenas membros da família|Mkulima mwenye wanakaya tu
 Value=3;Farm worker|Trabalhador rural familiar|Mfanyakazi wa shamba bila malipo [mwanakaya]
-Value=4;Non-farm business with non-family employees|Empregador não agrícola com empregados não familiares|Mwajiri asiye Mkulima aliyeajiri wafanyakazi wasio wanakaya
-Value=5;Non-farm business with only family employees|Empregador não agrícola com apenas empregados da família|Mwajiri asiye mkulima aliyeajiri wanakaya tu
+Value=4;Non-farm business with non-family employees|Empregador não agrícola com empregados não familiares|Shughuli isiyo kilimo iliyoajiri watu wasio wanakaya
+Value=5;Non-farm business with only family employees|Empregador não agrícola com apenas empregados da família|Shughuli isiyo kilimo iliyoajiri wanakaya pekee
 Value=6;Unpaid assistance in family enterprise/Casual/Day Laborer|Assistência não remunerada na empresa familiar|Msaidizi katika biashara ya kaya asiyelipwa
 Value=7;Self-Employed Independent contractor, technician, professional, etc|Contratante independente, técnico, profissional, etc.|Mtaalamu aliyejiajiri (mkandarasi, fundi mchundo, n.k. )
 Value=8;Wage Employee in Private Company (with contract)|Empregado assalariado em empresa privada (com contrato)|Mwajiriwa katika kampuni binafsi (kwa mkataba)
@@ -1165,7 +1165,7 @@ Value='q            ';Other|De outros|Nyingine
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
 RecordTypeValue='1'
-RecordLen=230
+RecordLen=231
 
 [Item]
 Label=Record HH or MN this section|Registro HH ou MN nesta secção(pessoa com maior conhecimento)
@@ -1410,7 +1410,7 @@ Name=C18_VS1
 Link=9
 Value=0:888888887
 Value=888888888;Don't know|Não sabe|Hajui
-Value=888888889;The dwelling was already connected when household moved in
+Value=888888889;The dwelling was already connected when household moved in||Makazi yalikuwa na umeme kaya ilipohamia
 Value=999999999;Not applicable|Não aplicável|Haihusiki
 
 [Item]
@@ -1428,18 +1428,18 @@ Link=9
 Label=Days from applied to household connected|Quantos dias o seu agregado familiar se conectou?
 Name=C20
 Start=148
-Len=2
+Len=3
 
 [Item]
 Label=Weeks to to use electricity after connected|Semanas para utilizar electricidade depois ligado
 Name=C21
-Start=150
+Start=151
 Len=2
 
 [Item]
 Label=What kind of tarriff do you have?
 Name=C22
-Start=152
+Start=153
 Len=2
 
 [ValueSet]
@@ -1477,7 +1477,7 @@ Value=55;Do not know||Hajui
 [Item]
 Label=Electric meter|Casa tem um contador elétrico?
 Name=C23
-Start=154
+Start=155
 Len=1
 
 [ValueSet]
@@ -1490,13 +1490,13 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
 Name=C24
-Start=155
+Start=156
 Len=2
 
 [Item]
 Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
 Name=C25
-Start=157
+Start=158
 Len=3
 
 [ValueSet]
@@ -1509,7 +1509,7 @@ Value=888;Don't know|Não sabe|Hajui
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
-Start=160
+Start=161
 Len=5
 
 [ValueSet]
@@ -1522,7 +1522,7 @@ Value=88888;Don't know|Não sabe|Hajui
 [Item]
 Label=Pre-paid meter|Pré-pago metros
 Name=C27
-Start=165
+Start=166
 Len=1
 
 [ValueSet]
@@ -1534,7 +1534,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
-Start=166
+Start=167
 Len=2
 
 [ValueSet]
@@ -1556,7 +1556,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Electricity bill provided|factura de electricidade fornecida
 Name=C29
-Start=168
+Start=169
 Len=1
 
 [ValueSet]
@@ -1569,7 +1569,7 @@ Value=3;Respondent does not have an energy bill|Reclamado não tem um contrato d
 [Item]
 Label=Amount last month electricity bill|Valor da conta de energia elétrica no mês passado
 Name=C30
-Start=169
+Start=170
 Len=8
 
 [ValueSet]
@@ -1582,7 +1582,7 @@ Value=88888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C31
-Start=177
+Start=178
 Len=6
 
 [ValueSet]
@@ -1595,31 +1595,31 @@ Value=888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many weeks did the bill cover?
 Name=C32
-Start=183
+Start=184
 Len=2
 
 [Item]
 Label=How much did you spend the last time you bought electricity?
 Name=C33
-Start=185
+Start=186
 Len=8
 
 [Item]
 Label=How long does this amount last?
 Name=C34
-Start=193
+Start=194
 Len=3
 
 [Item]
 Label=How many KWh did you pay for
 Name=C35
-Start=196
+Start=197
 Len=6
 
 [Item]
 Label=Quality electricity same all year|energia elétrica de qualidade mesmo durante todo o ano
 Name=C36
-Start=202
+Start=203
 Len=1
 
 [ValueSet]
@@ -1631,7 +1631,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information load shedding schedule|Receba informações da agenda derramamento de carga
 Name=C37
-Start=203
+Start=204
 Len=1
 
 [ValueSet]
@@ -1645,7 +1645,7 @@ Value=4;No load-shedding in this area|Sem restrição de corrente nesta área|Ha
 [Item]
 Label=Hours of electricity day and night typical month|Horas de dia eletricidade e noite mês típico
 Name=C38
-Start=204
+Start=205
 Len=2
 
 [ValueSet]
@@ -1658,7 +1658,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C39
-Start=206
+Start=207
 Len=2
 
 [ValueSet]
@@ -1669,7 +1669,7 @@ Link=2
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
 Name=C40
-Start=208
+Start=209
 Len=2
 
 [ValueSet]
@@ -1682,7 +1682,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C41
-Start=210
+Start=211
 Len=2
 
 [ValueSet]
@@ -1693,7 +1693,7 @@ Link=2
 [Item]
 Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C42
-Start=212
+Start=213
 Len=2
 
 [ValueSet]
@@ -1715,7 +1715,7 @@ Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 [Item]
 Label=Main back-up source appliances|Principais aparelhos fonte de back-up
 Name=C43
-Start=214
+Start=215
 Len=2
 
 [ValueSet]
@@ -1733,7 +1733,7 @@ Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 [Item]
 Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44
-Start=216
+Start=217
 Len=1
 
 [ValueSet]
@@ -1747,7 +1747,7 @@ Value=4;They nevner showed up|Eles nunca apareceram|Hawakutokea
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
 Name=C45
-Start=217
+Start=218
 Len=2
 
 [ValueSet]
@@ -1760,7 +1760,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Problems with grid electricity 1|Problemas com eletricidade da rede 1
 Name=C46
-Start=219
+Start=220
 Len=2
 
 [ValueSet]
@@ -1781,7 +1781,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Problems with grid electricity 2|Problemas com eletricidade da rede 2
 Name=C47
-Start=221
+Start=222
 Len=2
 
 [ValueSet]
@@ -1802,7 +1802,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Any household members die or limb damage|Quaisquer membros do agregado familiar morrer ou danos limb
 Name=C48
-Start=223
+Start=224
 Len=1
 
 [ValueSet]
@@ -1814,7 +1814,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury|Motivo da lesão
 Name=C49
-Start=224
+Start=225
 Len=2
 
 [ValueSet]
@@ -1828,7 +1828,7 @@ Value=55;Other|De outros|Nyinginezo
 [Item]
 Label=Is there a limit for the load and/or appliances you are allowed to power from this local grid?
 Name=C50
-Start=226
+Start=227
 Len=2
 
 [ValueSet]
@@ -1841,7 +1841,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Were you involved in setting the tariff for the local grid?
 Name=C51
-Start=228
+Start=229
 Len=1
 
 [ValueSet]
@@ -1853,7 +1853,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How were you involved in the tariff setting?
 Name=C52
-Start=229
+Start=230
 Len=2
 
 [ValueSet]
@@ -3736,6 +3736,14 @@ Label=How many doors and windows in cooking place?|Quantas portas e janelas em c
 Name=I54
 Start=289
 Len=1
+
+[ValueSet]
+Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
+Name=I54_VS1
+Value=1;Only Door||Mlango tu
+Value=2;One Window||Dirisha moja
+Value=3;2 or More Windows||Madirisha 2 au zaidi
+Value=4;Additional Large Opening||Uwazi mkubwa wa ziada
 
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?

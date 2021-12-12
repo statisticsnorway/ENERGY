@@ -1091,7 +1091,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Em que instituição formal esse agregado familiar tem conta ou poupança?&nbsp;</span></p><p style="margin-bottom:8pt;"><span style="color: rgb(0, 0, 255);">Leia a opçoes em voz alta&nbsp;</span><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;"><br></span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni katika taasisi gani ya kifedha kaya hii inamiliki akaunti au akiba?&nbsp;</span></p><p><span style="font-size: 16px;"><font color="#0000ff">Msomee Majibu kwa sauti</font></span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, ni katika taasisi gani ya kifedha kaya hii inamiliki akaunti au akiba?&nbsp;</span></p><p><span style="font-size: 16px;"><font color="#0000ff">Msomee Majibu kwa sauti, jibu zaidi ya moja inawezekana</font></span></p>
             
         helpText:
           EN: |
@@ -2311,8 +2311,8 @@ questions:
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registe em anos, se menos de 1 ano registe 1 (</span><font color="#0000ff">Não pode ser maior do que anos vividos na comunidade</font><span style="color: rgb(0, 0, 255);">) .</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni kwa muda wa miaka mingapi sasa tangu umeunganishwa kwenye Gridi ya Taifa?&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">JAZA KATIKA MIAKA KAMILI, KAMA CHINI NI YA MWAKA 1 JAZA 1 (JIBU LAKE HALIWEZI KUWA ZAIDI YA B2) &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Ni kwa muda wa miaka mingapi kaya yako imekuwa na umeme wa gridi?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">JAZA KATIKA MIAKA KAMILI, KAMA NI CHINI YA MWAKA 1 JAZA 1. HAIWEZEKANI KUWA ZAIDI YA MIAKA&nbsp; ALIYOISHI KWENYE JAMII HIYO. IKIWA KAYA ILIKUWA TAYARI MAKAZI YANA UMEME, ANDIKA IDADI YA MIAKA AMBAYO KAYA IMEISHI KWENYE MAKAZI HAYA.&nbsp;&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -6995,7 +6995,7 @@ questions:
             <p><font face="Arial, sans-serif">As mulheres de 15 anos ou mais usaram algum tempo nesta atividade há 5 anos?&nbsp;&nbsp;</font></p><p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">(</span>~~getLabel(N_ACTIVITY_WOMEN, curocc())~~<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">)&nbsp;</span><br></p><p></p>
             
           SW: |
-            Je! Wanawake katika kundi la umri huu walitumia muda wowote kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~&nbsp;</span>miaka 5 iliyopita?<p></p>
+            Je! Wanawake katika kundi la umri huu walitumia muda wowote kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">&nbsp;</span>miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -7241,7 +7241,7 @@ questions:
             <p>As raparigas de 5 a 14 anos passam mais ou menos tempo nesta atividade do que há 5 anos atrás?</p><p><p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">(~~getLabel(N_ACTIVITY_GIRLS, curocc())~~)</span><br></p><p><br></p></p>
             
           SW: |
-            Je! Wasichana wenye umri wa miaka 5 - 14&nbsp; hutumia muda zaidi au kidogo katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;kuliko miaka 5 iliyopita?<p></p>
+            Je! Wasichana wenye umri wa miaka 5 - 14&nbsp; hutumia muda zaidi au kidogo katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_GIRLS, curocc())~~</span>&nbsp;kuliko miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -7260,7 +7260,7 @@ questions:
             Quantos homens com 15 anos ou mais estiveram envolvidos em&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span>&nbsp;nos últimos 7 dias?<p></p>
             
           SW: |
-            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getLabel(N_ACTIVITY_MEN, curocc())~~&nbsp;</span>katika siku 7 zilizopita?<p></p>
+            Ni wanaume wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">&nbsp;</span>katika siku 7 zilizopita?<p></p>
             
         helpText:
           EN: |
@@ -7892,6 +7892,7 @@ questions:
           SW: |
             <p>Ulitumia kiasi gani kwa mahitaji mengine kwa mwaka jana?</p><p><font color="#0000ff">Mfano: Samani, huduma za afya, vifaa vya electroniki</font><br><br><p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -8289,7 +8290,7 @@ questions:
             <p>Produz ou processa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;no agregado familiar hoje?&nbsp;</p><p><br></p><p></p>
             
           SW: |
-            <p>&nbsp;Sasa napenda kuuliza kama kuna mwanakaya yeyote anayezalisha au kuchakata chochote kwa ajili ya kuuza</p><p>A. Je, ulizalisha au kusindika&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika kaya leo?</p><p></p><p></p><p></p>
+            <p>&nbsp;Sasa napenda kuuliza kama kuna mwanakaya yeyote anayezalisha au kuchakata chochote kwa ajili ya kuuza</p><p>A. Je, ulizalisha au kusindika&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika kaya kwasasa?</p><p></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8348,7 +8349,7 @@ questions:
             <p>Onde e como foi feita esta venda?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><div><br></div><p></p>
             
           SW: |
-            <p>D. Wapi na namna gani uuzaji huu ulifanyika?</p><p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p></p>
+            <p>D. Wapi na namna gani uuzaji wa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;ulifanyika?</p><p></p><p><br></p><p></p>
             
         helpText:
           EN: |
@@ -8369,7 +8370,7 @@ questions:
             <p>Foi utilizada alguma eletricidade para a ilumicação ou maquinaria para esta produção/processamento?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><div><br></div><p></p>
             
           SW: |
-            <p>E.&nbsp;Je, Umeme ulitumika kwa ajili ya taa au kuendeshea mashine kwa usindikaji / uzalishaji huu?</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span></p><p></p><p></p><p></p>
+            <p>E.&nbsp;Je, Umeme ulitumika kwa ajili ya kuangazia (taa) au kuendeshea mashine kwa usindikaji / uzalishaji wa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~?</span></p><p></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8390,7 +8391,7 @@ questions:
             <p>Esta pessoa ou qualquer outra pessoa do agregado familiar fez este tipo de atividade há 5 anos?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><p><font color="#0000ff">(Descrever eventos há 5 anos - SECA, INUNDAÇÃO, PRESIDENTE ETC.)&nbsp;</font></p><div><br></div><p></p>
             
           SW: |
-            <p>F.&nbsp;Je, Mhojiwa au mtu mwingine yeyote katika kaya alifanya aina hii ya uzalishaji miaka 5 iliyopita?</p><p><span class="instruction">(Eleza matukio ya miaka 5 iliyopita - UKAME, MAFURIKO, PRESI-DENT NK.)</span><p></p></p>
+            <p>F.&nbsp;Je, Mhojiwa au mtu mwingine yeyote katika kaya alizalisha&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika miaka 5 iliyopita?</p><p><span class="instruction">(Eleza matukio ya miaka 5 iliyopita - UKAME, MAFURIKO, PRESI-DENT NK.)</span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8411,7 +8412,7 @@ questions:
             <p>Há 5 anos atrás, esta atividade fez mais dinheiro, menos dinheiro ou o mesmo?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            <p>G.&nbsp;Je, Shughuli hii ilizalisha pesa kidogo miaka 5 iliyopita, pesa sawa au pesa zaidi kutokana na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~&nbsp; ?</span></p><p></p><p></p>
+            <p>G.&nbsp;Je, Shughuli hii ilizalisha pesa kidogo miaka 5 iliyopita, pesa sawa au pesa zaidi kutokana na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span><span style="color: rgb(0, 128, 0);">?</span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8432,7 +8433,7 @@ questions:
             <p>Foi usada alguma eletricidade para esta produção/processo há 5 anos atrás?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            <p>H.&nbsp;Kulikuwa na umeme wowote uliotumika kwa usindikaji / uzalishaji huu miaka 5 iliyopita?</p><p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U2, curocc())~~)&nbsp;</span><br></p></p>
+            <p>H.&nbsp;Kulikuwa na umeme wowote uliotumika kwa usindikaji/uzalishaji wa&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U2, curocc())~~</span>&nbsp;katika miaka 5 iliyopita?</p><p></p>
             
         helpText:
           EN: |
@@ -8470,7 +8471,7 @@ questions:
             Alguém no agregado familiar é&nbsp;<span style="color: rgb(0, 0, 255);"><span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span></span>&nbsp;&nbsp;hoje?&nbsp;<p></p>
             
           SW: |
-            <p>&nbsp;Sasa tungependa kujua ikiwa mtu yeyote katika kaya anamiliki biashara au anatoa huduma. Biashara zisizohusika na kilimo / huduma za kilimo</p><p>A.&nbsp;&nbsp;Je, Kuna mtu yeyote katika kaya anajihusisha na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;leo?</p><p></p>
+            <p>&nbsp;Sasa tungependa kujua ikiwa mtu yeyote katika kaya anamiliki biashara au anatoa huduma. Biashara zisizohusika na kilimo / huduma za kilimo</p><p>A.&nbsp;&nbsp;Je, Kuna mwanakaya yeyote katika kaya hii&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;kwasasa?</p><p></p>
             
         helpText:
           EN: |
@@ -8490,7 +8491,7 @@ questions:
             <p>Alguém<span style="color: rgb(0, 128, 0);">&nbsp;</span>no agregado familiar fez&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span>há 5 anos atrás?&nbsp;</p><p><font color="#0000ff">(Descrever eventos há 5 anos - SECA, INUNDAÇÃO, PRESIDENTE ETC.)&nbsp;</font></p><p></p>
             
           SW: |
-            B.&nbsp;&nbsp;Je, Kuna mtu yeyote katika kaya hii anajishughulisha na&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;miaka 5 iliyopita?<p></p>
+            B.&nbsp;&nbsp;Je, Kuna mtu yeyote katika kaya hii <span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~ katika</span>&nbsp;miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -8509,7 +8510,7 @@ questions:
             <p>Você disse que o/a~~ getLabel(U3, curocc()) ~~ do seu agregado familiar.&nbsp; Quem é o gerente deste negócio / serviço?&nbsp;&nbsp;</p><p><p></p></p>
             
           SW: |
-            C.&nbsp;&nbsp;Umesema kuwa kaya yako inaendesha biashara ya aina hii. Ni nani mhusika&nbsp; (mkuu) wa biashara / huduma hii?<p></p>
+            C.&nbsp;&nbsp;Umesema kuwa kaya yako au mwanakaya&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>. Je, ni nani mhusika&nbsp; (mkuu) wa biashara / huduma hii?<p></p>
             
         helpText:
           EN: |
@@ -8529,7 +8530,7 @@ questions:
             <p>Onde é que este negócio/serviço é operado?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            D.&nbsp;Biashara hii&nbsp;<span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;&nbsp;</span>ipo wapi/ Huduma hii inatolewaje?<p></p>
+            D. Je, ni wapi&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span>?<p></p>
             
         helpText:
           EN: |
@@ -8549,7 +8550,7 @@ questions:
             <p>Foi utilizada alguma eletricidade para luz/iluminação ou maquinaria para este negócio/serviço?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            E.&nbsp;Je, Umeme ulitumika kwa taa au mashine kwa usindikaji / uzalishaji huu?<p></p>
+            E.&nbsp;Je, Umeme ulitumika kwa ajili ya kuangazia (taa) au kuendeshea mashine wakati&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>?<p></p>
             
         helpText:
           EN: |
@@ -8570,7 +8571,7 @@ questions:
             <p>Esta pessoa ou qualquer outra pessoa do agregado familiar fez este tipo de atividade há 5 anos atrás?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p><p><font color="#0000ff">(Descrever eventos há 5 anos atrás - SECA, INUNDAÇÃO, PRESIDENTE ETC.)&nbsp;</font></p><p></p>
             
           SW: |
-            <p>F.&nbsp;&nbsp;Je,&nbsp; Mhojiwa au mtu mwingine yeyote katika kaya alifanya aina hii ya shughuli miaka 5 iliyopita?</p><p><span class="instruction">(Eleza matukio ya miaka 5 iliyopita - UKAME, MAFURIKO, PRESI-DENT NK.)</span><p></p></p>
+            <p>F.&nbsp;&nbsp;Je,&nbsp; Mhojiwa au mtu mwingine yeyote katika kaya&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~&nbsp;</span>katika&nbsp; miaka 5 iliyopita?</p><p><span class="instruction">(Eleza matukio ya miaka 5 iliyopita - UKAME, MAFURIKO, PRESI-DENT NK.)</span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -8590,7 +8591,7 @@ questions:
             <p>Há 5 anos atrás, o lucro deste negócio foi, menor, o mesmo ou maior do que agora?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            <p>G.&nbsp;Je, Faida kutoka kwa biashara hii miaka 5 iliyopita, ilikuwa ndogo, sawa au kubwa kuliko sasa?</p><p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p></p>
+            <p>G.&nbsp;Je, kuna faida wakati&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;katika miaka 5 iliyopita, ilikuwa ndogo, sawa au kubwa kuliko sasa?</p><p></p>
             
         helpText:
           EN: |
@@ -8603,14 +8604,14 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;">Was any electricity used for this processing/ production 5 years ago?&#160;</span></p>
-            <p><span style="font-size:16px;color:#008000;">(~~getLabel(U3, curocc())~~)&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Was any electricity used for this processing/production 5 years ago?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#008000;">(~~getLabel(U3, curocc())~~)&nbsp;</span></p>
             
           PT: |
             <p>Foi usada alguma eletricidade para este processamento/produção há 5 anos atrás?&nbsp;</p><p><span style="color: rgb(0, 128, 0);">(~~getLabel(U3, curocc())~~)&nbsp;</span><br></p><p></p>
             
           SW: |
-            H.&nbsp;Kulikuwa na umeme wowote uliotumika kwa usindikaji / uzalishaji huu miaka 5 iliyopita?<p></p>
+            H.&nbsp;Kulikuwa na umeme wowote uliotumika kwa usindikaji/uzalishaji wakati&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(U3, curocc())~~</span>&nbsp;katika miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -8892,7 +8893,7 @@ questions:
             <font face="Arial, sans-serif">How much of this time was spent after dark on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
             
           SW: |
-            Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~ ?</span><p></p>
+            Kati ya Muda wote ni muda gani uliotumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">&nbsp;?</span><p></p>
             
   - name: N_H
     conditions:
@@ -8917,27 +8918,35 @@ questions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, how much time did each of these men use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
-            Katika siku 7 zilizopita je, kila mmoja wa wanaume hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~?</span><p></p>
+            Katika siku 7 zilizopita je, kila mmoja wa wanaume hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">?</span><p></p>
+            
   - name: N_N
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark&nbsp;on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
-            Kati ya muda wote, ni muda gani ulitumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~?</span><p></p>
+            Kati ya muda wote, ni muda gani ulitumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_MEN, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">?</span><p></p>
+            
   - name: N_R
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">In the last 7 days, howmuch time did each of these boys use per day on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
-            Katika siku 7 zilizopita, je kila mmoja wa wavulana hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~?</span><p></p>
+            Katika siku 7 zilizopita, je kila mmoja wa wavulana hawa alitumia muda gani&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">?</span><p></p>
+            
   - name: N_S
     conditions:
       - questionText:
           EN: |
             <font face="Arial, sans-serif">How much of this time was spent after dark&nbsp;on&nbsp;</font><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="font-family: Arial, sans-serif;">?</span><p></p>
+            
           SW: |
-            Kati ya muda wote, ni muda gani ulitumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~?</span><p></p>
+            Kati ya muda wote, ni muda gani ulitumika baada ya giza&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">?</span><p></p>
+            
 ...

@@ -411,3 +411,19 @@ EN(203) Please re-consider the instructions and fill the correct answer accordin
 PT(203)
 SW(203) Tafadhali weka/jaza majibu sahihi kwa kuzingatia maelekezo ya swali
 
+EN(204) The age difference between Head and %s is less than 12 years
+PT(204)
+SW(204) Tofauti ya umri kati mkuu wa kaya na %s ni chini ya miaka 12
+
+EN(205) Correct Relationship
+PT(205)
+SW(205) Rekebisha uhusiano
+
+EN(206) Correct Age
+PT(206)
+SW(206) Rekebisha Umri
+
+EN(207) Continue
+PT(207)
+SW(207) Endelea mbele
+

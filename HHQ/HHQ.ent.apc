@@ -18,7 +18,7 @@
 	string currMember;	//Main respondent throughout the questionnaire.
 	string solarDeviceType; // Type of solar home system, used in second C section
 	string lampType;
-	numeric CF;
+	numeric CF, AgeDiff;
 	string cookType;
 	string hhItemExtra;
 	numeric energySources; // number of energy sources, used in first C section
@@ -589,7 +589,14 @@ postproc
 	if  $ >= 16 then	//Found an adult
 		adultMembers.add(AB1,curocc());
 	endif;
-
+	
+	If AB3(curocc()) = 3 then
+		AgeDiff = $(1) - $(curocc());
+		If AgeDiff < 12 then
+			errmsg(tr(204),AB1(curocc()))
+			select(tr(205),AB3,tr(206),$,tr(207),Continue);
+		endif;
+	endif;
 
 PROC AB6
 
@@ -2853,7 +2860,6 @@ postproc
 PROC N_L
 
 postproc
-
 	skip to next;
 
 

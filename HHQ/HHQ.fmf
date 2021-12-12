@@ -1601,7 +1601,7 @@ Name=B16
 Position=208,518,265,538
 Item=B16,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=3
   
 [Text]
@@ -1943,10 +1943,10 @@ Text=C19
   
 [Field]
 Name=C20
-Position=101,548,130,568
+Position=101,548,144,568
 Item=C20,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=ComboBox
+DataCaptureType=NumberPad
 Form=4
   
 [Text]
@@ -4584,6 +4584,7 @@ Name=I54
 Position=937,424,952,444
 Item=I54,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
 Form=13
   
 [Text]
