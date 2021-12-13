@@ -127,13 +127,13 @@ preproc
 PROC D3
 preproc
 
-	if pos("01", D1) > 0 and pos("02", D1) > 0 then
+	if pos("A", D1) > 0 and pos("B", D1) > 0 then
 		$ = 1;
 		skip to D6;
-	elseif pos("01", D1) > 0 then
+	elseif pos("A", D1) > 0 then
 		$ = 2;
 		skip to D8;
-	elseif pos("02", D1) > 0 then
+	elseif pos("B", D1) > 0 then
 		$ = 3;
 		skip to D6;
 	else
@@ -224,7 +224,7 @@ preproc
 	endif;
 PROC D27
 preproc
-	if not (pos("1", D1) > 0 or pos("2", D1) > 0) then
+	if not (pos("A", D1) > 0 or pos("B", D1) > 0) then
 	 skip to D31;
 	endif;
 PROC D31
