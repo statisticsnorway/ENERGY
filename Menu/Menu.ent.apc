@@ -1325,7 +1325,13 @@ postproc
 				endif;	
 				
 			endif;
-				
+			map Listingmap;
+			string mapFileName = "../Maps/" + theCountry + "_" + edit("99", M_REGION) 
+					+ edit("99", M_DISTRICT) + edit("999", M_SUBDISTRICT) 
+					+ edit("99", M_LOCALITY) + edit("99", M_VILLAGE) 
+					+ edit("999", M_EA) + ".mbtiles";
+			listingmap.setBaseMap(mapFileName);
+			listingMap.show();
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
 		
 		elseif M_MENU = 2 then	//HHQ
