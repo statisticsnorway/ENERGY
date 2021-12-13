@@ -5461,6 +5461,7 @@ questions:
           SW: |
             <p>Je, ni nani mtengenezaji na aina ya&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;&nbsp;</p><p><br></p><p><font color="#0000ff">Ikiwa hakuna taarifa iliyopatikana (mtengenezaji na aina ya jiko), andika "hakuna taarifa"</font></p><p><p></p>
             </p>
+            
         helpText:
           EN: |
             
@@ -7423,7 +7424,7 @@ questions:
             <p>Os rapazes de 5 a 14 anos usaram algum tempo nesta atividade há 5 anos atrás?</p><p><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">(~~getLabel(N_ACTIVITY_BOYS, curocc())~~)&nbsp;</span></p><p><p></p></p>
             
           SW: |
-            Je! Wavulana wangapi walitumia muda wowote kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span>&nbsp;miaka 5 iliyopita?<p></p>
+            Je! Wavulana wenye umri wa miaka 5-14 walitumia muda wowote kwenye&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_BOYS, curocc())~~</span>&nbsp;miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
