@@ -135,7 +135,7 @@ PROC GLOBAL
 		endif;
 	end;
 	
-	{
+	
 	function downloadMap(string mapFileName)
 		
 		//First deleting the old files in order not to fill up the tablet
@@ -155,7 +155,7 @@ PROC GLOBAL
 			endif;
 		endif;
 	end;
-	}	
+		
 
 
 	//Toggle between satelite and normal view on maps
@@ -285,11 +285,10 @@ PROC GLOBAL
 				else
 					//Need to assign the HH to another one. Try one by one until I find somewhere
 					numeric found = 0;
+					
 					while found = 0 do
-						inc(j);
-						if j > intNum then
-							j = j - intNum;
-						endif;
+						seed(systime());
+						j = random(1,intNum);
 						currHHNum = toNumber(tabletCount(j,2));
 						if currHHNum = DEFAULT then
 							currHHNum = 0;
@@ -793,10 +792,13 @@ PROC GLOBAL
 			
 			if syncconnect(CSWeb, syncUrl) = 1 then
 				//Need to onstruct all the filenames and collect files 
-				forcase REGIONS_DICT where REGION_CODE = M_REGION and DISTRICT_CODE = M_DISTRICT do
-							string mapFileName = theCountry + "_" + edit("99", REGION_CODE) + edit("99", DISTRICT_CODE)
+				//errmsg("region: %d, District: %d", visualValue(M_REGION), visualValue(M_DISTRICT));
+				forcase REGIONS_DICT where REGION_CODE = visualValue(M_REGION) 
+							and DISTRICT_CODE = visualValue(M_DISTRICT) do
+					string mapFileName = theCountry + "_" + edit("99", REGION_CODE) + edit("99", DISTRICT_CODE)
 								+ edit("999", SUBDISTRICT_CODE) + edit("99", LOCALITY_CODE) + edit("99", VILLAGE_CODE) + edit("999", EA_CODE)
 								+ ".mbtiles";
+					//errmsg("Getting map: %s", mapFileName); 
 					numeric syncRes = syncFile(GET, "/energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
 					if syncRes = 0 then
 						errmsg(tr(39));
@@ -823,7 +825,7 @@ preproc
 	userbar(clear);
 	userbar(add button, makeText(tr(32)), setCountry());
 	userbar(add button, makeText(tr(43)), changeLogin());
-	//userbar(add button, makeText(tr(44)), downloadMaps());
+	userbar(add button, makeText(tr(44)), downloadMaps());
 	userbar(show);
 
 
@@ -1174,10 +1176,10 @@ preproc
 	setValueset(M_DISTRICT, vsetCodes, vsetLabels);
 	
 postproc
-	//numeric dmaps = accept(makeText(tr(49)), makeText(tr(21)), makeText(tr(22)));
-	//if dmaps = 1 then
-	//	downloadMaps();
-	//endif;
+	numeric dmaps = accept(makeText(tr(49)), makeText(tr(21)), makeText(tr(22)));
+	if dmaps = 1 then
+		downloadMaps();
+	endif;
 	
 PROC M_SUBDISTRICT
 preproc
