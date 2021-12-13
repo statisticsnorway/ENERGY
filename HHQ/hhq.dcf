@@ -3338,7 +3338,7 @@ Len=2
 Label=ValueSet
 Name=I14_VS1
 Value=1;Local private organizations (NGO)|Organizações privadas locais (ONG)|Mashirika binafsi yasiyo ya Serikali  (NGO)
-Value=2;Chief of village|Chefe da aldeia|Mwenyekiti wa Kijiji
+Value=2;Chief of village|Chefe da aldeia|Kiongozi wa Kijiji/Mtaa
 Value=3;Local govt|Governo local|Halmashauri
 Value=4;Friend/ relative|Amigo/ parente|Rafiki/ Ndugu
 Value=55;Other|Outros|Wengine
@@ -3732,6 +3732,14 @@ Label=How many doors and windows in cooking place?|Quantas portas e janelas em c
 Name=I54
 Start=289
 Len=1
+
+[ValueSet]
+Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
+Name=I54_VS1
+Value=1;Mlango mmoja tu||Mlango mmoja tu
+Value=2;Dirisha Moja||Dirisha Moja
+Value=3;Madirisha mawili au zaidi||Madirisha mawili au zaidi
+Value=4;Ongezeko la Uwazi Mkubwa||Ongezeko la Uwazi Mkubwa
 
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?

@@ -5462,8 +5462,8 @@ questions:
             <font face="Arial, sans-serif">Qual é o fabricante e modelo do</font><font color="#008000" face="Arial, sans-serif">&nbsp;~~getvaluelabel(I10)~~</font><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
             
           SW: |
-            Je, ni nani mtengenezaji na aina ya&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?<p></p>
-            
+            <p>Je, ni nani mtengenezaji na aina ya&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;&nbsp;</p><p><br></p><p><font color="#0000ff">Ikiwa hakuna taarifa iliyopatikana (mtengenezaji na aina ya jiko), andika "hakuna taarifa"</font></p><p><p></p>
+            </p>
         helpText:
           EN: |
             
@@ -5859,7 +5859,7 @@ questions:
             <p>Quanto tempo os membros do agregado familiar passam a preparar o&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;e combustível para cada refeição, em média?&nbsp;</p><p><font color="#0000ff">Minutos&nbsp;</font></p><p></p>
             
           SW: |
-            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani (dakika) kuandaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;na nishati kwa kila mlo?</p><p></p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p><p></p>
+            <p>Je,&nbsp; kwa wastani wanakaya hutumia muda gani (dakika) kuandaa&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>&nbsp;na nishati kwa kila mlo?</p><p></p><p><span class="instruction"><br></span></p><p><span class="instruction">Kama muda ni chini ya dakika moja; jaza 0</span></p><p><span class="instruction">Hii ni kwa muda wa kuandaa nishati na kuwasha jiko lakini sio muda kukusanya nishati au muda wa kupika</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -6056,7 +6056,7 @@ questions:
             Durante os últimos sete dias, quantas vezes o agregado familiar&nbsp;reuniu, recolheu ou comprou combustível?&nbsp;&nbsp;<p></p>
             
           SW: |
-            <p>Sasa tungependa kuzungumza juu ya muda uliotumika kukusanya kuni.</p><p></p><p>Je, katika kipindi cha siku 7 zilizopita ni mara ngapi kaya ilikusanya, kukusanya na kununua nishati?&nbsp;<br></p><p></p>
+            <p>Sasa tungependa kuzungumza juu ya muda uliotumika kukusanya kuni.</p><p></p><p>Je, katika kipindi cha siku 7 zilizopita ni mara ngapi kaya ilikusanya au kununua kuni?&nbsp;<br></p><p></p>
             
         helpText:
           EN: |
@@ -6365,7 +6365,7 @@ questions:
             Já usou fogões com cascas de arroz, pellets ou briquetes?&nbsp;<p></p>
             
           SW: |
-            Je! Umewahi kutumia jiko lolote kwa kutumia maganda ya mchele, pellets or briquettes?<p></p>
+            Je! Umewahi kutumia jiko lolote linatumia pumba za mpunga, pumba za mbao au mkaa wa makaa ya mawe?<p></p>
             
         helpText:
           EN: |

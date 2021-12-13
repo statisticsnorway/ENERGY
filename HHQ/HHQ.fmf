@@ -1892,7 +1892,7 @@ Text=C15
   
 [Field]
 Name=C16
-Position=234,434,249,454
+Position=234,434,263,454
 Item=C16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
