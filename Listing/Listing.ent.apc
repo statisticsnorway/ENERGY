@@ -5,6 +5,7 @@ PROC GLOBAL
 	string region, district, subdistrict, locality, village, ea, serial, urbRur;
 	numeric gpsN, gpsE;
 	string country;	//Need to know the country to find the right map..
+	string syncUrl;	//And url to get the maps from
 	
 	
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
@@ -39,6 +40,7 @@ PROC GLOBAL
 		saveSetting("ScurrEast", edit("ZZZ.ZZZZZZ", visualValue(LL7B)));
 		saveSetting("SurbanRural", edit("Z", visualValue(LLUR)));
 		saveSetting("Country", country);
+		saveSetting("SyncUrl", syncUrl);
 	end;
 
 
@@ -46,6 +48,30 @@ PROC GLOBAL
 		saveSettings();
 		stop(1);
 	end;
+	
+	
+	function downloadMap()
+		
+	string mapFileName = country + "_" + edit("99", toNumber(region))
+				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
+				+ edit("99", toNumber(locality)) + edit("99", toNumber(village))
+				+ edit("999", toNumber(ea)) + ".mbtiles";
+	errmsg("FuleName: %s, url: %s", mapFileName, syncUrl);
+		if country = "NO" then
+			errmsg("Ingen kart for Norge. Bruk google maps!");
+		else
+			if syncconnect(CSWeb, syncUrl) = 1 then
+				numeric syncRes = syncFile(GET, "/energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
+				if syncRes = 0 then
+					errmsg(tr(39));
+				endif;
+				syncDisconnect();
+			else
+				errmsg(tr(39));
+			endif;
+		endif;
+	end;
+	
 	
 	//For the user bar: Displays the map of the ea
 	function showEA()
@@ -69,6 +95,7 @@ preproc
 	userbar(clear);
 	userbar(add button, makeText(tr(102)), stopApp());
 	userbar(add button, makeText(tr(110)), showEA());
+	userbar(add button, makeText(tr(112)), downloadMap());
 	userbar(show);
 
 
@@ -84,6 +111,10 @@ preproc
 	serial = loadSetting("Sserial");
 	urbRur = loadSetting("SurbanRural");
 	country = loadSetting("Country");
+	//syncUrl = sysparm("SYNCURL");
+	syncUrl = "http://196.192.78.160:81/energy/api";
+	//errmsg("syncUrl: %s", syncUrl);
+	
 	
 	//errmsg("%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s",
 	//		LLogin, sysparm("LOGIN"), region, sysparm("REGION"), district, sysparm("DISTRICT"),
@@ -126,6 +157,7 @@ preproc
 		LL8 = toNumber(serial) + 1;
 		urbRur = sysparm("URBANRURAL");
 		country = sysparm("country");
+		syncUrl = sysparm("SYNCURL");
 	endif;
 
 	LL1 = toNumber(region);
