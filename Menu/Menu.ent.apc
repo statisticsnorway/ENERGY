@@ -206,7 +206,7 @@ PROC GLOBAL
 		else
 			test = setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
 		endif;
-		//errmsg("Setfile? %d (should be 1) ", test);
+		errmsg("Setfile? %d (should be 1) ", test);
 				
 		
 		//Then do the actual sample process
@@ -216,7 +216,7 @@ PROC GLOBAL
 			startPoint = 1;
 			else			
 			step = theTotal/theCount;
-			//errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
+			errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
 			if step = 0 then
 				step = 1;
 			endif;
@@ -229,7 +229,7 @@ PROC GLOBAL
 		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
 		numeric currCount = 0;
 		numeric idx = 0;
-		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+		errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
 							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -265,12 +265,15 @@ PROC GLOBAL
 					endif;
 					inc(j);
 				enddo;
+				if j = 5 then
+					j = 4;
+				endif;
 				
 				numeric currHHNum = toNumber(tabletCount(j,2));
 				if currHHNum = DEFAULT then
 					currHHNum = 0;
 				endif;
-				//errmsg("Int: %s, Ant. assignet denne int så langt: %d, Skal bli: %d, sampleSize: %d", tabletCount(j,1), currHHNum, numHHPerInt, sampleSize); 		
+				errmsg("Int: %s, Ant. assignet denne int så langt: %d, Skal bli: %d, sampleSize: %d", tabletCount(j,1), currHHNum, numHHPerInt, sampleSize); 		
 			
 		
 				if currHHNum < numHHPerInt then
@@ -397,13 +400,13 @@ PROC GLOBAL
 		//which is dependent on the number of interviewers as well as urban/rural
 		tabletCount.clear();
 		numeric sampleSize = setEnumerators();
-		//errmsg("%s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), tabletCount(4,1));
-		//errmsg("About to sample %d", sampleSize);
+		errmsg("%s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), tabletCount(4,1));
+		errmsg("About to sample %d", sampleSize);
 		
 		//get rid of sample data from previous EA:
 		numeric ok = close(SAMPLING_DICT);
 		ok = Filedelete("../Data/Sample.csdb");
-		//errmsg("Deleted %d files", ok);
+		errmsg("Deleted %d files", ok);
 		
 		//Analysis of the listed cases
 		numeric tot = countCases(LISTING_DICT
@@ -457,18 +460,18 @@ PROC GLOBAL
 			gridCount = sampleSize - solarCount - noneCount;
 		endif;
 		
-		//errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
+		errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
 		
 		if solarCount > 0 then
-			//errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
+			errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
 			writeSample(2, solarCount, totSolar, sampleSize);
 		endif;
 		if gridCount > 0 then
-			//errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
+			errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
 			writeSample(1, gridCount, totGrid, sampleSize);
 		endif;
 		if noneCount > 0 then
-			//errmsg("Sampling none. count: %d, tot: %d, sampleSize: %d", noneCount, totNone, sampleSize);
+			errmsg("Sampling none. count: %d, tot: %d, sampleSize: %d", noneCount, totNone, sampleSize);
 			writeSample(3, noneCount, totNone, sampleSize);
 		endif;
 
@@ -750,12 +753,16 @@ PROC GLOBAL
 	function changeLogin()
 		LOGIN = prompt(makeText(tr(9)));
 		numeric load = loadcase(USERS_DICT, LOGIN);
-		if load = 0 then //No such user
-			while load = 0 do
-				errmsg(tr(17));
-				LOGIN = prompt(makeText(tr(9)));
-				load = loadcase(USERS_DICT, LOGIN);
-			enddo;
+		if load = 0 then //No such user. Trying lowercase
+			LOGIN = tolower(LOGIN);
+			load = loadcase(USERS_DICT, LOGIN);
+			if load = 0 then //Still no such user
+				while load = 0 do
+					errmsg(tr(17));
+					LOGIN = prompt(makeText(tr(9)));
+					load = loadcase(USERS_DICT, LOGIN);
+				enddo;
+			endif;
 		endif;
 		
 		if tolower(ROLE) = "supervisor" then
@@ -763,6 +770,7 @@ PROC GLOBAL
 		else
 			loggedIn = "I";
 		endif;
+		LOGIN = tolower(LOGIN);
 		M_LOGIN = LOGIN;
 	end;	
 
@@ -921,6 +929,8 @@ postproc
 			reenter;		
 		endif;
 	endif;
+	//Always using lowercase of login
+	LOGIN = toLower($);
 	
 	if  tolower(tstrip(ROLE)) = "supervisor" then
 		loggedIn = "S";					
@@ -1322,7 +1332,13 @@ postproc
 				endif;	
 				
 			endif;
-				
+			map Listingmap;
+			string mapFileName = "../Maps/" + theCountry + "_" + edit("99", M_REGION) 
+					+ edit("99", M_DISTRICT) + edit("999", M_SUBDISTRICT) 
+					+ edit("99", M_LOCALITY) + edit("99", M_VILLAGE) 
+					+ edit("999", M_EA) + ".mbtiles";
+			listingmap.setBaseMap(mapFileName);
+			listingMap.show();
 			writepff("Listing questionnaire", "Listing", "", currSerial, "I");
 		
 		elseif M_MENU = 2 then	//HHQ
