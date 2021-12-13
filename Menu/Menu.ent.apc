@@ -753,12 +753,16 @@ PROC GLOBAL
 	function changeLogin()
 		LOGIN = prompt(makeText(tr(9)));
 		numeric load = loadcase(USERS_DICT, LOGIN);
-		if load = 0 then //No such user
-			while load = 0 do
-				errmsg(tr(17));
-				LOGIN = prompt(makeText(tr(9)));
-				load = loadcase(USERS_DICT, LOGIN);
-			enddo;
+		if load = 0 then //No such user. Trying lowercase
+			LOGIN = tolower(LOGIN);
+			load = loadcase(USERS_DICT, LOGIN);
+			if load = 0 then //Still no such user
+				while load = 0 do
+					errmsg(tr(17));
+					LOGIN = prompt(makeText(tr(9)));
+					load = loadcase(USERS_DICT, LOGIN);
+				enddo;
+			endif;
 		endif;
 		
 		if tolower(ROLE) = "supervisor" then
@@ -766,6 +770,7 @@ PROC GLOBAL
 		else
 			loggedIn = "I";
 		endif;
+		LOGIN = tolower(LOGIN);
 		M_LOGIN = LOGIN;
 	end;	
 
@@ -924,6 +929,8 @@ postproc
 			reenter;		
 		endif;
 	endif;
+	//Always using lowercase of login
+	LOGIN = toLower($);
 	
 	if  tolower(tstrip(ROLE)) = "supervisor" then
 		loggedIn = "S";					
