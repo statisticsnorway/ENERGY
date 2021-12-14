@@ -480,9 +480,9 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? &#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, jamii hii huwa inapata mgao wa umeme katika kipindi cha mvua(masika/vuli)?&nbsp; &nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -503,9 +503,9 @@ questions:
             <p>&nbsp;Restrição de carga&nbsp;<span style="color: rgb(0, 0, 255);">&nbsp;refere-se ao conjunto de horas de disponibilidade de energia na rede eléctica.&nbsp;</span></p><p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, jamii hii huwa inapata mgao wa umeme katika kipindi cha kiangazi?&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -545,7 +545,7 @@ questions:
             <p><span style="font-size:16px;color:#008000;">A que distância fica o posto mais próximo~~elecCompany~~ ?</span></p><p><span style="color: rgb(0, 0, 255);">Não sabe…88&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">99 km ou mais…99&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);"><br></span></p>
             
           SW: |
-            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
+            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani (umbali kwa kilometa)?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
             
         helpText:
           EN: |
@@ -912,7 +912,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade espera obter ligação à rede nos próximos dois anos?&#160;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, jamii hii inategemea kuunganishwa na gridi ya Taifa au gridi ndogo katika miaka miwili ijayo?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -975,9 +975,9 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa?.&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa au gridi ndogo?.&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1&nbsp;</span></p>
             
         helpText:
           EN: |
