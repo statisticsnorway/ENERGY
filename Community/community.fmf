@@ -1689,10 +1689,10 @@ Max=1
   
 [Field]
 Name=J1
-Position=64,31,79,51
+Position=64,31,93,51
 Item=J1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=CheckBox
 Form=9
   
 [Text]

@@ -275,7 +275,7 @@ Value='B ';Livestock|gado|Mifugo
 Value='C ';Fishing/hunting|Pesca / caça|Uvuvi / uwindaji
 Value='D ';Trading|comércio|Biashara
 Value='E ';Services|Serviços|Huduma
-Value='F ';Small-scale industry (non-farm)|indústria de pequena escala (não agrícola)|Viwanda vidogo vidogo
+Value='F ';Small-scale industry (non-farm)|indústria de pequena escala (não agrícola)|Viwanda vidogo vidogo (bila kuhusisha kilimo)
 Value='G ';Large-scale commercial industry (non-farm)|Em grande escala a indústria comercial (não agrícola)|Viwanda vikubwa (bila kuhusisha kilimo)
 Value='H ';Transport|Transporte|Usafiri
 Value='I ';Professional occupations|ocupações profissionais|Kazi ya kitaalam
@@ -1177,25 +1177,26 @@ Link=10000002
 Label=J Street lightning|relâmpago J Street|umeme J Street
 Name=J_STREET_LIGHTNING
 RecordTypeValue='J'
-RecordLen=42
+RecordLen=43
 
 [Item]
 Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
 Name=J1
 Start=41
-Len=1
+Len=2
+DataType=Alpha
 
 [ValueSet]
 Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
 Name=J1_VS1
-Value=1;Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
-Value=2;Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
-Value=3;No|Não|Hapana
+Value='A ';Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
+Value='B ';Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
+Value='C ';No|Não|Hapana
 
 [Item]
 Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
 Name=J2
-Start=42
+Start=43
 Len=1
 
 [ValueSet]
