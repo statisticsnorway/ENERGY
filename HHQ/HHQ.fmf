@@ -359,7 +359,7 @@ Item=F15
 [Form]
 Name=FORM016
 Label=I - Use of cooking solutions
-QuestionTextHeight=164
+QuestionTextHeight=96
 Level=1
 Size=1122,653
   

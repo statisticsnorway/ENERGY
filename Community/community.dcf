@@ -1013,7 +1013,7 @@ Label=Text From Clipboard|número de negócios
 Name=G1_NO_VS1
 Value=1;Tailor, shoe manufacturer or shoe repair|Alfaiate, fabricante de sapatos ou reparação de sapatos|Washonaji nguo/wazalishaji viatu/washonaji viatu
 Value=2;Baker or business making baked goods|Padeiro ou fazendo negócios de produtos assados|Waoka mikate/bidhaa zilizookwa
-Value=3;business making Coffee, tea, sugar, oil, dry fruits and other processed foods|fazem negócios de Café, chá, açúcar, óleo, frutos secos e outros alimentos processados.|Kahawa, chai, sugari, mafuta, matunda yaliyokaushwa, na vyakula vingine vya kusindika( ukiacha migahawa, wauzaji vyakula mitaani)
+Value=3;business making Coffee, tea, sugar, oil, dry fruits and other processed foods|fazem negócios de Café, chá, açúcar, óleo, frutos secos e outros alimentos processados.|Kahawa, chai, sukari, mafuta, matunda yaliyokaushwa, na vyakula vingine vya kusindika( ukiacha migahawa, wauzaji vyakula mitaani)
 Value=4;business making Handcrafts|fazendo negócios de artesanato|Kutengeneza bidhaa za Kazi za Mikono (Handcrafts)
 Value=5;business making Furniture|fazendo negócios de móveis|Kutengeneza Samani (Furnitures)
 Value=6;business making Metal Products|fazendo negócios de produtos metálicos|Kutengeneza Bidhaa za Chuma
@@ -1177,25 +1177,26 @@ Link=10000002
 Label=J Street lightning|relâmpago J Street|umeme J Street
 Name=J_STREET_LIGHTNING
 RecordTypeValue='J'
-RecordLen=42
+RecordLen=43
 
 [Item]
 Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
 Name=J1
 Start=41
-Len=1
+Len=2
+DataType=Alpha
 
 [ValueSet]
 Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
 Name=J1_VS1
-Value=1;Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
-Value=2;Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
-Value=3;No|Não|Hapana
+Value='A ';Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
+Value='B ';Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
+Value='C ';No|Não|Hapana
 
 [Item]
 Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
 Name=J2
-Start=42
+Start=43
 Len=1
 
 [ValueSet]
