@@ -111,9 +111,8 @@ preproc
 	serial = loadSetting("Sserial");
 	urbRur = loadSetting("SurbanRural");
 	country = loadSetting("Country");
-	//syncUrl = sysparm("SYNCURL");
-	syncUrl = "http://196.192.78.160:81/energy/api";
-	//errmsg("syncUrl: %s", syncUrl);
+	syncUrl = sysparm("mapUrl");
+	
 	
 	
 	//errmsg("%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s",

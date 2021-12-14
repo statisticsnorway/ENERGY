@@ -649,7 +649,7 @@ PROC GLOBAL
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
 		pffContent = pffContent + "country=" + theCountry + "\n";
-		pffContent = pffContent + "SYNCURL=" + syncUrl + "\n";
+		pffContent = pffContent + "mapUrl=" + syncUrl + "\n";
 
 		if questName <> "Menu" then
 			pffContent = pffContent + "OnExit=../Menu/Menu.pff\n";
