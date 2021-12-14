@@ -135,9 +135,7 @@ PROC GLOBAL
 	
 	function downloadMap(string mapFileName)
 		
-		//First deleting the old files in order not to fill up the tablet
-		numeric del = filedelete("../Maps/*.mbtiles");
-
+		
 		if theCountry = "NO" then
 			errmsg("Ingen kart for Norge. Bruk google maps!");
 		else
@@ -632,7 +630,8 @@ PROC GLOBAL
 			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
 			pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
 			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
-
+		else
+			pffContent = pffContent + "\n\n";
 		endif;
 
 		pffContent = pffContent + "[Parameters]\n";
@@ -647,6 +646,7 @@ PROC GLOBAL
 		pffContent = pffContent + "SERIAL=" + edit("ZZZ", serialNo) + "\n";
 		pffContent = pffContent + "Language=" + getLanguage() + "\n";
 		pffContent = pffContent + "country=" + theCountry + "\n";
+		pffContent = pffContent + "mapUrl=" + syncUrl + "\n";
 
 		if questName <> "Menu" then
 			pffContent = pffContent + "OnExit=../Menu/Menu.pff\n";
