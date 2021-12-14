@@ -15,9 +15,6 @@ PROC GLOBAL
 	numeric serialStart = 0;			//Sets the start value of the serial number used for households (to be found in the users.csdb
 									
 	map HHmap;		//for showing the HHs on a map
-	
-	
-	
 
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
 	function string lstrip(string theString)

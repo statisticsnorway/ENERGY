@@ -319,21 +319,16 @@ preproc
  endif;
 PROC J1
 preproc
-	//If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-	//	errmsg(tr(209));
-	//endif;
-	
 	If (ispartial() and $ = "") or !ispartial() then
 		errmsg(tr(209));
 	endif;
 
 postproc
-	if Length(Strip($)) > 1 and IsChecked("C", $) then 
+	if Length(Strip($)) > 1 and IsChecked("C",$) then
 		errmsg(402);
-			reenter;
-	
-	elseif Length(Strip($)) = 1 and IsChecked("C", $) then
+		reenter;
+	elseif Length(Strip($)) = 1 and IsChecked("C",$) then
 		skip to GP1;
 	endif;
-		
+
 
