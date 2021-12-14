@@ -5434,13 +5434,13 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Did you receive training or information on the <span style="color:#008000;">~~getvaluelabel(I10)~~</span>?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Did you receive training or information on the <span style="color:#008000;">~~getvaluelabel(I10)~~</span>?&nbsp;</span></p>
             
           PT: |
             Recebeu formação ou informação sobre o&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getvaluelabel(I10)~~</span><span style="font-family: Arial, sans-serif;">?&nbsp;</span><p></p>
             
           SW: |
-            Je, ulipata mafunzo yoyote au taarifa zozote kuhusu ~<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~getvaluelabel(I10)~~</span>?&nbsp;<p></p>
+            Je, ulipata mafunzo yoyote au taarifa zozote kuhusu&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getvaluelabel(I10)~~</span>?&nbsp;<p></p>
             
         helpText:
           EN: |
@@ -7584,7 +7584,7 @@ questions:
             Será que&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;teve uma irritação nos olhos ou problemas oculares nos últimos 14 dias?&nbsp;<p></p>
             
           SW: |
-            Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~</span><span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">chosenChildName~~</span>&nbsp;alikuwa na muwasho machoni au alipata shida ya macho katika siku 14 zilizopita?<p></p>
+            Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~chosenChildName~~</span>&nbsp;alikuwa na muwasho machoni au alipata shida ya macho katika siku 14 zilizopita?<p></p>
             
         helpText:
           EN: |
