@@ -85,6 +85,7 @@ PROC GLOBAL
 		else
 			eaMap.setBaseMap(satellite);
 		endif;
+		eaMap.showCurrentLocation(1);
 		eaMap.show();
 	end;
 	
