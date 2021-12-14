@@ -3,9 +3,11 @@ PROC GLOBAL
 
 	string currNorth, currEast;
 	string region, district, subdistrict, locality, village, ea, serial, urbRur;
-	numeric gpsN, gpsE;
+	numeric gpsN, gpsE, gpsIntN, gpsIntE; //separate gps coordinates for HHs and interviewers
 	string country;	//Need to know the country to find the right map..
 	string syncUrl;	//And url to get the maps from
+	map eaMap;
+		
 	
 	
 	//function to strip leading spaces (the original strip function only strips trailing spaces)
@@ -56,7 +58,6 @@ PROC GLOBAL
 				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
 				+ edit("99", toNumber(locality)) + edit("99", toNumber(village))
 				+ edit("999", toNumber(ea)) + ".mbtiles";
-	errmsg("FuleName: %s, url: %s", mapFileName, syncUrl);
 		if country = "NO" then
 			errmsg("Ingen kart for Norge. Bruk google maps!");
 		else
@@ -72,10 +73,23 @@ PROC GLOBAL
 		endif;
 	end;
 	
+	function setGPSCoordinates()
+		if getOS() = 20 then //Only do it on androids
+			gps(open);
+
+			if gps(read,60) then // a successful attempt at a read, for up to 60 seconds
+				gpsIntN = gps(latitude);
+				gpsIntE = gps(longitude);		    			
+			endif;
+			gps(close);
+			eaMap.addMarker(gpsIntN, gpsIntE);
+		endif;
+	end;
+	
+	
 	
 	//For the user bar: Displays the map of the ea
 	function showEA()
-		map eaMap;
 		string mapFileName = "../Maps/" + country + "_" + edit("99", toNumber(region))
 				+ edit("99", toNumber(district)) + edit("999", toNumber(subdistrict))
 				+ edit("99", toNumber(locality)) + edit("99", toNumber(village))
@@ -85,7 +99,16 @@ PROC GLOBAL
 		else
 			eaMap.setBaseMap(satellite);
 		endif;
-		eaMap.showCurrentLocation(1);
+		//eaMap.showCurrentLocation(1);	apparently didn't work
+		if gpsIntN <> 0 then
+			eaMap.addmarker(gpsIntN, gpsIntE);
+		elseif visualValue(LL7A) <> NOTAPPL and visualValue(LL7A) <> DEFAULT then
+			eaMap.addmarker(LL7A, LL7B);
+		//else
+			//errmsg(tr(113));
+		endif;
+		eaMap.addTextButton("GPS", setGPSCoordinates());
+
 		eaMap.show();
 	end;
 	
