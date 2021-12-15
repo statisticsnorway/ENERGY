@@ -67,7 +67,7 @@ Len=3
 Label=A Community identification|A identificação da Comunidade|kitambulisho Community
 Name=COMMUNITY_REC
 RecordTypeValue='A'
-RecordLen=139
+RecordLen=128
 
 [Item]
 Label=Village/Town Name|Aldeia / Nome da Cidade|Kijiji / Jina Town
@@ -136,27 +136,27 @@ Decimal=6
 DecimalChar=Yes
 
 [Item]
-Label=Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.|Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.
+Label=Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.|Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.|Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.
 Name=B1
 Start=118
-Len=22
+Len=11
 DataType=Alpha
 
 [ValueSet]
 Label=Valueset
 Name=B1_VS1
-Value='01                    ';Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
-Value='02                    ';Electricity / energy |Electricidade / energia|Umeme/Nishati
-Value='03                    ';Village committee|Comitê da vila|Kamati ya kijiji
-Value='04                    ';Elderly|Idoso|Wazee
-Value='05                    ';School|Escola|Shule
-Value='06                    ';Agriculture|Agricultura|Kilimo
-Value='07                    ';Health|Saúde|Afya
-Value='08                    ';Business|Negócio|Biashara
-Value='09                    ';Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
-Value='10                    ';Young adult|Jovem adulto|Kijana mtu mzima
-Value='11                    ';Adult woman/man|Mulher adulta|Mwanamke/Mwanamme mtu mzima
-Value='66                    ';None of these|Nenhum desses|Hakuna kati hizi
+Value='A          ';Chief / Chairperson|Chefe / Presidente|Mwenyekiti/VEO
+Value='B          ';Electricity / energy |Electricidade / energia|Umeme/Nishati
+Value='C          ';Village committee|Comitê da vila|Kamati ya kijiji
+Value='D          ';Elderly|Idoso|Wazee
+Value='E          ';School|Escola|Shule
+Value='F          ';Agriculture|Agricultura|Kilimo
+Value='G          ';Health|Saúde|Afya
+Value='H          ';Business|Negócio|Biashara
+Value='I          ';Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
+Value='J          ';Young adult|Jovem adulto|Kijana
+Value='K          ';Adult woman/man|Mulher adulta|Mwanamke/Mwanamme mtu mzima
+Value='X          ';None of these|Nenhum desses|Hakuna hata mmoja kati ya hawa
 
 [Record]
 Label=B Community leaders|líderes comunitários B|Viongozi B Community
@@ -204,10 +204,10 @@ Len=2
 [ValueSet]
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
 Name=B2_C_VS1
-Value=1;Chief / Chairperson|Chefe / Presidente|Chief / Mwenyekiti
-Value=2;Electricity / energy |Electricidade / energia|Umeme/Nishati
+Value=1;Chief / Chairperson|Chefe / Presidente|Mwenyekiti/VEO
+Value=2;Electricity / energy |Electricidade / energia|Mwakilishi
 Value=3;Village committee|Comitê da vila|Kamati ya kijiji
-Value=4;Elderly|Idoso|Wazee
+Value=4;Elderly|Idoso|Mzee
 Value=5;School|Escola|Shule
 Value=6;Agriculture|Agricultura|Kilimo
 Value=7;Health|Saúde|Afya
@@ -298,7 +298,7 @@ DataType=Alpha
 [ValueSet]
 Label=What are all the different sources of electricity that are available in this community?|fontes elétricos disponíveis|Inapatikana vyanzo umeme
 Name=D1_VS1
-Value='A         ';National grid connection|Rede nacional|Gridi ya taifa (TANESCO/REA)
+Value='A         ';National grid connection|Rede nacional|Gridi ya taifa (TANESCO)
 Value='B         ';Local mini-grid|Rede local|Gridi Ndogo
 Value='C         ';Diesel/gasoline generator|Gerador a gasóleo/gasolina|Jenereta ya diesel/petrol
 Value='D         ';Solar home system|Sistema Solar doméstico|Mfumo wa umeme jua
@@ -1030,7 +1030,7 @@ Value=16;providing Cleaning and washing|fornecendo limpeza e lavagem|Usafi na uf
 Value=17;Hairdressers or barber shops|Cabeleireiros ou barbearias|Watengeneza nywele na Vinyozi
 Value=18;Doctor, lawyer, accountant, or other professional services|Médico, advogado, contabilista ou outros serviços profissionais|Daktari, mwanasheria, mhasibu au huduma zingine za kitaalamu.
 Value=19;business Selling or giving service to Solar Home Systems or Solar Lighting Systems|venda ou prestação de serviços a Sistemas Solares Domésticos ou Sistemas de Iluminação Solar|Kuuza  au kutoa huduma ya Mifumo ya Umeme jua wa nyumbani
-Value=20;business providing Construction work|negócio que fornece trabalhos de construção|Kuduma za Ujenzi
+Value=20;business providing Construction work|negócio que fornece trabalhos de construção|Inayotoa huduma za Ujenzi
 Value=21;Grain or oil mill|Grão ou moinho de óleo|Kusaga nafaka/kukamua mafuta
 Value=22;Internet or TV café|Internet café ou TV |Huduma za Mtandao (Intaneti/TV)
 Value=23;Restaurant, tea or coffee shop|Restaurante, chá ou café |Migahawa/chai au sehemu/migahawa maalumu za kunywa kahawa
@@ -1200,12 +1200,12 @@ Start=43
 Len=1
 
 [ValueSet]
-Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
+Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|w
 Name=J2_VS1
-Value=1;None / hardly any|Nenhum / praticamente nenhuma|Hakuna/hakuna hata moja
+Value=1;None / hardly any|Nenhum / praticamente nenhuma|Sehemu ndogo sana
 Value=2;Minor Part|Menor Parte |Sehemu ndogo
 Value=3;Partially|parcialmente|Sehemu
-Value=4;Largely|Largamente|Kiasi kubwa
+Value=4;Largely|Largamente|Kwa kiiasi kubwa
 Value=5;Entirely|Inteiramente|Eneo lote la kijiji/mtaa
 
 [Record]

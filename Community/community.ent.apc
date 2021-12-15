@@ -65,6 +65,12 @@ preproc
 	
 
 	
+PROC B1
+Postproc
+	If Length(Strip($)) > 1 and IsChecked("X",$) then
+		errmsg(403);
+		reenter;
+	Endif;
 PROC B_LEADERS000	
 	
 PROC B_ID
@@ -115,10 +121,14 @@ preproc
 	endif;
 
 postproc
-	if  pos("H", $) > 0 or pos("I", $) > 0 or pos("J", $) > 0 or pos("X", $) > 0 then
+	If Length(Strip($)) > 1 and IsChecked("X",$) then
+		errmsg(403);
+		reenter;
+	elseif  pos("H", $) > 0 or pos("I", $) > 0 or pos("J", $) > 0 or pos("X", $) > 0 then
 	  skip to D4;
 	endif;
 
+	
 
 PROC D2
 preproc

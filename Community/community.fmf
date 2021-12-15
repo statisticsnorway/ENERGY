@@ -301,7 +301,7 @@ Text=A5
   
 [Field]
 Name=B1
-Position=99,350,408,370
+Position=99,350,254,370
 Item=B1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
