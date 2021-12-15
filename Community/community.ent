@@ -17,5 +17,7 @@ File=.\community.ent.mgf
 File=.\community.ent.qsf
 [Forms]
 File=.\community.fmf
+[Resources]
+Folder=.\Resources
 [Dictionary Types]
 Dict-Type=.\community.dcf,Input,.\community.fmf

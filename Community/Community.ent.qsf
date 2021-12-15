@@ -151,7 +151,7 @@ questions:
             <span style="font-size: 12px;">Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.&nbsp;</span><p></p>
             
           SW: |
-            <p>Je, ni nani alizungumza na Mwenyekiti/VEO ili kuandaa mahojiano?</p><p><span class="instruction">Ikiwa mwenyekiti/VEO wa kijiji anajua juu ya mada, hii inapaswa pia kujazwa.</span><p></p></p>
+            <p>Je, ni nani alizungumza na Mwenyekiti/VEO ili kuandaa mahojiano?</p><p><span class="instruction">Ikiwa mwenyekiti/VEO wa kijiji anajua juu ya mada, hii inapaswa pia kujazwa.&nbsp;</span></p><p><span class="instruction">Jibu zaidi ya moja inawezekana.</span></p><p></p><p></p>
             
         helpText:
           EN: |
@@ -174,10 +174,9 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#400040;font-family:'Arial', sans-serif;">Jina la huyu mtu&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Continue list for all persons. After last person press Continue&#160;</span></p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#400040;font-family:'Arial', sans-serif;">Andika/jaza jina la huyu mtu&nbsp;</span></p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Endelea kuorodhesha majina&nbsp; ya watu wote.&nbsp;</span></p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -314,7 +313,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Quais são as diferentes fontes de eletricidade disponíveis nesta comunidade?&nbsp;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni nini vyanzo vya umeme vinavyopatikana katika jamii hii?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, ni nini vyanzo mbalimbali vya umeme vinavyopatikana katika jamii hii?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -480,9 +479,9 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)? &#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, jamii hii huwa inapata mgao wa umeme katika kipindi cha mvua(masika/vuli)?&nbsp; &nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -503,9 +502,9 @@ questions:
             <p>&nbsp;Restrição de carga&nbsp;<span style="color: rgb(0, 0, 255);">&nbsp;refere-se ao conjunto de horas de disponibilidade de energia na rede eléctica.&nbsp;</span></p><p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, jamii huwa inatoa matangazo kuhusiana na ratiba ya mgao wa umeme (matangazo kuhusu masaa ambayo umeme utapatikana)?&#160;</span></p>
-            <p>&#160;</p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, jamii hii huwa inapata mgao wa umeme katika kipindi cha kiangazi?&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -545,7 +544,7 @@ questions:
             <p><span style="font-size:16px;color:#008000;">A que distância fica o posto mais próximo~~elecCompany~~ ?</span></p><p><span style="color: rgb(0, 0, 255);">Não sabe…88&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">99 km ou mais…99&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);"><br></span></p>
             
           SW: |
-            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
+            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani (umbali kwa kilometa)?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
             
         helpText:
           EN: |
@@ -759,7 +758,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Entrevistador verifique / CAPI:&nbsp;</span></p>
             
           SW: |
-            <p><span style="" class="normal">Je, Kijiji/Mtaa hiki kimeunganishwa katika gridi ya Taifa (Tanesco/REA) au gridi ndogo inayopatikana hapa?<br></span></p><p><span style="" class="normal instruction">Mdadisi angalia/hakiki</span></p>
+            <p><span style="" class="normal">Je, Kijiji/Mtaa hiki kimeunganishwa katika gridi ya Taifa (Tanesco) au gridi ndogo inayopatikana hapa?<br></span></p><p><span style="" class="normal instruction">Mdadisi angalia/hakiki</span></p>
             
         helpText:
           EN: |
@@ -912,7 +911,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">A comunidade espera obter ligação à rede nos próximos dois anos?&#160;</span></p>
             
           SW: |
-            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?&#160;</span></p>
+            <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">Je, jamii hii inategemea kuunganishwa na gridi ya Taifa au gridi ndogo katika miaka miwili ijayo?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -975,9 +974,9 @@ questions:
             <p>&nbsp;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa?.&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;"> Ni kwa miaka mingapi kwa sasa jamii hii imeunganishwa na gridi ya Taifa au gridi ndogo?.&nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size:16px;color:#0000ff;">ANDIKA KATIKA MIAKA. KAMA NI CHINI YA MWAKA 1 ANDIKA 1&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1636,7 +1635,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Sasa tungependa kujua kama kuna taa yoyote ya jamii au taa binafsi nje ya biashara au nyumba za watu binafsi.&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#000000;">Je, kuna taa za barabarani za aina yoyote katika jamii hii?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, jamii yako ina aina yoyote ya taa za barabarani za umma au aina zingine za taa za nje, mfano taa za nje/za usalama kwenye makazi ya watu binafsi?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -1655,7 +1654,7 @@ questions:
             <p style="margin-bottom:8pt;">Até que ponto a vossa comunidade está coberta por iluminação pública?<br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni kwa kiasi gani taa za barabarani zimewekwa katika jamii hii?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, ni kwa kiwango gani jamii yako imekuwa na taa za barabarani/taa za usalama?&nbsp;</span></p>
             <p><span style="font-size:16px;color:#0000ff;">MSOMEE MHOJIWA&nbsp;</span></p>
             
         helpText:
