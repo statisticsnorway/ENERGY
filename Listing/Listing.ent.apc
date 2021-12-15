@@ -3,7 +3,7 @@ PROC GLOBAL
 
 	string currNorth, currEast;
 	string region, district, subdistrict, locality, village, ea, serial, urbRur;
-	numeric gpsN, gpsE, gpsIntN, gpsIntE; //separate gps coordinates for HHs and interviewers
+	numeric gpsN, gpsE;
 	string country;	//Need to know the country to find the right map..
 	string syncUrl;	//And url to get the maps from
 	map eaMap;
@@ -73,19 +73,6 @@ PROC GLOBAL
 		endif;
 	end;
 	
-	function setGPSCoordinates()
-		if getOS() = 20 then //Only do it on androids
-			gps(open);
-
-			if gps(read,60) then // a successful attempt at a read, for up to 60 seconds
-				gpsIntN = gps(latitude);
-				gpsIntE = gps(longitude);		    			
-			endif;
-			gps(close);
-			eaMap.addMarker(gpsIntN, gpsIntE);
-		endif;
-	end;
-	
 	
 	
 	//For the user bar: Displays the map of the ea
@@ -98,17 +85,7 @@ PROC GLOBAL
 			eaMap.setBaseMap(mapFileName);
 		else
 			eaMap.setBaseMap(satellite);
-		endif;
-		//eaMap.showCurrentLocation(1);	apparently didn't work
-		if gpsIntN <> 0 then
-			eaMap.addmarker(gpsIntN, gpsIntE);
-		elseif visualValue(LL7A) <> NOTAPPL and visualValue(LL7A) <> DEFAULT then
-			eaMap.addmarker(LL7A, LL7B);
-		//else
-			//errmsg(tr(113));
-		endif;
-		eaMap.addTextButton("GPS", setGPSCoordinates());
-
+		endif;		
 		eaMap.show();
 	end;
 	
