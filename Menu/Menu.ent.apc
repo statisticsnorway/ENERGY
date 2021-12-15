@@ -56,8 +56,7 @@ PROC GLOBAL
 									tr(55), ": ", VILLAGE_NAME, "\n",
 									tr(56), ": ", EA_NAME, "\n\n",
 									"(1 = ", tr(21), " 2 = ", tr(58), ")");
-		//String i  = prompt(verifyString,numeric);
-		String i  = edit("9",accept(verifyString,tr(21),tr(22)));
+		String i  = prompt(verifyString,numeric);
 		verifyVariables = i;
 		
 	end;
