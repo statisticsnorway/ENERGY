@@ -599,9 +599,7 @@ postproc
 	endif;
 
 PROC AB6
-
 preproc
-
 	if AB5 < 15 then	//Keeping this limit for question about civil status despite grownups are 16+
 		$ = 8;
 		noinput;
@@ -1111,15 +1109,13 @@ postproc
 
 
 PROC C16
-
 preproc
-
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(174));
 	endif;
 
 postproc
-	if $ in 4,8 then
+	if $ in 4,88 then
 		skip to C22;
 	endif;
 
@@ -1316,9 +1312,7 @@ PROC C54
 
 
 PROC C56
-
 postproc
-
 	numeric rangeStart = 20,
 			rangeEnd = 887,
 			rangeUnknown = 888;
@@ -1435,7 +1429,7 @@ PROC C75
 
 	if $ = 24 then
 		C76 = 4;
-		skip to c82;
+		skip to C82;
 	endif ;
 	if $ > 24 and $ <> 88 then
 		errmsg(tr(111),24);

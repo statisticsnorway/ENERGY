@@ -319,7 +319,8 @@ Len=2
 [ValueSet]
 Label=How far is the nearest [TANESCO/EDM]-office?|Qual a distância do escritório mais próximo da EDM?
 Name=D2_VS1
-Value=0:99
+Value=0:87
+Value=88;Dont know||Hajui
 
 [Item]
 Label=Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?|Verificação do Inquiridor/a/CAPI: A comunidade está ligada à rede nacional ou a uma mini-rede local?
@@ -413,6 +414,12 @@ Label=How much did the community pay to get the grid connection?|Quanto pagou co
 Name=D10
 Start=113
 Len=8
+
+[ValueSet]
+Label=How much did the community pay to get the grid connection?|Quanto pagou comunidade para ligação à rede?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
+Name=D10_VS1
+Value=0:88888887
+Value=88888888;Dont Know||Hajui
 
 [Item]
 Label=Is grid service available to the whole community or only a part of the community?|O serviço de rede está disponível para toda a comunidade ou apenas uma parte da comunidade?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?

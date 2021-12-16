@@ -335,10 +335,9 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Consulte qualquer custo da comunidade para ter a infraestrutura instalada.&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?&#160;</span></p>
-            <p>&#160;</p>
-            <p><span style="font-size:16px;color:#0000ff;">REFER TO ANY COMMUNITY COST TO HAVE THE INFRASTRUCTURE INSTALLED&#160;</span></p>
-            <p>&#160;</p>
+            <p><span style="font-size:16px;color:#000000;">Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?&nbsp;</span></p>
+            <p>&nbsp;<span style="color: rgb(0, 0, 255);">REJEA KWENYE GHARAMA ZA JAMII KUWEKA MIUNDOMBINU</span></p><p><span style="color: rgb(0, 0, 255);">Kama 88888887 au zaidi andika 88888887&nbsp;</span></p>
+            <p>&nbsp;</p>
             
         helpText:
           EN: |
@@ -544,7 +543,7 @@ questions:
             <p><span style="font-size:16px;color:#008000;">A que distância fica o posto mais próximo~~elecCompany~~ ?</span></p><p><span style="color: rgb(0, 0, 255);">Não sabe…88&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);">99 km ou mais…99&nbsp;</span></p><p><span style="color: rgb(0, 0, 255);"><br></span></p>
             
           SW: |
-            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani (umbali kwa kilometa)?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 99 au zaidi andika 99</span></p>
+            <p>Je! Ofisi ya&nbsp;<span style="color: rgb(0, 128, 0);">~~elecCompany~~</span>&nbsp;iliyo karibu iko umbali gani (umbali kwa kilometa)?<span style="font-size: 16px;">&nbsp;</span></p><p><span style="font-size: 16px;" class="instruction">Hajui..88</span></p><p><span style="font-size: 16px;" class="instruction">Kama ni KM 87 au zaidi andika 87</span></p>
             
         helpText:
           EN: |

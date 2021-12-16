@@ -535,6 +535,7 @@ Name=D2
 Position=235,78,264,98
 Item=D2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=ComboBox
 Form=3
   
 [Text]
@@ -636,7 +637,7 @@ Name=D10
 Position=107,333,220,353
 Item=D10,COMMUNITY_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
+DataCaptureType=ComboBox
 Form=3
   
 [Text]

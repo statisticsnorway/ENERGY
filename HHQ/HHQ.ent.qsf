@@ -334,7 +334,7 @@ questions:
             <p>&#160;</p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, katika kipindi cha miezi 12 iliyopita  ni kwa miezi mingapi ~~currMember~~ ,  mkuu wa kaya ameishi ndani ya kaya hii?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, katika miezi 12 iliyopita  ni miezi mingapi ~~currMember~~ ,  mkuu wa kaya ameishi ndani ya kaya hii?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -353,7 +353,7 @@ questions:
             <p><font face="Arial, sans-serif">O chefe enviou ou trouxe de volta algum dinheiro ou provisões para o agregado familiar durante os últimos 12 meses?</font><br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, katika kipindi cha miezi 12 iliyopita, mkuu wa kaya alituma fedha au vitu kwa ajili ya kuitunza Kaya?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, katika kipindi cha miezi 12 iliyopita, mkuu wa kaya alituma fedha yoyote au vitu kwa ajili ya Kaya?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -391,7 +391,7 @@ questions:
             <p><span style="font-family: Arial, sans-serif;">Qual é o nome do principal respondente do agregado familiar?</span><br></p><p><br></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, mhojiwa katika kaya hii anaitwa nani?&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, mhojiwa mkuu katika kaya hii anaitwa nani?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -664,7 +664,7 @@ questions:
             O(A)&nbsp;<span style="color: rgb(0, 128, 0);">~~AB1(curocc())~~ </span>era chefe do agregdo familiar ha 5 anos atrás?&nbsp;<p></p>
             
           SW: |
-            Je,&nbsp;<span style="color: rgb(0, 128, 0);">~~AB1(curocc())~~</span>&nbsp;alikuwa ni mkuu wa kaya katika miaka 5 iliyopita ?<p></p>
+            Je,&nbsp;<span style="color: rgb(0, 128, 0);">~~AB1(curocc())~~</span>&nbsp;alikuwa ni mkuu wa kaya katika miaka 5 iliyopita?<p></p>
             
         helpText:
           EN: |
@@ -1271,7 +1271,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">Essa moradia/</span><font face="Arial, sans-serif"><span style="font-size: 20px;">habitação</span></font><span style="font-family: Arial, sans-serif; font-size: 20px;">&nbsp;é própria?&nbsp;</span></p>
             
           SW: |
-            <p><span style="font-size:16px;color:#000000;">Je, kaya unamiliki/mnamiliki makazi haya?&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Je, kaya inamiliki makazi haya?&nbsp;</span></p>
             
         helpText:
           EN: |
@@ -2290,7 +2290,7 @@ questions:
             <p>Será que a&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 16px;">~~electricityCompany~~</span>&nbsp;conectou a sua casa à rede eléctica, você mesmo fez isso, alguém fez isso ou a casa estava ligada quando seu agregado familiar se mudou para esta casa?&nbsp;&nbsp;</p><p><font color="#0000ff">Inquiridor pode responder por observação.</font></p><p></p>
             
           SW: |
-            <p>Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~electricityCompany~~</span>&nbsp;imekuunganisha na umeme kwenye gridi, Je uliunganisha pekeyako, Je mtu mwingine alifanya au nyumba iliunganishwa kipindi ambapo kaya yako ilipohamia kwenye nyumba hii?</p><p></p><p><span class="instruction">UNAWEZA UKAJIBU KWA KUTAZAMA (KUCHUNGUZA)&nbsp;</span><br></p><p></p>
+            <p>Je,&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif; font-size: 20px;">~~electricityCompany~~</span>&nbsp;imekuunganisha na umeme kwenye gridi, Je umeme uliozalishwa na kaya yako, Je mtu mwingine alifanya au nyumba iliunganishwa kipindi ambapo kaya yako ilipohamia kwenye nyumba hii?</p><p></p><p><span class="instruction">UNAWEZA UKAJIBU KWA KUTAZAMA (KUCHUNGUZA)&nbsp;</span><br></p><p></p>
             
         helpText:
           EN: |
@@ -2398,7 +2398,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, ilichukua siku ngapi kuunganishiwa umeme wa gridi baada ya kuwasilisha maombi?&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">(Jaza 0 kama ni mara baada ya kuomba)&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">(Jaza 0 kama ni mara baada ya kuomba), 888 kama hajui</span></p>
             
         helpText:
           EN: |
@@ -2422,7 +2422,7 @@ questions:
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, baada ya kuunganishiwa umeme wa Gridi ya Taifa ni wiki ngapi zilipita kabla ya kuanza kutumia umeme kwenye kaya hii?&nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">(Jaza 0 kama ni mara baada ya kuomba)&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">(Jaza 0 kama ni mara baada ya kuomba), 888 kama hajui</span></p>
             
         helpText:
           EN: |
@@ -2460,7 +2460,7 @@ questions:
             A seu agregado familiar tem um contador elétrico em conjunto com outros residências ou apenas é seu próprio?<p></p>
             
           SW: |
-            Je, kaya yako ina mita ya umeme mnayotumia pamoja na kaya nyingine au ni kwa matumizi yako pekee?<p></p>
+            Je, kaya yako ina mita ya umeme mnayotumia pamoja na kaya nyingine au ni kwa matumizi kaa yako pekee?<p></p>
             
         helpText:
           EN: |
@@ -3239,7 +3239,7 @@ questions:
             <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Qual é o total de Amper-houra (Ah) indicado nas baterias do painel solar?&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">Leia a placa de informação das pilhas, se disponível. Soma a Ah para todas as baterias. Alcance: 20-900.&nbsp;</span></font></p><p><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;">(Amp-hours ( Ah).&nbsp;</span></font></p><p><span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Não sabe=888</span><font face="Arial, sans-serif" color="#0000ff"><span style="font-size: 16px;"><br></span></font></p>
             
           SW: |
-            <p>Je, nini ya masaa ya Ampia (Ah) yaliyotajwa kwenye betri?&nbsp;</p>
+            <p>Je, nini jumla ya masaa ya Ampia (Ah) yaliyotajwa kwenye betri?&nbsp;</p>
             <p><span style="font-size:16px;color:#0000ff;">Mdadisi: Kama mhojiwa hajui muombe usome lebo ya betri&nbsp;</span></p><p><font color="#0000ff">Haijulikani = 88</font><br></p>
             
         helpText:
@@ -5020,7 +5020,7 @@ questions:
             Usou alguma eletricidade para a sua produção de sub-produtos agrícolas, incluindo farinha, amido, sumo, cerveja, compota, óleo, sementes, farelo, etc.?<p></p>
             
           SW: |
-            Mazao ya kilimo, pamoja na unga, wanga, juisi, bia, jam, mafuta, mbegu, makapi etc.<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Mazao ya kilimo, pamoja na unga, wanga, juisi, bia, jam, mafuta, mbegu, makapi etc.<p></p>
             
   - name: HHQ_DICT.GP28
     conditions:
@@ -5033,7 +5033,7 @@ questions:
             </p>
             
           SW: |
-            Mazao yatokanayo na mifugo (maziwa, jibini)<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Mazao yatokanayo na mifugo (maziwa, jibini)<p></p>
             
   - name: HHQ_DICT.GP29
     conditions:
@@ -5045,7 +5045,7 @@ questions:
             Usou alguma eletricidade para a sua produção de peixe fresco/processado?<p></p>
             
           SW: |
-            Samaki wabichi/ waliosindikwa<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Samaki wabichi/ waliosindikwa<p></p>
             
   - name: HHQ_DICT.GP3
     conditions:
@@ -5069,7 +5069,7 @@ questions:
             Usaste eletricidade para a tua produção de lenha, carvão caseiro?<p></p>
             
           SW: |
-            Kuni, mikaa iliyotengenezwa nyumbani<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Kuni, mikaa iliyotengenezwa nyumbani<p></p>
             
   - name: HHQ_DICT.GP31
     conditions:
@@ -5081,7 +5081,7 @@ questions:
             Usou alguma eletricidade para a sua produção de madeira de construção, postes de madeira ou outro material de construção?<p></p>
             
           SW: |
-            Mbao za ujenzi, miti ya kuni au vifaa vingine vya ujenzi<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Mbao za ujenzi, miti ya kuni au vifaa vingine vya ujenzi<p></p>
             
   - name: HHQ_DICT.GP32
     conditions:
@@ -5093,7 +5093,7 @@ questions:
             Usou alguma eletricidade para a sua produção de tapetes, tijolos, móveis de cana, cestos de tecelagem, erva de colmo, etc.?<p></p>
             
           SW: |
-            Mikeka, matofali, fanicha , vikapu vya kufuma, nyasi za kuezekea<p></p>
+            Je, umeme wowote ulitumika kwa ajili ya taa au mashine kwa uzalishaji huu wa Mikeka, matofali, fanicha , vikapu vya kufuma, nyasi za kuezekea<p></p>
             
   - name: HHQ_DICT.GP33
     conditions:
@@ -5118,7 +5118,7 @@ questions:
             Você usou alguma eléctricidade para os seus serviços profissionais como médico, contabilista, advogado, tradutor, tutor privado, parteira, pedreiro, etc.?<p></p>
             
           SW: |
-            <p>Je! ulisitisha BIASHARA/HUDUMA yoyote kati ya hizi zifuatazo;</p><p></p><p>Kutoa huduma za kitaalam kama daktari, mhasibu, wakili, mtafsiri, mkufunzi binafsi, mkunga, mwashi, n.k.?<br></p><p></p>
+            <p>Je! ulisitisha Kutoa huduma za kitaalam kama daktari, mhasibu, wakili, mtafsiri, mkufunzi binafsi, mkunga, mwashi, n.k.?<br></p><p></p>
             
   - name: HHQ_DICT.GP35
     conditions:
@@ -5130,7 +5130,7 @@ questions:
             Você usou alguma eletricidade para a sua loja doméstica ou serviço a partir de casa, como lavagem de carros, metalúrgido, mecânico, carpinteiro, barbeiro, alfaiate, etc?<p></p>
             
           SW: |
-            Kuendesha duka linalomilikiwa na kaya au kutoa huduma nyumbani kama vile kuosha magari, fundi chuma, fundi mekanika, seremala, kinyozi, fundi cherehani nk?<p></p>
+            Je! ulisitisha Kuendesha duka linalomilikiwa na kaya au kutoa huduma nyumbani kama vile kuosha magari, fundi chuma, fundi mekanika, seremala, kinyozi, fundi cherehani nk?<p></p>
             
   - name: HHQ_DICT.GP36
     conditions:
@@ -5142,7 +5142,7 @@ questions:
             Usou alguma eléctricidade para o seu negócio de comércio ou serviços numa rua ou num mercado?<p></p>
             
           SW: |
-            Kumiliki biashara, huduma mitaani au sokoni<p></p>
+            Je! ulisitisha Kumiliki biashara, huduma mitaani au sokoni<p></p>
             
   - name: HHQ_DICT.GP37
     conditions:
@@ -5154,7 +5154,7 @@ questions:
             Usou alguma eletricidade para o seu táxi ou pick-up doméstico para fornecer serviços de transporte ou de mudança?<p></p>
             
           SW: |
-            Kuendesha teksi inayomilikiwa na kaya au pikapu&nbsp; inayotoa huduma ya usafirishaji au ya huduma za kutembeza/umachinga?<p></p>
+            Je! ulisitisha Kuendesha teksi inayomilikiwa na kaya au pikapu&nbsp; inayotoa huduma ya usafirishaji au ya huduma za kutembeza/umachinga?<p></p>
             
   - name: HHQ_DICT.GP38
     conditions:
@@ -5166,7 +5166,7 @@ questions:
             Usou eléctricidade para o seu bar ou restaurante?<p></p>
             
           SW: |
-            Kumiliki baa au mgahawa<p></p>
+            Je! ulisitisha Kumiliki baa au mgahawa<p></p>
             
   - name: HHQ_DICT.GP39
     conditions:
@@ -5178,7 +5178,7 @@ questions:
             Usou alguma eléctricidade para o seu outro negócio não agrícola, mesmo que seja uma pequena empresa gerida de casa ou de rua?<p></p>
             
           SW: |
-            Kumiliki biashara nyingine yoyote isiyo ya kilimo, hata ikiwa ni biashara ndogo inayoendeshwa&nbsp; nyumbani au barabarani<p></p>
+            Je! ulisitisha Kumiliki biashara nyingine yoyote isiyo ya kilimo, hata ikiwa ni biashara ndogo inayoendeshwa&nbsp; nyumbani au barabarani<p></p>
             
   - name: HHQ_DICT.GP4
     conditions:
@@ -5226,7 +5226,7 @@ questions:
             Alguém no agregado familiar fez algum trabalho público (para o governo, doadores, instituições de caridade) como dinheiro por trabalho antes do início da pandemia global no ano passado?<p></p>
             
           SW: |
-            Je! Kuna mtu yeyote katika kaya alifanya kazi ya umma (kwa serikali, wafadhili, misaada) kama vile pesa-kwa-kazi kabla ya janga la corona Machi 2020?<p></p>
+            Je! Kuna mtu yeyote katika kaya alifanya kazi ya umma (kwa serikali, wafadhili, misaada) kwa malipo kabla ya janga la corona Machi 2020?<p></p>
             
   - name: HHQ_DICT.GP43
     conditions:
@@ -6725,7 +6725,7 @@ questions:
             <p><span style="font-family: Arial, sans-serif;">Cultiva alguma terra/machamba? </span><font color="#0000ff" style="font-family: Arial, sans-serif; font-size: 20px;"><span style="font-size: 16px;">Se sim</span></font><span style="font-family: Arial, sans-serif;">: Qual é o tamanho da área? ?&nbsp;</span><br></p>
             
           SW: |
-            <p>Sasa tungependa kukuuliza maswali kadhaa juu ya shughuli za kilimo na ufugaji.&nbsp;</p><p>Je! Unalima ardhi yoyote? </p><p>IKIWA HIVYO: eneo hilo ni kubwa kiasi gani?<br></p>
+            <p>Sasa tungependa kukuuliza maswali kadhaa juu ya shughuli za kilimo na ufugaji.&nbsp;</p><p>Je! Unalima ardhi yoyote? </p><p>IKIWA HIVYO: eneo hilo ni kubwa kiasi gani- (ekari)?<br></p>
             
         helpText:
           EN: |
@@ -7914,7 +7914,7 @@ questions:
             <p>A. Quanto gastou para comprar ~~getLabel(Q2_NUM, curocc())~~&nbsp;nos últimos 7 dias todos juntos?&nbsp;</p><p><font color="#0000ff">Em moeda local&nbsp;</font></p><p><font color="#0000ff">88888888=Não sabe&nbsp;</font></p><p></p>
             
           SW: |
-            <p><span class="normal">Sasa naomba kukuuliza kuhusu taarifa zinazohusu Matumizi ya kaya kwenye bidhaa za chakula na bidhaa zisizo za chakula kwa kipindi cha siku 7 zilizopita.&nbsp;</span>Matumizi (ni pamoja na bidhaa zilizonunuliwa, zinalizalishwa / zilizopatikana na kupokelewa kama zawadi / mchango)&nbsp;</p><p>A. Kaya yako ilitumia kiasi gani kununua&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>?</p><p><span class="instruction">Mdadidisi kadiria kupata kiwango sahihi</span></p><p><span class="instruction"><span style="font-size: 16px;">88888888=sijui</span><br></span></p><p><span class="normal"><br></span></p><p></p><p></p>
+            <p><span class="normal">Sasa naomba kukuuliza kuhusu taarifa zinazohusu Matumizi ya kaya kwenye bidhaa za chakula na bidhaa zisizo za chakula kwa kipindi cha siku 7 zilizopita.&nbsp;</span>Matumizi (ni pamoja na bidhaa zilizonunuliwa, zinalizalishwa / zilizopatikana na kupokelewa kama zawadi / mchango)&nbsp;</p><p>A. Kaya yako ilitumia kiasi gani cha fedha kununua&nbsp;<span style="color: rgb(0, 128, 0);">~~getLabel(Q2_NUM, curocc())~~</span>?</p><p><span class="instruction">Mdadidisi kadiria kupata kiwango sahihi</span></p><p><span class="instruction"><span style="font-size: 16px;">88888888=sijui</span><br></span></p><p><span class="normal"><br></span></p><p></p><p></p>
             
         helpText:
           EN: |

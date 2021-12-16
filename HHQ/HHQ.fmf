@@ -12,6 +12,7 @@ File=.\HHQ.dcf
 [Form]
 Name=FORM000
 Label=Interview particulars
+QuestionTextHeight=153
 Level=1
 Size=842,940
   
@@ -1705,26 +1706,26 @@ DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=57,6,73,22
+Position=46,6,62,22
 Text=C1
  
   
 [Field]
 Name=C2
-Position=232,59,247,79
+Position=111,59,126,79
 Item=C2,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=50,62,66,78
+Position=46,62,62,78
 Text=C2
  
   
 [Field]
 Name=C3
-Position=220,82,249,102
+Position=111,82,140,102
 Item=C3,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
@@ -1737,182 +1738,182 @@ Text=C3
   
 [Field]
 Name=C4
-Position=252,108,267,128
+Position=111,108,126,128
 Item=C4,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=70,111,86,127
+Position=46,111,62,127
 Text=C4
  
   
 [Field]
 Name=C5
-Position=236,133,279,153
+Position=111,133,154,153
 Item=C5,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
 Form=4
   
 [Text]
-Position=70,136,86,152
+Position=46,136,62,152
 Text=C5
  
   
 [Field]
 Name=C6
-Position=253,162,268,182
+Position=111,162,126,182
 Item=C6,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=71,165,87,181
+Position=46,165,62,181
 Text=C6
  
   
 [Field]
 Name=C7
-Position=252,182,267,202
+Position=111,182,126,202
 Item=C7,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=70,185,86,201
+Position=46,185,62,201
 Text=C7
  
   
 [Field]
 Name=C8
-Position=248,204,263,224
+Position=111,204,126,224
 Item=C8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=66,207,82,223
+Position=46,207,62,223
 Text=C8
  
   
 [Field]
 Name=C9
-Position=251,227,266,247
+Position=111,227,126,247
 Item=C9,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=69,230,85,246
+Position=46,230,62,246
 Text=C9
  
   
 [Field]
 Name=C10
-Position=256,252,271,272
+Position=111,252,126,272
 Item=C10,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=74,255,97,271
+Position=46,255,69,271
 Text=C10
  
   
 [Field]
 Name=C11
-Position=254,280,283,300
+Position=111,280,140,300
 Item=C11,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=72,283,95,299
+Position=46,283,69,299
 Text=C11
  
   
 [Field]
 Name=C12
-Position=238,315,267,335
+Position=111,315,140,335
 Item=C12,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=64,318,87,334
+Position=46,318,69,334
 Text=C12
  
   
 [Field]
 Name=C13
-Position=114,343,143,363
+Position=111,343,140,363
 Item=C13,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=60,346,83,362
+Position=46,346,69,362
 Text=C13
  
   
 [Field]
 Name=C14
-Position=114,373,143,393
+Position=111,373,140,393
 Item=C14,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=60,376,83,392
+Position=46,376,69,392
 Text=C14
  
   
 [Field]
 Name=C15
-Position=114,403,129,423
+Position=111,403,126,423
 Item=C15,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=60,406,83,422
+Position=46,406,69,422
 Text=C15
  
   
 [Field]
 Name=C16
-Position=234,434,263,454
+Position=111,434,140,454
 Item=C16,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=52,437,75,453
+Position=46,437,69,453
 Text=C16
  
   
 [Field]
 Name=C17
-Position=222,457,251,477
+Position=111,457,140,477
 Item=C17,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=48,460,71,476
+Position=46,460,69,476
 Text=C17
  
   
@@ -1947,7 +1948,7 @@ Name=C20
 Position=101,548,144,568
 Item=C20,HHQ_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=NumberPad
+DataCaptureType=ComboBox
 Form=4
   
 [Text]
@@ -1970,172 +1971,172 @@ Text=C21
   
 [Field]
 Name=C22
-Position=223,614,252,634
+Position=100,614,129,634
 Item=C22,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=41,617,64,633
+Position=28,617,51,633
 Text=C22
  
   
 [Field]
 Name=C23
-Position=86,640,101,660
+Position=100,640,115,660
 Item=C23,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=32,643,55,659
+Position=28,643,51,659
 Text=C23
  
   
 [Field]
 Name=C24
-Position=88,713,117,733
+Position=100,713,129,733
 Item=C24,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=34,716,57,732
+Position=28,716,51,732
 Text=C24
  
   
 [Field]
 Name=C25
-Position=189,747,232,767
+Position=100,747,143,767
 Item=C25,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=4
   
 [Text]
-Position=23,750,46,766
+Position=28,750,51,766
 Text=C25
  
   
 [Field]
 Name=C26
-Position=172,778,243,798
+Position=100,778,171,798
 Item=C26,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=4
   
 [Text]
-Position=22,781,45,797
+Position=28,781,51,797
 Text=C26
  
   
 [Field]
 Name=C27
-Position=71,816,86,836
+Position=100,816,115,836
 Item=C27,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=17,819,40,835
+Position=28,819,51,835
 Text=C27
  
   
 [Field]
 Name=C28
-Position=75,849,104,869
+Position=100,849,129,869
 Item=C28,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=21,852,44,868
+Position=28,852,51,868
 Text=C28
  
   
 [Field]
 Name=C29
-Position=63,879,78,899
+Position=100,879,115,899
 Item=C29,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=4
   
 [Text]
-Position=9,882,32,898
+Position=28,882,51,898
 Text=C29
  
   
 [Field]
 Name=C30
-Position=63,909,176,929
+Position=100,909,213,929
 Item=C30,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=4
   
 [Text]
-Position=9,912,32,928
+Position=28,912,51,928
 Text=C30
  
   
 [Field]
 Name=C31
-Position=154,942,239,962
+Position=100,942,185,962
 Item=C31,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
 Form=4
   
 [Text]
-Position=12,945,35,961
+Position=28,945,51,961
 Text=C31
  
   
 [Field]
 Name=C32
-Position=183,968,212,988
+Position=100,968,129,988
 Item=C32,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=9,970,32,986
+Position=28,970,51,986
 Text=C32
  
   
 [Field]
 Name=C33
-Position=134,993,247,1013
+Position=100,993,213,1013
 Item=C33,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=8,989,31,1005
+Position=28,989,51,1005
 Text=C33
  
   
 [Field]
 Name=C34
-Position=176,1018,219,1038
+Position=100,1018,143,1038
 Item=C34,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=4
   
 [Text]
-Position=10,1016,33,1032
+Position=28,1016,51,1032
 Text=C34
  
   
 [Field]
 Name=C35
-Position=131,1045,216,1065
+Position=100,1045,185,1065
 Item=C35,HHQ_DICT
 Form=4
   
@@ -6216,7 +6217,7 @@ FieldLabelType=DictionaryName
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,34,20
+Position=0,0,26,16
 Text=Q2A
  
 [EndColumn]
