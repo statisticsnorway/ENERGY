@@ -58,8 +58,6 @@ PROC GLOBAL
 		// String i  = edit("9",accept(verifyString,tr(21),tr(22)));
 		verifyVariables = i;	
 	end;
-	
-
 
 	//Get or send data to/from interviewer. Supervisor always acts as the server
 	function bluetoothServer()
