@@ -10,9 +10,11 @@ PROC GLOBAL
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
 	numeric vsetMax = 100;		//Maximum number of items in dropdown lists	
 	string newEA = "2";			//To keep track if we moved to a new EA. 2 = No
-	array string tabletCount(4,2); //To keep track of number of households assigned to each interviewer/tablet
-									// first dimension: Id of tablet, second: number of HH assigned to tablet
-	numeric serialStart = 0;			//Sets the start value of the serial number used for households (to be found in the users.csdb
+	array string tabletCount(5,2); //To keep track of number of households assigned to each interviewer/tablet
+									// first dimension: Id of tablet (Up to 5 tablets per team)
+									//, second: number of HH assigned to tablet
+									
+	numeric serialStart = 0;		//Sets the start value of the serial number used for households (to be found in the users.csdb
 									
 	map HHmap;		//for showing the HHs on a map
 
@@ -176,7 +178,7 @@ PROC GLOBAL
 	
 	function writeSample(conntype, theCount, theTotal, sampleSize)
 
-		//Going to need number of interviewers. Assuming always 3 or 4
+		//Going to need number of interviewers. Assuming always 3, 4 or 5
 		numeric numHHPerInt;	//Number of HH per interviewer
 		numeric intNum;			//Number of interviewers
 		if tabletCount(2,1) = "" then	//Only one interviewer
@@ -188,21 +190,26 @@ PROC GLOBAL
 		elseif tabletCount(4,1) = "" then	//3
 			numHHPerInt = sampleSize / 3;
 			intNum = 3;
-		else
+		elseif tabletCount(5,1) = "" then	//4
 			numHHPerInt = samplesize / 4;
 			intNum = 4;
+		else
+			numHHPerInt = sampleSize / 5;
+			intNum = 5;
 		endif;
 		
-		numeric test;
+		//errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
+		
+		numeric sf;
 		if fileexist("../Data/Sample.csdb") then
-			test = setFile(SAMPLING_DICT, "../Data/Sample.csdb");
+			sf = setFile(SAMPLING_DICT, "../Data/Sample.csdb");
 		else
-			test = setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
+			sf = setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
 		endif;
-		//errmsg("Setfile? %d (should be 1) ", test);
+		//errmsg("Setfile? %d (should be 1) ", sf);
 				
 		
-		//Then do the actual sample process
+		//Then do the actual sample process. Finding where to start and distance between
 		numeric step, startPoint;		
 		if theCount = 1 or theCount = theTotal then
 			step = 1;
@@ -249,38 +256,39 @@ PROC GLOBAL
 				SA12 = LL12;
 				SUR = LLUR;
 				
-				//Need to keep track of how many HH is assigned to each enumerator. Ie find the index of the current
-				//tablet in the array
+				//Need to keep track of how many HH is assigned to each enumerator. 
+				//Ie find the index of the current tablet in the array
 				numeric j = 1;
-				while j < 5 do
+				while j <= intNum do
 					if tabletCount(j,1) = tstrip(LLOGIN) then
 						break;
 					endif;
 					inc(j);
 				enddo;
-				if j = 5 then
-					j = 4;
+				
+				if j > intNum then
+					j = intNum;
 				endif;
 				
 				numeric currHHNum = toNumber(tabletCount(j,2));
 				if currHHNum = DEFAULT then
 					currHHNum = 0;
 				endif;
-				//errmsg("Int: %s, Ant. assignet denne int så langt: %d, Skal bli: %d, sampleSize: %d", tabletCount(j,1), currHHNum, numHHPerInt, sampleSize); 		
-			
+				
 		
 				if currHHNum < numHHPerInt then
 					//OK. This enumerator needs more HH to interview
 					inc(currHHNum);
 					tabletCount(j,2) = edit("9", currHHNum);
 					SLOGIN = LLOGIN;
-					writecase(SAMPLING_DICT);
+					numeric wc = writecase(SAMPLING_DICT);
+					//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
 				else
 					//Need to assign the HH to another one. Try one by one until I find somewhere
 					numeric found = 0;
 					numeric MaxSeek = 0;	//Just to avoid an eternal loop
 					
-					while found = 0 and MaxSeek < 60 do
+					while found = 0 and MaxSeek < 100 do	//trying 100 times
 						inc(MaxSeek);
 						seed(systime());
 						j = random(1,intNum);
@@ -292,12 +300,32 @@ PROC GLOBAL
 							inc(currHHNum);
 							tabletCount(j,2) = edit("9", currHHNum);
 							SLOGIN = tstrip(tabletCount(j,1));
-							writecase(SAMPLING_DICT);
+							numeric wc = writecase(SAMPLING_DICT);
+							//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
 							found = 1;
 						endif;
 					enddo;
+					
+					if maxSeek = 100 then	//Couldn't find a place to put it randomly. Doing it non-random instead
+						j = 1;
+						while j <= intNum do
+							currHHNum = toNumber(tabletCount(j,2));
+							if currHHNum = DEFAULT then
+								currHHNum = 0;
+							endif;	
+							if  currHHNum < numHHPerInt then
+								break;
+							endif;
+							inc(j);
+						enddo;
+						inc(currHHNum);
+						tabletCount(j,2) = edit("9", currHHNum);
+						SLOGIN = tstrip(tabletCount(j,1));
+						numeric wc = writecase(SAMPLING_DICT);
+						//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
+			
+					endif;
 				endif;
-				
 				currstep = currstep + step;
 				currIntStep = int(currStep);
 				inc(currCount);
@@ -308,6 +336,7 @@ PROC GLOBAL
 			endif;
 		endfor;
 		
+		//errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
 	 end;
 
 	
@@ -358,7 +387,7 @@ PROC GLOBAL
 				tabletCount(1,1) = tstrip(LLOGIN);
 			else
 				numeric j = 2;
-				while j < 5 do
+				while j < 6 do
 					if tabletCount(j-1,1) = tStrip(LLOGIN) then
 						break;
 					else
@@ -373,16 +402,20 @@ PROC GLOBAL
 			endif;
 			inc(ctr);			
 		endfor;
+		
 		if visualValue(M_URBAN_RURAL) = 2 then
-			setEnumerators = 24;	//Samplesize always the same for rural areas
+			if numOfInterviewers = 5 then
+				setEnumerators = 25;	//Sample size divisible by 5
+			else
+				setEnumerators = 24;	//Divisible by 3 or 4
+			endif;
 		else
 			if numOfInterviewers = 3 then
 				setEnumerators = 21;	//Need a number divisible by 3
 			else
-				setEnumerators = 20
+				setEnumerators = 20;
 			endif;
 		endif;
-		
 	end;
 
 
@@ -394,7 +427,8 @@ PROC GLOBAL
 		//which is dependent on the number of interviewers as well as urban/rural
 		tabletCount.clear();
 		numeric sampleSize = setEnumerators();
-		//errmsg("%s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), tabletCount(4,1));
+		//errmsg("%s, %s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), 
+		//		tabletCount(4,1), tabletCount(5,1));
 		//errmsg("About to sample %d", sampleSize);
 		
 		//get rid of sample data from previous EA:
@@ -457,11 +491,11 @@ PROC GLOBAL
 		//errmsg("Final: Solar: %d, grid: %d, none: %d", solarCount, gridCount, noneCount);
 		
 		if solarCount > 0 then
-			//errmsg("SAmpling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
+			//errmsg("Sampling solar. count: %d, tot: %d, sampleSize: %d", solarCount, totSolar, sampleSize);
 			writeSample(2, solarCount, totSolar, sampleSize);
 		endif;
 		if gridCount > 0 then
-			//errmsg("Smpling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
+			//errmsg("Sampling grid. count: %d, tot: %d, sampleSize: %d", gridCount, totGrid, sampleSize);
 			writeSample(1, gridCount, totGrid, sampleSize);
 		endif;
 		if noneCount > 0 then
@@ -699,7 +733,7 @@ PROC GLOBAL
 			//only one HH at this spot.. Open it now
 			writePff("Energy survey", "Menu", "", serialNos(1), "I");
 			//errmsg("about to start with resp: %s and number: %d", acceptoptions(1), serialNos(1));
-			//writePff("Household Questionnaire", "HHQ", respondent(1), serialNos(1), "I");
+			//writePff("H	ousehold Questionnaire", "HHQ", respondent(1), serialNos(1), "I");
 			writePff("Household Questionnaire", "HHQ", acceptOptions(1), serialNos(1), "I");
 		else
 			acceptOptions(ctr + 1) = makeText(tr(26));
