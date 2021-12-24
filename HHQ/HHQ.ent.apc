@@ -3276,10 +3276,8 @@ preproc
 
 	$ = GP_MEM[(curocc()*2)-1:2];
 	if $ <> "" then
-		noinput;
 		skip;
 	else
-		noinput;
 		skip to next;
 	endif;
 
