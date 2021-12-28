@@ -384,15 +384,15 @@ PROC GLOBAL
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 do
 			if ctr = 1 then
-				tabletCount(1,1) = tstrip(LLOGIN);
+				tabletCount(1,1) = tolower(tstrip(LLOGIN));
 			else
 				numeric j = 2;
 				while j < 6 do
-					if tabletCount(j-1,1) = tStrip(LLOGIN) then
+					if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then
 						break;
 					else
 						if tabletCount(j,1) = "" then
-							tabletCount(j, 1) = tStrip(LLOGIN);
+							tabletCount(j, 1) = tolower(tStrip(LLOGIN));
 							inc(numOfInterviewers);
 							//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LLOGIN))
 						endif;
@@ -403,7 +403,7 @@ PROC GLOBAL
 			inc(ctr);			
 		endfor;
 		
-		if visualValue(M_URBAN_RURAL) = 2 then
+		if visualValue(M_URBAN_RURAL) = 2 then	//rural
 			if numOfInterviewers = 5 then
 				setEnumerators = 25;	//Sample size divisible by 5
 			else
@@ -569,7 +569,7 @@ PROC GLOBAL
 							and AA1 = visualValue(M_REGION) and AA2 = visualValue(M_DISTRICT)
 							and AA3 = visualValue(M_SUBDISTRICT) and AA4 = visualValue(M_LOCALITY) and AA5 = visualValue(M_VILLAGE)
 							and AA6 = visualvalue(M_EA) and AA8 = serialNo
-							and tstrip(AALOGIN) = tstrip(M_LOGIN) then
+							and toLower(tstrip(AALOGIN)) = toLower(tstrip(M_LOGIN)) then
 						
 						theKey = key(HHQ_DICT);
 						//errmsg("Searching for this (found: %d): %s=%s?, %s=%s?, %d=%d?,  %d=%d?, %d=%d?, %d=%d?, %d=%d?, %d=%d?, %d=%d?, %s=%s",
@@ -607,7 +607,7 @@ PROC GLOBAL
 			//Same for Community: Is it partially saved or not?
 			string theKey = "";
 			forcase COMMUNITY_DICT do
-				if tstrip(C_LOGIN) = tstrip(M_LOGIN)
+				if tolower(tstrip(C_LOGIN)) = tolower(tstrip(M_LOGIN))
 						and C_A1 = visualValue(M_REGION)
 						and C_A2 = visualValue(M_DISTRICT)
 						and C_A3 = visualValue(M_SUBDISTRICT)
@@ -667,7 +667,7 @@ PROC GLOBAL
 		endif;
 
 		pffContent = pffContent + "[Parameters]\n";
-		pffContent = pffContent + "LOGIN=" + M_LOGIN + "\n";
+		pffContent = pffContent + "LOGIN=" + toLower(M_LOGIN) + "\n";
 		pffContent = pffContent + "REGION=" + edit("ZZ", visualvalue(M_REGION)) + "\n";
 		pffContent = pffContent + "DISTRICT=" + edit("ZZ", visualvalue(M_DISTRICT)) + "\n";
 		pffContent = pffContent + "SUBDISTRICT=" + edit("ZZZ", visualvalue(M_SUBDISTRICT)) + "\n";
@@ -720,7 +720,7 @@ PROC GLOBAL
 		array string respondent(14);
 		array serialNos(14);
 		
-		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and SLOGIN = M_LOGIN do
+		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and tolower(SLOGIN) = tolower(M_LOGIN) do
 			//errmsg("showHHs. Checking this: %d=%d?, %d=%d, %s=%s?", SA7A, gpsN, SA7B, gpsW, SLOGIN, M_LOGIN);
 		
 			inc(ctr);
@@ -781,7 +781,7 @@ PROC GLOBAL
 	
 	
 	function changeLogin()
-		LOGIN = prompt(makeText(tr(9)));
+		LOGIN = prompt(makeText(tr(9)));		
 		numeric load = loadcase(USERS_DICT, LOGIN);
 		if load = 0 then //No such user. Trying lowercase
 			LOGIN = tolower(LOGIN);
@@ -794,13 +794,13 @@ PROC GLOBAL
 				enddo;
 			endif;
 		endif;
+		LOGIN = tolower(LOGIN);
 		
 		if tolower(ROLE) = "supervisor" then
 			loggedIn = "S"
 		else
 			loggedIn = "I";
-		endif;
-		LOGIN = tolower(LOGIN);
+		endif;		
 		M_LOGIN = LOGIN;
 	end;	
 
@@ -925,7 +925,7 @@ preproc
 	
 	//Checking if person is already logged in
 	loggedIn = sysparm("LOGGEDIN");
-	LOGIN = sysparm("LOGIN");
+	LOGIN = toLower(sysparm("LOGIN"));
 	//errmsg("logged in: %s, login: %s", loggedIn, LOGIN);
 	if loggedIn = "S" or loggedIn = "I" then	
 		numeric load = loadcase(USERS_DICT, LOGIN);
@@ -962,6 +962,7 @@ postproc
 			reenter;		
 		endif;
 	endif;
+	
 	//Always using lowercase of login
 	LOGIN = toLower($);
 	
@@ -1016,7 +1017,7 @@ postproc
 		//New EA - or missing/wrong variables.
 		//need to set the serialstart if it hasn't been done
 		if serialStart = 0 then
-			LOGIN = M_LOGIN;
+			LOGIN = toLower(M_LOGIN);
 			loadCase(USERS_DICT, LOGIN);
 			serialStart = COUNTERSTART;
 		endif;
@@ -1074,7 +1075,7 @@ postproc
 			endif;
 			numeric ok = syncGetSample();
 			if ok = 1 then
-				numeric numCases = countCases(SAMPLING_DICT where SLOGIN = M_LOGIN
+				numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
 							and SA1 = visualValue(M_REGION) 
 							and SA2 = visualValue(M_DISTRICT)
 							and SA3 = visualValue(M_SUBDISTRICT)
@@ -1339,7 +1340,7 @@ postproc
 			numeric currSerial = serialStart;
 			if newEA = "2" then
 				//Not  NEW EA. Need to find biggest HH number until now
-				forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and
+				forcase LISTING_DICT where tolower(tstrip(LLOGIN)) = tolower(tstrip(M_LOGIN)) and
 							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
 							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
@@ -1354,7 +1355,7 @@ postproc
 				numeric lc = loadcase(LISTING_DICT, M_LOGIN, M_REGION, M_DISTRICT, M_SUBDISTRICT, M_LOCALITY, M_VILLAGE, M_EA, LL8);
 				if lc <> 0 then
 					//Case exists, the ea is not quite new after all.. :) Find biggest HH number
-					forcase LISTING_DICT where tstrip(LLOGIN) = tstrip(M_LOGIN) and
+					forcase LISTING_DICT where tolower(tstrip(LLOGIN)) = tolower(tstrip(M_LOGIN)) and
 							LL1 = visualvalue(M_REGION) and LL2 = visualvalue(M_DISTRICT)
 							and LL3 = visualvalue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualvalue(M_VILLAGE) and LL6 = visualvalue(M_EA) do
@@ -1406,10 +1407,12 @@ onfocus
 	
 	numeric i = 0;
 	numeric opened = open(SAMPLING_DICT);
+	//errmsg("open samplefile? %d", opened);
 	set first(SAMPLING_DICT);
 
 	while loadcase(SAMPLING_DICT) do
-		if tstrip(SLOGIN) = tstrip(M_LOGIN) then
+		//errmsg("Slogin: %s, mlogin: %s", tolower(tstrip(SLOGIN)), tolower(tstrip(M_LOGIN)));
+		if tolower(tstrip(SLOGIN)) = toLower(tstrip(M_LOGIN)) then		//Only work with the EAs assigned to this enumerator
 
 			numeric markerId = HHMap.addMarker(SA7A, SA7B);
 			HHMap.setMarkerDescription(markerId, strip(SA10) + "<br/>" + strip(SA11));
@@ -1424,7 +1427,7 @@ onfocus
 			AA5 = SA5;
 			AA6 = SA6;
 			AA8 = SA8;
-			AALOGIN = SLOGIN;
+			AALOGIN = tolower(SLOGIN);
 			
 			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);			
 			
