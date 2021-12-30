@@ -2400,8 +2400,29 @@ preproc
 			endif;
 			inc(i);
 		enddo;
-		noinput;
-		skip to O8;
+		
+		if i = 20 then
+			//For some reason no child has been found despite the fact that there should be one. 
+			//Just getting the first one I can find..
+			i = 1;
+			while i < 20 do
+				if visualValue(AB5(i)) <= 15 then
+					chosenChildName = AB1(i);
+					$ = i;
+					break;
+				else
+					inc(i);
+				endif;
+			enddo;
+		endif;
+		
+		//again: If i = 20, no child is found. Giving up
+		if i < 20 then
+			noinput;
+			skip to O8;
+		else
+			skip to K_FORM;
+		endif;
 	else
 		skip to K_FORM;
 	endif;

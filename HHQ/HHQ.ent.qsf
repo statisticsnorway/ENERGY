@@ -7717,7 +7717,7 @@ questions:
             Criança<p></p>
             
           SW: |
-            Je!&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~chosenChildName~~</span>&nbsp;alikuwa na kikohozi cha muda mrefu au ugonjwa mwingine na kikohozi kwa wakati wowote katika siku 14 zilizopita?<p></p>
+            Child<p></p>
             
         helpText:
           EN: |
