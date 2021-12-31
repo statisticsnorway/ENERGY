@@ -166,6 +166,24 @@ PROC GLOBAL
 		HHMap.show();
 	end;
 			
+			
+	function countTeamMembers()
+		//first get team number
+		numeric teamNo;
+		forcase USERS_DICT where toLower(tstrip(LOGIN)) = toLower(tstrip(M_LOGIN)) do
+			teamNo = TEAMNUMBER;
+		endfor;
+		//Then count members
+		numeric ctr = 0;
+		forcase USERS_DICT where TEAMNUMBER = teamNo do
+			inc(ctr);
+		endfor;
+		
+		//errmsg("Number in team: %d", ctr - 1);
+		countTeamMembers = ctr - 1;		//Not counting the supervisor
+	end;
+
+		
 	
 	//*******************************writes to the sample dictionary**********************
 	//Parameters:
@@ -309,7 +327,7 @@ PROC GLOBAL
 					if maxSeek = 100 then	//Couldn't find a place to put it randomly. Doing it non-random instead
 						j = 1;
 						while j <= intNum do
-							currHHNum = toNumber(tabletCount(j,2));
+							currHHNum = toNumber(tabletCount(j,2));	//Number of HHs assigned so far
 							if currHHNum = DEFAULT then
 								currHHNum = 0;
 							endif;	
@@ -318,7 +336,12 @@ PROC GLOBAL
 							endif;
 							inc(j);
 						enddo;
-						inc(currHHNum);
+
+						inc(currHHNum);	//Gonna assign one more
+						if j > intNum then
+							j = intNum;
+						endif;
+						
 						tabletCount(j,2) = edit("9", currHHNum);
 						SLOGIN = tstrip(tabletCount(j,1));
 						numeric wc = writecase(SAMPLING_DICT);
@@ -379,29 +402,65 @@ PROC GLOBAL
 	//The function returns total number of HH to sample
 	function numeric setEnumerators()
 		numeric ctr = 1, numOfInterviewers = 1;
+		numeric teamMembersNo = countTeamMembers();
+		//errmsg("Num of members: %d", teamMembersNo);
 		
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 do
+			//errmsg("Current: %s", tolower(tstrip(LLOGIN)));
 			if ctr = 1 then
+				//errmsg("About to add no %d, %s", ctr, tstrip(LLOGIN));
 				tabletCount(1,1) = tolower(tstrip(LLOGIN));
+				inc(ctr);
 			else
-				numeric j = 2;
-				while j < 6 do
-					if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then
+				//errmsg("About to add next %d, %s???", ctr, tstrip(LLOGIN));
+				numeric j = 1;
+				numeric found = 0;
+				while j < ctr do
+					if tabletCount(ctr-j,1) = toLower(tstrip(LLOGIN)) then	//Name already registered
+						found = 1;
 						break;
-					else
-						if tabletCount(j,1) = "" then
-							tabletCount(j, 1) = tolower(tStrip(LLOGIN));
-							inc(numOfInterviewers);
-							//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LLOGIN))
-						endif;
 					endif;
 					inc(j);
-				enddo;				
+				enddo;
+				
+				if found = 0  then 		//Did not find the name already. Need to insert it
+					if tabletCount(ctr,1) = "" then 
+						tabletCount(ctr,1) = tolower(tStrip(LLOGIN));
+						//errmsg("Added: ctr = %d, name: %s", ctr, tStrip(LLOGIN));
+						inc(numOfInterviewers);
+						inc(ctr);
+						
+					else	//All finished
+						break;
+					endif;
+				endif;
 			endif;
-			inc(ctr);			
+			
+			if ctr > teamMembersNo then
+				break;
+			endif;
 		endfor;
+							
+		//errmsg("All done. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
+		{//old version  - the else statement above
+				if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then //already registered
+					break;
+				else
+					if tabletCount(j,1) = "" then
+						tabletCount(j, 1) = tolower(tStrip(LLOGIN));
+						inc(numOfInterviewers);
+						break;
+						//errmsg("j: %d, int: %d, device: %s", j, numOfInterviewers, tStrip(LLOGIN))
+					endif;
+				endif;
+				inc(j);
+			enddo;				
+		endif;
+		inc(ctr);			
+		endfor;
+		}
 		
 		if visualValue(M_URBAN_RURAL) = 2 then	//rural
 			if numOfInterviewers = 5 then
@@ -458,10 +517,15 @@ PROC GLOBAL
 							where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in  1,2 and LL12 = 3);
-							
-		//solarCount = number of HH with solar panels that the sample should contain
-		numeric solarCount = round(2 * sampleSize * totSolar/tot);	//Solar should have double chance of being sampled
 		
+		
+		//solarCount = number of HH with solar panels that the sample should contain
+		numeric solarCount = round(2 * sampleSize * totSolar/(tot + totSolar));	//Solar should have double chance of being sampled
+		if solarCount > sampleSize then
+			solarCount = sampleSize;	//Just in case.. :)
+		endif;
+		//errmsg("tot num of cases: %d, solar: %d, grid: %d, none: %d. Number of solar to sample: %d", tot, totSolar, totGrid, totNone, solarCount);
+
 		//Need to check if I have enogh HHs with solar
 		if solarCount > totSolar then
 			solarCount = totSolar;
