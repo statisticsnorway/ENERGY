@@ -442,8 +442,13 @@ PROC GLOBAL
 				break;
 			endif;
 		endfor;
-							
+		
+		if ctr = 1 then
+			//no data
+			errmsg(tr(61));
+		endif;
 		//errmsg("All done. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
+		
 		{//old version  - the else statement above
 				if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then //already registered
 					break;
@@ -475,6 +480,7 @@ PROC GLOBAL
 				setEnumerators = 20;
 			endif;
 		endif;
+		//errmsg("u/r: %d, #int: %d", visualValue(M_URBAN_RURAL), numOfInterviewers);
 	end;
 
 
@@ -1346,6 +1352,7 @@ preproc
 		
 PROC M_EA
 preproc
+	//errmsg("Starting EA field");
 	if newEA = "1" or visualvalue(M_EA) = NOTAPPL or visualvalue(M_EA) = DEFAULT then
 		array vsetCodes(vsetMax);
 		array string vsetLabels(vsetMax);
@@ -1441,6 +1448,7 @@ postproc
 		
 		elseif M_MENU = 2 then	//HHQ
 			//Select household first
+			//errmsg("In EA. Skipping to HH");
 			skip to M_HOUSEHOLD;
 
 		elseif M_MENU = 4 or M_MENU = 5 then	//The region variables have been reset
@@ -1457,7 +1465,7 @@ postproc
 		
 PROC M_HOUSEHOLD
 onfocus
-	
+	//errmsg("Starting hh field");
 	//create value set (Despite using map to navigate from here, I need the value set for debugging: Maps doesn't work for windows
 	array vsetCodes(vsetMax);
 	array String vsetLabels(vsetMax);
