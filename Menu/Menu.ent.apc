@@ -1505,12 +1505,14 @@ onfocus
 			AALOGIN = tolower(SLOGIN);
 			
 			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);			
+			//errmsg("Loaded? %d", loaded);
 			
 			if not loaded then
 				//Haven't been her yet for this HH but need to check in case another HH has same coordinates
 				//Red flag to be set if there are any not-started HHs
 				if not visitStatus.contains(SA7A + SA7B) 
 					or (visitStatus.contains(SA7A + SA7B) and visitStatus(SA7A +SA7B) <> "yellow") then 
+						//errmsg("Have started/finished a HH with the same GPS/ or started this. Setting marker red");
 						HHMap.setMarkerImage(markerId, "../Images/Location-red.png");
 						visitStatus(SA7A + SA7B) = "red";
 				endif;
@@ -1520,6 +1522,7 @@ onfocus
 				
 				if ispartial(HHQ_DICT) then		
 					//Yellow marker should always be set if relevant. 
+					//errmsg("IsPartial - Marking it yellow");
 					HHmap.setMarkerImage(markerId, "../Images/Location-yellow.png");
 					visitStatus(SA7A + SA7B) = "yellow";
 					vsetStatus = tr(23)+" (☒)";					
@@ -1527,6 +1530,7 @@ onfocus
 				else	//Finished. Green marker only to be set if no other HH are in this location or all are done
 					if not visitStatus.contains(SA7A + SA7B) 
 						or (visitStatus.contains(SA7A + SA7B) and visitStatus(SA7A + SA7B) = "green") then 
+						//errmsg("Finished. Marking it green");
 						HHMap.setMarkerImage(markerId, "../Images/Location-green.png");
 						visitStatus(SA7A + SA7B) = "green";
 					endif;
