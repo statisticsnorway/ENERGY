@@ -1004,11 +1004,14 @@ preproc
 			if loggedIn = "S" then
 				skip to M_SUPERMENU;
 			else
+				
 				if visualValue(M_HOUSEHOLD) <> NOTAPPL  and visualValue(M_HOUSEHOLD) <> DEFAULT then
 					//coming "back" from interviewing a HH, hence assuming we want to go to the next HH
+					//errmsg("About to skip to HH");
 					M_HOUSEHOLD = NOTAPPL;
 					skip to M_HOUSEHOLD;
 				else
+					//errmsg("About to skip to Menu");
 					M_HOUSEHOLD = NOTAPPL;
 					Skip to M_MENU;
 				endif;
