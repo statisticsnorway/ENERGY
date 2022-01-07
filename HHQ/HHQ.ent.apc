@@ -610,7 +610,7 @@ preproc
 
 PROC AC1
 
-preproc
+onfocus
 
 	if AB5 < 5 then //Only ask those 5 years and above for the rest of the section
 		skip to next;
@@ -645,7 +645,7 @@ PROC AC3
 
 PROC AC4
 
-preproc
+onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
@@ -696,7 +696,7 @@ postproc
 
 PROC AC8
 
-preproc
+onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
@@ -718,7 +718,7 @@ postproc
 
 PROC AC9
 
-preproc
+onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
@@ -1130,11 +1130,6 @@ postproc
 
 PROC C17
 
-	// if $ > visualValue(B1) then
-		// errmsg(tr(123),B1);
-		// reenter;
-	// endif;
-
 	if C16 = 1 then
 		skip to C18;
 	elseif C16 = 2 then
@@ -1521,6 +1516,8 @@ postproc
 	if $ in 1,3 then
 		skip to C98;
 	endif;
+
+
 PROC C98
 
 	if $ = 2 then
@@ -2091,7 +2088,7 @@ PROC I9
 
 PROC I10
 
-preproc
+onfocus
 
 	if i2 = 2 and i4 = 2 and i6 = 2 and i8 = 2 then // Have no stoves at all
 		skip to O_FORM
@@ -2466,7 +2463,7 @@ preproc
 
 PROC K1
 
-preproc
+onfocus
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(190));
@@ -2489,8 +2486,6 @@ preproc
 
 	CF = round(random(1,2) * cookStovePrices(tmp)/2);	//this gives 0.5 or 1 of the price of the randomly chosen cookstove
 
-
-onfocus
 
 	if woodOrCharcoal = "" then
 		skip to J_FORM;
@@ -3063,9 +3058,7 @@ postproc
 
 
 PROC Q2_NUM
-
-onfocus
-
+preproc
 	$ = curocc();
 	noinput;
 	skip to Q2A;
@@ -3084,7 +3077,6 @@ PROC S_FORM
 PROC S1
 
 onfocus
-
 	//	Adult person
 		setValueset($, adultMembers);
 
@@ -3135,6 +3127,7 @@ postproc
 	if $ = 2 then
 		skip to next;
 	endif;
+
 
 PROC U2C
 
