@@ -935,7 +935,7 @@ postproc
 
 PROC C10
 
-preproc
+onfocus
 
 	if energySources = 0 then
 		skip to C12;
@@ -945,6 +945,7 @@ preproc
 	numeric code;
 	string text;
 
+	//Cleaning up
 	do while i < 9 ;
 		if powerSources(i) = 0 then
 			powerSources(i) = NOTAPPL;
@@ -954,7 +955,7 @@ preproc
 
 	i = 0;
 
-	if c2 = 1 then
+	if c2 = 1 then	//grid connection
 		inc(i);
 		code = 1;
 		powerSources(i) = 1;
@@ -962,7 +963,7 @@ preproc
 		//	  errmsg("%d, %d, %d, %s",i,C10,powerSources(i),powerSourcesLabels(i));
 	endif;
 
-	if c4 = 1 then
+	if c4 = 1 then	//Devices with solar power
 		if pos("a", c5) > 0 then
 			inc(i);
 			code = 3;
@@ -1025,11 +1026,16 @@ preproc
 		code = powerSources(i);
 		$ = powerSources(i);
 		c11 = 66;
-		noinput;
 		if code in 3, 7, 8 then
 			solarDeviceType = powerSourcesLabels(i) ;
 		endif;
+		noinput;		
 		skip to c12;
+	endif;
+	
+	//If - For some reason I didn't find any electrisity sources: Skipping past this
+	if i = 0 then
+		skip to C12;
 	endif;
 
 	//Final value in the powerSources array should be notappl
@@ -1047,16 +1053,19 @@ postproc
 
 PROC C11
 
-preproc
+onfocus
 
 	numeric code;
 	if energySources = 1 then
 		skip to C12;
+	elseif visualValue($) = 66 then
+		noInput;
+		skip to C12;
 	endif;
 
 	// Take out the answer from C10 in the valueset
-	  numeric i = 1;
-	  numeric main = 0;
+	numeric i = 1;
+	numeric main = 0;
 	do while i <= energySources-1 ;
 		if powerSources(i) = C10 then
 			main = 1;
