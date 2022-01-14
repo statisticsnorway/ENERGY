@@ -807,8 +807,10 @@ postproc
 		inc(k);
 	enddo;
 
-	if $ > highestAge then
-		errmsg(tr(157),highestAge);
+	if $ > highestAge then	
+		//errmsg(tr(157),highestAge)
+		errmsg(tr(210))
+		select(tr(211), AB5(1), tr(212), reenter);
 		reenter;
 	endif;
 
