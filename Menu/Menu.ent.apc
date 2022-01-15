@@ -4,7 +4,7 @@ PROC GLOBAL
 	String syncUrl;
     String theCountry;
 	
-	numeric TemporaryHackFixThis;
+	//numeric TemporaryHackFixThis;
 
 
 	String loggedIn;				//To keep track of logged in as supervisor ("S"), interwiever ("I") or not at all ("N")
@@ -13,6 +13,7 @@ PROC GLOBAL
 	array string tabletCount(5,2); //To keep track of number of households assigned to each interviewer/tablet
 									// first dimension: Id of tablet (Up to 5 tablets per team)
 									//, second: number of HH assigned to tablet
+									
 									
 	numeric serialStart = 0;		//Sets the start value of the serial number used for households (to be found in the users.csdb
 									
@@ -1049,9 +1050,9 @@ postproc
 	
 	
 PROC M_MENU
-preproc
+onfocus
 	$ = NOTAPPL;
-	TemporaryHackFixThis = 0;
+	//TemporaryHackFixThis = 0;
 	
 	
 postproc
@@ -1083,7 +1084,7 @@ postproc
 			if OkVar = "1" then
 				skip to M_EA;
 			else
-				TemporaryHackFixThis = 1;
+				//TemporaryHackFixThis = 1;
 			endif;
 		endif;
 	
@@ -1113,13 +1114,13 @@ postproc
 				or okVar = "2" then
 			errmsg(tr(18));
 			if okVar = "2" then				
-				TemporaryHackFixThis = 1;
+				//TemporaryHackFixThis = 1;
 			endif;
 			skip to M_REGION;
 		else
 			skip to M_HOUSEHOLD;
 		endif;
-
+	
 	elseif $ = 4 then 		//Sync listingdata.
 		errmsg(tr(60));
 		String okVar = verifyVariables();
@@ -1134,7 +1135,7 @@ postproc
 			$ = NOTAPPL;
 			reenter;
 		else			
-			TemporaryHackFixThis = 1;
+			//TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		endif;
 
@@ -1143,7 +1144,7 @@ postproc
 		if answer = 1 then	//sure. Go ahead.. :)	
 			String okVar = verifyVariables();
 			if okVar = "2" then
-				TemporaryHackFixThis = 1;
+				//TemporaryHackFixThis = 1;
 				skip to M_REGION;
 			endif;
 			numeric ok = syncGetSample();
@@ -1175,7 +1176,7 @@ postproc
 	
 PROC M_SUPERMENU
 preproc	
-	TemporaryHackFixThis = 0;
+	//TemporaryHackFixThis = 0;
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else		
@@ -1202,7 +1203,7 @@ postproc
 		errmsg(tr(60));
 		string OkVar = verifyVariables();
 		if OkVar = "2" then //not OK
-			TemporaryHackFixThis = 1;
+			//TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		else
 			bluetoothServer();
@@ -1223,12 +1224,13 @@ postproc
 	elseif $ = 4 then  //community questionnaire
 		string okVar = verifyVariables();
 		if OkVar = "2" then
-			TemporaryHackFixThis = 1;
+			//TemporaryHackFixThis = 1;
 			skip to M_REGION;
 		else
 			writepff("Energy survey", "Menu", "", NOTAPPL, "S");
 			writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
 		endif;
+		
 	else	//$ = 9. Quit
 		writepff("Energy survey", "Menu", "", NOTAPPL, "N");
 		stop(1);
@@ -1281,6 +1283,7 @@ preproc
 	setValueset(M_DISTRICT, vsetCodes, vsetLabels);
 	
 postproc
+
 	numeric dmaps = accept(makeText(tr(49)), makeText(tr(21)), makeText(tr(22)));
 	if dmaps = 1 then
 		downloadMaps();
@@ -1398,14 +1401,6 @@ postproc
 	//Writing the pff file for the menu to avoid having to enter the area values again
 	writePff("Energy survey", "Menu", "", NOTAPPL, "I");
 	
-	//The following is done in a menu now
-	{string mapFileName = theCountry + "_" + edit("99", M_REGION) + edit("99", M_DISTRICT)
-			+ edit("999", M_SUBDISTRICT) + edit("99", M_LOCALITY) + edit("99", M_VILLAGE) + edit("999", M_EA)
-			+ ".mbtiles";
-	if not fileexist(mapfileName) then
-		downloadMap(mapFileName);
-	endif;}
-	
 	if loggedIn = "S" then	//supervisor. Back to Supermenu
 		reenter M_SUPERMENU;
 	else
@@ -1456,12 +1451,10 @@ postproc
 
 		elseif M_MENU = 4 or M_MENU = 5 then	//The region variables have been reset
 			reenter M_MENU;
-			//writePff("Community Questionnaire", "Community", "", NOTAPPL, "S");
 		endif;
 	
 	endif;
-	M_MENU = notappl;
-
+	
 
 	
 	

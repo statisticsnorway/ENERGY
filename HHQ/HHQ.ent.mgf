@@ -427,3 +427,15 @@ EN(207) Continue
 PT(207)
 SW(207) Endelea mbele
 
+EN(210) The number of years in the community is greater than the age of any household member. What do you want to do
+PT(210)
+SW(210) Muda ambao kaya imeishi Katika jamii hii ni mkubwa kuliko umri wa Mtu mzima katika kaya hii
+
+EN(211) Reenter details for household members
+PT(211)
+SW(211) Ingiza taarifa za wanakaya 
+
+EN(212) Change number of years in community
+PT(212)
+SW(212) Badili miaka ya kuishi ndani ya jamii hii
+

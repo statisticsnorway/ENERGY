@@ -107,6 +107,7 @@ preproc
 	endif;
 	//errmsg("%s", cookStove(4));
 
+
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
@@ -532,6 +533,7 @@ onfocus
 	if curocc() = 1 then
 		$ = 1;
 		 headName = AB1(curocc());
+		 noinput;
 		skip to AB3B;	//Should we tell that we already recorded the HoH?
 	endif;
 
@@ -792,6 +794,7 @@ preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(179));
 	endif;
+		
 
 postproc
 	// can't live in community longer than age of the oldest person
@@ -804,8 +807,10 @@ postproc
 		inc(k);
 	enddo;
 
-	if $ > highestAge then
-		errmsg(tr(157),highestAge);
+	if $ > highestAge then	
+		//errmsg(tr(157),highestAge)
+		errmsg(tr(210))
+		select(tr(211), AB5(1), tr(212), reenter);
 		reenter;
 	endif;
 
@@ -3297,10 +3302,11 @@ PROC GP2
 
 preproc
 
-	$ = GP_MEM[(curocc()*2)-1:2];
-	if $ <> "" then
+	$ = GP_MEM[(curocc()*2)-1:2];	//getting HH member number. They always start in an odd numbered posistion and have length 2, hence the formula
+	if $ <> "" then	//Person did change main occupation
+		noinput;
 		skip;
-	else
+	else	//Person did not
 		skip to next;
 	endif;
 
