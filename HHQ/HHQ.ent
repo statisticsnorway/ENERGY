@@ -1,0 +1,30 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=HHQ
+Name=HHQ
+AppType=DataEntry
+OperatorID=No
+PartialSave=Yes
+AutoPartialSaveMinutes=1
+CAPI=Yes
+CaseTree=Desktop
+CreateListing=No
+CreateLog=No
+ParadataCollection=AllEvents
+ParadataRecordInitialPropertyValues=Yes
+ParadataDeviceStateMinutes=5
+[External Dictionaries]
+File=..\Sampling\sample.dcf
+File=..\Menu\CountryVariables.dcf
+[AppCode]
+File=.\HHQ.ent.apc
+[Message]
+File=.\HHQ.ent.mgf
+[Help]
+File=.\HHQ.ent.qsf
+[Forms]
+File=.\HHQ.fmf
+[Dictionary Types]
+Dict-Type=.\HHQ.dcf,Input,.\HHQ.fmf
+Dict-Type=..\Sampling\sample.dcf,External
+Dict-Type=..\Menu\CountryVariables.dcf,External
