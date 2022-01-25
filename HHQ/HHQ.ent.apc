@@ -1322,7 +1322,7 @@ PROC C54
 
 PROC C56
 postproc
-	numeric rangeStart = 20,
+	numeric rangeStart = 10,
 			rangeEnd = 887,
 			rangeUnknown = 888;
 
