@@ -1,0 +1,32 @@
+﻿[FormFile]
+Version=CSPro 7.6
+Name=HHQTRAINING_FF
+Label=HHQTraining
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\HHQTraining.dcf
+  
+[Form]
+Name=FORM000
+Label=HHQ questionnaire
+Level=1
+Size=0,0
+  
+  
+[EndForm]
+  
+[Level]
+Name=HHQ_QUEST
+Label=HHQ questionnaire
+  
+[Group]
+Required=Yes
+Name=HHQ_QUEST_FORM
+Label=HHQ questionnaire
+Form=1
+Max=1
+[EndGroup]
+  

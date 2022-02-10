@@ -1,0 +1,21 @@
+﻿[CSPro Application]
+Version=CSPro 7.6
+Label=HHQTRAINING
+Name=
+AppType=DataEntry
+OperatorID=No
+CAPI=Yes
+CreateListing=No
+CreateLog=No
+ShowErrorMessageNumbers=No
+ComboBoxShowOnlyDiscreteValues=Yes
+ParadataCollection=AllEvents
+ParadataDeviceStateMinutes=5
+[AppCode]
+File=.\HHQTraining.ent.apc
+[Message]
+File=.\HHQTraining.ent.mgf
+[Help]
+File=.\HHQTraining.ent.qsf
+[Forms]
+File=.\HHQTraining.fmf
