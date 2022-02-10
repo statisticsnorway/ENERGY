@@ -63,7 +63,8 @@ end;
 function onStop()
 	string currField = getSymbol();
 	if currField = "AB1" then
-		reenter AA10;
+		//reenter AA10; doesn't work if the enumerator swipes away the app. Saving partially instead
+		savePartial();
 	else
 		if AA20 <> "" then	//Questionnaire is finished
 			skip to AA20;
@@ -110,10 +111,12 @@ preproc
 
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
+		advance to getsymbol(savePartial)
+		{
 		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
 		if getSymbol(savePartial) = "AA13" then
 			advance to AA15;
-		else
+		else 	
 			//Main respondent as answered last time
 			if AA18 <> "" then
 				currMember = AA18;	//Not head of household
@@ -121,107 +124,109 @@ preproc
 				currMember = AA14;	//Head of household
 			endif;
 
-			numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC);
-			numeric i = 1;
+			numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC); //ANNE
+			if memNum <> 0 and memNum <> NOTAPPL and memNum <> DEFAULT then //Family roster has at least been partly filled out..
+				numeric i = 1;
 
-			familyMembers.clear();
-			while i <= memNum do
-				familyMembers.add(AB1(i), i);
+				familyMembers.clear();
+				while i <= memNum do
+					familyMembers.add(AB1(i), i);
 
-				//adding to relevant hhdemographic group and building value set for grownups
-				if visualValue(AB4(i)) = 2 then
-					if visualValue(AB5(i)) >= 15 then	//woman
-						inc(hhDemographics(1));
-						inc(hhDemographics(6));
-						adultMembers.add(AB1(i),i);
-					elseif visualValue(AB5(i)) <=4 then	//little child
-						inc(hhDemographics(5));
-					else						//girl
-						inc(hhDemographics(2));
-					endif
-				else
-					if visualValue(AB5(i)) >= 15 then	//man
-						inc(hhDemographics(3));
-						inc(hhDemographics(6));
-						adultMembers.add(AB1(i),i);
-					elseif visualValue(AB5(i)) <= 4 then	//little child
-						inc(hhDemographics(5));
-					else						//boy
-						inc(hhDemographics(4));
+					//adding to relevant hhdemographic group and building value set for grownups
+					if visualValue(AB4(i)) = 2 then
+						if visualValue(AB5(i)) >= 15 then	//woman
+							inc(hhDemographics(1));
+							inc(hhDemographics(6));
+							adultMembers.add(AB1(i),i);
+						elseif visualValue(AB5(i)) <=4 then	//little child
+							inc(hhDemographics(5));
+						else						//girl
+							inc(hhDemographics(2));
+						endif
+					else
+						if visualValue(AB5(i)) >= 15 then	//man
+							inc(hhDemographics(3));
+							inc(hhDemographics(6));
+							adultMembers.add(AB1(i),i);
+						elseif visualValue(AB5(i)) <= 4 then	//little child
+							inc(hhDemographics(5));
+						else						//boy
+							inc(hhDemographics(4));
+						endif;
 					endif;
-				endif;
-				if visualValue(AB5(i)) >= 0 and visualValue(AB5(i)) < 15 then	//Child, 0-15
-					inc(hhDemographics(7));
-				endif;
-
-				inc(i);
-			enddo;
-			
-			//If no members of the household are of age 15+: Add everybody aged 12+
-			if adultMembers.length() = 0 then
-				i = 1;
-				while i <= 20 do
-					if AB1(i) = "" then
-						break;	//finished
+					if visualValue(AB5(i)) >= 0 and visualValue(AB5(i)) < 15 then	//Child, 0-15
+						inc(hhDemographics(7));
 					endif;
-					if AB5(i) >= 12 then
-						adultMembers.add(AB1(i), i);
-					endif;
-					inc(i);
-				enddo;
-			endif;
 	
-			//If there are none of age 12+: Adding the whole of the household
-			if adultMembers.length() = 0 then
-				i = 1;
-				while i <= 20 do
-					if AB1(i) = "" then
-						break;	//finished
-					endif;
-					adultMembers.add(AB1(i), i);
 					inc(i);
 				enddo;
+			
+				//If no members of the household are of age 15+: Add everybody aged 12+
+				if adultMembers.length() = 0 then
+					i = 1;
+					while i <= 20 do
+						if AB1(i) = "" then
+							break;	//finished
+						endif;
+						if AB5(i) >= 12 then
+							adultMembers.add(AB1(i), i);
+						endif;
+						inc(i);
+					enddo;
+				endif;
+	
+				//If there are none of age 12+: Adding the whole of the household
+				if adultMembers.length() = 0 then
+					i = 1;
+					while i <= 20 do
+						if AB1(i) = "" then
+							break;	//finished
+						endif;
+						adultMembers.add(AB1(i), i);
+						inc(i);
+					enddo;
+				endif;
+
+
+				//Name of child for questions in O-form. Only need them if the partialsaved has come that far
+				if hhDemographics(7) > 0 and visualValue(O7) <> NOTAPPL then
+					//chosenChildName = memberNames(visualValue(O7));
+					chosenChildName = familyMembers.labels(visualValue(O7));
+
+				endif;	
+
+				//Person number of person cooking most often (or is selected to be his/her representative
+				if  visualValue(I1) <> NOTAPPL then
+					PersonCooksMostOften = visualValue(I1);
+				else
+					//Haven't asked the question yet..
+				endif;
+
+				//Person answering female related questions
+				if HHDemographics(1)> 0 and visualValue(T1) <> NOTAPPL then
+					//femalespouseName = memberNames(visualValue(T1));
+					femalespouseName = familyMembers.labels(visualValue(T1));
+				else
+					//Haven't asked the question yet..
+				endif;
+
+				//lamptype for G form is handled further down. In that case, we have not reached form F yet, so that's ok
+				if visualValue(F3) <> NOTAPPL then
+					lampType = getvaluelabel(F3);
+				endif;
+
+
+				//SolarDeviceType
+				if visualValue(C10) in 3, 7, 8 then
+					solarDeviceType = getvaluelabel(C10);
+				endif;
+
 			endif;
-
-
-			//Name of child for questions in O-form. Only need them if the partialsaved has come that far
-			if hhDemographics(7) > 0 and visualValue(O7) <> NOTAPPL then
-				//chosenChildName = memberNames(visualValue(O7));
-				chosenChildName = familyMembers.labels(visualValue(O7));
-
-			endif;
-
-			//Person number of person cooking most often (or is selected to be his/her representative
-			if  visualValue(I1) <> NOTAPPL then
-				PersonCooksMostOften = visualValue(I1);
-			else
-				//Haven't asked the question yet..
-			endif;
-
-			//Person answering female related questions
-			if HHDemographics(1)> 0 and visualValue(T1) <> NOTAPPL then
-				//femalespouseName = memberNames(visualValue(T1));
-				femalespouseName = familyMembers.labels(visualValue(T1));
-			else
-				//Haven't asked the question yet..
-			endif;
-
-			//lamptype for G form is handled further down. In that case, we have not reached form F yet, so that's ok
-			if visualValue(F3) <> NOTAPPL then
-				lampType = getvaluelabel(F3);
-			endif;
-
-
-			//SolarDeviceType
-			if visualValue(C10) in 3, 7, 8 then
-				solarDeviceType = getvaluelabel(C10);
-			endif;
-
-		endif;
-		//NB: Need to move through the ID variables to avoid error messages about them not being filled out
-		//when isSavePartial().
-		//The skip to the getsymbol(savePartial) happens in the postproc of the last ID item
-		//is filled - the ADDRESS_LOCATION field
+			//NB: Need to move through the ID variables to avoid error messages about them not being filled out
+			//when isSavePartial().
+			//The advance to the getsymbol(savePartial) happens in the postproc of the last ID item
+			//is filled - the ADDRESS_LOCATION field
+		endif;}
 	endif;
 
 
@@ -342,7 +347,7 @@ postproc
 		//Need to find the name of the current respondent if we're still in the personal section.
 		//Starting from scratch with he current person. Need to find the number of him/her
 		string currentField = getSymbol(savepartial);
-		if currentField <> "AB1" and (currentField[1:2] = "AB"
+		{if currentField <> "AB1" and (currentField[1:2] = "AB"
 			or currentField[1:2] = "AC" or currentField in "A2","A3","A4","A5","A6","A7","A8") then
 			numeric j = 20;
 			while j >=1 do
@@ -351,16 +356,19 @@ postproc
 				endif;
 				j = j - 1;
 			enddo;
-			skip to AB3(j + 1);
-		endif;
+			//skip to AB3(j + 1); 	ANNE - HER!
+			advance to AB3(j+1);
+		endif;}
 
 		//other "Special" skips
 		if currentField in "K1", "K2", "K3", "K4" then
-			skip to K1;
+			//skip to K1;	ANNE
+			advance to K1;
 		elseif currentField in "D1", "D2", "D3", "D4" then
 			skip to D1;
 		elseif currentField in "E1", "E2", "E3" then
-			skip to E1;
+			//skip to E1; ANNE
+			advance to E1;
 		elseif currentField in "G2B", "G2C" then
 			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
 			numeric ptr = 4;
@@ -370,26 +378,14 @@ postproc
 				endif;
 				ptr = ptr - 1;
 			enddo;
-			skip to G2A(ptr);
+			//skip to G2A(ptr); ANNE
+			advance to G2A(ptr);
 
 		else	//general skip!
-			skip to getsymbol(savePartial);
+			//skip to getsymbol(savePartial);	ANNE
+			advance to getsymbol(savePartial);
 		endif;
 	endif;
-
-
-PROC AA7A
-
-preproc
-
-	noinput;
-
-
-PROC AA7B
-
-preproc
-
-	noinput;
 
 
 PROC AA9
@@ -397,7 +393,7 @@ PROC AA9
 preproc
 
 	$ = edit("99-99-99",sysdate("YYDDMM"));
-	noinput;
+	//noinput;
 
 
 
@@ -405,7 +401,6 @@ preproc
 PROC AA10
 
 preproc
-
 	currMember = AA14;	//Might be changed in AA15 or AA18..
 
 
@@ -455,7 +450,9 @@ postproc
 
 
 PROC AA17
-
+	if not ispartial() then
+		savepartial();
+	endif;
 	if $ = 1 then
 		currMember = AA14;
 		skip to HHNAMES;
@@ -472,11 +469,9 @@ PROC AB1
 
 preproc
 
-	//Might as well fill in HoH and Main respondent
+	//Might as well fill in HoH 
 	if curocc() = 1 then
 		$ = AA14;
-	elseif curocc() = 2 then
-		$ = AA18;
 	endif;
 
 
@@ -500,7 +495,7 @@ PROC AB3
 
 onfocus
 
-	if AB1(curocc()) = "" then //Finished with all family members
+	if AB1(curocc()) = "" then //Finished with all family members. 
 		//If there are no adults in the HH: adding everyone aged 12+
 		if adultMembers.length() = 0 then
 			numeric i = 1;
@@ -794,6 +789,8 @@ preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(179));
 	endif;
+	
+	
 		
 
 postproc
@@ -865,9 +862,13 @@ PROC B20
 PROC C1
 
 onfocus
-
-	setValueset($, adultMembers);
-
+	if adultMembers.length() > 1 then
+		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
+	
 
 PROC C2
 
@@ -1918,15 +1919,16 @@ PROC G2C
 PROC F1
 
 onfocus
-
-	if hhDemographics(6) < 1 or hhDemographics(6) in NOTAPPL, DEFAULT then //No adults in household
-		skip to I_FORM;
-	elseif not(schoolGirls > 0 or schoolBoys > 0) and C10 in 1,3,4 then
+	if visualValue(C10) in 1,3,4 then
 		skip to I_FORM;
 	else
-		setValueset($, adultMembers);
+		if adultMembers.length() > 1 then
+			setValueset($, adultMembers);
+		else
+			$ = 1;
+			noinput;
+		endif;
 	endif;
-
 
 
 PROC F2
@@ -1940,12 +1942,6 @@ onfocus
 
 
 PROC F3
-
-preproc
-
-	if visualValue(C10) in 1,3,4 then
-		skip to I_FORM;
-	endif;
 
 postproc
 
@@ -2016,7 +2012,12 @@ onfocus
 	if familyMembers.labels(familyMembers.length()) = MakeText(tr(110)) then
 		familyMembers.remove(familyMembers.length());
 	endif;
-	setValueset($, familyMembers);
+	if familyMembers.length() > 1 then
+		setValueset($, familyMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 postproc
 
@@ -2187,8 +2188,12 @@ postproc
 PROC I12
 
 onfocus
-
-	setValueset($, familyMembers);
+	if familyMembers.length() > 1 then 
+		setValueset($, familyMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 postproc
 
@@ -2496,7 +2501,12 @@ onfocus
 		skip to J_FORM;
 	endif;
 
-	setValueset($, adultMembers);
+	if adultMembers.length() > 1 then
+		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 
 
@@ -2550,8 +2560,12 @@ PROC J4
 PROC L1
 
 onfocus
-
-	setValueset($, adultMembers);
+	if adultMembers.length() > 1 then
+		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 
 
@@ -3051,9 +3065,12 @@ PROC N_S_MM
 PROC Q1
 
 onfocus
-
-	$ = 1;
-	setValueset($, adultMembers);
+	if adultMembers.length() > 1 then
+		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 postproc
 
@@ -3082,8 +3099,12 @@ PROC S_FORM
 PROC S1
 
 onfocus
-	//	Adult person
+	if adultMembers.length() > 1 then
 		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 
 PROC S2
@@ -3101,7 +3122,12 @@ PROC U1
 onfocus
 
 	//	Adult person
+	if adultMembers.length() > 1 then
 		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 
 
@@ -3181,8 +3207,12 @@ postproc
 PROC U3C
 
 onfocus
-
-	setValueset($, adultMembers);
+	if adultMembers.length() > 1 then
+		setValueset($, adultMembers);
+	else
+		$ = 1;
+		noinput;
+	endif;
 
 
 
@@ -3238,7 +3268,7 @@ onfocus
 
 
 postproc
-	if $ = familyMembers.length() +1 then
+	if $ = familyMembers.length() + 1 then
 		skip to GP_FORM;
 	endif;
 

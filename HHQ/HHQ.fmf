@@ -749,7 +749,7 @@ Text=AA5
   
 [Field]
 Name=AA6
-Position=171,202,200,222
+Position=171,202,214,222
 Item=AA6,HHQ_DICT
 FieldLabelType=DictionaryName
 Form=1
@@ -828,6 +828,7 @@ Text=ADDRESS_LOCATION
 Name=AA7A
 Position=169,326,310,346
 Item=AA7A,HHQ_DICT
+Protected=Yes
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=1
@@ -841,6 +842,7 @@ Text=AA7A
 Name=AA7B
 Position=169,356,310,376
 Item=AA7B,HHQ_DICT
+Protected=Yes
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
 Form=1
@@ -854,6 +856,7 @@ Text=AA7B
 Name=AA9
 Position=169,386,282,406
 Item=AA9,HHQ_DICT
+Protected=Yes
 FieldLabelType=DictionaryName
 Form=1
   
