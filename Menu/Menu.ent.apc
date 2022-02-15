@@ -1497,7 +1497,7 @@ onfocus
 			AA8 = SA8;
 			AALOGIN = tolower(SLOGIN);
 			
-			numeric loaded = loadCase(HHQ_DICT, AA14, ADDRESS_LOCATION, AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);			
+			numeric loaded = loadCase(HHQ_DICT,  AA1, AA2, AA3, AA4, AA5, AA6, AA8, AALOGIN);		
 			//errmsg("Loaded? %d", loaded);
 			
 			if not loaded then

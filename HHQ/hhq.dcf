@@ -21,65 +21,51 @@ Name=HHQ_QUEST
 [IdItems]
 
 [Item]
-Label=Head of household|Chefe do agregado familiar
-Name=AA14
-Start=2
-Len=30
-DataType=Alpha
-
-[Item]
-Label=Address/Location|Endereço / Localização
-Name=ADDRESS_LOCATION
-Start=32
-Len=30
-DataType=Alpha
-
-[Item]
 Label=Region Code|código da provincia
 Name=AA1
-Start=62
+Start=2
 Len=2
 
 [Item]
 Label=district code|Código do distrito
 Name=AA2
-Start=64
+Start=4
 Len=2
 
 [Item]
 Label=subdistrict code|Código do posto administrativo
 Name=AA3
-Start=66
+Start=6
 Len=3
 
 [Item]
 Label=Locality Code|Código de localidade
 Name=AA4
-Start=69
+Start=9
 Len=2
 
 [Item]
 Label=Village code|código vila/cidade
 Name=AA5
-Start=71
+Start=11
 Len=2
 
 [Item]
 Label=enumeration area|área de enumeração
 Name=AA6
-Start=73
+Start=13
 Len=3
 
 [Item]
 Label=Serial Number|Número de série
 Name=AA8
-Start=76
+Start=16
 Len=3
 
 [Item]
 Label=Login
 Name=AALOGIN
-Start=79
+Start=19
 Len=25
 DataType=Alpha
 
@@ -88,6 +74,20 @@ Label=Interview particulars|particularidades da entrevista
 Name=AA_INTERVIEW_PARTICULAR_REC
 RecordTypeValue='P'
 RecordLen=203
+
+[Item]
+Label=Head of household|Chefe do agregado familiar
+Name=AA14
+Start=44
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Address/Location|Endereço / Localização
+Name=ADDRESS_LOCATION
+Start=74
+Len=30
+DataType=Alpha
 
 [Item]
 Label=Urban/Rural|Urbano Rural
@@ -228,19 +228,19 @@ Name=AB_HOUSEHOLD_MEMBERS_REC
 RecordTypeValue='A'
 Required=No
 MaxRecords=20
-RecordLen=166
+RecordLen=106
 
 [Item]
 Label=Name|Nome dos membros
 Name=AB1
-Start=104
+Start=44
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Relationship to head|Relação de parentesco com o chefe?
 Name=AB3
-Start=134
+Start=74
 Len=1
 
 [ValueSet]
@@ -257,7 +257,7 @@ Value=7;Non relative (of head/spouse)|Não relativa (do chefe / cônjuge)|Hakuna
 [Item]
 Label=Was [NAME] the head of household 5 years ago?
 Name=AB3B
-Start=135
+Start=75
 Len=1
 
 [ValueSet]
@@ -270,7 +270,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Sex|Sexo
 Name=AB4
-Start=136
+Start=76
 Len=1
 
 [ValueSet]
@@ -282,13 +282,13 @@ Value=2;Female|Femenina|Mwanamke
 [Item]
 Label=Age|Anos no ultimo aniversario?|Age
 Name=AB5
-Start=137
+Start=77
 Len=2
 
 [Item]
 Label=Marital status|Estado civil
 Name=AB6
-Start=139
+Start=79
 Len=1
 
 [ValueSet]
@@ -306,7 +306,7 @@ Value=8;Not applicable (less than 15 years)|Não aplicável (menos de 15 anos)|H
 [Item]
 Label=Literacy read and write|Pode ler e escrever uma frase
 Name=AC1
-Start=140
+Start=80
 Len=2
 
 [ValueSet]
@@ -348,7 +348,7 @@ Value=5;No||Hapana
 [Item]
 Label=Ever attended school|Frenquetou escola?
 Name=AC2
-Start=142
+Start=82
 Len=1
 
 [ValueSet]
@@ -360,7 +360,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Enroll this schoool year|Matriculou se
 Name=AC3
-Start=143
+Start=83
 Len=1
 
 [ValueSet]
@@ -372,7 +372,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Grade this school year|Classe se matriculou?
 Name=AC4
-Start=144
+Start=84
 Len=2
 
 [ValueSet]
@@ -478,13 +478,13 @@ Value=15;NÃO SABE|NÃO SABE
 [Item]
 Label=Age at beginning this school year|Quantos anos tinha?
 Name=AC5
-Start=146
+Start=86
 Len=2
 
 [Item]
 Label=Currently attending school|Actualmente a freqüentar a escola?
 Name=AC6
-Start=148
+Start=88
 Len=1
 
 [ValueSet]
@@ -496,7 +496,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Attend at any time last school year|Frequentou a escola ...?
 Name=AC7
-Start=149
+Start=89
 Len=1
 
 [ValueSet]
@@ -508,7 +508,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Grade last school year|Nivel frenquentado
 Name=AC8
-Start=150
+Start=90
 Len=2
 
 [ValueSet]
@@ -614,7 +614,7 @@ Value=15;NÃO SABE|NÃO SABE
 [Item]
 Label=Highest education completed|Qual é o grau mais alto
 Name=AC9
-Start=152
+Start=92
 Len=2
 
 [ValueSet]
@@ -720,7 +720,7 @@ Value=15;NÃO SABE|NÃO SABE
 [Item]
 Label=Main occupation|Ocupação principal
 Name=A2
-Start=154
+Start=94
 Len=2
 
 [ValueSet]
@@ -751,7 +751,7 @@ Value=20;Was not working because of disability or chronical illness|Não estava 
 [Item]
 Label=Main activity at work|Actividade principal no local de trabalho
 Name=A3
-Start=156
+Start=96
 Len=2
 
 [ValueSet]
@@ -782,19 +782,19 @@ Value=30;Embassies and interntional organizations|Embaixadas e organizações in
 [Item]
 Label=Months in activity|Quantos meses esteve envolvido nesta actividade?
 Name=A4
-Start=158
+Start=98
 Len=2
 
 [Item]
 Label=Days per month in activity|Quantos dias por mês trabalha nesta atividade?
 Name=A5
-Start=160
+Start=100
 Len=2
 
 [Item]
 Label=Main occupation 5 years ago|Qual foi a ocupação principal há 5 anos?
 Name=A6
-Start=162
+Start=102
 Len=2
 
 [ValueSet]
@@ -805,7 +805,7 @@ Link=98711222
 [Item]
 Label=Main activity at work place 5 years ago|Qual foi a actividade principal
 Name=A7
-Start=164
+Start=104
 Len=2
 
 [ValueSet]
@@ -816,7 +816,7 @@ Link=98711223
 [Item]
 Label=Frequency cook food|Frequência em cozinhar alimentos
 Name=A8
-Start=166
+Start=106
 Len=1
 
 [ValueSet]
@@ -833,12 +833,12 @@ Value=6;Never|Nunca|Hajawahi
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
 RecordTypeValue='B'
-RecordLen=164
+RecordLen=104
 
 [Item]
 Label=Years in community|A quantos anos vive nesta comunidade?
 Name=B1
-Start=104
+Start=44
 Len=2
 
 [ValueSet]
@@ -849,7 +849,7 @@ Value=1:99
 [Item]
 Label=Type of dwelling|Tipo de habitação
 Name=B2
-Start=106
+Start=46
 Len=2
 
 [ValueSet]
@@ -866,7 +866,7 @@ Value=7;Other|Outro|Nyingine
 [Item]
 Label=Number of households share building|Número de famílias que compartilham
 Name=B3
-Start=108
+Start=48
 Len=2
 
 [ValueSet]
@@ -877,7 +877,7 @@ Value=1:99
 [Item]
 Label=Own dwelling|habitação própria
 Name=B4
-Start=110
+Start=50
 Len=1
 
 [ValueSet]
@@ -889,7 +889,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Rent dwelling|Habitação Alugada
 Name=B5
-Start=111
+Start=51
 Len=1
 
 [ValueSet]
@@ -901,7 +901,7 @@ Value=2;Rented|Alugado|Inalipia
 [Item]
 Label=Number of rooms|Número de quartos
 Name=B6
-Start=112
+Start=52
 Len=2
 
 [ValueSet]
@@ -912,7 +912,7 @@ Value=1:99
 [Item]
 Label=Material walls|Paredes materiais
 Name=B7
-Start=114
+Start=54
 Len=2
 
 [ValueSet]
@@ -940,7 +940,7 @@ Value=18;Mud only|Apenas lama|Matope pekee
 [Item]
 Label=Material roof|material principal do tecto da casa
 Name=B8
-Start=116
+Start=56
 Len=1
 
 [ValueSet]
@@ -958,7 +958,7 @@ Value=8;Plastic/canvas|Plastic / canvas|Plastiki/Turubai
 [Item]
 Label=Material floor|Principal material do chão da casa
 Name=B9
-Start=117
+Start=57
 Len=2
 
 [ValueSet]
@@ -978,7 +978,7 @@ Value=10;Steel/other metal|Aço/outros metais|Chuma/Aina nyingine ya vyuma
 [Item]
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B10
-Start=119
+Start=59
 Len=1
 
 [ValueSet]
@@ -1005,7 +1005,7 @@ Value=9;Other||Nyingine
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
 Name=B11
-Start=120
+Start=60
 Len=2
 
 [ValueSet]
@@ -1026,7 +1026,7 @@ Value=11;Bottle water|Água de garrafa|Maji ya chupa - ya dukani
 [Item]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
 Name=B12
-Start=122
+Start=62
 Len=2
 
 [ValueSet]
@@ -1043,7 +1043,7 @@ Value=7;Other|Outros|Nyingine
 [Item]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13
-Start=124
+Start=64
 Len=2
 
 [ValueSet]
@@ -1064,7 +1064,7 @@ Value=11;Firewood|Grama|Kuni
 [Item]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14
-Start=126
+Start=66
 Len=2
 
 [ValueSet]
@@ -1086,7 +1086,7 @@ Value=99;Not Applicable||Haihusiki
 [Item]
 Label=Account or savings in bank etc|Tem uma conta ou poupança em um banco
 Name=B15
-Start=128
+Start=68
 Len=1
 
 [ValueSet]
@@ -1098,7 +1098,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16
-Start=129
+Start=69
 Len=4
 DataType=Alpha
 
@@ -1114,7 +1114,7 @@ Value='Q   ';Nyingine||Nyingine
 [Item]
 Label=Rotating saving scheme or informal saving institution|Participa num esquema de poupança rotativo
 Name=B17
-Start=133
+Start=73
 Len=1
 
 [ValueSet]
@@ -1126,7 +1126,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18
-Start=134
+Start=74
 Len=3
 DataType=Alpha
 
@@ -1140,7 +1140,7 @@ Value='q  ';Other|Outro|Nyingine
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
 Name=B19
-Start=137
+Start=77
 Len=13
 DataType=Alpha
 
@@ -1164,7 +1164,7 @@ Value='m            ';Cannot get a loan/credit|Não é possível obter um empré
 [Item]
 Label=Mobile money to pay for mobile phone|O dinheiro móvel para pagar por telefone celular
 Name=B20
-Start=150
+Start=90
 Len=1
 
 [ValueSet]
@@ -1176,7 +1176,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Used the account last 90 days|Usou a conta nos últimos 90 dias?
 Name=B21
-Start=151
+Start=91
 Len=1
 
 [ValueSet]
@@ -1188,7 +1188,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B22
-Start=152
+Start=92
 Len=13
 DataType=Alpha
 
@@ -1213,18 +1213,18 @@ Value='q            ';Other|De outros|Nyingine
 Label=C supply and demand for electricity|fornecimento C e demanda de energia elétrica
 Name=C_SUPP_AND_DEMAND_FOR_EL
 RecordTypeValue='1'
-RecordLen=232
+RecordLen=172
 
 [Item]
 Label=Record HH or MN this section|Registro HH ou MN nesta secção(pessoa com maior conhecimento)
 Name=C1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Do you have a grid connection?
 Name=C2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -1236,7 +1236,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Is this the national grid or a local grid?
 Name=C3
-Start=107
+Start=47
 Len=2
 
 [ValueSet]
@@ -1249,7 +1249,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Do you have any devices or power supply using solar power?
 Name=C4
-Start=109
+Start=49
 Len=1
 
 [ValueSet]
@@ -1261,7 +1261,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What kind of solar power supply do you have?
 Name=C5
-Start=110
+Start=50
 Len=3
 DataType=Alpha
 
@@ -1275,7 +1275,7 @@ Value='c  ';Solar lantern|Lanterna solar|Taa ya jua
 [Item]
 Label=Do you use an electric generator?
 Name=C6
-Start=113
+Start=53
 Len=1
 
 [ValueSet]
@@ -1287,7 +1287,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do you use pico-hydro power?
 Name=C7
-Start=114
+Start=54
 Len=1
 
 [ValueSet]
@@ -1299,7 +1299,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do you use rechargeable battery (not linked to a solar device)?
 Name=C8
-Start=115
+Start=55
 Len=1
 
 [ValueSet]
@@ -1311,7 +1311,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do you use dry cell batteries?
 Name=C9
-Start=116
+Start=56
 Len=1
 
 [ValueSet]
@@ -1323,7 +1323,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which of these power sources is your main electrical power source?
 Name=C10
-Start=117
+Start=57
 Len=1
 
 [ValueSet]
@@ -1341,7 +1341,7 @@ Value=9;Dry-cell battery|Bateria de células secas|Betri kavu
 [Item]
 Label=Which of these power sources is your main back-up source?
 Name=C11
-Start=118
+Start=58
 Len=2
 
 [ValueSet]
@@ -1360,7 +1360,7 @@ Value=66;No electricity|Sem eletricidade|Hakuna umeme
 [Item]
 Label=Did you have any electricity five years ago? If yes, which was the main electrical power source in the household?
 Name=C12
-Start=120
+Start=60
 Len=2
 
 [ValueSet]
@@ -1380,7 +1380,7 @@ Value=66;No electricity|Sem eletricidade|Hakuna umeme
 [Item]
 Label=Main reason not connected to grid|Principal razão pela qual sua casa não está conectada à rede
 Name=C13
-Start=122
+Start=62
 Len=2
 
 [ValueSet]
@@ -1401,7 +1401,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Expect to get grid connection|Espera obter conexão de rede?
 Name=C14
-Start=124
+Start=64
 Len=2
 
 [ValueSet]
@@ -1414,7 +1414,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Time at grid connection|Que mês e ano espera obter conexão de rede?
 Name=C15
-Start=126
+Start=66
 Len=1
 
 [ValueSet]
@@ -1428,7 +1428,7 @@ Value=4;More than 2 years|Mais de 2 anos|Zaidi ya miaka 2
 [Item]
 Label=Connected to national grid|O fornecedor de energia electrica conectou a sua casa a rede ou conectou pessoalmente?
 Name=C16
-Start=127
+Start=67
 Len=2
 
 [ValueSet]
@@ -1443,13 +1443,13 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Years grid connection|Há quantos anos você teve conexão de rede?
 Name=C17
-Start=129
+Start=69
 Len=2
 
 [Item]
 Label=How much pay grid connecton fee|Quanto seu agregado pagou pela taxa de conexão da rede?
 Name=C18
-Start=131
+Start=71
 Len=9
 
 [ValueSet]
@@ -1464,7 +1464,7 @@ Value=999999999;Not applicable|Não aplicável|Haihusiki
 [Item]
 Label=How much did your household pay for the internal wiring
 Name=C19
-Start=140
+Start=80
 Len=9
 
 [ValueSet]
@@ -1475,7 +1475,7 @@ Link=9
 [Item]
 Label=Days from applied to household connected|Quantos dias o seu agregado familiar se conectou?
 Name=C20
-Start=149
+Start=89
 Len=3
 
 [ValueSet]
@@ -1487,7 +1487,7 @@ Value=888;Don't know||Hajui
 [Item]
 Label=Weeks to to use electricity after connected|Semanas para utilizar electricidade depois ligado
 Name=C21
-Start=152
+Start=92
 Len=2
 
 [ValueSet]
@@ -1499,7 +1499,7 @@ Value=88;Don't know||Hajui
 [Item]
 Label=What kind of tarriff do you have?
 Name=C22
-Start=154
+Start=94
 Len=2
 
 [ValueSet]
@@ -1537,7 +1537,7 @@ Value=55;Do not know|Não sei|Hajui
 [Item]
 Label=Electric meter|Casa tem um contador eléctrico?
 Name=C23
-Start=156
+Start=96
 Len=1
 
 [ValueSet]
@@ -1550,13 +1550,13 @@ Value=3;No|Não|Hapana
 [Item]
 Label=Number of households sharing|Número de famílias compartilhando
 Name=C24
-Start=157
+Start=97
 Len=2
 
 [Item]
 Label=We would now like to know the capacity of the main fuse. What is the Ampere (A) stated?
 Name=C25
-Start=159
+Start=99
 Len=3
 
 [ValueSet]
@@ -1569,7 +1569,7 @@ Value=888;Don't know|Não sabe|Hajui
 [Item]
 Label=We would now like to know the capacity of the meter. What are the watts (W) stated?
 Name=C26
-Start=162
+Start=102
 Len=5
 
 [ValueSet]
@@ -1582,7 +1582,7 @@ Value=88888;Don't know|Não sabe|Hajui
 [Item]
 Label=Pre-paid meter|Pré-pago metros
 Name=C27
-Start=167
+Start=107
 Len=1
 
 [ValueSet]
@@ -1594,7 +1594,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Who receives payment|Quem recebe o pagamento
 Name=C28
-Start=168
+Start=108
 Len=2
 
 [ValueSet]
@@ -1616,7 +1616,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=Electricity bill provided|factura de electricidade fornecida
 Name=C29
-Start=170
+Start=110
 Len=1
 
 [ValueSet]
@@ -1629,7 +1629,7 @@ Value=3;Respondent does not have an energy bill|Reclamado não tem um contrato d
 [Item]
 Label=Amount last month electricity bill|Valor da conta de energia elétrica no mês passado
 Name=C30
-Start=171
+Start=111
 Len=8
 
 [ValueSet]
@@ -1642,7 +1642,7 @@ Value=88888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many kiloWatthour (kWh) did you pay for?
 Name=C31
-Start=179
+Start=119
 Len=6
 
 [ValueSet]
@@ -1655,31 +1655,31 @@ Value=888888;Don't know|Não sabe|Hajui
 [Item]
 Label=How many weeks did the bill cover?
 Name=C32
-Start=185
+Start=125
 Len=2
 
 [Item]
 Label=How much did you spend the last time you bought electricity?
 Name=C33
-Start=187
+Start=127
 Len=8
 
 [Item]
 Label=How long does this amount last?
 Name=C34
-Start=195
+Start=135
 Len=3
 
 [Item]
 Label=How many KWh did you pay for
 Name=C35
-Start=198
+Start=138
 Len=6
 
 [Item]
 Label=Quality electricity same all year|energia elétrica de qualidade mesmo durante todo o ano
 Name=C36
-Start=204
+Start=144
 Len=1
 
 [ValueSet]
@@ -1691,7 +1691,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information load shedding schedule|Receba informações da agenda derramamento de carga
 Name=C37
-Start=205
+Start=145
 Len=1
 
 [ValueSet]
@@ -1705,7 +1705,7 @@ Value=4;No load-shedding in this area|Sem restrição de corrente nesta área|Ha
 [Item]
 Label=Hours of electricity day and night typical month|Horas de dia eletricidade e noite mês típico
 Name=C38
-Start=206
+Start=146
 Len=2
 
 [ValueSet]
@@ -1718,7 +1718,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Hours of electricity 6 pm to 10 pm typical month|Horas de eletricidade 18:00-22:00 mês típico
 Name=C39
-Start=208
+Start=148
 Len=2
 
 [ValueSet]
@@ -1729,7 +1729,7 @@ Link=2
 [Item]
 Label=Number of blackouts per week|Número de apagões por semana
 Name=C40
-Start=210
+Start=150
 Len=2
 
 [ValueSet]
@@ -1742,7 +1742,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Total duration blackouts per week|Total de apagões duração por semana
 Name=C41
-Start=212
+Start=152
 Len=2
 
 [ValueSet]
@@ -1753,7 +1753,7 @@ Link=2
 [Item]
 Label=Main back-up source lighting|Principal relâmpago fonte de back-up
 Name=C42
-Start=214
+Start=154
 Len=2
 
 [ValueSet]
@@ -1775,7 +1775,7 @@ Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 [Item]
 Label=Main back-up source appliances|Principais aparelhos fonte de back-up
 Name=C43
-Start=216
+Start=156
 Len=2
 
 [ValueSet]
@@ -1793,7 +1793,7 @@ Value=66;No back-up source|Nenhuma fonte de back-up|Hakuna chanzo cha ziada
 [Item]
 Label=Have you ever asked for assistance in a power failure|Dias para corrigir falha de energia
 Name=C44
-Start=218
+Start=158
 Len=1
 
 [ValueSet]
@@ -1807,7 +1807,7 @@ Value=4;They nevner showed up|Eles nunca apareceram|Hawakutokea
 [Item]
 Label=Appliences get damaged due to brown out|Appliences ficar danificado devido a fora marrom
 Name=C45
-Start=219
+Start=159
 Len=2
 
 [ValueSet]
@@ -1820,7 +1820,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Problems with grid electricity 1|Problemas com eletricidade da rede 1
 Name=C46
-Start=221
+Start=161
 Len=2
 
 [ValueSet]
@@ -1841,7 +1841,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Problems with grid electricity 2|Problemas com eletricidade da rede 2
 Name=C47
-Start=223
+Start=163
 Len=2
 
 [ValueSet]
@@ -1862,7 +1862,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Any household members die or limb damage|Quaisquer membros do agregado familiar morrer ou danos limb
 Name=C48
-Start=225
+Start=165
 Len=1
 
 [ValueSet]
@@ -1874,7 +1874,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury|Motivo da lesão
 Name=C49
-Start=226
+Start=166
 Len=2
 
 [ValueSet]
@@ -1888,7 +1888,7 @@ Value=55;Other|De outros|Nyinginezo
 [Item]
 Label=Is there a limit for the load and/or appliances you are allowed to power from this local grid?
 Name=C50
-Start=228
+Start=168
 Len=2
 
 [ValueSet]
@@ -1901,7 +1901,7 @@ Value=88;Don't know|Não sabe|Hajui
 [Item]
 Label=Were you involved in setting the tariff for the local grid?
 Name=C51
-Start=230
+Start=170
 Len=1
 
 [ValueSet]
@@ -1913,7 +1913,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How were you involved in the tariff setting?
 Name=C52
-Start=231
+Start=171
 Len=2
 
 [ValueSet]
@@ -1929,19 +1929,19 @@ Value=55;Other|Outros|Nyingine
 Label=C Solar home system|sistema de home C Solar
 Name=C_SOLAR_HOME_SYSTEM
 RecordTypeValue='2'
-RecordLen=234
+RecordLen=174
 
 [Item]
 Label=Manufacture name and type|Fabricação nome e tipo
 Name=C53
-Start=104
+Start=44
 Len=32
 DataType=Alpha
 
 [Item]
 Label=Do you share this solar home system with other households?
 Name=C54
-Start=136
+Start=76
 Len=1
 
 [ValueSet]
@@ -1953,13 +1953,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How many households share this solar home system?
 Name=C55
-Start=137
+Start=77
 Len=2
 
 [Item]
 Label=Power rating solar panel|potência do painel solar
 Name=C56
-Start=139
+Start=79
 Len=3
 
 [ValueSet]
@@ -1970,7 +1970,7 @@ Link=3
 [Item]
 Label=Capacity battery|capacidade de bateria
 Name=C57
-Start=142
+Start=82
 Len=3
 
 [ValueSet]
@@ -1981,7 +1981,7 @@ Link=3
 [Item]
 Label=What is the voltage (V) of the rechargeable batteries?
 Name=C58
-Start=145
+Start=85
 Len=2
 
 [ValueSet]
@@ -1992,13 +1992,13 @@ Link=2
 [Item]
 Label=What is the watt hours  (Wh) stated on the batteries?
 Name=C59
-Start=147
+Start=87
 Len=5
 
 [Item]
 Label=Inverter|Inversor
 Name=C60
-Start=152
+Start=92
 Len=1
 
 [ValueSet]
@@ -2010,7 +2010,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=What is the capacity of the inverter?|Carregador de celular
 Name=C61
-Start=153
+Start=93
 Len=4
 
 [ValueSet]
@@ -2023,19 +2023,19 @@ Value=8888;Don't know|Não sabe|Hajui
 [Item]
 Label=Number of years had device|Número de anos em que teve o dispositivo
 Name=C62
-Start=157
+Start=97
 Len=2
 
 [Item]
 Label=Who decided purchase|Quem decidiu a compra
 Name=C63
-Start=159
+Start=99
 Len=1
 
 [Item]
 Label=How got device|Como teve o dispositivo
 Name=C64
-Start=160
+Start=100
 Len=1
 
 [ValueSet]
@@ -2048,7 +2048,7 @@ Value=3;Received for free|Recebeu de graça|Tulipewa bure
 [Item]
 Label=Who gave you device|Quem lhe deu dispositivo
 Name=C65
-Start=161
+Start=101
 Len=2
 
 [ValueSet]
@@ -2063,7 +2063,7 @@ Value=5;Other|De outros|Nyingine
 [Item]
 Label=Did you pay full or partial amount for your [DEVICE]
 Name=C66
-Start=163
+Start=103
 Len=1
 
 [ValueSet]
@@ -2075,13 +2075,13 @@ Value=2;Partial amount|Montante parcial|Fedha kiasi
 [Item]
 Label=What is the term period for the payment?
 Name=C67
-Start=164
+Start=104
 Len=2
 
 [Item]
 Label=What payment system do you use?
 Name=C68
-Start=166
+Start=106
 Len=1
 
 [ValueSet]
@@ -2094,13 +2094,13 @@ Value=3;Fixed fee|Taxa fixa|Ada zisizohamishika
 [Item]
 Label=What is the monthly payment for this [DEVICE] (installment/ fee to rent/use)?
 Name=C69
-Start=167
+Start=107
 Len=8
 
 [Item]
 Label=Did/do you borrow money to make your payment for [DEVICE]?
 Name=C70
-Start=175
+Start=115
 Len=1
 
 [ValueSet]
@@ -2111,13 +2111,13 @@ Link=133482376
 [Item]
 Label=Amount paid for device upfront|Valor inicial pago para o dispositivo
 Name=C71
-Start=176
+Start=116
 Len=9
 
 [Item]
 Label=Device warranty|garantia do dispositivo
 Name=C72
-Start=185
+Start=125
 Len=1
 
 [ValueSet]
@@ -2129,7 +2129,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Receive information warranty and training|recebeu informações sobre a garantia e treinamento
 Name=C73
-Start=186
+Start=126
 Len=1
 
 [ValueSet]
@@ -2141,7 +2141,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
 Name=C74
-Start=187
+Start=127
 Len=1
 
 [ValueSet]
@@ -2153,7 +2153,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How many hours did you receive service from this [DEVICE] each day and night, during the last seven days?||How many hours did you receive service from this [DEVICE] each day and night, during the last seven days?
 Name=C75
-Start=188
+Start=128
 Len=2
 
 [ValueSet]
@@ -2164,13 +2164,13 @@ Value=0:99
 [Item]
 Label=How many hours was service available from this [DEVICE] each evening, from 6:00 pm to 10:00 pm, during last seven days?
 Name=C76
-Start=190
+Start=130
 Len=2
 
 [Item]
 Label=Most serious problems device| problemas mais grave no dispositivo
 Name=C77
-Start=192
+Start=132
 Len=2
 
 [ValueSet]
@@ -2190,7 +2190,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Service to repair or raplace device|serviço para reparar ou substituir facilmente
 Name=C78
-Start=194
+Start=134
 Len=1
 
 [ValueSet]
@@ -2202,7 +2202,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Device mobile charger|dispositivo carregador móvel
 Name=C79
-Start=195
+Start=135
 Len=1
 
 [ValueSet]
@@ -2214,7 +2214,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Device radio|dispositivo de rádio
 Name=C80
-Start=196
+Start=136
 Len=1
 
 [ValueSet]
@@ -2226,13 +2226,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Number light bulbs| número de lâmpadas
 Name=C81
-Start=197
+Start=137
 Len=2
 
 [Item]
 Label=Appliances used with solar device|Aparelhos utilizados com o dispositivo de energia solar
 Name=C82
-Start=199
+Start=139
 Len=14
 DataType=Alpha
 
@@ -2250,7 +2250,7 @@ Value='x             ';No appliances|Não aplicavel|Hakuna vifaa vya umeme
 [Item]
 Label=Appliances would like|Aparelhos que gostaria de ter
 Name=C83
-Start=213
+Start=153
 Len=2
 
 [ValueSet]
@@ -2263,7 +2263,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=Type of appliance|Tipo de aparelho
 Name=C84
-Start=215
+Start=155
 Len=6
 DataType=Alpha
 
@@ -2282,7 +2282,7 @@ Value='66    ';No appliances|Não aplicavel|Hakuna vifaa vya umeme
 [Item]
 Label=Satisfaction main solar device|Satisfação pelo dispositivo principal de energia solar
 Name=C85
-Start=221
+Start=161
 Len=1
 
 [ValueSet]
@@ -2295,13 +2295,13 @@ Value=4;Unsatisfied|Insatisfeito|Haturidhiki sana
 [Item]
 Label=Year get solar device|Ano que obteve o dispositivo de energia solar
 Name=C86
-Start=222
+Start=162
 Len=4
 
 [Item]
 Label=Use more or less solar lighting|Usa mais ou menos iluminação solar
 Name=C87
-Start=226
+Start=166
 Len=2
 
 [ValueSet]
@@ -2315,7 +2315,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Appliances not used before|Aparelhos não utilizado anteriorimente
 Name=C88
-Start=228
+Start=168
 Len=7
 DataType=Alpha
 
@@ -2334,12 +2334,12 @@ Value='q      ';Other|De outros|Nyingine
 Label=C Electric generator set|C grupo gerador eléctrico
 Name=C_ELECTRIC_GENERATOR_SET
 RecordTypeValue='3'
-RecordLen=175
+RecordLen=115
 
 [Item]
 Label=Share generator other households|Compartilhar gerados com outras famílias
 Name=C89
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -2351,7 +2351,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Number of households sharing generator|Número de famílias que compartilham gerador
 Name=C90
-Start=105
+Start=45
 Len=2
 
 [ValueSet]
@@ -2362,7 +2362,7 @@ Link=2
 [Item]
 Label=Generator capacity|capacidade do gerador
 Name=C91
-Start=107
+Start=47
 Len=5
 
 [ValueSet]
@@ -2373,7 +2373,7 @@ Link=5
 [Item]
 Label=What used generator for|O gerador usado para
 Name=C92
-Start=112
+Start=52
 Len=4
 DataType=Alpha
 
@@ -2388,7 +2388,7 @@ Value='q   ';Other|De outros|Nyingine, taja
 [Item]
 Label=Which months used generator last 12 months|Que meses usau gerador últimos 12 meses
 Name=C93
-Start=116
+Start=56
 Len=13
 DataType=Alpha
 
@@ -2413,7 +2413,7 @@ Value='q            ';All year|Todo o ano|Mwaka mzima
 [Item]
 Label=Days per month used generator|Dias por mês em usau gerador
 Name=C94
-Start=129
+Start=69
 Len=2
 
 [ValueSet]
@@ -2424,7 +2424,7 @@ Link=2
 [Item]
 Label=Years used generator|Anos de uso do gerador
 Name=C95
-Start=131
+Start=71
 Len=2
 
 [ValueSet]
@@ -2435,7 +2435,7 @@ Link=2
 [Item]
 Label=Own or rent generator|gerador próprio ou alugado
 Name=C96
-Start=133
+Start=73
 Len=1
 
 [ValueSet]
@@ -2448,7 +2448,7 @@ Value=3;Use the generator for free|Usa o gerador de graça|Hutumia jenereta bure
 [Item]
 Label=Amount paid to use generator per month|Valor pago por mês para usar o gerador
 Name=C97
-Start=134
+Start=74
 Len=8
 
 [ValueSet]
@@ -2459,7 +2459,7 @@ Link=8
 [Item]
 Label=In the last 12 months, did you spend anything on repairs/parts/ maintenance of the generator?
 Name=C98
-Start=142
+Start=82
 Len=1
 
 [ValueSet]
@@ -2470,7 +2470,7 @@ Link=133482376
 [Item]
 Label=Amount repair generator|Montante pago para reparacção
 Name=C99
-Start=143
+Start=83
 Len=8
 
 [ValueSet]
@@ -2481,7 +2481,7 @@ Link=8
 [Item]
 Label=Fuel generator|gerador de combustível
 Name=C100
-Start=151
+Start=91
 Len=2
 
 [ValueSet]
@@ -2495,7 +2495,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=Quantity of fuel generator 30 days|Quantidade de combustível
 Name=C101
-Start=153
+Start=93
 Len=3
 
 [ValueSet]
@@ -2506,7 +2506,7 @@ Link=3
 [Item]
 Label=Pay for fuel generator|Paga combustível para o gerador
 Name=C102
-Start=156
+Start=96
 Len=1
 
 [ValueSet]
@@ -2518,7 +2518,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Amount spent on fuel last 30 days|Montante gasto em combustível últimos 30 dias
 Name=C103
-Start=157
+Start=97
 Len=5
 
 [ValueSet]
@@ -2529,7 +2529,7 @@ Link=5
 [Item]
 Label=Certain months fuel less available|Alguns meses combustível menos disponíveis
 Name=C104
-Start=162
+Start=102
 Len=1
 
 [ValueSet]
@@ -2541,7 +2541,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Hours of generator available|Horas disponíveis do gerador
 Name=C105
-Start=163
+Start=103
 Len=2
 
 [ValueSet]
@@ -2552,7 +2552,7 @@ Link=2
 [Item]
 Label=Hours of generator available evening|Horas disponíveis de noite para o gerador
 Name=C106
-Start=165
+Start=105
 Len=2
 
 [ValueSet]
@@ -2563,7 +2563,7 @@ Link=2
 [Item]
 Label=Appliances damaged generator|aparelhos danificados pelo Gerador
 Name=C107
-Start=167
+Start=107
 Len=2
 
 [ValueSet]
@@ -2576,7 +2576,7 @@ Value=88;Don't know|Não sei|Sijui
 [Item]
 Label=Most serious problems generator|problemas mais grave do gerador
 Name=C108
-Start=169
+Start=109
 Len=2
 
 [ValueSet]
@@ -2595,7 +2595,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=More problems generator|Mais problemas
 Name=C109
-Start=171
+Start=111
 Len=2
 
 [ValueSet]
@@ -2614,7 +2614,7 @@ Value=66;No problems|Sem problemas|Hakuna matatizo
 [Item]
 Label=Household members die or injury 12 months - generator|os membros da família morrem ou lesão
 Name=C110
-Start=173
+Start=113
 Len=1
 
 [ValueSet]
@@ -2626,7 +2626,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Reason for injury - generator|Motivo da lesão
 Name=C111
-Start=174
+Start=114
 Len=2
 
 [ValueSet]
@@ -2641,18 +2641,18 @@ Value=55;Other|De outrosr|Nyingine
 Label=C Externally recharged battery|C Externamente bateria recarregada
 Name=C_EXTERNALLY_RECHARGED_BATTERY
 RecordTypeValue='4'
-RecordLen=166
+RecordLen=106
 
 [Item]
 Label=How many years have you had this battery?
 Name=C112
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Which months used|meses em que usou
 Name=C113
-Start=106
+Start=46
 Len=13
 DataType=Alpha
 
@@ -2664,7 +2664,7 @@ Link=121212121
 [Item]
 Label=What used for|Quais Utilizou para
 Name=C114
-Start=119
+Start=59
 Len=5
 DataType=Alpha
 
@@ -2680,7 +2680,7 @@ Value='q    ';Other|De outros|Nyingine, taja
 [Item]
 Label=Have inverter to use AC appliances|Têm inversor para usar aparelhos corrente alternativa
 Name=C115
-Start=124
+Start=64
 Len=1
 
 [ValueSet]
@@ -2692,19 +2692,19 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Capacity of inverter|Capacidade de inversor
 Name=C116
-Start=125
+Start=65
 Len=4
 
 [Item]
 Label=total number of rechargable batteries used per minth|número total de baterias recarregáveis utilizados por mês tipico
 Name=C117
-Start=129
+Start=69
 Len=2
 
 [Item]
 Label=pay for rechargable battery|pagar por baterias recarregáveis
 Name=C118
-Start=131
+Start=71
 Len=8
 
 [ValueSet]
@@ -2715,7 +2715,7 @@ Link=8
 [Item]
 Label=How much spend on rechargable batteries per month|Quanto gasta em baterias recarregáveis por mês
 Name=C119
-Start=139
+Start=79
 Len=8
 
 [ValueSet]
@@ -2726,7 +2726,7 @@ Link=8
 [Item]
 Label=el source for rechargning|principal fonte que usa para recarregar
 Name=C120
-Start=147
+Start=87
 Len=2
 
 [ValueSet]
@@ -2741,7 +2741,7 @@ Value=55;Other|De outros|Nyingine
 [Item]
 Label=hours of electricity per day|horas de electricidade por dia
 Name=C121
-Start=149
+Start=89
 Len=2
 
 [ValueSet]
@@ -2752,20 +2752,20 @@ Link=2
 [Item]
 Label=how many hours ech evening|quantas horas por noite usa baterias recarregar
 Name=C122
-Start=151
+Start=91
 Len=2
 
 [Item]
 Label=Capacity|Capacidade
 Name=C123
-Start=153
+Start=93
 Len=4
 Decimal=2
 
 [Item]
 Label=voltage|Voltagem
 Name=C124
-Start=157
+Start=97
 Len=2
 
 [ValueSet]
@@ -2776,7 +2776,7 @@ Link=2
 [Item]
 Label=What is the watt hours  (Wh) stated on the battery?
 Name=C125
-Start=159
+Start=99
 Len=4
 
 [ValueSet]
@@ -2787,7 +2787,7 @@ Link=4
 [Item]
 Label=most serious problems|a maioria dos problemas graves
 Name=C126
-Start=163
+Start=103
 Len=2
 
 [ValueSet]
@@ -2806,7 +2806,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=other problems|outros problemas
 Name=C127
-Start=165
+Start=105
 Len=2
 
 [ValueSet]
@@ -2818,18 +2818,18 @@ Link=234234444
 Label=C Main source of el - charging mobile phone|fonte C principal do el - o carregamento do telefone móvel
 Name=C_MAIN_SOURCE_OF_EL_CHARGING_M
 RecordTypeValue='5'
-RecordLen=119
+RecordLen=59
 
 [Item]
 Label=Number mobile phones|números de telefones celulares
 Name=C128
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Charge mobile phone in dwelling|Carregar o telefone móvel dentro da casa
 Name=C129
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -2842,7 +2842,7 @@ Value=8;Don't know|Não Sabe|Sijui
 [Item]
 Label=Charge one mobile phone each day|Carregar um telemóvel a cada dia
 Name=C130
-Start=107
+Start=47
 Len=1
 
 [ValueSet]
@@ -2854,7 +2854,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Charge one mobile phone 3 days|cobrar pelo menos um telefone carregar em 3 dias
 Name=C131
-Start=108
+Start=48
 Len=1
 
 [ValueSet]
@@ -2866,19 +2866,19 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Number of mobile phones charge outside dwelling|Número de telefones móveis carregados fora de habitação
 Name=C132
-Start=109
+Start=49
 Len=2
 
 [Item]
 Label=Amount spent charging mobile phones|Montante gasto a carregar telefones móveis
 Name=C133
-Start=111
+Start=51
 Len=8
 
 [Item]
 Label=Does your household have a solar charger or solar power bank that can be used for charging mobile phones?
 Name=C134
-Start=119
+Start=59
 Len=1
 
 [ValueSet]
@@ -2891,12 +2891,12 @@ Value=2;No|Não|Hapana
 Label=D Willingness to pay for a grid connection|Disposição D para pagar por uma ligação à rede
 Name=D_WILLINGNESS_TO_PAY_FOR_A_GRID
 RecordTypeValue='D'
-RecordLen=110
+RecordLen=50
 
 [Item]
 Label=Willing to pay ${CF} upfront for electricity connection?|Dispostos a pagar US $ {CF} adiantado para conexão de energia elétrica?
 Name=D1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -2908,7 +2908,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Willing to pay $ for electricity connection, 12 months payment|Dispostos a pagar US $ para a conexão elétrica, o pagamento de 12 meses
 Name=D2
-Start=105
+Start=45
 Len=2
 
 [ValueSet]
@@ -2921,7 +2921,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=If fee waived, would you get a grid?|Se a taxa fosse dispensada, você receberia a rede?
 Name=D3
-Start=107
+Start=47
 Len=2
 
 [ValueSet]
@@ -2934,7 +2934,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=why not accept?|por que não aceitar?
 Name=D4
-Start=109
+Start=49
 Len=2
 
 [ValueSet]
@@ -2950,12 +2950,12 @@ Value=55;Other|De outros|Nyingine
 Label=E Willingness to pay for solar device|E Disposição para pagar por dispositivo de energia solar
 Name=E_WILLINGNESS_TO_PAY_FOR_SOLAR_D
 RecordTypeValue='E'
-RecordLen=108
+RecordLen=48
 
 [Item]
 Label=Willing to pay $ upfront for solar device?|Dispostos a pagar US $ adiantado para dispositivo solar?
 Name=E1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -2967,7 +2967,7 @@ Value=2;No|Nao|Hapana
 [Item]
 Label=Willing to pay $ within 12 months for solar device?|Dispostos a pagar US $ dentro de 12 meses para o dispositivo solar?
 Name=E2
-Start=105
+Start=45
 Len=2
 
 [ValueSet]
@@ -2980,7 +2980,7 @@ Value=88;Don't know|Não sabe|Sijui
 [Item]
 Label=Why would you not accept?|Por que você não aceita?
 Name=E3
-Start=107
+Start=47
 Len=2
 
 [ValueSet]
@@ -2995,12 +2995,12 @@ Value=55;Other|De outro|Nyingine
 Label=G_HH
 Name=G_HH
 RecordTypeValue='g'
-RecordLen=118
+RecordLen=58
 
 [Item]
 Label=which devices did you power with dry cell batteries
 Name=G1
-Start=104
+Start=44
 Len=8
 DataType=Alpha
 
@@ -3016,13 +3016,13 @@ Value='X       ';None|Nenhum|Hakuna
 [Item]
 Label=number of dry cell batteries purchased each month|número de pilhas secas comprados a cada mês
 Name=G3
-Start=112
+Start=52
 Len=2
 
 [Item]
 Label=spendings on dry cell batteries each month|gastos em pilhas secas cada mês
 Name=G4
-Start=114
+Start=54
 Len=5
 
 [Record]
@@ -3031,42 +3031,42 @@ Name=G_DRY_CELL
 RecordTypeValue='G'
 Required=No
 MaxRecords=4
-RecordLen=112
+RecordLen=52
 
 [Item]
 Label=Number of items powered with dry-cell batteries|Número de itens movidos a pilhas secas
 Name=G2A
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Average price for ...|preço avarage para ...
 Name=G2B
-Start=106
+Start=46
 Len=5
 
 [Item]
 Label=On a typical day, how many hours do you use ...|Em um dia típico, quantas horas você usa ...
 Name=G2C
-Start=111
+Start=51
 Len=2
 
 [Record]
 Label=F_HH Kerosene/Fuel-based/Candle lighting|Querosene / combustível à base / Vela relâmpago
 Name=F_FUEL
 RecordTypeValue='F'
-RecordLen=145
+RecordLen=85
 
 [Item]
 Label=Household member|membro do agregado familiar
 Name=F1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Main source of lighting for children's homework|fonte F1 principal de iluminação para trabalhos de casa das crianças
 Name=F2
-Start=106
+Start=46
 Len=2
 
 [ValueSet]
@@ -3086,7 +3086,7 @@ Value=66;Studying and homework only during daylight hours|Estudar e lição de c
 [Item]
 Label=Which of these is the main source of lighting in the household?
 Name=F3
-Start=108
+Start=48
 Len=2
 
 [ValueSet]
@@ -3104,31 +3104,31 @@ Value=55;Other|Outros|Nyingine
 [Item]
 Label=How many of these lamps does your household have?
 Name=F4
-Start=110
+Start=50
 Len=2
 
 [Item]
 Label=How much did you pay for each [LAMP]?
 Name=F5
-Start=112
+Start=52
 Len=8
 
 [Item]
 Label=In the last 30 days, how many days did you use [LAMP/CANDLE]?
 Name=F6
-Start=120
+Start=60
 Len=2
 
 [Item]
 Label=How many hours do you use [LAMP/ CANDLE] each day?
 Name=F7
-Start=122
+Start=62
 Len=2
 
 [Item]
 Label=What are the most important problem when using the [LAMP/ CANDLE]?
 Name=F8
-Start=124
+Start=64
 Len=2
 
 [ValueSet]
@@ -3147,7 +3147,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=What are the second most important problem when using the [LAMP/ CANDLE]?
 Name=F9
-Start=126
+Start=66
 Len=2
 
 [ValueSet]
@@ -3166,7 +3166,7 @@ Value=66;No problems|Sem problemas|Hakuna tatizo
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
 Name=F10
-Start=128
+Start=68
 Len=1
 
 [ValueSet]
@@ -3178,7 +3178,7 @@ Value=2;No|Nao|Hapana
 [Item]
 Label=Which fuel use|Qual usa como combustível?
 Name=F11
-Start=129
+Start=69
 Len=1
 
 [ValueSet]
@@ -3194,26 +3194,26 @@ Value=7;None|Nenhum|Hakuna
 [Item]
 Label=Total quantity of purchase at a typical time?|quantidade total de compra em um momento típico?
 Name=F12
-Start=130
+Start=70
 Len=4
 Decimal=1
 
 [Item]
 Label=How long does this quantity typically last?|Quanto tempo esta quantidade geralmente duram?
 Name=F13
-Start=134
+Start=74
 Len=3
 
 [Item]
 Label=How much do you pay for the typical purchase?|Quanto você paga para a compra típico?
 Name=F14
-Start=137
+Start=77
 Len=8
 
 [Item]
 Label=Percentage of fuel used for lighting|Percentagem de combustível utilizado para iluminação
 Name=F15
-Start=145
+Start=85
 Len=1
 
 [ValueSet]
@@ -3228,18 +3228,18 @@ Value=4;Less than half|Menos de metade|Chini ya nusu
 Label=I Use of cooking sloutions|I_HH Uso de sloutions cozinha
 Name=I_COOKING_SOLUTIONS
 RecordTypeValue='I'
-RecordLen=291
+RecordLen=231
 
 [Item]
 Label=HH MN for Household Cooking solutions|HH MN para uso doméstico Cozinhar solutionâ
 Name=I1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Have you used any stoves using firewood, dung, twigs and leaves during the last 12 months?
 Name=I2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -3250,7 +3250,7 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I3
-Start=107
+Start=47
 Len=18
 DataType=Alpha
 
@@ -3273,7 +3273,7 @@ Image=..\Images\Cookstoves_141.jpg
 [Item]
 Label=Have you used any stoves using charcoal during the last 12 months?
 Name=I4
-Start=125
+Start=65
 Len=1
 
 [ValueSet]
@@ -3284,7 +3284,7 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I5
-Start=126
+Start=66
 Len=18
 DataType=Alpha
 
@@ -3307,7 +3307,7 @@ Image=..\Images\Cookstoves_241.jpg
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
 Name=I6
-Start=144
+Start=84
 Len=1
 
 [ValueSet]
@@ -3318,7 +3318,7 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I7
-Start=145
+Start=85
 Len=6
 DataType=Alpha
 
@@ -3333,7 +3333,7 @@ Image=..\Images\Cookstoves_341.jpg
 [Item]
 Label=Have you used any stoves using LPG, biogas, electricity (grid or solar), solar oven (non-electric)?
 Name=I8
-Start=151
+Start=91
 Len=1
 
 [ValueSet]
@@ -3344,7 +3344,7 @@ Link=133482376
 [Item]
 Label=Which type of stove is this?
 Name=I9
-Start=152
+Start=92
 Len=12
 DataType=Alpha
 
@@ -3363,13 +3363,13 @@ Image=..\Images\Cookstoves_471.jpg
 [Item]
 Label=Which one is your main stove?
 Name=I10
-Start=164
+Start=104
 Len=3
 
 [Item]
 Label=How did you obtain this [STOVE]?
 Name=I11
-Start=167
+Start=107
 Len=1
 
 [ValueSet]
@@ -3383,19 +3383,19 @@ Value=4;Built ourselves||Tumelijenga/tengeneza wenyewe
 [Item]
 Label=Who decided to purchase this [STOVE]?
 Name=I12
-Start=168
+Start=108
 Len=2
 
 [Item]
 Label=How much did you pay for the [STOVE]?
 Name=I13
-Start=170
+Start=110
 Len=8
 
 [Item]
 Label=Who gave the [STOVE] to you?
 Name=I14
-Start=178
+Start=118
 Len=2
 
 [ValueSet]
@@ -3410,7 +3410,7 @@ Value=55;Other|Outros|Wengine
 [Item]
 Label=Did you receive training or information on the [STOVE]?
 Name=I15
-Start=180
+Start=120
 Len=1
 
 [ValueSet]
@@ -3421,20 +3421,20 @@ Link=133482376
 [Item]
 Label=What is the manufacturer and model of the [STOVE]?
 Name=I16
-Start=181
+Start=121
 Len=32
 DataType=Alpha
 
 [Item]
 Label=If you want to sell the [STOVE] in your community today, how much would you receive?
 Name=I17
-Start=213
+Start=153
 Len=8
 
 [Item]
 Label=How long have you been using this [STOVE]?
 Name=I18
-Start=221
+Start=161
 Len=2
 
 [ValueSet]
@@ -3447,13 +3447,13 @@ Value=88;Hajui||Hajui
 [Item]
 Label=How many years do you expect to continue using this [STOVE]?
 Name=I19
-Start=223
+Start=163
 Len=2
 
 [Item]
 Label=In the last 12 months, during which part of the year did you use this [STOVE]?
 Name=I20
-Start=225
+Start=165
 Len=1
 
 [ValueSet]
@@ -3466,7 +3466,7 @@ Value=3;Mainly rain season|Principalmente estação de chuva|Zaidi msimu wa mvua
 [Item]
 Label=Is the [STOVE] fixed in one place or moveable?
 Name=I21
-Start=226
+Start=166
 Len=1
 
 [ValueSet]
@@ -3478,7 +3478,7 @@ Value=2;Moveable|Mover-se|Linalohamishika
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the dry season?
 Name=I22
-Start=227
+Start=167
 Len=1
 
 [ValueSet]
@@ -3495,7 +3495,7 @@ Value=6;Open air|Ar livre|Nje ya nyumba kwenye uwazi
 [Item]
 Label=In the last 12 months, where did you normally cook with [STOVE] in the rainy season?
 Name=I23
-Start=228
+Start=168
 Len=1
 
 [ValueSet]
@@ -3506,7 +3506,7 @@ Link=133482344
 [Item]
 Label=Do you use a chimney, hood or other exhaust system while using this stove?
 Name=I24
-Start=229
+Start=169
 Len=1
 
 [ValueSet]
@@ -3517,7 +3517,7 @@ Link=133482376
 [Item]
 Label=In the last 12 months, what are the fuels you used the most on [STOVE]?
 Name=I25
-Start=230
+Start=170
 Len=2
 
 [ValueSet]
@@ -3548,7 +3548,7 @@ Value=99;Not applicable|Não aplicável|Haihusiki
 [Item]
 Label=In the last 12 months, what are the second most used fuel you used on [STOVE]?
 Name=I26
-Start=232
+Start=172
 Len=2
 
 [ValueSet]
@@ -3559,7 +3559,7 @@ Link=138883072
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I27
-Start=234
+Start=174
 Len=1
 
 [ValueSet]
@@ -3574,7 +3574,7 @@ Value=4;Rarely available|Raramente disponível|Inapatikana mara chache
 [Item]
 Label=In the last 12 months, how often was the [FUEL TYPE] available?
 Name=I28
-Start=235
+Start=175
 Len=1
 
 [ValueSet]
@@ -3585,13 +3585,13 @@ Link=123456789
 [Item]
 Label=In the last 12 months, how many months did you use [FUEL]?
 Name=I29
-Start=236
+Start=176
 Len=2
 
 [Item]
 Label=What kind of unit do you usually buy the [FUEL] in?
 Name=I30
-Start=238
+Start=178
 Len=1
 
 [ValueSet]
@@ -3607,19 +3607,19 @@ Value=6;Packets|Pacotes|Paketi
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
 Name=I31
-Start=239
+Start=179
 Len=8
 
 [Item]
 Label=How long does a [UNIT] of [FUEL] typically last?
 Name=I32
-Start=247
+Start=187
 Len=2
 
 [Item]
 Label=How much of the fuel you bought was  used for cooking?
 Name=I33
-Start=249
+Start=189
 Len=1
 
 [ValueSet]
@@ -3633,7 +3633,7 @@ Value=4;Less than half|Menos de metade|Pungufu ya nusu
 [Item]
 Label=How much time do household members spend preparing the [STOVE] and fuel for each meal on average?
 Name=I34
-Start=250
+Start=190
 Len=3
 
 [ValueSet]
@@ -3644,43 +3644,43 @@ Value=0:999
 [Item]
 Label=In the last 7 days, how many days did you use [STOVE]?
 Name=I35
-Start=253
+Start=193
 Len=1
 
 [Item]
 Label=In the last 7 days, on average, how many times did you light the [STOVE] per day?
 Name=I36
-Start=254
+Start=194
 Len=1
 
 [Item]
 Label=On average, how much time do you spend in the... morning?
 Name=I37
-Start=255
+Start=195
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... afternoon?
 Name=I38
-Start=258
+Start=198
 Len=3
 
 [Item]
 Label=On average, how much time do you spend in the... evening?
 Name=I39
-Start=261
+Start=201
 Len=3
 
 [Item]
 Label=In the last 7 days, on average, how much time did your household use [STOVE] per day to boil water (for cooking, washing, and drinking)?
 Name=I40
-Start=264
+Start=204
 Len=3
 
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [STOVE]?
 Name=I41
-Start=267
+Start=207
 Len=1
 
 [ValueSet]
@@ -3691,7 +3691,7 @@ Link=133482376
 [Item]
 Label=Did you seek professinal medical assistance for this injury/ any of these injuries?
 Name=I42
-Start=268
+Start=208
 Len=1
 
 [ValueSet]
@@ -3702,31 +3702,31 @@ Link=133482376
 [Item]
 Label=How many of times did the household gather, collect or purchase fuel  during the last seven days?
 Name=I43
-Start=269
+Start=209
 Len=2
 
 [Item]
 Label=How many members of the household were involved each time?
 Name=I44
-Start=271
+Start=211
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Hours)
 Name=I45_HH
-Start=273
+Start=213
 Len=2
 
 [Item]
 Label=How long time did it typically take to gather, collect or purchase fuel per person each time they did so during the last seven days? (Minutes)
 Name=I45_MM
-Start=275
+Start=215
 Len=2
 
 [Item]
 Label=Shape of cooking space|Forma de espaço de cozinha
 Name=I46
-Start=277
+Start=217
 Len=1
 
 [ValueSet]
@@ -3740,37 +3740,37 @@ Value=4;Other|De outros|Nyingine
 [Item]
 Label=Dimension of cooking space (square)|Dimensão do espaço de cozinha (quadrado)
 Name=I47
-Start=278
+Start=218
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 1|Dimensão do lugar lado cozinhar rectagular 1
 Name=I48
-Start=280
+Start=220
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place side 2|Dimensão do lugar lado cozinhar rectagular 2
 Name=I49
-Start=282
+Start=222
 Len=2
 
 [Item]
 Label=Dimension of rectagular cooking place circular|Dimensão de cozinhar rectagular lugar circular
 Name=I50
-Start=284
+Start=224
 Len=2
 
 [Item]
 Label=Size of rectagular cooking place|Tamanho do lugar cozinhar rectagular
 Name=I51
-Start=286
+Start=226
 Len=2
 
 [Item]
 Label=Type of roof covering cooking place|Tipo de telhado que cobre lugar de cozinha
 Name=I52
-Start=288
+Start=228
 Len=1
 
 [ValueSet]
@@ -3784,7 +3784,7 @@ Value=4;None of the above|Nenhuma das acima|Hakuna jibu kati ya 1,2 na 3
 [Item]
 Label=Height of highest point to ceiling|Altura do ponto mais alto ao teto
 Name=I53
-Start=289
+Start=229
 Len=1
 
 [ValueSet]
@@ -3799,7 +3799,7 @@ Value=5;More than 2 * my height|Mais de 2 * minha altura|Zaidi ya mara 2 ya uref
 [Item]
 Label=How many doors and windows in cooking place?|Quantas portas e janelas em cozinhar lugar?
 Name=I54
-Start=290
+Start=230
 Len=1
 
 [ValueSet]
@@ -3813,7 +3813,7 @@ Value=4;Additional Large Opening||Uwazi mkubwa wa ziada
 [Item]
 Label=Does the cooking oven or kitchen have any ventilation, such as a chimney, a hood, or a fan?
 Name=I55
-Start=291
+Start=231
 Len=1
 
 [ValueSet]
@@ -3829,18 +3829,18 @@ Value=5;No|Não|Hapana
 Label=O Health impacts|impactos O Saúde
 Name=O_HEALTH_IMPACTS
 RecordTypeValue='O'
-RecordLen=117
+RecordLen=57
 
 [Item]
 Label=HH member no for section|membro do HH Não para seção
 Name=O1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Persistent coughing or an illness with a cough
 Name=O2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -3852,7 +3852,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=breath faster than usual or difficulty breathing
 Name=O3
-Start=107
+Start=47
 Len=1
 
 [ValueSet]
@@ -3864,7 +3864,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=experienced a problem in the chest or a blocked or runny nos
 Name=O4
-Start=108
+Start=48
 Len=1
 
 [ValueSet]
@@ -3876,7 +3876,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Eye irritations or problems last 14 days
 Name=O5
-Start=109
+Start=49
 Len=1
 
 [ValueSet]
@@ -3888,7 +3888,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Went to see a doctor/clinic for the cough
 Name=O6
-Start=110
+Start=50
 Len=1
 
 [ValueSet]
@@ -3900,13 +3900,13 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Child for section
 Name=O7
-Start=111
+Start=51
 Len=2
 
 [Item]
 Label=Did [NAME] have persistent coughing or an illness with a cough at any time in the last 14 days?
 Name=O8
-Start=113
+Start=53
 Len=1
 
 [ValueSet]
@@ -3918,7 +3918,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did [NAME]  breath faster than usual with short, rapid breaths or had difficulty breathing?
 Name=O9
-Start=114
+Start=54
 Len=1
 
 [ValueSet]
@@ -3930,7 +3930,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did [NAME] also experience a problem in the chest or a blocked or runny nose?
 Name=O10
-Start=115
+Start=55
 Len=1
 
 [ValueSet]
@@ -3942,7 +3942,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did [NAME] have an eye irritation or eye problems in the last 14 days?
 Name=O11
-Start=116
+Start=56
 Len=1
 
 [ValueSet]
@@ -3954,7 +3954,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did [NAME] go to see a doctor/clinic for the illness?
 Name=O12
-Start=117
+Start=57
 Len=1
 
 [ValueSet]
@@ -3967,18 +3967,18 @@ Value=2;No|Não|Hapana
 Label=K Willingness to pay for an improved stove|K disposição de pagar por um fogão melhorado
 Name=K_IMPROVED_STOVE
 RecordTypeValue='K'
-RecordLen=110
+RecordLen=50
 
 [Item]
 Label=HH MN for section K|HH MN, para a secção de K
 Name=K1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Willing to purchase cookstove at ...|Dispostos a comprar fogão a ...
 Name=K2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -3990,7 +3990,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Willing to pay $ within 12 months?|Dispostos a pagar US $ dentro de 12 meses?
 Name=K3
-Start=107
+Start=47
 Len=2
 
 [ValueSet]
@@ -4003,7 +4003,7 @@ Value=8;Don't know|Não sabe|Sijui
 [Item]
 Label=Why would you not accept the offer?|Por que você não aceitar a oferta?
 Name=K4
-Start=109
+Start=49
 Len=2
 
 [ValueSet]
@@ -4019,12 +4019,12 @@ Value=55;Other|De outros|Nyingine
 Label=J Space and water heating|J espaço e aquecimento de água
 Name=J_SPACE_AND_WATER
 RecordTypeValue='J'
-RecordLen=109
+RecordLen=49
 
 [Item]
 Label=Do you heat water for washing?|Você aquecer água para lavar?
 Name=J1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -4036,7 +4036,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Main source of heating water|Principal fonte de aquecimento de água
 Name=J2
-Start=105
+Start=45
 Len=1
 
 [ValueSet]
@@ -4054,7 +4054,7 @@ Value=9;Separate solid fuel stove|Fogão de combustível sólido separado|Jiko t
 [Item]
 Label=Do you heat your house?|Você aquecer a sua casa?
 Name=J3
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -4066,7 +4066,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Main source of heating house|Principal fonte de aquecimento da casa
 Name=J4
-Start=107
+Start=47
 Len=1
 
 [ValueSet]
@@ -4081,7 +4081,7 @@ Value=5;Separate solid fuel stove|Fogão de combustível sólido separado|Majiko
 [Item]
 Label=Main fuel used in this stove|principal combustível utilizado neste fogão
 Name=J5
-Start=108
+Start=48
 Len=2
 
 [ValueSet]
@@ -4112,18 +4112,18 @@ Value=99;Not applicable|Não aplicável|Haihusiki
 Label=L Household assets|ativos L domésticos
 Name=L_HOUSEHOLD_ASSETS
 RecordTypeValue='L'
-RecordLen=265
+RecordLen=205
 
 [Item]
 Label=HH member no for section|membro do HH Não para seção
 Name=L1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Household assets
 Name=HOUSEHOLD_ASSETS
-Start=106
+Start=46
 Len=7
 DataType=Alpha
 Occurrences=22
@@ -4131,7 +4131,7 @@ Occurrences=22
 [Item]
 Label=item number|número de item
 Name=L2
-Start=106
+Start=46
 Len=2
 ItemType=SubItem
 
@@ -4164,7 +4164,7 @@ Value=22;Energy saving bulbs or tubes|Lâmpadas de baixo consumo|balbu za taa au
 [Item]
 Label=Do you have/Number of items|Número de ítens
 Name=L2A
-Start=108
+Start=48
 Len=2
 ItemType=SubItem
 
@@ -4187,14 +4187,14 @@ Value=5;5 or more|5 ou mais|5 au zaidi
 [Item]
 Label=Number of hours in use|Horas de uso
 Name=L2B
-Start=110
+Start=50
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=5 years ago
 Name=L2C
-Start=112
+Start=52
 Len=1
 ItemType=SubItem
 
@@ -4207,7 +4207,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Do you cultivate any land? IF SO: How large is the area?
 Name=L3
-Start=260
+Start=200
 Len=1
 
 [ValueSet]
@@ -4223,7 +4223,7 @@ Value=4;More than 4.9 Acre|Mais do que 2 Ha|> 4.9 Ekari
 [Item]
 Label=Did you cultivate any land 5 years ago? IF SO: How large was the area?
 Name=L4
-Start=261
+Start=201
 Len=1
 
 [ValueSet]
@@ -4234,7 +4234,7 @@ Link=345582371
 [Item]
 Label=Do you keep any domestic animals?
 Name=L5
-Start=262
+Start=202
 Len=1
 
 [ValueSet]
@@ -4246,7 +4246,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How many cattle?
 Name=L6
-Start=263
+Start=203
 Len=1
 
 [ValueSet]
@@ -4260,7 +4260,7 @@ Value=3;6 or more|6 ou mais|6 au zaidi
 [Item]
 Label=How many sheep, goat or pigs?
 Name=L7
-Start=264
+Start=204
 Len=1
 
 [ValueSet]
@@ -4274,7 +4274,7 @@ Value=3;11 or more|11 ou mais|11 au zaidi
 [Item]
 Label=How many chicken, ducks, turkeys, geese?
 Name=L8
-Start=265
+Start=205
 Len=1
 
 [ValueSet]
@@ -4289,12 +4289,12 @@ Value=3;21 or more|21 ou mais|21 au zaidi
 Label=M Street lighting|relâmpago M Street
 Name=M_STREET_LIGHTNING
 RecordTypeValue='M'
-RecordLen=106
+RecordLen=46
 
 [Item]
 Label=Street lighting in neighbourhood|relâmpago rua no bairro
 Name=M1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -4306,7 +4306,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Street lighting used at night?|Rua relâmpago usado à noite?
 Name=M2
-Start=105
+Start=45
 Len=1
 
 [ValueSet]
@@ -4318,7 +4318,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Police patrols streets at night?
 Name=M3
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -4331,12 +4331,12 @@ Value=2;No|Não|Hapana
 Label=N Time use - day time and after work
 Name=N_TIME_USE
 RecordTypeValue='N'
-RecordLen=389
+RecordLen=329
 
 [Item]
 Label=Time use women 15 years and older
 Name=N_TIME_WOMEN
-Start=104
+Start=44
 Len=13
 DataType=Alpha
 Occurrences=5
@@ -4344,7 +4344,7 @@ Occurrences=5
 [Item]
 Label=Activity women 15 years and older
 Name=N_ACTIVITY_WOMEN
-Start=104
+Start=44
 Len=1
 ItemType=SubItem
 
@@ -4360,14 +4360,14 @@ Value=5;Spending time on entertainment and socializing outside the house|Passar 
 [Item]
 Label=How many women 15 years and older have been involved in (ACTIVITY)?
 Name=N_A
-Start=105
+Start=45
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Did the women 15 years and older use any time on this activity 5 years ago?
 Name=N_B
-Start=107
+Start=47
 Len=1
 ItemType=SubItem
 
@@ -4380,35 +4380,35 @@ Value=2;No|Não|Hapana
 [Item]
 Label=In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? [ACTIVITY] (hours)
 Name=N_C_HH
-Start=108
+Start=48
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=In a typical day during the last 7 days, how much time did the women 15 years and older involve in the activity use on average? [ACTIVITY] (minutes)
 Name=N_C_MM
-Start=110
+Start=50
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the women 15 years and older spend after dark? (hours)
 Name=N_D_HH
-Start=112
+Start=52
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the women 15 years and older spend after dark? (minutes)
 Name=N_D_MM
-Start=114
+Start=54
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Do women 15 years and older spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_E
-Start=116
+Start=56
 Len=1
 ItemType=SubItem
 
@@ -4423,7 +4423,7 @@ Value=3;Less time|menos tempo|Muda mchache
 [Item]
 Label=Time use girls 5-14 years
 Name=N_TIME_GIRLS
-Start=169
+Start=109
 Len=13
 DataType=Alpha
 Occurrences=6
@@ -4431,7 +4431,7 @@ Occurrences=6
 [Item]
 Label=Activity girls 5-14 years
 Name=N_ACTIVITY_GIRLS
-Start=169
+Start=109
 Len=1
 ItemType=SubItem
 
@@ -4449,14 +4449,14 @@ Value=6;Doing own homework|Fazendo o próprio dever de casa|Kutumia wakati kweny
 [Item]
 Label=How many girls 5-14 years have been involved in (ACTIVITY)?
 Name=N_F
-Start=170
+Start=110
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Did the girls 5-14 years use any time on this activity 5 years ago?
 Name=N_G
-Start=172
+Start=112
 Len=1
 ItemType=SubItem
 
@@ -4469,35 +4469,35 @@ Value=2;No|Não|Hapana
 [Item]
 Label=In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? [ACTIVITY] (hours)
 Name=N_H_HH
-Start=173
+Start=113
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=In a typical day during the last 7 days, how much time did the girls 5-14 years involve in the activity use on average? [ACTIVITY] (minutes)
 Name=N_H_MM
-Start=175
+Start=115
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the girls 5-14 years spend after dark? (hours)
 Name=N_I_HH
-Start=177
+Start=117
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the girls 5-14 years and older spend after dark? (minutes)
 Name=N_I_MM
-Start=179
+Start=119
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Do girls 5-14 years spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_J
-Start=181
+Start=121
 Len=1
 ItemType=SubItem
 
@@ -4509,7 +4509,7 @@ Link=2816361
 [Item]
 Label=Time use men 15 years and older
 Name=N_TIME_MEN
-Start=247
+Start=187
 Len=13
 DataType=Alpha
 Occurrences=5
@@ -4517,7 +4517,7 @@ Occurrences=5
 [Item]
 Label=Activity men 15 years and older
 Name=N_ACTIVITY_MEN
-Start=247
+Start=187
 Len=1
 ItemType=SubItem
 
@@ -4533,14 +4533,14 @@ Value=5;Spending time on entertainment and socializing outside the house|Passar 
 [Item]
 Label=How many men 15 years and older have been involved in (ACTIVITY)?
 Name=N_K
-Start=248
+Start=188
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Did the men 15 years and older use any time on this activity 5 years ago?
 Name=N_L
-Start=250
+Start=190
 Len=1
 ItemType=SubItem
 
@@ -4553,35 +4553,35 @@ Value=2;No|Não|Hapana
 [Item]
 Label=In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? [ACTIVITY] (hours)
 Name=N_M_HH
-Start=251
+Start=191
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=In a typical day during the last 7 days, how much time did the men 15 years and older involve in the activity use on average? [ACTIVITY] (minutes)
 Name=N_M_MM
-Start=253
+Start=193
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the men 15 years and older spend after dark? (hours)
 Name=N_N_HH
-Start=255
+Start=195
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the men 15 years and older spend after dark? (minutes)
 Name=N_N_MM
-Start=257
+Start=197
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Do men 15 years and older spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_O
-Start=259
+Start=199
 Len=1
 ItemType=SubItem
 
@@ -4593,7 +4593,7 @@ Link=2816361
 [Item]
 Label=Time use boys 5-14 years
 Name=N_TIME_BOYS
-Start=312
+Start=252
 Len=13
 DataType=Alpha
 Occurrences=6
@@ -4601,7 +4601,7 @@ Occurrences=6
 [Item]
 Label=Activity boys 5-14 years
 Name=N_ACTIVITY_BOYS
-Start=312
+Start=252
 Len=1
 ItemType=SubItem
 
@@ -4613,14 +4613,14 @@ Link=22334455
 [Item]
 Label=How many boys 5-14 years have been involved in (ACTIVITY)?
 Name=N_P
-Start=313
+Start=253
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Did the boys 5-14 years use any time on this activity 5 years ago?
 Name=N_Q
-Start=315
+Start=255
 Len=1
 ItemType=SubItem
 
@@ -4633,35 +4633,35 @@ Value=2;No|Não|Hapana
 [Item]
 Label=In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? [ACTIVITY] (hours)
 Name=N_R_HH
-Start=316
+Start=256
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=In a typical day during the last 7 days, how much time did the boys 5-14 years involve in the activity use on average? [ACTIVITY] (minutes)
 Name=N_R_MM
-Start=318
+Start=258
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the boys 5-14 years spend after dark? (hours)
 Name=N_S_HH
-Start=320
+Start=260
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=How much of this time did the boys 5-14 years spend after dark? (minutes)
 Name=N_S_MM
-Start=322
+Start=262
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Do boys 5-14 years and older spend more or less time on this activity than 5 years ago? [ACTIVITY]
 Name=N_T
-Start=324
+Start=264
 Len=1
 ItemType=SubItem
 
@@ -4674,18 +4674,18 @@ Link=2816361
 Label=Q1 Consumption/expenditure|Q1 Consumo / despesas
 Name=Q_CONSUMPTION_EXPENDITURE
 RecordTypeValue='Q'
-RecordLen=330
+RecordLen=270
 
 [Item]
 Label=HH member number|número membro HH
 Name=Q1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Consumption (include items purchased, produced/acquired and received as a gift/donation)
 Name=Q2
-Start=106
+Start=46
 Len=25
 DataType=Alpha
 Occurrences=7
@@ -4705,7 +4705,7 @@ Value='8                        ';Other food items (e,g, pepper, salt, spices, j
 [Item]
 Label=Consumption number
 Name=Q2_NUM
-Start=106
+Start=46
 Len=1
 ItemType=SubItem
 
@@ -4724,7 +4724,7 @@ Value=8;Other food items (e,g, sugar and sweets, pepper, salt, spices, jam, brea
 [Item]
 Label=A. Purchased
 Name=Q2A
-Start=107
+Start=47
 Len=8
 ItemType=SubItem
 
@@ -4736,7 +4736,7 @@ Link=8
 [Item]
 Label=B. Produced/Acquired
 Name=Q2B
-Start=115
+Start=55
 Len=8
 ItemType=SubItem
 
@@ -4748,7 +4748,7 @@ Link=8
 [Item]
 Label=C. Received as a gift/Donation
 Name=Q2C
-Start=123
+Start=63
 Len=8
 ItemType=SubItem
 
@@ -4760,7 +4760,7 @@ Link=8
 [Item]
 Label=Spendings on firewood and charcoal
 Name=Q11
-Start=281
+Start=221
 Len=8
 
 [ValueSet]
@@ -4771,7 +4771,7 @@ Link=8
 [Item]
 Label=How much did you spend on water, electricity, mobile phone top-ups, internet and other communication and transportation during the last 30 days?
 Name=Q12
-Start=289
+Start=229
 Len=8
 
 [ValueSet]
@@ -4782,7 +4782,7 @@ Link=8
 [Item]
 Label=How much did you spend on clothes and shoes the last 30 days?
 Name=Q13
-Start=297
+Start=237
 Len=8
 
 [ValueSet]
@@ -4793,7 +4793,7 @@ Link=8
 [Item]
 Label=How much did you spend on household items, such as soap, cleaning supplies, drugs, batteries etc during the last 30 days?
 Name=Q14
-Start=305
+Start=245
 Len=8
 
 [ValueSet]
@@ -4804,7 +4804,7 @@ Link=8
 [Item]
 Label=How much did you spend on education related expenses (school fees, uniforms, supplies) during the last year?
 Name=Q15
-Start=313
+Start=253
 Len=8
 
 [ValueSet]
@@ -4815,7 +4815,7 @@ Link=8
 [Item]
 Label=How much did you spend on other needs during the last year?
 Name=Q16
-Start=321
+Start=261
 Len=10
 
 [ValueSet]
@@ -4830,18 +4830,18 @@ Value=9999999999;Not applicable|Não aplicável|Haihusiki
 Label=S Attitudes|Atitudes S
 Name=S_ATTITUDES
 RecordTypeValue='S'
-RecordLen=111
+RecordLen=51
 
 [Item]
 Label=HH member no|membro do HH não
 Name=S1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=How satisfied are you with service from ...|Quão satisfeito você está com um serviço de ...
 Name=S2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -4854,7 +4854,7 @@ Value=3;Unsatisfied|Insatisfeito|Siridhishwi
 [Item]
 Label=Smoke from stove is good at chasing insects away|Fumaça de fogão é bom em insetos afugentando
 Name=S3
-Start=107
+Start=47
 Len=1
 
 [ValueSet]
@@ -4867,7 +4867,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=Certain food tastes better when cooked with biomass|Certain comida tem gosto melhor quando cozidos com biomassa
 Name=S4
-Start=108
+Start=48
 Len=1
 
 [ValueSet]
@@ -4880,7 +4880,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=The stove is needed for lighting up the house in the evening|O fogão é necessário para relâmpago a casa à noite
 Name=S5
-Start=109
+Start=49
 Len=1
 
 [ValueSet]
@@ -4893,7 +4893,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=The monthly electric bill is or will be a financial burden|A conta de energia elétrica mensal é ou será um encargo financeiro
 Name=S6
-Start=110
+Start=50
 Len=1
 
 [ValueSet]
@@ -4906,7 +4906,7 @@ Value=3;Disagree|Discorda|Sikubaliani
 [Item]
 Label=The quality of my household is better than 5 years ago|A qualidade da minha casa é melhor do que há 5 anos
 Name=S7
-Start=111
+Start=51
 Len=1
 
 [ValueSet]
@@ -4921,18 +4921,18 @@ Label=U Livelihood means
 Name=U_LIVELIHOOD_MEANS
 RecordTypeValue='U'
 Required=No
-RecordLen=233
+RecordLen=173
 
 [Item]
 Label=Respondent number
 Name=U1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Product
 Name=PRODUCT
-Start=106
+Start=46
 Len=10
 DataType=Alpha
 Occurrences=6
@@ -4940,7 +4940,7 @@ Occurrences=6
 [Item]
 Label=Product no
 Name=U2
-Start=106
+Start=46
 Len=1
 ItemType=SubItem
 
@@ -4957,7 +4957,7 @@ Value=6;Mats, bricks, cane furniture, weave baskets, thatch grass etc|Tapetes, t
 [Item]
 Label=Do you produce or process [PRODUCT] in the household today?
 Name=U2A
-Start=107
+Start=47
 Len=1
 ItemType=SubItem
 
@@ -4969,7 +4969,7 @@ Link=133482376
 [Item]
 Label=Did you produce or process [PRODUCT] in the household 5  years ago?
 Name=U2B
-Start=108
+Start=48
 Len=1
 ItemType=SubItem
 
@@ -4981,14 +4981,14 @@ Link=133482376
 [Item]
 Label=You said that your household produce/process [PRODUCT]. Who is the manager for this production?
 Name=U2C
-Start=109
+Start=49
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Where and how was this sale done?
 Name=U2D
-Start=111
+Start=51
 Len=1
 ItemType=SubItem
 
@@ -5003,7 +5003,7 @@ Value=4;To customers coming home|Aos clientes que voltam para casa|Kwa wateja wa
 [Item]
 Label=Was any electricity used for light or machinery for this processing / production?
 Name=U2E
-Start=112
+Start=52
 Len=1
 ItemType=SubItem
 
@@ -5015,7 +5015,7 @@ Link=133482376
 [Item]
 Label=Did this person or anybody else in the household do this type of activity 5 years ago?
 Name=U2F
-Start=113
+Start=53
 Len=1
 ItemType=SubItem
 
@@ -5027,7 +5027,7 @@ Link=133482376
 [Item]
 Label=Did this activity make more money 5 years ago, less money or the same?
 Name=U2G
-Start=114
+Start=54
 Len=1
 ItemType=SubItem
 
@@ -5041,7 +5041,7 @@ Value=3;Less money 5 years ago|Menos dinheiro há 5 anos|Ndogo miaka 5 iliyopita
 [Item]
 Label=Was any electricity used for this produse/process 5 years ago?
 Name=U2H
-Start=115
+Start=55
 Len=1
 ItemType=SubItem
 
@@ -5053,7 +5053,7 @@ Link=133482376
 [Item]
 Label=Business
 Name=BUSINESS
-Start=166
+Start=106
 Len=10
 DataType=Alpha
 Occurrences=6
@@ -5061,7 +5061,7 @@ Occurrences=6
 [Item]
 Label=Business no
 Name=U3
-Start=166
+Start=106
 Len=1
 ItemType=SubItem
 
@@ -5078,7 +5078,7 @@ Value=6;own any other non-agricultural business, even if it is a small business 
 [Item]
 Label=Does anybody in the household  [BUSINESS] today?
 Name=U3A
-Start=167
+Start=107
 Len=1
 ItemType=SubItem
 
@@ -5090,7 +5090,7 @@ Link=133482376
 [Item]
 Label=Did anybody  [BUSINESS] in the household 5  years ago?
 Name=U3B
-Start=168
+Start=108
 Len=1
 ItemType=SubItem
 
@@ -5102,14 +5102,14 @@ Link=133482376
 [Item]
 Label=You said that your household [BUSINESS]. Who is the manager for this business/service?
 Name=U3C
-Start=169
+Start=109
 Len=2
 ItemType=SubItem
 
 [Item]
 Label=Where is this business/service operated?
 Name=U3D
-Start=171
+Start=111
 Len=1
 ItemType=SubItem
 
@@ -5128,7 +5128,7 @@ Value=8;Mobile location|Localização móvel|Eneo lisilo la kudumu
 [Item]
 Label=Was any electricity used for light or machinery for this processing / production?
 Name=U3E
-Start=172
+Start=112
 Len=1
 ItemType=SubItem
 
@@ -5140,7 +5140,7 @@ Link=133482376
 [Item]
 Label=Did this person or anybody else in the household do this type of activity 5 years ago?
 Name=U3F
-Start=173
+Start=113
 Len=1
 ItemType=SubItem
 
@@ -5152,7 +5152,7 @@ Link=133482376
 [Item]
 Label=Was the profit from this business 5 years ago, smaller, the same or larger than now?
 Name=U3G
-Start=174
+Start=114
 Len=1
 ItemType=SubItem
 
@@ -5166,7 +5166,7 @@ Value=3;Larger 5 years ago|Maior há 5 anos|Kubwa zaidi ya miaka 5 iliyopita
 [Item]
 Label=Was any electricity used for this processing/ production 5 years ago?
 Name=U3H
-Start=175
+Start=115
 Len=1
 ItemType=SubItem
 
@@ -5178,7 +5178,7 @@ Link=133482376
 [Item]
 Label=Has anybody in the household done some piecemeal farm work during the last 12 months?|trabalho agrícola piecemal
 Name=U4
-Start=226
+Start=166
 Len=1
 
 [ValueSet]
@@ -5193,7 +5193,7 @@ Value=4;Yes, 4 or more people did|Sim, 4 ou mais pessoas fizeram|Ndiyo, watu 4 a
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U5
-Start=227
+Start=167
 Len=1
 
 [ValueSet]
@@ -5207,7 +5207,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some other piecemeal work for a business or somebody outside the household during the last 12 months?
 Name=U6
-Start=228
+Start=168
 Len=1
 
 [ValueSet]
@@ -5218,7 +5218,7 @@ Link=343566279
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U7
-Start=229
+Start=169
 Len=1
 
 [ValueSet]
@@ -5232,7 +5232,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Has anybody in the household done some public work (for the government, donors, charities) such as cash-for-work during the last 12 months?
 Name=U8
-Start=230
+Start=170
 Len=1
 
 [ValueSet]
@@ -5243,7 +5243,7 @@ Link=343566279
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?
 Name=U9
-Start=231
+Start=171
 Len=1
 
 [ValueSet]
@@ -5257,7 +5257,7 @@ Value=4;Yes, more than today|Sim, mais do que hoje|Ndiyo, wengi kuliko sasa
 [Item]
 Label=Did anybody in this household go for work outside the community during last 12 months|trabalhar fora da comunidade últimos 12 meses
 Name=U10
-Start=232
+Start=172
 Len=1
 
 [ValueSet]
@@ -5269,7 +5269,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Did household members do this type of work during a 12 months period 5-6 yrs ago?|trabalhar fora da comunidade 5-6 anos atrás
 Name=U11
-Start=233
+Start=173
 Len=1
 
 [ValueSet]
@@ -5282,18 +5282,18 @@ Value=2;No|Não|Hapana
 Label=T Women's empowerment|O empoderamento das mulheres T
 Name=T_WOMENS_EMPOWERMENT
 RecordTypeValue='T'
-RecordLen=108
+RecordLen=48
 
 [Item]
 Label=HH member number|número membro HH
 Name=T1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=decisions about healthcare|decisões sobre saúde
 Name=T2
-Start=106
+Start=46
 Len=1
 
 [ValueSet]
@@ -5308,7 +5308,7 @@ Value=4;Someone else|Alguém|Mtu mwingine
 [Item]
 Label=decisions about major hh purchases|decisões sobre grandes compras hh
 Name=T3
-Start=107
+Start=47
 Len=1
 
 [ValueSet]
@@ -5319,7 +5319,7 @@ Link=11223344
 [Item]
 Label=decisions on visiting family/relatives|decisões sobre visitas a familiares / parentes
 Name=T4
-Start=108
+Start=48
 Len=1
 
 [ValueSet]
@@ -5331,18 +5331,18 @@ Link=11223344
 Label=W Social life and security|A vida social W e segurança
 Name=W_SOCIAL_LIFE_AND_SECURITY
 RecordTypeValue='W'
-RecordLen=132
+RecordLen=72
 
 [Item]
 Label=HH member number|número membro HH
 Name=W1
-Start=104
+Start=44
 Len=2
 
 [Item]
 Label=Social life and security|A vida social e segurança
 Name=W2
-Start=106
+Start=46
 Len=3
 DataType=Alpha
 Occurrences=9
@@ -5350,7 +5350,7 @@ Occurrences=9
 [Item]
 Label=soc life/security item number|/ Número do item de segurança vida soc
 Name=W2_NO
-Start=106
+Start=46
 Len=1
 ItemType=SubItem
 
@@ -5370,7 +5370,7 @@ Value=9;When collecting water|Ao buscar água|Wakati wa kuchota maji
 [Item]
 Label=today|hoje
 Name=W2A
-Start=107
+Start=47
 Len=1
 ItemType=SubItem
 
@@ -5385,7 +5385,7 @@ Value=4;Not applicable|Não aplicável|Haihusiki
 [Item]
 Label=5 years ago|5 anos atrás
 Name=W2B
-Start=108
+Start=48
 Len=1
 ItemType=SubItem
 
@@ -5401,12 +5401,12 @@ Value=4;Not applicable|Não aplicável|Haihusiki
 Label=GP Global Pandemic
 Name=GP_GLOBAL_PANDEMIC
 RecordTypeValue='V'
-RecordLen=352
+RecordLen=292
 
 [Item]
 Label=Has anybody 12 years or above in this household changed their main occupation over the last year during the global pandemic up to today
 Name=GP1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -5417,14 +5417,14 @@ Link=133482376
 [Item]
 Label=Household members with activity
 Name=GP_MEM
-Start=105
+Start=45
 Len=40
 DataType=Alpha
 
 [Item]
 Label=Activity information
 Name=GP_ACTIVITY
-Start=145
+Start=85
 Len=6
 DataType=Alpha
 Occurrences=20
@@ -5432,7 +5432,7 @@ Occurrences=20
 [Item]
 Label=Household member
 Name=GP2
-Start=145
+Start=85
 Len=2
 ItemType=SubItem
 DataType=Alpha
@@ -5440,7 +5440,7 @@ DataType=Alpha
 [Item]
 Label=What was [NAME]’s main occupation before the global pandemic started last year?
 Name=GP3
-Start=147
+Start=87
 Len=2
 ItemType=SubItem
 
@@ -5465,7 +5465,7 @@ Value=17;Was not working, and was not looking for work (student, retired, disabl
 [Item]
 Label=What was the main activity at [NAME]’s place of work before the global pandemic started last year?
 Name=GP4
-Start=149
+Start=89
 Len=2
 ItemType=SubItem
 
@@ -5496,7 +5496,7 @@ Value=30;Embassies and international organizations|Embaixadas e organizações i
 [Item]
 Label=Family farming, livestock or fishing
 Name=GP5
-Start=265
+Start=205
 Len=1
 
 [ValueSet]
@@ -5511,7 +5511,7 @@ Value=4;Decreased|Diminuiu|Yamepungua
 [Item]
 Label=Non-agricultural family businesses, including family businesses
 Name=GP6
-Start=266
+Start=206
 Len=1
 
 [ValueSet]
@@ -5522,7 +5522,7 @@ Link=837371282
 [Item]
 Label=Salaried employment of household members
 Name=GP7
-Start=267
+Start=207
 Len=1
 
 [ValueSet]
@@ -5533,7 +5533,7 @@ Link=837371282
 [Item]
 Label=Unemployment benefits
 Name=GP8
-Start=268
+Start=208
 Len=1
 
 [ValueSet]
@@ -5544,7 +5544,7 @@ Link=837371282
 [Item]
 Label=Remittances from abroad
 Name=GP9
-Start=269
+Start=209
 Len=1
 
 [ValueSet]
@@ -5555,7 +5555,7 @@ Link=837371282
 [Item]
 Label=Remittances within the country
 Name=GP10
-Start=270
+Start=210
 Len=1
 
 [ValueSet]
@@ -5566,7 +5566,7 @@ Link=837371282
 [Item]
 Label=Income from property, investments or savings
 Name=GP11
-Start=271
+Start=211
 Len=1
 
 [ValueSet]
@@ -5577,7 +5577,7 @@ Link=837371282
 [Item]
 Label=Pension
 Name=GP12
-Start=272
+Start=212
 Len=1
 
 [ValueSet]
@@ -5588,7 +5588,7 @@ Link=837371282
 [Item]
 Label=Government Assistance
 Name=GP13
-Start=273
+Start=213
 Len=1
 
 [ValueSet]
@@ -5599,7 +5599,7 @@ Link=837371282
 [Item]
 Label=Financial assistance from friends / family
 Name=GP14
-Start=274
+Start=214
 Len=1
 
 [ValueSet]
@@ -5610,7 +5610,7 @@ Link=837371282
 [Item]
 Label=Assistance from NGOs / charity organizations
 Name=GP15
-Start=275
+Start=215
 Len=1
 
 [ValueSet]
@@ -5621,7 +5621,7 @@ Link=837371282
 [Item]
 Label=What about the total household income, has that increased, stayed the same or decreased
 Name=GP16
-Start=276
+Start=216
 Len=1
 
 [ValueSet]
@@ -5635,7 +5635,7 @@ Value=3;Decreased|Diminuiu|Yamepungua
 [Item]
 Label=Have your use of electrical power increased, stayed the same or decreased over the last year during the global pandemic up to today?
 Name=GP17
-Start=277
+Start=217
 Len=1
 
 [ValueSet]
@@ -5649,7 +5649,7 @@ Value=4;We have no electricity, not applicable|Não existem tais rendimentos, n�
 [Item]
 Label=Have you changed the type of fuel you have been using over the last year during the global pandemic up to today?
 Name=GP18
-Start=278
+Start=218
 Len=1
 
 [ValueSet]
@@ -5661,7 +5661,7 @@ Value=2;Yes, switched fuel|Sim, combustível comutado.|Ndiyo, nimebadili nishati
 [Item]
 Label=What type of fuel did you use before the global pandemic started last year for your main stove?
 Name=GP19
-Start=279
+Start=219
 Len=1
 
 [ValueSet]
@@ -5678,7 +5678,7 @@ Value=7;Solar oven (non-electric)|Forno solar (não eléctrico)|Oveni ya Jua (is
 [Item]
 Label=Have your consumption of fuel for cooking increased, stayed the same or decreased over the last year during the global pandemic up to today?
 Name=GP20
-Start=280
+Start=220
 Len=1
 
 [ValueSet]
@@ -5689,7 +5689,7 @@ Link=326777112
 [Item]
 Label=Have you changed which stove to use as your main stove over the last year during the global pandemic up to today?
 Name=GP21
-Start=281
+Start=221
 Len=1
 
 [ValueSet]
@@ -5701,7 +5701,7 @@ Value=2;Yes, have changed to another main stove|Sim, mudaram para outro fogão p
 [Item]
 Label=Which type of stove did you use as your main stove before the global pandemic started last year?
 Name=GP22
-Start=282
+Start=222
 Len=3
 
 [ValueSet]
@@ -5739,7 +5739,7 @@ Value=471;Solar cooker (Non-electric)|Fogão solar (não elétrico)|Jiko la jua 
 [Item]
 Label=Have you sold any of household items since before the global pandemic started last year?
 Name=GP23
-Start=285
+Start=225
 Len=1
 
 [ValueSet]
@@ -5750,7 +5750,7 @@ Link=133482376
 [Item]
 Label=Which type of items did you sell?
 Name=GP24
-Start=286
+Start=226
 Len=38
 DataType=Alpha
 
@@ -5780,7 +5780,7 @@ Value='19                                    ';Electric water pump|Bomba de águ
 [Item]
 Label=Have your total consumption increased, stayed the same or decreased over the last year during the global pandemic up to today?
 Name=GP25
-Start=324
+Start=264
 Len=1
 
 [ValueSet]
@@ -5791,7 +5791,7 @@ Link=326777112
 [Item]
 Label=Did you have to close down any household  production over the last year during the global pandemic up to today?
 Name=GP26
-Start=325
+Start=265
 Len=6
 DataType=Alpha
 
@@ -5809,7 +5809,7 @@ Value='7     ';No|Não|Hapana
 [Item]
 Label=Agricultural by-products, including flour, starch, juice, beer, jam, oil, seed, bran, etc
 Name=GP27
-Start=331
+Start=271
 Len=1
 
 [ValueSet]
@@ -5820,7 +5820,7 @@ Link=133482376
 [Item]
 Label=Livestock by-products (milk, cheese)
 Name=GP28
-Start=332
+Start=272
 Len=1
 
 [ValueSet]
@@ -5831,7 +5831,7 @@ Link=133482376
 [Item]
 Label=Fresh/processed fish
 Name=GP29
-Start=333
+Start=273
 Len=1
 
 [ValueSet]
@@ -5842,7 +5842,7 @@ Link=133482376
 [Item]
 Label=Firewood, home-made charcoal
 Name=GP30
-Start=334
+Start=274
 Len=1
 
 [ValueSet]
@@ -5853,7 +5853,7 @@ Link=133482376
 [Item]
 Label=Construction timber, wood-poles or other construction material
 Name=GP31
-Start=335
+Start=275
 Len=1
 
 [ValueSet]
@@ -5864,7 +5864,7 @@ Link=133482376
 [Item]
 Label=Did you have to close down any household business or service over the last year during the global pandemic up to today?
 Name=GP32
-Start=336
+Start=276
 Len=1
 
 [ValueSet]
@@ -5875,7 +5875,7 @@ Link=133482376
 [Item]
 Label=Did you close down any [BUSINESS] or any [SERVICE]?
 Name=GP33
-Start=337
+Start=277
 Len=6
 DataType=Alpha
 
@@ -5893,7 +5893,7 @@ Value='7     ';No|Não|Hapana
 [Item]
 Label=offer professional services as a doctor, accountant, lawyer, translator, private tutor, midwife, mason, etc.?
 Name=GP34
-Start=343
+Start=283
 Len=1
 
 [ValueSet]
@@ -5904,7 +5904,7 @@ Link=133482376
 [Item]
 Label=run a  household-owned shop or provide a service from home such as a carwash, metal worker, mechanic, carpenter, barber, tailor etc?
 Name=GP35
-Start=344
+Start=284
 Len=1
 
 [ValueSet]
@@ -5915,7 +5915,7 @@ Link=133482376
 [Item]
 Label=own a trading or service business on a street or in a market?
 Name=GP36
-Start=345
+Start=285
 Len=1
 
 [ValueSet]
@@ -5926,7 +5926,7 @@ Link=133482376
 [Item]
 Label=drive a household-owned taxi or pick-up truck to provide transportation or moving services?
 Name=GP37
-Start=346
+Start=286
 Len=1
 
 [ValueSet]
@@ -5937,7 +5937,7 @@ Link=133482376
 [Item]
 Label=own a bar or restaurant?
 Name=GP38
-Start=347
+Start=287
 Len=1
 
 [ValueSet]
@@ -5948,7 +5948,7 @@ Link=133482376
 [Item]
 Label=own any other non-agricultural business, even if it is a small business run from home or on a street?
 Name=GP39
-Start=348
+Start=288
 Len=1
 
 [ValueSet]
@@ -5959,7 +5959,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some piecemeal farm work before the global pandemic started last year
 Name=GP40
-Start=349
+Start=289
 Len=1
 
 [ValueSet]
@@ -5970,7 +5970,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some other piecemeal work for a business or somebody outside the household before the global pandemic started last year?
 Name=GP41
-Start=350
+Start=290
 Len=1
 
 [ValueSet]
@@ -5981,7 +5981,7 @@ Link=133482376
 [Item]
 Label=Did anybody in the household do some public work (for the government, donors, charities) such as cash-for-work before the global pandemic started last year?
 Name=GP42
-Start=351
+Start=291
 Len=1
 
 [ValueSet]
@@ -5992,7 +5992,7 @@ Link=133482376
 [Item]
 Label=Did anybody in this household go for work outside the community before the global pandemic started last year?
 Name=GP43
-Start=352
+Start=292
 Len=1
 
 [ValueSet]
@@ -6004,12 +6004,12 @@ Link=133482376
 Label=X Telephone number for future contact
 Name=X_TELEPHONE_NUMBER_FOR_FUTURE_CONTACT
 RecordTypeValue='X'
-RecordLen=140
+RecordLen=80
 
 [Item]
 Label=Is it all right with you that INE/NBS contact you by telephone
 Name=X1
-Start=104
+Start=44
 Len=1
 
 [ValueSet]
@@ -6020,30 +6020,30 @@ Link=133482376
 [Item]
 Label=Telephone number 1
 Name=X2_1
-Start=105
+Start=45
 Len=12
 
 [Item]
 Label=Telephone number 2
 Name=X2_2
-Start=117
+Start=57
 Len=12
 
 [Item]
 Label=Telephone number 3
 Name=X2_3
-Start=129
+Start=69
 Len=12
 
 [Record]
 Label=AA Interview particulars - end of interview|particularidades AA entrevista - final da entrevista
 Name=AA_END_OF_INTERVIEW
 RecordTypeValue='Z'
-RecordLen=133
+RecordLen=73
 
 [Item]
 Label=Name of Interviewer|Data da entrevista (Concluida)
 Name=AA20
-Start=104
+Start=44
 Len=30
 DataType=Alpha
