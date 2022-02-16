@@ -64,7 +64,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#000000;">What was the main activity at <span style="color:#008000;">~~AB1(curocc())~~</span>&rsquo;s place of work during the last 12 months?&#160;</span></p>
             
           PT: |
-            <p style="margin-bottom:8pt;"><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual foi a&nbsp;</span><span style="font-family: Arial, sans-serif; font-size: 16px;">principal</span><span style="font-family: Arial, sans-serif; font-size: 16px;">&nbsp;actividade&nbsp; no local de trabalho da/o </span><span style="font-family: Arial, sans-serif; font-size: 16px; color: rgb(0, 0, 255);">~~AB1(curocc())~~</span><span style="font-family: Arial, sans-serif; font-size: 16px;"> nos últimos 12 meses?&nbsp;</span></p>
+            <p style="margin-bottom:8pt;"><font face="Arial, sans-serif">Qual foi a principal actividade económica da/o&nbsp;</font><span style="font-family: Arial, sans-serif; color: rgb(0, 0, 255);">~~AB1(curocc())~~</span><span style="font-family: Arial, sans-serif;">&nbsp;&nbsp;</span><span style="font-family: Arial, sans-serif;">no seu local&nbsp;&nbsp;</span><font face="Arial, sans-serif">de trabalho durante os últimos 12 meses?</font><br></p>
             
           SW: |
             <p><span style="font-size:16px;color:#000000;">Nini ilikuwa shughuli kuu ya mahali anapofanyia kazi ~~AB1(curocc())~~ katika kipindi cha miezi 12 iliyopita?&#160;</span></p>
