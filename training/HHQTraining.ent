@@ -1,16 +1,20 @@
 ﻿[CSPro Application]
 Version=CSPro 7.6
-Label=HHQTRAINING
-Name=
+Label=HHQ
+Name=HHQ
 AppType=DataEntry
 OperatorID=No
+PartialSave=Yes
+AutoPartialSaveMinutes=1
 CAPI=Yes
+CaseTree=Desktop
 CreateListing=No
 CreateLog=No
-ShowErrorMessageNumbers=No
-ComboBoxShowOnlyDiscreteValues=Yes
 ParadataCollection=AllEvents
+ParadataRecordInitialPropertyValues=Yes
 ParadataDeviceStateMinutes=5
+[External Dictionaries]
+File=..\Menu\CountryVariables.dcf
 [AppCode]
 File=.\HHQTraining.ent.apc
 [Message]
@@ -19,3 +23,6 @@ File=.\HHQTraining.ent.mgf
 File=.\HHQTraining.ent.qsf
 [Forms]
 File=.\HHQTraining.fmf
+[Dictionary Types]
+Dict-Type=.\HHQTraining.dcf,Input,.\HHQTraining.fmf
+Dict-Type=..\Menu\CountryVariables.dcf,External
