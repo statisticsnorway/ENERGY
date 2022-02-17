@@ -120,8 +120,8 @@ PT(30) Satelite do Google
 SW(30) Satelaiti ya Google
 
 EN(31) Make sure to choose "advance to end" from the menu when finishing revisiting this Household. Otherwise it will be saved as partially finished
-PT(31) Certifique-se de escolher "avançar para o fim" no menu ao terminar de revisitar este agregado familiar. Caso contrário, será salvo como parcialmente concluído
-SW(31) Hakikisha unachagua "advance to end" yaani "nenda mwisho" kwenye menu unapomaliza kupitiapitia kaya hii. Bila hivyo itajihifadhi kama "Partially finished" yaani "Nusu haijakamilika"
+PT(31) Certifique-se de escolher "Advance to end" no menu ao terminar de revisitar este agregado familiar. Caso contrário, será salvo como parcialmente concluído
+SW(31) Hakikisha unachagua "advance to end" yaani "Advance to end" kwenye menu unapomaliza kupitiapitia kaya hii. Bila hivyo itajihifadhi kama "Partially finished" yaani "Nusu haijakamilika"
 
 EN(32) Set country
 PT(32) Definir país
@@ -238,3 +238,11 @@ PT(60) Por favor, compare as definições com os Inquiridores
 EN(61) there is no listing data for this EA to sample from
 SW(61) hakuna data ya kuorodheshwa kwa EA hii kwa sampuli kutoka
 PT(61) não há dados de lista para este EA para amostra de
+
+EN(62) No sample file exist for this EA. Please sync with your supervisor to receive one
+SW(62) Hakuna sampuli ya faili ya EA hii. Tafadhali sawazisha na msimamizi wako ili kupokea moja
+PT(62) Nenhum arquivo de amostra existe para este EA. Por favor, sincronize com seu supervisor para receber um
+
+EN(63) A sample file for this EA already exists. Delete it to receive a new?
+SW(63) Sampuli ya faili ya EA hii tayari ipo. Uifute ili upokee mpya?
+PT(63) Já existe um arquivo de amostra para este EA. Excluí-lo para receber um novo?
