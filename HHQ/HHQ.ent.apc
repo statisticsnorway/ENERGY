@@ -323,6 +323,7 @@ preproc
 	//Look up value in sample file
 	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
 	SLOGIN = AALOGIN;
+	//errmsg("AA14, HHQ. Sample file: %s", fileName(SAMPLING_DICT));
 	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
 	$ = SA10;
 
@@ -347,27 +348,13 @@ postproc
 		//Need to find the name of the current respondent if we're still in the personal section.
 		//Starting from scratch with he current person. Need to find the number of him/her
 		string currentField = getSymbol(savepartial);
-		{if currentField <> "AB1" and (currentField[1:2] = "AB"
-			or currentField[1:2] = "AC" or currentField in "A2","A3","A4","A5","A6","A7","A8") then
-			numeric j = 20;
-			while j >=1 do
-				if visualValue(AB3(j)) <> NOTAPPL then
-					break;
-				endif;
-				j = j - 1;
-			enddo;
-			//skip to AB3(j + 1); 	ANNE - HER!
-			advance to AB3(j+1);
-		endif;}
-
-		//other "Special" skips
+		
+		//"Special" skips
 		if currentField in "K1", "K2", "K3", "K4" then
-			//skip to K1;	ANNE
 			advance to K1;
 		elseif currentField in "D1", "D2", "D3", "D4" then
 			skip to D1;
 		elseif currentField in "E1", "E2", "E3" then
-			//skip to E1; ANNE
 			advance to E1;
 		elseif currentField in "G2B", "G2C" then
 			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
@@ -378,11 +365,9 @@ postproc
 				endif;
 				ptr = ptr - 1;
 			enddo;
-			//skip to G2A(ptr); ANNE
 			advance to G2A(ptr);
 
 		else	//general skip!
-			//skip to getsymbol(savePartial);	ANNE
 			advance to getsymbol(savePartial);
 		endif;
 	endif;
@@ -393,7 +378,7 @@ PROC AA9
 preproc
 
 	$ = edit("99-99-99",sysdate("YYDDMM"));
-	//noinput;
+	noinput;
 
 
 

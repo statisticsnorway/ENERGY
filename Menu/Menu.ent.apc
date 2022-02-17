@@ -89,22 +89,42 @@ PROC GLOBAL
 
 	//Interviewer get Sample from supervisor
 	function syncGetSample()
-		//Delete the old sample file first
-		if fileexist("../Data/Sample.csdb") then
-			filedelete("../Data/Sample.csdb");
-		endif;
-		setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
-	
-		if syncconnect(bluetooth) = 1 then
-			syncdata(GET, SAMPLING_DICT);
-			syncdisconnect();
-			syncGetSample = 1;
-		else
-			errmsg(tr(8));
-			syncGetSample = 0;
+		string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+		if fileexist(sampleFileName) then
+			numeric delfile = accept(maketext(tr(63)), makeText(tr(21)), maketext(tr(22)));
+			if delFile = 1 then
+				filedelete(sampleFileName);
+				setFile(SAMPLING_DICT, sampleFileName, create);
+				if syncconnect(bluetooth) = 1 then
+					syncdata(GET, SAMPLING_DICT);
+					syncdisconnect();
+					syncGetSample = 1;
+				else
+					errmsg(tr(8));
+					syncGetSample = 0;
+				endif;
+			else
+				errmsg(tr(14));
+			endif;
+		else	//File does not already exist. Can download directly
+			setFile(SAMPLING_DICT, sampleFileName, create);
+			if syncconnect(bluetooth) = 1 then
+				syncdata(GET, SAMPLING_DICT);
+				syncdisconnect();
+				syncGetSample = 1;
+			else
+				errmsg(tr(8));
+				syncGetSample = 0;
+			endif;
 		endif;
 	end;
-
 
 
 	function syncHQ()
@@ -113,7 +133,7 @@ PROC GLOBAL
 				syncdata(PUT, COMMUNITY_DICT);
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
-				syncdata(PUT, SAMPLING_DICT);
+				syncdata(PUT, SAMPLING_DICT);	//Doesn't make sense to sync this, does it?
 			
 				syncdisconnect();
 			else
@@ -220,10 +240,19 @@ PROC GLOBAL
 		//errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
 		
 		numeric sf;
-		if fileexist("../Data/Sample.csdb") then
-			sf = setFile(SAMPLING_DICT, "../Data/Sample.csdb");
+		
+		string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+		if fileexist(sampleFileName) then
+			sf = setFile(SAMPLING_DICT, sampleFileName);
 		else
-			sf = setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
+			sf = setFile(SAMPLING_DICT, sampleFileName, create);
 		endif;
 		//errmsg("Setfile? %d (should be 1) ", sf);
 				
@@ -367,10 +396,18 @@ PROC GLOBAL
 
 	//If the fewer than 20/24 units is listed, we need to sample them all
 	function sampleAll()
-		if fileexist("../Data/Sample.csdb") then
-			setFile(SAMPLING_DICT, "../Data/Sample.csdb");
+		string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+		if fileexist(sampleFileName) then
+			setFile(SAMPLING_DICT, sampleFileName);
 		else
-			setFile(SAMPLING_DICT, "../Data/Sample.csdb", create);
+			setFile(SAMPLING_DICT, sampleFileName, create);
 		endif;
 		
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
@@ -497,10 +534,6 @@ PROC GLOBAL
 		//		tabletCount(4,1), tabletCount(5,1));
 		//errmsg("About to sample %d", sampleSize);
 		
-		//get rid of sample data from previous EA:
-		numeric ok = close(SAMPLING_DICT);
-		ok = Filedelete("../Data/Sample.csdb");
-		//errmsg("Deleted %d files", ok);
 		
 		//Analysis of the listed cases
 		numeric tot = countCases(LISTING_DICT
@@ -718,21 +751,29 @@ PROC GLOBAL
 		pffContent = pffContent + "InputData=../Data/" + questName + ".csdb|CSPRODB\n";
 		//pffContent = pffContent + "Paradata=../Data/" + questName + "_" + getDeviceId() +  ".cslog\n\n";
 
-		if questName = "HHQ" then
-			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
-			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
-		endif;
-
-		if questName = "Menu" then
-			pffContent = pffContent + "[ExternalFiles]\n";
-			pffContent = pffContent + "COMMUNITY_DICT=../Data/Community.csdb|CSPRODB\n";
-			pffContent = pffContent + "HHQ_DICT=../Data/HHQ.csdb|CSPRODB\n";
-			pffContent = pffContent + "LISTING_DICT=../Data/Listing.csdb|CSPRODB\n";
-			pffContent = pffContent + "REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB\n";
-			pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
-			pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
-			pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
+		if questName = "HHQ"  or questname = "Menu" then
+			string sampleFileName = "../Data/Sample_" 
+								+ edit("99", visualValue(M_REGION)) 
+								+ edit("99", visualValue(M_DISTRICT)) 
+								+ edit("999", visualValue(M_SUBDISTRICT)) 
+								+ edit("99", visualValue(M_LOCALITY)) 
+								+ edit("99", visualValue(M_VILLAGE)) 
+								+ edit("999", visualValue(M_EA))
+								+ ".csdb";
+			if questName = "HHQ" then
+				pffContent = pffContent + "[ExternalFiles]\n";
+				pffContent = pffContent + "SAMPLING_DICT=" + sampleFileName + "|CSPRODB\n";
+				pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
+			else	//Menu
+				pffContent = pffContent + "[ExternalFiles]\n";
+				pffContent = pffContent + "COMMUNITY_DICT=../Data/Community.csdb|CSPRODB\n";
+				pffContent = pffContent + "HHQ_DICT=../Data/HHQ.csdb|CSPRODB\n";
+				pffContent = pffContent + "LISTING_DICT=../Data/Listing.csdb|CSPRODB\n";
+				pffContent = pffContent + "REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB\n";
+				pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
+				pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
+				pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
+			endif;
 		else
 			pffContent = pffContent + "\n\n";
 		endif;
@@ -790,6 +831,21 @@ PROC GLOBAL
 		array string acceptOptions(14);
 		array string respondent(14);
 		array serialNos(14);
+		
+		string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+		if fileexist(sampleFileName) then
+			setFile(SAMPLING_DICT, sampleFileName);
+		else
+			errmsg(tr(62));
+			reenter M_MENU;
+		endif;
 		
 		forcase SAMPLING_DICT where SA7A = gpsN and SA7B = gpsW and tolower(SLOGIN) = tolower(M_LOGIN) do
 			//errmsg("showHHs. Checking this: %d=%d?, %d=%d, %s=%s?", SA7A, gpsN, SA7B, gpsW, SLOGIN, M_LOGIN);
@@ -1140,31 +1196,29 @@ postproc
 		endif;
 
 	elseif $ = 5 then 		//get Sample/Households to interview
-		numeric answer = accept(makeText(tr(20)), makeText(tr(21)), makeText(tr(22)));
-		if answer = 1 then	//sure. Go ahead.. :)	
-			String okVar = verifyVariables();
-			if okVar = "2" then
-				//TemporaryHackFixThis = 1;
-				skip to M_REGION;
-			endif;
-			numeric ok = syncGetSample();
-			if ok = 1 then
-				numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
-							and SA1 = visualValue(M_REGION) 
-							and SA2 = visualValue(M_DISTRICT)
-							and SA3 = visualValue(M_SUBDISTRICT)
-							and SA4 = visualValue(M_LOCALITY)
-							and SA5 = visualvalue(M_VILLAGE)
-							and SA6 = visualValue(M_EA));
+		String okVar = verifyVariables();
+		if okVar = "2" then
+			//TemporaryHackFixThis = 1;
+			skip to M_REGION;
+		endif;
+
+		numeric ok = syncGetSample();
+		//errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
+		if ok = 1 then
+			numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
+						and SA1 = visualValue(M_REGION) 
+						and SA2 = visualValue(M_DISTRICT)
+						and SA3 = visualValue(M_SUBDISTRICT)
+						and SA4 = visualValue(M_LOCALITY)
+						and SA5 = visualvalue(M_VILLAGE)
+						and SA6 = visualValue(M_EA));
 				
-				errmsg(tr(13), numCases);
-			else
-				errmsg(tr(14));
-			endif;
+			errmsg(tr(13), numCases);
+		else
+			errmsg(tr(14));
 		endif;
 		$ = NOTAPPL;
 		reenter;
-
 
 	else	//$ = 9. quit
 		//First need to reset pff file so that we don't start at M_HOUSEHOLD field when starting up again
@@ -1473,7 +1527,17 @@ onfocus
 	
 	HHmap.clearMarkers();
 	
+	string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+	setFile(SAMPLING_DICT, sampleFileName);	
 	numeric i = 0;
+	//errmsg("In HH: SampleFileName: %s", filename(SAMPLING_DICT));
 	numeric opened = open(SAMPLING_DICT);
 	//errmsg("open samplefile? %d", opened);
 	set first(SAMPLING_DICT);
@@ -1538,7 +1602,7 @@ onfocus
 			
 
 			//writePff("Energy survey", "Menu", "", SA8, "I"); //Need this to know where to start up again when returning from a HH questionnaire
-			//HHMap.SetMarkerOnClick(markerId, writePff("Household Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
+			//HHMap.SetMarkerOnClick(markerId, writePff("HouseholRd Questionnaire", "HHQ", strip(SA10) + ";  " + strip(SA11), SA8, "I"));
 			HHMap.SetMarkerOnClick(markerId, showHHs(SA7A, SA7B, statusByPerson));
 			inc(i);
 		endif;
