@@ -227,7 +227,7 @@ Label=A Household members|A membros do agregado familiar
 Name=AB_HOUSEHOLD_MEMBERS_REC
 RecordTypeValue='A'
 Required=No
-MaxRecords=20
+MaxRecords=50
 RecordLen=106
 
 [Item]
@@ -2145,7 +2145,7 @@ Start=127
 Len=1
 
 [ValueSet]
-Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?|Existem certos meses/estações todos os anos quando o serviço não é tão forte de [DEVICE]?||Are there certain months/seasons every year when the service is not as strong from [DEVICE]?
+Label=Are there certain months/seasons every year when the service is not as strong from [DEVICE]?|Existem certos meses/estações todos os anos quando o serviço não é tão forte de [DEVICE]?
 Name=C74_VS1
 Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
