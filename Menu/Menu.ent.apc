@@ -770,7 +770,7 @@ PROC GLOBAL
 				pffContent = pffContent + "HHQ_DICT=../Data/HHQ.csdb|CSPRODB\n";
 				pffContent = pffContent + "LISTING_DICT=../Data/Listing.csdb|CSPRODB\n";
 				pffContent = pffContent + "REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB\n";
-				pffContent = pffContent + "SAMPLING_DICT=../Data/Sample.csdb|CSPRODB\n";
+				pffContent = pffContent + "SAMPLING_DICT=" + sampleFileName + "|CSPRODB\n";
 				pffContent = pffContent + "USERS_DICT=../LookupFiles/Users.csdb|CSPRODB\n\n";
 				pffContent = pffContent + "COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB\n\n";
 			endif;
