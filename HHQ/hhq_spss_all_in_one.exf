@@ -2,11 +2,11 @@
 Version=CSPro 7.6
 
 [Dictionaries]
-File=..\Data\hhq_test_tz.csdb
+File=.\hhq.dcf
 
 [ExportType]
 FilesCreated=Single
-ReportLabels=Labels
+ReportLabels=Names
 ItemsAre=Included
 ExportMethod=SPSS
 MultipleOccs=OneRecord
@@ -675,12 +675,12 @@ Item=Q2C,4
 Item=Q2C,5
 Item=Q2C,6
 Item=Q2C,7
-Item=Q3
-Item=Q4
-Item=Q5
-Item=Q6
-Item=Q7
-Item=Q8
+Item=Q11
+Item=Q12
+Item=Q13
+Item=Q14
+Item=Q15
+Item=Q16
 Item=S1
 Item=S2
 Item=S3
