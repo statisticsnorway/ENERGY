@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=community
 Name=COMMUNITY_DICT
 RecordTypeStart=1
@@ -32,42 +32,48 @@ Label=Region|Provincia|hali code
 Name=C_A1
 Start=27
 Len=2
+DataType=Numeric
 
 [Item]
 Label=District|Distrito|Kata code
 Name=C_A2
 Start=29
 Len=2
+DataType=Numeric
 
 [Item]
 Label=Subdistrict|Posto Administrativo|kanuni Subcounty
 Name=C_A3
 Start=31
 Len=3
+DataType=Numeric
 
 [Item]
 Label=Locality|Localidade
 Name=C_A4
 Start=34
 Len=2
+DataType=Numeric
 
 [Item]
 Label=Village Code|Aldeia/povoação
 Name=C_A5
 Start=36
 Len=2
+DataType=Numeric
 
 [Item]
 Label=Enumeration area|Àrea de enumeração|hesabu eneo
 Name=C_A6
 Start=38
 Len=3
+DataType=Numeric
 
 [Record]
 Label=A Community identification|A identificação da Comunidade|kitambulisho Community
 Name=COMMUNITY_REC
 RecordTypeValue='A'
-RecordLen=128
+RecordLen=146
 
 [Item]
 Label=Village/Town Name|Aldeia / Nome da Cidade|Kijiji / Jina Town
@@ -81,6 +87,7 @@ Label=Urban/Rural|Urbano/Rural|Mjini / Vijijini
 Name=A6
 Start=91
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Urban/Rural|Urbano/Rural|Mjini / Vijijini
@@ -108,6 +115,7 @@ Label=Community ID|Comunitário_ID
 Name=A8
 Start=94
 Len=3
+DataType=Numeric
 
 [ValueSet]
 Label=Community ID|Comunitário_ID
@@ -124,6 +132,7 @@ Label=Latitude|Latitude
 Name=A9
 Start=97
 Len=10
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 
@@ -132,13 +141,28 @@ Label=Longitude|Logitude
 Name=A10
 Start=107
 Len=11
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 
 [Item]
+Label=Start date Interview
+Name=A11
+Start=118
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Start time Interview
+Name=A12
+Start=128
+Len=8
+DataType=Alpha
+
+[Item]
 Label=Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.|Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.|Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.
 Name=B1
-Start=118
+Start=136
 Len=11
 DataType=Alpha
 
@@ -170,6 +194,7 @@ Label=ID code|Código de identificação
 Name=B_ID
 Start=41
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=ID code|Código de identificação
@@ -188,6 +213,7 @@ Label=Sex|Sexo
 Name=B2_B
 Start=92
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Sex|Sexo|sex
@@ -200,6 +226,7 @@ Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwe
 Name=B2_C
 Start=93
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
@@ -222,6 +249,7 @@ Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi
 Name=B2_D
 Start=95
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
@@ -241,6 +269,7 @@ Label=How many households?|Quantas famílias?|Kaya ngapi?
 Name=C1
 Start=41
 Len=9
+DataType=Numeric
 
 [ValueSet]
 Label=How many households?|Quantas famílias?|Kaya ngapi?
@@ -252,6 +281,7 @@ Label=Is there more or less households in the community now than five years ago?
 Name=C2
 Start=50
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Is there more or less households in the community now than five years ago?|Há mais ou menos casas na comunidade agora do que há cinco anos?
@@ -315,6 +345,7 @@ Label=How far is the nearest [TANESCO/EDM]-office?|Qual a distância do escritó
 Name=D2
 Start=51
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=How far is the nearest [TANESCO/EDM]-office?|Qual a distância do escritório mais próximo da EDM?
@@ -327,6 +358,7 @@ Label=Interviewer/CAPI check: Is the community connected to the national grid or
 Name=D3
 Start=53
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?|Verificação do Inquiridor/a/CAPI: A comunidade está ligada à rede nacional ou a uma mini-rede local?
@@ -341,6 +373,7 @@ Label=What is the main reason why the community is not connected to the grid?|Qu
 Name=D4
 Start=54
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=What is the main reason why the community is not connected to the grid?|Qual é a principal razão pela qual a comunidade não está ligada à rede?
@@ -358,6 +391,7 @@ Label=Does the community expect to get grid connection in the next two years?|A 
 Name=D5
 Start=56
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Does the community expect to get grid connection in the next two years?|A comunidade espera ter ligação na rede nos próximos dois anos?|Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?
@@ -370,6 +404,7 @@ Label=Who is running the local mini-grid system in this community?|Quem dirige o
 Name=D6
 Start=57
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Who is running the local mini-grid system in this community?|Quem dirige o sistema local de mini-rede nesta comunidade?
@@ -394,12 +429,14 @@ Label=How many years has the community had this grid connection?|Quantos anos co
 Name=D8
 Start=109
 Len=2
+DataType=Numeric
 
 [Item]
 Label=Did the community have to pay anything to get the grid connection to the community?|A comunidade teve de pagar para obter a ligação à rede para a comunidade?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
 Name=D9
 Start=111
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Did the community have to pay anything to get the grid connection to the community?|A comunidade teve de pagar para obter a ligação à rede para a comunidade?|Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?
@@ -414,6 +451,7 @@ Label=How much did the community pay to get the grid connection?|Quanto pagou co
 Name=D10
 Start=113
 Len=8
+DataType=Numeric
 
 [ValueSet]
 Label=How much did the community pay to get the grid connection?|Quanto pagou comunidade para ligação à rede?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
@@ -426,6 +464,7 @@ Label=Is grid service available to the whole community or only a part of the com
 Name=D11
 Start=121
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Is grid service available to the whole community or only a part of the community?|O serviço de rede está disponível para toda a comunidade ou apenas uma parte da comunidade?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
@@ -441,6 +480,7 @@ Label=How many households are connected to the grid?|serviço de grade disponív
 Name=D12
 Start=122
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=How many households are connected to the grid?|Quantas famílias são conectadas à rede?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
@@ -452,6 +492,7 @@ Label=What is the main reason some households are not connected to the grid?|Qua
 Name=D13
 Start=123
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=What is the main reason some households are not connected to the grid?|Qual é a principal razão que algumas famílias não estão conectados à rede?|Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?
@@ -473,6 +514,7 @@ Label=How many businesses are connected to the grid?|Quantas empresas estão con
 Name=D14
 Start=125
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
@@ -488,6 +530,7 @@ Label=Are there certain months/seasons every year when the community experiences
 Name=D15
 Start=126
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Are there certain months/seasons every year when the community experiences bad electricity service from the grid?|Há determinados meses / estações a cada ano quando a comunidade experimenta serviço de energia elétrica ruim da rede?|Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?
@@ -524,6 +567,7 @@ Label=Do you practice load shedding in this area in the rainy season?|Quantas ho
 Name=D17
 Start=130
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=ValueSet
@@ -536,6 +580,7 @@ Label=Do you practice load shedding in this area in the dry season?|Quantas hora
 Name=D18
 Start=131
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=ValueSet
@@ -548,6 +593,7 @@ Label=Does TANESCO/EDM (or the the community) publish a "load-shedding" schedule
 Name=D19
 Start=132
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=ValueSet
@@ -560,12 +606,14 @@ Label=What was the total duration of all the outages/blackouts during last week?
 Name=D20
 Start=133
 Len=2
+DataType=Numeric
 
 [Item]
 Label=In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?|.. se o poder sair por mais de 24 horas?|Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika kaya nyingi kwa wakati mmoja? Year
 Name=D21
 Start=135
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -577,6 +625,7 @@ Label=When was the last time the power went out for more than 24 hours in this c
 Name=D22
 Start=136
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -599,6 +648,7 @@ Label=How many days did it take to fix the issue and for the community to regain
 Name=D23
 Start=138
 Len=2
+DataType=Numeric
 
 [Item]
 Label=What are the two most serious problems this community experiences with the grid electricity?|Quais são os problemas mais graves neste experiências comunitárias com a eletricidade da rede?|ni matatizo makubwa zaidi katika uzoefu huu jumuia ya umeme wa gridi ya taifa ni nini?
@@ -627,6 +677,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D25
 Start=142
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
@@ -640,6 +691,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D26
 Start=143
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -654,6 +706,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D27
 Start=144
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown out in your community changed? |Últimos 5 anos, o preço do uso de eletricidade da rede em sua comunidade mudou?|Zamani miaka 5, ina bei ya kutumia umeme wa gridi katika jamii yako imebadilika?
@@ -667,6 +720,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D28
 Start=145
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina muda wa ugavi wa umeme wakati wa usiku imebadilika?
@@ -680,6 +734,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D29
 Start=146
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?
@@ -693,6 +748,7 @@ Label=Over the past 5 years (or since the first household in the community got a
 Name=D30
 Start=147
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
@@ -706,6 +762,7 @@ Label=Do any households own a solar home system/solar lighting system in this co
 Name=D31
 Start=148
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Do any households own a solar home system/solar lighting system in this community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
@@ -717,6 +774,7 @@ Label=Is it just a few households or is it many households that use solar system
 Name=D32
 Start=149
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, unaweza kununua au kukodisha mfumo wa jua nyumbani / nishati ya jua mfumo wa umeme katika jamii hii?
@@ -746,6 +804,7 @@ Label=Are there any shared solar/electricity driven irrigation systems used by f
 Name=D34
 Start=161
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -757,6 +816,7 @@ Label=Are there any shared solar/electric water pumps in this community for drin
 Name=D35
 Start=162
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -774,6 +834,7 @@ Label=Power lines program: Construction, maintenance or rehabilitation|projetos 
 Name=H1
 Start=41
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Power lines program: Construction, maintenance or rehabilitation|projetos implementados na comunidade últimos 5 anos|miradi iliyotekelezwa katika jamii ya mwisho ya miaka 5
@@ -785,6 +846,7 @@ Label=Solar based community mini-grid program
 Name=H2
 Start=42
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -796,6 +858,7 @@ Label=Off-grid energy distribution program for individual households, e.g. solar
 Name=H3
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -807,6 +870,7 @@ Label=Other development program related to power supply
 Name=H4
 Start=44
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -818,6 +882,7 @@ Label=Solar irrigation program for farmers
 Name=H5
 Start=45
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -835,6 +900,7 @@ Label=Village accessible by motor vehicle? Dry season|Vila acessível por veícu
 Name=F1
 Start=41
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Village accessible by motor vehicle? Dry season|Vila acessível por veículo motorizado? estação seca|Kijiji kupatikana kwa magari? Msimu wa ukame
@@ -848,6 +914,7 @@ Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veí
 Name=F2
 Start=42
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
@@ -861,6 +928,7 @@ Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhu
 Name=F3
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhusiano wa basi?
@@ -873,30 +941,35 @@ Label=What is the distance in kilometers from the village to the nearest town/ci
 Name=F4
 Start=44
 Len=4
+DataType=Numeric
 
 [Item]
 Label=What is the distance in kilometers from the village to the district center?|Qual é a distância em quilômetros da aldeia para o centro do distrito?|ni umbali wa kilomita kutoka kijiji katika kituo cha wilaya gani?
 Name=F5
 Start=48
 Len=4
+DataType=Numeric
 
 [Item]
 Label=What is the distance in kilometers from the village to the nearest bank branch?|Qual é a distância em quilômetros da aldeia para a agência bancária mais próxima?|ni umbali wa kilomita kutoka kijiji kwa karibu tawi la benki gani?
 Name=F6
 Start=52
 Len=4
+DataType=Numeric
 
 [Item]
 Label=What is the distance in kilometers from the village to the nearest microfinance institution?|Qual é a distância em quilômetros da aldeia para a instituição de microfinanças mais próximo?|ni umbali wa kilomita kutoka kijiji kwa karibu taasisi ndogo ndogo za fedha ni nini?
 Name=F7
 Start=56
 Len=4
+DataType=Numeric
 
 [Item]
 Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
 Name=F8
 Start=60
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
@@ -927,6 +1000,7 @@ Name=F9_NO
 Start=41
 Len=2
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
@@ -949,6 +1023,7 @@ Name=F9A
 Start=93
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Are there any|Há alguns|Kuna yoyote
@@ -962,6 +1037,7 @@ Name=F9B
 Start=94
 Len=4
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Distance to nearest facility|Distância para o serviço mais próximo|Umbali wa kituo karibu
@@ -974,6 +1050,7 @@ Name=F9C
 Start=98
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Do at least one of these have access to electricty|Fazer pelo menos um deles tem acesso a eletricidade|Je angalau moja ya hizi wanapata electricty
@@ -987,6 +1064,7 @@ Name=F9D
 Start=99
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Did the community have this service five years ago?|A comunidade tem este serviço há cinco anos?|Je jamii na huduma hii ya miaka mitano iliyopita?
@@ -1014,6 +1092,7 @@ Name=G1_NO
 Start=41
 Len=2
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Text From Clipboard|número de negócios
@@ -1049,6 +1128,7 @@ Name=G1A
 Start=43
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Are there any business in this community?|Há qualquer negócio nesta comunidade?|Je, kuna biashara yoyote katika jamii hii?
@@ -1062,6 +1142,7 @@ Name=G1B
 Start=44
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Did this business exist in the community five years ago?|Será que este negócio existe na comunidade há cinco anos?|Je biashara hii zipo katika jamii ya miaka mitano iliyopita?
@@ -1080,6 +1161,7 @@ Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina
 Name=I1
 Start=41
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina ya cookstove
@@ -1094,6 +1176,7 @@ Label=Do any of the households in this community use improved cookstoves using f
 Name=I2
 Start=42
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1105,6 +1188,7 @@ Label=Do any of the households in this community use improved cookstoves using c
 Name=I3
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1116,6 +1200,7 @@ Label=Do any of the households in this community use improved cookstoves using  
 Name=I4
 Start=44
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1127,6 +1212,7 @@ Label=Do any of the households in this community use stoves with LPG, biogass, e
 Name=I5
 Start=45
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1138,6 +1224,7 @@ Label=Is it possible to buy an improved cookstove in this community?
 Name=I6
 Start=46
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1149,6 +1236,7 @@ Label=Where is the closest location to buy an improved cookstove in this communi
 Name=I7
 Start=48
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Value set
@@ -1163,6 +1251,7 @@ Label=Are there programs that campaign for the awareness of health risks of cook
 Name=I8
 Start=49
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1174,6 +1263,7 @@ Label=Are there programs that campaign for the awareness of health risks of cook
 Name=I9
 Start=50
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Valueset
@@ -1205,6 +1295,7 @@ Label=To what extent is the community covered by street lightning?|Até que pont
 Name=J2
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|w
@@ -1226,6 +1317,7 @@ Label=Job opportunities
 Name=GP1
 Start=41
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Job opportunities
@@ -1240,6 +1332,7 @@ Label=Business Opportunities
 Name=GP2
 Start=42
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Business Opportunities
@@ -1251,8 +1344,29 @@ Label=Market Access
 Name=GP3
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Market Access
 Name=GP3_VS1
 Link=111638752
+
+[Record]
+Label=Z End of interview
+Name=Z_END_OF_INTERVIEW
+RecordTypeValue='Z'
+RecordLen=58
+
+[Item]
+Label=End date interview
+Name=Z1
+Start=41
+Len=10
+DataType=Alpha
+
+[Item]
+Label=End time Interview
+Name=Z2
+Start=51
+Len=8
+DataType=Alpha

@@ -259,15 +259,16 @@ postproc
 
 
 PROC AA9
-
 preproc
-
-	$ = edit("99-99-99",sysdate("YYDDMM"));
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
 	noinput;
 
 
 
-
+PROC AA9A
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
 PROC AA10
 
 preproc
@@ -3391,3 +3392,11 @@ preproc
 	noinput;
 
 
+PROC AA21D
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC AA21T
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
