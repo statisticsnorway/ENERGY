@@ -251,3 +251,11 @@ PROC LL11
 		errmsg(tr(109));
 		reenter;
 	endif;
+PROC LL13
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC LL14
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;

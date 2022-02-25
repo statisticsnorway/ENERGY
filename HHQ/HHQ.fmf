@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=HHQ_FF
 Label=HHQ
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -40,6 +40,7 @@ Item=AA18
 Item=HHNAMES
 Item=AA5
 Item=AA4
+Item=AA9A
   
 [EndForm]
   
@@ -670,9 +671,11 @@ Name=FORM030
 Label=AA - Interview particulars. End of quest
 QuestionTextHeight=70
 Level=1
-Size=204,219
+Size=548,251
   
 Item=AA20
+Item=AA21D
+Item=AA21T
   
 [EndForm]
   
@@ -692,6 +695,7 @@ Name=AA1
 Position=178,19,207,39
 Item=AA1,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -704,6 +708,7 @@ Name=AA2
 Position=178,49,207,69
 Item=AA2,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -716,6 +721,7 @@ Name=AA3
 Position=178,79,221,99
 Item=AA3,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -728,6 +734,7 @@ Name=AA4
 Position=193,116,222,136
 Item=AA4,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -740,6 +747,7 @@ Name=AA5
 Position=171,162,200,182
 Item=AA5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -752,6 +760,7 @@ Name=AA6
 Position=171,202,214,222
 Item=AA6,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -791,6 +800,7 @@ Position=569,184,779,204
 Item=AALOGIN,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -804,6 +814,7 @@ Position=567,21,817,41
 Item=AA14,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -817,6 +828,7 @@ Position=567,65,817,85
 Item=ADDRESS_LOCATION,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -831,6 +843,7 @@ Item=AA7A,HHQ_DICT
 Protected=Yes
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -845,6 +858,7 @@ Item=AA7B,HHQ_DICT
 Protected=Yes
 ValidationMethod=NoConfirm
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -854,10 +868,11 @@ Text=AA7B
   
 [Field]
 Name=AA9
-Position=169,386,282,406
+Position=169,386,310,406
 Item=AA9,HHQ_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -866,28 +881,42 @@ Text=AA9
  
   
 [Field]
+Name=AA9A
+Position=238,422,312,442
+Item=AA9A,HHQ_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=64,425,213,441
+Text=Start Time of interview 
+ 
+  
+[Field]
 Name=AA10
-Position=169,416,184,436
+Position=168,455,183,475
 Item=AA10,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=101,419,133,435
+Position=100,456,132,472
 Text=AA10
  
   
 [Field]
 Name=AA10A
-Position=169,446,184,466
+Position=168,483,183,503
 Item=AA10A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=101,449,142,465
+Position=100,486,141,502
 Text=AA10A
  
   
@@ -910,6 +939,7 @@ Position=567,295,617,315
 Item=AA12,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -923,6 +953,7 @@ Position=567,325,817,345
 Item=AA13,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -975,6 +1006,7 @@ Position=567,445,817,465
 Item=AA18,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -1263,6 +1295,7 @@ Position=0,0,421,20
 Item=AB1,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Text=AB1
@@ -1326,6 +1359,7 @@ Name=AB5
 Position=155,125,184,145
 Item=AB5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -1403,6 +1437,7 @@ Name=AC5
 Position=155,305,184,325
 Item=AC5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -1493,6 +1528,7 @@ Name=A4
 Position=155,515,184,535
 Item=A4,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -1505,6 +1541,7 @@ Name=A5
 Position=155,545,184,565
 Item=A5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -1564,6 +1601,7 @@ Name=B1
 Position=208,68,237,88
 Item=B1,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1589,6 +1627,7 @@ Name=B3
 Position=208,128,237,148
 Item=B3,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1627,6 +1666,7 @@ Name=B6
 Position=208,218,237,238
 Item=B6,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2063,6 +2103,7 @@ Name=C17
 Position=111,457,140,477
 Item=C17,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2153,6 +2194,7 @@ Name=C24
 Position=100,713,129,733
 Item=C24,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2256,6 +2298,7 @@ Name=C32
 Position=100,968,129,988
 Item=C32,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2268,6 +2311,7 @@ Name=C33
 Position=100,993,213,1013
 Item=C33,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2280,6 +2324,7 @@ Name=C34
 Position=100,1018,143,1038
 Item=C34,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2291,6 +2336,7 @@ Text=C34
 Name=C35
 Position=100,1045,185,1065
 Item=C35,HHQ_DICT
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -2533,6 +2579,7 @@ Position=153,37,403,57
 Item=C53,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2558,6 +2605,7 @@ Name=C55
 Position=265,85,294,105
 Item=C55,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2648,6 +2696,7 @@ Name=C62
 Position=146,281,175,301
 Item=C62,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2712,6 +2761,7 @@ Name=C67
 Position=261,414,290,434
 Item=C67,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2737,6 +2787,7 @@ Name=C69
 Position=207,452,320,472
 Item=C69,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2762,6 +2813,7 @@ Name=C71
 Position=141,509,268,529
 Item=C71,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2813,6 +2865,7 @@ Name=C75
 Position=255,619,284,639
 Item=C75,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2825,6 +2878,7 @@ Name=C76
 Position=264,641,293,661
 Item=C76,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2889,6 +2943,7 @@ Name=C81
 Position=147,793,176,813
 Item=C81,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -2953,6 +3008,7 @@ Name=C86
 Position=241,910,298,930
 Item=C86,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -3306,6 +3362,7 @@ Name=C112
 Position=209,37,238,57
 Item=C112,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=7
   
 [Text]
@@ -3357,6 +3414,7 @@ Name=C116
 Position=98,179,155,199
 Item=C116,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=7
   
 [Text]
@@ -3369,6 +3427,7 @@ Name=C117
 Position=98,209,127,229
 Item=C117,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=7
   
 [Text]
@@ -3433,6 +3492,7 @@ Name=C122
 Position=98,359,127,379
 Item=C122,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=7
   
 [Text]
@@ -3518,6 +3578,7 @@ Name=C128
 Position=89,54,118,74
 Item=C128,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=8
   
 [Text]
@@ -3569,6 +3630,7 @@ Name=C132
 Position=89,174,118,194
 Item=C132,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=8
   
 [Text]
@@ -3581,6 +3643,7 @@ Name=C133
 Position=89,204,202,224
 Item=C133,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=8
   
 [Text]
@@ -3779,6 +3842,7 @@ Name=G2A
 Position=0,0,29,20
 Item=G2A,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=G2A
@@ -3797,6 +3861,7 @@ Name=G2B
 Position=0,0,71,20
 Item=G2B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=G2B
@@ -3815,6 +3880,7 @@ Name=G2C
 Position=0,0,29,20
 Item=G2C,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=G2C
@@ -3829,6 +3895,7 @@ Name=G3
 Position=85,400,114,420
 Item=G3,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=11
   
 [Text]
@@ -3841,6 +3908,7 @@ Name=G4
 Position=85,430,156,450
 Item=G4,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=11
   
 [Text]
@@ -3900,6 +3968,7 @@ Name=F4
 Position=209,150,238,170
 Item=F4,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -3912,6 +3981,7 @@ Name=F5
 Position=219,176,332,196
 Item=F5,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -3924,6 +3994,7 @@ Name=F6
 Position=213,203,242,223
 Item=F6,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -3936,6 +4007,7 @@ Name=F7
 Position=209,231,238,251
 Item=F7,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -4000,6 +4072,7 @@ Name=F12
 Position=180,388,251,408
 Item=F12,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -4012,6 +4085,7 @@ Name=F13
 Position=197,429,240,449
 Item=F13,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -4024,6 +4098,7 @@ Name=F14
 Position=153,467,266,487
 Item=F14,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=12
   
 [Text]
@@ -4213,6 +4288,7 @@ Name=I13
 Position=146,383,259,403
 Item=I13,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4252,6 +4328,7 @@ Position=72,470,370,490
 Item=I16,HHQ_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4264,6 +4341,7 @@ Name=I17
 Position=152,495,265,515
 Item=I17,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4289,6 +4367,7 @@ Name=I19
 Position=193,554,222,574
 Item=I19,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4418,6 +4497,7 @@ Name=I29
 Position=585,215,614,235
 Item=I29,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4443,6 +4523,7 @@ Name=I31
 Position=527,260,640,280
 Item=I31,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4455,6 +4536,7 @@ Name=I32
 Position=583,295,612,315
 Item=I32,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4493,6 +4575,7 @@ Name=I35
 Position=593,379,608,399
 Item=I35,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4505,6 +4588,7 @@ Name=I36
 Position=586,401,601,421
 Item=I36,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4517,6 +4601,7 @@ Name=I37
 Position=575,431,618,451
 Item=I37,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4529,6 +4614,7 @@ Name=I38
 Position=572,457,615,477
 Item=I38,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4541,6 +4627,7 @@ Name=I39
 Position=563,487,606,507
 Item=I39,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4553,6 +4640,7 @@ Name=I40
 Position=558,517,601,537
 Item=I40,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4591,6 +4679,7 @@ Name=I43
 Position=1067,39,1096,59
 Item=I43,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4603,6 +4692,7 @@ Name=I44
 Position=1068,72,1097,92
 Item=I44,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4616,6 +4706,7 @@ Name=I45_HH
 Position=1067,106,1096,126
 Item=I45_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4628,6 +4719,7 @@ Name=I45_MM
 Position=1067,132,1096,152
 Item=I45_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4653,6 +4745,7 @@ Name=I47
 Position=937,214,966,234
 Item=I47,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4665,6 +4758,7 @@ Name=I48
 Position=937,244,966,264
 Item=I48,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4677,6 +4771,7 @@ Name=I49
 Position=937,274,966,294
 Item=I49,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4689,6 +4784,7 @@ Name=I50
 Position=937,304,966,324
 Item=I50,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4701,6 +4797,7 @@ Name=I51
 Position=937,334,966,354
 Item=I51,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=13
   
 [Text]
@@ -4858,6 +4955,7 @@ Name=O7
 Position=228,274,257,294
 Item=O7,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=14
   
 [Text]
@@ -5262,6 +5360,7 @@ Name=L2B
 Position=0,0,29,20
 Item=L2B,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=L2B
@@ -5497,6 +5596,7 @@ Name=N_A
 Position=0,0,29,20
 Item=N_A,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_A
@@ -5534,6 +5634,7 @@ Name=N_C_HH
 Position=21,0,50,20
 Item=N_C_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_C_HH
@@ -5552,6 +5653,7 @@ Name=N_C_MM
 Position=25,0,54,20
 Item=N_C_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_C_MM
@@ -5570,6 +5672,7 @@ Name=N_D_HH
 Position=21,0,50,20
 Item=N_D_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_D_HH
@@ -5588,6 +5691,7 @@ Name=N_D_MM
 Position=25,0,54,20
 Item=N_D_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_D_MM
@@ -5709,6 +5813,7 @@ Name=N_F
 Position=0,0,29,20
 Item=N_F,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_F
@@ -5747,6 +5852,7 @@ Name=N_H_HH
 Position=21,0,50,20
 Item=N_H_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_H_HH
@@ -5765,6 +5871,7 @@ Name=N_H_MM
 Position=25,0,54,20
 Item=N_H_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_H_MM
@@ -5783,6 +5890,7 @@ Name=N_I_HH
 Position=16,0,45,20
 Item=N_I_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_I_HH
@@ -5801,6 +5909,7 @@ Name=N_I_MM
 Position=20,0,49,20
 Item=N_I_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_I_MM
@@ -5917,6 +6026,7 @@ Name=N_K
 Position=0,0,29,20
 Item=N_K,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_K
@@ -5954,6 +6064,7 @@ Name=N_M_HH
 Position=23,0,52,20
 Item=N_M_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_M_HH
@@ -5972,6 +6083,7 @@ Name=N_M_MM
 Position=27,0,56,20
 Item=N_M_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_M_MM
@@ -5990,6 +6102,7 @@ Name=N_N_HH
 Position=21,0,50,20
 Item=N_N_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_N_HH
@@ -6008,6 +6121,7 @@ Name=N_N_MM
 Position=25,0,54,20
 Item=N_N_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_N_MM
@@ -6129,6 +6243,7 @@ Name=N_P
 Position=0,0,29,20
 Item=N_P,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_P
@@ -6166,6 +6281,7 @@ Name=N_R_HH
 Position=21,0,50,20
 Item=N_R_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_R_HH
@@ -6184,6 +6300,7 @@ Name=N_R_MM
 Position=25,0,54,20
 Item=N_R_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_R_MM
@@ -6202,6 +6319,7 @@ Name=N_S_HH
 Position=21,0,50,20
 Item=N_S_HH,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_S_HH
@@ -6220,6 +6338,7 @@ Name=N_S_MM
 Position=25,0,54,20
 Item=N_S_MM,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=N_S_MM
@@ -6676,6 +6795,7 @@ Name=U2
 Position=27,0,42,20
 Item=U2,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=U2
@@ -6904,6 +7024,7 @@ Name=U3
 Position=27,0,42,20
 Item=U3,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=U3
@@ -7545,6 +7666,7 @@ Name=GP2
 Position=0,0,29,20
 Item=GP2,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=GP2
@@ -8172,14 +8294,43 @@ Max=1
   
 [Field]
 Name=AA20
-Position=105,24,526,44
+Position=102,118,523,138
 Item=AA20,HHQ_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=27
   
 [Text]
-Position=51,27,83,43
+Position=48,121,80,137
 Text=AA20
+ 
+  
+[Field]
+Name=AA21D
+Position=210,168,300,188
+Item=AA21D,HHQ_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=27
+  
+[Text]
+Position=47,171,183,187
+Text=End Date of Interview
+ 
+  
+[Field]
+Name=AA21T
+Position=213,206,287,226
+Item=AA21T,HHQ_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=27
+  
+[Text]
+Position=48,209,187,225
+Text=End Time of Interview
  
 [EndGroup]
   
