@@ -1,0 +1,28 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.6",
+  "name": "HHQTraining",
+  "description": "",
+  "files": [
+    {
+      "path": ".\\HHQTraining.ent"
+    },
+    {
+      "path": ".\\HHQTraining.pff"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": "..\\Menu\\CountryVariables.dcf"
+    },
+    {
+      "path": ".\\HHQTraining.dcf",
+      "uploadForSync": true
+    }
+  ],
+  "deployment": {
+    "type": "CSWeb",
+    "cswebUrl": "http:\/\/41.94.86.4:81\/energy\/api",
+    "ftpUrl": "ftp:\/\/"
+  }
+}
