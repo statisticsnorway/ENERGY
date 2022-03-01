@@ -112,6 +112,121 @@ preproc
 	//Have to fill the arrays for the HH members if the questionnaire is partially saved.
 	if ispartial() then
 		advance to getsymbol(savePartial)
+		{
+		//If coming back for the interview as agreed upon, I don't want to return to exactly that field
+		if getSymbol(savePartial) = "AA13" then
+			advance to AA15;
+		else 	
+			//Main respondent as answered last time
+			if AA18 <> "" then
+				currMember = AA18;	//Not head of household
+			else
+				currMember = AA14;	//Head of household
+			endif;
+
+			numeric memNum = totocc(AB_HOUSEHOLD_MEMBERS_REC); //ANNE
+			if memNum <> 0 and memNum <> NOTAPPL and memNum <> DEFAULT then //Family roster has at least been partly filled out..
+				numeric i = 1;
+
+				familyMembers.clear();
+				while i <= memNum do
+					familyMembers.add(AB1(i), i);
+
+					//adding to relevant hhdemographic group and building value set for grownups
+					if visualValue(AB4(i)) = 2 then
+						if visualValue(AB5(i)) >= 15 then	//woman
+							inc(hhDemographics(1));
+							inc(hhDemographics(6));
+							adultMembers.add(AB1(i),i);
+						elseif visualValue(AB5(i)) <=4 then	//little child
+							inc(hhDemographics(5));
+						else						//girl
+							inc(hhDemographics(2));
+						endif
+					else
+						if visualValue(AB5(i)) >= 15 then	//man
+							inc(hhDemographics(3));
+							inc(hhDemographics(6));
+							adultMembers.add(AB1(i),i);
+						elseif visualValue(AB5(i)) <= 4 then	//little child
+							inc(hhDemographics(5));
+						else						//boy
+							inc(hhDemographics(4));
+						endif;
+					endif;
+					if visualValue(AB5(i)) >= 0 and visualValue(AB5(i)) < 15 then	//Child, 0-15
+						inc(hhDemographics(7));
+					endif;
+	
+					inc(i);
+				enddo;
+			
+				//If no members of the household are of age 15+: Add everybody aged 12+
+				if adultMembers.length() = 0 then
+					i = 1;
+					while i <= 20 do
+						if AB1(i) = "" then
+							break;	//finished
+						endif;
+						if AB5(i) >= 12 then
+							adultMembers.add(AB1(i), i);
+						endif;
+						inc(i);
+					enddo;
+				endif;
+	
+				//If there are none of age 12+: Adding the whole of the household
+				if adultMembers.length() = 0 then
+					i = 1;
+					while i <= 20 do
+						if AB1(i) = "" then
+							break;	//finished
+						endif;
+						adultMembers.add(AB1(i), i);
+						inc(i);
+					enddo;
+				endif;
+
+
+				//Name of child for questions in O-form. Only need them if the partialsaved has come that far
+				if hhDemographics(7) > 0 and visualValue(O7) <> NOTAPPL then
+					//chosenChildName = memberNames(visualValue(O7));
+					chosenChildName = familyMembers.labels(visualValue(O7));
+
+				endif;	
+
+				//Person number of person cooking most often (or is selected to be his/her representative
+				if  visualValue(I1) <> NOTAPPL then
+					PersonCooksMostOften = visualValue(I1);
+				else
+					//Haven't asked the question yet..
+				endif;
+
+				//Person answering female related questions
+				if HHDemographics(1)> 0 and visualValue(T1) <> NOTAPPL then
+					//femalespouseName = memberNames(visualValue(T1));
+					femalespouseName = familyMembers.labels(visualValue(T1));
+				else
+					//Haven't asked the question yet..
+				endif;
+
+				//lamptype for G form is handled further down. In that case, we have not reached form F yet, so that's ok
+				if visualValue(F3) <> NOTAPPL then
+					lampType = getvaluelabel(F3);
+				endif;
+
+
+				//SolarDeviceType
+				if visualValue(C10) in 3, 7, 8 then
+					solarDeviceType = getvaluelabel(C10);
+				endif;
+
+			endif;
+			//NB: Need to move through the ID variables to avoid error messages about them not being filled out
+			//when isSavePartial().
+			//The advance to the getsymbol(savePartial) happens in the postproc of the last ID item
+			//is filled - the ADDRESS_LOCATION field
+		endif;}
 	endif;
 
 
@@ -122,153 +237,16 @@ postproc
 
 
 
-PROC AA1
-
-preproc
-
-	$ = toNumber(sysparm("REGION"));
-	noinput;
-
-
-
-PROC AA2
-
-preproc
-
-	$ = toNumber(sysparm("DISTRICT"));
-	noInput;
-
-
-
-PROC AA3
-
-preproc
-
-	$ = toNumber(sysparm("SUBDISTRICT"));
-	noinput;
-
-
-
-PROC AA4
-
-preproc
-
-	$ = toNumber(sysparm("LOCALITY"));
-	noinput;
-
-
-PROC AA5
-
-preproc
-
-	$ = toNumber(sysparm("VILLAGE"));
-	noinput;
-
-
-
-
-PROC AA6
-
-preproc
-
-	$ = toNumber(sysparm("EA"));
-	noinput;
-
-
-
-PROC AA7
-
-preproc
-
-	$ = toNumber(sysparm("URBANRURAL"));
-	noinput;
-
-
-PROC AA8
-
-preproc
-
-	AA8 = toNumber(sysparm("SERIAL"));
-	noinput;
-
-
-PROC AALOGIN
-
-preproc
-
-	$ = sysparm("LOGIN");
-	noinput;
-
-
-
-PROC AA14
-
-preproc
-
-	//Look up value in sample file
-	SA1 = AA1; SA2 = AA2; SA3 = AA3; SA4 = AA4; SA5 = AA5; SA6 = AA6; SA8 = AA8;
-	SLOGIN = AALOGIN;
-	//errmsg("AA14, HHQ. Sample file: %s", fileName(SAMPLING_DICT));
-	numeric ok = loadcase(SAMPLING_DICT, SLOGIN, SA1, SA2, SA3, SA4, SA5, SA6, SA8);
-	$ = SA10;
-
-	//Might as well set the other fields from the sample file too..
-	ADDRESS_LOCATION = SA11;
-	AA7A = SA7A;
-	AA7B = SA7B;
-	noInput;
-
-
-PROC ADDRESS_LOCATION
-
-preproc
-
-	noinput;
-
-postproc
-
-	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
-	if isPartial() then
-
-		//Need to find the name of the current respondent if we're still in the personal section.
-		//Starting from scratch with he current person. Need to find the number of him/her
-		string currentField = getSymbol(savepartial);
-		
-		//"Special" skips
-		if currentField in "K1", "K2", "K3", "K4" then
-			advance to K1;
-		elseif currentField in "D1", "D2", "D3", "D4" then
-			skip to D1;
-		elseif currentField in "E1", "E2", "E3" then
-			advance to E1;
-		elseif currentField in "G2B", "G2C" then
-			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
-			numeric ptr = 4;
-			while ptr >= 1 do
-				if visualValue(G2B(ptr)) <> NOTAPPL then
-					break;
-				endif;
-				ptr = ptr - 1;
-			enddo;
-			advance to G2A(ptr);
-
-		else	//general skip!
-			advance to getsymbol(savePartial);
-		endif;
-	endif;
-
-
 PROC AA9
+
 preproc
-	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+
+	$ = edit("99-99-99",sysdate("YYDDMM"));
 	noinput;
 
 
 
-PROC AA9A
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;
+
 PROC AA10
 
 preproc
@@ -1637,11 +1615,7 @@ onfocus
 	//Randomly select a percentage of price
 	array thePercentages(2) = 0.5, 1;
 	seed(systime());
-		if AA7 = 1 then
-		CF = round(thePercentages(random(1,2)) * gridPriceU);
-	else
-		CF = round(thePercentages(random(1,2)) * gridPriceR);
-	endif;
+	CF = round(thePercentages(random(1,2)) * gridPriceU);
 	
 	
 	 
@@ -3388,15 +3362,7 @@ PROC AA20
 
 preproc
 
-	$ = AALOGIN;
+	$ = "test";
 	noinput;
 
 
-PROC AA21D
-preproc
-	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
-	noinput;
-PROC AA21T
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;

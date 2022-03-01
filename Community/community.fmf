@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=COMMUNITY_FF
 Label=community
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -13,7 +13,7 @@ File=.\community.dcf
 Name=FORM000
 Label=community questionnaire
 Level=1
-Size=944,635
+Size=946,748
   
 Item=C_LOGIN
 Item=C_A1
@@ -26,6 +26,8 @@ Item=A5
 Item=C_A4
 Item=B_LEADERS000
 Item=B1
+Item=A11
+Item=A12
   
 [EndForm]
   
@@ -169,11 +171,13 @@ Item=J2
 Name=FORM003
 Label=GP Global Pandemic
 Level=1
-Size=370,197
+Size=370,347
   
 Item=GP1
 Item=GP2
 Item=GP3
+Item=Z1
+Item=Z2
   
 [EndForm]
   
@@ -194,6 +198,7 @@ Position=199,27,409,47
 Item=C_LOGIN,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -206,6 +211,7 @@ Name=C_A1
 Position=199,57,228,77
 Item=C_A1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -218,6 +224,7 @@ Name=C_A2
 Position=199,87,228,107
 Item=C_A2,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -230,6 +237,7 @@ Name=C_A3
 Position=199,117,242,137
 Item=C_A3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -242,6 +250,7 @@ Name=C_A4
 Position=202,154,231,174
 Item=C_A4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -254,6 +263,7 @@ Name=C_A5
 Position=199,196,228,216
 Item=C_A5,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -266,6 +276,7 @@ Name=C_A6
 Position=199,232,242,252
 Item=C_A6,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -275,40 +286,69 @@ Text=C_A6
   
 [Field]
 Name=A6
-Position=200,269,215,289
+Position=202,382,217,402
 Item=A6,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=85,269,101,285
+Position=87,382,103,398
 Text=A6
  
   
 [Field]
 Name=A5
-Position=160,307,620,327
+Position=162,420,622,440
 Item=A5,COMMUNITY_DICT
 Verify=No
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=95,307,111,323
+Position=97,420,113,436
 Text=A5
  
   
 [Field]
+Name=A11
+Position=214,273,304,293
+Item=A11,COMMUNITY_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=64,276,189,292
+Text=Start date Interview
+ 
+  
+[Field]
+Name=A12
+Position=211,311,285,331
+Item=A12,COMMUNITY_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=63,313,188,329
+Text=Start time Interview
+ 
+  
+[Field]
 Name=B1
-Position=99,350,254,370
+Position=101,463,256,483
 Item=B1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=CheckBox
 Form=1
   
 [Text]
-Position=53,353,69,369
+Position=55,466,71,482
 Text=B1
  
   
@@ -320,7 +360,7 @@ Required=Yes
 Type=Record
 TypeName=B_LEADERS
 Max=7
-DisplaySize=38,390,919,610
+DisplaySize=40,503,921,723
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -377,6 +417,7 @@ Name=B_ID
 Position=14,0,29,20
 Item=B_ID,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=B_ID
@@ -396,6 +437,7 @@ Position=0,0,701,20
 Item=B2_A,COMMUNITY_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Text=B2_A
@@ -476,6 +518,7 @@ Name=C1
 Position=151,88,278,108
 Item=C1,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -600,6 +643,7 @@ Name=D7
 Position=109,245,810,265
 Item=D7,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -612,6 +656,7 @@ Name=D8
 Position=109,275,138,295
 Item=D8,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -770,6 +815,7 @@ Name=D20
 Position=978,189,1007,209
 Item=D20,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1113,6 +1159,7 @@ Name=F4
 Position=95,116,152,136
 Item=F4,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -1125,6 +1172,7 @@ Name=F5
 Position=95,146,152,166
 Item=F5,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -1137,6 +1185,7 @@ Name=F6
 Position=95,176,152,196
 Item=F6,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -1149,6 +1198,7 @@ Name=F7
 Position=95,206,152,226
 Item=F7,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -1300,6 +1350,7 @@ Name=F9B
 Position=0,0,57,20
 Item=F9B,COMMUNITY_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
   
 [Text]
 Text=F9B
@@ -1759,6 +1810,34 @@ Form=10
 [Text]
 Position=148,155,174,171
 Text=GP3
+ 
+  
+[Field]
+Name=Z1
+Position=193,272,283,292
+Item=Z1,COMMUNITY_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=10
+  
+[Text]
+Position=52,275,171,291
+Text=End date interview
+ 
+  
+[Field]
+Name=Z2
+Position=193,302,267,322
+Item=Z2,COMMUNITY_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=10
+  
+[Text]
+Position=52,305,171,321
+Text=End time Interview
  
 [EndGroup]
   

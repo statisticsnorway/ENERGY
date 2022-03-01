@@ -1,5 +1,5 @@
 ﻿[CSPro Application]
-Version=CSPro 7.7
+Version=CSPro 7.6
 Label=HHQ
 Name=HHQ
 AppType=DataEntry
@@ -14,17 +14,15 @@ ParadataCollection=AllEvents
 ParadataRecordInitialPropertyValues=Yes
 ParadataDeviceStateMinutes=5
 [External Dictionaries]
-File=..\Sampling\sample.dcf
 File=..\Menu\CountryVariables.dcf
 [AppCode]
-File=.\HHQ.ent.apc
+File=.\HHQTraining.ent.apc
 [Message]
-File=.\HHQ.ent.mgf
+File=.\HHQTraining.ent.mgf
 [Help]
-File=.\HHQ.ent.qsf
+File=.\HHQTraining.ent.qsf
 [Forms]
-File=.\HHQ.fmf
+File=.\HHQTraining.fmf
 [Dictionary Types]
-Dict-Type=.\HHQ.dcf,Input,.\HHQ.fmf
-Dict-Type=..\Sampling\sample.dcf,External
+Dict-Type=.\HHQTraining.dcf,Input,.\HHQTraining.fmf
 Dict-Type=..\Menu\CountryVariables.dcf,External

@@ -145,13 +145,12 @@
       "path": ".\\Menu\\users.dcf"
     },
     {
-      "path": ".\\Sampling\\sample.dcf",
-      "uploadForSync": true
+      "path": ".\\Sampling\\sample.dcf"
     }
   ],
   "deployment": {
     "type": "CSWeb",
-    "cswebUrl": "http:\/\/41.94.86.3:8080\/energy\/api",
+    "cswebUrl": "http:\/\/41.94.86.4:81\/energy\/api",
     "ftpUrl": "ftp:\/\/"
   }
 }

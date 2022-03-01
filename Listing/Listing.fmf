@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=LISTING_FF
 Label=Listing
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -13,7 +13,7 @@ File=.\Listing.dcf
 Name=FORM000
 Label=Listing questionnaire
 Level=1
-Size=413,569
+Size=413,646
   
 Item=LLOGIN
 Item=LL1
@@ -31,6 +31,8 @@ Item=LL9
 Item=LL12
 Item=LL4
 Item=LLUR
+Item=LL13
+Item=LL14
   
 [EndForm]
   
@@ -52,6 +54,7 @@ Item=LLOGIN,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -65,6 +68,7 @@ Position=137,44,166,64
 Item=LL1,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -78,6 +82,7 @@ Position=137,74,166,94
 Item=LL2,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -91,6 +96,7 @@ Position=137,104,180,124
 Item=LL3,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -104,6 +110,7 @@ Position=137,133,166,153
 Item=LL4,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -117,6 +124,7 @@ Position=137,180,166,200
 Item=LL5,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -130,6 +138,7 @@ Position=137,210,180,230
 Item=LL6,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -143,6 +152,7 @@ Position=142,241,157,261
 Item=LLUR,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -156,6 +166,7 @@ Position=137,276,180,296
 Item=LL8,LISTING_DICT
 Protected=Yes
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -181,6 +192,7 @@ Name=LL7A
 Position=137,345,278,365
 Item=LL7A,LISTING_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -193,6 +205,7 @@ Name=LL7B
 Position=137,375,292,395
 Item=LL7B,LISTING_DICT
 FieldLabelType=DictionaryName
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -219,6 +232,7 @@ Position=138,445,388,465
 Item=LL10,LISTING_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -232,6 +246,7 @@ Position=134,485,384,505
 Item=LL11,LISTING_DICT
 FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -250,6 +265,34 @@ Form=1
 [Text]
 Position=60,524,90,540
 Text=LL12
+ 
+  
+[Field]
+Name=LL13
+Position=167,563,257,583
+Item=LL13,LISTING_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=57,566,144,582
+Text=Date of listing
+ 
+  
+[Field]
+Name=LL14
+Position=182,601,256,621
+Item=LL14,LISTING_DICT
+Protected=Yes
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=56,604,146,620
+Text=Time of listing
  
 [EndGroup]
   

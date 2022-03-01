@@ -65,6 +65,14 @@ preproc
 	
 
 	
+PROC A11
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC A12
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
 PROC B1
 Postproc
 	If Length(Strip($)) > 1 and IsChecked("X",$) then
@@ -342,3 +350,11 @@ postproc
 	endif;
 
 
+PROC Z1
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC Z2
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
