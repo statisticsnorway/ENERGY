@@ -77,6 +77,7 @@ end;
 
 
 
+
 PROC HHQ_FF
 
 
@@ -237,8 +238,6 @@ postproc
 		//"Special" skips
 		if currentField in "K1", "K2", "K3", "K4" then
 			advance to K1;
-		elseif currentField in "D1", "D2", "D3", "D4" then
-			skip to D1;
 		elseif currentField in "E1", "E2", "E3" then
 			advance to E1;
 		elseif currentField in "G2B", "G2C" then
@@ -1621,53 +1620,6 @@ PROC C132
 
 
 
-PROC D1
-
-preproc
-
-	If (visualValue(C10) = 1 or visualValue(C11) = 1) then
-		skip to E_FORM;
-	endif;
-	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
-		errmsg(tr(189));
-	endif;
-
-onfocus
-
-	//Randomly select a percentage of price
-	array thePercentages(2) = 0.5, 1;
-	seed(systime());
-		if AA7 = 1 then
-		CF = round(thePercentages(random(1,2)) * gridPriceU);
-	else
-		CF = round(thePercentages(random(1,2)) * gridPriceR);
-	endif;
-	
-	
-	 
-postproc
-
-	if $ = 1 then
-		skip to E_FORM;
-	endif;
-
-
-PROC D2
-
-	if $ =  1 then
-		skip to  E_FORM;
-	endif;
-
-
-
-PROC D3
-
-	if $ =  1 then
-		skip to E_FORM;
-	endif;
-
-
-
 PROC E_FORM
 
 preproc
@@ -2136,6 +2088,12 @@ preproc
 
 	If I25 in 3,8,17 then
 		skip to I34;
+	endif;
+
+postproc
+	if $ > 12 then
+		errmsg(tr(108));
+		reenter;
 	endif;
 
 

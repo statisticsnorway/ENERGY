@@ -135,7 +135,7 @@ Len=10
 DataType=Alpha
 
 [Item]
-Label=Start Time of interview 
+Label=Start Time of interview
 Name=AA9A
 Start=135
 Len=8
@@ -877,7 +877,7 @@ Value=6;Never|Nunca|Hajawahi
 Label=B Household characteristics|características B domésticos
 Name=B_HOUSEHOLD_CHARACTERISTICS
 RecordTypeValue='B'
-RecordLen=104
+RecordLen=105
 
 [Item]
 Label=Years in community|A quantos anos vive nesta comunidade?
@@ -1032,56 +1032,80 @@ Value=10;Steel/other metal|Aço/outros metais|Chuma/Aina nyingine ya vyuma
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B10
 Start=59
-Len=1
+Len=2
 DataType=Numeric
 
 [ValueSet]
 Label=Type of toilet|Tipos de casa de banho que a casa usa?
 Name=B10_VS1
-Value=1;No toilet / bush / field|Sem sanita / arbusto / campo/no mato|Hakuna choo
-Image=..\Images\Toilet_1.jpg
-Value=2;Open pit without slab/Open Pit|Poço aberto sem laje/Poço Aberto|Shimo la wazi lisilo na mfuniko/choo cha wazi   kisicho na mfuniko
-Image=..\Images\Toilet_2.jpg
-Value=3;Pit latrine with slab (not washable)|Latrina de fossa com laje (não lavável)|Choo cha shimo chenye mfuniko (kisichosafichika)
-Image=..\Images\Toilet_3.jpg
-Value=4;Pit latrine with slab (washable)|Latrina de fossa com laje (lavável)|Choo cha shimo   chenye mfuniko (kinachosafishika)
-Image=..\Images\Toilet_4.jpg
-Value=5;Ventilated improved pit latrine|Latrina melhorada do fossa ventilada|Choo cha shimo cha   kisasa (vip)
-Image=..\Images\Toilet_5.jpg
-Value=6;Pour flush toilet|Despeje a sanita de descarga|Choo cha kumwagia  maji
-Image=..\Images\Toilet_6.jpg
-Value=7;Flush toilet with cistern|Sanita de descarga com cisterna|Choo cha kuvuta
-Image=..\Images\Toilet_7.jpg
-Value=8;Composting toilet / ecosan latrine|Sanita de compostagem / latrina ecosan|Choo cha ecosan
-Image=..\Images\Toilet_8.jpg
-Value=9;Other||Nyingine
+Value=1;Flush toilet|Retrete com autoclismo
+Image=..\Images\Latrina_01.jpg
+Value=2;Non-flush toilet|Retrete sem autoclismo
+Image=..\Images\Latrina_02.jpg
+Value=3;VIP latrine|Latrina VIP
+Image=..\Images\Latrina_03.jpg
+Value=4;Improved latrine|Latrina melhorada
+Image=..\Images\Latrina_04.jpg
+Value=5;XIPOTI improved latrine|Latrina melhorada XIPOTI
+Image=..\Images\Latrina_05.jpg
+Value=6;Ecological latrine|Latrina ecológica
+Image=..\Images\Latrina_06.jpg
+Value=7;Traditional improved pit|Latrina tradicional melhorada
+Image=..\Images\Latrina_07.jpg
+Value=8;Traditional or unimproved latrine|Latrina tradicional ou não melhorada
+Image=..\Images\Latrina_08.jpg
+Value=9;Latrine (bucket system)|Latrina (sistema de balde)
+Image=..\Images\Latrina_09.jpg
+Value=10;Cat system|Sistema de gato
+Image=..\Images\Latrina_10.jpg
+Value=11;Open defecation|Defecação a céu aberto
+Image=..\Images\Latrina_11.jpg
 
 [Item]
 Label=Source drinking water|Principal fonte de água potável do AF
 Name=B11
-Start=60
+Start=61
 Len=2
 DataType=Numeric
 
 [ValueSet]
 Label=Source drinking water|Principal fonte de água potável do AF
 Name=B11_VS1
-Value=1;Pipe borne water|Água transportada por tubos|Maji ya bomba ndani ya nyumba au eneo la nyumba - katika kaya
-Value=2;Bore hole/ hand pump|Furo/ bomba de água manual|Maji ya kisima/kuvuta kwa pamp ya mkono
-Value=3;Electric water pump|Bomba de água eléctrica|Maji ya kisima ya kuvuta kwa pamp ya umeme
-Value=4;Protected well/spring|Poço protegido/mola|Maji ya kisima/chemchem  kilichojengewa
-Value=5;Unprotected well/spring|Poço/mola desprotegido|Maji ya kisima/chemchem kisiyojengewa
-Value=6;River/spring|Rio/nascente|Maji ya mto/chemchem
-Value=7;Lake/reservoir|Lago/reservatório|Maji ya ziwa/bwawa
-Value=8;Rain water|Água da chuva|Maji ya mvua
-Value=9;Tanker/truck/vendor|Camiões-cisterna/camião/fornecedor|Maji yanayouzwa kwenye Magari ya maji//Boza/Wauzaji wa maji
-Value=10;Sachet water|Água de saqueta|Maji ya pakti
-Value=11;Bottle water|Água de garrafa|Maji ya chupa - ya dukani
+Value=1;Tap inside the house|Torneira dentro de casa
+Image=..\Images\Fontes_agua_01.jpg
+Value=2;Tap in own yard|Torneira no próprio quintal
+Image=..\Images\Fontes_agua_02.jpg
+Value=3;Tap in neighbor's yard|Torneira no quintal do vizinho
+Image=..\Images\Fontes_agua_03.jpg
+Value=4;Shared tap|Torneira compartilhada
+Image=..\Images\Fontes_agua_04.jpg
+Value=5;Public tap|Fontanário Público
+Image=..\Images\Fontes_agua_05.jpg
+Value=6;Cistern - mobile tank or truck|Cisterna - tanque móvel ou camião
+Image=..\Images\Fontes_agua_06.jpg
+Value=7;In bottle|Em garrafa
+Image=..\Images\Fontes_agua_07.jpg
+Value=8;Borehole with manual pump|Furo com bomba manual
+Image=..\Images\Fontes_agua_08.jpg
+Value=9;Borehole with electric pump|Furo com bomba eléctrica
+Image=..\Images\Fontes_agua_09.jpg
+Value=10;Protected spring|Nascente protegida
+Image=..\Images\Fontes_agua_10.jpg
+Value=11;Protected well without pump|Poço protegido sem bomba
+Image=..\Images\Fontes_agua_11.jpg
+Value=12;Unprotected well|Poço não protegido
+Image=..\Images\Fontes_agua_012.jpg
+Value=13;Unprotected spring|Nascente não protegida
+Image=..\Images\Fontes_agua_13.jpg
+Value=14;Rain water|Água da chuva
+Image=..\Images\Fontes_agua_14.jpg
+Value=15;Water from river, stream, lake, pond|Água do rio, riacho, lago, lagoa
+Image=..\Images\Fontes_agua_15.jpg
 
 [Item]
 Label=Drinking water treated|A sua água potável é tratada (tratamento químico)?
 Name=B12
-Start=62
+Start=63
 Len=2
 DataType=Numeric
 
@@ -1099,7 +1123,7 @@ Value=7;Other|Outros|Nyingine
 [Item]
 Label=Main source energy lighting|Principal fonte de energia do seu AF para iluminação
 Name=B13
-Start=64
+Start=65
 Len=2
 DataType=Numeric
 
@@ -1121,7 +1145,7 @@ Value=11;Firewood|Grama|Kuni
 [Item]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14
-Start=66
+Start=67
 Len=2
 DataType=Numeric
 
@@ -1144,7 +1168,7 @@ Value=99;Not Applicable|Não aplicavel|Haihusiki
 [Item]
 Label=Account or savings in bank etc|Tem uma conta ou poupança em um banco
 Name=B15
-Start=68
+Start=69
 Len=1
 DataType=Numeric
 
@@ -1157,7 +1181,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which formal institution account|Instituição formal esse AF tem conta ou poupança?
 Name=B16
-Start=69
+Start=70
 Len=4
 DataType=Alpha
 
@@ -1173,7 +1197,7 @@ Value='Q   ';Nyingine|Outros|Nyingine
 [Item]
 Label=Rotating saving scheme or informal saving institution|Participa num esquema de poupança rotativo
 Name=B17
-Start=73
+Start=74
 Len=1
 DataType=Numeric
 
@@ -1186,7 +1210,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Which informal institution account|Em que instituição informal esse tem conta ou poupança?
 Name=B18
-Start=74
+Start=75
 Len=3
 DataType=Alpha
 
@@ -1200,7 +1224,7 @@ Value='q  ';Other|Outro|Nyingine
 [Item]
 Label=What sources for loan credit|Quais seriam as fontes?
 Name=B19
-Start=77
+Start=78
 Len=13
 DataType=Alpha
 
@@ -1224,7 +1248,7 @@ Value='m            ';Cannot get a loan/credit|Não é possível obter um empré
 [Item]
 Label=Mobile money to pay for mobile phone|O dinheiro móvel para pagar por telefone celular
 Name=B20
-Start=90
+Start=91
 Len=1
 DataType=Numeric
 
@@ -1237,7 +1261,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=Used the account last 90 days|Usou a conta nos últimos 90 dias?
 Name=B21
-Start=91
+Start=92
 Len=1
 DataType=Numeric
 
@@ -1250,7 +1274,7 @@ Value=2;No|Não|Hapana
 [Item]
 Label=How use mobile money services|Como usa os serviços de dinheiro móvel?
 Name=B22
-Start=92
+Start=93
 Len=13
 DataType=Alpha
 
@@ -3075,69 +3099,6 @@ Value=1;Yes|Sim|Ndiyo
 Value=2;No|Não|Hapana
 
 [Record]
-Label=D Willingness to pay for a grid connection|Disposição D para pagar por uma ligação à rede
-Name=D_WILLINGNESS_TO_PAY_FOR_A_GRID
-RecordTypeValue='D'
-RecordLen=50
-
-[Item]
-Label=Willing to pay ${CF} upfront for electricity connection?|Dispostos a pagar US $ {CF} adiantado para conexão de energia eléctrica?
-Name=D1
-Start=44
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Willing to pay ${CF} upfront for electricity connection?|Dispostos a pagar US $ {CF} adiantado para conexão de energia eléctrica?
-Name=D1_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-
-[Item]
-Label=Willing to pay $ for electricity connection, 12 months payment|Dispostos a pagar US $ para a conexão eléctrica, o pagamento de 12 meses
-Name=D2
-Start=45
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Willing to pay ${CF} upfront for electricity connection?|Dispostos a pagar US $ {CF} adiantado para conexão de energia eléctrica?
-Name=D2_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-Value=88;Don't know|Não sabe|Sijui
-
-[Item]
-Label=If fee waived, would you get a grid?|Se a taxa fosse dispensada, você receberia a rede?
-Name=D3
-Start=47
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Willing to pay ${CF} upfront for electricity connection?|Se a taxa fosse dispensada, você receberia a rede?
-Name=D3_VS1
-Value=1;Yes|Sim|Ndiyo
-Value=2;No|Não|Hapana
-Value=88;Don't know|Não sabe|Sijui
-
-[Item]
-Label=why not accept?|por que não aceitar?
-Name=D4
-Start=49
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=why not accept?|por que não aceitar?
-Name=D4_VS1
-Value=1;Still cannot afford the wiring costs|Ainda não podem suportar com os custos de instalação|Nisingeweza kumudu gharama za kutandaza waya
-Value=2;Do not need electricity|Não precisa de eléctricidade|Sihitaji umeme
-Value=3;Electricity service is unreliable|Serviço de energia eléctrica não é confiável|Huduma ya Umeme sio ya uhakika
-Value=4;Monthly fee is too high|Mensalidade é muito alta|Gharama za mwezi ni ghali
-Value=55;Other|De outros|Nyingine
-
-[Record]
 Label=E Willingness to pay for solar device|E Disposição para pagar por dispositivo de energia solar
 Name=E_WILLINGNESS_TO_PAY_FOR_SOLAR_D
 RecordTypeValue='E'
@@ -3349,7 +3310,7 @@ Value=5;Bad for health|Prejudicial a saúde a saúde|Mbaya kwa afya
 Value=6;Subsidies needed|Subsídios necessários|Ruzuku inahitajika
 Value=7;Time spent to collect fuel|Tempo gasto para recolher o combustível|Muda mwingi sana unatumika kupata mafuta
 Value=55;other|De outros|Nyingine
-Value=66;No problems|Sem problemas|Hakuna tatizo
+Value=66;No other problems|Sem nenhum outro problema|Hakuna tatizo
 
 [Item]
 Label=What are the second most important problem when using the [LAMP/ CANDLE]?
@@ -3369,7 +3330,7 @@ Value=5;Bad for health|Prejudicial a saúde|Mbaya kwa afya
 Value=6;Subsidies needed|Subsídios necessários|Ruzuku inahitajika
 Value=7;Time spent to collect fuel|Tempo gasto para recolher o combustível|Muda mwingi sana unatumika kupata mafuta
 Value=55;other|De outros|Nyingine
-Value=66;No problems|Sem problemas|Hakuna tatizo
+Value=66;No other problems|Sem nenhum outro problema|Hakuna tatizo
 
 [Item]
 Label=In the last 12 months, did anybody in your household face any serious harm/injury from [LAMP/CANDLE]?
