@@ -383,7 +383,7 @@ Value=2;Household do not want to connect to grid|Casa não quer se conectar à r
 Value=3;Utility would not connect community|Utilitário não conectaria comunidade|TANESCO haijaweza kuunganisha
 Value=4;Service unreliable|Serviço não confiável|Huduma si ya uhakika
 Value=5;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|Taratibu za kiutawala ni ngumu sana
-Value=6;Submitted application and waiting for connection|Aplicativo enviado e aguardando conexão|Tumepeleka maombi tusubiri kuunganishwa
+Value=6;Submitted application and waiting for connection|Pedido enviado e aguardando conexão|Tumepeleka maombi tusubiri kuunganishwa
 Value=55;Other, specify|Outros|Nyingine, taja
 
 [Item]
@@ -663,12 +663,12 @@ Name=D24_VS1
 Value='a ';Supply/shortage/not enough hours of electricity|Fornecimento / escassez / não suficientes horas de eletricidade|Umeme hautoshelezi/umeme unapatikana kwa masaa machache
 Value='b ';Low/high voltage problems of voltage fluctuations|Problemas de baixa / alta tensão das flutuações de tensão|Kupanda na kushuka kwa nguvu ya umeme
 Value='c ';Unpredictable interruptions|Interrupções imprevisíveis|Kukatika kusikotabirika
-Value='d ';Unexpectedly high bills|Notas inesperadamente altas|Ankara kubwa zisizotarajiwa
+Value='d ';Unexpectedly high bills|Cotas inesperadamente altas|Ankara kubwa zisizotarajiwa
 Value='e ';Too expensive|Muito caro|Gharama kubwa ya umeme
-Value='f ';Do not trust the supplier|Não confie no fornecedo|Hatumwamini mtoa huduma
+Value='f ';Do not trust the supplier|Não confia no fornecedor|Hatumwamini mtoa huduma
 Value='g ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
 Value='h ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
-Value='i ';Unpredicactable bills|Notas não impraticável |Ankara zisizotabirika
+Value='i ';Unpredicactable bills|Contas impraticáveis |Ankara zisizotabirika
 Value='q ';Other, specify|Outro, especifique|Nyinginezo
 Value='x ';No problems|Sem problemas|Hakuna matatizo
 
@@ -793,10 +793,10 @@ DataType=Alpha
 [ValueSet]
 Label=Can you buy or lease a solar home systems/solar lightning systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, kuna yeyote pamoja jua / umeme inayotokana umwagiliaji mifumo inayotumiwa na wakulima katika jamii hii?
 Name=D33_VS1
-Value='01        ';Purchase from shops|Compra de lojas|Ununuzi kutoka maduka
-Value='02        ';Purchase/lease from private companies|Compra / locação de empresas privadas|Kununua / kukodisha kutoka makampuni binafsi
-Value='03        ';Purchase/lease from NGOs|Compra / locação de ONGs|Kununua / kukodisha kutoka mashirika yasiyo ya kiserikali
-Value='04        ';Free|Livre|Bure
+Value='01        ';Purchase from shops|Comprar em lojas|Ununuzi kutoka maduka
+Value='02        ';Purchase/lease from private companies|Compra / aluguer em empresas privadas|Kununua / kukodisha kutoka makampuni binafsi
+Value='03        ';Purchase/lease from NGOs|Compra / alugar em ONGs|Kununua / kukodisha kutoka mashirika yasiyo ya kiserikali
+Value='04        ';Free|Gratuito|Bure
 Value='55        ';Other|De outros|Nyingine
 
 [Item]
