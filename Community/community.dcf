@@ -300,15 +300,15 @@ DataType=Alpha
 [ValueSet]
 Label=What are the two most widespread economic activities?|Quais são as duas atividades econômicas mais difundidas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
 Name=C3_VS1
-Value='A ';Crop cultivation|cultivo|kilimo cha mazao
-Value='B ';Livestock|gado|Mifugo
+Value='A ';Crop cultivation|Cultivo de culturas|kilimo cha mazao
+Value='B ';Livestock|Pecuária|Mifugo
 Value='C ';Fishing/hunting|Pesca / caça|Uvuvi / uwindaji
-Value='D ';Trading|comércio|Biashara
+Value='D ';Trading|Negocios|Biashara
 Value='E ';Services|Serviços|Huduma
-Value='F ';Small-scale industry (non-farm)|indústria de pequena escala (não agrícola)|Viwanda vidogo vidogo (bila kuhusisha kilimo)
-Value='G ';Large-scale commercial industry (non-farm)|Em grande escala a indústria comercial (não agrícola)|Viwanda vikubwa (bila kuhusisha kilimo)
+Value='F ';Small-scale industry (non-farm)|Indústria de pequena escala (não agrícola)|Viwanda vidogo vidogo (bila kuhusisha kilimo)
+Value='G ';Large-scale commercial industry (non-farm)|Indústria comercial em grande escala (não agrícola)|Viwanda vikubwa (bila kuhusisha kilimo)
 Value='H ';Transport|Transporte|Usafiri
-Value='I ';Professional occupations|ocupações profissionais|Kazi ya kitaalam
+Value='I ';Professional occupations|Ocupações profissionais/Função pública|Kazi ya kitaalam
 Value='J ';Civil service|Serviço civil|Mtumishi wa umma
 Value='Q ';Other|Outros|Nyingine, Taja
 
@@ -378,12 +378,12 @@ DataType=Numeric
 [ValueSet]
 Label=What is the main reason why the community is not connected to the grid?|Qual é a principal razão pela qual a comunidade não está ligada à rede?
 Name=D4_VS1
-Value=1;Grid is not available|à rede não está disponível|Hakuna Gridi
-Value=2;Household do not want to connect to grid|Casa não quer se conectar à rede|Kaya hazitaki kuunganishwa na Gridi
-Value=3;Utility would not connect community|Utilitário não conectaria comunidade|TANESCO haijaweza kuunganisha
+Value=1;Grid is not available|Rede não está disponível|Hakuna Gridi
+Value=2;Household do not want to connect to grid|As familias não querem se conectar/ligar-se à rede|Kaya hazitaki kuunganishwa na Gridi
+Value=3;Utility would not connect community|Fornecedores não conectaria a comunidade|TANESCO haijaweza kuunganisha
 Value=4;Service unreliable|Serviço não confiável|Huduma si ya uhakika
 Value=5;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|Taratibu za kiutawala ni ngumu sana
-Value=6;Submitted application and waiting for connection|Pedido enviado e aguardando conexão|Tumepeleka maombi tusubiri kuunganishwa
+Value=6;Submitted application and waiting for connection|Pedido enviado e aguardando ligação|Tumepeleka maombi tusubiri kuunganishwa
 Value=55;Other, specify|Outros|Nyingine, taja
 
 [Item]
@@ -499,13 +499,13 @@ Label=What is the main reason some households are not connected to the grid?|Qua
 Name=D13_VS1
 Value=1;Household is far from the grid and hence have to pay more to be connected|O agregado familiar está longe da rede e, portanto, tem de pagar mais para estar ligado|Kaya ipo mbali sana na grid, kwahiyo ni gharama sana kuunganishwa
 Value=2;Grid is too far from some households/not available|Rede eléctrica está muito longe de algumas famílias / não disponível|Gridi iko mbali sana kutoka kwa baadhi ya kaya / haipatikani
-Value=3;Cost of initial connection is too expensive|Custo da conexão inicial é muito cara|Gharama ya uhusiano wa awali ni ghali sana
+Value=3;Cost of initial connection is too expensive|Custo da ligação inicial é muito cara|Gharama ya uhusiano wa awali ni ghali sana
 Value=4;Running fee is too expensive|taxa mensal é muito cara|ada ya kila mwezi ni ghali sana
 Value=5;Satisfied with current energy solution|Satisfeito com a solução atual de energia|Kuridhika na sasa ufumbuzi wa nishati
 Value=6;Renting, Landlord decision|Alugar, decisão do senhorio|Kukodisha, mwenye nyumba uamuzi
 Value=7;Service Unreliable|serviço não confiável|Service Uhakika
 Value=8;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|utaratibu Tawala ni ngumu sana
-Value=9;Submitted application and waiting for connection|pedido apresentado e à espera de conexão|Kuwasilishwa maombi na kusubiri kwa uhusiano
+Value=9;Submitted application and waiting for connection|pedido apresentado e à espera de ligação|Kuwasilishwa maombi na kusubiri kwa uhusiano
 Value=10;Company refused to connect the household|Empresa se recusou a ligar o agregado familiar|Kampuni alikataa kuungana nyumbani
 Value=55;Other|De outros|Nyingine
 
@@ -520,7 +520,7 @@ DataType=Numeric
 Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
 Name=D14_VS1
 Value=0;None|Nenhum|Hakuna
-Value=1;All businesses|Pequena parte dos negócios|Biashara zote
+Value=1;All businesses|Pequena parte das empresas|Biashara zote
 Value=2;Most of the businesses|Metade das empresas|Biashara nyingi
 Value=3;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
 Value=4;Small part of the businesses|todas as empresas|Biashara chache
@@ -640,8 +640,8 @@ Value=7;July|Julho|Julai
 Value=8;August|agosto|Agosti
 Value=9;September|setembro|Septemba
 Value=10;October|Outubro|Oktoba
-Value=11;November|novembro|Novemba
-Value=12;December|dezembro|Desemba
+Value=11;November|Novembro|Novemba
+Value=12;December|Dezembro|Desemba
 
 [Item]
 Label=How many days did it take to fix the issue and for the community to regain power?|Quantos dias demorou para corrigir o problema e para a comunidade para recuperar o poder?|What are the most serious problems this community experiences with the grid electricity?
@@ -668,7 +668,7 @@ Value='e ';Too expensive|Muito caro|Gharama kubwa ya umeme
 Value='f ';Do not trust the supplier|Não confia no fornecedor|Hatumwamini mtoa huduma
 Value='g ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
 Value='h ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
-Value='i ';Unpredicactable bills|Contas impraticáveis |Ankara zisizotabirika
+Value='i ';Unpredicactable bills|Facturas altas/Contas impraticáveis |Ankara zisizotabirika
 Value='q ';Other, specify|Outro, especifique|Nyinginezo
 Value='x ';No problems|Sem problemas|Hakuna matatizo
 
@@ -906,8 +906,8 @@ DataType=Numeric
 Label=Village accessible by motor vehicle? Dry season|Vila acessível por veículo motorizado? estação seca|Kijiji kupatikana kwa magari? Msimu wa ukame
 Name=F1_VS1
 Value=1;Yes, by paved road|Sim, por estrada asfaltada|Ndiyo, na barabara ya lami
-Value=2;Yes, by unpaved/gravel/dirt road|Sim, por não pavimentada cascalho / estrada / sujeira|Ndiyo, na unpaved / changarawe / uchafu barabara
-Value=3;No|Não|Hapana
+Value=2;Yes, by unpaved/gravel/dirt road|Sim, por estrada não pavimentada / cascalho / terra batida|Ndiyo, na unpaved / changarawe / uchafu barabara
+Value=3;No|Não é acessivel|Hapana
 
 [Item]
 Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
@@ -920,8 +920,8 @@ DataType=Numeric
 Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
 Name=F2_VS1
 Value=1;Yes, by paved road|Sim, por estrada asfaltada|Ndiyo, na barabara ya lami
-Value=2;Yes, by unpaved/gravel/dirt road|Sim, por não pavimentada cascalho / estrada / sujeira|Ndiyo, na unpaved / changarawe / uchafu barabara
-Value=3;No|Não|Hapana
+Value=2;Yes, by unpaved/gravel/dirt road|Sim, por estrada não pavimentada / cascalho / terra batida|Ndiyo, na unpaved / changarawe / uchafu barabara
+Value=3;No|Não é acessivel|Hapana
 
 [Item]
 Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhusiano wa basi?
@@ -975,7 +975,7 @@ DataType=Numeric
 Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
 Name=F8_VS1
 Value=1;Yes, everywhere in the community|Sim, em todos os lugares na comunidade|Ndiyo, kila mahali katika jamii
-Value=2;Yes, most parts of the community|Sim, a maioria das partes da comunidade|Ndiyo, sehemu nyingi za jamii
+Value=2;Yes, most parts of the community|Sim, a maior parte da comunidade|Ndiyo, sehemu nyingi za jamii
 Value=3;Yes, half of the community|Sim, metade da comunidade|Ndiyo, nusu ya jamii
 Value=4;Yes, only a few parts of the community|Sim, apenas algumas partes da comunidade|Ndiyo, tu sehemu chache ya jamii
 Value=5;No, nowhere in the community|Não, em nenhum lugar da comunidade|Hapana, hakuna mahali popote katika Jumuiya
@@ -1168,8 +1168,8 @@ Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina
 Name=I1_VS1
 Value=1;3-stone stove|Fogão de 3 pedras|Jiko la mafiga matatu
 Value=2;Charcoal stove|Fogão a carvão|Jiko la mkaa
-Value=3;Other stoves for firewood or other solid fuel|Outros fogões para lenha ou outro combustível sólido|Majiko mengine ya kuni au nishati ngumu
-Value=4;Stoves for other type of energy|Fogões para outro tipo de energia|Majiko ya aina zingine za nishati
+Value=3;Other stoves for firewood or other solid fuel|Outros fogões á lenha ou outros combustíveis sólidos|Majiko mengine ya kuni au nishati ngumu
+Value=4;Stoves for other type of energy|Fogões de outro tipo de energia|Majiko ya aina zingine za nishati
 
 [Item]
 Label=Do any of the households in this community use improved cookstoves using firewood, dung, twigs, rice husks or leaves?
@@ -1244,7 +1244,7 @@ Name=I7_VS1
 Value=1;Within village|Dentro da aldeia|Ndani ya kijiji/mtaa
 Value=2;In neighbouring village|Na aldeia vizinha|Katika Kijiji/Mtaa cha/wa jirani
 Value=3;Closest permanent market|Mercado permanente mais próximo|Soko la karibu la kudumu
-Value=4;District centre|Centro distrital|Makao makuu ya wilaya
+Value=4;District centre|Centro Distrital/No Distrito|Makao makuu ya wilaya
 
 [Item]
 Label=Are there programs that campaign for the awareness of health risks of cookstoves?|programas estão lá que a campanha para a conscientização dos riscos para a saúde de fogões?|Je, kuna programu ambazo kampeni ufahamu wa hatari ya afya ya cookstoves?
@@ -1304,7 +1304,7 @@ Value=1;None / hardly any|Nenhum / praticamente nenhuma|Sehemu ndogo sana
 Value=2;Minor Part|Menor Parte |Sehemu ndogo
 Value=3;Partially|parcialmente|Sehemu
 Value=4;Largely|Largamente|Kwa kiiasi kubwa
-Value=5;Entirely|Inteiramente|Eneo lote la kijiji/mtaa
+Value=5;Entirely|Totalmente|Eneo lote la kijiji/mtaa
 
 [Record]
 Label=GP Global pandemic
