@@ -166,8 +166,8 @@ DataType=Numeric
 [ValueSet]
 Label=Why refuse to participate|Porque recusa a participar?
 Name=AA10A_VS1
-Value=1;Too sick/handicapped|Muito doentes / deficientes|Mgonjwa sana/Mlemavu
-Value=2;Refusing|Recusando|Amekataa
+Value=1;Too sick/handicapped|ESTA MUITO DOENTE/FERIDO/DEFICIENTE PARA PARTICIPAR DA ENTREVISTA|Mgonjwa sana/Mlemavu
+Value=2;Refusing|RECUSA|Amekataa
 
 [Item]
 Label=Appointment day|Apontar o dia
@@ -1912,9 +1912,9 @@ Name=C43_VS1
 Value=2;Electric generator|Gerador eléctrico|Jenereta ya umeme
 Value=3;Rechargable battery and storage devices (e.g. car battery)|Dispositivos de baterias recarregáveis e de armazenamento (por exemplo, baterias de automóveis)|Betri ya kuchaji na kifaa cha kuhifadhia (mf. Betri ya gari)
 Value=4;Solar lantern|Lanterna Solar|Taa ya umeme jua
-Value=5;Solar multi-light product|Produto multi-luz solar|Kifaa cha umeme jua chenye matumizi mbalimbali (mf. kuchaji simu, kuwasha taa n.k)
-Value=6;Solar home system|Sistema de home Solar|Mfumo wa umeme jua wa nyumbani
-Value=7;Pico-hydro|Pico-hidro|Mtambo mdogo wa maji
+Value=5;Solar multi-light product|Produto solar multi-luz|Kifaa cha umeme jua chenye matumizi mbalimbali (mf. kuchaji simu, kuwasha taa n.k)
+Value=6;Solar home system|Sistema Solar domestico|Mfumo wa umeme jua wa nyumbani
+Value=7;Pico-hydro|Pico-hidro/mini-hidrico|Mtambo mdogo wa maji
 Value=55;Other|Outro|Nyinginezo
 Value=66;No back-up source|Nenhuma fonte alternativa|Hakuna chanzo cha ziada
 
