@@ -1,0 +1,128 @@
+﻿[Dictionary]
+Version=CSPro 7.6
+Label=Community_matrices
+Name=COMMUNITY_MATRICES_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Absolute
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=91CD7D917F6038D4564A51B62C129F619E235DD95F92D4D672A391E75BF3338506956C92CC2FFAF536BBCF95C16D2B16
+
+[Level]
+Label=community questionnaire
+Name=COMMUNITY_QUEST
+
+[IdItems]
+
+[Item]
+Label=Login|Iniciar sessão|hila Id
+Name=C_LOGIN
+Start=2
+Len=25
+DataType=Alpha
+
+[Item]
+Label=Region|Provincia|hali code
+Name=C_A1
+Start=27
+Len=2
+
+[Item]
+Label=District|Distrito|Kata code
+Name=C_A2
+Start=29
+Len=2
+
+[Item]
+Label=Subdistrict|Posto Administrativo|kanuni Subcounty
+Name=C_A3
+Start=31
+Len=3
+
+[Item]
+Label=Locality|Localidade
+Name=C_A4
+Start=34
+Len=2
+
+[Item]
+Label=Village Code|Aldeia/povoação
+Name=C_A5
+Start=36
+Len=2
+
+[Item]
+Label=Enumeration area|Àrea de enumeração|hesabu eneo
+Name=C_A6
+Start=38
+Len=3
+
+[Record]
+Label=F8-F18 Infrastructure
+Name=F8_F16_INFRASTRUCTURE
+RecordTypeValue='f'
+MaxRecords=22
+RecordLen=42
+
+[Item]
+Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
+Name=F9_NO
+Start=41
+Len=2
+
+[ValueSet]
+Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
+Name=F9_NO_VS1
+Value=1;Permanent market|mercado permanente|Soko la Kudumu
+Value=2;Weekly or fortnight market|Mercado semanal ou quinzena|Soko la kila wiki
+Value=3;Local market|Mercado local|Soko la Mtaa/Kijiji
+Value=4;Pre-primary school / Kindergarten|escola pré-primária / jardim de infância|Shule ya Awali/Chekechea
+Value=5;Primary school|Escola primaria|Shule ya Msingi
+Value=6;Secondary school/high school|ensino secundário / ensino médio|Shule ya Sekondari/ shule ya kidato cha tano na sita
+Value=7;TVET (technical and vocational education and training)|ETP (formação técnica profissional)|Vyuo vya Mafunzo ya Ufundi
+Value=8;Private clinic|Clínica privada|Kliniki Binafsi
+Value=9;Government clinic/Public Health Center|clínica Governo / Centro de Saúde Pública|Kliniki za Serikali/ Vituo vya afya
+Value=10;Dispensary or pharmacy|Posto de saúde ou farmácia|Zahanati au Duka la dawa
+Value=11;Hospital|Hospital|Hospitali
+
+[Record]
+Label=G Business_Manufacturing_services
+Name=G_MANUFACTURING_SERVICES
+RecordTypeValue='G'
+MaxRecords=48
+RecordLen=42
+
+[Item]
+Label=Business number|número de negócios|idadi ya biashara
+Name=G1_NO
+Start=41
+Len=2
+
+[ValueSet]
+Label=Text From Clipboard|número de negócios
+Name=G1_NO_VS1
+Value=1;Tailor, shoe manufacturer or shoe repair|Alfaiate, fabricante de sapatos ou reparação de sapatos|Washonaji nguo/wazalishaji viatu/washonaji viatu
+Value=2;Baker or business making baked goods|Padeiro ou fazendo negócios de produtos assados|Waoka mikate/bidhaa zilizookwa
+Value=3;business making Coffee, tea, sugar, oil, dry fruits and other processed foods|fazem negócios de Café, chá, açúcar, óleo, frutos secos e outros alimentos processados.|Kahawa, chai, sukari, mafuta, matunda yaliyokaushwa, na vyakula vingine vya kusindika( ukiacha migahawa, wauzaji vyakula mitaani)
+Value=4;business making Handcrafts|fazendo negócios de artesanato|Kutengeneza bidhaa za Kazi za Mikono (Handcrafts)
+Value=5;business making Furniture|fazendo negócios de móveis|Kutengeneza Samani (Furnitures)
+Value=6;business making Metal Products|fazendo negócios de produtos metálicos|Kutengeneza Bidhaa za Chuma
+Value=7;business making Household Items|fazendo  negócios de produtos domésticos|Kutengeneza Vyombo vya Nyumbani
+Value=8;business making Tools and Instruments|Fazendo negócios de ferramentas e instrumentos de fabricação|Kutengeneza Nyezo na Vitendeakazi
+Value=9;business making Bricks|fazendo negócios de tijolos|Kutengeneza Matofali
+Value=10;business doing Other Manufacturing|fazendo Outros negócio de Manufacturados|Kufanya uzalishaji mwingine
+Value=11;business Selling food or Groceries (street food sellers, restaurants)|negócios Venda de comida ou mercearias (vendedores de comida de rua, restaurantes)|Kuuza Chakula (Mama Lishe, Migahawa)
+Value=12;business Selling clothing or household items|negócio Venda de roupa ou artigos domésticos|Kuuza Mavazi au Vifaa vya nyumbani
+Value=13;business Selling business, computer or phone services|negócios de Venda e prestação de serviços, computadores ou telefone|Kuuza  Kompyuta au Huduma za simu
+Value=14;business Selling other goods|Venda de outros bens|Kuuza bidhaa zingine
+Value=15;business providing Transport|negócio que fornece Transportes|Usafiri
+Value=16;providing Cleaning and washing|fornecendo limpeza e lavagem|Usafi na ufuaji
+Value=17;Hairdressers or barber shops|Cabeleireiros ou barbearias|Watengeneza nywele na Vinyozi
+Value=18;Doctor, lawyer, accountant, or other professional services|Médico, advogado, contabilista ou outros serviços profissionais|Daktari, mwanasheria, mhasibu au huduma zingine za kitaalamu.
+Value=19;business Selling or giving service to Solar Home Systems or Solar Lighting Systems|venda ou prestação de serviços a Sistemas Solares Domésticos ou Sistemas de Iluminação Solar|Kuuza  au kutoa huduma ya Mifumo ya Umeme jua wa nyumbani
+Value=20;business providing Construction work|negócio que fornece trabalhos de construção|Inayotoa huduma za Ujenzi
+Value=21;Grain or oil mill|Grão ou moinho de óleo|Kusaga nafaka/kukamua mafuta
+Value=22;Internet or TV café|Internet café ou TV |Huduma za Mtandao (Intaneti/TV)
+Value=23;Restaurant, tea or coffee shop|Restaurante, chá ou café |Migahawa/chai au sehemu/migahawa maalumu za kunywa kahawa
+Value=24;Mobile phone charging or repairing service|Serviço de carregamento ou reparação de telemóveis|Sehemu za kuchajia simu/ sehemu za matengenezo
