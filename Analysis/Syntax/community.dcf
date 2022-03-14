@@ -1,0 +1,1258 @@
+﻿[Dictionary]
+Version=CSPro 7.6
+Label=community
+Name=COMMUNITY_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=25750592E6E2390DF083DFE5D279E44B9AA34100C4CFBA27F45F250404139085
+
+[Languages]
+EN=English
+PT=Portugues
+SW=Swahili
+
+[Level]
+Label=community questionnaire
+Name=COMMUNITY_QUEST
+
+[IdItems]
+
+[Item]
+Label=Login|Iniciar sessão|hila Id
+Name=C_LOGIN
+Start=2
+Len=25
+DataType=Alpha
+
+[Item]
+Label=Region|Provincia|hali code
+Name=C_A1
+Start=27
+Len=2
+
+[Item]
+Label=District|Distrito|Kata code
+Name=C_A2
+Start=29
+Len=2
+
+[Item]
+Label=Subdistrict|Posto Administrativo|kanuni Subcounty
+Name=C_A3
+Start=31
+Len=3
+
+[Item]
+Label=Locality|Localidade
+Name=C_A4
+Start=34
+Len=2
+
+[Item]
+Label=Village Code|Aldeia/povoação
+Name=C_A5
+Start=36
+Len=2
+
+[Item]
+Label=Enumeration area|Àrea de enumeração|hesabu eneo
+Name=C_A6
+Start=38
+Len=3
+
+[Record]
+Label=A Community identification|A identificação da Comunidade|kitambulisho Community
+Name=COMMUNITY_REC
+RecordTypeValue='A'
+RecordLen=128
+
+[Item]
+Label=Village/Town Name|Aldeia / Nome da Cidade|Kijiji / Jina Town
+Name=A5
+Start=41
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Urban/Rural|Urbano/Rural|Mjini / Vijijini
+Name=A6
+Start=91
+Len=1
+
+[ValueSet]
+Label=Urban/Rural|Urbano/Rural|Mjini / Vijijini
+Name=A6_VS1
+Value=1;Urban|Urbano|Mjini
+Value=2;Rural|Rural|Vijijini
+Value=3;Peri-Urban|Peri-urbana|Kandokando mwa miji
+
+[Item]
+Label=Interview language|Língua da entrevista
+Name=A7
+Start=92
+Len=2
+DataType=Alpha
+
+[ValueSet]
+Label=Interview language|Língua da entrevista
+Name=A7_VS1
+Value='EN';English|Inglês
+Value='PT';Portugues|Português
+Value='SW';Swahili|Swahili
+
+[Item]
+Label=Community ID|Comunitário_ID
+Name=A8
+Start=94
+Len=3
+
+[ValueSet]
+Label=Community ID|Comunitário_ID
+Name=A8_VS1
+Value=1;TAMBUU, KISANZARA 1
+Value=2;TAMBUU, KISANZARA 2
+Value=3;MKAMBARANI, MBUYUNI
+Value=4;MKAMBARANI, CHECKLINE
+Value=5;MINDU, MINDU
+Value=6;NGOTO B, NGOTO B
+
+[Item]
+Label=Latitude|Latitude
+Name=A9
+Start=97
+Len=10
+Decimal=6
+DecimalChar=Yes
+
+[Item]
+Label=Longitude|Logitude
+Name=A10
+Start=107
+Len=11
+Decimal=6
+DecimalChar=Yes
+
+[Item]
+Label=Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.|Com quem o chefe da aldeia falou para se preparar para a entrevista? Se o chefe da aldeia é conhecedor de alguns dos tópicos, isso também deve ser gravado.|Who did the village chief talk to to prepare for the interview? If the village chief is knowledgeable within some of the topics, this should also be recorded.
+Name=B1
+Start=118
+Len=11
+DataType=Alpha
+
+[ValueSet]
+Label=Valueset
+Name=B1_VS1
+Value='A          ';Chief / Chairperson|Chefe / Presidente|Mwenyekiti/VEO
+Value='B          ';Electricity / energy |Electricidade / energia|Umeme/Nishati
+Value='C          ';Village committee|Comitê da vila|Kamati ya kijiji
+Value='D          ';Elderly|Idoso|Wazee
+Value='E          ';School|Escola|Shule
+Value='F          ';Agriculture|Agricultura|Kilimo
+Value='G          ';Health|Saúde|Afya
+Value='H          ';Business|Negócio|Biashara
+Value='I          ';Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
+Value='J          ';Young adult|Jovem adulto|Kijana
+Value='K          ';Adult woman/man|Mulher adulta|Mwanamke/Mwanamme mtu mzima
+Value='X          ';None of these|Nenhum desses|Hakuna hata mmoja kati ya hawa
+
+[Record]
+Label=B Community leaders|líderes comunitários B|Viongozi B Community
+Name=B_LEADERS
+RecordTypeValue='B'
+MaxRecords=7
+RecordLen=96
+
+[Item]
+Label=ID code|Código de identificação
+Name=B_ID
+Start=41
+Len=1
+
+[ValueSet]
+Label=ID code|Código de identificação
+Name=B_ID_VS1
+Value=1:9
+
+[Item]
+Label=Name|Nome|jina
+Name=B2_A
+Start=42
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Sex|Sexo
+Name=B2_B
+Start=92
+Len=1
+
+[ValueSet]
+Label=Sex|Sexo|sex
+Name=B2_B_VS1
+Value=1;Male|Masculino|Mwanaume
+Value=2;Female|Feminina|Mwanamke
+
+[Item]
+Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
+Name=B2_C
+Start=93
+Len=2
+
+[ValueSet]
+Label=Chair or specialist in a topic?|Cadeira ou especialista em um tópico?|Mwenyekiti au wataalamu katika mada?
+Name=B2_C_VS1
+Value=1;Chief / Chairperson|Chefe / Presidente|Mwenyekiti/VEO
+Value=2;Electricity / energy |Electricidade / energia|Mwakilishi
+Value=3;Village committee|Comitê da vila|Kamati ya kijiji
+Value=4;Elderly|Idoso|Mzee
+Value=5;School|Escola|Shule
+Value=6;Agriculture|Agricultura|Kilimo
+Value=7;Health|Saúde|Afya
+Value=8;Business|O negócio|Biashara
+Value=9;Religious issues|líder questões religiosas|Kiongozi wa masuala ya kidini
+Value=10;Young adult|Jovem adulto|Kijana mtu mzima
+Value=11;Adult woman/man|Mulher adulta|Mwanamke/Mwanamme mtu mzima
+Value=66;None of these|Nenhum desses|Hakuna kati hizi
+
+[Item]
+Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
+Name=B2_D
+Start=95
+Len=2
+
+[ValueSet]
+Label=How many years lived in community?|Quantos anos viveu em comunidade?|Jinsi miaka mingi aliishi katika jamii?
+Name=B2_D_VS1
+Value=1;Less than 5 years|Menos de 5 anos|Chini ya miaka 5
+Value=2;5 -10 years|5 -10 anos|Miaka 5 -10
+Value=3;More than 10 years|Mais de 10 anos|Zaidi ya mika 10
+
+[Record]
+Label=C Background|Antecedentes C
+Name=C_BACKGROUND
+RecordTypeValue='C'
+RecordLen=52
+
+[Item]
+Label=How many households?|Quantas famílias?|Kaya ngapi?
+Name=C1
+Start=41
+Len=9
+
+[ValueSet]
+Label=How many households?|Quantas famílias?|Kaya ngapi?
+Name=C1_VS1
+Value=1:99999
+
+[Item]
+Label=Is there more or less households in the community now than five years ago?|Há mais ou menos casas na comunidade agora do que há cinco anos?
+Name=C2
+Start=50
+Len=1
+
+[ValueSet]
+Label=Is there more or less households in the community now than five years ago?|Há mais ou menos casas na comunidade agora do que há cinco anos?
+Name=C2_VS1
+Value=1;More|Mais|Zaidi
+Value=2;Less|Menos|Pungufu
+Value=3;Same as 5 years ago|O mesmo de há 5 anos|Sawa tu kama ilivyokuwa miaka 5 iliyopita
+
+[Item]
+Label=What are the two most widespread economic activities?|Quais são as duas atividades econômicas mais difundidas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
+Name=C3
+Start=51
+Len=2
+DataType=Alpha
+
+[ValueSet]
+Label=What are the two most widespread economic activities?|Quais são as duas atividades econômicas mais difundidas? Primeiro|mbili za kuenea kiuchumi ni nini? kwanza
+Name=C3_VS1
+Value='A ';Crop cultivation|cultivo|kilimo cha mazao
+Value='B ';Livestock|gado|Mifugo
+Value='C ';Fishing/hunting|Pesca / caça|Uvuvi / uwindaji
+Value='D ';Trading|comércio|Biashara
+Value='E ';Services|Serviços|Huduma
+Value='F ';Small-scale industry (non-farm)|indústria de pequena escala (não agrícola)|Viwanda vidogo vidogo (bila kuhusisha kilimo)
+Value='G ';Large-scale commercial industry (non-farm)|Em grande escala a indústria comercial (não agrícola)|Viwanda vikubwa (bila kuhusisha kilimo)
+Value='H ';Transport|Transporte|Usafiri
+Value='I ';Professional occupations|ocupações profissionais|Kazi ya kitaalam
+Value='J ';Civil service|Serviço civil|Mtumishi wa umma
+Value='Q ';Other|Outros|Nyingine, Taja
+
+[Record]
+Label=D Supply of electricity|D fornecimento de energia|D Ugavi wa umeme
+Name=D_SUPPLY_OF_ELECTRICITY
+RecordTypeValue='D'
+RecordLen=162
+
+[Item]
+Label=What are all the different sources of electricity that are available in this community?|Quais são todas as diferentes fontes de eletricidade que estão disponíveis nesta comunidade?|Inapatikana vyanzo umeme
+Name=D1
+Start=41
+Len=10
+DataType=Alpha
+
+[ValueSet]
+Label=What are all the different sources of electricity that are available in this community?|fontes elétricos disponíveis|Inapatikana vyanzo umeme
+Name=D1_VS1
+Value='A         ';National grid connection|Rede nacional|Gridi ya taifa (TANESCO)
+Value='B         ';Local mini-grid|Rede local|Gridi Ndogo
+Value='C         ';Diesel/gasoline generator|Gerador a gasóleo/gasolina|Jenereta ya diesel/petrol
+Value='D         ';Solar home system|Sistema Solar doméstico|Mfumo wa umeme jua
+Value='E         ';Solar lantern / lighting system|Sistema de lanterna / iluminação Solar|Kandili au taa ya umeme jua
+Value='F         ';Rechargeable battery|Bateria recarregável|Betri/Seli ya kuchaji
+Value='G         ';Wind power|Energia eólica|Umeme wa Upepo
+Value='H         ';No electric power in community, but grid in neighbour community|Sem energia eléctrica na comunidade, mas rede da comunidade vizinha|Hakuna umeme katika jamii hii bali katika ya jirani
+Value='I         ';No electric power in community, but can charge batteries and mobiles in neighbour community|Sem energia eléctrica na comunidade, mas pode carregar baterias e telemóveis na comunidade vizinha|Hakuna umeme katika jamii hii lakini wanajamii wanaweza kuchaji simu zao jamii ya jirani
+Value='J         ';No electric power in this or the neighbour community, but can charge mobiles further away within walking distance|Nenhuma energia eléctrica nesta ou na comunidade vizinha, mas pode carregar os telemóveis mais longe a uma curta distância|Hakuna umeme katika jamii hii wala ya jirani lakini wanajamii wanaweza kuchaji simu zao jamii ya mbali lakini ya mwendo wa miguu
+Value='X         ';No electric power in this or neighbour communities within walking distance|Nenhuma energia eléctrica nesta ou comunidades vizinhas a uma curta distância|Hakuna umeme
+
+[Item]
+Label=How far is the nearest [TANESCO/EDM]-office?|Qual a distância do escritório mais próximo da EDM?
+Name=D2
+Start=51
+Len=2
+
+[ValueSet]
+Label=How far is the nearest [TANESCO/EDM]-office?|Qual a distância do escritório mais próximo da EDM?
+Name=D2_VS1
+Value=0:87
+Value=88;Dont know||Hajui
+
+[Item]
+Label=Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?|Verificação do Inquiridor/a/CAPI: A comunidade está ligada à rede nacional ou a uma mini-rede local?
+Name=D3
+Start=53
+Len=1
+
+[ValueSet]
+Label=Interviewer/CAPI check: Is the community connected to the national grid or a local mini-grid?|Verificação do Inquiridor/a/CAPI: A comunidade está ligada à rede nacional ou a uma mini-rede local?
+Name=D3_VS1
+Value=1;Yes, both national grid and local mini grid|Sim, tanto a rede nacional como a mini-rede local|Ndiyo, Gridi ya taifa na Gridi ndogo
+Value=2;Yes, national grid|Sim, rede nacional|Ndio, gridi ya taifa
+Value=3;Yes, local mini grid|Sim, mini rede local|Ndio, gridi ndogo
+Value=4;No|Não|Hapana
+
+[Item]
+Label=What is the main reason why the community is not connected to the grid?|Qual é a principal razão pela qual a comunidade não está ligada à rede?|Community kushikamana na gridi ya taifa au ya ndani?
+Name=D4
+Start=54
+Len=2
+
+[ValueSet]
+Label=What is the main reason why the community is not connected to the grid?|Qual é a principal razão pela qual a comunidade não está ligada à rede?
+Name=D4_VS1
+Value=1;Grid is not available|à rede não está disponível|Hakuna Gridi
+Value=2;Household do not want to connect to grid|Casa não quer se conectar à rede|Kaya hazitaki kuunganishwa na Gridi
+Value=3;Utility would not connect community|Utilitário não conectaria comunidade|TANESCO haijaweza kuunganisha
+Value=4;Service unreliable|Serviço não confiável|Huduma si ya uhakika
+Value=5;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|Taratibu za kiutawala ni ngumu sana
+Value=6;Submitted application and waiting for connection|Aplicativo enviado e aguardando conexão|Tumepeleka maombi tusubiri kuunganishwa
+Value=55;Other, specify|Outros|Nyingine, taja
+
+[Item]
+Label=Does the community expect to get grid connection in the next two years?|A comunidade espera ter ligação na rede nos próximos dois anos?|Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?
+Name=D5
+Start=56
+Len=1
+
+[ValueSet]
+Label=Does the community expect to get grid connection in the next two years?|A comunidade espera ter ligação na rede nos próximos dois anos?|Je, jamii hii inategemea kuunganishwa na gridi ya Taifa katika miaka miwili ijayo?
+Name=D5_VS1
+Value=1;Yes|Sim|Ndio
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Who is running the local mini-grid system in this community?|Quem dirige o sistema local de mini-rede nesta comunidade?|Je, ni nani anasambaza umeme wa gridi ndogo katika jamii hii?
+Name=D6
+Start=57
+Len=2
+
+[ValueSet]
+Label=Who is running the local mini-grid system in this community?|Quem dirige o sistema local de mini-rede nesta comunidade?
+Name=D6_VS1
+Value=1;Individual|Individual|Mtu binafsi
+Value=2;Private firm|empresa privada|Mampuni binafsi
+Value=3;National government|governo nacional|Serikali ya kitaifa
+Value=4;Municipal/local government|governo municipal / local|Manispaa / serikali za mitaa
+Value=5;NGO/donor|ONG / doador|NGO / wafadhili
+Value=6;Community/cooperative|Comunidade / cooperativa|Jamii/vyama vya ushirika
+Value=55;Other|Outros|Nyingine
+
+[Item]
+Label=What is the name of the local mini-grid company?|Nome da empresa a rede local?|Taja jina la kampuni inayosambaza umeme wa gridi ndogo
+Name=D7
+Start=59
+Len=50
+DataType=Alpha
+
+[Item]
+Label=How many years has the community had this grid connection?|Quantos anos com essa conexão?|Ni kwa miaka mingapi jamii hii imeunganishwa katika gridi ya Taifa?
+Name=D8
+Start=109
+Len=2
+
+[Item]
+Label=Did the community have to pay anything to get the grid connection to the community?|A comunidade teve de pagar para obter a ligação à rede para a comunidade?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
+Name=D9
+Start=111
+Len=2
+
+[ValueSet]
+Label=Did the community have to pay anything to get the grid connection to the community?|A comunidade teve de pagar para obter a ligação à rede para a comunidade?|Je, ni kiasi gani jamii imelipa ili kuunganishwa na gridi hii?
+Name=YESNOOTHER
+Link=10000001
+Value=1;Yes|Sim|Ndiyo
+Value=2;No|Não|Hapana
+Value=88;Don't know|Não sabe|Sijui
+
+[Item]
+Label=How much did the community pay to get the grid connection?|Quanto pagou comunidade para ligação à rede?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
+Name=D10
+Start=113
+Len=8
+
+[ValueSet]
+Label=How much did the community pay to get the grid connection?|Quanto pagou comunidade para ligação à rede?|Je, jamii ililipa ili kuunganishwa kwenye gridi hii?
+Name=D10_VS1
+Value=0:88888887
+Value=88888888;Dont Know||Hajui
+
+[Item]
+Label=Is grid service available to the whole community or only a part of the community?|O serviço de rede está disponível para toda a comunidade ou apenas uma parte da comunidade?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
+Name=D11
+Start=121
+Len=1
+
+[ValueSet]
+Label=Is grid service available to the whole community or only a part of the community?|O serviço de rede está disponível para toda a comunidade ou apenas uma parte da comunidade?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
+Name=D11_VS1
+Link=12345678
+Value=1;Small part of community|Pequena parte da comunidade|Sehemu ndogo ya jamii
+Value=2;Half of the community|Metade da comunidade|Nusu ya Jamii
+Value=3;Most of the community|A maioria da comunidade|Sehemu kubwa ya jamii
+Value=4;Entire community|Comunidade inteira|Jamii nzima
+
+[Item]
+Label=How many households are connected to the grid?|serviço de grade disponíveis para todo ou apenas partes da comunidade?|Je, ni kaya ngapi zimeunganishwa kwenye gridi?
+Name=D12
+Start=122
+Len=1
+
+[ValueSet]
+Label=How many households are connected to the grid?|Quantas famílias são conectadas à rede?|Je, huduma zinazotolewa na gridi zinapatikana katika jamii nzima au baadhi ya sehemu?
+Name=D12_VS1
+Link=12345678
+
+[Item]
+Label=What is the main reason some households are not connected to the grid?|Qual é a principal razão que algumas famílias não estão conectados à rede?|Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?
+Name=D13
+Start=123
+Len=2
+
+[ValueSet]
+Label=What is the main reason some households are not connected to the grid?|Qual é a principal razão que algumas famílias não estão conectados à rede?|Nini sababu kuu ya baadhi ya kaya kutounganishwa kwenye gridi?
+Name=D13_VS1
+Value=1;Household is far from the grid and hence have to pay more to be connected|O agregado familiar está longe da rede e, portanto, tem de pagar mais para estar ligado|Kaya ipo mbali sana na grid, kwahiyo ni gharama sana kuunganishwa
+Value=2;Grid is too far from some households/not available|Rede eléctrica está muito longe de algumas famílias / não disponível|Gridi iko mbali sana kutoka kwa baadhi ya kaya / haipatikani
+Value=3;Cost of initial connection is too expensive|Custo da conexão inicial é muito cara|Gharama ya uhusiano wa awali ni ghali sana
+Value=4;Running fee is too expensive|taxa mensal é muito cara|ada ya kila mwezi ni ghali sana
+Value=5;Satisfied with current energy solution|Satisfeito com a solução atual de energia|Kuridhika na sasa ufumbuzi wa nishati
+Value=6;Renting, Landlord decision|Alugar, decisão do senhorio|Kukodisha, mwenye nyumba uamuzi
+Value=7;Service Unreliable|serviço não confiável|Service Uhakika
+Value=8;Administrative procedure is too complicated|Procedimento administrativo é muito complicado|utaratibu Tawala ni ngumu sana
+Value=9;Submitted application and waiting for connection|pedido apresentado e à espera de conexão|Kuwasilishwa maombi na kusubiri kwa uhusiano
+Value=10;Company refused to connect the household|Empresa se recusou a ligar o agregado familiar|Kampuni alikataa kuungana nyumbani
+Value=55;Other|De outros|Nyingine
+
+[Item]
+Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
+Name=D14
+Start=125
+Len=1
+
+[ValueSet]
+Label=How many businesses are connected to the grid?|Quantas empresas estão conectados à rede?|Je, ni kwa kiasi gani biashara katika jamii hii zimeunganishwa kwenye gridi?
+Name=D14_VS1
+Value=0;None|Nenhum|Hakuna
+Value=1;All businesses|Pequena parte dos negócios|Biashara zote
+Value=2;Most of the businesses|Metade das empresas|Biashara nyingi
+Value=3;Half of the businesses|A maioria das empresas|Nusu ya biashara zote
+Value=4;Small part of the businesses|todas as empresas|Biashara chache
+
+[Item]
+Label=Are there certain months/seasons every year when the community experiences bad electricity service from the grid?|Há determinados meses / estações a cada ano quando a comunidade experimenta serviço de energia elétrica ruim da rede?|Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?
+Name=D15
+Start=126
+Len=1
+
+[ValueSet]
+Label=Are there certain months/seasons every year when the community experiences bad electricity service from the grid?|Há determinados meses / estações a cada ano quando a comunidade experimenta serviço de energia elétrica ruim da rede?|Je, kuna baadhi ya miezi au misimu kila mwaka ambapo jamii inapata huduma duni za umeme wa gridi?
+Name=YESNO
+Link=10000002
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Worst month for service from the grid?|Pior mês para o serviço da rede?|Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?
+Name=D16
+Start=127
+Len=3
+DataType=Alpha
+
+[ValueSet]
+Label=Worst month for service from the grid?|Pior mês para o serviço da rede?|Je, ni miezi ipi ina huduma duni zaidi ya umeme wa gridi?
+Name=D16_VS1
+Value='a  ';January|janeiro|Januari
+Value='b  ';February|fevereiro|Februari
+Value='c  ';March|Março|Machi
+Value='d  ';April|abril|Aprili
+Value='e  ';May|Maio|Mei
+Value='f  ';June|Junho|Juni
+Value='g  ';July|Julho|Julai
+Value='h  ';August|agosto|Agosti
+Value='i  ';September|setembro|Septemba
+Value='j  ';October|Outubro|Oktoba
+Value='k  ';November|novembro|Novemba
+Value='l  ';December|dezembro|Desemba
+
+[Item]
+Label=Do you practice load shedding in this area in the rainy season?|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Pior mês)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mbaya mwezi)
+Name=D17
+Start=130
+Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=D17_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Do you practice load shedding in this area in the dry season?|Quantas horas de eletricidade estão disponíveis todos os dias a partir da rede? (Mês típico)|Saa ngapi ya umeme zinapatikana kila siku kutoka gridi ya taifa? (Mfano mwezi)
+Name=D18
+Start=131
+Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=D18_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Does TANESCO/EDM (or the the community) publish a "load-shedding" schedule?|Quantas horas de eletricidade estão disponíveis todas as noites entre 18:00-22:00? (Pior mês)|Saa ngapi ya umeme zinapatikana kila jioni fomu 18:00-22:00? (Mbaya mwezi)
+Name=D19
+Start=132
+Len=1
+
+[ValueSet]
+Label=ValueSet
+Name=D19_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=What was the total duration of all the outages/blackouts during last week?|Em um dia típico, quantas interrupções / desmaios da grade acontecer? (Pior mês)|Katika siku ya kawaida, ni wangapi outages / giza kwa ya gridi kutokea? (Mbaya mwezi)
+Name=D20
+Start=133
+Len=2
+
+[Item]
+Label=In the last 12 months, did the power at any time go out for more than 24 hours for multiple households in the community at the same time?|.. se o poder sair por mais de 24 horas?|Kwa mara ya mwisho, ni lini umeme ulikatika zaidi ya masaa 24 katika kaya nyingi kwa wakati mmoja? Year
+Name=D21
+Start=135
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=D21_VS1
+Link=10000002
+
+[Item]
+Label=When was the last time the power went out for more than 24 hours in this community?|... última potência tempo sair para> 24 horas em vários agregados familiares?|How many days did it take to fix the issue and for the community to regain power?
+Name=D22
+Start=136
+Len=2
+
+[ValueSet]
+Label=Valueset
+Name=D22_VS1
+Value=1;January|janeiro|Januari
+Value=2;February|fevereiro|Februari
+Value=3;March|Março|Machi
+Value=4;April|abril|Aprili
+Value=5;May|Maio|Mei
+Value=6;June|Junho|Juni
+Value=7;July|Julho|Julai
+Value=8;August|agosto|Agosti
+Value=9;September|setembro|Septemba
+Value=10;October|Outubro|Oktoba
+Value=11;November|novembro|Novemba
+Value=12;December|dezembro|Desemba
+
+[Item]
+Label=How many days did it take to fix the issue and for the community to regain power?|Quantos dias demorou para corrigir o problema e para a comunidade para recuperar o poder?|What are the most serious problems this community experiences with the grid electricity?
+Name=D23
+Start=138
+Len=2
+
+[Item]
+Label=What are the two most serious problems this community experiences with the grid electricity?|Quais são os problemas mais graves neste experiências comunitárias com a eletricidade da rede?|ni matatizo makubwa zaidi katika uzoefu huu jumuia ya umeme wa gridi ya taifa ni nini?
+Name=D24
+Start=140
+Len=2
+DataType=Alpha
+
+[ValueSet]
+Label=Valueset
+Name=D24_VS1
+Value='a ';Supply/shortage/not enough hours of electricity|Fornecimento / escassez / não suficientes horas de eletricidade|Umeme hautoshelezi/umeme unapatikana kwa masaa machache
+Value='b ';Low/high voltage problems of voltage fluctuations|Problemas de baixa / alta tensão das flutuações de tensão|Kupanda na kushuka kwa nguvu ya umeme
+Value='c ';Unpredictable interruptions|Interrupções imprevisíveis|Kukatika kusikotabirika
+Value='d ';Unexpectedly high bills|Notas inesperadamente altas|Ankara kubwa zisizotarajiwa
+Value='e ';Too expensive|Muito caro|Gharama kubwa ya umeme
+Value='f ';Do not trust the supplier|Não confie no fornecedo|Hatumwamini mtoa huduma
+Value='g ';Can not power large appliances|Não é possível alimentar aparelhos grandes|Hauwezi kuhimili vifaa vikubwa vya umeme
+Value='h ';Mainteinance/service problems|Problemas de manutenção / serviço |Uduni wa matengenezo
+Value='i ';Unpredicactable bills|Notas não impraticável |Ankara zisizotabirika
+Value='q ';Other, specify|Outro, especifique|Nyinginezo
+Value='x ';No problems|Sem problemas|Hakuna matatizo
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
+Name=D25
+Start=142
+Len=1
+
+[ValueSet]
+Label=Over the past 5 years (or since the first household in the community got access), how has getting access to an electricity connection in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina mzunguko wa mitumbwi nyeusi au kahawia katika jamii yako imebadilika?
+Name=D25_VS1
+Value=1;It has gotten easier|Tornou-se mais fácil|Imekuwa rahisi zaidi
+Value=2;About the same|Sobre o mesmo|Karibia sawa
+Value=3;Harder|Mais difícil|Ngumu zaidi
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has the price of getting access to an electricity connection in your community changed?
+Name=D26
+Start=143
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=D26_VS1
+Value=1;No payment then, no payment no|Sem pagamento então, sem pagamento não|Hakuna malipo
+Value=2;Cheaper|Barato|Rahisi
+Value=3;About the same|Sobre o mesmo|Hakuna mabadiliko
+Value=4;More expensive|Muito caro|Ghali sana
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown out in your community changed? |Últimos 5 anos, o preço do uso de eletricidade da rede em sua comunidade mudou?|Zamani miaka 5, ina bei ya kutumia umeme wa gridi katika jamii yako imebadilika?
+Name=D27
+Start=144
+Len=1
+
+[ValueSet]
+Label=Over the past 5 years (or since the first household in the community got access), how has the frequency of black out or brown out in your community changed? |Últimos 5 anos, o preço do uso de eletricidade da rede em sua comunidade mudou?|Zamani miaka 5, ina bei ya kutumia umeme wa gridi katika jamii yako imebadilika?
+Name=D27_VS1
+Value=1;Less black outs and brown outs|Menos apagões e oscilações/cortes|Kukatika umeme marachache na kupungua kwa umem
+Value=2;Stayed the same|Manteve-se o mesmo|Hakuna mabadiliko
+Value=3;More black outs and brown outs|Mais apagões e oscilações/cortes|Kukatika umeme zaidi na kupungua kwa umeme
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?|Últimos 5 anos, a duração do fornecimento de electricidade à noite mudou?|Zamani miaka 5, ina muda wa ugavi wa umeme wakati wa usiku imebadilika?
+Name=D28
+Start=145
+Len=1
+
+[ValueSet]
+Label=Over the past 5 years (or since the first household in the community got access), how has the price of using grid electricity in your community changed?|Últimos 5 anos, a frequência de saídas preto ou marrom em sua comunidade mudou?|Zamani miaka 5, ina muda wa ugavi wa umeme wakati wa usiku imebadilika?
+Name=D28_VS1
+Value=1;It has gotten lower|Ficou mais baixo|Ziko chini
+Value=2;About the same|Ficou o mesmo|Ziko vile vile
+Value=3;Higher|Mais alto|Ziko juu
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?|Zamani miaka 5, alikuwa huduma kutoka umeme wa gridi ya taifa imebadilika?
+Name=D29
+Start=146
+Len=1
+
+[ValueSet]
+Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?
+Name=D29_VS1
+Value=1;Less hours
+Value=2;Stayed the same|Ficou o mesmo|Hakuna mabadiliko
+Value=3;More hours
+
+[Item]
+Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
+Name=D30
+Start=147
+Len=1
+
+[ValueSet]
+Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
+Name=D30_VS1
+Value=1;It has gotten worse|Ficou pior|Mbaya zaidi
+Value=2;Stayed the same|Ficou o mesmo|Hakuna mabadiliko
+Value=3;Better|Melhorou|Nzuri zaidi
+
+[Item]
+Label=Do any households own a solar home system/solar lighting system in this community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
+Name=D31
+Start=148
+Len=1
+
+[ValueSet]
+Label=Do any households own a solar home system/solar lighting system in this community?|Qual a proporção de uso doméstico / sistemas de raios solares solares sistemas nesta comunidade?|Nini uwiano wa kaya kutumia nishati ya jua mifumo / nishati ya jua mifumo ya umeme katika jamii hii?
+Name=D31_VS1
+Link=10000002
+
+[Item]
+Label=Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, unaweza kununua au kukodisha mfumo wa jua nyumbani / nishati ya jua mfumo wa umeme katika jamii hii?
+Name=D32
+Start=149
+Len=2
+
+[ValueSet]
+Label=Is it just a few households or is it many households that use solar systems/solar lighting systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, unaweza kununua au kukodisha mfumo wa jua nyumbani / nishati ya jua mfumo wa umeme katika jamii hii?
+Name=D32_VS1
+Value=1;Just a few households|Apenas algumas casas|Ni kaya chache tu
+Value=2;Many households|Muitas famílias|Ni kaya nyingi
+Value=88;Don't know|Não sei|Sijui
+
+[Item]
+Label=Can you buy or lease a solar home systems/solar lightning systems in this community?|Existem quaisquer sistemas de irrigação compartilhados solares / Electricidade impulsionado utilizados pelos agricultores nesta comunidade?|Je, kuna yeyote pamoja jua / umeme inayotokana umwagiliaji mifumo inayotumiwa na wakulima katika jamii hii?
+Name=D33
+Start=151
+Len=10
+DataType=Alpha
+
+[ValueSet]
+Label=Can you buy or lease a solar home systems/solar lightning systems in this community?|você pode comprar ou alugar um sistema solar sistema de home / energia solar relâmpago nesta comunidade?|Je, kuna yeyote pamoja jua / umeme inayotokana umwagiliaji mifumo inayotumiwa na wakulima katika jamii hii?
+Name=D33_VS1
+Value='01        ';Purchase from shops|Compra de lojas|Ununuzi kutoka maduka
+Value='02        ';Purchase/lease from private companies|Compra / locação de empresas privadas|Kununua / kukodisha kutoka makampuni binafsi
+Value='03        ';Purchase/lease from NGOs|Compra / locação de ONGs|Kununua / kukodisha kutoka mashirika yasiyo ya kiserikali
+Value='04        ';Free|Livre|Bure
+Value='55        ';Other|De outros|Nyingine
+
+[Item]
+Label=Are there any shared solar/electricity driven irrigation systems used by farmers in this community?|Há algum bombas de água compartilhados solares / eléctricos nesta comunidade?|Je, kuna yeyote pamoja jua / umeme pampu maji katika jamii hii?
+Name=D34
+Start=161
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=D34_VS1
+Link=10000002
+
+[Item]
+Label=Are there any shared solar/electric water pumps in this community for drinking water?
+Name=D35
+Start=162
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=D35_VS1
+Link=10000002
+
+[Record]
+Label=H Development project|projecto H Desenvolvimento|mradi H Development
+Name=H_DEVELOPMENT_PROJECT
+RecordTypeValue='H'
+RecordLen=45
+
+[Item]
+Label=Power lines program: Construction, maintenance or rehabilitation|projetos implementados na comunidade últimos 5 anos|miradi iliyotekelezwa katika jamii ya mwisho ya miaka 5
+Name=H1
+Start=41
+Len=1
+
+[ValueSet]
+Label=Power lines program: Construction, maintenance or rehabilitation|projetos implementados na comunidade últimos 5 anos|miradi iliyotekelezwa katika jamii ya mwisho ya miaka 5
+Name=H1_VS1
+Link=10000002
+
+[Item]
+Label=Solar based community mini-grid program
+Name=H2
+Start=42
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=H2_VS1
+Link=10000002
+
+[Item]
+Label=Off-grid energy distribution program for individual households, e.g. solar lanterns, solar home systems, electric generator
+Name=H3
+Start=43
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=H3_VS1
+Link=10000002
+
+[Item]
+Label=Other development program related to power supply
+Name=H4
+Start=44
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=H4_VS1
+Link=10000002
+
+[Item]
+Label=Solar irrigation program for farmers
+Name=H5
+Start=45
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=H5_VS1
+Link=10000002
+
+[Record]
+Label=F Infrastructure||F Miundombinu
+Name=F_INFRASTRUCTURE
+RecordTypeValue='F'
+RecordLen=60
+
+[Item]
+Label=Village accessible by motor vehicle? Dry season|Vila acessível por veículo motorizado? estação seca|Kijiji kupatikana kwa magari? Msimu wa ukame
+Name=F1
+Start=41
+Len=1
+
+[ValueSet]
+Label=Village accessible by motor vehicle? Dry season|Vila acessível por veículo motorizado? estação seca|Kijiji kupatikana kwa magari? Msimu wa ukame
+Name=F1_VS1
+Value=1;Yes, by paved road|Sim, por estrada asfaltada|Ndiyo, na barabara ya lami
+Value=2;Yes, by unpaved/gravel/dirt road|Sim, por não pavimentada cascalho / estrada / sujeira|Ndiyo, na unpaved / changarawe / uchafu barabara
+Value=3;No|Não|Hapana
+
+[Item]
+Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
+Name=F2
+Start=42
+Len=1
+
+[ValueSet]
+Label=Village accessible by motor vehicle? Rainy season|Vila acessível por veículo motorizado? estação chuvosa|Kijiji kupatikana kwa magari? msimu wa mvua
+Name=F2_VS1
+Value=1;Yes, by paved road|Sim, por estrada asfaltada|Ndiyo, na barabara ya lami
+Value=2;Yes, by unpaved/gravel/dirt road|Sim, por não pavimentada cascalho / estrada / sujeira|Ndiyo, na unpaved / changarawe / uchafu barabara
+Value=3;No|Não|Hapana
+
+[Item]
+Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhusiano wa basi?
+Name=F3
+Start=43
+Len=1
+
+[ValueSet]
+Label=Is there a bus connection?|Existe uma ligação de autocarro?|Je, kuna uhusiano wa basi?
+Name=F3_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=What is the distance in kilometers from the village to the nearest town/city?|Qual é a distância em quilômetros da aldeia para a cidade mais próxima / cidade?|ni umbali wa kilomita kutoka kijiji kwa karibu mji / jiji gani?
+Name=F4
+Start=44
+Len=4
+
+[Item]
+Label=What is the distance in kilometers from the village to the district center?|Qual é a distância em quilômetros da aldeia para o centro do distrito?|ni umbali wa kilomita kutoka kijiji katika kituo cha wilaya gani?
+Name=F5
+Start=48
+Len=4
+
+[Item]
+Label=What is the distance in kilometers from the village to the nearest bank branch?|Qual é a distância em quilômetros da aldeia para a agência bancária mais próxima?|ni umbali wa kilomita kutoka kijiji kwa karibu tawi la benki gani?
+Name=F6
+Start=52
+Len=4
+
+[Item]
+Label=What is the distance in kilometers from the village to the nearest microfinance institution?|Qual é a distância em quilômetros da aldeia para a instituição de microfinanças mais próximo?|ni umbali wa kilomita kutoka kijiji kwa karibu taasisi ndogo ndogo za fedha ni nini?
+Name=F7
+Start=56
+Len=4
+
+[Item]
+Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
+Name=F8
+Start=60
+Len=1
+
+[ValueSet]
+Label=Can a mobile phone get a working signal in the community?|Pode um telefone celular obter um sinal trabalhando na comunidade?|Je simu ya mkononi kupata signal kufanya kazi katika jamii?
+Name=F8_VS1
+Value=1;Yes, everywhere in the community|Sim, em todos os lugares na comunidade|Ndiyo, kila mahali katika jamii
+Value=2;Yes, most parts of the community|Sim, a maioria das partes da comunidade|Ndiyo, sehemu nyingi za jamii
+Value=3;Yes, half of the community|Sim, metade da comunidade|Ndiyo, nusu ya jamii
+Value=4;Yes, only a few parts of the community|Sim, apenas algumas partes da comunidade|Ndiyo, tu sehemu chache ya jamii
+Value=5;No, nowhere in the community|Não, em nenhum lugar da comunidade|Hapana, hakuna mahali popote katika Jumuiya
+
+[Record]
+Label=F8-F18 Infrastructure||F8-F18 Miundombinu
+Name=F8_F16_INFRASTRUCTURE
+RecordTypeValue='f'
+RecordLen=689
+
+[Item]
+Label=Infrastructure|A infraestrutura|miundombinu
+Name=INFRASTRUCTURE
+Start=41
+Len=59
+DataType=Alpha
+Occurrences=11
+
+[Item]
+Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
+Name=F9_NO
+Start=41
+Len=2
+ItemType=SubItem
+
+[ValueSet]
+Label=Infrastructure number|número de infra-estrutura|idadi miundombinu
+Name=F9_NO_VS1
+Value=1;Permanent market|mercado permanente|Soko la Kudumu
+Value=2;Weekly or fortnight market|Mercado semanal ou quinzena|Soko la kila wiki
+Value=3;Local market|Mercado local|Soko la Mtaa/Kijiji
+Value=4;Pre-primary school / Kindergarten|escola pré-primária / jardim de infância|Shule ya Awali/Chekechea
+Value=5;Primary school|Escola primaria|Shule ya Msingi
+Value=6;Secondary school/high school|ensino secundário / ensino médio|Shule ya Sekondari/ shule ya kidato cha tano na sita
+Value=7;TVET (technical and vocational education and training)|ETP (formação técnica profissional)|Vyuo vya Mafunzo ya Ufundi
+Value=8;Private clinic|Clínica privada|Kliniki Binafsi
+Value=9;Government clinic/Public Health Center|clínica Governo / Centro de Saúde Pública|Kliniki za Serikali/ Vituo vya afya
+Value=10;Dispensary or pharmacy|Posto de saúde ou farmácia|Zahanati au Duka la dawa
+Value=11;Hospital|Hospital|Hospitali
+
+[Item]
+Label=Are there any|Há alguns|Kuna yoyote
+Name=F9A
+Start=93
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Are there any|Há alguns|Kuna yoyote
+Name=F9A_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Distance to nearest facility|Distância para o serviço mais próximo|Umbali wa kituo karibu
+Name=F9B
+Start=94
+Len=4
+ItemType=SubItem
+
+[ValueSet]
+Label=Distance to nearest facility|Distância para o serviço mais próximo|Umbali wa kituo karibu
+Name=F9B_VS1
+Value=0:9999
+
+[Item]
+Label=Do at least one of these have access to electricty|Fazer pelo menos um deles tem acesso a eletricidade|Je angalau moja ya hizi wanapata electricty
+Name=F9C
+Start=98
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Do at least one of these have access to electricty|Fazer pelo menos um deles tem acesso a eletricidade|Je angalau moja ya hizi wanapata electricty
+Name=F9C_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Did the community have this service five years ago?|A comunidade tem este serviço há cinco anos?|Je jamii na huduma hii ya miaka mitano iliyopita?
+Name=F9D
+Start=99
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Did the community have this service five years ago?|A comunidade tem este serviço há cinco anos?|Je jamii na huduma hii ya miaka mitano iliyopita?
+Name=F9D_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Record]
+Label=G Business_Manufacturing_services
+Name=G_MANUFACTURING_SERVICES
+RecordTypeValue='G'
+RecordLen=136
+
+[Item]
+Label=Manufacturing|fabrico|Uzalishaji
+Name=GM
+Start=41
+Len=4
+DataType=Alpha
+Occurrences=24
+
+[Item]
+Label=Business number|número de negócios|idadi ya biashara
+Name=G1_NO
+Start=41
+Len=2
+ItemType=SubItem
+
+[ValueSet]
+Label=Text From Clipboard|número de negócios
+Name=G1_NO_VS1
+Value=1;Tailor, shoe manufacturer or shoe repair|Alfaiate, fabricante de sapatos ou reparação de sapatos|Washonaji nguo/wazalishaji viatu/washonaji viatu
+Value=2;Baker or business making baked goods|Padeiro ou fazendo negócios de produtos assados|Waoka mikate/bidhaa zilizookwa
+Value=3;business making Coffee, tea, sugar, oil, dry fruits and other processed foods|fazem negócios de Café, chá, açúcar, óleo, frutos secos e outros alimentos processados.|Kahawa, chai, sukari, mafuta, matunda yaliyokaushwa, na vyakula vingine vya kusindika( ukiacha migahawa, wauzaji vyakula mitaani)
+Value=4;business making Handcrafts|fazendo negócios de artesanato|Kutengeneza bidhaa za Kazi za Mikono (Handcrafts)
+Value=5;business making Furniture|fazendo negócios de móveis|Kutengeneza Samani (Furnitures)
+Value=6;business making Metal Products|fazendo negócios de produtos metálicos|Kutengeneza Bidhaa za Chuma
+Value=7;business making Household Items|fazendo  negócios de produtos domésticos|Kutengeneza Vyombo vya Nyumbani
+Value=8;business making Tools and Instruments|Fazendo negócios de ferramentas e instrumentos de fabricação|Kutengeneza Nyezo na Vitendeakazi
+Value=9;business making Bricks|fazendo negócios de tijolos|Kutengeneza Matofali
+Value=10;business doing Other Manufacturing|fazendo Outros negócio de Manufacturados|Kufanya uzalishaji mwingine
+Value=11;business Selling food or Groceries (street food sellers, restaurants)|negócios Venda de comida ou mercearias (vendedores de comida de rua, restaurantes)|Kuuza Chakula (Mama Lishe, Migahawa)
+Value=12;business Selling clothing or household items|negócio Venda de roupa ou artigos domésticos|Kuuza Mavazi au Vifaa vya nyumbani
+Value=13;business Selling business, computer or phone services|negócios de Venda e prestação de serviços, computadores ou telefone|Kuuza  Kompyuta au Huduma za simu
+Value=14;business Selling other goods|Venda de outros bens|Kuuza bidhaa zingine
+Value=15;business providing Transport|negócio que fornece Transportes|Usafiri
+Value=16;providing Cleaning and washing|fornecendo limpeza e lavagem|Usafi na ufuaji
+Value=17;Hairdressers or barber shops|Cabeleireiros ou barbearias|Watengeneza nywele na Vinyozi
+Value=18;Doctor, lawyer, accountant, or other professional services|Médico, advogado, contabilista ou outros serviços profissionais|Daktari, mwanasheria, mhasibu au huduma zingine za kitaalamu.
+Value=19;business Selling or giving service to Solar Home Systems or Solar Lighting Systems|venda ou prestação de serviços a Sistemas Solares Domésticos ou Sistemas de Iluminação Solar|Kuuza  au kutoa huduma ya Mifumo ya Umeme jua wa nyumbani
+Value=20;business providing Construction work|negócio que fornece trabalhos de construção|Inayotoa huduma za Ujenzi
+Value=21;Grain or oil mill|Grão ou moinho de óleo|Kusaga nafaka/kukamua mafuta
+Value=22;Internet or TV café|Internet café ou TV |Huduma za Mtandao (Intaneti/TV)
+Value=23;Restaurant, tea or coffee shop|Restaurante, chá ou café |Migahawa/chai au sehemu/migahawa maalumu za kunywa kahawa
+Value=24;Mobile phone charging or repairing service|Serviço de carregamento ou reparação de telemóveis|Sehemu za kuchajia simu/ sehemu za matengenezo
+
+[Item]
+Label=Are there any business in this community?|Há qualquer negócio nesta comunidade?|Je, kuna biashara yoyote katika jamii hii?
+Name=G1A
+Start=43
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Are there any business in this community?|Há qualquer negócio nesta comunidade?|Je, kuna biashara yoyote katika jamii hii?
+Name=G1A_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Item]
+Label=Did this business exist in the community five years ago?|Será que este negócio existe na comunidade há cinco anos?|Je biashara hii zipo katika jamii ya miaka mitano iliyopita?
+Name=G1B
+Start=44
+Len=1
+ItemType=SubItem
+
+[ValueSet]
+Label=Did this business exist in the community five years ago?|Será que este negócio existe na comunidade há cinco anos?|Je biashara hii zipo katika jamii ya miaka mitano iliyopita?
+Name=G1B_VS1
+Value=1;Yes|sim|Ndiyo
+Value=2;No|Não|Hapana
+
+[Record]
+Label=I Cooking|eu cozinho|I kupikia
+Name=I_COOKING
+RecordTypeValue='I'
+RecordLen=50
+
+[Item]
+Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina ya cookstove
+Name=I1
+Start=41
+Len=1
+
+[ValueSet]
+Label=Most common type of cookstove|Tipo mais comum de fogão|Ya kawaida ya aina ya cookstove
+Name=I1_VS1
+Value=1;3-stone stove|Fogão de 3 pedras|Jiko la mafiga matatu
+Value=2;Charcoal stove|Fogão a carvão|Jiko la mkaa
+Value=3;Other stoves for firewood or other solid fuel|Outros fogões para lenha ou outro combustível sólido|Majiko mengine ya kuni au nishati ngumu
+Value=4;Stoves for other type of energy|Fogões para outro tipo de energia|Majiko ya aina zingine za nishati
+
+[Item]
+Label=Do any of the households in this community use improved cookstoves using firewood, dung, twigs, rice husks or leaves?
+Name=I2
+Start=42
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I2_VS1
+Link=10000002
+
+[Item]
+Label=Do any of the households in this community use improved cookstoves using charcoal?
+Name=I3
+Start=43
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I3_VS1
+Link=10000002
+
+[Item]
+Label=Do any of the households in this community use improved cookstoves using  pellets or briquettes?
+Name=I4
+Start=44
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I4_VS1
+Link=10000002
+
+[Item]
+Label=Do any of the households in this community use stoves with LPG, biogass, electrical stove or solar cooker?
+Name=I5
+Start=45
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I5_VS1
+Link=10000002
+
+[Item]
+Label=Is it possible to buy an improved cookstove in this community?
+Name=I6
+Start=46
+Len=2
+
+[ValueSet]
+Label=Valueset
+Name=I6_VS1
+Link=10000001
+
+[Item]
+Label=Where is the closest location to buy an improved cookstove in this community?
+Name=I7
+Start=48
+Len=1
+
+[ValueSet]
+Label=Value set
+Name=I7_VS1
+Value=1;Within village|Dentro da aldeia|Ndani ya kijiji/mtaa
+Value=2;In neighbouring village|Na aldeia vizinha|Katika Kijiji/Mtaa cha/wa jirani
+Value=3;Closest permanent market|Mercado permanente mais próximo|Soko la karibu la kudumu
+Value=4;District centre|Centro distrital|Makao makuu ya wilaya
+
+[Item]
+Label=Are there programs that campaign for the awareness of health risks of cookstoves?|programas estão lá que a campanha para a conscientização dos riscos para a saúde de fogões?|Je, kuna programu ambazo kampeni ufahamu wa hatari ya afya ya cookstoves?
+Name=I8
+Start=49
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I8_VS1
+Link=10000002
+
+[Item]
+Label=Are there programs that campaign for the awareness of health risks of cookstoves?
+Name=I9
+Start=50
+Len=1
+
+[ValueSet]
+Label=Valueset
+Name=I9_VS1
+Link=10000002
+
+[Record]
+Label=J Street lightning|relâmpago J Street|umeme J Street
+Name=J_STREET_LIGHTNING
+RecordTypeValue='J'
+RecordLen=43
+
+[Item]
+Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
+Name=J1
+Start=41
+Len=2
+DataType=Alpha
+
+[ValueSet]
+Label=Does your community have any form of street lightning?|A sua comunidade tem qualquer forma de relâmpago rua?|Jumuia yako ina aina yoyote ya umeme mitaani?
+Name=J1_VS1
+Value='A ';Yes, public street lights|Sim, luzes de rua/iluminação pública.|Ndiyo, taa za barabarani za umma
+Value='B ';Yes, outdoor lights/security lights|Sim, luzes ao ar livre/luzes de segurança|Ndiyo, taa za nje/taa za usalama
+Value='C ';No|Não|Hapana
+
+[Item]
+Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|Kwa kiasi kile jamii kufunikwa na radi mitaani?
+Name=J2
+Start=43
+Len=1
+
+[ValueSet]
+Label=To what extent is the community covered by street lightning?|Até que ponto é a comunidade coberto por um raio rua?|w
+Name=J2_VS1
+Value=1;None / hardly any|Nenhum / praticamente nenhuma|Sehemu ndogo sana
+Value=2;Minor Part|Menor Parte |Sehemu ndogo
+Value=3;Partially|parcialmente|Sehemu
+Value=4;Largely|Largamente|Kwa kiiasi kubwa
+Value=5;Entirely|Inteiramente|Eneo lote la kijiji/mtaa
+
+[Record]
+Label=GP Global pandemic
+Name=GP_GLOBAL_PANDEMIC
+RecordTypeValue='P'
+RecordLen=43
+
+[Item]
+Label=Job opportunities
+Name=GP1
+Start=41
+Len=1
+
+[ValueSet]
+Label=Job opportunities
+Name=GP1_VS1
+Link=111638752
+Value=1;Increased|Aumento|Zimeongezeka/Umeongezeka
+Value=2;Remained the same|Manteve-se o mesmo|Hakuna Mabadiliko
+Value=3;Decreased|Diminuiu|Zimepungua/Umepungua
+
+[Item]
+Label=Business Opportunities
+Name=GP2
+Start=42
+Len=1
+
+[ValueSet]
+Label=Business Opportunities
+Name=GP2_VS1
+Link=111638752
+
+[Item]
+Label=Market Access
+Name=GP3
+Start=43
+Len=1
+
+[ValueSet]
+Label=Market Access
+Name=GP3_VS1
+Link=111638752
