@@ -1,0 +1,31 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.7",
+  "name": "communityTraining",
+  "description": "",
+  "files": [
+    {
+      "path": ".\\communityTraining.ent"
+    },
+    {
+      "path": ".\\communityTraining.pff"
+    },
+    {
+      "path": ".\\Resources\\Images\\Cookstoves_101.jpg"
+    },
+    {
+      "path": ".\\Resources\\Images\\Cookstoves_211.jpg"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\communityTraining.dcf",
+      "uploadForSync": true
+    }
+  ],
+  "deployment": {
+    "type": "CSWeb",
+    "cswebUrl": "http:\/\/41.94.86.4:81\/energy\/api",
+    "ftpUrl": "ftp:\/\/"
+  }
+}

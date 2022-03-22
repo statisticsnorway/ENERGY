@@ -1,0 +1,23 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=COMMUNITY
+Name=COMMUNITY
+AppType=DataEntry
+OperatorID=No
+PartialSave=Yes
+CAPI=Yes
+ParadataCollection=AllEvents
+ParadataRecordInitialPropertyValues=Yes
+ParadataDeviceStateMinutes=5
+[AppCode]
+File=.\communityTraining.ent.apc
+[Message]
+File=.\communityTraining.ent.mgf
+[Help]
+File=.\communityTraining.ent.qsf
+[Forms]
+File=.\communityTraining.fmf
+[Resources]
+Folder=.\Resources
+[Dictionary Types]
+Dict-Type=.\communityTraining.dcf,Input,.\communityTraining.fmf
