@@ -516,15 +516,13 @@ onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "TZ" then
+	elseif getlanguage() = "SW" and theCountry = "MZ" then
 		setvalueset($,EDUC_TZ);
 	elseif getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
 	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
 	endif;
-
-
 
 PROC AC5
 
@@ -589,7 +587,6 @@ onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_TZ);
-
 	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
 	elseif getlanguage() = "EN" and theCountry = "MZ" then
@@ -1587,12 +1584,15 @@ preproc
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(182));
 	endif;
-
+{
 postproc
 
+// D_FORM(D Section) is no long exist. By: Angelo
 	if $ = 0 then
 		skip to D_FORM;
+
 	endif;
+}
 
 
 
@@ -1611,14 +1611,15 @@ PROC C130
 	endif;
 
 
-
+{ 
+// D_FORM(D Section) is no long exist. By: Angelo
 PROC C132
 
 	if $ = 0 then
 		skip to D_FORM;
 	endif;
 
-
+}
 
 PROC E_FORM
 
@@ -2526,19 +2527,6 @@ preproc
 	noinput;
 
 
-PROC N_A
-
-postproc
-
-	if $ > hhDemographics(1) then
-		errmsg(tr(166),$,hhDemographics(1));
-		reenter;
-	endif;
-	if $ > 0 then
-		skip to N_C_HH;
-	endif;
-
-
 PROC N_B
 
 postproc
@@ -2556,17 +2544,16 @@ postproc
 	endif;
 
 
-PROC N_C_MM
+PROC N_A
 
 postproc
 
-	if $ > 59 then
-		errmsg(tr(165), $);
+	if $ > hhDemographics(1) then
+		errmsg(tr(166),$,hhDemographics(1));
 		reenter;
 	endif;
-	if N_C_HH = 24 and $ > 0 then
-		errmsg(tr(163), N_C_HH, $);
-		reenter;
+	if $ > 0 then
+		skip to N_C_HH;
 	endif;
 
 
@@ -2596,6 +2583,20 @@ PROC N_D_MM
 
 	if N_C_HH = N_D_HH and $ > N_C_MM  then
 		errmsg(tr(160), N_D_HH, $, N_C_HH, N_C_MM);
+		reenter;
+	endif;
+
+
+PROC N_C_MM
+
+postproc
+
+	if $ > 59 then
+		errmsg(tr(165), $);
+		reenter;
+	endif;
+	if N_C_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_C_HH, $);
 		reenter;
 	endif;
 
