@@ -5511,25 +5511,6 @@ Text=N_ACTIVITY_WOMEN
 [EndColumn]
   
 [Column]
-Width=37
-  
-[HeaderText]
-Position=4,0,37,24
-Text=N_A
- 
-[Field]
-Name=N_A
-Position=0,0,29,20
-Item=N_A,HHQ_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=TextBox
-  
-[Text]
-Text=N_A
- 
-[EndColumn]
-  
-[Column]
 Width=33
   
 [HeaderText]
@@ -5568,21 +5549,21 @@ Text=N_C_HH
 [EndColumn]
   
 [Column]
-Width=62
+Width=37
   
 [HeaderText]
-Position=0,0,62,24
-Text=N_C_MM
+Position=4,0,37,24
+Text=N_A
  
 [Field]
-Name=N_C_MM
-Position=25,0,54,20
-Item=N_C_MM,HHQ_DICT
+Name=N_A
+Position=0,0,29,20
+Item=N_A,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=TextBox
   
 [Text]
-Text=N_C_MM
+Text=N_A
  
 [EndColumn]
   
@@ -5625,6 +5606,25 @@ Text=N_D_MM
 [EndColumn]
   
 [Column]
+Width=62
+  
+[HeaderText]
+Position=0,0,62,24
+Text=N_C_MM
+ 
+[Field]
+Name=N_C_MM
+Position=25,0,54,20
+Item=N_C_MM,HHQ_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=TextBox
+  
+[Text]
+Text=N_C_MM
+ 
+[EndColumn]
+  
+[Column]
 Width=32
   
 [HeaderText]
@@ -5647,14 +5647,14 @@ Text=N_E
 Name=N_C
 Label=In a typical day during the last 7 days, how much time did the women 15 years and older involve in t
 DisplayTogether=Yes
-Position=3
+Position=2
 Length=2
   
 [Block]
 Name=N_D
 Label=How much of this time did the women 15 years and older spend after dark?
 DisplayTogether=Yes
-Position=6
+Position=5
 Length=2
   
 [EndGrid]

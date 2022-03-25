@@ -493,18 +493,16 @@ PROC AC4
 
 onfocus
 
-	if getlanguage() = "EN" and theCountry = "TZ" then
+	if getlanguage() = "EN" and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "TZ" then
-		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and theCountry = "MZ" then
+	elseif getlanguage() = "PT" and theCountry = "MZ" then
+{		setvalueset($,EDUC_TZ);
+	elseif getlanguage() = "EN"  and theCountry = "TZ" then
 		setvalueset($,EDUC_EN_MZ);
-	elseif getlanguage() = "PT"  and theCountry = "MZ" then
+	elseif getlanguage() = "SW"  and theCountry = "TZ" then
 		setvalueset($,EDUC_MZ);
+		}
 	endif;
-
-
-
 PROC AC5
 
 	if $ > AB5 or $ < AB5 - 1 then
@@ -545,7 +543,7 @@ PROC AC8
 onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,EDUC_EN_TZ);
+//		setvalueset($,EDUC_EN_TZ);
 	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);
 	elseif getlanguage() = "EN"  and theCountry = "MZ" then
@@ -567,7 +565,7 @@ PROC AC9
 onfocus
 
 	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,EDUC_EN_TZ);
+//		setvalueset($,EDUC_EN_TZ);
 
 	elseif getlanguage() = "SW" and theCountry = "TZ" then
 		setvalueset($,EDUC_TZ);

@@ -1152,7 +1152,7 @@ DataType=Numeric
 [ValueSet]
 Label=Main source enegy cooking|Principal fonte de energia do seu AF para cozinhar
 Name=B14_VS1
-Value=1;Electricity (TANESCO)|Lenha colectada|Umeme (TANESCO)
+Value=1;Electricity (TANESCO)|Electricidade (EDM)|Umeme (TANESCO)
 Value=2;Solar|Solar|Umeme Jua
 Value=3;Generator/Private Source|Gerador/Fonte Privada|Jenereta/Chanzo binafsi
 Value=4;Cooking Gas|Gás de cozinha|Gesi ya kupikia/LPG (Gesi ya Mitungi)
