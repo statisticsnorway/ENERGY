@@ -1239,7 +1239,7 @@ postproc
 							+ ".csdb";
 
 			setFile(SAMPLING_DICT, sampleFileName);
-			errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
+			//errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
 			numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
 						and SA1 = visualValue(M_REGION) 
 						and SA2 = visualValue(M_DISTRICT)
