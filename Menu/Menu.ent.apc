@@ -1229,6 +1229,17 @@ postproc
 		numeric ok = syncGetSample();
 		//errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
 		if ok = 1 then
+			string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+
+			setFile(SAMPLING_DICT, sampleFileName);
+			errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
 			numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
 						and SA1 = visualValue(M_REGION) 
 						and SA2 = visualValue(M_DISTRICT)
@@ -1237,7 +1248,7 @@ postproc
 						and SA5 = visualvalue(M_VILLAGE)
 						and SA6 = visualValue(M_EA));
 				
-			errmsg(tr(13), numCases);
+			errmsg(tr(13));
 		else
 			errmsg(tr(14));
 		endif;
