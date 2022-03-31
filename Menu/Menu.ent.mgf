@@ -246,3 +246,6 @@ PT(62) Nenhum arquivo de amostra existe para este EA. Por favor, sincronize com 
 EN(63) A sample file for this EA already exists. Delete it to receive a new?
 SW(63) Sampuli ya faili ya EA hii tayari ipo. Uifute ili upokee mpya?
 PT(63) Já existe um arquivo de amostra para este EA. Excluí-lo para receber um novo?
+
+EN(64) Your country settings are for Norway. Please correct
+PT(64) Corrigir o pais para NOROEGA. Por favor corrija.

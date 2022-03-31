@@ -158,10 +158,11 @@ PROC GLOBAL
 		
 		
 		if theCountry = "NO" then
-			errmsg("Ingen kart for Norge. Bruk google maps!");
+			//errmsg("Ingen kart for Norge. Bruk google maps!");
 		else
+			//errmsg("url: " + syncUrl);
 			if syncconnect(CSWeb, syncUrl) = 1 then
-				numeric syncRes = syncFile(GET, "/energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
+				numeric syncRes = syncFile(GET, "/Energy/Maps/" + mapFileName, "../Maps/" + mapFileName);
 				if syncRes = 0 then
 					errmsg(tr(39));
 				endif;
@@ -237,10 +238,17 @@ PROC GLOBAL
 			intNum = 5;
 		endif;
 		
-		//errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
+		errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
 		
 		numeric sf;
 		
+		//Just making sure that the regions variables are ok too
+		if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT) = NOTAPPL 
+					or visualValue(M_SUBDISTRICT) = NOTAPPL or visualValue(M_LOCALITY) = NOTAPPL 
+					or visualValue(M_VILLAGE) = NOTAPPL or visualValue(M_EA) = NOTAPPL then
+			errmsg(tr(46));
+			reenter M_SUPERMENU;
+		endif;
 		string sampleFileName = "../Data/Sample_" 
 							+ edit("99", visualValue(M_REGION)) 
 							+ edit("99", visualValue(M_DISTRICT)) 
@@ -249,12 +257,12 @@ PROC GLOBAL
 							+ edit("99", visualValue(M_VILLAGE)) 
 							+ edit("999", visualValue(M_EA))
 							+ ".csdb";
-		if fileexist(sampleFileName) then
+		if fileExist(sampleFileName) then
 			sf = setFile(SAMPLING_DICT, sampleFileName);
 		else
 			sf = setFile(SAMPLING_DICT, sampleFileName, create);
 		endif;
-		//errmsg("Setfile? %d (should be 1) ", sf);
+		errmsg("Setfile? %d (should be 1) ", sf);
 				
 		
 		//Then do the actual sample process. Finding where to start and distance between
@@ -277,7 +285,7 @@ PROC GLOBAL
 		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
 		numeric currCount = 0;
 		numeric idx = 0;
-		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+		errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
 							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -389,7 +397,7 @@ PROC GLOBAL
 			endif;
 		endfor;
 		
-		//errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
+		errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
 	 end;
 
 	
@@ -485,7 +493,7 @@ PROC GLOBAL
 			//no data
 			errmsg(tr(61));
 		endif;
-		//errmsg("All done. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
+		errmsg("All done setting interviewers. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
 		
 		{//old version  - the else statement above
 				if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then //already registered
@@ -518,7 +526,7 @@ PROC GLOBAL
 				setEnumerators = 20;
 			endif;
 		endif;
-		//errmsg("u/r: %d, #int: %d", visualValue(M_URBAN_RURAL), numOfInterviewers);
+		errmsg("u/r: %d, #int: %d", visualValue(M_URBAN_RURAL), numOfInterviewers);
 	end;
 
 
@@ -529,10 +537,21 @@ PROC GLOBAL
 		//Reset the variables keeping track of number of households assigned to interviewers and get the sample size
 		//which is dependent on the number of interviewers as well as urban/rural
 		tabletCount.clear();
+		string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+		close(SAMPLING_DICT);
+		numeric fd = filedelete(sampleFileName);
+		errmsg("filename: %s, FileDelete: %d (should be 1", sampleFileName, fd);
 		numeric sampleSize = setEnumerators();
-		//errmsg("%s, %s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), 
-		//		tabletCount(4,1), tabletCount(5,1));
-		//errmsg("About to sample %d", sampleSize);
+		errmsg("%s, %s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), 
+				tabletCount(4,1), tabletCount(5,1));
+		errmsg("About to sample %d", sampleSize);
 		
 		
 		//Analysis of the listed cases
@@ -939,7 +958,7 @@ PROC GLOBAL
 			numeric del = filedelete("../Maps/*.mbtiles");
 		endif;
 		if theCountry = "NO" then
-			errmsg("Ingen kart for Norge. Bruk google maps!");
+			errmsg(tr(64));
 		else			
 			if visualValue(M_REGION) = NOTAPPL or visualValue(M_REGION) = DEFAULT or visualValue(M_DISTRICT) = NOTAPPL or visualValue(M_DISTRICT) = DEFAULT then
 				errmsg(tr(46));
@@ -997,17 +1016,22 @@ PROC MENU_QUEST_FORM
 onfocus
 	//Getting the right country and server name
 	theCountry = loadsetting("Country");
+	if theCountry = "TZ" then
+		theCountry = "";
+	endif;
 	if theCountry = "" then
 		setCountry();
 	endif;
 	
 	COUNTRY = theCountry;
+	//errmsg("Country: %s", theCountry);
 	if loadcase(COUNTRYVARIABLES_DICT, COUNTRY) then
 		syncUrl = SERVER;
 	else
 		errmsg(tr(2));
 		stop();
 	endif;
+	//errmsg("Server: %s", syncUrl);
 	
 //Just for checking if all map files are available.NB: Only to be used from PC - not tablets. Comment away when not in use
 {
