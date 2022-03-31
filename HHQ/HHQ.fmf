@@ -14,18 +14,10 @@ Name=FORM000
 Label=Interview particulars
 QuestionTextHeight=153
 Level=1
-Size=842,940
+Size=875,940
   
 Item=AA14
-Item=ADDRESS_LOCATION
-Item=AA1
-Item=AA2
-Item=AA3
-Item=AA6
 Item=AA8
-Item=AALOGIN
-Item=AA7
-Item=AA7A
 Item=AA7B
 Item=AA9
 Item=AA10
@@ -38,8 +30,16 @@ Item=AA16
 Item=AA17
 Item=AA18
 Item=HHNAMES
-Item=AA5
+Item=AA1
+Item=AA2
+Item=AA3
 Item=AA4
+Item=AA5
+Item=AA6
+Item=AALOGIN
+Item=ADDRESS_LOCATION
+Item=AA7
+Item=AA7A
 Item=AA9A
   
 [EndForm]
@@ -657,7 +657,7 @@ Name=FORM030
 Label=AA - Interview particulars. End of quest
 QuestionTextHeight=70
 Level=1
-Size=548,251
+Size=548,277
   
 Item=AA20
 Item=AA21D
@@ -678,119 +678,111 @@ Max=1
   
 [Field]
 Name=AA1
-Position=178,19,207,39
+Position=133,23,162,43
 Item=AA1,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=20,22,45,38
+Position=52,26,77,42
 Text=AA1
  
   
 [Field]
 Name=AA2
-Position=178,49,207,69
+Position=133,53,162,73
 Item=AA2,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=20,52,45,68
+Position=52,56,77,72
 Text=AA2
  
   
 [Field]
 Name=AA3
-Position=178,79,221,99
+Position=133,83,176,103
 Item=AA3,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=20,82,45,98
+Position=52,86,77,102
 Text=AA3
  
   
 [Field]
 Name=AA4
-Position=193,116,222,136
+Position=133,113,162,133
 Item=AA4,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=19,119,44,135
+Position=52,116,77,132
 Text=AA4
  
   
 [Field]
 Name=AA5
-Position=171,162,200,182
+Position=133,143,162,163
 Item=AA5,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=13,166,38,182
+Position=52,146,77,162
 Text=AA5
  
   
 [Field]
 Name=AA6
-Position=171,202,214,222
+Position=133,173,176,193
 Item=AA6,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=13,205,38,221
+Position=52,176,77,192
 Text=AA6
  
   
 [Field]
 Name=AA7
-Position=171,231,186,251
+Position=144,202,159,222
 Item=AA7,HHQ_DICT
-FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=13,232,38,248
+Position=55,207,80,223
 Text=AA7
  
   
 [Field]
 Name=AA8
-Position=170,259,213,279
+Position=178,231,221,251
 Item=AA8,HHQ_DICT
 FieldLabelType=DictionaryName
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=10,262,35,278
+Position=18,234,43,250
 Text=AA8
  
   
 [Field]
 Name=AALOGIN
-Position=569,184,779,204
+Position=531,171,741,191
 Item=AALOGIN,HHQ_DICT
-FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=405,189,464,205
+Position=450,174,509,190
 Text=AALOGIN
  
   
@@ -810,30 +802,27 @@ Text=AA14
   
 [Field]
 Name=ADDRESS_LOCATION
-Position=567,65,817,85
+Position=600,72,850,92
 Item=ADDRESS_LOCATION,HHQ_DICT
-FieldLabelType=DictionaryName
 UseUnicodeTextBox=Yes
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=409,67,545,83
+Position=435,75,571,91
 Text=ADDRESS_LOCATION
  
   
 [Field]
 Name=AA7A
-Position=169,326,310,346
+Position=221,319,362,339
 Item=AA7A,HHQ_DICT
 Protected=Yes
-ValidationMethod=NoConfirm
-FieldLabelType=DictionaryName
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=101,329,135,345
+Position=111,322,145,338
 Text=AA7A
  
   
@@ -868,7 +857,7 @@ Text=AA9
   
 [Field]
 Name=AA9A
-Position=238,422,312,442
+Position=153,424,227,444
 Item=AA9A,HHQ_DICT
 Protected=Yes
 UseUnicodeTextBox=Yes
@@ -876,8 +865,8 @@ DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=64,425,209,441
-Text=Start Time of interview
+Position=27,427,61,443
+Text=AA9A
  
   
 [Field]
@@ -8233,7 +8222,7 @@ Text=AA20
   
 [Field]
 Name=AA21D
-Position=210,168,300,188
+Position=161,181,251,201
 Item=AA21D,HHQ_DICT
 Protected=Yes
 UseUnicodeTextBox=Yes
@@ -8241,13 +8230,13 @@ DataCaptureType=TextBox
 Form=26
   
 [Text]
-Position=47,171,183,187
-Text=End Date of Interview
+Position=51,184,92,200
+Text=AA21D
  
   
 [Field]
 Name=AA21T
-Position=213,206,287,226
+Position=209,232,283,252
 Item=AA21T,HHQ_DICT
 Protected=Yes
 UseUnicodeTextBox=Yes
@@ -8255,8 +8244,8 @@ DataCaptureType=TextBox
 Form=26
   
 [Text]
-Position=48,209,187,225
-Text=End Time of Interview
+Position=83,235,123,251
+Text=AA21T
  
 [EndGroup]
   
