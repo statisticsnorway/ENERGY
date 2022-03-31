@@ -30,6 +30,101 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
+  - name: HHQ_DICT.AA1
+    conditions:
+      - questionText:
+          EN: |
+            Region<p></p>
+          PT: |
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Provincia&#160;</span></p>
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA2
+    conditions:
+      - questionText:
+          EN: |
+            District<p></p>
+          PT: |
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Distrito&#160;</span></p>
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA3
+    conditions:
+      - questionText:
+          EN: |
+            Sub-district<p></p>
+          PT: |
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Posto administrativo&#160;</span></p>
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA4
+    conditions:
+      - questionText:
+          EN: |
+            Locality<p></p>
+          PT: |
+            Localidade<p></p>
+  - name: HHQ_DICT.AA5
+    conditions:
+      - questionText:
+          EN: |
+            Village<p></p>
+          PT: |
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Localidade/Bairro/Municipio/Cidade&#160;</span></p>
+          SW: |
+            
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA6
+    conditions:
+      - questionText:
+          EN: |
+            <p>AE</p>
+          PT: |
+            <p style="margin-top:5pt;margin-bottom:5pt;"><font face="Arial, sans-serif">AE</font></p>
+            <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
+            <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
+            <p>&nbsp;</p>
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Utambulisho wa Eneo la kuhesabia &#160;</span></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA7
+    conditions:
+      - questionText:
+          EN: |
+            Urban/Rural<p></p>
   - name: HHQ_DICT.AA8
     conditions:
       - questionText:
@@ -46,6 +141,13 @@ questions:
             
           SW: |
             
+  - name: HHQ_DICT.AALOGIN
+    conditions:
+      - questionText:
+          EN: |
+            Login<p></p>
+          PT: |
+            Iniciar<p></p>
   - name: HHQ_DICT.AA14
     conditions:
       - questionText:
@@ -54,11 +156,47 @@ questions:
             <p style="margin-top:5pt;margin-bottom:5pt;"><span style="color: rgb(0, 0, 255);">The head of the household should be decided by the household members at the start of the interview. Should be 15 years old or more. Only one head per household.</span><br></p>
             <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
           PT: |
-            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Gostaria de saber o nome do Chefe do Agregado familiar?&nbsp;</span></p>
+            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Gostaria de saber o nome do chefe do Agregado familiar?&nbsp;</span></p>
             <p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Quem é o chefe do agregado famíliar, deve ser decidido pelos membros do agregado famíliar no início da entrevista. Deve ter 15 anos ou mais. Apenas uma pessoa por agregado familiar.&nbsp;</span></p>
             <p>&nbsp;</p>
           SW: |
             <p><span style="font-size:16px;color:#000000;">Je, mkuu wa kaya hii anaitwa nani?&#160;</span></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.ADDRESS_LOCATION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">What is the address?&#160;</span></p>
+          PT: |
+            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o seu Endereço / Localização?&nbsp;</span></p>
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Nini Anuani ya eneo kaya ilipo?&#160;</span></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.AA7A
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">South Coordinate&#160;</span></p>
+            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">(Decimal Degrees of GPS reading)&#160;</span></p>
+            <p>&#160;</p>
+          PT: |
+            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">Coodenada sul&#160;</span></p>
+            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">(Graus Decimais de leitura GPS)&#160;</span></p>
+            <p>&#160;</p>
+          SW: |
+            <p><span style="font-size:16px;color:#000000;">Vipimo vya GPS vya Kaskazini (latitudes)&#160;</span></p>
         helpText:
           EN: |
             
@@ -3440,72 +3578,6 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.D1
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Would you be able to pay <span style="color:#008000;">~~CF~~</span> upfront for an electricity connection?&#160;</span></p>
-          PT: |
-            <p><span style="font-family: Arial, sans-serif;">Você estaria disposto</span><font face="Arial, sans-serif">&nbsp;a pagar&nbsp;</font><span style="font-family: Arial, sans-serif; color: rgb(0, 0, 255);">~~CF~~</span><span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif;">&nbsp;antecipadamente por uma ligação eléctrica?&nbsp;&nbsp;</span><br></p>
-          SW: |
-            <p><span style="font-size:16px;color:#0000ff;">"Umeme unahitaji aina kadhaa za malipo. Kuna sehemu tatu katika gharama za umeme: kuunganisha, waya, na matumizi ya kila mwezi." Kwa maneno mengine, kutumia meme unahitaji kuwa na waya kutoka mita moja hadi nyumba. Hiyo ni uhusiano.Unahitaji pia kuwa na waya kuunganisha vifaa ndani ya nyumba yako kwa mita.Hii ni wiring.Kisha hatimaye, kuendelea kutumia umeme unapaswa kulipa kwa kile kinachotumiwa na kupimwa na mita, au kitageuka mbali, hii ni gharama ya matumizi ya kila mwezi Napenda kukuuliza maswali tu juu ya gharama ya kwanza ya kuunganisha - kupata waya kutoka kwa miti ya umeme hadi mita kwenye nyumba yako. &nbsp;</span></p>
-            <p><span style="font-size:16px;color:#0000ff;">Ikiwa ungeweza kulipa "bei ya jumla" ya kuunganisha umeme, kwa maneno mengine, hutolewa bei na muda wa kuamua ikiwa utachukua bei hii. Ikiwa unapoamua kuchukua bei, unapaswa kulipa mara moja, baada ya hapo unaunganishwa. Unapojibu maswali machache yafuatayo, fikiria kuwa ada zote za wiring na ada za huduma za kila mwezi kwa  kutumia umeme, unapokuwa na uunganisho, unabaki sawa na wao sasa.&nbsp;</span></p>
-            <p>Je, Unaweza kulipa&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;mwanzoni ili uweze kuunganishiwa umeme?<br></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.D2
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Would you be able to pay <span style="color:#008000;">~~CF~~</span> for an electricity connection, if you were given 12 months to make the payment? &#160;</span></p>
-          PT: |
-            <p><span style="font-family: Arial, sans-serif; font-size: 16px;">Você estaria disposto</span><font face="Arial, sans-serif"><span style="font-size: 20px;"><span style="font-size: 16px;">&nbsp;a pagar&nbsp;</span></span></font><font color="#0000ff">~~CF~~</font><font face="Arial, sans-serif"><span style="font-size: 20px;"><span style="font-size: 16px;">&nbsp;por uma ligação eléctrica, se lhe fosse dado 12 meses para fazer o pagamento?</span>&nbsp;&nbsp;</span></font><br></p>
-          SW: |
-            <p>Je, Unaweza kulipa&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;kwaajili ya kuunganishiwa&nbsp; umeme, kama ungepewa miezi 12 ya kufanya malipo?<br></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.D3
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Would you be interested in getting a grid connection if you could get connected for free?&#160;</span></p>
-          PT: |
-            <p><span style="font-family: Arial, sans-serif;"><span style="font-size: 16px;">Você&nbsp;</span>staria interessado em obter uma ligação de rede eléctrica se pudesse ligar-se gratuitamente?&nbsp;</span><br></p>
-          SW: |
-            <p>Je, Utavutiwa kuunganishwa kwenye gridi iwapo&nbsp; ungeunganishwa bure?<br></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.D4
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;">Why not?&#160;</span></p>
-          PT: |
-            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Porque não</span></font><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">&nbsp;você não aceitaria?&nbsp;</span></p>
-          SW: |
-            <p>Kwa nini isiwe hivyo?<br></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.E1
     conditions:
       - questionText:
@@ -5498,22 +5570,6 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.N_A
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many women 15 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span> the last 7 days?&nbsp;</span></p>
-          PT: |
-            Nos últimos 7 dias, quantas mulheres com 15 anos ou mais estiveram envolvidas a&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><p></p>
-          SW: |
-            Ni wanawake wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>&nbsp;katika siku 7 zilizopita?<p></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
   - name: HHQ_DICT.N_B
     conditions:
       - questionText:
@@ -5558,15 +5614,15 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.N_C_MM
+  - name: HHQ_DICT.N_A
     conditions:
       - questionText:
           EN: |
-            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Minutes&#160;</span></p>
+            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">How many women 15 years and older have been involved in <span style="color:#008000;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span> the last 7 days?&nbsp;</span></p>
           PT: |
-            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Minutos&nbsp;</span><p></p>
+            Nos últimos 7 dias, quantas mulheres com 15 anos ou mais estiveram envolvidas a&nbsp;<span style="font-family: Arial, sans-serif; color: rgb(0, 128, 0);">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span><p></p>
           SW: |
-            Dakika<p></p>
+            Ni wanawake wangapi wenye miaka 15 na zaidi wamehusika katika&nbsp;<span style="color: rgb(0, 128, 0); font-family: Arial, sans-serif;">~~getLabel(N_ACTIVITY_WOMEN, curocc())~~</span>&nbsp;katika siku 7 zilizopita?<p></p>
         helpText:
           EN: |
             
@@ -5608,6 +5664,22 @@ questions:
           EN: |
             <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Minutes&#160;</span></p>
             <p>&#160;</p>
+          PT: |
+            <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Minutos&nbsp;</span><p></p>
+          SW: |
+            Dakika<p></p>
+        helpText:
+          EN: |
+            
+          PT: |
+            
+          SW: |
+            
+  - name: HHQ_DICT.N_C_MM
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#0000ff;font-family:'Arial', sans-serif;">Minutes&#160;</span></p>
           PT: |
             <span style="color: rgb(0, 0, 255); font-family: Arial, sans-serif;">Minutos&nbsp;</span><p></p>
           SW: |
@@ -7458,15 +7530,17 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.AA1
+  - name: HHQ_DICT.D1
     conditions:
       - questionText:
           EN: |
-            Region<p></p>
+            <p><span style="font-size:16px;color:#000000;">Would you be able to pay <span style="color:#008000;">~~CF~~</span> upfront for an electricity connection?&#160;</span></p>
           PT: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Provincia&#160;</span></p>
+            <p><span style="font-family: Arial, sans-serif;">Você estaria disposto</span><font face="Arial, sans-serif">&nbsp;a pagar&nbsp;</font><span style="font-family: Arial, sans-serif; color: rgb(0, 0, 255);">~~CF~~</span><span style="font-family: Arial, sans-serif;">&nbsp;</span><span style="font-family: Arial, sans-serif;">&nbsp;antecipadamente por uma ligação eléctrica?&nbsp;&nbsp;</span><br></p>
           SW: |
-            
+            <p><span style="font-size:16px;color:#0000ff;">"Umeme unahitaji aina kadhaa za malipo. Kuna sehemu tatu katika gharama za umeme: kuunganisha, waya, na matumizi ya kila mwezi." Kwa maneno mengine, kutumia meme unahitaji kuwa na waya kutoka mita moja hadi nyumba. Hiyo ni uhusiano.Unahitaji pia kuwa na waya kuunganisha vifaa ndani ya nyumba yako kwa mita.Hii ni wiring.Kisha hatimaye, kuendelea kutumia umeme unapaswa kulipa kwa kile kinachotumiwa na kupimwa na mita, au kitageuka mbali, hii ni gharama ya matumizi ya kila mwezi Napenda kukuuliza maswali tu juu ya gharama ya kwanza ya kuunganisha - kupata waya kutoka kwa miti ya umeme hadi mita kwenye nyumba yako. &nbsp;</span></p>
+            <p><span style="font-size:16px;color:#0000ff;">Ikiwa ungeweza kulipa "bei ya jumla" ya kuunganisha umeme, kwa maneno mengine, hutolewa bei na muda wa kuamua ikiwa utachukua bei hii. Ikiwa unapoamua kuchukua bei, unapaswa kulipa mara moja, baada ya hapo unaunganishwa. Unapojibu maswali machache yafuatayo, fikiria kuwa ada zote za wiring na ada za huduma za kila mwezi kwa  kutumia umeme, unapokuwa na uunganisho, unabaki sawa na wao sasa.&nbsp;</span></p>
+            <p>Je, Unaweza kulipa&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;mwanzoni ili uweze kuunganishiwa umeme?<br></p>
         helpText:
           EN: |
             
@@ -7474,15 +7548,15 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.AA2
+  - name: HHQ_DICT.D2
     conditions:
       - questionText:
           EN: |
-            District<p></p>
+            <p><span style="font-size:16px;color:#000000;">Would you be able to pay <span style="color:#008000;">~~CF~~</span> for an electricity connection, if you were given 12 months to make the payment? &#160;</span></p>
           PT: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Distrito&#160;</span></p>
+            <p><span style="font-family: Arial, sans-serif; font-size: 16px;">Você estaria disposto</span><font face="Arial, sans-serif"><span style="font-size: 20px;"><span style="font-size: 16px;">&nbsp;a pagar&nbsp;</span></span></font><font color="#0000ff">~~CF~~</font><font face="Arial, sans-serif"><span style="font-size: 20px;"><span style="font-size: 16px;">&nbsp;por uma ligação eléctrica, se lhe fosse dado 12 meses para fazer o pagamento?</span>&nbsp;&nbsp;</span></font><br></p>
           SW: |
-            
+            <p>Je, Unaweza kulipa&nbsp;<span style="color: rgb(0, 128, 0);">~~CF~~</span>&nbsp;kwaajili ya kuunganishiwa&nbsp; umeme, kama ungepewa miezi 12 ya kufanya malipo?<br></p>
         helpText:
           EN: |
             
@@ -7490,15 +7564,15 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.AA3
+  - name: HHQ_DICT.D3
     conditions:
       - questionText:
           EN: |
-            Sub-district<p></p>
+            <p><span style="font-size:16px;color:#000000;">Would you be interested in getting a grid connection if you could get connected for free?&#160;</span></p>
           PT: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Posto administrativo&#160;</span></p>
+            <p><span style="font-family: Arial, sans-serif;"><span style="font-size: 16px;">Você&nbsp;</span>staria interessado em obter uma ligação de rede eléctrica se pudesse ligar-se gratuitamente?&nbsp;</span><br></p>
           SW: |
-            
+            <p>Je, Utavutiwa kuunganishwa kwenye gridi iwapo&nbsp; ungeunganishwa bure?<br></p>
         helpText:
           EN: |
             
@@ -7506,89 +7580,15 @@ questions:
             
           SW: |
             
-  - name: HHQ_DICT.AA4
+  - name: HHQ_DICT.D4
     conditions:
       - questionText:
           EN: |
-            Locality<p></p>
+            <p><span style="font-size:16px;color:#000000;">Why not?&#160;</span></p>
           PT: |
-            Localidade<p></p>
-  - name: HHQ_DICT.AA5
-    conditions:
-      - questionText:
-          EN: |
-            Village<p></p>
-          PT: |
-            <p><span style="font-size:16px;color:#000000;font-family:'Arial', sans-serif;">Localidade/Bairro/Municipio/Cidade&#160;</span></p>
+            <p><font face="Arial, sans-serif"><span style="font-size: 16px;">Porque não</span></font><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">&nbsp;você não aceitaria?&nbsp;</span></p>
           SW: |
-            
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.AA6
-    conditions:
-      - questionText:
-          EN: |
-            <p>AE</p>
-          PT: |
-            <p style="margin-top:5pt;margin-bottom:5pt;"><font face="Arial, sans-serif">AE</font></p>
-            <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
-            <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
-            <p>&nbsp;</p>
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Utambulisho wa Eneo la kuhesabia &#160;</span></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.AA7
-    conditions:
-      - questionText:
-          EN: |
-            Urban/Rural<p></p>
-  - name: HHQ_DICT.AA7A
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">South Coordinate&#160;</span></p>
-            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">(Decimal Degrees of GPS reading)&#160;</span></p>
-            <p>&#160;</p>
-          PT: |
-            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">Coodenada sul&#160;</span></p>
-            <p><span style="font-size:13px;color:#008000;font-family:'Times New Roman';">(Graus Decimais de leitura GPS)&#160;</span></p>
-            <p>&#160;</p>
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Vipimo vya GPS vya Kaskazini (latitudes)&#160;</span></p>
-        helpText:
-          EN: |
-            
-          PT: |
-            
-          SW: |
-            
-  - name: HHQ_DICT.AALOGIN
-    conditions:
-      - questionText:
-          EN: |
-            Login<p></p>
-          PT: |
-            Iniciar<p></p>
-  - name: HHQ_DICT.ADDRESS_LOCATION
-    conditions:
-      - questionText:
-          EN: |
-            <p><span style="font-size:20px;color:#000000;font-family:'Arial', sans-serif;">What is the address?&#160;</span></p>
-          PT: |
-            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Qual é o seu Endereço / Localização?&nbsp;</span></p>
-          SW: |
-            <p><span style="font-size:16px;color:#000000;">Nini Anuani ya eneo kaya ilipo?&#160;</span></p>
+            <p>Kwa nini isiwe hivyo?<br></p>
         helpText:
           EN: |
             
