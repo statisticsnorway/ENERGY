@@ -238,7 +238,7 @@ PROC GLOBAL
 			intNum = 5;
 		endif;
 		
-		errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
+		//errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
 		
 		numeric sf;
 		
@@ -262,7 +262,7 @@ PROC GLOBAL
 		else
 			sf = setFile(SAMPLING_DICT, sampleFileName, create);
 		endif;
-		errmsg("Setfile? %d (should be 1) ", sf);
+		//errmsg("Setfile? %d (should be 1) ", sf);
 				
 		
 		//Then do the actual sample process. Finding where to start and distance between
@@ -285,7 +285,7 @@ PROC GLOBAL
 		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
 		numeric currCount = 0;
 		numeric idx = 0;
-		errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
 							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -397,7 +397,7 @@ PROC GLOBAL
 			endif;
 		endfor;
 		
-		errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
+		//errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
 	 end;
 
 	
@@ -493,7 +493,7 @@ PROC GLOBAL
 			//no data
 			errmsg(tr(61));
 		endif;
-		errmsg("All done setting interviewers. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
+		//errmsg("All done setting interviewers. Ctr: %d, numOfInter: %d", ctr, numOfInterviewers);		
 		
 		{//old version  - the else statement above
 				if tabletCount(j-1,1) = tolower(tStrip(LLOGIN)) then //already registered
@@ -526,7 +526,7 @@ PROC GLOBAL
 				setEnumerators = 20;
 			endif;
 		endif;
-		errmsg("u/r: %d, #int: %d", visualValue(M_URBAN_RURAL), numOfInterviewers);
+		//errmsg("u/r: %d, #int: %d", visualValue(M_URBAN_RURAL), numOfInterviewers);
 	end;
 
 
@@ -547,11 +547,11 @@ PROC GLOBAL
 							+ ".csdb";
 		close(SAMPLING_DICT);
 		numeric fd = filedelete(sampleFileName);
-		errmsg("filename: %s, FileDelete: %d (should be 1", sampleFileName, fd);
+		//errmsg("filename: %s, FileDelete: %d (should be 1", sampleFileName, fd);
 		numeric sampleSize = setEnumerators();
-		errmsg("%s, %s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), 
-				tabletCount(4,1), tabletCount(5,1));
-		errmsg("About to sample %d", sampleSize);
+		//errmsg("%s, %s, %s, %s, %s", tabletCount(1,1), tabletCount(2,1), tabletCount(3,1), 
+		//		tabletCount(4,1), tabletCount(5,1));
+		//errmsg("About to sample %d", sampleSize);
 		
 		
 		//Analysis of the listed cases
