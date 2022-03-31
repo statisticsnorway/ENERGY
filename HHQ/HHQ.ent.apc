@@ -78,6 +78,126 @@ end;
 
 
 
+PROC AA1
+
+preproc
+
+	$ = toNumber(sysparm("REGION"));
+	noinput;
+
+
+
+PROC AA2
+
+preproc
+
+	$ = toNumber(sysparm("DISTRICT"));
+	noInput;
+
+
+
+PROC AA21D
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC AA21T
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
+PROC AA3
+
+preproc
+
+	$ = toNumber(sysparm("SUBDISTRICT"));
+	noinput;
+
+
+
+PROC AA4
+
+preproc
+
+	$ = toNumber(sysparm("LOCALITY"));
+	noinput;
+
+
+PROC AA5
+
+preproc
+
+	$ = toNumber(sysparm("VILLAGE"));
+	noinput;
+
+
+
+
+PROC AA6
+
+preproc
+
+	$ = toNumber(sysparm("EA"));
+	noinput;
+
+
+
+PROC AA7
+
+preproc
+
+	$ = toNumber(sysparm("URBANRURAL"));
+	noinput;
+
+
+PROC AA9A
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
+PROC AALOGIN
+
+preproc
+
+	$ = sysparm("LOGIN");
+	noinput;
+
+
+
+PROC ADDRESS_LOCATION
+
+preproc
+
+	noinput;
+
+postproc
+
+	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
+	if isPartial() then
+
+		//Need to find the name of the current respondent if we're still in the personal section.
+		//Starting from scratch with he current person. Need to find the number of him/her
+		string currentField = getSymbol(savepartial);
+		
+		//"Special" skips
+		if currentField in "K1", "K2", "K3", "K4" then
+			advance to K1;
+		elseif currentField in "E1", "E2", "E3" then
+			advance to E1;
+		elseif currentField in "G2B", "G2C" then
+			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
+			numeric ptr = 4;
+			while ptr >= 1 do
+				if visualValue(G2B(ptr)) <> NOTAPPL then
+					break;
+				endif;
+				ptr = ptr - 1;
+			enddo;
+			advance to G2A(ptr);
+
+		else	//general skip!
+			advance to getsymbol(savePartial);
+		endif;
+	endif;
+
+
 PROC HHQ_FF
 
 
@@ -123,83 +243,12 @@ postproc
 
 
 
-PROC AA1
-
-preproc
-
-	$ = toNumber(sysparm("REGION"));
-	noinput;
-
-
-
-PROC AA2
-
-preproc
-
-	$ = toNumber(sysparm("DISTRICT"));
-	noInput;
-
-
-
-PROC AA3
-
-preproc
-
-	$ = toNumber(sysparm("SUBDISTRICT"));
-	noinput;
-
-
-
-PROC AA4
-
-preproc
-
-	$ = toNumber(sysparm("LOCALITY"));
-	noinput;
-
-
-PROC AA5
-
-preproc
-
-	$ = toNumber(sysparm("VILLAGE"));
-	noinput;
-
-
-
-
-PROC AA6
-
-preproc
-
-	$ = toNumber(sysparm("EA"));
-	noinput;
-
-
-
-PROC AA7
-
-preproc
-
-	$ = toNumber(sysparm("URBANRURAL"));
-	noinput;
-
-
 PROC AA8
 
 preproc
 
 	AA8 = toNumber(sysparm("SERIAL"));
 	noinput;
-
-
-PROC AALOGIN
-
-preproc
-
-	$ = sysparm("LOGIN");
-	noinput;
-
 
 
 PROC AA14
@@ -220,43 +269,6 @@ preproc
 	noInput;
 
 
-PROC ADDRESS_LOCATION
-
-preproc
-
-	noinput;
-
-postproc
-
-	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
-	if isPartial() then
-
-		//Need to find the name of the current respondent if we're still in the personal section.
-		//Starting from scratch with he current person. Need to find the number of him/her
-		string currentField = getSymbol(savepartial);
-		
-		//"Special" skips
-		if currentField in "K1", "K2", "K3", "K4" then
-			advance to K1;
-		elseif currentField in "E1", "E2", "E3" then
-			advance to E1;
-		elseif currentField in "G2B", "G2C" then
-			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
-			numeric ptr = 4;
-			while ptr >= 1 do
-				if visualValue(G2B(ptr)) <> NOTAPPL then
-					break;
-				endif;
-				ptr = ptr - 1;
-			enddo;
-			advance to G2A(ptr);
-
-		else	//general skip!
-			advance to getsymbol(savePartial);
-		endif;
-	endif;
-
-
 PROC AA9
 preproc
 	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
@@ -264,10 +276,6 @@ preproc
 
 
 
-PROC AA9A
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;
 PROC AA10
 
 preproc
@@ -483,11 +491,11 @@ onfocus
 		skip to next;
 	endif;
 
-	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,READ_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "TZ" then
-		setvalueset($,READ_TZ);
-	elseif getlanguage() = "EN"  and theCountry = "MZ" then
+//	if getlanguage() = "EN" and theCountry = "TZ" then
+//		setvalueset($,READ_EN_TZ);
+//	elseif getlanguage() = "SW" and theCountry = "TZ" then
+//		setvalueset($,READ_TZ);
+	if getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,READ_EN_MZ);
 	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,READ_MZ);
@@ -514,11 +522,11 @@ PROC AC4
 
 onfocus
 
-	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "MZ" then
-		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and theCountry = "MZ" then
+//	if getlanguage() = "EN" and theCountry = "TZ" then
+//		setvalueset($,EDUC_EN_TZ);
+//	elseif getlanguage() = "SW" and theCountry = "MZ" then
+//		setvalueset($,EDUC_TZ);
+	if getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
 	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
@@ -563,11 +571,11 @@ PROC AC8
 
 onfocus
 
-	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "TZ" then
-		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN"  and theCountry = "MZ" then
+//	if getlanguage() = "EN" and theCountry = "TZ" then
+//		setvalueset($,EDUC_EN_TZ);
+//	elseif getlanguage() = "SW" and theCountry = "TZ" then
+//		setvalueset($,EDUC_TZ);
+	if getlanguage() = "EN"  and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
 	elseif getlanguage() = "PT"  and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
@@ -585,11 +593,11 @@ PROC AC9
 
 onfocus
 
-	if getlanguage() = "EN" and theCountry = "TZ" then
-		setvalueset($,EDUC_EN_TZ);
-	elseif getlanguage() = "SW" and theCountry = "TZ" then
-		setvalueset($,EDUC_TZ);
-	elseif getlanguage() = "EN" and theCountry = "MZ" then
+//	if getlanguage() = "EN" and theCountry = "TZ" then
+//		setvalueset($,EDUC_EN_TZ);
+//	elseif getlanguage() = "SW" and theCountry = "TZ" then
+//		setvalueset($,EDUC_TZ);
+	if getlanguage() = "EN" and theCountry = "MZ" then
 		setvalueset($,EDUC_EN_MZ);
 	elseif getlanguage() = "PT" and theCountry = "MZ" then
 		setvalueset($,EDUC_MZ);
@@ -3351,11 +3359,3 @@ preproc
 	noinput;
 
 
-PROC AA21D
-preproc
-	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
-	noinput;
-PROC AA21T
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;
