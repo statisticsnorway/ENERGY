@@ -156,7 +156,7 @@ questions:
             <p style="margin-top:5pt;margin-bottom:5pt;"><span style="color: rgb(0, 0, 255);">The head of the household should be decided by the household members at the start of the interview. Should be 15 years old or more. Only one head per household.</span><br></p>
             <p style="margin-top:5pt;margin-bottom:5pt;">&nbsp;</p>
           PT: |
-            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Gostaria de saber o nome do chefe do Agregado familiar?&nbsp;</span></p>
+            <p><span style="font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Gostaria de saber o nome do Chefe do Agregado familiar?&nbsp;</span></p>
             <p style="margin-top:5pt;margin-bottom:5pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Quem é o chefe do agregado famíliar, deve ser decidido pelos membros do agregado famíliar no início da entrevista. Deve ter 15 anos ou mais. Apenas uma pessoa por agregado familiar.&nbsp;</span></p>
             <p>&nbsp;</p>
           SW: |
@@ -793,7 +793,7 @@ questions:
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;">Record 1 if less than 1&#160;</span></p>
             <p style="margin-bottom:8pt;">&#160;</p>
           PT: |
-            <p style="margin-bottom:8pt;"><font face="Arial, sans-serif">Há quantos anos agregado famíliar&nbsp;vive nesta comunidade?&nbsp;</font></p>
+            <p style="margin-bottom:8pt;"><font face="Arial, sans-serif">Há quantos anos o agregado famíliar&nbsp;vive nesta comunidade?&nbsp;</font></p>
             <p style="margin-bottom:8pt;"><span style="font-size:16px;color:#0000ff;font-family:'Arial';">Registe 1 se for menos de 1&nbsp;</span></p>
             <p style="margin-bottom:8pt;">&nbsp;</p>
           SW: |
