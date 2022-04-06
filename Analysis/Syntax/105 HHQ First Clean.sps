@@ -69,7 +69,6 @@ COMPUTE AA8new = AA8.
 FORMATS AA8new (F3.0).
 EXECUTE.
 
-
 *Impute possible missing AA8new serial number.
 *check.
 TEMPORARY.
@@ -140,7 +139,7 @@ VALUE LABELS Region
 "23" 23 Katavi
 "24" 24 Simiyu
 "25" 25 Geita
-"26" 26 RukwaSongwe.
+"26" 26 Songwe.
 VARIABLE LABELS District "District".
 VARIABLE LABELS Ward "Ward".
 VARIABLE LABELS Dummy "Dummy".
@@ -242,7 +241,7 @@ DELETE VARIABLES SUM_C TO SUM_GP.
 *Check.
 TEMPORARY.
 SELECT IF  (SYSMIS(SUM_AtoGP) = 1). 
-LIST REC_ID  AA8new AA9 AA14 AA18 AA7A SUM_AtoGP AALOGIN AB1$01 AB1$02.
+LIST REC_ID  GeoCodeEA AA8new AA9 AA14 AA18 AA7A SUM_AtoGP AALOGIN AB1$01 AB1$02.
 
 *Delete.
 SELECT IF
@@ -322,7 +321,8 @@ EXECUTE.
 
 *Step 1)  Renumber HH# for duplicates of the type 0-1 with both OK filled in (based on SUM_A (min sum50) and SUM_CtoGP(min sum10000) and keep the rest for further check...
 *Compare AA14tmp AA18tmp AA7Btmp. 
-SORT CASES BY GeocodeEA (A) AA8new (A) PFirst (D) PLast (A). 
+SORT CASES BY GeocodeEA (A) AA8new (A) PFirst (D) PLast (A).
+
 SET RNG=MC SEED=20220222.
 DO IF
      AA8new = LAG(AA8new, 1) AND
@@ -734,7 +734,7 @@ IMPUTATION OF HEAD/HEAD SEX/HEAD AGE.
 *Check start.
 FREQUENCIES AB3$01 AB3$02 AB3$03.
 
-*Step 1) Impute head if missings for head of household relationship.
+*Step 1) Impute head if missings for head of household relationship.and head 5 yeaars ago is given.
 DO IF 
     MISSING (AB3$01) = 1 AND (AB3B$01 = 1 OR  AB3B$01 = 2).
     COMPUTE AB3$01 = 1.
@@ -791,11 +791,11 @@ EXECUTE.
 *Check end.
 FREQUENCIES AB4$01.
 
-*Step 4) Impute age to head as 2 years older that spouse - a proxy..
+*Step 4a) Impute age to head as 2 years older that spouse - a proxy..
 *Check start..
 FREQUENCIES AB5$01.
 
-*Using person #2 in the household.
+*Looking for spouse Using person #2 in the household.
 DO IF  AB3$01 = 1 AND (MISSING(AB5$01)=1 OR AB5$01 < 12) AND AB3$02 = 2  AND AB5$02 GE 12.
     COMPUTE AB5$01 = ((AB5$02) + 2).
 END IF.
@@ -803,7 +803,7 @@ EXECUTE.
 *Check end.
 FREQUENCIES AB5$01.
 
-*If still missing - using person #3 in the household.
+*If still missing - looking for spouse using person #3 in the household.
 DO IF  AB3$01 = 1 AND (MISSING(AB5$01)=1 OR AB5$01 < 12) AND AB3$03 = 2  AND AB5$03 GE 12.
     COMPUTE AB5$01 = ((AB5$03) + 2).
 END IF.
@@ -811,9 +811,37 @@ EXECUTE.
 *Check end.
 FREQUENCIES AB5$01.
 
-*If still missing using person #4 in the household.
+*If still missing looking for spouse using person #4 in the household.
 DO IF  AB3$01 = 1 AND (MISSING(AB5$01)=1  OR AB5$01 < 12) AND AB3$04 = 2  AND AB5$04 GE 12.
     COMPUTE AB5$01 = ((AB5$04) + 2).
+END IF.
+EXECUTE.
+*Check end..
+FREQUENCIES AB5$01.
+
+*Step 4b) Impute age to head as 20 years older than child - a proxy..
+*Check start..
+FREQUENCIES AB5$01.
+
+*Looking for child Using person #2 in the household.
+DO IF  AB3$01 = 1 AND ( MISSING(AB5$01)=1 OR AB5$01 < 12 ) AND AB3$02 = 3  AND MISSING(AB5$02) = 0.
+    COMPUTE AB5$01 = ((AB5$02) + 20).
+END IF.
+EXECUTE.
+*Check end.
+FREQUENCIES AB5$01.
+
+*If still missing - looking for child using person #3 in the household.
+DO IF  AB3$01 = 1 AND ( MISSING(AB5$01)=1 OR AB5$01 < 12) AND AB3$03 = 3  AND MISSING(AB5$03) = 0.
+    COMPUTE AB5$01 = ((AB5$03) + 20).
+END IF.
+EXECUTE.
+*Check end.
+FREQUENCIES AB5$01.
+
+*If still missing using person #4 in the household.
+DO IF  AB3$01 = 1 AND ( MISSING(AB5$01)=1  OR AB5$01 < 12) AND AB3$04 = 3  AND MISSING(AB5$04) = 0.
+    COMPUTE AB5$01 = ((AB5$04) + 20).
 END IF.
 EXECUTE.
 *Check end..
@@ -831,18 +859,12 @@ EXECUTE.
 *String for HH serial number.
 STRING HH (A3).
 COMPUTE HH = STRING(AA8new,n3).
+VARIABLE LABELS HH "Household number".
 
 *Concat the geocode for HH.
 STRING  GeocodeHH (A17).
 COMPUTE GeocodeHH=CONCAT(Region, District, Ward, Dummy, Village, EA, HH).
 VARIABLE LABELS GeocodeHH "HH_Geocode".
-EXECUTE.
-
-*for userfriendliness.
-RENAME VARIABLES (AA7 = UrbRur).
-RENAME VARIABLES (AA9 = Date).
-RENAME VARIABLES (AA7A = Xcoord).
-RENAME VARIABLES (AA7B = Ycoord).
 EXECUTE.
 
 *Check.
@@ -856,47 +878,119 @@ MATCH FILES
 EXECUTE.
 *Check.
 FREQUENCIES PFirst50 PLast50.
-*************************************************************************************
-*Alternative last cleaning to be discussed.
 
-*Step 1) Check valid GeocodeEA with the GIS Catalogue (XLS).
+*for userfriendliness.
+RENAME VARIABLES (AA7 = UrbRur).
+RENAME VARIABLES (AA9 = Date).
+RENAME VARIABLES (AA7A = Ycoord).
+RENAME VARIABLES (AA7B = Xcoord).
+EXECUTE.
+
+*save temporary file and re-open.
+SAVE OUTFILE='tmp\HHQTZ_2b.sav'
+/KEEP ALL
+/COMPRESSED.
+
+OUTPUT CLOSE ALL.
+DATASET CLOSE ALL.
+EXECUTE.
+
+***********************************************************.
+*New step for v7 of the syntax - checking consistency of Geocode EA .
+*Based on manual check between GIS EAcodes, SamplingEA codes and data file EAcodes..
+
+*Open work file.
+*CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
+GET FILE='tmp\HHQTZ_2b.sav'.
+
+FREQUENCIES region GeocodeEA.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=GeocodeEA UrbRur DISPLAY=LABEL
+  /TABLE GeocodeEA BY UrbRur [COUNT F40.0]
+  /CATEGORIES VARIABLES=GeocodeEA ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+*Check this table manually against Bjørn smpling sheet xls and GIS catalogue.
+
+*List, rename (or delete) records with wrong GeocodeEA (not matching GIS and Sampling xls from Bjørn when manual check).
+TEMPORARY.
+SELECT IF  ( (GeocodeEA="01020531102013") OR (GeocodeEA="01020531102003") OR (GeocodeEA="07012521105011") OR (GeocodeEA="09050321101312")
+    OR (GeocodeEA="10032411103084") OR (GeocodeEA="10032411103003") OR (GeocodeEA="10030211101006") OR (GeocodeEA="14040231101001")
+    OR (GeocodeEA="14040231101003") OR (GeocodeEA="15361621112001") OR (GeocodeEA="16031131104001") OR (GeocodeEA="16011031103003")
+    OR (GeocodeEA="17041631104004") OR (GeocodeEA="17041631104002") OR (GeocodeEA="17021511101011") OR (GeocodeEA="17041631104001")
+    OR (GeocodeEA="17041631104003") OR (GeocodeEA="20061611105011") OR (GeocodeEA="20042011102001") OR (GeocodeEA="20042531101003")
+    OR (GeocodeEA="22031611104311") OR (GeocodeEA="24060911106010") OR (GeocodeEA="25012831102003") OR (GeocodeEA="26061531101075")
+    OR (GeocodeEA="26061531101003") ).
+LIST Rec_ID GeocodeEA.
+
+*Move wrong EA codes into correct EA.
+IF (GeocodeEA="01020531102013") GeocodeEA="01020531102313".
+IF (GeocodeEA="01020531102003") GeocodeEA="01020531102313".
+IF (GeocodeEA="09050321101312") GeocodeEA="09050321101001".
+IF (GeocodeEA="10032411103084") GeocodeEA="10032411103002".
+IF (GeocodeEA="10032411103003") GeocodeEA="10032411103002".
+IF (GeocodeEA="10030211101006") GeocodeEA="10030211101008".
+IF (GeocodeEA="15361621112001") GeocodeEA="15031621112001".
+IF (GeocodeEA="16031131104001") GeocodeEA="16031131103003".
+IF (GeocodeEA="16011031103003") GeocodeEA="16011031103309".
+IF (GeocodeEA="17021511101011") GeocodeEA="17021511101001".
+IF (GeocodeEA="17041631104004") GeocodeEA="17041631104313".
+IF (GeocodeEA="17041631104002") GeocodeEA="17041631104313".
+IF (GeocodeEA="17041631104001") GeocodeEA="17041631104313".
+IF (GeocodeEA="17041631104003") GeocodeEA="17041631104313".
+IF (GeocodeEA="20061611105011") GeocodeEA="20061611105003".
+IF (GeocodeEA="20042011102001") GeocodeEA="20041011102002".
+IF (GeocodeEA="20042531101003") GeocodeEA="20042531101303".
+IF (GeocodeEA="22031611104311") GeocodeEA="22031611104003".
+IF (GeocodeEA="25012831102003") GeocodeEA="25012831102321".
+IF (GeocodeEA="26061531101075") GeocodeEA="26061531101375".
+IF (GeocodeEA="26061531101003") GeocodeEA="26061531101375".
+EXECUTE.
+
+*Delete EAs with few hh not possible to renumber to valid EA code.
+COMPUTE tmpGeo =0.
+IF(GeocodeEA="14040231101001") tmpGeo=1.
+IF(GeocodeEA="14040231101003") tmpGeo=1.
+IF(GeocodeEA="24060911106010") tmpGeo=1.
+EXECUTE.
+*Delete non-usable records.
+SELECT IF tmpGeo=0.
+EXECUTE.
+
+*Check.
+FREQUENCIES tmpGeo.
+
+*Clean.
+DELETE VARIABLES tmpGeo.
+
+*Comment/for discussion: We keep the EA 07012521105011 (26 hh) even if it is not in the sample or gis file.
+
 *save the workfile. 
 SORT CASES BY GeocodeEA (A).
 SAVE OUTFILE='tmp\HHQTZ_3.sav'
 /KEEP 
 ALL 
 /COMPRESSED.
+
 OUTPUT CLOSE ALL.
 DATASET CLOSE ALL.
 EXECUTE.
 
+*****************************************************************.
+*Open workfile.
+GET FILE='tmp\HHQTZ_3.sav'.
 
-*match the GIS attribute table geocodes with the geocodes on the work file.
-MATCH FILES 
-/FILE= =   "tmp\HHQTZ_3.sav"
-/TABLE=  "Cat\ea.sav"
-/BY GeocodeEA.
-EXECUTE.
-
-*Check records on the workfile that does not match the XLS catalogue of GeocodeEA from the GIS attribute table. 
-TEMPORARY.
-SELECT IF (SYSMIS(Rec_ID) = 1). 
-LIST REC_ID.
-EXECUTE.
-
-*Delete.
-SELECT IF (SYSMIS(Rec_ID) = 0). 
-EXECUTE.
-*Check step 1.
-FREQUENCIES Region.
-
-*Step 2) Delete any with zero value in SUM_A and SUM_B. Cannot be used as stand-allone household in analysis.   .
+*Step 1) Delete any with zero value in SUM_A and SUM_B. Cannot be used as stand-allone household in analysis.   .
 COMPUTE TMP2=0.
 EXECUTE.
 IF (SUM_A = 0 AND SUM_B= 0) TMP2=1.
 EXECUTE.
 *Check.
 FREQUENCIES TMP2.
+SORT CASES BY GeocodeHH.
 TEMPORARY.    
 SELECT IF TMP2=1.
     LIST REC_ID AA8new Date AA14tmp AA18tmp AA7Btmp AB1$01 SUM_A SUM_B SUM_CtoGP.
@@ -904,51 +998,285 @@ SELECT IF TMP2=1.
 SELECT IF
     TMP2 = 0.
 EXECUTE.
-*check/delete.
+
+*Final check/delete.
 FREQUENCIES Region.
+*Clean.
 DELETE VARIABLES TMP2.
 
-*Step3) Identify and delete all records where sex and age of head is still missing.
+*Step 2)  Identify records with all missing in either B or missing all info from C-to-end-of-file.- check and delete.
+COMPUTE tmp3=0.
+IF (SUM_B = 0 OR SUM_CtoGP=0) tmp3 =1.
+EXECUTE.
+TEMPORARY.
+SELECT IF SUM_B = 0 OR SUM_CtoGP = 0.
+LIST REC_ID GeocodeEA HH Ycoord AA10 AA14 SUM_A SUM_B SUM_CtoGP tmp3.
+
+*Delete.
+SELECT IF tmp3= 0.
+FREQUENCIES tmp3.
+*clean.
+DELETE VARIABLES tmp3.
+
+*Step 3).Impute head of household sex (step 3a) and age (step 3b) where still missing (imputation recommended because this info may be much used during tabulation).
 TEMPORARY.
 SELECT IF (MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1).
 LIST REC_ID GeocodeEA HH UrbRur AA10 AA14 AB4$01 AB5$01 SUM_A SUM_B SUM_CtoGP.
 
-*delete.
-SELECT IF (MISSING(AB4$01) = 0 AND MISSING(AB5$01) = 0).
+*3a)Sex imputation.
+*Complete name for head in the strata..
+IF (  MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1 ) AB1$01 = AA14.
 EXECUTE.
+
+*List out recID and name of head to a xls sheet for manual decissions on names x sex by NBS.
+OUTPUT CLOSE ALL.
+TEMPORARY.
+SELECT IF (MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1).
+LIST REC_ID GeocodeHH AB1$01.
+
+*Export the list to XLS worksheet for possible manual coding of sex by NBS..
+*OUTPUT EXPORT
+  /CONTENTS
+     EXPORT=VISIBLE
+     LAYERS= VISIBLE
+     MODELVIEWS= VISIBLE
+  /XLS  DOCUMENTFILE=  'tabeller\HHQTZ_TAB1.xls'
+     OPERATION= MODIFYSHEET
+     SHEET =  'Names x sex control'
+     LOCATION=LASTCOLUMN
+     NOTESCAPTIONS=YES.
+
+*Manual hard-coding of sex based "good enough" solution - possible later update based on name/sex list from NBS.
+*< 96 records in in here >.
+IF(REC_ID = 1597) AB4$01 = 1.
+IF(REC_ID = 1592) AB4$01 = 1.
+IF(REC_ID =   907) AB4$01 = 1.
+IF(REC_ID =   906) AB4$01 = 1.
+IF(REC_ID = 2481) AB4$01 = 1.
+IF(REC_ID = 4300) AB4$01 = 1.
+IF(REC_ID = 4306) AB4$01 = 1.
+IF(REC_ID = 3524) AB4$01 = 1.
+IF(REC_ID = 4244) AB4$01 = 1.
+IF(REC_ID = 6149) AB4$01 = 2.
+IF(REC_ID = 5233) AB4$01 = 1.
+IF(REC_ID = 1651) AB4$01 = 1.
+IF(REC_ID = 1961) AB4$01 = 1.
+IF(REC_ID =   432) AB4$01 = 1.
+IF(REC_ID =   749) AB4$01 = 1.
+IF(REC_ID = 1294) AB4$01 = 1.
+IF(REC_ID = 3522) AB4$01 = 1.
+IF(REC_ID = 3509) AB4$01 = 1.
+IF(REC_ID = 2934) AB4$01 = 1.
+IF(REC_ID = 6861) AB4$01 = 2.
+IF(REC_ID = 6357) AB4$01 = 1.
+IF(REC_ID = 5197) AB4$01 = 1.
+IF(REC_ID = 3586) AB4$01 = 1.
+IF(REC_ID = 3594) AB4$01 = 2.
+IF(REC_ID = 4067) AB4$01 = 1.
+IF(REC_ID =   484) AB4$01 = 2.
+IF(REC_ID = 3224) AB4$01 = 1.
+IF(REC_ID = 6711) AB4$01 = 1.
+IF(REC_ID = 6713) AB4$01 = 1.
+IF(REC_ID = 1047) AB4$01 = 2.
+IF(REC_ID = 6536) AB4$01 = 1.
+IF(REC_ID = 6549) AB4$01 = 2.
+IF(REC_ID = 6547) AB4$01 = 1.
+IF(REC_ID = 1849) AB4$01 = 2.
+IF(REC_ID = 3144) AB4$01 = 2.
+IF(REC_ID = 3798) AB4$01 = 1.
+IF(REC_ID = 4359) AB4$01 = 1.
+IF(REC_ID = 5699) AB4$01 = 2.
+IF(REC_ID = 4886) AB4$01 = 1.
+IF(REC_ID =   789) AB4$01 = 1.
+IF(REC_ID = 3940) AB4$01 = 1.
+IF(REC_ID =   924) AB4$01 = 1.
+IF(REC_ID = 4650) AB4$01 = 2.
+IF(REC_ID = 5045) AB4$01 = 2.
+IF(REC_ID = 3318) AB4$01 = 1.
+IF(REC_ID = 3332) AB4$01 = 1.
+IF(REC_ID = 1917) AB4$01 = 2.
+IF(REC_ID =   505) AB4$01 = 1.
+IF(REC_ID = 2236) AB4$01 = 2.
+IF(REC_ID = 4947) AB4$01 = 1.
+IF(REC_ID = 4438) AB4$01 = 2.
+IF(REC_ID = 3865) AB4$01 = 1.
+IF(REC_ID = 2809) AB4$01 = 1.
+IF(REC_ID = 2798) AB4$01 = 1.
+IF(REC_ID =   841) AB4$01 = 1.
+IF(REC_ID = 7040) AB4$01 = 1.
+IF(REC_ID = 7061) AB4$01 = 1.
+IF(REC_ID = 7131) AB4$01 = 1.
+IF(REC_ID = 5420) AB4$01 = 1.
+IF(REC_ID = 6641) AB4$01 = 2.
+IF(REC_ID = 6643) AB4$01 = 2.
+IF(REC_ID = 3815) AB4$01 = 2.
+IF(REC_ID = 4831) AB4$01 = 1.
+IF(REC_ID = 6338) AB4$01 = 2.
+IF(REC_ID = 6336) AB4$01 = 1.
+IF(REC_ID = 6334) AB4$01 = 1.
+IF(REC_ID = 7156) AB4$01 = 2.
+IF(REC_ID = 7143) AB4$01 = 2.
+IF(REC_ID = 7162) AB4$01 = 1.
+IF(REC_ID = 7161) AB4$01 = 1.
+IF(REC_ID = 7155) AB4$01 = 1.
+IF(REC_ID = 7166) AB4$01 = 1.
+IF(REC_ID = 7149) AB4$01 = 2.
+IF(REC_ID = 7019) AB4$01 = 1.
+IF(REC_ID = 3931) AB4$01 = 1.
+IF(REC_ID = 6161) AB4$01 = 2.
+IF(REC_ID = 6235) AB4$01 = 1.
+IF(REC_ID = 6164) AB4$01 = 1.
+IF(REC_ID = 6255) AB4$01 = 1.
+IF(REC_ID = 4504) AB4$01 = 2.
+IF(REC_ID = 5021) AB4$01 = 1.
+IF(REC_ID = 4808) AB4$01 = 1.
+IF(REC_ID = 6659) AB4$01 = 1.
+IF(REC_ID = 6660) AB4$01 = 1.
+IF(REC_ID = 6747) AB4$01 = 1.
+IF(REC_ID = 6755) AB4$01 = 1.
+IF(REC_ID = 5670) AB4$01 = 2.
+IF(REC_ID = 6895) AB4$01 = 2.
+IF(REC_ID = 5871) AB4$01 = 2.
+IF(REC_ID = 3466) AB4$01 = 1.
+IF(REC_ID = 3630) AB4$01 = 2.
+IF(REC_ID = 4557) AB4$01 = 1.
+IF(REC_ID = 4576) AB4$01 = 1.
+IF(REC_ID =   646) AB4$01 = 2.
+IF(REC_ID = 6788) AB4$01 = 1.
+IF(REC_ID = 2952) AB4$01 = 1.
+EXECUTE.
+
+*check.
+FREQUENCIES AB4$01.
+
+*******************************************************.
+*3b) Impute still missing head age based on nearest neighbour add-in macro.
+*check start.
+FREQUENCIES AB5$01.
+
+*compute temporary HH size help variable for stratification.
+COMPUTE HHsize = 0.
+VECTOR person = AB3$01 TO AB3$20.
+LOOP #i = 1 TO 20.
+  IF ( person (#i) GT 0) HHsize = SUM(HHsize + 1).
+END LOOP.
+EXECUTE.
+VARIABLE LABELS HHSize "Number of persons in the household".
+RECODE HHsize (1 THRU 1 = 1) (2 THRU 2 = 2) (3 THRU 4 = 3) (5 THRU 9 = 4) (10 THRU HIGHEST = 5) INTO HHsize_Gr1.
+VARIABLE LABELS HHsize_Gr1 "Household size (persons)".
+VALUE LABELS HHsize_gr1
+1 "     1"
+2 "     2"
+3 "3 - 4"
+4 "5 - 9"
+5 " 10+".
+FORMATS HHsize_gr1 (F2.0).
 *Check.
-FREQUENCIES Region.
-FREQUENCIES GeocodeEA.
+FREQUENCIES HHsize_Gr1.
+
+**********************************************.
+*Hotdeck macro - nearest neighbour in strata imputation for missing head age.(higlight all between astreixes and run the HD).
+DEFINE HOTDECK (y = !charend ('/')
+                             /deck = !charend ("/")).
+Output New name = hotdeckextra.
+!do !s !in (!y).
+      compute randnum = uniform(1).
+      sort cases by !deck randnum.
+      compute sortclg1 = 1.
+      compute sortclg2 = 1.
+      compute sortcld1 = 1.
+      compute sortcld2 = 1.
+   !DO !v !in (!deck).
+      create sortd1v = lead(!v,1).
+      create sortd2v = lead(!v,2).
+         if (lag(!v) <> !v) sortclg1 = 0.
+         if (lag(!v,2) <> !v) sortclg2 = 0.
+         if (sortd1v <> !v) sortcld1 = 0.
+         if (sortd2v <> !v) sortcld2 = 0.
+   !DOEND.
+   !let !newname = !CONCAT (!s, HD).
+   compute newvar = !s.
+   apply dictionary from * /source variables = !s /target variables = newvar.
+   execute.
+   Create yLead = Lead(!s,1).
+   Create yLead2 = Lead (!s,2).
+   DO If (Missing(newvar)).
+      + DO IF ((sortclg1 = 1) AND Not Missing(lag(!s))).
+            + Compute newvar = Lag(!s).
+      + ELSE IF ((sortcld1 = 1) AND Not Missing (yLead)).
+            + Compute newvar = yLead.
+       + ELSE IF ((sortclg2 = 1) AND Not Missing(Lag(!s,2))).
+            + Compute newvar = Lag(!s,2).
+       + ELSE IF ((sortcld2 = 1) AND Not Missing(yLead2)).
+            + Compute newvar = yLead2.
+       + END IF.
+   End If.
+   Match Files/File = */drop yLead ylead2 sortd1v sortd2v sortclg1 sortclg2 sortcld1 sortcld2 randnum.
+   execute.
+   rename variables (newvar = !newname).
+!doend.
+output close name = hotdeckextra.
+!ENDDEFINE.
+
+HOTDECK y= AB5$01  / deck = UrbRur HHSize_gr1 AB4$01.
+
+*y       = variable missing to be imputed
+*deck = variables used to stratify into decks from where nearest neighbour value is imputed to the missing var y
+**********************************
+*check HD results.
+FREQUENCIES AB5$01HD.
+COMPUTE tmp4 = SUM(AB5$01 - AB5$01HD).
+EXECUTE.
+FREQUENCIES tmp4.
+
+*Impute check and delete/clean.
+COMPUTE AB5$01 = AB5$01HD.
+EXECUTE.
+FREQUENCIES AB5$01.
+
+DELETE VARIABLES AB5$01HD tmp4 HHsize HHsize_gr1.
+
 *****************************************************************************
-Clean up temp variables. 
-DELETE VARIABLES PFirst PLast PFirst10 PLast10 PFirst20 PLast20 PFirst30 PLast30 PFirst40 PLast40 PFirst50 PLast50
-SUM_A SUM_B SUM_AtoGP SUM_CtoGP AA14tmp AA18tmp AA7Btmp  flag1 flag2 flag3 flag4 flag5 flag6 flag7 Duplicate.
+*Clean up temp variables.
+DELETE VARIABLES PFirst PLast SUM_A SUM_B SUM_AtoGP SUM_CtoGP Duplicate AA14tmp AA18tmp AA7Btmp PFirst10 PLast10 PFirst20 PLast20
+flag1 flag2 flag3 flag4 flag5 flag6 flag7 PFirst30 PLast30 PFirst40 PLast40 PFirst50 PLast50.
+
 
 *****************************************************************************************************
 *****************************************************************************************************
-*Save temporary file with unique identifiers  - ready for using next sytax for merge with community, labelling and restructuring. 
+*Save temporary file with unique identifiers  - ready for using next sytax for merge with community, labelling and restructuring.
+
 *THIS FILE IS ADDRESSED TO THE NEXT SYNTAX FOR FURTHER MERGE TO COMFILE, LABELLING AND RESTRUCTURE.
 
-SORT CASES BY GeocodeEA (A) HH (A). 
+SORT CASES BY GeocodeEA (A) HH (A).
 SAVE OUTFILE='tmp\HHQTZ_4.sav'
-/KEEP 
+/KEEP
 REC_ID
 GeocodeEA
 GeocodeHH
 HH
+Region
 UrbRur
 Xcoord
 Ycoord
 Date
-ALL 
+ALL
 /COMPRESSED.
 
+*final check/count.
+FREQUENCIES Region.
+
+*Close all.
 OUTPUT CLOSE ALL.
 DATASET CLOSE ALL.
-EXECUTE. 
+EXECUTE.
 *********************************************************************.
 *END OF SYNTAX.
-********************************************************************* 
+********************************************************************* .
+
+
+
+
 
 
 
