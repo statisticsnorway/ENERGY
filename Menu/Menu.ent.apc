@@ -141,12 +141,12 @@ PROC GLOBAL
 			endif;
 		else
 			if syncconnect(CSWeb, syncUrl) = 1 then
-				syncdata(PUT, COMMUNITY_DICT);
+				numeric check = syncdata(PUT, COMMUNITY_DICT);
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
-				syncdata(PUT, SAMPLING_DICT);
-			
+				//syncdata(PUT, SAMPLING_DICT);	Can't sync this anymore as it has different name for each EA
 				syncdisconnect();
+				
 			else
 				errmsg(tr(1));
 			endif;
