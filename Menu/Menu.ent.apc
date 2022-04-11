@@ -341,7 +341,7 @@ PROC GLOBAL
 					SLOGIN = LLOGIN;
 					numeric wc = writecase(SAMPLING_DICT);
 					//errmsg("Given to %s? Current number of HH: %s, writecase = %d", tabletCount(j,1), 
-							tabletCount(j,2), wc);
+					//		tabletCount(j,2), wc);
 				else
 					//Need to assign the HH to another one. Try one by one until I find somewhere
 					numeric found = 0;
