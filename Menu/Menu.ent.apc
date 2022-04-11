@@ -257,6 +257,7 @@ PROC GLOBAL
 							+ edit("99", visualValue(M_VILLAGE)) 
 							+ edit("999", visualValue(M_EA))
 							+ ".csdb";
+		//errmsg("Inside writeSample. Filename now is: %s", sampleFileName);
 		if fileExist(sampleFileName) then
 			sf = setFile(SAMPLING_DICT, sampleFileName);
 		else
@@ -1265,7 +1266,6 @@ postproc
 	
 PROC M_SUPERMENU
 preproc	
-	//TemporaryHackFixThis = 0;
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else		
@@ -1286,8 +1286,14 @@ preproc
 	$ = NOTAPPL;
 	
 
-postproc	
-			
+postproc
+	//Checking if the region setting is OK yet one more time. :)
+	if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT)  = NOTAPPL 
+			or visualValue(M_SUBDISTRICT)  = NOTAPPL or visualValue(M_LOCALITY) = NOTAPPL 
+			or visualValue(M_VILLAGE) = NOTAPPL or visualValue(M_EA) = NOTAPPL then
+		errmsg(tr(18));
+		skip to M_REGION;
+	endif;
 	if $ = 1 then	//Sync with interviewer
 		errmsg(tr(60));
 		string OkVar = verifyVariables();
@@ -1302,6 +1308,9 @@ postproc
 	elseif $ = 2 then
 		//Generate sample.
 		//Probably shpould have warnings that all gadget must be synced first
+		//errmsg("Generating sample. Values of region: %d, %d, %d, %d, %d, %d", visualValue(M_REGION), 
+		//		visualValue(M_DISTRICT), visualValue(M_SUBDISTRICT), visualValue(M_LOCALITY), 
+		//		visualValue(M_VILLAGE), visualValue(M_EA));
 		CalculateSample();
 		$ = NOTAPPL;
 		reenter;
