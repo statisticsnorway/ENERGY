@@ -788,23 +788,23 @@ DataType=Numeric
 [ValueSet]
 Label=Material walls|Paredes materiais
 Name=B7_VS1
-Value=1;Wood and mud|Madeira e lama|Miti na matope
-Value=2;Wood and thatch|Madeira e palha|Miti na nyasi
+Value=1;Wood and mud|Madeira e barro|Miti na matope
+Value=2;Wood and thatch|Madeira e colmo|Miti na nyasi
 Value=3;Wood only|Apenas madeira|Miti pekee
 Value=4;Stone only|Apenas pedra|Mawe pekee
-Value=5;Stone and mud|Pedra e lama|Mawe na matope
+Value=5;Stone and mud|Pedra e barro|Mawe na matope
 Value=6;Stone and cement|Pedra e cimento|Mawe na saruji
 Value=7;Blocks, plastered with cement|Blocos, rebocados com cimento|Matofali ya saruji, yaliyochapiwa
 Value=8;Blocks, unplastared|Blocos, não rebocados|Matofali ya saruji, yasiyochapiwa
 Value=9;Bricks|Tijolos|Matofali ya kuchoma
 Value=10;Mud brics (traditional)|Tijolos de barro (tradicional)|Matofali yasiyochomwa
 Value=11;Steel|Aço|Chuma
-Value=12;Cargo container|Contêiner de carga/Contetor|Kontena
+Value=12;Cargo container|Contentor de carga|Kontena
 Value=13;Parquet or polished wood|Parquet ou madeira polida|Miti iliyonakshiwa
 Value=14;Chip wood|Madeira de lasca|Mabanzi
 Value=15;Corrogated iron sheet|Chapas de zinco ondulado|Mabati ya kuezekea
 Value=16;Asbestos|Amianto|Vigae
-Value=17;Reed/bamboo/canico| Caniço/bambu|Mianzi
+Value=17;Reed/bamboo/canico|Caniço/bambu|Mianzi
 Value=18;Mud only|Apenas lama|Matope pekee
 
 [Item]
@@ -821,10 +821,10 @@ Value=1;Wood and mud|Laje de betâo|Miti na matope
 Value=2;Wood and thatch|Telha|Miti na nyasi
 Value=3;Stone and cement|Chapas de lusalite|Mawe na saruji
 Value=4;Tiles|Chapas de zinco|Marumaru
-Value=5;Corrugated iron sheet|Capim ou colmo ou palmeira|Mabati
+Value=5;Corrugated iron sheet|Capim, colmo ou palmeira|Mabati
 Value=6;Asbestos|Plastico|Vigae
-Value=7;Reed/bamboo|outros|Mianzi
-Value=8;Plastic/canvas||Plastiki/Turubai
+Value=7;Reed/bamboo|Plastic/canvas|Mianzi
+Value=8;Plastic/canvas|Outros|Plastiki/Turubai
 
 [Item]
 Label=Material floor|Principal material do chão da casa
@@ -914,7 +914,7 @@ Value=1;None|Nada|Hakuna
 Value=2;Boil|Ferver|Kuchemsha
 Value=3;Add bleach/chlorone|Adicionar lixívia/certeza|Kuweka dawa ya kusafisha  maji
 Value=4;Use a water fileter|Uso de um filtro de água|Kutumia kichujia maji
-Value=5;Let it stand and settle|Deixe-o ficar de pé e assentar|Kuacha maji  yatulie
+Value=5;Let it stand and settle|Deixar repousaar|Kuacha maji  yatulie
 Value=7;Other|Outros|Nyingine
 
 [Item]
@@ -957,7 +957,7 @@ Value=5;Gas (Biogas)|Gás(Biogas)|Bayogesi
 Value=6;Electricity (Wind)|Eléctricidade (Vento)|Umeme wa upepo
 Value=7;Paraffin|Parafina|Parafini (Mafuta ya taa)
 Value=8;Coal|Carvão mineral|Makaa ya mawe
-Value=9;Charcoal|Carvão|Mkaa
+Value=9;Charcoal|Carvão vegetal|Mkaa
 Value=10;Firewood/Wood/Residuals|Lenha/Madeira/Seradura|Kuni/Mbao/Mabaki ya mimea
 Value=11;Animal residuals|Residuos de animais|Vinyesi vya wanyama
 Value=99;Not Applicable|Não aplicavel|Haihusiki

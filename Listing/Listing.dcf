@@ -100,7 +100,7 @@ DataType=Numeric
 Label=Import or record GPS coordinates|Importar ou gravar coordenadas de GPS
 Name=LL7_VS1
 Value=1;Record GPS coordinates|Grave coordenadas GPS|Soma vipimo vya GPS
-Value=2;Import GPS from previous questionnaire|Importar GPS do questionário anterior|Chukua vipimo vya GPS kutoka dodoso lililotangulia
+Value=2;Import GPS from previous questionnaire|Importar coordenadas GPS do questionário anterior|Chukua vipimo vya GPS kutoka dodoso lililotangulia
 
 [Item]
 Label=North coordinate (Latitude)|Coordenada Norte (Latitude)
@@ -159,8 +159,8 @@ DataType=Numeric
 [ValueSet]
 Label=source of power|fonte de energia
 Name=LL12_VS1
-Value=1;Power grid|Conectado à rede elétrica|Gridi ya Taifa
-Value=2;No grid, but solar cells with battery or solar home system|fornecimento de energia solar / dispositivo|Umeme jua/Kifaa cha umeme jua
+Value=1;Power grid|Conectado à rede eléctrica|Gridi ya Taifa
+Value=2;No grid, but solar cells with battery or solar home system|Fornecimento de energia solar / dispositivo|Umeme jua/Kifaa cha umeme jua
 Value=3;None of the above|Nenhuma das 2 acima|Hakuna
 
 [Item]
