@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=EXTRACTLISTINGFROMEA
+Name=EXTRACTLISTINGFROMEA
+AppType=Batch
+[AppCode]
+File=.\extractListingFromEA.bch.apc
+[Message]
+File=.\extractListingFromEA.bch.mgf
+[Order]
+File=.\extractListingFromEA.ord
+[Dictionary Types]
+Dict-Type=..\Listing\Listing.dcf,Input,.\extractListingFromEA.ord
