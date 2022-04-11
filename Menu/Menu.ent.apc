@@ -316,6 +316,7 @@ PROC GLOBAL
 				//Need to keep track of how many HH is assigned to each enumerator. 
 				//Ie find the index of the current tablet in the array
 				numeric j = 1;
+				//errmsg("name: %s, num of int: %s", tabletCount(j,1), tabletCount(j,2));
 				while j <= intNum do
 					if tabletCount(j,1) = tstrip(LLOGIN) then
 						break;
@@ -332,14 +333,15 @@ PROC GLOBAL
 					currHHNum = 0;
 				endif;
 				
-		
+				//errmsg("currHHNum: %d, numHHPerInt: %d", currHHNum, numHHPerInt);
 				if currHHNum < numHHPerInt then
 					//OK. This enumerator needs more HH to interview
 					inc(currHHNum);
-					tabletCount(j,2) = edit("9", currHHNum);
+					tabletCount(j,2) = edit("ZZ", currHHNum);
 					SLOGIN = LLOGIN;
 					numeric wc = writecase(SAMPLING_DICT);
-					//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
+					//errmsg("Given to %s? Current number of HH: %s, writecase = %d", tabletCount(j,1), 
+							tabletCount(j,2), wc);
 				else
 					//Need to assign the HH to another one. Try one by one until I find somewhere
 					numeric found = 0;
@@ -358,7 +360,8 @@ PROC GLOBAL
 							tabletCount(j,2) = edit("9", currHHNum);
 							SLOGIN = tstrip(tabletCount(j,1));
 							numeric wc = writecase(SAMPLING_DICT);
-							//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
+							//errmsg("Finding another interviewer. Given to %s? Curr no of HH: %s, writeccase = %d",
+							//		tabletCount(j,1), tabletCount(j,2), wc);
 							found = 1;
 						endif;
 					enddo;
@@ -384,7 +387,8 @@ PROC GLOBAL
 						tabletCount(j,2) = edit("9", currHHNum);
 						SLOGIN = tstrip(tabletCount(j,1));
 						numeric wc = writecase(SAMPLING_DICT);
-						//errmsg("Given to %s? wc = %d", tabletCount(j,1), wc);
+						//errmsg("Nonrandomly Given to %s?, Curr no of HH: %s, wc = %d", tabletCount(j,1), 
+						//		tabletCount(j,2), wc);
 			
 					endif;
 				endif;
@@ -590,8 +594,7 @@ PROC GLOBAL
 		if solarCount > totSolar then
 			solarCount = totSolar;
 		endif;
-		
-		//Drawing at least one.. Just to be sure:
+				//Drawing at least one.. Just to be sure:
 		if solarCount = 0 and totSolar > 0 then
 			solarCount = 1;
 		endif;
