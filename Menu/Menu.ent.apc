@@ -141,12 +141,12 @@ PROC GLOBAL
 			endif;
 		else
 			if syncconnect(CSWeb, syncUrl) = 1 then
-				syncdata(PUT, COMMUNITY_DICT);
+				numeric check = syncdata(PUT, COMMUNITY_DICT);
 				syncdata(PUT, HHQ_DICT);
 				syncdata(PUT, LISTING_DICT);
-				syncdata(PUT, SAMPLING_DICT);
-			
+				//syncdata(PUT, SAMPLING_DICT);	Can't sync this anymore as it has different name for each EA
 				syncdisconnect();
+				
 			else
 				errmsg(tr(1));
 			endif;
@@ -257,6 +257,7 @@ PROC GLOBAL
 							+ edit("99", visualValue(M_VILLAGE)) 
 							+ edit("999", visualValue(M_EA))
 							+ ".csdb";
+		//errmsg("Inside writeSample. Filename now is: %s", sampleFileName);
 		if fileExist(sampleFileName) then
 			sf = setFile(SAMPLING_DICT, sampleFileName);
 		else
@@ -1229,6 +1230,17 @@ postproc
 		numeric ok = syncGetSample();
 		//errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
 		if ok = 1 then
+			string sampleFileName = "../Data/Sample_" 
+							+ edit("99", visualValue(M_REGION)) 
+							+ edit("99", visualValue(M_DISTRICT)) 
+							+ edit("999", visualValue(M_SUBDISTRICT)) 
+							+ edit("99", visualValue(M_LOCALITY)) 
+							+ edit("99", visualValue(M_VILLAGE)) 
+							+ edit("999", visualValue(M_EA))
+							+ ".csdb";
+
+			setFile(SAMPLING_DICT, sampleFileName);
+			//errmsg("In menu: Samplefilename: %s", fileName(SAMPLING_DICT));
 			numeric numCases = countCases(SAMPLING_DICT where tolower(SLOGIN) = tolower(M_LOGIN)
 						and SA1 = visualValue(M_REGION) 
 						and SA2 = visualValue(M_DISTRICT)
@@ -1237,7 +1249,7 @@ postproc
 						and SA5 = visualvalue(M_VILLAGE)
 						and SA6 = visualValue(M_EA));
 				
-			errmsg(tr(13), numCases);
+			errmsg(tr(13));
 		else
 			errmsg(tr(14));
 		endif;
@@ -1254,7 +1266,6 @@ postproc
 	
 PROC M_SUPERMENU
 preproc	
-	//TemporaryHackFixThis = 0;
 	if visualValue(M_REGION) = NOTAPPL then
 		skip to M_REGION;
 	else		
@@ -1275,8 +1286,14 @@ preproc
 	$ = NOTAPPL;
 	
 
-postproc	
-			
+postproc
+	//Checking if the region setting is OK yet one more time. :)
+	if visualValue(M_REGION) = NOTAPPL or visualValue(M_DISTRICT)  = NOTAPPL 
+			or visualValue(M_SUBDISTRICT)  = NOTAPPL or visualValue(M_LOCALITY) = NOTAPPL 
+			or visualValue(M_VILLAGE) = NOTAPPL or visualValue(M_EA) = NOTAPPL then
+		errmsg(tr(18));
+		skip to M_REGION;
+	endif;
 	if $ = 1 then	//Sync with interviewer
 		errmsg(tr(60));
 		string OkVar = verifyVariables();
@@ -1291,6 +1308,9 @@ postproc
 	elseif $ = 2 then
 		//Generate sample.
 		//Probably shpould have warnings that all gadget must be synced first
+		//errmsg("Generating sample. Values of region: %d, %d, %d, %d, %d, %d", visualValue(M_REGION), 
+		//		visualValue(M_DISTRICT), visualValue(M_SUBDISTRICT), visualValue(M_LOCALITY), 
+		//		visualValue(M_VILLAGE), visualValue(M_EA));
 		CalculateSample();
 		$ = NOTAPPL;
 		reenter;
