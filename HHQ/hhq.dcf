@@ -3278,6 +3278,8 @@ Value='233               ';Kerosene cooking stove (Mchina)|Fogão de cozinha de 
 Image=..\Images\Cookstoves_233.jpg
 Value='241               ';Efficient charcoal stove with controlled airflow|Fogão a carvão eficiente com fluxo de ar controlado|Jiko la mkaa lenye uwezo wa kudhibiti hewa
 Image=..\Images\Cookstoves_241.jpg
+Value='251               ';Fogão a carvão de 2 bocas|Fogão a carvão de 2 bocas
+Image=.\Resources\Images\Cookstoves_251.png
 
 [Item]
 Label=Have you used any stoves using rice husks, pellets or briquettes?
@@ -3653,6 +3655,11 @@ Name=I35
 Start=193
 Len=1
 DataType=Numeric
+
+[ValueSet]
+Label=In the last 7 days, how many days did you use [STOVE]?
+Name=I35_VS1
+Value=0:7
 
 [Item]
 Label=In the last 7 days, on average, how many times did you light the [STOVE] per day?
