@@ -1056,6 +1056,19 @@ Text=H1
  
   
 [Field]
+Name=H2
+Position=169,136,184,156
+Item=H2,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=131,139,147,155
+Text=H2
+ 
+  
+[Field]
 Name=H3
 Position=169,166,184,186
 Item=H3,COMMUNITY_DICT
@@ -1082,19 +1095,6 @@ Text=H4
  
   
 [Field]
-Name=H2
-Position=169,136,184,156
-Item=H2,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=4
-  
-[Text]
-Position=131,139,147,155
-Text=H2
- 
-  
-[Field]
 Name=H5
 Position=169,226,184,246
 Item=H5,COMMUNITY_DICT
@@ -1114,19 +1114,6 @@ Name=GROUP_F
 Label=F Infrastructure
 Form=5
 Max=1
-  
-[Field]
-Name=F3
-Position=95,86,110,106
-Item=F3,COMMUNITY_DICT
-FieldLabelType=DictionaryName
-DataCaptureType=RadioButton
-Form=5
-  
-[Text]
-Position=49,89,64,105
-Text=F3
- 
   
 [Field]
 Name=F1
@@ -1155,16 +1142,16 @@ Text=F2
  
   
 [Field]
-Name=F5
-Position=95,146,152,166
-Item=F5,COMMUNITY_DICT
+Name=F3
+Position=95,86,110,106
+Item=F3,COMMUNITY_DICT
 FieldLabelType=DictionaryName
-DataCaptureType=TextBox
+DataCaptureType=RadioButton
 Form=5
   
 [Text]
-Position=49,149,64,165
-Text=F5
+Position=49,89,64,105
+Text=F3
  
   
 [Field]
@@ -1178,6 +1165,19 @@ Form=5
 [Text]
 Position=49,119,64,135
 Text=F4
+ 
+  
+[Field]
+Name=F5
+Position=95,146,152,166
+Item=F5,COMMUNITY_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=TextBox
+Form=5
+  
+[Text]
+Position=49,149,64,165
+Text=F5
  
   
 [Field]
