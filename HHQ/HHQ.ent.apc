@@ -78,126 +78,6 @@ end;
 
 
 
-PROC AA1
-
-preproc
-
-	$ = toNumber(sysparm("REGION"));
-	noinput;
-
-
-
-PROC AA2
-
-preproc
-
-	$ = toNumber(sysparm("DISTRICT"));
-	noInput;
-
-
-
-PROC AA21D
-preproc
-	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
-	noinput;
-PROC AA21T
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;
-PROC AA3
-
-preproc
-
-	$ = toNumber(sysparm("SUBDISTRICT"));
-	noinput;
-
-
-
-PROC AA4
-
-preproc
-
-	$ = toNumber(sysparm("LOCALITY"));
-	noinput;
-
-
-PROC AA5
-
-preproc
-
-	$ = toNumber(sysparm("VILLAGE"));
-	noinput;
-
-
-
-
-PROC AA6
-
-preproc
-
-	$ = toNumber(sysparm("EA"));
-	noinput;
-
-
-
-PROC AA7
-
-preproc
-
-	$ = toNumber(sysparm("URBANRURAL"));
-	noinput;
-
-
-PROC AA9A
-preproc
-	$ = edit("99:99:99",systime());
-	noinput;
-PROC AALOGIN
-
-preproc
-
-	$ = sysparm("LOGIN");
-	noinput;
-
-
-
-PROC ADDRESS_LOCATION
-
-preproc
-
-	noinput;
-
-postproc
-
-	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
-	if isPartial() then
-
-		//Need to find the name of the current respondent if we're still in the personal section.
-		//Starting from scratch with he current person. Need to find the number of him/her
-		string currentField = getSymbol(savepartial);
-		
-		//"Special" skips
-		if currentField in "K1", "K2", "K3", "K4" then
-			advance to K1;
-		elseif currentField in "E1", "E2", "E3" then
-			advance to E1;
-		elseif currentField in "G2B", "G2C" then
-			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
-			numeric ptr = 4;
-			while ptr >= 1 do
-				if visualValue(G2B(ptr)) <> NOTAPPL then
-					break;
-				endif;
-				ptr = ptr - 1;
-			enddo;
-			advance to G2A(ptr);
-
-		else	//general skip!
-			advance to getsymbol(savePartial);
-		endif;
-	endif;
-
-
 PROC HHQ_FF
 
 
@@ -243,12 +123,83 @@ postproc
 
 
 
+PROC AA1
+
+preproc
+
+	$ = toNumber(sysparm("REGION"));
+	noinput;
+
+
+
+PROC AA2
+
+preproc
+
+	$ = toNumber(sysparm("DISTRICT"));
+	noInput;
+
+
+
+PROC AA3
+
+preproc
+
+	$ = toNumber(sysparm("SUBDISTRICT"));
+	noinput;
+
+
+
+PROC AA4
+
+preproc
+
+	$ = toNumber(sysparm("LOCALITY"));
+	noinput;
+
+
+PROC AA5
+
+preproc
+
+	$ = toNumber(sysparm("VILLAGE"));
+	noinput;
+
+
+
+
+PROC AA6
+
+preproc
+
+	$ = toNumber(sysparm("EA"));
+	noinput;
+
+
+
+PROC AA7
+
+preproc
+
+	$ = toNumber(sysparm("URBANRURAL"));
+	noinput;
+
+
 PROC AA8
 
 preproc
 
 	AA8 = toNumber(sysparm("SERIAL"));
 	noinput;
+
+
+PROC AALOGIN
+
+preproc
+
+	$ = sysparm("LOGIN");
+	noinput;
+
 
 
 PROC AA14
@@ -269,6 +220,43 @@ preproc
 	noInput;
 
 
+PROC ADDRESS_LOCATION
+
+preproc
+
+	noinput;
+
+postproc
+
+	//All ID variables are filled out, hence I can skip to wherever i partially saved if relevant
+	if isPartial() then
+
+		//Need to find the name of the current respondent if we're still in the personal section.
+		//Starting from scratch with he current person. Need to find the number of him/her
+		string currentField = getSymbol(savepartial);
+		
+		//"Special" skips
+		if currentField in "K1", "K2", "K3", "K4" then
+			advance to K1;
+		elseif currentField in "E1", "E2", "E3" then
+			advance to E1;
+		elseif currentField in "G2B", "G2C" then
+			//deal with the variables that are set in the first column of a roster and reused later (ie lampType)
+			numeric ptr = 4;
+			while ptr >= 1 do
+				if visualValue(G2B(ptr)) <> NOTAPPL then
+					break;
+				endif;
+				ptr = ptr - 1;
+			enddo;
+			advance to G2A(ptr);
+
+		else	//general skip!
+			advance to getsymbol(savePartial);
+		endif;
+	endif;
+
+
 PROC AA9
 preproc
 	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
@@ -276,6 +264,10 @@ preproc
 
 
 
+PROC AA9A
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;
 PROC AA10
 
 preproc
@@ -2524,10 +2516,6 @@ preproc
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(172));
-	endif;
-
-
-	If curocc() = 1 and (((ispartial() and visualValue($) = NOTAPPL) or !ispartial())) then
 		errmsg(tr(184));
 	endif;
 
@@ -2535,12 +2523,25 @@ preproc
 	noinput;
 
 
-PROC N_B
+PROC N_A
 
 postproc
 
-	skip to next;
+	if $ > hhDemographics(1) then
+		errmsg(tr(166),$,hhDemographics(1));
+		reenter;
+	endif;
+	
+	if $ > 0 then
+		skip to N_C_HH;
+	endif;
 
+
+PROC N_B
+
+postproc
+	skip to next;	//Yes, this is correct: Skip in all cases
+	
 
 PROC N_C_HH
 
@@ -2552,16 +2553,17 @@ postproc
 	endif;
 
 
-PROC N_A
+PROC N_C_MM
 
 postproc
 
-	if $ > hhDemographics(1) then
-		errmsg(tr(166),$,hhDemographics(1));
+	if $ > 59 then
+		errmsg(tr(165), $);
 		reenter;
 	endif;
-	if $ > 0 then
-		skip to N_C_HH;
+	if N_C_HH = 24 and $ > 0 then
+		errmsg(tr(163), N_C_HH, $);
+		reenter;
 	endif;
 
 
@@ -2584,6 +2586,7 @@ PROC N_D_MM
 		errmsg(tr(165), $);
 		reenter;
 	endif;
+	
 	if N_D_HH = 15 and $ > 0 then
 		errmsg(tr(164), N_D_HH, $);
 		reenter;
@@ -2591,20 +2594,6 @@ PROC N_D_MM
 
 	if N_C_HH = N_D_HH and $ > N_C_MM  then
 		errmsg(tr(160), N_D_HH, $, N_C_HH, N_C_MM);
-		reenter;
-	endif;
-
-
-PROC N_C_MM
-
-postproc
-
-	if $ > 59 then
-		errmsg(tr(165), $);
-		reenter;
-	endif;
-	if N_C_HH = 24 and $ > 0 then
-		errmsg(tr(163), N_C_HH, $);
 		reenter;
 	endif;
 
@@ -2617,13 +2606,15 @@ preproc
 		skip to N_ACTIVITY_MEN;
 	endif;
 
-	If curocc() = 1 and hhDemographics(1) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
+	If curocc() = 1 and hhDemographics(1) < 1 
+				and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(172));
 	endif;
 
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(185));
 	endif;
+	
 	$ = curocc();
 	noinput;
 
@@ -2643,6 +2634,7 @@ postproc
 		errmsg(tr(166),$,hhDemographics(2));
 		reenter;
 	endif;
+	
 	if $ > 0 then
 		skip to N_H_HH;
 	endif;
@@ -2652,7 +2644,7 @@ PROC N_G
 
 postproc
 
-	skip to next;
+	skip to next; //Yes, this is correct: Skip in all cases
 
 
 PROC N_H_HH
@@ -2723,6 +2715,7 @@ preproc
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(186));
 	endif;
+	
 	$ = curocc();
 	noinput;
 
@@ -2743,7 +2736,7 @@ postproc
 PROC N_L
 
 postproc
-	skip to next;
+	skip to next;	//Yes, this is correct: Skip in all cases
 
 
 PROC N_M_HH
@@ -2807,6 +2800,7 @@ preproc
 	if hhDemographics(4) < 1 then
 		skip to Q_FORM;
 	endif;
+	
 	If curocc() = 1 and hhDemographics(1) < 1 and hhDemographics(2) < 1 and hhDemographics(3) < 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(172));
 	endif;
@@ -2814,10 +2808,11 @@ preproc
 	If curocc() = 1 and ((ispartial() and visualValue($) = NOTAPPL) or !ispartial()) then
 		errmsg(tr(187));
 	endif;
+	
 	$ = curocc();
 	noinput;
-	skip to N_P;
-
+	
+	
 
 PROC N_P
 
@@ -2843,7 +2838,7 @@ PROC N_Q
 
 postproc
 
-	skip to next;
+	skip to next;	//Yes, this is correct: Skip in all cases
 
 
 PROC N_R_HH
@@ -3359,3 +3354,11 @@ preproc
 	noinput;
 
 
+PROC AA21D
+preproc
+	$ = edit("9999-99-99",sysdate("YYYYMMDD"));
+	noinput;
+PROC AA21T
+preproc
+	$ = edit("99:99:99",systime());
+	noinput;

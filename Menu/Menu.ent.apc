@@ -238,7 +238,7 @@ PROC GLOBAL
 			intNum = 5;
 		endif;
 		
-		//errmsg("Number of HH per enum: %d, intNum: %d", numHHPerInt, intNum);
+		//errmsg("starting writesample - %d. Number of HH per enum: %d, intNum: %d", connType, numHHPerInt, intNum);
 		
 		numeric sf;
 		
@@ -271,19 +271,21 @@ PROC GLOBAL
 		if theCount = 1 or theCount = theTotal then
 			step = 1;
 			startPoint = 1;
-			else			
+		else			
 			step = theTotal/theCount;
-			//errmsg("step: %d. theTotal: %d, theCount: %d, regnestykket: %d", step, theTotal, theCount, theTotal/theCount);
 			if step = 0 then
 				step = 1;
 			endif;
 			seed(systime());
 			startPoint = random(1, int(step) + 1);
+			//errmsg("startpoint: %d, step: %d. theTotal: %d, theCount: %d, theTotal/theCount: %f", 
+			//		startpoint, step, theTotal, theCount, theTotal/theCount);
+
 		endif;
 		
 		
 		numeric currIntStep = int(step);	//The "actual" step need to be integer
-		numeric currStep = step;	//Use non-integers to get the actual steps right (trust me)
+		numeric currStep = int(step);	//Earlier version used the fraction, but sometimes there are not enough then
 		numeric currCount = 0;
 		numeric idx = 0;
 		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
@@ -293,9 +295,8 @@ PROC GLOBAL
 							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA)
 							and LL9 in 1,2 and LL12 = connType do
 			inc(idx);
-			if idx < startPoint and (idx <> startPoint + currIntstep) then
-				//not selected	
-			else
+			if idx = startpoint or idx = startPoint + currIntstep then	//selected
+				//errmsg("selecting because %d = %d or %d = %d", idx, startPoint, idx, startpoint + currIntstep);
 				S_LISTING_LOGIN = LLOGIN;
 				SA1 = LL1;
 				SA2 = LL2;
@@ -403,6 +404,8 @@ PROC GLOBAL
 		endfor;
 		
 		//errmsg("currCount: %d, = theCount: %d?", currCount, theCount);
+		
+		
 	 end;
 
 	
@@ -588,7 +591,8 @@ PROC GLOBAL
 		if solarCount > sampleSize then
 			solarCount = sampleSize;	//Just in case.. :)
 		endif;
-		//errmsg("tot num of cases: %d, solar: %d, grid: %d, none: %d. Number of solar to sample: %d", tot, totSolar, totGrid, totNone, solarCount);
+		//errmsg("tot num of cases: %d, solar: %d, grid: %d, none: %d. Number of solar to sample: %d", 
+		//		tot, totSolar, totGrid, totNone, solarCount);
 
 		//Need to check if I have enogh HHs with solar
 		if solarCount > totSolar then
