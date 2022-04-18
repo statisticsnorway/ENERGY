@@ -191,10 +191,11 @@ PROC GLOBAL
 			
 	function countTeamMembers()
 		//first get team number
-		numeric teamNo;
+		numeric teamNo = 0;
 		forcase USERS_DICT where toLower(tstrip(LOGIN)) = toLower(tstrip(M_LOGIN)) do
 			teamNo = TEAMNUMBER;
 		endfor;
+		//errmsg("Team of %s is number %d", tstrip(M_LOGIN), teamNo);
 		//Then count members
 		numeric ctr = 0;
 		forcase USERS_DICT where TEAMNUMBER = teamNo do
@@ -238,7 +239,7 @@ PROC GLOBAL
 			intNum = 5;
 		endif;
 		
-		//errmsg("starting writesample - %d. Number of HH per enum: %d, intNum: %d", connType, numHHPerInt, intNum);
+		//errmsg("starting writesample for conntype: %d. Number of HH per enum: %d, intNum: %d", connType, numHHPerInt, intNum);
 		
 		numeric sf;
 		
@@ -278,9 +279,7 @@ PROC GLOBAL
 			endif;
 			seed(systime());
 			startPoint = random(1, int(step) + 1);
-			//errmsg("startpoint: %d, step: %d. theTotal: %d, theCount: %d, theTotal/theCount: %f", 
-			//		startpoint, step, theTotal, theCount, theTotal/theCount);
-
+			
 		endif;
 		
 		
@@ -288,7 +287,8 @@ PROC GLOBAL
 		numeric currStep = int(step);	//Earlier version used the fraction, but sometimes there are not enough then
 		numeric currCount = 0;
 		numeric idx = 0;
-		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH", startPoint, step, theCount, theTotal);
+		//errmsg("start: %d, step: %d, number of cases to draw: %d amogst %d HH, theTotal/theCount: %f", 
+		//		startPoint, step, theCount, theTotal, theTotal/theCount);
 							
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
@@ -393,9 +393,13 @@ PROC GLOBAL
 			
 					endif;
 				endif;
-				currstep = currstep + step;
-				currIntStep = int(currStep);
+				if idx <> startpoint then	//Not to be done the first time
+					currstep = currstep + step;
+					currIntStep = int(currStep);
+				endif;
 				inc(currCount);
+			else
+				//errmsg("NOT selected because %d != %d or %d != %d", idx, startPoint, idx, startpoint + currIntstep);
 			endif;
 			
 			if currCount = theCount then
@@ -462,7 +466,11 @@ PROC GLOBAL
 		forcase LISTING_DICT where LL1 = visualValue(M_REGION) and LL2 = visualValue(M_DISTRICT)
 							and LL3 = visualValue(M_SUBDISTRICT) and LL4 = visualValue(M_LOCALITY)
 							and LL5 = visualValue(M_VILLAGE) and LL6 = visualValue(M_EA) and LL9 in 1,2 do
-			//errmsg("Current: %s", tolower(tstrip(LLOGIN)));
+			//errmsg("Current: %s, counter: %d", tolower(tstrip(LLOGIN)), ctr);
+			//errmsg("Region/LL1: %d = %d, District/LL2: %d = %d, subdistrict/LL3: %d = %d, Locality/LL4: %d = %d, Village/LL5: %d = %d, EA/LL6: %d = %d, Urbrur/LL9: %d in 1,2",
+			//		LL1, visualValue(M_REGION), LL2, visualValue(M_DISTRICT), LL3, visualValue(M_SUBDISTRICT), 
+			//		LL4, visualValue(M_LOCALITY),ll5, visualValue(M_VILLAGE), LL6, visualValue(M_EA), 
+			//		LL9);
 			if ctr = 1 then
 				//errmsg("About to add no %d, %s", ctr, tstrip(LLOGIN));
 				tabletCount(1,1) = tolower(tstrip(LLOGIN));
