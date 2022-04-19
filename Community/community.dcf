@@ -739,9 +739,9 @@ DataType=Numeric
 [ValueSet]
 Label=Over the past 5 years (or since the first household in the community got access), how has the duration of electricity supply at night changed?|Últimos 5 anos, tinha o serviço da eletricidade da rede mudou?
 Name=D29_VS1
-Value=1;Less hours
+Value=1;Less hours|Menos horas
 Value=2;Stayed the same|Ficou o mesmo|Hakuna mabadiliko
-Value=3;More hours
+Value=3;More hours|Mais horas
 
 [Item]
 Label=Over the past 5 years (or since the first household in the community got access), how has  the service from the grid electricity changed?|São sistemas de energia solar / sistemas de raios solares usados ​​/ detida nesta comunidade?|Je mifumo ya jua nyumbani / nishati ya jua mifumo ya umeme kutumika / inayomilikiwa katika jamii hii?
