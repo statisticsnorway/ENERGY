@@ -597,8 +597,8 @@ Value=9;Wage Employee in Private Company (without contract)|Empregado pago em em
 Value=10;Wage Employee for Government|Empregado assalariado do governo|Mwajiriwa wa Serikali
 Value=11;Wage Employee in Parastatal (government owned company)|Empregado assalariado (em empresa pública)|Mwajiriwa katika Shirika la Umma
 Value=15;Was not working, but was looking for work and has worked previously|Não estava trabalhando, mas estava procurando trabalho e trabalhou anteriormente|Hakufanya kazi, lakini alikuwa anatafuta kazi na hapo awali aliwahi kufanya kazi
-Value=16;Was not working, but was looking for work. Has never worked before|Não estava funcionando, mas estava procurando trabalho. Nunca trabalhou antes|Hakufanya kazi, lakini alikuwa anatafuta kazi na hajawahi kufanya kazi
-Value=17;Was not working, and was not looking for work|Não estava funcionando e não estava procurando trabalho|Hakufanya kazi, na alikuwa hatafuti kazi
+Value=16;Was not working, but was looking for work. Has never worked before|Não estava a trabalhar, mas estava à procura de trabalho. Nunca trabalhou antes|Hakufanya kazi, lakini alikuwa anatafuta kazi na hajawahi kufanya kazi
+Value=17;Home maker/Was not working, and was not looking for work|Domestica/Não estava a trabalhar, e não estava à procura de trabalho|Hakufanya kazi, na alikuwa hatafuti kazi
 Value=18;Student|Aluno/Aluna|Mwanafunzi
 Value=19;Retired/pensioner|Aposentado / pensionista|Mstaafu
 Value=20;Was not working because of disability or chronical illness|Não estava trabalhando por causa de deficiência ou doença crônica|Hakufanya kazi kwa sababu ya ulemavu/ugonjwa muda mrefu
@@ -3602,11 +3602,11 @@ Value=3;Bundle|molho|Fungu
 Value=4;Pieces|Peças|Vipande
 Value=5;Boxes|Caixas|Maboksi
 Value=6;Packets|Pacotes|Paketi
-Value=7;Saco de 50 Kilos|Saco de 10 Kilos
-Value=8;Saco de 100 Kilos|Saco de 25 Kilos
+Value=7;Saco de 10 Kilos|Saco de 10 Kilos
+Value=8;Saco de 25 Kilos|Saco de 25 Kilos
 Value=9;Saco de 50 Kilos|Saco de 50 Kilos
 Value=8;Saco de 100 Kilos|Saco de 100 Kilos
-Value=9;Saco de 50 Kilos|Balde de 20 litros
+Value=9;Balde de 20 kilos|Balde de 20 litros
 
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
