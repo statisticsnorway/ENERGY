@@ -18,7 +18,7 @@ COMMUNITY_DICT=../Data/Community.csdb|CSPRODB
 HHQ_DICT=../Data/HHQ.csdb|CSPRODB
 LISTING_DICT=../Data/Listing.csdb|CSPRODB
 REGIONS_DICT=../LookupFiles/Regions.csdb|CSPRODB
-SAMPLING_DICT=../Data/Sample.csdb|CSPRODB
+SAMPLING_DICT=../Data/Sample_03010069901033.csdb|CSPRODB
 USERS_DICT=../LookupFiles/Users.csdb|CSPRODB
 
 COUNTRYVARIABLES_DICT=../LookupFiles/countryVariables.csdb|CSPRODB

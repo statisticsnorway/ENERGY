@@ -3600,13 +3600,12 @@ Value=1;Kg||Kilo
 Value=2;Liters|Litros|Lita
 Value=3;Bundle|molho|Fungu
 Value=4;Pieces|Peças|Vipande
-Value=5;Boxes|Caixas|Maboksi
-Value=6;Packets|Pacotes|Paketi
-Value=7;Saco de 10 Kilos|Saco de 10 Kilos
-Value=8;Saco de 25 Kilos|Saco de 25 Kilos
-Value=9;Saco de 50 Kilos|Saco de 50 Kilos
-Value=8;Saco de 100 Kilos|Saco de 100 Kilos
-Value=9;Balde de 20 kilos|Balde de 20 litros
+Value=5;Boxes/Packets|Caixas/Pacotes|Maboksi
+Value=6;Saco de 10 Kilos|Saco de 10 Kilos|Paketi
+Value=7;Saco de 25 Kilos|Saco de 25 Kilos
+Value=8;Saco de 50 Kilos|Saco de 50 Kilos
+Value=9;Saco de 100 Kilos|Saco de 50 Kilos
+Value=0;Bucket de 20 kg|Balde de 20 kg
 
 [Item]
 Label=How much did you pay the last time you purchased one [UNIT] of [FUEL]?
