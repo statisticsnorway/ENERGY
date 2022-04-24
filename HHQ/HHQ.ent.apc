@@ -1583,16 +1583,11 @@ preproc
 
 	If (ispartial() and visualValue($) = NOTAPPL) or !ispartial() then
 		errmsg(tr(182));
-	endif;
-{
-postproc
-
-// D_FORM(D Section) is no long exist. By: Angelo
+endif;
 	if $ = 0 then
-		skip to D_FORM;
-
+		skip to E_FORM
 	endif;
-}
+
 
 
 
