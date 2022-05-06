@@ -1,7 +1,6 @@
 *.csdb
 *.cslog
 *.xlsx
-*.pff
 *.lst
 *.log
 /Docs/*
