@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 7.7
+AppType=Export
+
+[Files]
+Application=.\moz_community_spss.exf
+InputData=..\..\Community\Community.csdb
+ExportedData=..\Data\moz_community.dat
+SPSSDescFile=.\moz201 community_import.sps
+Listing=.\moz_community_spss.exf.lst
+
+[Parameters]
+Language=PT
+ViewListing=Always
+ViewResults=Yes
+InputOrder=Sequential

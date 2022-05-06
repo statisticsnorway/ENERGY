@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 7.7
+AppType=Export
+
+[Files]
+Application=.\moz_hhq_spss.exf
+InputData=..\..\HHQ\hhq.csdb
+ExportedData=..\Data\moz_hhq.dat
+SPSSDescFile=.\moz101 hhq_import.sps
+Listing=.\moz_hhq_spss.exf.lst
+
+[Parameters]
+Language=PT
+ViewListing=Always
+ViewResults=Yes
+InputOrder=Sequential

@@ -1,9 +1,9 @@
 *.csdb
 *.cslog
 *.xlsx
-*.pff
 *.lst
 *.log
+*.pff
 /Docs/*
 *.bak
 *.backup
