@@ -3,6 +3,7 @@
 *.xlsx
 *.lst
 *.log
+*.pff
 /Docs/*
 *.bak
 *.backup
