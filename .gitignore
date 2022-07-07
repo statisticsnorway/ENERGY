@@ -6,6 +6,7 @@
 /Docs/*
 *.bak
 *.backup
+*.pff
 LookupFiles/Regions_old.csdb
 LookupFiles/Regions.csdb
 *.orig
