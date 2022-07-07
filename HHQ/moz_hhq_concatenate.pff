@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 7.7
+AppType=Concatenate
+Description=Concatenate the hhq database with ea018 which was not able to upload to the database
+
+[Files]
+InputData=.\hhq_dict.csdb
+InputData=.\HHQ_EA018.csdb
+OutputData=.\hhq.csdb
+InputDict=.\hhq.dcf
+Listing=.\CSConcat.lst
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ConcatMethod=Case

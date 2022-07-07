@@ -1,0 +1,735 @@
+﻿* Encoding: UTF-8.
+
+GET
+  FILE='C:\Users\krl\Source\Analysis\Data\TZHHLEVEL_1.sav'.
+DATASET NAME $DataSet WINDOW=FRONT.
+
+DATASET ACTIVATE $DataSet.
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur
+  /CATEGORIES VARIABLES=Region UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur
+  /CATEGORIES VARIABLES=Region UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur > C2
+  /CATEGORIES VARIABLES=Region UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur + C2
+  /CATEGORIES VARIABLES=Region UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur + C2
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur + C2
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+WEIGHT weight.  
+
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 DISPLAY=LABEL
+  /TABLE Region [COUNT F40.0] BY UrbRur + C2
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+COMPUTE n = 1.
+
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [COUNT F40.0] + C2 [COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* From version 24 we can use the weight subcommand, it overrides the weight command outside ctables. 
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur C2 n DISPLAY=LABEL
+  /WEIGHT varname=weight
+  /TABLE Region BY UrbRur [COUNT F40.0] + C2 [COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [TABLEPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [COLPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 1. Households by urban/rural. Percentage'.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur n DISPLAY=LABEL
+  /TABLE Region BY UrbRur [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 1. Households by region and urban/rural. Percentage'
+    CAPTION='n = unweighted number of households' 'Source: IASES 2022'.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region n DISPLAY=LABEL  /VLABELS VARIABLES=UrbRur DISPLAY=NONE
+  /TABLE Region BY UrbRur [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 1. Households by region and urban/rural. Percentage'
+    CAPTION='n = unweighted number of households' 'Source: IASES 2022'.
+
+SET PRINTBACK=off.
+OUTPUT CLOSE all.
+
+CTABLES
+  /VLABELS VARIABLES=Region n DISPLAY=LABEL  /VLABELS VARIABLES=UrbRur DISPLAY=NONE
+  /TABLE Region BY UrbRur [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 1. Households by region and urban/rural. Percentage'
+    CAPTION='n = unweighted number of households' 'Source: IASES 2022'.
+
+
+* Export Output.
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE='C:\Users\krl\Source\Analysis\Syntax\EnergyTables.xlsx'
+     OPERATION=CREATEFILE  SHEET='Table01'
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.
+
+OUTPUT CLOSE all.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region C2 n DISPLAY=LABEL
+  /TABLE Region BY C2 [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=C2 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 2. Households by region and connection to grid. Percentage'
+    CAPTION='n = unweighted number of households' 'Source: IASES 2022'.
+
+* Export Output.
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE='C:\Users\krl\Source\Analysis\Syntax\EnergyTables.xlsx'
+     OPERATION=MODIFYSHEET  SHEET='Table02'
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.
+
+RECODE region 
+    ("01", "02", "03", "04" = 1)
+    ("05", "06", "07" = 2)
+    ("08", "09", "10", "22" = 3)
+    ("11", "12", "13", "14", "15", "16", "26" = 4)
+    ("17", "18", "19", "20",  "21", "23", "24", "25" = 5)
+into area.
+
+VALUE LABELS area
+ 1 "North-East"
+ 2 "East"
+ 3 "South"
+ 4 "West"
+ 5 "North"
+ .
+
+VARIABLE LABELS area "Area".
+
+
+DATASET ACTIVATE $DataSet.
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=area C30 C33 n DISPLAY=LABEL
+  /TABLE area BY C30 [MEAN] + C33 [MEAN] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=area ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 3. Household usage and expenditure for electricity by area. Average'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+TEMPORARY.
+SELECT IF (c2 = 1).
+
+CTABLES
+  /VLABELS VARIABLES=area C30 C33 n DISPLAY=LABEL
+  /TABLE area BY C30 [MEAN] + C33 [MEAN] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=area ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 3. Household usage and expenditure for electricity by area. Average'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+* Chart Builder.
+GGRAPH
+  /GRAPHDATASET NAME="graphdataset" VARIABLES=Region COUNT()[name="COUNT"] MISSING=LISTWISE 
+    REPORTMISSING=NO
+  /GRAPHSPEC SOURCE=INLINE.
+BEGIN GPL
+  SOURCE: s=userSource(id("graphdataset"))
+  DATA: Region=col(source(s), name("Region"), unit.category())
+  DATA: COUNT=col(source(s), name("COUNT"))
+  GUIDE: axis(dim(1), label("Region"))
+  GUIDE: axis(dim(2), label("Count"))
+  GUIDE: text.title(label("Simple Bar Count of Region"))
+  SCALE: cat(dim(1), include("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"
+, "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"
+, "26"))
+  SCALE: linear(dim(2), include(0))
+  ELEMENT: interval(position(Region*COUNT), shape.interior(shape.square))
+END GPL.
+SET PRINTBACK=LISTING.
+
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=area AEHLTH AETHLTH C30 C33 n DISPLAY=LABEL
+  /TABLE area + AEHLTH + AETHLTH BY C30 [MEAN] + C33 [MEAN] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=area ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=AEHLTH AETHLTH ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 3. Household usage and expenditure for electricity by area. Average'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=area AETACCESS AEHLTH AETHLTH UrbRur n DISPLAY=LABEL
+  /TABLE area + AETACCESS + AEHLTH [C] + AETHLTH [C] BY UrbRur [COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=area UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=AETACCESS AEHLTH AETHLTH ORDER=A KEY=VALUE EMPTY=INCLUDE MISSING=INCLUDE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 3. Household usage and expenditure for electricity by area. Average'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+SET PRINTBACK=NONE.
+OUTPUT CLOSE all.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 AETACCESS n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY AETACCESS [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=AETACCESS ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 4. Tiers for Access to electricity by region, density and sex of head of household. Percent'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+* Export Output.
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE='C:\Users\krl\Source\Analysis\Tables\EnergyTables.xlsx'
+     OPERATION=CREATEFILE  SHEET='Electricity tiers'
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.
+
+SET PRINTBACK=listing.
+
+SET PRINTBACK=NONE.
+OUTPUT CLOSE all.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 AEAFF n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY AEAFF [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=AEAFF ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE MISSING=INCLUDE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 5. Tiers for Affordability to electricity by region, density and sex of head of household. Percent'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+* Export Output.
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE='C:\Users\krl\Source\Analysis\Tables\EnergyTables.xlsx'
+     OPERATION=MODIFYSHEET  SHEET='Electricity tiers'
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.
+
+
+set MPRINT=off.
+
+DEFINE !Table (colvar=!tokens(1))
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 !colvar n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY !colvar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=!colvar ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE='Table 4. Tiers for Access to electricity by region, density and sex of head of household. Percent'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+!ENDDEFINE.
+
+!Table colvar=aetaccess
+
+
+DEFINE !Table (colvar=!tokens(1)
+              /titletext=!ENCLOSE('(',')'))
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 !colvar n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY !colvar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=!colvar ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE=!Concat("'",'Table 4. Tiers for ', !titletext, ' by region, density and sex of head of household. Percent',"'")
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+!ENDDEFINE.
+
+!Table colvar=aetaccess titletext=(Access to electricity)
+
+!Table colvar=AEAFF titletext=(Affordability to electricity)
+
+DEFINE !Table (colvar=!tokens(1)
+              /tablenum=!tokens(1)
+              /titletext=!ENCLOSE('(',')'))
+
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 !colvar n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY !colvar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=!colvar ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE=!Concat("'",'Table ',!tablenum ,'. Tiers for ', !titletext, ' by region, density and sex of head of household. Percent',"'")
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+!ENDDEFINE.
+
+!Table colvar=aetaccess tablenum=4 titletext=(Access to electricity).
+!Table colvar=AEAFF tablenum=5 titletext=(Affordability to electricity).
+
+
+DEFINE !Table (colvar=!tokens(1)
+              /tablenum=!tokens(1)
+              /titletext=!ENCLOSE('(',')')
+              /spreadsheetpath=!ENCLOSE('(',')')
+              /spreadsheetname=!ENCLOSE('(',')')
+              /worksheetname=!ENCLOSE('(',')')
+              /spreadsheetoperation=!tokens(1))
+
+SET PRINTBACK=NONE.
+OUTPUT CLOSE all.
+
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 !colvar n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY !colvar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=!colvar ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE=!Concat("'",'Table ',!tablenum ,'. Tiers for ', !titletext, ' by region, density and sex of head of household. Percent',"'")
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+    
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE=!concat("'",!spreadsheetpath,!spreadsheetname,"'")
+     OPERATION=!spreadsheetoperation  SHEET=!concat("'",!worksheetname,"'")
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.  
+
+SET PRINTBACK=listing.       
+!ENDDEFINE.
+
+!Table colvar=aetaccess 
+       tablenum=4 
+       titletext=(Access to electricity)
+       spreadsheetpath=(C:\Users\krl\Source\Analysis\Tables\)
+       spreadsheetname=(EnergyTables.xlsx)
+       worksheetname=(Electricity tiers)
+       spreadsheetoperation=createfile
+       .
+
+
+!Table colvar=AEAFF 
+       tablenum=5 
+       titletext=(Affordability to electricity)
+       spreadsheetpath=(C:\Users\krl\Source\Analysis\Tables\)
+       spreadsheetname=(EnergyTables.xlsx)
+       worksheetname=(Electricity tiers)
+       spreadsheetoperation=modifysheet
+       .
+
+
+* This does not work for some reason, there is an error message for invalid character (/) for the export.
+DEFINE !Table (colvar=!tokens(1)
+              /tablenum=!tokens(1)
+              /titletext=!CHAREND('/')
+              /spreadsheetpath=!CHAREND('/')
+              /spreadsheetname=!CHAREND('/')
+              /worksheetname=!CHAREND('/')
+              /spreadsheetoperation=!tokens(1)
+
+SET PRINTBACK=NONE.
+OUTPUT CLOSE all.
+
+CTABLES
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 !colvar n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY !colvar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=!colvar ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95
+  /TITLES
+    TITLE=!Concat("'",'Table ',!tablenum ,'. Tiers for ', !titletext, ' by region, density and sex of head of household. Percent',"'")
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+    
+OUTPUT EXPORT
+  /CONTENTS  EXPORT=VISIBLE  LAYERS=PRINTSETTING  MODELVIEWS=PRINTSETTING
+  /XLSX  DOCUMENTFILE=!concat("'",!spreadsheetpath,!spreadsheetname,"'")
+     OPERATION=!spreadsheetoperation  SHEET=!concat("'",!worksheetname,"'")
+     LOCATION=LASTCOLUMN  NOTESCAPTIONS=YES.  
+
+SET PRINTBACK=listing.       
+!ENDDEFINE.
+
+!Table colvar=aetaccess 
+       tablenum=4 
+       titletext=Access to electricity/
+       spreadsheetpath=C:\Users\krl\Source\Analysis\Tables\/
+       spreadsheetname=EnergyTables.xlsx/
+       worksheetname=Electricity tiers/
+       spreadsheetoperation=createfile
+       .
+
+
+!Table colvar=AEAFF 
+       tablenum=5 
+       titletext=(Affordability to electricity)
+       spreadsheetpath=(C:\Users\krl\Source\Analysis\Tables\)
+       spreadsheetname=(EnergyTables.xlsx)
+       worksheetname=(Electricity tiers)
+       spreadsheetoperation=modifysheet
+       .
+
+
+
+
+CTABLES
+  /VLABELS VARIABLES=UrbRur c2 DISPLAY=LABEL
+  /TABLE UrbRur BY c2 [ROWPCT.COUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=c2 EMPTY=EXCLUDE
+ .
+
+
+CTABLES
+  /PCOMPUTE &pct_now = EXPR([1]/([1]+[2])*100)
+  /PPROPERTIES &pct_now LABEL = "Today" FORMAT = COUNT F8.0
+  /VLABELS VARIABLES=UrbRur c2 DISPLAY=LABEL
+  /TABLE UrbRur BY c2 [C][COUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=c2 [1,2, &pct_now] EMPTY=EXCLUDE
+ .
+
+
+
+
+
+
+CTABLES
+  /VLABELS VARIABLES=c12 c2 DISPLAY=NONE
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY c12 [ROWPCT.COUNT F40.0] + c2 [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=c12 EMPTY=EXCLUDE TOTAL=NO POSITION=BEFORE
+  /CATEGORIES VARIABLES=c2 EMPTY=EXCLUDE TOTAL=NO POSITION=BEFORE
+  /TITLES
+    TITLE='Table 6. Access to electricity by region, density and sex of head of household. Percent'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+CTABLES
+  /PCOMPUTE &pct_5 = EXPR(([1]+[2])/([1]+[2]+[3]+[4]+[5]+[6]+[7]+[8]+[66])*100)
+  /PPROPERTIES &pct_5 LABEL = "5 years ago" FORMAT = COUNT F8.0 HIDESOURCECATS=YES
+  /PCOMPUTE &pct_now = EXPR([1]/([1]+[2])*100)
+  /PPROPERTIES &pct_now LABEL = "Today" FORMAT = COUNT F8.0 HIDESOURCECATS=YES
+  /VLABELS VARIABLES=c12 c2 DISPLAY=NONE
+  /VLABELS VARIABLES=Region UrbRur headsex_gr1 n DISPLAY=LABEL
+  /TABLE Region + UrbRur + headsex_gr1 BY c12 + c2 [C][COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=c12 [1,2,3,4,5,6,7,8,66, &pct_5] EMPTY=EXCLUDE TOTAL=NO POSITION=BEFORE
+  /CATEGORIES VARIABLES=c2 [1,2, &pct_now] EMPTY=EXCLUDE TOTAL=NO POSITION=BEFORE
+  /TITLES
+    TITLE='Table 6. Connection to grid by region, density and sex of head of household. Percent'
+    CAPTION='n = unweighted number of households.' 'Source: IASES 2022'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region B14 n DISPLAY=LABEL
+  /TABLE Region BY B14 [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=B14 ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+CTABLES
+  /VLABELS VARIABLES=Region B14 n DISPLAY=LABEL
+  /TABLE Region BY B14 [COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=B14 ORDER=A KEY=VALUE EMPTY=EXCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+CTABLES
+  /VLABELS VARIABLES=Region C2 C4 n DISPLAY=LABEL
+  /TABLE Region BY C2 [ROWPCT.COUNT F40.0] + C4 [ROWPCT.COUNT F40.0] + n [S][MEAN]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region C2 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C4 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+DO IF (c2 = 1 and c4 = 1).
+ COMPUTE grid_solar = 1.
+ELSE IF (c2 = 1).
+ COMPUTE grid_solar = 2.
+ELSE IF (c4 = 1).
+ COMPUTE grid_solar = 3.
+ELSE.
+ COMPUTE grid_solar = 4.
+END IF.
+
+VALUE LABELS grid_solar
+    1 'Grid and solar'
+    2 'Grid'
+    3 'Solar'
+    4 'No grid or solar'
+    .
+VARIABLE LABELS grid_solar 'Connection to grid and solar'.
+
+CTABLES
+  /VLABELS VARIABLES=Region C2 C4 grid_solar n DISPLAY=LABEL
+  /TABLE Region BY C2 [ROWPCT.COUNT F40.0] + C4 [ROWPCT.COUNT F40.0] + grid_solar [ROWPCT.COUNT 
+    F40.0] + n [S][MEAN]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region C2 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C4 grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=Region grid_solar n DISPLAY=LABEL
+  /TABLE Region BY grid_solar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CRITERIA CILEVEL=95.
+
+
+
+
+* Custom Tables.
+
+
+* Custom Tables.
+CTABLES
+  /FORMAT EMPTY='                        -' MISSING='.'
+  /SMISSING VARIABLE
+  /VLABELS VARIABLES=Region C2 C4 grid_solar n DISPLAY=LABEL
+  /TABLE Region BY C2 [ROWPCT.COUNT F3.0] + C4 [ROWPCT.COUNT F3.0] + grid_solar [ROWPCT.COUNT 
+    F3.0] + n [S][MEAN]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region C2 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=C4 grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /FORMAT EMPTY='                        -' MISSING='.'
+  /VLABELS VARIABLES=Region grid_solar n DISPLAY=LABEL
+  /TABLE Region BY grid_solar [ROWPCT.COUNT F40.0] + n [S][MEAN]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+VARIABLE LABELS n 'n = 100%'.
+CTABLES
+  /VLABELS VARIABLES=Region grid_solar n DISPLAY=LABEL
+  /TABLE Region BY grid_solar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+
+DO IF (any(comd3,1,2,3) = 1 and 
+    (any(L2A$20,1,2,3,4,5) = 1 or
+     any(L2A$21,1,2,3,4,5) = 1 or
+     any(L2A$22,1,2,3,4,5) = 1))
+    .
+ COMPUTE com_grid = 1.
+ELSE.
+ COMPUTE com_grid = 2.
+END IF.
+
+VALUE LABELS com_grid
+    1 'comgrid'
+    2 'no comgrid'
+    .
+
+FREQUENCIES comd3 L2A$20 L2A$21 L2A$22 com_grid.
+
+FREQUENCIES b13.
+
+* Custom Tables.
+CTABLES
+  /FORMAT EMPTY='-' MISSING='.'
+  /SMISSING VARIABLE
+  /VLABELS VARIABLES=Region grid_solar n DISPLAY=LABEL
+  /TABLE Region BY grid_solar [ROWPCT.COUNT F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=Region ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
+  /CATEGORIES VARIABLES=grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
