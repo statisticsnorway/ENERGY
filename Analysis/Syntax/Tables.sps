@@ -1,7 +1,7 @@
 ﻿* Encoding: UTF-8.
 
 GET
-  FILE='C:\Users\krl\Source\Analysis\Data\TZHHLEVEL_1.sav'.
+  FILE='Data Production\TZHHLEVEL_1.sav'.
 DATASET NAME $DataSet WINDOW=FRONT.
 
 DATASET ACTIVATE $DataSet.
@@ -69,7 +69,7 @@ CTABLES
   /CRITERIA CILEVEL=95.
 
 COMPUTE n = 1.
-
+VARIABLE LABELS n 'n = 100%'.
 
 * Custom Tables.
 CTABLES
@@ -733,3 +733,57 @@ CTABLES
   /CATEGORIES VARIABLES=grid_solar ORDER=A KEY=VALUE EMPTY=INCLUDE
   /CRITERIA CILEVEL=95.
 
+
+
+
+
+
+DATASET ACTIVATE $DataSet.
+
+MRSETS
+  /MDGROUP NAME=$Occup LABEL='Economic status by at least one member of  household' 
+   CATEGORYLABELS=VARLABELS VARIABLES=HHOccupStatus_gr1 HHOccupStatus_gr2 HHOccupStatus_gr3 HHOccupStatus_gr4 HHOccupStatus_gr5 
+ VALUE=1
+  /DISPLAY NAME=[$Occup].
+
+
+CTABLES
+  /VLABELS VARIABLES=headsex_gr1 HighEduc_Gr1 $Occup HHOccupStatus_gr1 HHOccupStatus_gr2 
+    HHOccupStatus_gr3 HHOccupStatus_gr4 HHOccupStatus_gr5 NatExpQuint UrbRur n 
+    DISPLAY=LABEL
+  /TABLE headsex_gr1 + HighEduc_Gr1 + $Occup + HHOccupStatus_gr1 + HHOccupStatus_gr2 + 
+    HHOccupStatus_gr3 + HHOccupStatus_gr4 + HHOccupStatus_gr5 + NatExpQuint BY UrbRur [ROWPCT.COUNT 
+    F40.0] + n [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland '+
+    'Tanzania' POSITION=BEFORE
+  /CATEGORIES VARIABLES=HighEduc_Gr1 NatExpQuint UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=$Occup  EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=HHOccupStatus_gr1 HHOccupStatus_gr2 HHOccupStatus_gr3 HHOccupStatus_gr4 
+    HHOccupStatus_gr5 ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CRITERIA CILEVEL=95.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=headsex_gr1 HighEduc_Gr1 $Occup NatExpQuint UrbRur n DISPLAY=LABEL
+  /TABLE headsex_gr1 + HighEduc_Gr1 + $Occup + NatExpQuint BY UrbRur [ROWPCT.COUNT F40.0] + n 
+    [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=headsex_gr1 ORDER=A KEY=VALUE EMPTY=INCLUDE TOTAL=YES LABEL='Mainland '+
+    'Tanzania' POSITION=BEFORE
+  /CATEGORIES VARIABLES=HighEduc_Gr1 NatExpQuint UrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=$Occup  EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=headsex_gr1 HighEduc_Gr1 $Occup NatExpQuint C2 n DISPLAY=LABEL
+  /TABLE headsex_gr1 + HighEduc_Gr1 + $Occup + NatExpQuint BY C2 [ROWPCT.COUNT F40.0] + n 
+    [S][UCOUNT F40.0]
+  /SLABELS VISIBLE=NO
+  /CATEGORIES VARIABLES=headsex_gr1 [1, 2, 3] EMPTY=EXCLUDE TOTAL=YES LABEL='Mainland Tanzania' 
+    POSITION=BEFORE
+  /CATEGORIES VARIABLES=HighEduc_Gr1 NatExpQuint C2 ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CATEGORIES VARIABLES=$Occup  EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.

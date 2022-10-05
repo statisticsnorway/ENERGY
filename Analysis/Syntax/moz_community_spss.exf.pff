@@ -4,7 +4,7 @@ AppType=Export
 
 [Files]
 Application=.\moz_community_spss.exf
-InputData=..\..\Community\Community.csdb
+InputData=..\..\Community\community_dict_Recod_2022.csdb
 ExportedData=..\Data\moz_community.dat
 SPSSDescFile=.\moz201 community_import.sps
 Listing=.\moz_community_spss.exf.lst
