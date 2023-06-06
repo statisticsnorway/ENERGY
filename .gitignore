@@ -13,6 +13,7 @@ LookupFiles/Regions.csdb
 *.err
 *.dat
 *.sav
+*.dta
 
 !deploy\ to\ TAZ.pff
 !deploy\ to\ MOZ.pff

@@ -1,7 +1,7 @@
 ﻿* Encoding: UTF-8.
 * Created 19.01.2022. 
-* Update: Kristian 26.01 - 10.02.2022       
-* Update::Per 19.01 - 14.02.2022.
+* Update: Kristian 26.01 - 17.06.2022       
+* Update::Per 19.01 - 17.06.2022.
 * SSB/NBS project team final approval: ................ 
 
 *Objective: 1) Clean and label the community level file with an unique identifier ready for merge to the household file  
@@ -14,18 +14,25 @@
 ***********************************************************************************************************************  
 *The working filestructure for this program is as follows:
 
-*.....\Analysis
+*.....\2021_22_SPSS Tanzania
             \Cat
-            \Data
+            \Data in
+                \TZ community
+                \TZ listing
+                \TZ HHQ
             \Production
             \Documentation
             \Syntax
-            \Tables
+            \Tabeller
             \Tmp      
 ***********************************************************************************.
+*Set address to the filestructure once and get the imported raw-data-file from the tmp folder..
 OUTPUT CLOSE ALL.
 DATASET CLOSE ALL.
+*Obs - change the path to your computer. 
+*CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\ComTZ_1.sav'.
+SET DECIMAL=DOT.
 ************************************************************
 *add record number before any other operation on the file.
 COMPUTE comREC_ID= $CASENUM.
@@ -36,11 +43,17 @@ EXECUTE.
 *chek number of records on in-file.
 FREQUENCIES C_A1.
 
-*Delete records created before ToE - to discuss with NBS.
+*Prepare for efficent listing (all on one line) listings in the output window..
+SET WIDTH=255.
+ALTER TYPE A5(a20) C_LOGIN (a20).
+
+**************************************
+*Delete records created before ToE - TO DISCUSS WITH NBS (look at the data file - unfortunately we do not have date variable on the Community).
 *SORT CASES BY comREC_ID(A).
 *SELECT IF 
-    comREC_ID GT 2.
+    comREC_ID GT 6.
 *EXECUTE.
+
 *check.
 *FREQUENCIES C_A1.
 
@@ -56,7 +69,7 @@ FORMATS SUM_AtoPtmp (F10.0).
 *Check and corrrect missings on ID variables C_A1 to C_A6.
 TEMPORARY.
     SELECT IF (SYSMIS(C_A1)=1 OR SYSMIS(C_A2)=1 OR SYSMIS(C_A3)=1 OR SYSMIS(C_A4)=1 OR SYSMIS(C_A5)=1 OR SYSMIS(C_A6)=1).
-LIST comREC_ID C_A1 C_A2 C_A3 C_A4 C_A5 C_A6 A5 C_LOGIN SUM_AtoPtmp.
+LIST comREC_ID C_A1 C_A2 C_A3 C_A4 C_A5 C_A6 A5 SUM_AtoPtmp.
 
 *Help sort.
 *SORT CASES BY comREC_D (A).
@@ -64,10 +77,11 @@ LIST comREC_ID C_A1 C_A2 C_A3 C_A4 C_A5 C_A6 A5 C_LOGIN SUM_AtoPtmp.
 *SORT CASES BY   C_A1(A) C_A2(A) C_A3(A) C_A4(A) C_A5(A) C_A6 A5(A).
 
 *corrections based on visuals (14.02.2022)..
-IF (comREC_ID = 74) C_A6 = 3.
 IF (comREC_ID = 5) C_A3 = 123.
-SELECT IF comREC_ID NE 11.
-SELECT IF comREC_ID NE 8.
+IF (comREC_ID = 8) C_A3 = 123.
+IF (comREC_ID = 11) C_A5 = 2.
+IF (comREC_ID = 11) C_A6 = 2.
+IF (comREC_ID = 74) C_A6 = 3.
 EXECUTE.
 
 *END MANUAL CHECK.
@@ -126,7 +140,7 @@ VALUE LABELS comRegion
 "23" 23 Katavi
 "24" 24 Simiyu
 "25" 25 Geita
-"26" 26 RukwaSongwe.
+"26" 26 Songwe.
 VARIABLE LABELS comDistrict "District".
 VARIABLE LABELS comWard "Ward".
 VARIABLE LABELS comDummy "Dummy".
@@ -164,14 +178,16 @@ SELECT IF
     PFirst = 0 OR PLast = 0.
 LIST comREC_ID GeocodeEA A5 C_LOGIN PFirst PLast SUM_AtoPtmp .
 
-*Delete duplicates.-  the record with the less filling in.
+*Delete duplicates.-  delete the records with the less filling in.
 SELECT IF PLast=1.
 EXECUTE.
+
 *Check.
 FREQUENCIES comRegion GeocodeEA.
 
-*END ID / DUPLICATE CHECK
-********************************************************
+*Clean.
+DELETE VARIABLES PFirst PLast SUM_AtoPtmp.
+
 *Renaming variables  to prepare for merge with HHQ file.
 RENAME VARIABLES  (C_LOGIN=comC_LOGIN) (C_A1=comC_A1) (C_A2=comC_A2) (C_A3=comC_A3) (C_A4=comC_A5) (C_A5=comC_A6) (A5=comA5) 
 (A6 = comUrbRur) (A7=comA7) (A8=comA8) (A9=comA9) (A10=comA10) (B1=comB1) (C1=comC1) (C2=comC2) (C3 = comC3) 
@@ -182,7 +198,7 @@ RENAME VARIABLES  (C_LOGIN=comC_LOGIN) (C_A1=comC_A1) (C_A2=comC_A2) (C_A3=comC_
 (H3=comH3) (H4=comH4) (H5=comH5) (F1=comF1) (F2=comF2) (F3=comF3) (F4=comF4) (F5=comF5) (F6=comF6) (F7=comF7) (F8=comF8)
 (I1=comI1) (I2=comI2) (I3=comI3) (I4=comI4) (I5=comI5) (I6=comI6) (I7=comI7) (I8=comI8) (I9=comI9)
 (J1=comJ1) (J2=comJ2) (GP1=comGP1) (GP2=comGP2) (GP3=comGP3).
-**********************************************************
+
 *save workfile. 
 SORT CASES BY GeocodeEA (A).
 SAVE OUTFILE='tmp\ComTZ_1b.sav'
@@ -191,41 +207,69 @@ comREC_ID
 comRegion
 GeocodeEA
 comUrbRur
+comEA
 ALL 
 /COMPRESSED.
+
+********************************************************************************************.
+*new step for syntax v7.
+*Manual check of EAs comparing with GIS and initial EA sampling xls sheet.
+
+*Open work file.
 OUTPUT CLOSE ALL.
-DATASET CLOSE All.
-EXECUTE.
-***********************************.
-*Alternative last cleaning to be discussed with NBS.
-*Step 1) Check valid GeocodeEA with the GIS Catalogue (XLS).
-*match the GIS attribute table geocodes with the geocodes on the work file.
-MATCH FILES 
-/FILE =  "Cat\ea.sav"
-/TABLE= "tmp\ComTZ_1b.sav"
-/IN=from_cat
-/BY GeocodeEA.
+DATASET CLOSE ALL.
+*CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
+GET FILE='tmp\ComTZ_1b.sav'.
+SET DECIMAL=DOT.
+
+* Custom Tables.
+CTABLES
+  /VLABELS VARIABLES=GeocodeEA comUrbRur comREC_ID DISPLAY=LABEL
+  /TABLE GeocodeEA BY comUrbRur [COUNT F40.0] + comREC_ID [MEAN]
+  /CATEGORIES VARIABLES=GeocodeEA ORDER=A KEY=VALUE EMPTY=EXCLUDE
+  /CATEGORIES VARIABLES=comUrbRur ORDER=A KEY=VALUE EMPTY=INCLUDE
+  /CRITERIA CILEVEL=95.
+
+*Compare the EA codes in this table with the listing from the HHQ questionnaire and the initial sample sheet (xls)
+*Correction.
+IF(GeocodeEA = "20042011102001") GeocodeEA="20041011102002".
+IF(GeocodeEA = "16031131103303") GeocodeEA="16031131103003".
 EXECUTE.
 
-FREQUENCIES from_cat.
+*Findings per 02.04.22 for discussion.
+*Missing Community interviews for.
+*04032711103001
+*04032011106001
+*08052011103003
+*14060821104013
+*Extra Community interview not with valid EA code and not possible to recalculate.into the missing (se above) for the same Region.:
+*14031711122022
+
+*Missing HHQ but community interview OK for:
+*07011921103030 
+*07020421101006
+
+*last duplicate check.
+SORT CASES BY GeocodeEA(A) .
+MATCH FILES
+  /FILE=*
+  /BY GeocodeEA
+  /FIRST=PFirst
+  /LAST=PLast.
+EXECUTE.
 *check.
-TEMPORARY.
-SELECT IF    (from_cat = 0).  
-LIST comRec_ID GeocodeEA SUM_AtoPtmp from_cat. 
+FREQUENCIES PFirst PLast.
 
-*delete records on the workfile that does not match the XLS catalogue of GeocodeEA from the GIS attribute table. 
-SELECT IF (from_cat = 1). 
-EXECUTE.
+DELETE VARIABLES PFirst Plast.
 
-*Check/clean.
-FREQUENCIES comRegion.
-DELETE VARIABLES PFirst PLast SUM_AtoPtmp from_cat.
+OUTPUT CLOSE ALL.
 
+*END OF CLEANING.
 ******************************************************************
 *LABELLING AND GROUPING OF KEY VARIABLES.
 ******************************************************************
-*comB1 about who involved in the community interview.
-*multiple answer.
+*comB1 about who involved in the community interview.MR.
+
 *check.
 *FREQUENCIES comB1.
 IF (CHAR.SUBSTR(comB1,1,1)="A" OR CHAR.SUBSTR(comB1,2,1)="A" OR CHAR.SUBSTR(comB1,3,1)="A" OR 
@@ -283,6 +327,7 @@ VARIABLE LABELS
 *Check.
 FREQUENCIES comB1_gr1a comB1_gr1b comB1_gr1c comB1_gr1d comB1_gr1e comB1_gr1f comB1_gr1g comB1_gr1h comB1_gr1i comB1_gr1j
                         comB1_gr1k comB1_gr1l. 
+*OUTPUT CLOSE ALL.
 ********************************************************************************.
 *Group comC1 number of households in community.
 *FREQUENCIES comC1.
@@ -290,7 +335,12 @@ COMPUTE comC1_gr1 = $SYSMIS.
 FORMATS comC1_gr1(F2.0).
 VARIABLE LEVEL comC1_gr1 (NOMINAL).
 RECODE comC1
-(LOWEST THRU 99=1) (100 THRU 499 =2) (500 THRU 999 = 3) (1000 THRU 4999 = 4) (5000 THRU HIGHEST = 5) INTO comC1_gr1.
+(LOWEST THRU 99=1)
+(100 THRU 499 =2)
+(500 THRU 999 = 3)
+(1000 THRU 4999 = 4)
+(5000 THRU HIGHEST = 5)
+INTO comC1_gr1.
 VARIABLE LABELS comC1_gr1 "Number of households in the community".
 VALUE LABELS comC1_gr1 
 1 "            <100"
@@ -300,9 +350,10 @@ VALUE LABELS comC1_gr1
 5 "            5000+".
 *Check.
 FREQUENCIES comC1_gr1.
+*OUTPUT CLOSE ALL.
 *****************************************************.
-*Group comC3 Two most frequent type of economic activities.
-*Multiple answer.
+*Group comC3 Two most frequent type of economic activities MR.
+
 *FREQUENCIES comC3.
 IF (CHAR.SUBSTR(comC3,1,1)= "A") OR  (CHAR.SUBSTR(comC3,2,1)= "A") comC3_gr1a = 1.  
 IF (CHAR.SUBSTR(comC3,1,1)= "B") OR  (CHAR.SUBSTR(comC3,2,1)= "B") comC3_gr1b = 1.  
@@ -345,8 +396,8 @@ VALUE LABELS
 FREQUENCIES comC3_gr1a comC3_gr1b comC3_gr1c comC3_gr1d comC3_gr1d comC3_gr1e comC3_gr1f 
                         comC3_gr1g comC3_gr1h comC3_gr1i comC3_gr1j comC3_gr1k.
 ****************************************.
-*Group comD1 all sources of electricity.
-*Multiple response.
+*Group comD1 all sources of electricity MR..
+
 *FREQUENCIES comD1.
 IF (CHAR.SUBSTR(comD1,1,1)="A" OR CHAR.SUBSTR(comD1,2,1)="A" OR CHAR.SUBSTR(comD1,3,1)="A" OR 
     CHAR.SUBSTR(comD1,4,1)="A" OR CHAR.SUBSTR(comD1,5,1)="A"  ) comD1_gr1a = 1.
@@ -399,13 +450,22 @@ VALUE LABELS
 *Check.
 FREQUENCIES comD1_gr1a comD1_gr1b comD1_gr1c comD1_gr1d comD1_gr1e comD1_gr1f 
                         comD1_gr1g comD1_gr1h comD1_gr1i comD1_gr1j comD1_gr1k.
+*OUTPUT CLOSE ALL.
 **********************************
 *Group comD2 distance to TANESCO/EDM office.
 *FREQUENCIES comD2.
 COMPUTE comD2_gr1 = $SYSMIS.
 FORMATS comD2_gr1(F3.0).
 VARIABLE LEVEL comD2_gr1 (NOMINAL).
-RECODE comD2 (LOWEST THRU 1=1) (2 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU 87 = 5) (88 = 6) (MISSING = 7) INTO comD2_gr1.
+RECODE comD2
+(LOWEST THRU 1=1)
+(2 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU 87 = 5)
+(88 = 6)
+(MISSING = 7)
+INTO comD2_gr1.
 VARIABLE LABELS comD2_gr1 "Distance from the community to the nearest TANESCO/EDM office (km)".
 VALUE LABELS comD2_gr1 
 1 "        <2"
@@ -417,13 +477,21 @@ VALUE LABELS comD2_gr1
 7 "Not stated".
 *Check.
 FREQUENCIES comD2_gr1.
+*OUTPUT CLOSE ALL.
 *****************************************
 *Group comD8 years with grid connection.
 *FREQUENCIES comD8.
 COMPUTE comD8_gr1 = $SYSMIS.
 FORMATS comD8_gr1(F3.0).
 VARIABLE LEVEL comD8_gr1 (NOMINAL).
-RECODE comD8 (LOWEST THRU 4 = 1) (5 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU HIGHEST = 5) (MISSING = 6) INTO comD8_gr1.
+RECODE comD8
+(LOWEST THRU 4 = 1)
+(5 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU HIGHEST = 5)
+(MISSING = 6)
+INTO comD8_gr1.
 VARIABLE LABELS comD8_gr1 "Years with grid-connection in the community".
 VALUE LABELS comD8_gr1 
 1 "        <5"
@@ -434,6 +502,7 @@ VALUE LABELS comD8_gr1
 6 "Not stated".
 *Check.
 FREQUENCIES comD8_gr1.
+*OUTPUT CLOSE ALL.
 *************************************
 *Group comD10 ammount paid for grid connection.
 *FREQUENCIES comD10.
@@ -442,7 +511,13 @@ FORMATS comD10_gr1(F10.0).
 IF (comD10 = 88 OR comD10 = 888 OR comD10 = 8888 OR comD10=88888 OR comD10 = 888888 OR comD10 = 8888888) comD10=88888888. 
 EXECUTE.
 VARIABLE LEVEL comD10_gr1 (NOMINAL).
-RECODE comD10 (LOWEST THRU 29999 = 1) (30000 THRU 199999 = 2) (200000 THRU 88888887 = 3) (88888888 = 4) (MISSING = 5) INTO comD10_gr1.
+RECODE comD10
+(LOWEST  THRU       29999   = 1)
+(   30000    THRU     199999   = 2)
+( 200000     THRU 88888887   = 3)
+(88888888                             = 4)
+(MISSING                          =    5)
+INTO comD10_gr1.
 VARIABLE LABELS comD10_gr1 "Ammount paid by the community for grid connection (1000 TZS)".
 VALUE LABELS comD10_gr1 
 1 "          <30"
@@ -452,9 +527,10 @@ VALUE LABELS comD10_gr1
 5 "Not stated".
 *Check.
 FREQUENCIES comD10_gr1.
+*OUTPUT CLOSE ALL.
 ******************************
-*Group comD16 Worst month for grid-service.
-*Multiple respons.
+*Group comD16 Worst month for grid-service  MR.
+
 *FREQUENCIES comD16.
 IF (CHAR.SUBSTR(comD16,1,1)="a" OR CHAR.SUBSTR(comD16,2,1)="a" OR CHAR.SUBSTR(comD16,3,1)="a")  comD16_gr1a = 1.
 IF (CHAR.SUBSTR(comD16,1,1)="b" OR CHAR.SUBSTR(comD16,2,1)="b" OR CHAR.SUBSTR(comD16,3,1)="b")  comD16_gr1b = 1.
@@ -499,13 +575,21 @@ VALUE LABELS
 *Check.
 FREQUENCIES comD16_gr1a comD16_gr1b comD16_gr1c comD16_gr1d comD16_gr1e comD16_gr1f comD16_gr1g comD16_gr1h comD16_gr1i 
 comD16_gr1j comD16_gr1k comD16_gr1l.
+*OUTPUT CLOSE ALL.
 ***********************************************
 *Group comD20 total duration of outages/black-outs last week (hours).
 *FREQUENCIES comD20.
 COMPUTE comD20_gr1 = $SYSMIS.
 FORMATS comD20_gr1(F10.0).
 VARIABLE LEVEL comD20_gr1 (NOMINAL).
-RECODE comD20 (LOWEST THRU 1 = 1) (2 THRU 4 = 2) (5 THRU 9 = 3) (10 THRU 19 = 4) (20 THRU HIGHEST = 5) (MISSING = 6) INTO comD20_gr1.
+RECODE comD20
+(LOWEST THRU 1 = 1)
+(2 THRU 4 = 2)
+(5 THRU 9 = 3)
+(10 THRU 19 = 4)
+(20 THRU HIGHEST = 5)
+(MISSING = 6)
+INTO comD20_gr1.
 VARIABLE LABELS comD20_gr1 "Total duration of outages/black-outs in the community during the last week (hours)".
 VALUE LABELS comD20_gr1 
 1 "       <2"
@@ -516,13 +600,21 @@ VALUE LABELS comD20_gr1
 6 "Not stated".
 *Check.
 FREQUENCIES comD20_gr1.
+*OUTPUT CLOSE ALL.
 ************************************
 *Group comD23 number of days before previous blackut was repaired and the community regained power.
 *FREQUENCIES comD23.
 COMPUTE comD23_gr1 = $SYSMIS.
 FORMATS comD23_gr1(F10.0).
 VARIABLE LEVEL comD23_gr1 (NOMINAL).
-RECODE comD23 (LOWEST THRU 1 = 1) (2 THRU 4 = 2) (5 THRU 9 = 3) (10 THRU 19 = 4) (20 THRU HIGHEST = 5) (MISSING = 6) INTO comD23_gr1.
+RECODE comD23
+(LOWEST THRU 1 = 1)
+(2 THRU 4 = 2)
+(5 THRU 9 = 3)
+(10 THRU 19 = 4)
+(20 THRU HIGHEST = 5)
+(MISSING = 6)
+INTO comD23_gr1.
 VARIABLE LABELS comD23_gr1 "Number of days it took to repair after pervious outages/black-outs for the community to regain power".
 VALUE LABELS comD23_gr1 
 1 "        <2"
@@ -533,9 +625,10 @@ VALUE LABELS comD23_gr1
 6 "Not stated".
 *Check.
 FREQUENCIES comD23_gr1.
+*OUTPUT CLOSE ALL.
 ****************************************
-*Group D24 Two most serious problems for the community with the grid electricity.
-*Multiple respons.
+*Group D24 Two most serious problems for the community with the grid electricity.MR.
+
 *FREQUENCIES comD24.
 IF (CHAR.SUBSTR(comD24,1,1)="a" OR CHAR.SUBSTR(comD24,2,1)="a")  comD24_gr1a = 1.
 IF (CHAR.SUBSTR(comD24,1,1)="b" OR CHAR.SUBSTR(comD24,2,1)="b")  comD24_gr1b = 1.
@@ -577,9 +670,10 @@ VALUE LABELS
 *Check.
 FREQUENCIES comD24_gr1a  comD24_gr1b comD24_gr1c comD24_gr1d comD24_gr1e comD24_gr1f comD24_gr1g comD24_gr1h comD24_gr1i 
 comD24_gr1j  comD24_gr1k. 
+*OUTPUT CLOSE ALL.
 *****************************************************
-*Group comD33 Possible to buy or lease a solar home system in the community.
-*Multiple respons.
+*Group comD33 Possible to buy or lease a solar home system in the community.MR.
+
 *FREQUENCIES comD33.
 IF (CHAR.SUBSTR(comD33,1,2)="01" OR CHAR.SUBSTR(comD33,3,2)="01" OR CHAR.SUBSTR(comD33,6,2)="01" )  comD33_gr1a = 1.
 IF (CHAR.SUBSTR(comD33,1,2)="02" OR CHAR.SUBSTR(comD33,3,2)="02" OR CHAR.SUBSTR(comD33,6,2)="02" )  comD33_gr1b = 1.
@@ -597,13 +691,20 @@ VARIABLE LABELS
 VALUE LABELS comD33_gr1a 1 "Yes" /comD33_gr1b 1 "Yes" /comD33_gr1c 1 "Yes" /comD33_gr1d 1 "Yes" /comD33_gr1e 1 "Yes". 
 *Check.
 FREQUENCIES comD33_gr1a  comD33_gr1b  comD33_gr1c  comD33_gr1d  comD33_gr1e. 
+*OUTPUT CLOSE ALL.
 *********************************************
 *Group comF4 distance from the village to the nearest town/city (km).
 *FREQUENCIES comF4.
 COMPUTE comF4_gr1 = $SYSMIS.
 FORMATS comF4_gr1(F3.0).
 VARIABLE LEVEL comF4_gr1 (NOMINAL).
-RECODE comF4 (LOWEST THRU 1=1) (2 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU HIGHEST = 5) INTO comF4_gr1.
+RECODE comF4
+(LOWEST THRU 1=1)
+(2 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU HIGHEST = 5)
+INTO comF4_gr1.
 VARIABLE LABELS comF4_gr1 "Distance from the community to the nearest town/city (km)".
 VALUE LABELS comF4_gr1 
 1 "       <2"
@@ -613,13 +714,20 @@ VALUE LABELS comF4_gr1
 5 "       50+".
 *Check.
 FREQUENCIES comF4_gr1.
+*OUTPUT CLOSE ALL.
 ************************************
 *Group comF5 distance from the village to the district center (km).
 *FREQUENCIES comF5.
 COMPUTE comF5_gr1 = $SYSMIS.
 FORMATS comF5_gr1(F3.0).
 VARIABLE LEVEL comF5_gr1 (NOMINAL).
-RECODE comF5 (LOWEST THRU 1=1) (2 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU HIGHEST = 5) INTO comF5_gr1.
+RECODE comF5
+(LOWEST THRU 1=1)
+(2 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU HIGHEST = 5)
+INTO comF5_gr1.
 VARIABLE LABELS comF5_gr1 "Distance from the community to the district center (km)".
 VALUE LABELS comF5_gr1 
 1 "       <2"
@@ -629,13 +737,20 @@ VALUE LABELS comF5_gr1
 5 "      50+".
 *Check.
 FREQUENCIES comF5_gr1.
+*OUTPUT CLOSE ALL.
 ****************************************
 *Group comF6 distance from the village to the nearest bank branch (km).
 *FREQUENCIES comF6.
 COMPUTE comF6_gr1 = $SYSMIS.
 FORMATS comF6_gr1(F3.0).
 VARIABLE LEVEL comF6_gr1 (NOMINAL).
-RECODE comF6 (LOWEST THRU 1=1) (2 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU HIGHEST = 5) INTO comF6_gr1.
+RECODE comF6
+(LOWEST THRU 1=1)
+(2 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU HIGHEST = 5)
+INTO comF6_gr1.
 VARIABLE LABELS comF6_gr1 "Distance from the community to the nearest bank branch (km)".
 VALUE LABELS comF6_gr1 
 1 "       <2"
@@ -645,13 +760,20 @@ VALUE LABELS comF6_gr1
 5 "      50+".
 *Check.
 FREQUENCIES comF6_gr1.
+*OUTPUT CLOSE ALL.
 ***************************************
 *Group comF7 distance from the village to the nearest micro finance institution (km).
 *FREQUENCIES comF7.
 COMPUTE comF7_gr1 = $SYSMIS.
 FORMATS comF7_gr1(F3.0).
 VARIABLE LEVEL comF7_gr1 (NOMINAL).
-RECODE comF7 (LOWEST THRU 1=1) (2 THRU 9 = 2) (10 THRU 19 = 3) (20 THRU 49 = 4) (50 THRU HIGHEST = 5) INTO comF7_gr1.
+RECODE comF7
+(LOWEST THRU 1=1)
+(2 THRU 9 = 2)
+(10 THRU 19 = 3)
+(20 THRU 49 = 4)
+(50 THRU HIGHEST = 5)
+INTO comF7_gr1.
 VARIABLE LABELS comF7_gr1 "Distance from the community to the nearest micro-finance institution (km)".
 VALUE LABELS comF7_gr1 
 1 "       <2"
@@ -661,9 +783,10 @@ VALUE LABELS comF7_gr1
 5 "      50+".
 *Check.
 FREQUENCIES comF7_gr1.
+*OUTPUT CLOSE ALL.
 ****************************************
-*Group J1. Does your community have any form of street lightning?
-*Multiple respons.
+*Group J1. Does your community have any form of street lightning? MR.
+
 *FREQUENCIES comJ1.
 IF (CHAR.SUBSTR(comJ1,1,1)="A" OR CHAR.SUBSTR(comJ1,2,1)="A" OR CHAR.SUBSTR(comJ1,3,1)="A" )  comJ1_gr1a = 1.
 IF (CHAR.SUBSTR(comJ1,1,1)="B" OR CHAR.SUBSTR(comJ1,2,1)="B" OR CHAR.SUBSTR(comJ1,3,1)="B" )  comJ1_gr1b = 1.
@@ -681,6 +804,7 @@ VALUE LABELS
      /comJ1_gr1c 1 "Yes" .
 *Check.
 FREQUENCIES comJ1_gr1a comJ1_gr1b comJ1_gr1c .
+*OUTPUT CLOSE ALL.
 
 *END OF LABELLING/GROUPING.
 ***********************************************************************************************************
@@ -703,7 +827,12 @@ DATASET CLOSE ALL.
 EXECUTE.
 
 ***************************************************************************************
-*****************************************************************************************
+*END OF SYNTAX FOR CLEANING AND LABELING. 
+****************************************************************************************
+
+
+
+*SOME EXTRA. 
 *PRELIMINARY/TESTING TABULATION AND ANALYSIS AT COMMUNITY LEVEL.
 *****************************************************************************************.
 *Open and re-save new file for further community level analysis.   
@@ -822,7 +951,7 @@ CTABLES
   /CATEGORIES VARIABLES=comUrbRur [1, 2] EMPTY=INCLUDE TOTAL=YES POSITION=BEFORE
   /CATEGORIES VARIABLES=comRegion ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', 
     '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26'] EMPTY=INCLUDE TOTAL=NO
-  /CATEGORIES VARIABLES=$lighting [comJ1_gr1a, comJ1_gr1b, comJ1_gr1c] EMPTY=EXCLUDE TOTAL=YES POSITION=AFTER
+  /CATEGORIES VARIABLES=$lighting [comJ1_gr1a, comJ1_gr1b, comJ1_gr1c] EMPTY=EXCLUDE TOTAL=NO POSITION=AFTER
   /TITLES 
    TITLE = "Table N. Outdoor lights in the community by location and region. Percent"
    CAPTION = "*Source: IASES tabulation test in Tanzania 2022 - unweighted data". 
@@ -848,6 +977,7 @@ OUTPUT CLOSE ALL.
 DATASET CLOSE ALL.
 *CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\ComTZ_3.sav'.
+SET DECIMAL=DOT.
 
 VARSTOCASES /ID = Rec_ID
   /MAKE comPerson   FROM  B_ID$1 B_ID$2  B_ID$3  B_ID$4  B_ID$5  B_ID$6  B_ID$7
@@ -910,6 +1040,7 @@ TRANSPOSE VARIABLES INFRASTRUCTURE
 *DATASET CLOSE ALL.
 *CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\ComTZ_3.sav'.
+SET DECIMAL=DOT.
 
 VARSTOCASES /ID = Rec_ID
   /MAKE comInfraID            FROM INFRASTRUCTURE$01 INFRASTRUCTURE$02  INFRASTRUCTURE$03 INFRASTRUCTURE$04 INFRASTRUCTURE$05 INFRASTRUCTURE$06 
@@ -1031,8 +1162,8 @@ DATASET CLOSE ALL.
 *****************************************************************************************
 TRANSPOSE VARIABLES BUSINESS TYPES IN COMMUNITY 
 
-OUTPUT CLOSE ALL.
-DATASET CLOSE ALL.
+*OUTPUT CLOSE ALL.
+*DATASET CLOSE ALL.
 *CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\ComTZ_3.sav'.
 
@@ -1094,5 +1225,7 @@ DATASET CLOSE ALL.
 *****************************************************************************************
 *END OF SYNTAX
 *****************************************************************************************.
+
+
 
 

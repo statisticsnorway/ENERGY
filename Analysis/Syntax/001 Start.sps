@@ -6,6 +6,7 @@ CD 'c:\Users\krl\source\ENERGY\Analysis'.
 
 * "The SET DECIMAL=DOT" is necessary to add to get the XY coodinates correctly opened. It is used to make sure that dot is used as decimal sign.
 SET DECIMAL=DOT.
-SHOW DECIMAL UNICODE.
 SET UNICODE=ON.
+SET WIDTH=255.
+SHOW DECIMAL UNICODE WIDTH.
 

@@ -40,7 +40,7 @@ FREQUENCIES AA1.
 *After REC_ID # 325, all dates are higher than 16/12.(end of NBS ToE in Arusha). 
 SORT CASES BY REC_ID(A).
 SELECT IF 
-    REC_ID GT 325.
+    REC_ID GT 324.
 EXECUTE.
 *Check.
 FREQUENCIES AA1.
@@ -166,7 +166,6 @@ EXECUTE.
 *Check.
 FREQUENCIES Region.
 
-
 *Check the datum-stamp if any wrong tablet setup on year-day-month .
 SORT CASES BY AA9 (A).
 FREQUENCIES AA9.
@@ -241,7 +240,7 @@ DELETE VARIABLES SUM_C TO SUM_GP.
 *Check.
 TEMPORARY.
 SELECT IF  (SYSMIS(SUM_AtoGP) = 1). 
-LIST REC_ID  GeoCodeEA AA8new AA9 AA14 AA18 AA7A SUM_AtoGP AALOGIN AB1$01 AB1$02.
+LIST REC_ID GeocodeEA AA8new AA9 AA14 AA18 AA7A SUM_AtoGP AALOGIN AB1$01 AB1$02.
 
 *Delete.
 SELECT IF
@@ -291,10 +290,16 @@ EXECUTE.
 ************************************************************.
 ************************************************************
 *Open reorganized file.and continue cleaning of ID variables..DATASET CLOSE ALL.
-*CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
+CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\HHQTZ_2.sav'.
+SET DECIMAL=DOT.
 *Check the input file..
-FREQUENCIES PFirst PLast.    
+FREQUENCIES PFirst PLast Duplicate.    
+
+*Prepare for efficent listing (all on one line) listings in the output window..
+SET WIDTH=255.
+ALTER TYPE AA14(a20) ADDRESS_LOCATION (a25) AALOGIN(a10) AA18(a20) AA9(a10) AB1$01(a20)  AB1$02(a20).
+
 **************************************************************************************************..
 *RECODE IF DIFFERENT HOUSEHOLDS IN THE SAME DUPLICATE PAIR AND BOTH ARE COMPLETE FILLED IN ON THE PERSON VARIABLES.
 
@@ -321,7 +326,7 @@ EXECUTE.
 
 *Step 1)  Renumber HH# for duplicates of the type 0-1 with both OK filled in (based on SUM_A (min sum50) and SUM_CtoGP(min sum10000) and keep the rest for further check...
 *Compare AA14tmp AA18tmp AA7Btmp. 
-SORT CASES BY GeocodeEA (A) AA8new (A) PFirst (D) PLast (A).
+SORT CASES BY GeocodeEA (A) AA8new (A) PFirst (D) PLast (A). 
 
 SET RNG=MC SEED=20220222.
 DO IF
@@ -376,114 +381,201 @@ FREQUENCIES PFirst10.
 *Step 3). MANUAL CHECK OF REMAINING INITIAL DUPLICATES.
 TEMPORARY.    
 SELECT IF (PFirst10 = 0 OR PLast10 = 0). 
-  LIST REC_ID AA8new PFirst10 PLast10  AA7Btmp SUM_A SUM_B SUM_CtoGP AB1$01 AB1$02.
+  LIST REC_ID GeocodeEA AA8new PFirst10 PLast10  AA7Btmp AA7A AA7B SUM_A SUM_B SUM_CtoGP AB1$01 AB1$02.
 
 *Scroll the list in the out-put window manually - look/compare names, coordinates, SUM-A and SUM_CtoGP.  .
-*For those within the same duplicate "family" that most likely are stand-alone households (OK values), Take note on the REC_ID (take from the top type 1-0 and 0-0) 
-*and fill into the list below to re-ecode them. .
+*For those within the same duplicate "family" that most likely are stand-alone households (OK values), 
+Take note on the REC_ID (take from the top type 1-0 and 0-0) and fill into the list below to re-ecode them. .
+
 SET RNG=MC SEED=20220220.
-DO IF (REC_ID =   1568). 
+DO IF (REC_ID =   1416). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220219.
-DO IF (REC_ID =   1960). 
+DO IF (REC_ID =   1743). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220218.
-DO IF (REC_ID =   3842). 
+DO IF (REC_ID =   3738). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220217.
-DO IF (REC_ID = 4446). 
+DO IF (REC_ID = 3748). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220216.
-DO IF (REC_ID = 4462). 
+DO IF (REC_ID = 4951). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220215.
-DO IF (REC_ID = 487). 
+DO IF (REC_ID = 4317). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220214.
-DO IF (REC_ID = 6185).
+DO IF (REC_ID = 4307).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220213.
-DO IF (REC_ID = 4129). 
+DO IF (REC_ID = 4323). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220212.
-DO IF (REC_ID = 819).
+DO IF (REC_ID = 2251).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220211.
-DO IF (REC_ID = 6469).
+DO IF (REC_ID = 1854).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220210.
-DO IF (REC_ID = 5827).
+DO IF (REC_ID = 6005).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220209.
-DO IF (REC_ID = 5814).
+DO IF (REC_ID = 575).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220208.
-DO IF (REC_ID = 3629).
+DO IF (REC_ID = 4014).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220207.
-DO IF (REC_ID = 4101).
+DO IF (REC_ID = 4003).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220206.
-DO IF (REC_ID = 4472).
+DO IF (REC_ID = 775).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220205.
-DO IF (REC_ID = 4632). 
+DO IF (REC_ID = 3013). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 SET RNG=MC SEED=20220204.
-DO IF (REC_ID = 4101).
+DO IF (REC_ID = 6276).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220203.
+DO IF (REC_ID = 5651).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220202.
+DO IF (REC_ID = 5638).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220201.
+DO IF (REC_ID = 4272).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220200.
+DO IF (REC_ID = 6094).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220199.
+DO IF (REC_ID = 3538).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220198.
+DO IF (REC_ID = 3528).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220197.
+DO IF (REC_ID = 3975).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220196.
+DO IF (REC_ID = 4333).
+     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
+END IF.
+SET RNG=MC SEED=20220195.
+DO IF (REC_ID = 4495).
      COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 EXECUTE.
+
+*from the list in the output window - correct a coordinate pair as agreed with NBS at WS 20-24 june 2020.
+TEMPORARY.
+SELECT IF REC_ID = 334 OR REC_ID = 333.
+LIST REC_ID AA7A AA7B.
+
+IF (REC_ID = 334) AA7A = -5.16869.
+IF (REC_ID = 334) AA7B = 38.72200.
+EXECUTE.
+
 
 *From the list in the output window take note on records to be deleted and fill inn below- 
 *Delete non-complete duplicate records that have meaningless/too little info filled in Sum_A SUM_CtoGP
 *and that cannot be used to complete (that is transfer info on coordinates or head from section A.
 *Keep the more complete record below in the same duplicate "family".       .
 COMPUTE TMP1=0.
-IF (REC_ID = 2399) TMP1=1.
-IF (REC_ID = 2654) TMP1=1.
-IF (REC_ID = 3850) TMP1=1.
-IF (REC_ID = 4050) TMP1=1.
-IF (REC_ID = 5109) TMP1=1.
-IF (REC_ID = 4460) TMP1=1.
-IF (REC_ID = 4451) TMP1=1.
-IF (REC_ID = 4464) TMP1=1.
-IF (REC_ID = 1117) TMP1=1.
-IF (REC_ID = 4794) TMP1=1.
-IF (REC_ID = 2071) TMP1=1.
-IF (REC_ID = 2081) TMP1=1.
-IF (REC_ID = 1413) TMP1=1.
-IF (REC_ID = 602) TMP1=1.
-IF (REC_ID = 4143) TMP1=1.
-IF (REC_ID = 4139) TMP1=1.
-IF (REC_ID = 2700) TMP1=1.
-IF (REC_ID = 813) TMP1=1.
-IF (REC_ID = 836) TMP1=1.
-IF (REC_ID = 3097) TMP1=1.
-IF (REC_ID = 3903) TMP1=1.
-IF (REC_ID = 4414) TMP1=1.
-IF (REC_ID = 3909) TMP1=1.
-IF (REC_ID = 4407) TMP1=1.
-IF (REC_ID = 6278) TMP1=1.
-IF (REC_ID = 3638) TMP1=1.
-IF (REC_ID = 4478) TMP1=1.
-IF (REC_ID = 4480) TMP1=1.
+IF (REC_ID = 3081) TMP1=1.
+IF (REC_ID = 1674) TMP1=1.
+IF (REC_ID = 2116) TMP1=1.
+IF (REC_ID = 2132) TMP1=1.
+IF (REC_ID = 2133) TMP1=1.
+IF (REC_ID = 2136) TMP1=1.
+IF (REC_ID = 2582) TMP1=1.
+IF (REC_ID = 887) TMP1=1.
+IF (REC_ID = 333) TMP1=1.
+IF (REC_ID = 1169) TMP1=1.
+IF (REC_ID = 3746) TMP1=1.
+IF (REC_ID = 3925) TMP1=1.
+IF (REC_ID = 4953) TMP1=1.
+IF (REC_ID = 4321) TMP1=1.
+IF (REC_ID = 4312) TMP1=1.
+IF (REC_ID = 4325) TMP1=1.
+IF (REC_ID = 1025) TMP1=1.
+IF (REC_ID = 1091) TMP1=1.
+IF (REC_ID = 1035) TMP1=1.
+IF (REC_ID = 1034) TMP1=1.
+IF (REC_ID = 1116) TMP1=1.
+IF (REC_ID = 4649) TMP1=1.
+IF (REC_ID = 4654) TMP1=1.
+IF (REC_ID = 2780) TMP1=1.
+IF (REC_ID = 1854) TMP1=1.
+IF (REC_ID = 1852) TMP1=1.
+IF (REC_ID = 1864) TMP1=1.
+IF (REC_ID = 1838) TMP1=1.
+IF (REC_ID = 1312) TMP1=1.
+IF (REC_ID = 1285) TMP1=1.
+IF (REC_ID = 2930) TMP1=1.
+IF (REC_ID = 567) TMP1=1.
+IF (REC_ID = 4017) TMP1=1.
+IF (REC_ID = 4013) TMP1=1.
+IF (REC_ID = 3840) TMP1=1.
+IF (REC_ID = 1559) TMP1=1.
+IF (REC_ID = 1565) TMP1=1.
+IF (REC_ID = 1554) TMP1=1.
+IF (REC_ID = 2626) TMP1=1.
+IF (REC_ID = 6431) TMP1=1.
+IF (REC_ID = 2720) TMP1=1.
+IF (REC_ID = 749) TMP1=1.
+IF (REC_ID = 777) TMP1=1.
+IF (REC_ID = 781) TMP1=1.
+IF (REC_ID = 773) TMP1=1.
+IF (REC_ID = 792) TMP1=1.
+IF (REC_ID = 788) TMP1=1.
+IF (REC_ID = 754) TMP1=1.
+IF (REC_ID = 752) TMP1=1.
+IF (REC_ID = 786) TMP1=1.
+IF (REC_ID = 753) TMP1=1.
+IF (REC_ID = 789) TMP1=1.
+IF (REC_ID = 3010) TMP1=1.
+IF (REC_ID = 1615) TMP1=1.
+IF (REC_ID = 1735) TMP1=1.
+IF (REC_ID = 2638) TMP1=1.
+IF (REC_ID = 3793) TMP1=1.
+IF (REC_ID = 4281) TMP1=1.
+IF (REC_ID = 3799) TMP1=1.
+IF (REC_ID = 4274) TMP1=1.
+IF (REC_ID = 6098) TMP1=1.
+IF (REC_ID = 6031) TMP1=1.
+IF (REC_ID = 3537) TMP1=1.
+IF (REC_ID = 4339) TMP1=1.
+IF (REC_ID = 4341) TMP1=1.
+IF (REC_ID = 2485) TMP1=1.
+IF (REC_ID = 3629) TMP1=1.
+IF (REC_ID = 6960) TMP1=1.
 EXECUTE.
 *check.
 FREQUENCIES TMP1.
@@ -493,6 +585,7 @@ SELECT IF TMP1 = 0.
 EXECUTE.    
 *clean.
 DELETE VARIABLES TMP1.
+
 
 *Step 4) Identify possible remaining or new created duplicates (due to renumbering above) on GeocodeEA + EA number - 
 *Put largest SUM_CEtoGP last during sorting for the new duplicate test.
@@ -514,8 +607,8 @@ SELECT IF (PFirst20 = 0 OR PLast20 = 0) AND AA8new GT 849.
     LIST REC_ID AA8new PFirst20 PLast20 AA9 AA14tmp AA18tmp AA7Btmp AB1$01 SUM_A SUM_B SUM_CtoGP.
 
 *Recode remaining listed above in the 850 to 999 series..
-SET RNG=MC SEED=20220299.
-DO IF (REC_ID = 4472). 
+SET RNG=MC SEED=20220100.
+DO IF (REC_ID = 4000). 
     COMPUTE AA8new = RND (RV.UNIFORM(849, 999)).
 END IF.
 EXECUTE.
@@ -527,154 +620,22 @@ TEMPORARY.
 SELECT IF (PFirst20 = 0 OR PLast20 = 0) AND AA8new LT 850.
     LIST REC_ID AA8new PFirst20 PLast20 AA14tmp AA18tmp SUM_A SUM_B SUM_CtoGP AB1$01 AB1$02.
 
+*hardcode remaining tru duplicates delete.
+COMPUTE tmptmp=0.
+IF (REC_ID = 2123)  tmptmp = 1.
+EXECUTE.
+
+*delete records.
+SELECT IF tmptmp = 0.
+EXECUTE.    
+*clean.
+DELETE VARIABLES tmptmp.
+
+
 ****************************************************************.
 *START HER TO REPAIR / TRANSFER INFO FOR HEAD OF HOUSEHOLD BETWEEN RECORDS WITHIN THE REMAINING TRUE DUPLICATES..
-*coordinates.
-DO IF
-    PFirst20=0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-        SYSMIS(AA7B) = 1 AND LAG(AA7B,1) GT 1.
-        COMPUTE AA7A = LAG(AA7A,1).
-        COMPUTE AA7B = LAG(AA7B,1).
-        COMPUTE flag1 = 1.
-  ELSE IF 
-     PFirst20 = 0 AND PLast20 = 1 AND
-     AA8new LT 850 AND
-     AA8new = LAG(AA8new, 2) AND
-     SYSMIS(AA7B) = 1 AND LAG(AA7B, 2) GT 1.
-        COMPUTE AA7A = LAG(AA7A, 2).
-        COMPUTE AA7B = LAG(AA7B, 2).
-        COMPUTE flag1 = 2.
-END IF.  
-EXECUTE. 
-FREQUENCIES flag1.
-*reationship head.
-DO IF
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(AB3$01)=1 AND LAG(AB3$01,1)=1.
-    COMPUTE AB3$01 = LAG(AB3$01,1).
-    COMPUTE flag2 = 1.
-  ELSE IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 2) AND
-    MISSING(AB3$01)=1 AND LAG(AB3$01, 2)=1.
-    COMPUTE AB3$01 = LAG(AB3$01, 2).
-    COMPUTE flag2 = 2.
-END IF. 
-EXECUTE. 
-FREQUENCIES flag2.
-*head 5 years ago.
-DO IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(AB3B$01)=1 AND (LAG(AB3B$01,1)=1 OR LAG(AB3B$01,1) = 2).
-    COMPUTE AB3B$01 = LAG(AB3B$01,1).
-    COMPUTE flag3 = 1.
-  ELSE IF
-     PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 2) AND
-    MISSING(AB3B$01)=1 AND (LAG(AB3B$01, 2)=1 OR LAG(AB3B$01, 2) = 2).
-    COMPUTE AB3B$01 = LAG(AB3B$01, 2).
-    COMPUTE flag3 = 2.
-END IF.
-EXECUTE.
-FREQUENCIES flag3.
-*head sex.
-DO IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(AB4$01)=1 AND (LAG(AB4$01,1) = 1 OR LAG(AB4$01,1) =2).
-    COMPUTE AB4$01 = LAG(AB4$01,1).
-    COMPUTE flag4 = 1.
-  ELSE IF
-     PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 2) AND
-    MISSING(AB4$01)=1 AND (LAG(AB4$01,2) = 1 OR LAG(AB4$01, 2) =2).
-    COMPUTE AB4$01 = LAG(AB4$01, 2).
-    COMPUTE flag4 = 2.
-END IF.  
-EXECUTE. 
-FREQUENCIES flag4.
-*head age.
-DO IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(AB5$01)=1 AND (LAG(AB5$01,1) GE 12).
-    COMPUTE AB5$01 = LAG(AB5$01,1).
-    COMPUTE flag5 = 1.
-  ELSE IF
-     PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 2) AND
-    MISSING(AB5$01)=1 AND (LAG(AB5$01,2) GE 12).
-    COMPUTE AB5$01 = LAG(AB5$01,2).
-    COMPUTE flag5 = 2.
-END IF.  
-EXECUTE. 
-FREQUENCIES flag5.
-*head marital status.
-DO IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(AB6$01)=1 AND LAG(AB6$01, 1) GE 1 AND LAG(AB6$01, 1) LE 8.
-    COMPUTE AB6$01 = LAG(AB6$01,1).
-    COMPUTE flag6 = 1.
-  ELSE IF
-     PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 2) AND
-    MISSING(AB6$01)=1 AND LAG(AB6$01, 2) GE 1 AND LAG(AB6$01, 2) LE 8.
-    COMPUTE AB6$01 = LAG(AB6$01,2).
-    COMPUTE flag6 = 2.
-END IF.  
-EXECUTE. 
-FREQUENCIES flag6.
-*SUM B check.
-DO IF 
-    PFirst20 = 0 AND PLast20 = 1 AND
-    AA8new LT 850 AND
-    AA8new = LAG(AA8new, 1) AND
-    MISSING(SUM_B)=1 AND LAG(SUM_B, 1) GE 1.
-      COMPUTE B1 = LAG(B1,1).
-      COMPUTE B2 = LAG(B2,1).
-      COMPUTE B3 = LAG(B3,1).
-      COMPUTE B4 = LAG(B4,1).
-      COMPUTE B5 = LAG(B5,1).
-      COMPUTE B6 = LAG(B6,1).
-      COMPUTE B7 = LAG(B7,1).
-      COMPUTE B8 = LAG(B8,1).
-      COMPUTE B9 = LAG(B9,1).
-      COMPUTE B10 = LAG(B10,1).
-      COMPUTE B11 = LAG(B11,1).
-      COMPUTE B12 = LAG(B12,1).
-      COMPUTE B13 = LAG(B13,1).
-      COMPUTE B14 = LAG(B14,1).
-      COMPUTE B15 = LAG(B15,1).
-      COMPUTE B16 = LAG(B16,1).
-      COMPUTE B17 = LAG(B17,1).
-      COMPUTE B18 = LAG(B18,1).
-      COMPUTE B19 = LAG(B19,1).
-      COMPUTE B20 = LAG(B20,1).
-      COMPUTE B21 = LAG(B21,1).
-      COMPUTE B22 = LAG(B22,1).
-      COMPUTE flag7 = 1.
-END IF.
-EXECUTE. 
-FREQUENCIES flag7.
-*Check.
-TEMPORARY.    
-SELECT IF (PFirst20 = 0 OR PLast20 = 0) AND AA8new LT 850.
-  LIST REC_ID AA8new PFirst20 PLast20  AA7B  AB3$01 AB3B$01 AB4$01 AB5$01 AB6$01 SUM_A SUM_CtoGp flag1 flag2 flag3 flag4.
+*this step is not necessary from 17.06.2022r
+
 
 **************************************************
 *ckeck duplicates now left on the file. 
@@ -691,36 +652,6 @@ FREQUENCIES PFirst30 PLast30.
 TEMPORARY.    
 SELECT IF (PFirst30 = 0 OR PLast30 = 0).
   LIST REC_ID AA8new PFirst30 PLast30  AA7Btmp SUM_A SUM_CtoGP AB1$01 AB1$02.
-
-*DELETE duplicates with the least info. 
-COMPUTE TMP = 0.
-EXECUTE.
-IF(PLast30 = 0) TMP = 1.
-EXECUTE.
-*Check.
-FREQUENCIES TMP.
-TEMPORARY.    
-SELECT IF (PFirst30 = 0 OR PLast30 = 0).
-  LIST REC_ID AA8new PFirst30 PLast30  AA7Btmp SUM_A SUM_CtoGP AB1$01 AB1$02 TMP.
-
-*Select records within the duplicate pair with the highest value in CEtoGP. 
-SELECT IF 
-    TMP = 0.
-EXECUTE.
-*clean.
-DELETE VARIABLES TMP.
-
-*Final check on duplicates.
-SORT CASES BY GeocodeEA (A) AA8new (A) SUM_CtoGP(A). 
-EXECUTE.
-MATCH FILES
-  /FILE=*
-  /BY GeocodeEA AA8new
-  /FIRST=PFirst40
-  /LAST=PLast40.
-EXECUTE.
-*Check.
-FREQUENCIES PFirst40 PLast40.
 
 ***********************************************''.
 *IF still duplicates, repeat the previous procedure(s) based på new duplicate match PFirst4 / PLast40. .
@@ -852,7 +783,8 @@ DO IF AB5$01 LT 12.
     COMPUTE AB5$01 = $SYSMIS.
 END IF.
 EXECUTE.
-
+*Check end..
+FREQUENCIES AB5$01.
 ******************************************************************************      
 * When no more duplicates on GeocodeEA + AA8new, create alphanummerisk HH number and concatenate GeocodeHH with 17 positions.
 
@@ -884,11 +816,10 @@ RENAME VARIABLES (AA7 = UrbRur).
 RENAME VARIABLES (AA9 = Date).
 RENAME VARIABLES (AA7A = Ycoord).
 RENAME VARIABLES (AA7B = Xcoord).
-EXECUTE.
 
-*save temporary file and re-open.
+*save temporary file and re-open. 
 SAVE OUTFILE='tmp\HHQTZ_2b.sav'
-/KEEP ALL
+/KEEP ALL 
 /COMPRESSED.
 
 OUTPUT CLOSE ALL.
@@ -902,6 +833,7 @@ EXECUTE.
 *Open work file.
 *CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\HHQTZ_2b.sav'.
+SET DECIMAL=DOT.
 
 FREQUENCIES region GeocodeEA.
 
@@ -915,14 +847,14 @@ CTABLES
 
 *Check this table manually against Bjørn smpling sheet xls and GIS catalogue.
 
-*List, rename (or delete) records with wrong GeocodeEA (not matching GIS and Sampling xls from Bjørn when manual check).
+*List, rename (or delete) records with wrong GeocodeEA (not matching GIS and Sampling xls from Bjørn when manual check). 
 TEMPORARY.
 SELECT IF  ( (GeocodeEA="01020531102013") OR (GeocodeEA="01020531102003") OR (GeocodeEA="07012521105011") OR (GeocodeEA="09050321101312")
-    OR (GeocodeEA="10032411103084") OR (GeocodeEA="10032411103003") OR (GeocodeEA="10030211101006") OR (GeocodeEA="14040231101001")
+    OR (GeocodeEA="10032411103084") OR (GeocodeEA="10032411103003") OR (GeocodeEA="10030211101006") OR (GeocodeEA="14040231101001") 
     OR (GeocodeEA="14040231101003") OR (GeocodeEA="15361621112001") OR (GeocodeEA="16031131104001") OR (GeocodeEA="16011031103003")
     OR (GeocodeEA="17041631104004") OR (GeocodeEA="17041631104002") OR (GeocodeEA="17021511101011") OR (GeocodeEA="17041631104001")
     OR (GeocodeEA="17041631104003") OR (GeocodeEA="20061611105011") OR (GeocodeEA="20042011102001") OR (GeocodeEA="20042531101003")
-    OR (GeocodeEA="22031611104311") OR (GeocodeEA="24060911106010") OR (GeocodeEA="25012831102003") OR (GeocodeEA="26061531101075")
+    OR (GeocodeEA="22031611104311") OR (GeocodeEA="24060911106010") OR (GeocodeEA="25012831102003") OR (GeocodeEA="26061531101075") 
     OR (GeocodeEA="26061531101003") ).
 LIST Rec_ID GeocodeEA.
 
@@ -948,25 +880,27 @@ IF (GeocodeEA="22031611104311") GeocodeEA="22031611104003".
 IF (GeocodeEA="25012831102003") GeocodeEA="25012831102321".
 IF (GeocodeEA="26061531101075") GeocodeEA="26061531101375".
 IF (GeocodeEA="26061531101003") GeocodeEA="26061531101375".
-EXECUTE.
+EXECUTE.    
 
 *Delete EAs with few hh not possible to renumber to valid EA code.
+*We also delete the EA 07012521105011 (26 hh) because it is not in the sample or in the GIS file and thus cannot be given weights.
 COMPUTE tmpGeo =0.
 IF(GeocodeEA="14040231101001") tmpGeo=1.
 IF(GeocodeEA="14040231101003") tmpGeo=1.
 IF(GeocodeEA="24060911106010") tmpGeo=1.
+IF(GeocodeEA="07012521105011") tmpGeo=1.
 EXECUTE.
-*Delete non-usable records.
+
+*Delete non-usable records. 
 SELECT IF tmpGeo=0.
 EXECUTE.
 
-*Check.
+*Check.    
 FREQUENCIES tmpGeo.
 
 *Clean.
 DELETE VARIABLES tmpGeo.
 
-*Comment/for discussion: We keep the EA 07012521105011 (26 hh) even if it is not in the sample or gis file.
 
 *save the workfile. 
 SORT CASES BY GeocodeEA (A).
@@ -981,8 +915,11 @@ EXECUTE.
 
 *****************************************************************.
 *Open workfile.
+CD 'C:\Users\per\Documents\OPPDRAG 21_12\2021_22 SPSS Tanzania'.
 GET FILE='tmp\HHQTZ_3.sav'.
+SET DECIMAL=DOT.
 
+FREQUENCIES REGION.
 *Step 1) Delete any with zero value in SUM_A and SUM_B. Cannot be used as stand-allone household in analysis.   .
 COMPUTE TMP2=0.
 EXECUTE.
@@ -994,6 +931,7 @@ SORT CASES BY GeocodeHH.
 TEMPORARY.    
 SELECT IF TMP2=1.
     LIST REC_ID AA8new Date AA14tmp AA18tmp AA7Btmp AB1$01 SUM_A SUM_B SUM_CtoGP.
+
 *delete.
 SELECT IF
     TMP2 = 0.
@@ -1001,6 +939,7 @@ EXECUTE.
 
 *Final check/delete.
 FREQUENCIES Region.
+
 *Clean.
 DELETE VARIABLES TMP2.
 
@@ -1013,18 +952,19 @@ SELECT IF SUM_B = 0 OR SUM_CtoGP = 0.
 LIST REC_ID GeocodeEA HH Ycoord AA10 AA14 SUM_A SUM_B SUM_CtoGP tmp3.
 
 *Delete.
-SELECT IF tmp3= 0.
+SELECT IF tmp3= 0.     
 FREQUENCIES tmp3.
 *clean.
 DELETE VARIABLES tmp3.
+FREQUENCIES region.
 
 *Step 3).Impute head of household sex (step 3a) and age (step 3b) where still missing (imputation recommended because this info may be much used during tabulation).
 TEMPORARY.
 SELECT IF (MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1).
-LIST REC_ID GeocodeEA HH UrbRur AA10 AA14 AB4$01 AB5$01 SUM_A SUM_B SUM_CtoGP.
+LIST REC_ID GeocodeEA HH Ycoord AA10 AA14 AB1$01 AB4$01 AB5$01 SUM_A SUM_B SUM_CtoGP.
 
 *3a)Sex imputation.
-*Complete name for head in the strata..
+*Complete name for head in the strata.. 
 IF (  MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1 ) AB1$01 = AA14.
 EXECUTE.
 
@@ -1035,119 +975,132 @@ SELECT IF (MISSING(AB4$01) = 1 OR MISSING(AB5$01) = 1).
 LIST REC_ID GeocodeHH AB1$01.
 
 *Export the list to XLS worksheet for possible manual coding of sex by NBS..
-*OUTPUT EXPORT
-  /CONTENTS
-     EXPORT=VISIBLE
-     LAYERS= VISIBLE
+*OUTPUT EXPORT 
+  /CONTENTS  
+     EXPORT=VISIBLE  
+     LAYERS= VISIBLE  
      MODELVIEWS= VISIBLE
-  /XLS  DOCUMENTFILE=  'tabeller\HHQTZ_TAB1.xls'
-     OPERATION= MODIFYSHEET
+  /XLS  DOCUMENTFILE=  'tabeller\HHQTZ_TABname.xls'
+     OPERATION= CREATESHEET  
      SHEET =  'Names x sex control'
-     LOCATION=LASTCOLUMN
+     LOCATION=LASTCOLUMN  
      NOTESCAPTIONS=YES.
 
 *Manual hard-coding of sex based "good enough" solution - possible later update based on name/sex list from NBS.
-*< 96 records in in here >.
-IF(REC_ID = 1597) AB4$01 = 1.
-IF(REC_ID = 1592) AB4$01 = 1.
-IF(REC_ID =   907) AB4$01 = 1.
-IF(REC_ID =   906) AB4$01 = 1.
-IF(REC_ID = 2481) AB4$01 = 1.
-IF(REC_ID = 4300) AB4$01 = 1.
-IF(REC_ID = 4306) AB4$01 = 1.
-IF(REC_ID = 3524) AB4$01 = 1.
-IF(REC_ID = 4244) AB4$01 = 1.
-IF(REC_ID = 6149) AB4$01 = 2.
-IF(REC_ID = 5233) AB4$01 = 1.
-IF(REC_ID = 1651) AB4$01 = 1.
-IF(REC_ID = 1961) AB4$01 = 1.
-IF(REC_ID =   432) AB4$01 = 1.
-IF(REC_ID =   749) AB4$01 = 1.
-IF(REC_ID = 1294) AB4$01 = 1.
-IF(REC_ID = 3522) AB4$01 = 1.
-IF(REC_ID = 3509) AB4$01 = 1.
-IF(REC_ID = 2934) AB4$01 = 1.
-IF(REC_ID = 6861) AB4$01 = 2.
-IF(REC_ID = 6357) AB4$01 = 1.
-IF(REC_ID = 5197) AB4$01 = 1.
-IF(REC_ID = 3586) AB4$01 = 1.
-IF(REC_ID = 3594) AB4$01 = 2.
-IF(REC_ID = 4067) AB4$01 = 1.
-IF(REC_ID =   484) AB4$01 = 2.
-IF(REC_ID = 3224) AB4$01 = 1.
-IF(REC_ID = 6711) AB4$01 = 1.
-IF(REC_ID = 6713) AB4$01 = 1.
-IF(REC_ID = 1047) AB4$01 = 2.
-IF(REC_ID = 6536) AB4$01 = 1.
-IF(REC_ID = 6549) AB4$01 = 2.
-IF(REC_ID = 6547) AB4$01 = 1.
-IF(REC_ID = 1849) AB4$01 = 2.
-IF(REC_ID = 3144) AB4$01 = 2.
-IF(REC_ID = 3798) AB4$01 = 1.
-IF(REC_ID = 4359) AB4$01 = 1.
-IF(REC_ID = 5699) AB4$01 = 2.
-IF(REC_ID = 4886) AB4$01 = 1.
-IF(REC_ID =   789) AB4$01 = 1.
-IF(REC_ID = 3940) AB4$01 = 1.
-IF(REC_ID =   924) AB4$01 = 1.
-IF(REC_ID = 4650) AB4$01 = 2.
-IF(REC_ID = 5045) AB4$01 = 2.
-IF(REC_ID = 3318) AB4$01 = 1.
-IF(REC_ID = 3332) AB4$01 = 1.
-IF(REC_ID = 1917) AB4$01 = 2.
-IF(REC_ID =   505) AB4$01 = 1.
-IF(REC_ID = 2236) AB4$01 = 2.
-IF(REC_ID = 4947) AB4$01 = 1.
-IF(REC_ID = 4438) AB4$01 = 2.
-IF(REC_ID = 3865) AB4$01 = 1.
-IF(REC_ID = 2809) AB4$01 = 1.
-IF(REC_ID = 2798) AB4$01 = 1.
-IF(REC_ID =   841) AB4$01 = 1.
-IF(REC_ID = 7040) AB4$01 = 1.
-IF(REC_ID = 7061) AB4$01 = 1.
-IF(REC_ID = 7131) AB4$01 = 1.
-IF(REC_ID = 5420) AB4$01 = 1.
-IF(REC_ID = 6641) AB4$01 = 2.
-IF(REC_ID = 6643) AB4$01 = 2.
-IF(REC_ID = 3815) AB4$01 = 2.
-IF(REC_ID = 4831) AB4$01 = 1.
-IF(REC_ID = 6338) AB4$01 = 2.
-IF(REC_ID = 6336) AB4$01 = 1.
-IF(REC_ID = 6334) AB4$01 = 1.
-IF(REC_ID = 7156) AB4$01 = 2.
-IF(REC_ID = 7143) AB4$01 = 2.
-IF(REC_ID = 7162) AB4$01 = 1.
+*After TZ check at workshop in Oslo 20-24 June, NBS har verified sex by name on all recocords in the list below:
+*The renaining (not corrected by NBS)  are set to 1 or 2 male/female by edityors best guess and googeling of meaning of names.  
+  
+
+IF(REC_ID = 1440) AB4$01 = 1.
+IF(REC_ID =   840) AB4$01 = 1.
+IF(REC_ID =   839) AB4$01 = 1.
+IF(REC_ID = 2387) AB4$01 = 1.
+IF(REC_ID = 4172) AB4$01 = 1.
+IF(REC_ID = 4178) AB4$01 = 1.
+IF(REC_ID = 4116) AB4$01 = 1.
+IF(REC_ID = 5969) AB4$01 = 2.
+IF(REC_ID = 5071) AB4$01 = 1.
+IF(REC_ID = 1499) AB4$01 = 1.
+IF(REC_ID = 1744) AB4$01 = 2.
+IF(REC_ID =   424) AB4$01 = 1.
+IF(REC_ID =   705) AB4$01 = 2.
+IF(REC_ID = 1166) AB4$01 = 1.
+IF(REC_ID = 3421) AB4$01 = 1. 
+IF(REC_ID = 3408) AB4$01 = 1.
+IF(REC_ID = 2857) AB4$01 = 1.
+IF(REC_ID = 6760) AB4$01 = 1.
+IF(REC_ID = 6177) AB4$01 = 1.
+IF(REC_ID = 5035) AB4$01 = 1.
+IF(REC_ID = 3485) AB4$01 = 1.
+IF(REC_ID = 3942) AB4$01 = 1.
+IF(REC_ID = 2325) AB4$01 = 2.
+IF(REC_ID = 3128) AB4$01 = 1.
+IF(REC_ID = 6511) AB4$01 = 2.
+IF(REC_ID = 6513) AB4$01 = 1.
+IF(REC_ID =   955) AB4$01 = 2.
+IF(REC_ID = 6356) AB4$01 = 2.
+IF(REC_ID = 6354) AB4$01 = 1.
+IF(REC_ID = 1656) AB4$01 = 2.
+IF(REC_ID = 3052) AB4$01 = 2.
+IF(REC_ID = 4226) AB4$01 = 2.
+IF(REC_ID = 5533) AB4$01 = 1.
+IF(REC_ID =   745) AB4$01 = 1. 
+IF(REC_ID = 3830) AB4$01 = 1.
+IF(REC_ID =   855) AB4$01 = 1.
+IF(REC_ID = 4513) AB4$01 = 2.  
+IF(REC_ID = 4889) AB4$01 = 1.
+IF(REC_ID = 3222) AB4$01 = 1.
+IF(REC_ID = 3236) AB4$01 = 1.  
+IF(REC_ID = 1703) AB4$01 = 2.
+IF(REC_ID =   474) AB4$01 = 1.
+IF(REC_ID = 4800) AB4$01 = 1.
+IF(REC_ID = 6878) AB4$01 = 2.
+IF(REC_ID = 2721) AB4$01 = 1.
+IF(REC_ID =   797) AB4$01 = 1.
+IF(REC_ID = 7039) AB4$01 = 1.
+IF(REC_ID = 7060) AB4$01 = 1.  
+IF(REC_ID = 7130) AB4$01 = 1.
+IF(REC_ID = 5254) AB4$01 = 1.
+IF(REC_ID = 6443) AB4$01 = 2.
+IF(REC_ID = 4691) AB4$01 = 1.  
+IF(REC_ID = 6156) AB4$01 = 1.  
+IF(REC_ID = 6154) AB4$01 = 1.  
+IF(REC_ID = 7155) AB4$01 = 2. 
+IF(REC_ID = 7142) AB4$01 = 2.
 IF(REC_ID = 7161) AB4$01 = 1.
-IF(REC_ID = 7155) AB4$01 = 1.
-IF(REC_ID = 7166) AB4$01 = 1.
-IF(REC_ID = 7149) AB4$01 = 2.
-IF(REC_ID = 7019) AB4$01 = 1.
-IF(REC_ID = 3931) AB4$01 = 1.
-IF(REC_ID = 6161) AB4$01 = 2.
-IF(REC_ID = 6235) AB4$01 = 1.
-IF(REC_ID = 6164) AB4$01 = 1.
-IF(REC_ID = 6255) AB4$01 = 1.
-IF(REC_ID = 4504) AB4$01 = 2.
-IF(REC_ID = 5021) AB4$01 = 1.
-IF(REC_ID = 4808) AB4$01 = 1.
-IF(REC_ID = 6659) AB4$01 = 1.
-IF(REC_ID = 6660) AB4$01 = 1.
-IF(REC_ID = 6747) AB4$01 = 1.
-IF(REC_ID = 6755) AB4$01 = 1.
-IF(REC_ID = 5670) AB4$01 = 2.
-IF(REC_ID = 6895) AB4$01 = 2.
-IF(REC_ID = 5871) AB4$01 = 2.
-IF(REC_ID = 3466) AB4$01 = 1.
-IF(REC_ID = 3630) AB4$01 = 2.
-IF(REC_ID = 4557) AB4$01 = 1.
-IF(REC_ID = 4576) AB4$01 = 1.
-IF(REC_ID =   646) AB4$01 = 2.
-IF(REC_ID = 6788) AB4$01 = 1.
-IF(REC_ID = 2952) AB4$01 = 1.
+IF(REC_ID = 7160) AB4$01 = 1.  
+IF(REC_ID = 7154) AB4$01 = 1.  
+IF(REC_ID = 7165) AB4$01 = 1. 
+IF(REC_ID = 3821) AB4$01 = 1.
+IF(REC_ID = 6055) AB4$01 = 1.
+IF(REC_ID = 5984) AB4$01 = 2.
+IF(REC_ID = 6075) AB4$01 = 1.  
+IF(REC_ID = 4366) AB4$01 = 2. 
+IF(REC_ID = 4865) AB4$01 = 2.
+IF(REC_ID = 4668) AB4$01 = 1.
+IF(REC_ID = 6459) AB4$01 = 1.
+IF(REC_ID = 6460) AB4$01 = 1.
+IF(REC_ID = 6547) AB4$01 = 1.
+IF(REC_ID = 6555) AB4$01 = 1. 
+IF(REC_ID = 5504) AB4$01 = 2.  
+IF(REC_ID = 6794) AB4$01 = 1. 
+IF(REC_ID = 4420) AB4$01 = 1.
+IF(REC_ID =   606) AB4$01 = 2.
+IF(REC_ID = 6863) AB4$01 = 1.  
+EXECUTE.  
+ 
+* proxy set the remaining missing head sex where NBS haas no suggestion..
+IF(REC_ID = 1445) AB4$01 = 1.
+IF(REC_ID = 3423) AB4$01 = 1.
+IF(REC_ID = 3493) AB4$01 = 1.
+IF(REC_ID = 6343) AB4$01 = 1.
+IF(REC_ID = 3695) AB4$01 = 1.
+IF(REC_ID = 4747) AB4$01 = 2.  
+IF(REC_ID = 6662) AB4$01 = 2.  
+IF(REC_ID = 4299) AB4$01 = 2.
+IF(REC_ID = 2732) AB4$01 = 2.
+IF(REC_ID = 6441) AB4$01 = 1.
+IF(REC_ID = 3712) AB4$01 = 2.
+IF(REC_ID = 6158) AB4$01 = 2.  
+IF(REC_ID = 7148) AB4$01 = 1. 
+IF(REC_ID = 7018) AB4$01 = 1.
+IF(REC_ID = 5981) AB4$01 = 2. 
+IF(REC_ID = 5695) AB4$01 = 2. 
+IF(REC_ID = 3365) AB4$01 = 1.  
+IF(REC_ID = 3529) AB4$01 = 1.  
+IF(REC_ID = 4439) AB4$01 = 2.
+IF(REC_ID = 6588) AB4$01 = 2.
+IF (REC_ID = 2387) AB4$01 = 1.
+IF (REC_ID = 855) AB4$01 = 1.
+IF (REC_ID = 5254) AB4$01 = 1.
 EXECUTE.
 
 *check.
-FREQUENCIES AB4$01.
+FREQUENCIES AB4$01. 
+TEMPORARY.
+SELECT IF SYSMIS(AB4$01)=1.
+LIST REC_ID.   
+
 
 *******************************************************.
 *3b) Impute still missing head age based on nearest neighbour add-in macro.
@@ -1164,8 +1117,8 @@ EXECUTE.
 VARIABLE LABELS HHSize "Number of persons in the household".
 RECODE HHsize (1 THRU 1 = 1) (2 THRU 2 = 2) (3 THRU 4 = 3) (5 THRU 9 = 4) (10 THRU HIGHEST = 5) INTO HHsize_Gr1.
 VARIABLE LABELS HHsize_Gr1 "Household size (persons)".
-VALUE LABELS HHsize_gr1
-1 "     1"
+VALUE LABELS HHsize_gr1 
+1 "     1" 
 2 "     2"
 3 "3 - 4"
 4 "5 - 9"
@@ -1218,39 +1171,31 @@ Output New name = hotdeckextra.
 output close name = hotdeckextra.
 !ENDDEFINE.
 
-HOTDECK y= AB5$01  / deck = UrbRur HHSize_gr1 AB4$01.
+HOTDECK y= AB5$01  / deck = UrbRur HHSize_gr1 AB4$01. 
 
-*y       = variable missing to be imputed
-*deck = variables used to stratify into decks from where nearest neighbour value is imputed to the missing var y
+*y       = variable missing to be imputed 
+*deck = variables used to stratify into decks from where nearest neighbour value is imputed to the missing var y  
 **********************************
-*check HD results.
-FREQUENCIES AB5$01HD.
-COMPUTE tmp4 = SUM(AB5$01 - AB5$01HD).
-EXECUTE.
-FREQUENCIES tmp4.
 
 *Impute check and delete/clean.
 COMPUTE AB5$01 = AB5$01HD.
 EXECUTE.
 FREQUENCIES AB5$01.
 
-DELETE VARIABLES AB5$01HD tmp4 HHsize HHsize_gr1.
+DELETE VARIABLES AB5$01HD HHsize HHsize_gr1.
 
 *****************************************************************************
-*Clean up temp variables.
-DELETE VARIABLES PFirst PLast SUM_A SUM_B SUM_AtoGP SUM_CtoGP Duplicate AA14tmp AA18tmp AA7Btmp PFirst10 PLast10 PFirst20 PLast20
-flag1 flag2 flag3 flag4 flag5 flag6 flag7 PFirst30 PLast30 PFirst40 PLast40 PFirst50 PLast50.
-
-
+*Clean up temp variables. 
+DELETE VARIABLES AA14tmp AA18tmp AA7Btmp PFirst10 PLast10 PFirst20 PLast20 PFirst30 PLast30 PFirst50 PLast50.
 *****************************************************************************************************
 *****************************************************************************************************
-*Save temporary file with unique identifiers  - ready for using next sytax for merge with community, labelling and restructuring.
+*Save temporary file with unique identifiers  - ready for using next sytax for merge with community, labelling and restructuring. 
 
 *THIS FILE IS ADDRESSED TO THE NEXT SYNTAX FOR FURTHER MERGE TO COMFILE, LABELLING AND RESTRUCTURE.
 
-SORT CASES BY GeocodeEA (A) HH (A).
+SORT CASES BY GeocodeEA (A) HH (A). 
 SAVE OUTFILE='tmp\HHQTZ_4.sav'
-/KEEP
+/KEEP 
 REC_ID
 GeocodeEA
 GeocodeHH
@@ -1260,7 +1205,7 @@ UrbRur
 Xcoord
 Ycoord
 Date
-ALL
+ALL 
 /COMPRESSED.
 
 *final check/count.
@@ -1269,13 +1214,10 @@ FREQUENCIES Region.
 *Close all.
 OUTPUT CLOSE ALL.
 DATASET CLOSE ALL.
-EXECUTE.
+EXECUTE. 
 *********************************************************************.
 *END OF SYNTAX.
 ********************************************************************* .
-
-
-
 
 
 
